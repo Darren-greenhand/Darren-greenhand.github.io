@@ -192,6 +192,107 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/03/06/git/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Darren">
+      <meta itemprop="description" content="To recode, to memory and to stride forward">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Darren Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/03/06/git/" class="post-title-link" itemprop="url">git</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-03-06 20:33:45 / 修改时间：20:34:38" itemprop="dateCreated datePublished" datetime="2021-03-06T20:33:45+08:00">2021-03-06</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/skills/" itemprop="url" rel="index"><span itemprop="name">skills</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>git init</p>
+<p>git status</p>
+<p>git add file</p>
+<p>git commit -m “”</p>
+<p>git log –oneline</p>
+<p>git reflog</p>
+<p>git reset –hard HEAD^(版本号)</p>
+<p>HEAD^^  HEAD~100</p>
+<p>git diff HEAD – file</p>
+<p>查看工作区和版本库不同</p>
+<p>命令<code>git checkout -- readme.txt</code>意思就是，把<code>readme.txt</code>文件在工作区的修改全部撤销，这里有两种情况：</p>
+<p>一种是<code>readme.txt</code>自修改后还没有被放到暂存区，现在，撤销修改就回到和版本库一模一样的状态；</p>
+<p>一种是<code>readme.txt</code>已经添加到暂存区后，又作了修改，现在，撤销修改就回到添加到暂存区后的状态。</p>
+<p>checkout  -&gt; restore</p>
+<p><code>git checkout</code>其实是用版本库里的版本替换工作区的版本，无论工作区是修改还是删除，都可以“一键还原”</p>
+<p><code>git reset HEAD &lt;file&gt;</code>可以把暂存区的修改撤销掉（unstage）</p>
+<p> `git reset HEAD -&gt; git restore –staged</p>
+<p>场景1：当你改乱了工作区某个文件的内容，想直接丢弃工作区的修改时，用命令<code>git checkout -- file</code>。</p>
+<p>场景2：当你不但改乱了工作区某个文件的内容，还添加到了暂存区时，想丢弃修改，分两步，第一步用命令<code>git reset HEAD &lt;file&gt;</code>，就回到了场景1，第二步按场景1操作。</p>
+<p>场景3：已经提交了不合适的修改到版本库时，想要撤销本次提交，参考<a target="_blank" rel="noopener" href="https://www.liaoxuefeng.com/wiki/896043488029600/897013573512192">版本回退</a>一节，不过前提是没有推送到远程库。</p>
+<p>远程</p>
+<p>git remote -v</p>
+<p>git remote remove origin</p>
+<p>git remote add origin <a href="mailto:&#103;&#105;&#116;&#x40;&#x67;&#x69;&#x74;&#104;&#117;&#98;&#x2e;&#x63;&#111;&#x6d;">&#103;&#105;&#116;&#x40;&#x67;&#x69;&#x74;&#104;&#117;&#98;&#x2e;&#x63;&#111;&#x6d;</a>:git_username/repository_name.git</p>
+<p>git pull origin master –allow-unrelated-histories</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure>
+
+<p>git push origin master</p>
+<p>git clone url</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;创建 &lt;name&gt; 的分支并切换</span><br><span class="line">git switch -c &lt;name&gt;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;创建</span><br><span class="line">git branch &lt;name&gt;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;切换到&lt;name&gt;分支</span><br><span class="line">git checkout &lt;name&gt;</span><br><span class="line">git switch &lt;name&gt;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;查看分支树</span><br><span class="line">git branch </span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;删除分支</span><br><span class="line">git branch -d &lt;name&gt;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;合并分支 假设这里存在 master ， dev 分支</span><br><span class="line">  &#x2F;&#x2F; 1 切换到要保留的分支——这里是master</span><br><span class="line">  git checkout master</span><br><span class="line">  &#x2F;&#x2F; 2 合并掉分支dev</span><br><span class="line">  git merge dev</span><br></pre></td></tr></table></figure>
+
+
+
+<p><code>git log --graph</code>命令可以看到分支合并图</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://example.com/2021/03/06/%E6%BE%B3%E6%96%B0/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -520,14 +621,14 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-count">4</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-count">3</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
@@ -587,7 +688,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共1.1k字</span>
+  <span class="post-count">博客全站共1.7k字</span>
 </div>
         
 
