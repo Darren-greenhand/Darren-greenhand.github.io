@@ -192,6 +192,94 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/03/06/%E8%A2%ABtodolist%E6%8A%98%E7%A3%A8%E7%9A%84%E4%B8%80%E5%A4%A9/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Darren">
+      <meta itemprop="description" content="To recode, to memory and to stride forward">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Darren Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/03/06/%E8%A2%ABtodolist%E6%8A%98%E7%A3%A8%E7%9A%84%E4%B8%80%E5%A4%A9/" class="post-title-link" itemprop="url">被todolist折磨的一天</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-03-06 21:36:35 / 修改时间：21:37:32" itemprop="dateCreated datePublished" datetime="2021-03-06T21:36:35+08:00">2021-03-06</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/diary/" itemprop="url" rel="index"><span itemprop="name">diary</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="澳新第二题："><a href="#澳新第二题：" class="headerlink" title="澳新第二题："></a>澳新第二题：</h1><p>[toc]</p>
+<h2 id="简言"><a href="#简言" class="headerlink" title="简言"></a>简言</h2><p>这道todolist卡了我一整天，因为光学那个b站视频缺少大量的知识，于是我还是在网上找了一个学习，不过经历非常失败，我找了个简单的试图把它改成可以本地存储的，但是出现了很奇怪的bug，但最终理清了很多关系，最终找到了这个版本，很快就上手了</p>
+<h2 id="jQuery知识"><a href="#jQuery知识" class="headerlink" title="jQuery知识"></a>jQuery知识</h2><p>最外层 $(function){ …}</p>
+<p>$(‘选择器’).(this)</p>
+<p>parent().children().siblings()这里面可以加选择器</p>
+<p>.first().next().eq(index)</p>
+<p>.addClass().removeClass().html().text()</p>
+<p>.on(‘event’,function(){})  相当于添加监听器</p>
+<p>.find(‘选择器’).filter(‘:first’)</p>
+<p>.closet(‘选择器’)//最近祖先</p>
+<p>.remove().hide().togger().</p>
+<p>if(.is(‘选择器’))</p>
+<p>.prepend(“代码”)超级方便！</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$.each(arr1,function(i,val)&#123; &#x2F;&#x2F;两个参数，第一个参数表示遍历的数组的下标，第二个参数表示下标对应的值</span><br></pre></td></tr></table></figure>
+
+<p>val() 方法返回或设置被选元素的 value 属性</p>
+<p>splice(index,number,(new item)) 方法向/从数组中添加/删除项目，然后返回被删除的项目。</p>
+<p>attr() 方法设置或返回被选元素的属性值，俩参数就是设置，一参数就是返回（用于html）</p>
+<p>prop同上，配套removeprop</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>这个200行项目让我学到了一堆东西，jq的函数就学了20多个，还有localstorage的用法，不过这个项目采用的数据结构感觉怪怪的，应该是我太菜了，json学习链接先放这 [JSON]<a target="_blank" rel="noopener" href="https://www.json.org/json-en.html">新建标签页 (json.org)</a> 不过jq比js内置的方便好多啊啊！！！</p>
+<h2 id="ps"><a href="#ps" class="headerlink" title="ps"></a>ps</h2><p><u>因为没有了解Js一些核心原理，对渲染，更新和执行顺序的概念理解一般，到时候看看红宝书吧！</u></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://example.com/2021/03/06/git/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -621,7 +709,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-count">5</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -634,7 +722,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-count">3</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -688,7 +776,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共1.7k字</span>
+  <span class="post-count">博客全站共2.1k字</span>
 </div>
         
 

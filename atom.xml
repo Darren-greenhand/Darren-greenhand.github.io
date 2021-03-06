@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-03-06T12:34:38.246Z</updated>
+  <updated>2021-03-06T13:37:32.667Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>被todolist折磨的一天</title>
+    <link href="http://example.com/2021/03/06/%E8%A2%ABtodolist%E6%8A%98%E7%A3%A8%E7%9A%84%E4%B8%80%E5%A4%A9/"/>
+    <id>http://example.com/2021/03/06/%E8%A2%ABtodolist%E6%8A%98%E7%A3%A8%E7%9A%84%E4%B8%80%E5%A4%A9/</id>
+    <published>2021-03-06T13:36:35.000Z</published>
+    <updated>2021-03-06T13:37:32.667Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="澳新第二题："><a href="#澳新第二题：" class="headerlink" title="澳新第二题："></a>澳新第二题：</h1><p>[toc]</p><h2 id="简言"><a href="#简言" class="headerlink" title="简言"></a>简言</h2><p>这道todolist卡了我一整天，因为光学那个b站视频缺少大量的知识，于是我还是在网上找了一个学习，不过经历非常失败，我找了个简单的试图把它改成可以本地存储的，但是出现了很奇怪的bug，但最终理清了很多关系，最终找到了这个版本，很快就上手了</p><h2 id="jQuery知识"><a href="#jQuery知识" class="headerlink" title="jQuery知识"></a>jQuery知识</h2><p>最外层 $(function){ …}</p><p>$(‘选择器’).(this)</p><p>parent().children().siblings()这里面可以加选择器</p><p>.first().next().eq(index)</p><p>.addClass().removeClass().html().text()</p><p>.on(‘event’,function(){})  相当于添加监听器</p><p>.find(‘选择器’).filter(‘:first’)</p><p>.closet(‘选择器’)//最近祖先</p><p>.remove().hide().togger().</p><p>if(.is(‘选择器’))</p><p>.prepend(“代码”)超级方便！</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$.each(arr1,function(i,val)&#123; &#x2F;&#x2F;两个参数，第一个参数表示遍历的数组的下标，第二个参数表示下标对应的值</span><br></pre></td></tr></table></figure><p>val() 方法返回或设置被选元素的 value 属性</p><p>splice(index,number,(new item)) 方法向/从数组中添加/删除项目，然后返回被删除的项目。</p><p>attr() 方法设置或返回被选元素的属性值，俩参数就是设置，一参数就是返回（用于html）</p><p>prop同上，配套removeprop</p><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>这个200行项目让我学到了一堆东西，jq的函数就学了20多个，还有localstorage的用法，不过这个项目采用的数据结构感觉怪怪的，应该是我太菜了，json学习链接先放这 [JSON]<a href="https://www.json.org/json-en.html">新建标签页 (json.org)</a> 不过jq比js内置的方便好多啊啊！！！</p><h2 id="ps"><a href="#ps" class="headerlink" title="ps"></a>ps</h2><p><u>因为没有了解Js一些核心原理，对渲染，更新和执行顺序的概念理解一般，到时候看看红宝书吧！</u></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;澳新第二题：&quot;&gt;&lt;a href=&quot;#澳新第二题：&quot; class=&quot;headerlink&quot; title=&quot;澳新第二题：&quot;&gt;&lt;/a&gt;澳新第二题：&lt;/h1&gt;&lt;p&gt;[toc]&lt;/p&gt;
+&lt;h2 id=&quot;简言&quot;&gt;&lt;a href=&quot;#简言&quot; class=&quot;headerlink&quot;</summary>
+      
+    
+    
+    
+    <category term="diary" scheme="http://example.com/categories/diary/"/>
+    
+    
+    <category term="harvest" scheme="http://example.com/tags/harvest/"/>
+    
+  </entry>
   
   <entry>
     <title>git</title>
