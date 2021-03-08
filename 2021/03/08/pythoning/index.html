@@ -23,15 +23,15 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.json"};
   </script>
 
-  <meta name="description" content="跟着廖雪峰教程先学学python语法">
+  <meta name="description" content="跟着廖雪峰教程先学学python语法，马上开坑web后端">
 <meta property="og:type" content="article">
 <meta property="og:title" content="pythoning">
 <meta property="og:url" content="http://example.com/2021/03/08/pythoning/index.html">
 <meta property="og:site_name" content="Darren Blog">
-<meta property="og:description" content="跟着廖雪峰教程先学学python语法">
+<meta property="og:description" content="跟着廖雪峰教程先学学python语法，马上开坑web后端">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-03-08T06:28:04.000Z">
-<meta property="article:modified_time" content="2021-03-08T06:28:59.537Z">
+<meta property="article:modified_time" content="2021-03-08T14:02:25.781Z">
 <meta property="article:author" content="Darren">
 <meta property="article:tag" content="python">
 <meta name="twitter:card" content="summary">
@@ -229,7 +229,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2021-03-08 14:28:04 / 修改时间：14:28:59" itemprop="dateCreated datePublished" datetime="2021-03-08T14:28:04+08:00">2021-03-08</time>
+              <time title="创建时间：2021-03-08 14:28:04 / 修改时间：22:02:25" itemprop="dateCreated datePublished" datetime="2021-03-08T14:28:04+08:00">2021-03-08</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -242,7 +242,7 @@
             </span>
 
           
-            <div class="post-description">跟着廖雪峰教程先学学python语法</div>
+            <div class="post-description">跟着廖雪峰教程先学学python语法，马上开坑web后端</div>
 
         </div>
       </header>
@@ -254,7 +254,14 @@
 
       
         <h1 id="Python学习中！"><a href="#Python学习中！" class="headerlink" title="Python学习中！"></a>Python学习中！</h1><p>[toc]</p>
-<h2 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h2><ol>
+<h2 id="python要学的"><a href="#python要学的" class="headerlink" title="python要学的"></a>python要学的</h2><ol>
+<li>基础语法（Y）</li>
+<li>进阶语法（）</li>
+<li>内置函数（）</li>
+<li>高级：库（），正则表达式（），进程线程（），mySQL（）</li>
+<li>后端三大框架（Django、 Flask以及Tornado）</li>
+</ol>
+<h2 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h2><h3 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h3><ol>
 <li><p>在Python中，代码不是越多越好，而是越少越好。代码不是越复杂越好，而是越简单越好。</p>
 </li>
 <li><p>可变对象和不可变对象：可变指存在某项操作可以改变本身如list</p>
@@ -330,6 +337,8 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">max2 &#x3D; functools.partial(max, 10)</span><br></pre></td></tr></table></figure>
 
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">max2(<span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>) = <span class="built_in">max</span>(<span class="number">10</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>)</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h3 id="类"><a href="#类" class="headerlink" title="类"></a>类</h3><ol>
 <li><p>在Python中，实例的变量名如果以<code>__</code>开头，就变成了一个私有变量（private），只有内部可以访问，外部不能访问，如：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">self.__name</span><br></pre></td></tr></table></figure>
 
@@ -364,7 +373,72 @@
 <p>除非在子类中也定义<code>__slots__</code>，这样，子类实例允许定义的属性就是自身的<code>__slots__</code>加上父类的<code>__slots__</code>。</p>
 <p>（怪怪的）</p>
 </li>
-<li></li>
+<li><p>@property   @method_name.setter将方法变成类</p>
+</li>
+<li><p><em><strong>定制类</strong></em>:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">--<span class="built_in">len</span>--:<span class="built_in">len</span>函数自动调用的计算长度工具</span><br><span class="line">--name--:获得当前函数的名族(functions.wraps(fun))</span><br><span class="line">--<span class="built_in">str</span>--:返回用户信息</span><br><span class="line">--<span class="built_in">repr</span>--:返回开发者信息</span><br><span class="line">--<span class="built_in">iter</span>--:返回迭代对象，使一个类可以被<span class="keyword">for</span> <span class="keyword">in</span>使用</span><br><span class="line">--<span class="built_in">next</span>--:迭代将调用--<span class="built_in">next</span>--方法</span><br><span class="line">--getitem--:实现下标访问[]（切片要分类。。。不懂）</span><br><span class="line">--setitem--:把对象视作<span class="built_in">list</span>/<span class="built_in">dict</span>来赋值</span><br><span class="line">--delitem--:删除某元素</span><br><span class="line">--<span class="built_in">getattr</span>--:在没有找到属性/方法时返回定义好的，可实现动态调用！</span><br><span class="line">--call--:直接对实例进行调用！可调用对象是Callable</span><br><span class="line">Python的官方文档:</span><br><span class="line">  https://docs.python.org/<span class="number">3</span>/reference/datamodel.html<span class="comment">#special-method-names</span></span><br></pre></td></tr></table></figure></li>
+<li><p>枚举：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> enum <span class="keyword">import</span> Enum，unique</span><br><span class="line">Month = Enum(<span class="string">&#x27;Month&#x27;</span>, (<span class="string">&#x27;Jan&#x27;</span>, <span class="string">&#x27;Feb&#x27;</span>, <span class="string">&#x27;Mar&#x27;</span>, <span class="string">&#x27;Apr&#x27;</span>, <span class="string">&#x27;May&#x27;</span>, <span class="string">&#x27;Jun&#x27;</span>, <span class="string">&#x27;Jul&#x27;</span>, <span class="string">&#x27;Aug&#x27;</span>, <span class="string">&#x27;Sep&#x27;</span>, <span class="string">&#x27;Oct&#x27;</span>, <span class="string">&#x27;Nov&#x27;</span>, <span class="string">&#x27;Dec&#x27;</span>))</span><br></pre></td></tr></table></figure>
+
+<p><em>value默认从1开始！！！！</em></p>
+<p>用@unique精确控制Enum衍生</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@unique</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Weekday</span>(<span class="params">Enum</span>):</span></span><br><span class="line">    Sun = <span class="number">0</span> <span class="comment"># Sun的value被设定为0</span></span><br><span class="line">    Mon = <span class="number">1</span></span><br><span class="line">    Tue = <span class="number">2</span></span><br><span class="line">    Wed = <span class="number">3</span></span><br><span class="line">    Thu = <span class="number">4</span></span><br><span class="line">    Fri = <span class="number">5</span></span><br><span class="line">    Sat = <span class="number">6</span></span><br><span class="line">    day1=Weekday.Mon</span><br><span class="line">    day1==Weekday(<span class="number">1</span>)</span><br><span class="line">    day1.value==<span class="number">1</span></span><br></pre></td></tr></table></figure>
+
+<p>用.value获得对应的值</p>
+</li>
+<li><p>动态语言和静态语言最大的不同，就是函数和类的定义，不是编译时定义的，而是运行时动态创建的，而创建class的方法就是使用<code>type()</code>函数，所以类的类型是‘type’。</p>
+</li>
+<li><p>object是python的默认类，有很多的方法，python种默认的list,str,dict等等都是继承了object类的方法，继承了object的类属于新式类 ，没有继承属于经典类，在python3种默认都是新式类，也即是所有的自定义类，基类都会继承object类！</p>
+</li>
+<li><p>type也可创建新类</p>
+<ol>
+<li>class的名称；</li>
+<li>继承的父类集合</li>
+<li>class的方法名称与函数绑定，</li>
+</ol>
+</li>
+<li><p>先定义metaclass，就可以创建类，最后创建实例。</p>
+<p>所以，metaclass允许你创建类或者修改类。换句话说，你可以把类看成是metaclass创建出来的“实例”，它可以改变类创建时的行为。</p>
+<p>metaclass是Python面向对象里最难理解，也是最难使用的魔术代码。。。</p>
+<p>按照默认习惯，metaclass的类名总是以Metaclass结尾</p>
+<p>（写法着实奇怪。。不放了。。希望这辈子碰不到！听说ORM要用。。）</p>
+<p>url：<a target="_blank" rel="noopener" href="https://www.liaoxuefeng.com/wiki/1016959663602400/1017592449371072#0">使用元类 - 廖雪峰的官方网站 (liaoxuefeng.com)</a></p>
+</li>
+</ol>
+<h3 id="错误-amp-异常"><a href="#错误-amp-异常" class="headerlink" title="错误&amp;异常"></a>错误&amp;异常</h3><ol>
+<li><p>错误衍生：</p>
+<p>The class hierarchy for built-in exceptions is:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br></pre></td><td class="code"><pre><span class="line">BaseException</span><br><span class="line"> +-- SystemExit</span><br><span class="line"> +-- KeyboardInterrupt</span><br><span class="line"> +-- GeneratorExit</span><br><span class="line"> +-- Exception</span><br><span class="line">      +-- StopIteration</span><br><span class="line">      +-- StopAsyncIteration</span><br><span class="line">      +-- ArithmeticError</span><br><span class="line">      |    +-- FloatingPointError</span><br><span class="line">      |    +-- OverflowError</span><br><span class="line">      |    +-- ZeroDivisionError</span><br><span class="line">      +-- AssertionError</span><br><span class="line">      +-- AttributeError</span><br><span class="line">      +-- BufferError</span><br><span class="line">      +-- EOFError</span><br><span class="line">      +-- ImportError</span><br><span class="line">      |    +-- ModuleNotFoundError</span><br><span class="line">      +-- LookupError</span><br><span class="line">      |    +-- IndexError</span><br><span class="line">      |    +-- KeyError</span><br><span class="line">      +-- MemoryError</span><br><span class="line">      +-- NameError</span><br><span class="line">      |    +-- UnboundLocalError</span><br><span class="line">      +-- OSError</span><br><span class="line">      |    +-- BlockingIOError</span><br><span class="line">      |    +-- ChildProcessError</span><br><span class="line">      |    +-- ConnectionError</span><br><span class="line">      |    |    +-- BrokenPipeError</span><br><span class="line">      |    |    +-- ConnectionAbortedError</span><br><span class="line">      |    |    +-- ConnectionRefusedError</span><br><span class="line">      |    |    +-- ConnectionResetError</span><br><span class="line">      |    +-- FileExistsError</span><br><span class="line">      |    +-- FileNotFoundError</span><br><span class="line">      |    +-- InterruptedError</span><br><span class="line">      |    +-- IsADirectoryError</span><br><span class="line">      |    +-- NotADirectoryError</span><br><span class="line">      |    +-- PermissionError</span><br><span class="line">      |    +-- ProcessLookupError</span><br><span class="line">      |    +-- TimeoutError</span><br><span class="line">      +-- ReferenceError</span><br><span class="line">      +-- RuntimeError</span><br><span class="line">      |    +-- NotImplementedError</span><br><span class="line">      |    +-- RecursionError</span><br><span class="line">      +-- SyntaxError</span><br><span class="line">      |    +-- IndentationError</span><br><span class="line">      |         +-- TabError</span><br><span class="line">      +-- SystemError</span><br><span class="line">      +-- TypeError</span><br><span class="line">      +-- ValueError</span><br><span class="line">      |    +-- UnicodeError</span><br><span class="line">      |         +-- UnicodeDecodeError</span><br><span class="line">      |         +-- UnicodeEncodeError</span><br><span class="line">      |         +-- UnicodeTranslateError</span><br><span class="line">      +-- Warning</span><br><span class="line">           +-- DeprecationWarning</span><br><span class="line">           +-- PendingDeprecationWarning</span><br><span class="line">           +-- RuntimeWarning</span><br><span class="line">           +-- SyntaxWarning</span><br><span class="line">           +-- UserWarning</span><br><span class="line">           +-- FutureWarning</span><br><span class="line">           +-- ImportWarning</span><br><span class="line">           +-- UnicodeWarning</span><br><span class="line">           +-- BytesWarning</span><br><span class="line">           +-- ResourceWarning</span><br></pre></td></tr></table></figure></li>
+<li><p>try .. except.. excepy…else…finally</p>
+<p>使用<code>try...except</code>捕获错误还有一个巨大的好处，就是可以跨越多层调用，比如函数<code>main()</code>调用<code>bar()</code>，<code>bar()</code>调用<code>foo()</code>，结果<code>foo()</code>出错了，这时，只要<code>main()</code>捕获到了，就可以处理</p>
+</li>
+<li><p>如果错误没有被捕获，它就会一直往上抛，最后被Python解释器捕获，打印一个错误信息，然后程序退出.</p>
+<p>顺着错误信息一路向下就可以找到根源</p>
+</li>
+<li><p>logging可以记录错误信息，要配置。。。<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/feb86c06c4f4">python logging模块使用教程 -</a></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> logging</span><br><span class="line"><span class="keyword">try</span>://</span><br><span class="line"><span class="keyword">except</span>: Excerption <span class="keyword">as</span> e:</span><br><span class="line">    logging.excerption(e)</span><br></pre></td></tr></table></figure>
+
+<p>这样，在抛出错误信息后继续运行</p>
+<p>当前函数不知道应该怎么处理该错误，所以，最恰当的方式是继续往上抛，让顶层调用者去处理，raise不带参数则原样抛出</p>
+</li>
+<li><p>assert … , ‘decleration’可以在解释时<code>python -O file.py</code>来终止调用assert</p>
+<p>关闭后，你可以把所有的<code>assert</code>语句当成<code>pass</code>来看</p>
+</li>
+<li><p>logging.info()输出一段文本</p>
+<p>在import logging后加<code>logging.basicConfig(level=logging.INFO)</code>指定记录信息的级别</p>
+<p>error&gt;warning&gt;info&gt;debug，上面规定INFO后，logging.debug就失效了</p>
+</li>
+<li><p>PDB我不想学。。不如IDE自带</p>
+</li>
+<li><p>测试unittest参见《入门》</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ python -m unittest mydict_test</span><br></pre></td></tr></table></figure>
+
+<p>可以直接启用测试，常用的assetRaises,Equal,NotEqual,True,False,In,NotIn</p>
+<p>在单元测试中编写两个特殊的<code>setUp()</code>和<code>tearDown()</code>方法。这两个方法会分别在每调用一个测试方法的前后分别被执行</p>
+</li>
+<li><p>Python内置的“文档测试”（doctest）模块可以直接提取注释中的代码并执行测试。</p>
+<p>doctest严格按照Python交互式命令行的输入和输出来判断测试结果是否正确。只有测试异常的时候，可以用<code>...</code>表示中间一大段烦人的输出。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> __name__==<span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    <span class="keyword">import</span> doctest</span><br><span class="line">    doctest.testmod()</span><br></pre></td></tr></table></figure></li>
 </ol>
 <h2 id="功能函数"><a href="#功能函数" class="headerlink" title="功能函数"></a>功能函数</h2><ol>
 <li><p><code>str.replace(&#39;a&#39;,&#39;A&#39;) 把字符串里的a替换成A</code></p>
@@ -397,9 +471,9 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">可以分别验证，设置，得到某个instance的属性和方法</span><br><span class="line"></span><br><span class="line">如果试图获取不存在的属性，会抛出AttributeError的错误：</span><br><span class="line"></span><br><span class="line">&#96;&#96;&#96;python</span><br><span class="line">&gt;&gt;&gt; getattr(obj, &#39;z&#39;) # 获取属性&#39;z&#39;</span><br><span class="line">Traceback (most recent call last):</span><br><span class="line">  File &quot;&lt;stdin&gt;&quot;, line 1, in &lt;module&gt;</span><br><span class="line">AttributeError: &#39;MyObject&#39; object has no attribute &#39;z&#39;</span><br></pre></td></tr></table></figure>
 
 <p>可以传入一个default参数，如果属性不存在，就返回默认值：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">getattr</span>(obj, <span class="string">&#x27;z&#x27;</span>, <span class="number">404</span>) <span class="comment"># 获取属性&#x27;z&#x27;，如果不存在，返回默认值404</span></span><br><span class="line"><span class="number">404</span></span><br></pre></td></tr></table></figure></li>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">getattr</span>(obj, <span class="string">&#x27;z&#x27;</span>, <span class="number">404</span>) <span class="comment"># 获取属性&#x27;z&#x27;，如果不存在，返回默认值404</span></span><br></pre></td></tr></table></figure></li>
 <li><pre><code class="python"> raise ValueError(&#39;score must be an integer!&#39;)
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">15. </span><br><span class="line"></span><br><span class="line">## 一些包</span><br><span class="line"></span><br><span class="line">1. math包用很多常用数学函数</span><br><span class="line"></span><br><span class="line">2. Python内置的&#96;enumerate&#96;函数可以把一个list变成索引-元素对，这样就可以在&#96;for&#96;循环中同时迭代索引和元素本身：</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">15. eval()解析字符串为指令</span><br><span class="line"></span><br><span class="line">## 一些包</span><br><span class="line"></span><br><span class="line">1. math包用很多常用数学函数</span><br><span class="line"></span><br><span class="line">2. Python内置的&#96;enumerate&#96;函数可以把一个list变成索引-元素对，这样就可以在&#96;for&#96;循环中同时迭代索引和元素本身：</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 &gt;&gt;&gt; for i, value in enumerate([&#39;A&#39;, &#39;B&#39;, &#39;C&#39;]):
 ...     print(i, value)
 ...
@@ -518,7 +592,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Python%E5%AD%A6%E4%B9%A0%E4%B8%AD%EF%BC%81"><span class="nav-number">1.</span> <span class="nav-text">Python学习中！</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%9F%A5%E8%AF%86%E7%82%B9"><span class="nav-number">1.1.</span> <span class="nav-text">知识点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8A%9F%E8%83%BD%E5%87%BD%E6%95%B0"><span class="nav-number">1.2.</span> <span class="nav-text">功能函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%84%E8%8C%83"><span class="nav-number">1.3.</span> <span class="nav-text">规范</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%A5%E5%90%8E%E5%86%8D%E5%AD%A6"><span class="nav-number">1.4.</span> <span class="nav-text">以后再学</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Python%E5%AD%A6%E4%B9%A0%E4%B8%AD%EF%BC%81"><span class="nav-number">1.</span> <span class="nav-text">Python学习中！</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#python%E8%A6%81%E5%AD%A6%E7%9A%84"><span class="nav-number">1.1.</span> <span class="nav-text">python要学的</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%9F%A5%E8%AF%86%E7%82%B9"><span class="nav-number">1.2.</span> <span class="nav-text">知识点</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9F%BA%E7%A1%80"><span class="nav-number">1.2.1.</span> <span class="nav-text">基础</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%B1%BB"><span class="nav-number">1.2.2.</span> <span class="nav-text">类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%94%99%E8%AF%AF-amp-%E5%BC%82%E5%B8%B8"><span class="nav-number">1.2.3.</span> <span class="nav-text">错误&amp;异常</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8A%9F%E8%83%BD%E5%87%BD%E6%95%B0"><span class="nav-number">1.3.</span> <span class="nav-text">功能函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%84%E8%8C%83"><span class="nav-number">1.4.</span> <span class="nav-text">规范</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%A5%E5%90%8E%E5%86%8D%E5%AD%A6"><span class="nav-number">1.5.</span> <span class="nav-text">以后再学</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -605,7 +679,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共7.6k字</span>
+  <span class="post-count">博客全站共8.7k字</span>
 </div>
         
 
