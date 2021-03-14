@@ -30,10 +30,12 @@
 <meta property="og:site_name" content="Darren Blog">
 <meta property="og:description" content="web-second(continue)">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://gitee.com/darren-greenhand//picture/raw/master/border-radius-sh.png">
 <meta property="article:published_time" content="2021-03-13T12:51:04.000Z">
-<meta property="article:modified_time" content="2021-03-13T12:53:07.091Z">
+<meta property="article:modified_time" content="2021-03-14T05:48:56.953Z">
 <meta property="article:author" content="Darren">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://gitee.com/darren-greenhand//picture/raw/master/border-radius-sh.png">
 
 <link rel="canonical" href="http://example.com/2021/03/13/css/">
 
@@ -109,7 +111,7 @@
       <h1 class="site-title">Darren Blog</h1>
       <span class="logo-line-after"><i></i></span>
     </a>
-      <p class="site-subtitle" itemprop="description">来找我友链啊！功能持续增加中</p>
+      <p class="site-subtitle" itemprop="description">Stratch to WWW</p>
   </div>
 
   <div class="site-nav-right">
@@ -209,7 +211,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="Darren">
-      <meta itemprop="description" content="To recode, to memory and to stride forward">
+      <meta itemprop="description" content="刚开始学习Web全栈和安全的新手博客">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -226,10 +228,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2021-03-13 20:51:04 / 修改时间：20:53:07" itemprop="dateCreated datePublished" datetime="2021-03-13T20:51:04+08:00">2021-03-13</time>
+              <time title="创建时间：2021-03-13 20:51:04" itemprop="dateCreated datePublished" datetime="2021-03-13T20:51:04+08:00">2021-03-13</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-03-14 13:48:56" itemprop="dateModified" datetime="2021-03-14T13:48:56+08:00">2021-03-14</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -290,7 +298,7 @@
 </ul>
 <h1 id="CSS构建"><a href="#CSS构建" class="headerlink" title="CSS构建"></a>CSS构建</h1><p>开始进入真正学习</p>
 <h2 id="层叠和继承"><a href="#层叠和继承" class="headerlink" title="层叠和继承"></a>层叠和继承</h2><p>同级后者优先</p>
-<h3 id="控制继承"><a href="#控制继承" class="headerlink" title="控制继承"></a><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance#%E6%8E%A7%E5%88%B6%E7%BB%A7%E6%89%BF">控制继承</a></h3><p>CSS 为控制继承提供了四个特殊的通用属性值。每个css属性都接收这些值。</p>
+<h3 id="控制继承"><a href="#控制继承" class="headerlink" title="控制继承"></a><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance#%E6%8E%A7%E5%88%B6%E7%BB%A7%E6%89%BF">控制继承</a></h3><p>CSS 为控制继承提供了四个特殊的通用<em><strong>属性值</strong></em>。每个css属性都接收这些值。</p>
 <ul>
 <li><p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/inherit"><code>inherit</code></a></p>
 <p>设置该属性会使子元素属性和父元素相同。实际上，就是 “开启继承”.</p>
@@ -322,7 +330,8 @@
 </ol>
 <p><strong>注</strong>: 通用选择器 (<code>*</code>)，组合符 (<code>+</code>, <code>&gt;</code>, <code>~</code>, ‘ ‘)，和否定伪类 (<code>:not</code>) 不会影响优先级。</p>
 <p><strong>警告:</strong> 在进行计算时不允许进行进位，例如，20 个类选择器仅仅意味着 20 个十位，而不能视为 两个百位，也就是说，无论多少个类选择器的权重叠加，都不会超过一个 ID 选择器。</p>
-<p>有一个特殊的 CSS 可以用来覆盖所有上面所有优先级计算，不过需要很小心的使用 — <code>!important</code>。用于修改特定属性的值， 能够覆盖普通规则的层叠。</p>
+<p>有一个特殊的 CSS 可以用来覆盖所有上面所有优先级计算，不过需要很小心的使用 — <code>!important</code>。</p>
+<p>这是个属性值！！用于修改特定属性的值， 能够覆盖普通规则的层叠。</p>
 <p><strong>注</strong>： 覆盖 <code>!important</code> 唯一的办法就是另一个 <code>!important</code> 具有 相同<em>优先级</em> 而且顺序靠后，或者更高优先级。</p>
 <p>了解 <code>!important</code> 是为了在阅读别人代码的时候知道有什么作用。 <strong>但是，强烈建议除了非常情况不要使用它。</strong> <code>!important</code> 改变了层叠的常规工作方式，它会使调试 CSS 问题非常困难，特别是在大型样式表中。</p>
 <p><em><strong>相互冲突的声明将按以下顺序适用，后一种声明将覆盖前一种声明</strong></em>：</p>
@@ -540,8 +549,14 @@
 </li>
 </ul>
 <p>当您想要通过添加内边距使链接具有更大的命中区域时，这是很有用的。<code>&lt;a&gt;</code>是像<code>&lt;span</code>&gt;一样的内联元素；你可以使用<code>display: inline-block</code>来设置内边距，让用户更容易点击链接。</p>
-<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>backgroung-color</p>
-<p>background-image: 小图平铺循环  大图不会缩小（。。）</p>
+<p>一般直接一个border：就好啦</p>
+<p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS">CSS</a> 属性 <strong><code>border-radius</code></strong> 允许你设置元素的外边框圆角。当使用一个半径时确定一个圆形，当使用两个半径时确定一个椭圆。这个(椭)圆与边框的交集形成圆角效果。</p>
+<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/border-radius-sh.png" alt="Images of CSS3 rounded corners: no rounding, rounding w/ an arc of circle, rounding w/ an arc of ellipse"></p>
+<p>border-radius: a b 是指定a:左上+右下 b剩下俩,4个值是顺时针指定</p>
+<p>然而 a/b 是分别指定椭圆的长轴和短轴</p>
+<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>屏幕阅读者不能解析背景图像，因此背景图片应该只是纯粹的装饰；任何重要的内容都应该是HTML页面的一部分，而不是包含在背景中。！！！！！</p>
+<p><strong>backgroung-color</strong></p>
+<p><strong>background-image</strong>: 小图平铺循环  大图不会缩小（。。）</p>
 <p>图像会覆盖在颜色顶部</p>
 <p>控制背景平铺</p>
 <p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/background-repeat"><code>background-repeat</code></a>属性用于控制图像的平铺行为。可用的值是:</p>
@@ -555,13 +570,53 @@
 <p>在上面的例子中，我们有一个很大的图像，由于它比作为背景的元素大，所以最后被裁剪掉了。在这种情况下，我们可以使用 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/background-size"><code>background-size</code></a>属性，它可以设置长度或百分比值，来调整图像的大小以适应背景。</p>
 <p>你也可以使用关键字:</p>
 <ul>
-<li><p><code>cover</code> —浏览器将使图像足够大，使它完全覆盖了盒子区，同时仍然保持其高宽比。在这种情况下，有些图像可能会跳出盒子外</p>
-</li>
-<li><p><code>contain</code> — 浏览器将使图像的大小适合盒子内。在这种情况下，如果图像的长宽比与盒子的长宽比不同，则可能在图像的任何一边或顶部和底部出现间隙。</p>
-<p>都是以左上角为固定👆</p>
-</li>
+<li><code>cover</code> —浏览器将使图像足够大，使它完全覆盖了盒子区，同时仍然保持其高宽比。在这种情况下，有些图像可能会跳出盒子外</li>
+<li><code>contain</code> — 浏览器将使图像的大小适合盒子内。在这种情况下，如果图像的长宽比与盒子的长宽比不同，则可能在图像的任何一边或顶部和底部出现间隙。</li>
 </ul>
-<h1 id="以后再学"><a href="#以后再学" class="headerlink" title="以后再学"></a>以后再学</h1><h2 id="css层叠"><a href="#css层叠" class="headerlink" title="css层叠"></a><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/Cascade#origin_of_css_declarations">css层叠</a></h2><h2 id="外边距重叠"><a href="#外边距重叠" class="headerlink" title="外边距重叠"></a><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing">外边距重叠</a></h2>
+<p><strong>background-position:</strong></p>
+<p><strong>注意：</strong><code>background-position</code>是<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/background-position-x"><code>background-position-x</code></a>和<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/background-position-y"><code>background-position-y</code></a>的简写，它们允许您分别设置不同的坐标轴的值。</p>
+<p>参数都在这：<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/background-position">https://developer.mozilla.org/zh-CN/docs/Web/CSS/background-position</a></p>
+<p>有关键字：长度值.百分比，可混用</p>
+<p>最后，您还可以使用4-value语法来指示到盒子的某些边的距离——在本例中，长度单位是与其前面的值的偏移量。所以在下面的CSS中，我们将背景从顶部调整20px，从右侧调整10px:</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span> &#123;</span><br><span class="line">  <span class="attribute">background-image</span>: <span class="built_in">url</span>(<span class="string">star.png</span>);</span><br><span class="line">  <span class="attribute">background-repeat</span>: no-repeat;</span><br><span class="line">  <span class="attribute">background-position</span>: top <span class="number">20px</span> right <span class="number">10px</span>;</span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
+
+
+
+<p>background-image可用于渐变背景</p>
+<p><a target="_blank" rel="noopener" href="https://cssgradient.io/%E7%94%9F%E6%88%90%E5%99%A8%F0%9F%91%88">https://cssgradient.io/生成器👈</a></p>
+<p>也可以有多个背景图像——在单个属性值中指定多个<code>background-image</code>值，用逗号分隔每个值。</p>
+<p>当你这样做时，你可能会以背景图像互相重叠而告终。背景将与最后列出的背景图像层在堆栈的底部，背景图像在代码列表中最先出现的在顶端。</p>
+<p><strong>background-attachment</strong></p>
+<p><code>background-attachment: scroll</code>使元素的背景固定在页面上，以便在滚动页面时滚动。如果滚动元素内容，则背景不会移动。</p>
+<p><code>background-attachment: fixed</code>导致将元素的背景固定到视口，以便在滚动页面或元素内容时不会滚动。它将始终保持在屏幕上的相同位置。</p>
+<p><code>background-attachment: local</code>，是CSS3的新增功能，可将元素的背景固定为实际的元素本身。因此，当滚动页面时，仅当元素这样做时，元素的背景才会随之移动（对于带有<code>position: fixed</code>。的元素则不会）。滚动元素的内容时，背景将与其一起滚动。</p>
+<p>看这个很清晰。。个屁啊视口是啥</p>
+<p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/background-attachment">https://developer.mozilla.org/zh-CN/docs/Web/CSS/background-attachment</a></p>
+<p><code>background-clip</code> 设置元素的背景（背景图片或颜色）是否延伸到边框、内边距盒子、内容盒子下</p>
+<p>border-box,padding-box,content-box,text</p>
+<p>background-origin</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">border-box</span><br></pre></td></tr></table></figure>
+
+<p>背景图片的摆放以border区域为参考</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">padding-box</span><br></pre></td></tr></table></figure>
+
+<p>背景图片的摆放以padding区域为参考</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">content-box</span><br></pre></td></tr></table></figure>
+
+<p>背景图片的摆放以content区域为参考</p>
+<h3 id="background简写"><a href="#background简写" class="headerlink" title="background简写"></a>background简写</h3><p>如果使用多个背景，则需要为第一个背景指定所有普通属性，然后在逗号后面添加下一个背景。</p>
+<p>对于所有简写属性，任何没有被指定的值都会被设定为它们的 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/initial_value">初始值</a></p>
+<ul>
+<li><code>&lt;bg-size&gt;</code> 只能紧接着 <code>&lt;position&gt;</code> 出现，以”/“分割，如： “<code>center/80%</code>“.</li>
+<li><code>&lt;box&gt;</code> 可能出现 0 次、1 次或 2 次。如果出现 1 次，它同时设定 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/background-origin"><code>background-origin</code></a> 和 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/background-clip"><code>background-clip</code></a>。如果出现 2 次，第一次的出现设置 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/background-origin"><code>background-origin</code></a>，第二次的出现设置 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/background-clip"><code>background-clip</code></a>。</li>
+<li><code>&lt;background-color&gt;</code> 只能被包含在最后一层！！。</li>
+</ul>
+<p><strong>注意:</strong> <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/background-color"><code>background-color</code></a> 只能在background的最后一个属性上定义，因为整个元素只有一种背景颜色。</p>
+<p>其他顺序随意</p>
+<h2 id="处理文本"><a href="#处理文本" class="headerlink" title="处理文本"></a>处理文本</h2><p>writing-mode</p>
+<p>a-b：a可取horizontal 和vertical 代表文本方向（内联布局）</p>
+<p>horizontal有tb和bt  vertical有rl和lr代表块流向（块布局）</p>
+<h1 id="以后再学"><a href="#以后再学" class="headerlink" title="以后再学"></a>以后再学</h1><h2 id="css层叠"><a href="#css层叠" class="headerlink" title="css层叠"></a><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/Cascade#origin_of_css_declarations">css层叠</a></h2><h2 id="外边距重叠"><a href="#外边距重叠" class="headerlink" title="外边距重叠"></a><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing">外边距重叠</a></h2><h2 id="视口-视口概念-CSS（层叠样式表）-MDN-mozilla-org"><a href="#视口-视口概念-CSS（层叠样式表）-MDN-mozilla-org" class="headerlink" title="[视口](视口概念 - CSS（层叠样式表） | MDN (mozilla.org))"></a>[视口](<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/Viewport_concepts">视口概念 - CSS（层叠样式表） | MDN (mozilla.org)</a>)</h2>
     </div>
 
     
@@ -660,7 +715,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#CSS%E5%85%A5%E9%97%A8"><span class="nav-number">1.</span> <span class="nav-text">CSS入门</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9E%84%E5%BB%BACSS"><span class="nav-number">1.1.</span> <span class="nav-text">构建CSS</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A7%84%E5%88%99"><span class="nav-number">1.1.1.</span> <span class="nav-text">@规则</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%80%9F%E8%AE%B0%E5%B1%9E%E6%80%A7"><span class="nav-number">1.1.2.</span> <span class="nav-text">速记属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#tips"><span class="nav-number">1.1.3.</span> <span class="nav-text">tips</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#CSS%E6%9E%84%E5%BB%BA"><span class="nav-number">2.</span> <span class="nav-text">CSS构建</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B1%82%E5%8F%A0%E5%92%8C%E7%BB%A7%E6%89%BF"><span class="nav-number">2.1.</span> <span class="nav-text">层叠和继承</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8E%A7%E5%88%B6%E7%BB%A7%E6%89%BF"><span class="nav-number">2.1.1.</span> <span class="nav-text">控制继承</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BC%98%E5%85%88%E7%BA%A7"><span class="nav-number">2.1.2.</span> <span class="nav-text">优先级</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%80%89%E6%8B%A9%E5%99%A8"><span class="nav-number">2.2.</span> <span class="nav-text">选择器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B1%9E%E6%80%A7"><span class="nav-number">2.2.1.</span> <span class="nav-text">属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E2%80%9C%E4%BC%AA%E2%80%9C"><span class="nav-number">2.2.2.</span> <span class="nav-text">“伪“</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B3%E7%B3%BB%E9%80%89%E6%8B%A9"><span class="nav-number">2.2.3.</span> <span class="nav-text">关系选择</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%9B%92%E6%A8%A1%E5%9E%8B"><span class="nav-number">2.3.</span> <span class="nav-text">盒模型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%96%E8%BE%B9%E8%B7%9D%E6%8A%98%E5%8F%A0"><span class="nav-number">2.3.1.</span> <span class="nav-text">外边距折叠</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%B9%E6%A1%86"><span class="nav-number">2.3.2.</span> <span class="nav-text">边框</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%83%8C%E6%99%AF"><span class="nav-number">2.4.</span> <span class="nav-text">背景</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BB%A5%E5%90%8E%E5%86%8D%E5%AD%A6"><span class="nav-number">3.</span> <span class="nav-text">以后再学</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#css%E5%B1%82%E5%8F%A0"><span class="nav-number">3.1.</span> <span class="nav-text">css层叠</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%96%E8%BE%B9%E8%B7%9D%E9%87%8D%E5%8F%A0"><span class="nav-number">3.2.</span> <span class="nav-text">外边距重叠</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#CSS%E5%85%A5%E9%97%A8"><span class="nav-number">1.</span> <span class="nav-text">CSS入门</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9E%84%E5%BB%BACSS"><span class="nav-number">1.1.</span> <span class="nav-text">构建CSS</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A7%84%E5%88%99"><span class="nav-number">1.1.1.</span> <span class="nav-text">@规则</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%80%9F%E8%AE%B0%E5%B1%9E%E6%80%A7"><span class="nav-number">1.1.2.</span> <span class="nav-text">速记属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#tips"><span class="nav-number">1.1.3.</span> <span class="nav-text">tips</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#CSS%E6%9E%84%E5%BB%BA"><span class="nav-number">2.</span> <span class="nav-text">CSS构建</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B1%82%E5%8F%A0%E5%92%8C%E7%BB%A7%E6%89%BF"><span class="nav-number">2.1.</span> <span class="nav-text">层叠和继承</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8E%A7%E5%88%B6%E7%BB%A7%E6%89%BF"><span class="nav-number">2.1.1.</span> <span class="nav-text">控制继承</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BC%98%E5%85%88%E7%BA%A7"><span class="nav-number">2.1.2.</span> <span class="nav-text">优先级</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%80%89%E6%8B%A9%E5%99%A8"><span class="nav-number">2.2.</span> <span class="nav-text">选择器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B1%9E%E6%80%A7"><span class="nav-number">2.2.1.</span> <span class="nav-text">属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E2%80%9C%E4%BC%AA%E2%80%9C"><span class="nav-number">2.2.2.</span> <span class="nav-text">“伪“</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B3%E7%B3%BB%E9%80%89%E6%8B%A9"><span class="nav-number">2.2.3.</span> <span class="nav-text">关系选择</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%9B%92%E6%A8%A1%E5%9E%8B"><span class="nav-number">2.3.</span> <span class="nav-text">盒模型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%96%E8%BE%B9%E8%B7%9D%E6%8A%98%E5%8F%A0"><span class="nav-number">2.3.1.</span> <span class="nav-text">外边距折叠</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%B9%E6%A1%86"><span class="nav-number">2.3.2.</span> <span class="nav-text">边框</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%83%8C%E6%99%AF"><span class="nav-number">2.4.</span> <span class="nav-text">背景</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#background%E7%AE%80%E5%86%99"><span class="nav-number">2.4.1.</span> <span class="nav-text">background简写</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%84%E7%90%86%E6%96%87%E6%9C%AC"><span class="nav-number">2.5.</span> <span class="nav-text">处理文本</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BB%A5%E5%90%8E%E5%86%8D%E5%AD%A6"><span class="nav-number">3.</span> <span class="nav-text">以后再学</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#css%E5%B1%82%E5%8F%A0"><span class="nav-number">3.1.</span> <span class="nav-text">css层叠</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%96%E8%BE%B9%E8%B7%9D%E9%87%8D%E5%8F%A0"><span class="nav-number">3.2.</span> <span class="nav-text">外边距重叠</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%86%E5%8F%A3-%E8%A7%86%E5%8F%A3%E6%A6%82%E5%BF%B5-CSS%EF%BC%88%E5%B1%82%E5%8F%A0%E6%A0%B7%E5%BC%8F%E8%A1%A8%EF%BC%89-MDN-mozilla-org"><span class="nav-number">3.3.</span> <span class="nav-text">[视口](视口概念 - CSS（层叠样式表） | MDN (mozilla.org))</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -669,7 +724,7 @@
     <img class="site-author-image" itemprop="image" alt="Darren"
       src="/images/avatar.gif">
   <p class="site-author-name" itemprop="name">Darren</p>
-  <div class="site-description" itemprop="description">To recode, to memory and to stride forward</div>
+  <div class="site-description" itemprop="description">刚开始学习Web全栈和安全的新手博客</div>
 </div>
 <div class="site-state-wrap motion-element">
   <nav class="site-state">
@@ -712,7 +767,7 @@
       </div>
 
     </div>
-	<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=857619&auto=1&height=66"></iframe>
+	<iframe frameborder="no" border="1"  marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=468176711&auto=1&height=66"></iframe>
   </aside>
   <div id="sidebar-dimmer"></div>
 
@@ -747,7 +802,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共34.2k字</span>
+  <span class="post-count">博客全站共35.2k字</span>
 </div>
         
 
