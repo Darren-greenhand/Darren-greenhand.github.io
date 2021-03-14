@@ -299,10 +299,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2021-03-14 16:10:41 / 修改时间：23:16:38" itemprop="dateCreated datePublished" datetime="2021-03-14T16:10:41+08:00">2021-03-14</time>
+              <time title="创建时间：2021-03-14 16:10:41" itemprop="dateCreated datePublished" datetime="2021-03-14T16:10:41+08:00">2021-03-14</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-03-15 00:22:29" itemprop="dateModified" datetime="2021-03-15T00:22:29+08:00">2021-03-15</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -1142,6 +1148,32 @@
 <p>有时，中间设备（通常是路由器），在将IPv4数据包从一个介质转发到具有更小 MTU 的介质时，必须分割数据包。此过程称为数据包分片或分片。<strong>分片会导致延迟。IPv6 数据包不能被路由器分片。</strong></p>
 <p>OSI传输层发送被封装在IPv4或IPv6包中的数据段</p>
 <p>OSI数据链路层负责接收数据包并准备数据包以在通信介质上传输</p>
+<h2 id="IPv4数据包"><a href="#IPv4数据包" class="headerlink" title="IPv4数据包"></a>IPv4数据包</h2><p>IPv4 是主要网络层通信协议之一。IPv4 数据包报头用于确保此数据包在到达目的地终端设备的路上被传递到其下一站。</p>
+<p>IPv4 数据包报头是由包含重要数据包信息的字段组成。这些字段中包含的二进制数字由第 3 层进程进行检查。</p>
+<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210314233828847.png" alt="image-20210314233828847"></p>
+<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210314233849824.png" alt="image-20210314233849824"></p>
+<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210314234312571.png" alt="image-20210314234312571"></p>
+<p>其他字段用于重新排列分段的数据包。具体而言，IPv4 数据包使用标识符、标志和片偏移量字段跟踪分段。路由器从一种介质向具有较小 MTU 的另一种介质转发IPv4数据包时必须将它分片。</p>
+<p>注意：选项和填充字段很少使用，因此不在本模块的介绍范围之内。</p>
+<p><em><strong>8.2.3的视频描述wireshark中检测IPv4报头非常好！</strong></em></p>
+<h2 id="IPv6数据包"><a href="#IPv6数据包" class="headerlink" title="*IPv6数据包"></a>*IPv6数据包</h2><p>IPv6它最终将取代 IPv4</p>
+<p>多年来，为应对新的挑战，已经制定了附加议定书和规程。但是，尽管经历了多次变更，IPv4 仍然有三个重要问题：</p>
+<ul>
+<li><strong>IPv4地址耗尽 -</strong> IPv4 的可用唯一公有地址数量有限。尽管有大约 40 亿的 IPv4 地址，但是支持 IP 的新设备数量的不断增加，以及始终在线的连接的增加，和欠发达地区的潜在连接的增加，不断催生更多的地址需求。</li>
+<li><strong>缺乏端到端连接 -</strong> 网络地址转换 (NAT) 是 IPv4 网络中经常实施的一项技术。NAT 为多种设备共享单一的公有 IPv4 地址提供方法。但是，因为共享了公有 IPv4 地址，内部网络主机的 IPv4 地址会隐藏起来。这会给需要端到端连接的技术造成难题。</li>
+<li><strong>增加的网络复杂性</strong> - 虽然NAT延长了IPv4的寿命，但它只是作为一种过渡到IPv6的机制。NAT在其各种实施中增加了网络的复杂性，从而造成延迟并使故障排除更加困难。</li>
+</ul>
+<p>IPv6 的功能提升包括以下：</p>
+<ul>
+<li><strong>更大的地址空间</strong> - IPv6 地址基于 128 位分层编址，而 IPv4 采用的是 32 位。</li>
+<li><strong>改进数据包处理过程</strong> - IPv6 报头简化为更少的字段。</li>
+<li><strong>消除了对 NAT 的需求</strong> - 有了数额如此巨大的公有 IPv6 地址，私有 IPv4 地址和公有 IPv4 地址之间不再需要 NAT。这可避免需要端到端连接的应用程序遇到某些由 NAT 引起的故障。</li>
+</ul>
+<p>32 位的 IPv4 地址空间提供大约 4,294,967,296 个地址。IPv6 地址空间提供 340,282,366,920,938,463,463,374,607,431,768,211,456 个或 340 涧（10 的 36 次方）个地址。这大致相当于地球上的每一粒沙子。</p>
+<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210314235834424.png" alt="image-20210314235834424"></p>
+<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210315000426978.png" alt="image-20210315000426978"></p>
+<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210315000511899.png" alt="image-20210315000511899"><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210315000554634.png" alt="image-20210315000554634"></p>
+<p>共40个八位组，8个报头字段</p>
 <h1 id="遗漏知识"><a href="#遗漏知识" class="headerlink" title="*遗漏知识"></a>*遗漏知识</h1><h2 id="2-1-5终端仿真程序"><a href="#2-1-5终端仿真程序" class="headerlink" title="2.1.5终端仿真程序"></a>2.1.5终端仿真程序</h2><h2 id="2-3-8用Tera-Term连接控制台"><a href="#2-3-8用Tera-Term连接控制台" class="headerlink" title="2.3.8用Tera Term连接控制台"></a>2.3.8用Tera Term连接控制台</h2><h2 id="2-5-4捕获配置到文本中"><a href="#2-5-4捕获配置到文本中" class="headerlink" title="2.5.4捕获配置到文本中"></a>2.5.4捕获配置到文本中</h2>
       
     </div>
@@ -1932,7 +1964,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共55k字</span>
+  <span class="post-count">博客全站共55.7k字</span>
 </div>
         
 
