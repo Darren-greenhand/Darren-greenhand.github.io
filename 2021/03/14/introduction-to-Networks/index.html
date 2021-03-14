@@ -23,30 +23,51 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.json"};
   </script>
 
-  <meta name="description" content="刚开始学习Web全栈和安全的新手博客">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Darren Blog">
-<meta property="og:url" content="http://example.com/index.html">
+  <meta name="description" content="[toc] 警告：Cisco课程，不可用于商用 因为我发现学这个课老是断断续续的，每次捡起来超级麻烦，所以趁这次来个大复习，把一些该有的知识点直接记下来好了 1. 当今网络网络组件网络有很多组件: 终端设备，中间设备，网络介质巴拉巴拉 常见表示方法：  除了这些表示之外，还使用专门的术语来描述这些设备和介质是如何相互连接的:  网络接口卡 (NIC) - 将设备物理连接到网络。 物理端口 - 网络">
+<meta property="og:type" content="article">
+<meta property="og:title" content="introduction-to-Networks">
+<meta property="og:url" content="http://example.com/2021/03/14/introduction-to-Networks/index.html">
 <meta property="og:site_name" content="Darren Blog">
-<meta property="og:description" content="刚开始学习Web全栈和安全的新手博客">
+<meta property="og:description" content="[toc] 警告：Cisco课程，不可用于商用 因为我发现学这个课老是断断续续的，每次捡起来超级麻烦，所以趁这次来个大复习，把一些该有的知识点直接记下来好了 1. 当今网络网络组件网络有很多组件: 终端设备，中间设备，网络介质巴拉巴拉 常见表示方法：  除了这些表示之外，还使用专门的术语来描述这些设备和介质是如何相互连接的:  网络接口卡 (NIC) - 将设备物理连接到网络。 物理端口 - 网络">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://gitee.com/darren-greenhand//picture/raw/master/image-20210314161643916.png">
+<meta property="og:image" content="https://gitee.com/darren-greenhand//picture/raw/master/image-20210314163007230.png">
+<meta property="og:image" content="https://gitee.com/darren-greenhand//picture/raw/master/image-20210314163957083.png">
+<meta property="og:image" content="https://gitee.com/darren-greenhand//picture/raw/master/image-20210314171619114.png">
+<meta property="og:image" content="https://gitee.com/darren-greenhand//picture/raw/master/image-20210314173907739.png">
+<meta property="og:image" content="https://gitee.com/darren-greenhand//picture/raw/master/image-20210314174259989.png">
+<meta property="og:image" content="https://gitee.com/darren-greenhand//picture/raw/master/image-20210314182735686.png">
+<meta property="og:image" content="https://gitee.com/darren-greenhand//picture/raw/master/image-20210314200028243.png">
+<meta property="og:image" content="https://gitee.com/darren-greenhand//picture/raw/master/image-20210314200013783.png">
+<meta property="og:image" content="https://gitee.com/darren-greenhand//picture/raw/master/image-20210314200350348.png">
+<meta property="og:image" content="https://gitee.com/darren-greenhand//picture/raw/master/image-20210314205917487.png">
+<meta property="og:image" content="https://gitee.com/darren-greenhand//picture/raw/master/image-20210314211820357.png">
+<meta property="og:image" content="https://gitee.com/darren-greenhand//picture/raw/master/image-20210314213324158.png">
+<meta property="og:image" content="https://gitee.com/darren-greenhand//picture/raw/master/image-20210314213352540.png">
+<meta property="og:image" content="https://gitee.com/darren-greenhand//picture/raw/master/image-20210314214332628.png">
+<meta property="og:image" content="https://gitee.com/darren-greenhand//picture/raw/master/image-20210314214654631.png">
+<meta property="og:image" content="https://gitee.com/darren-greenhand//picture/raw/master/image-20210314214944369.png">
+<meta property="article:published_time" content="2021-03-14T08:10:41.000Z">
+<meta property="article:modified_time" content="2021-03-14T15:16:38.353Z">
 <meta property="article:author" content="Darren">
+<meta property="article:tag" content="cisco">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://gitee.com/darren-greenhand//picture/raw/master/image-20210314161643916.png">
 
-<link rel="canonical" href="http://example.com/">
+<link rel="canonical" href="http://example.com/2021/03/14/introduction-to-Networks/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome : true,
-    isPost : false,
+    isHome : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>Darren Blog</title>
+  <title>introduction-to-Networks | Darren Blog</title>
   
 
 
@@ -195,84 +216,10 @@
         <div class="content-wrap">
           
 
-          <div class="content index posts-expand">
+          <div class="content post posts-expand">
             
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/03/14/Linux/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Darren">
-      <meta itemprop="description" content="刚开始学习Web全栈和安全的新手博客">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Darren Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/03/14/Linux/" class="post-title-link" itemprop="url">Linux</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2021-03-14 20:57:21 / 修改时间：20:58:12" itemprop="dateCreated datePublished" datetime="2021-03-14T20:57:21+08:00">2021-03-14</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/others/" itemprop="url" rel="index"><span itemprop="name">others</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
 
     
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>An important skill</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2021/03/14/Linux/">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
@@ -288,10 +235,9 @@
       <meta itemprop="name" content="Darren Blog">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/03/14/introduction-to-Networks/" class="post-title-link" itemprop="url">introduction-to-Networks</a>
-        </h2>
+        <h1 class="post-title" itemprop="name headline">
+          introduction-to-Networks
+        </h1>
 
         <div class="post-meta">
             <span class="post-meta-item">
@@ -324,7 +270,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>[toc]</p>
+        <p>[toc]</p>
 <p>警告：Cisco课程，不可用于商用</p>
 <p>因为我发现学这个课老是断断续续的，每次捡起来超级麻烦，所以趁这次来个大复习，把一些该有的知识点直接记下来好了</p>
 <h1 id="1-当今网络"><a href="#1-当今网络" class="headerlink" title="1. 当今网络"></a>1. 当今网络</h1><h2 id="网络组件"><a href="#网络组件" class="headerlink" title="网络组件"></a>网络组件</h2><p>网络有很多组件:</p>
@@ -1143,657 +1089,55 @@
 <p>OSI传输层发送被封装在IPv4或IPv6包中的数据段</p>
 <p>OSI数据链路层负责接收数据包并准备数据包以在通信介质上传输</p>
 <h1 id="遗漏知识"><a href="#遗漏知识" class="headerlink" title="*遗漏知识"></a>*遗漏知识</h1><h2 id="2-1-5终端仿真程序"><a href="#2-1-5终端仿真程序" class="headerlink" title="2.1.5终端仿真程序"></a>2.1.5终端仿真程序</h2><h2 id="2-3-8用Tera-Term连接控制台"><a href="#2-3-8用Tera-Term连接控制台" class="headerlink" title="2.3.8用Tera Term连接控制台"></a>2.3.8用Tera Term连接控制台</h2><h2 id="2-5-4捕获配置到文本中"><a href="#2-5-4捕获配置到文本中" class="headerlink" title="2.5.4捕获配置到文本中"></a>2.5.4捕获配置到文本中</h2>
-      
     </div>
 
     
     
     
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/03/14/ctf-misc/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Darren">
-      <meta itemprop="description" content="刚开始学习Web全栈和安全的新手博客">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Darren Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/03/14/ctf-misc/" class="post-title-link" itemprop="url">ctf-misc</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2021-03-14 00:34:29 / 修改时间：11:22:23" itemprop="dateCreated datePublished" datetime="2021-03-14T00:34:29+08:00">2021-03-14</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/ctf/" itemprop="url" rel="index"><span itemprop="name">ctf</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>misc-basic</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2021/03/14/ctf-misc/">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
         
-      
-    </div>
 
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
+  <div class="followme">
+    <p>欢迎关注我的其它发布渠道</p>
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/03/13/ctf-learn/">
+    <div class="social-list">
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Darren">
-      <meta itemprop="description" content="刚开始学习Web全栈和安全的新手博客">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Darren Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/03/13/ctf-learn/" class="post-title-link" itemprop="url">ctf-learn</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-03-13 20:56:31" itemprop="dateCreated datePublished" datetime="2021-03-13T20:56:31+08:00">2021-03-13</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-03-14 17:57:38" itemprop="dateModified" datetime="2021-03-14T17:57:38+08:00">2021-03-14</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/ctf/" itemprop="url" rel="index"><span itemprop="name">ctf</span></a>
-                </span>
+        <div class="social-item">
+          <a target="_blank" class="social-link" href="/atom.xml">
+            <span class="icon">
+              <i class="fa fa-rss"></i>
             </span>
 
-          
-
+            <span class="label">RSS</span>
+          </a>
         </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>Start to learn ctf</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2021/03/13/ctf-learn/">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
     </div>
+  </div>
 
-    
-    
-    
+
       <footer class="post-footer">
-        <div class="post-eof"></div>
+          <div class="post-tags">
+              <a href="/tags/cisco/" rel="tag"><i class="fa fa-tag"></i></a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/03/14/ctf-misc/" rel="prev" title="ctf-misc">
+      <i class="fa fa-chevron-left"></i> ctf-misc
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2021/03/14/Linux/" rel="next" title="Linux">
+      Linux <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
       </footer>
+    
   </article>
   
   
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/03/13/http/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Darren">
-      <meta itemprop="description" content="刚开始学习Web全栈和安全的新手博客">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Darren Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/03/13/http/" class="post-title-link" itemprop="url">http</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2021-03-13 20:51:18 / 修改时间：20:55:04" itemprop="dateCreated datePublished" datetime="2021-03-13T20:51:18+08:00">2021-03-13</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/web/" itemprop="url" rel="index"><span itemprop="name">web</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>web-between-first</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2021/03/13/http/">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/03/13/css/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Darren">
-      <meta itemprop="description" content="刚开始学习Web全栈和安全的新手博客">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Darren Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/03/13/css/" class="post-title-link" itemprop="url">css</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-03-13 20:51:04" itemprop="dateCreated datePublished" datetime="2021-03-13T20:51:04+08:00">2021-03-13</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-03-14 14:31:47" itemprop="dateModified" datetime="2021-03-14T14:31:47+08:00">2021-03-14</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/web/" itemprop="url" rel="index"><span itemprop="name">web</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>web-second(continue)</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2021/03/13/css/">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/03/11/html/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Darren">
-      <meta itemprop="description" content="刚开始学习Web全栈和安全的新手博客">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Darren Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/03/11/html/" class="post-title-link" itemprop="url">html</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-03-11 00:12:05" itemprop="dateCreated datePublished" datetime="2021-03-11T00:12:05+08:00">2021-03-11</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-03-13 20:53:50" itemprop="dateModified" datetime="2021-03-13T20:53:50+08:00">2021-03-13</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/web/" itemprop="url" rel="index"><span itemprop="name">web</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>web-first(continue)</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2021/03/11/html/">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/03/09/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Darren">
-      <meta itemprop="description" content="刚开始学习Web全栈和安全的新手博客">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Darren Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/03/09/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" class="post-title-link" itemprop="url">正则表达式</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-03-09 13:15:59" itemprop="dateCreated datePublished" datetime="2021-03-09T13:15:59+08:00">2021-03-09</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-03-13 20:58:36" itemprop="dateModified" datetime="2021-03-13T20:58:36+08:00">2021-03-13</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/others/" itemprop="url" rel="index"><span itemprop="name">others</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>useful skill-Regular expression</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2021/03/09/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/03/08/pythoning/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Darren">
-      <meta itemprop="description" content="刚开始学习Web全栈和安全的新手博客">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Darren Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/03/08/pythoning/" class="post-title-link" itemprop="url">pythoning</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-03-08 14:28:04" itemprop="dateCreated datePublished" datetime="2021-03-08T14:28:04+08:00">2021-03-08</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-03-13 20:58:13" itemprop="dateModified" datetime="2021-03-13T20:58:13+08:00">2021-03-13</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/others/" itemprop="url" rel="index"><span itemprop="name">others</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>web-backend-base</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2021/03/08/pythoning/">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/03/06/git/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Darren">
-      <meta itemprop="description" content="刚开始学习Web全栈和安全的新手博客">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Darren Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/03/06/git/" class="post-title-link" itemprop="url">git</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-03-06 20:33:45" itemprop="dateCreated datePublished" datetime="2021-03-06T20:33:45+08:00">2021-03-06</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-03-13 20:53:31" itemprop="dateModified" datetime="2021-03-13T20:53:31+08:00">2021-03-13</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/others/" itemprop="url" rel="index"><span itemprop="name">others</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>git commands</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2021/03/06/git/">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-
   
 
 
@@ -1846,6 +1190,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-%E5%BD%93%E4%BB%8A%E7%BD%91%E7%BB%9C"><span class="nav-number">1.</span> <span class="nav-text">1. 当今网络</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BD%91%E7%BB%9C%E7%BB%84%E4%BB%B6"><span class="nav-number">1.1.</span> <span class="nav-text">网络组件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B8%B8%E7%94%A8%E8%BF%9E%E6%8E%A5%E6%8A%80%E6%9C%AF"><span class="nav-number">1.2.</span> <span class="nav-text">常用连接技术</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%AF%E9%9D%A0%E7%BD%91%E7%BB%9C"><span class="nav-number">1.3.</span> <span class="nav-text">可靠网络</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E4%BA%9B%E8%B6%8B%E5%8A%BF"><span class="nav-number">1.4.</span> <span class="nav-text">一些趋势</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-%E9%85%8D%E7%BD%AE%E4%BA%A4%E6%8D%A2%E6%9C%BA-%E7%BB%88%E7%AB%AF"><span class="nav-number">2.</span> <span class="nav-text">2. 配置交换机&#x2F;终端</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AE%BF%E9%97%AE%E6%96%B9%E6%B3%95"><span class="nav-number">2.1.</span> <span class="nav-text">访问方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE%E6%A8%A1%E5%BC%8F"><span class="nav-number">2.2.</span> <span class="nav-text">配置模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%91%BD%E4%BB%A4%E9%9B%86%E5%90%88"><span class="nav-number">2.3.</span> <span class="nav-text">命令集合</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A5%BD%E5%A4%9A%E7%BC%A9%E5%86%99"><span class="nav-number">2.4.</span> <span class="nav-text">好多缩写</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%83%AD%E9%94%AE"><span class="nav-number">2.5.</span> <span class="nav-text">热键</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-%E5%8D%8F%E8%AE%AE%E5%92%8C%E6%A8%A1%E5%9E%8B"><span class="nav-number">3.</span> <span class="nav-text">3. 协议和模型</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5"><span class="nav-number">3.1.</span> <span class="nav-text">基础概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#TCP-IP"><span class="nav-number">3.2.</span> <span class="nav-text">*TCP&#x2F;IP</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E5%8D%95%E5%85%83"><span class="nav-number">3.3.</span> <span class="nav-text">数据单元</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-%E7%89%A9%E7%90%86%E5%B1%82"><span class="nav-number">4.</span> <span class="nav-text">4. 物理层</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%89%A9%E7%90%86%E5%B1%82%E6%A0%87%E5%87%86"><span class="nav-number">4.1.</span> <span class="nav-text">物理层标准</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B8%A6%E5%AE%BD"><span class="nav-number">4.2.</span> <span class="nav-text">带宽</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%93%9C%E7%BC%86"><span class="nav-number">4.3.</span> <span class="nav-text">铜缆</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#UTP%E5%B8%83%E7%BA%BF"><span class="nav-number">4.4.</span> <span class="nav-text">UTP布线</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%89%E7%BA%A4"><span class="nav-number">4.5.</span> <span class="nav-text">光纤</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%97%A0%E7%BA%BF"><span class="nav-number">4.6.</span> <span class="nav-text">无线</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5-%E6%95%B0%E5%88%B6%E7%B3%BB%E7%BB%9F"><span class="nav-number">5.</span> <span class="nav-text">5. 数制系统</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#6-%E6%95%B0%E6%8D%AE%E9%93%BE%E8%B7%AF%E5%B1%82"><span class="nav-number">6.</span> <span class="nav-text">6. 数据链路层</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#IEEE-802-LAN-MAN"><span class="nav-number">6.1.</span> <span class="nav-text">IEEE 802 LAN&#x2F;MAN</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%8B%E8%B4%A8%E8%AE%BF%E9%97%AE"><span class="nav-number">6.2.</span> <span class="nav-text">介质访问</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8B%93%E6%89%91"><span class="nav-number">6.3.</span> <span class="nav-text">拓扑</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AE%BF%E9%97%AE%E6%8E%A7%E5%88%B6%E6%96%B9%E6%B3%95"><span class="nav-number">6.4.</span> <span class="nav-text">访问控制方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B8%A7"><span class="nav-number">6.5.</span> <span class="nav-text">帧</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#7-%E4%BB%A5%E5%A4%AA%E7%BD%91%E4%BA%A4%E6%8D%A2"><span class="nav-number">7.</span> <span class="nav-text">7. 以太网交换</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#MAC%E5%AD%90%E5%B1%82"><span class="nav-number">7.1.</span> <span class="nav-text">MAC子层</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%A5%E5%A4%AA%E7%BD%91%E5%B8%A7%E5%AD%97%E6%AE%B5"><span class="nav-number">7.2.</span> <span class="nav-text">以太网帧字段</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MAC-%E5%9C%B0%E5%9D%80"><span class="nav-number">7.3.</span> <span class="nav-text">MAC 地址</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MAC%E5%9C%B0%E5%9D%80%E8%A1%A8"><span class="nav-number">7.4.</span> <span class="nav-text">MAC地址表</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%A4%E6%8D%A2%E6%9C%BA%E9%80%9F%E7%8E%87-%E8%BD%AC%E5%8F%91%E6%96%B9%E6%B3%95"><span class="nav-number">7.5.</span> <span class="nav-text">交换机速率&#x2F;转发方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Auto-MDIX"><span class="nav-number">7.6.</span> <span class="nav-text">Auto-MDIX</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#8-%E7%BD%91%E7%BB%9C%E5%B1%82"><span class="nav-number">8.</span> <span class="nav-text">8. 网络层</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BD%91%E7%BB%9C%E5%B1%82%E7%89%B9%E5%BE%81"><span class="nav-number">8.1.</span> <span class="nav-text">网络层特征</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%81%97%E6%BC%8F%E7%9F%A5%E8%AF%86"><span class="nav-number">9.</span> <span class="nav-text">*遗漏知识</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-5%E7%BB%88%E7%AB%AF%E4%BB%BF%E7%9C%9F%E7%A8%8B%E5%BA%8F"><span class="nav-number">9.1.</span> <span class="nav-text">2.1.5终端仿真程序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-3-8%E7%94%A8Tera-Term%E8%BF%9E%E6%8E%A5%E6%8E%A7%E5%88%B6%E5%8F%B0"><span class="nav-number">9.2.</span> <span class="nav-text">2.3.8用Tera Term连接控制台</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-5-4%E6%8D%95%E8%8E%B7%E9%85%8D%E7%BD%AE%E5%88%B0%E6%96%87%E6%9C%AC%E4%B8%AD"><span class="nav-number">9.3.</span> <span class="nav-text">2.5.4捕获配置到文本中</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
