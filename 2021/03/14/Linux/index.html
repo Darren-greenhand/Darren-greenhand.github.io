@@ -32,7 +32,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://gitee.com/darren-greenhand//picture/raw/master/image-20210316171316621.png">
 <meta property="article:published_time" content="2021-03-14T12:57:21.000Z">
-<meta property="article:modified_time" content="2021-03-16T11:01:25.069Z">
+<meta property="article:modified_time" content="2021-03-16T13:55:02.853Z">
 <meta property="article:author" content="Darren">
 <meta property="article:tag" content="cisco">
 <meta name="twitter:card" content="summary">
@@ -237,7 +237,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-03-16 19:01:25" itemprop="dateModified" datetime="2021-03-16T19:01:25+08:00">2021-03-16</time>
+                <time title="修改时间：2021-03-16 21:55:02" itemprop="dateModified" datetime="2021-03-16T21:55:02+08:00">2021-03-16</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -359,6 +359,145 @@
 <p><strong>Debian</strong></p>
 <p>Debian软件包管理的核心是软件包，这些软件包以<code>.deb</code>扩展名结尾的文件的形式分发。</p>
 <p>用于管理这些文件的最底层工具是<code>dpkg</code>命令。该命令可能难倒新手Linux用户，所以<strong>先进的包装工具</strong>，<code>apt-get</code>（<code>dpkg</code>工具的前端程序），使封装的管理更加容易。用作<code>dpkg</code>前端的其他命令行工具包括<code>aptitude</code>和<strong>Synaptic</strong>和<strong>Software Center之</strong>类的GUI前端。</p>
+<p><strong>RPM</strong></p>
+<p>在<strong>Linux标准基础</strong>，这是<strong>Linux基金会</strong>的项目，旨在指定（通过共识）的一套标准增加符合Linux系统之间的兼容性。根据Linux Standards Base，标准软件包管理系统是RPM。</p>
+<p>RPM<code>.rpm</code>为每个软件包使用一个文件。这个系统是从Red Hat（包括Centos和Fedora）派生的发行版用于管理软件的。不是Red Hat派生的其他几个发行版，例如SUSE，OpenSUSE和Arch，也使用RPM。</p>
+<p>与Debian系统一样，RPM软件包管理系统跟踪软件包之间的依赖关系。跟踪相关性可确保在安装软件包时，系统还会安装该软件包正常运行所需的所有软件包。依赖关系还确保正确执行软件更新和删除。</p>
+<p>该<code>rpm</code>命令最常用于RPM软件包管理的后端工具。虽然<code>rpm</code>命令可以安装，更新，查询和删除软件包，但命令行的前端工具，如<code>yum</code>和<code>up2date</code>使得解决依赖问题的过程自动化</p>
+<p>还有一些基于GUI的前端工具，例如<strong>Yumex</strong>和<strong>Gnome PackageKit</strong>，它们也使RPM软件包管理更加容易</p>
+<h2 id="云与LINUX"><a href="#云与LINUX" class="headerlink" title="云与LINUX"></a>云与LINUX</h2><p>从物理上讲，云可以描述为来自一个或多个异地数据中心的计算资源，这些资源可以通过Internet进行访问。云基于数据中心的优势，并为需要存储和处理数据的组织提供计算解决方案，并允许他们将IT基础架构的管理委派给第三方。组织存储在云中的数据和资源可以包括数据，服务器，存储，应用程序托管，分析和众多其他服务。</p>
+<p>云部署模型为如何构建，管理和访问云基础架构提供了基础。有四种主要的云部署模型：</p>
+<ul>
+<li><strong>公共云</strong>：公共云是提供商所部署的云基础结构，用于通过Internet向公众和组织提供云服务。在公共云模型中，可能有多个租户（消费者）共享公共云资源。我们中的许多人很可能在某些时候通过诸如Amazon，Google和其他流行的公共云提供商之类的提供商访问了公共云资源。</li>
+<li><strong>私有云</strong>：私有云是专门为特定组织而建立的云基础架构。与公共云相比，私有云为组织提供了更高程度的隐私，并可以控制云基础架构，应用程序和数据。它可以托管在使用它的公司管理的服务器上，也可以托管在托管的私有云提供商（例如Rackspace或IBM）中。</li>
+<li><strong>社区云</strong>：社区云是一种云基础结构，由一组具有共同目标或要求的组织专用。参与社区的组织通常分担社区云服务的成本。此选项可能比公共云贵。但是，与公共云相比，它可以提供更高级别的控制和防御外部威胁。</li>
+<li><strong>混合云</strong>：混合云由两个或多个单独的云组成，每个云可以是私有云，社区云或公共云。随着组件云的加入和离开，混合云可能会随时间而变化。使用这种技术可以实现数据和应用程序的可移植性。它还允许公司利用外部资源，同时保留对敏感资源的控制权。</li>
+</ul>
+<p>Linux在云计算中起着举足轻重的作用。它为90％的公共云工作负载提供动力，大多数虚拟服务器基于Linux内核的某个版本，并且Linux通常用于承载云计算服务背后的应用程序。那么，什么使Linux特别适合实现云计算呢？</p>
+<p><strong>灵活性</strong></p>
+<p>Linux在这里脱颖而出，因为它具有高度的适应性。对于初学者来说，Linux是设计上模块化的，并且在庞大的开源应用程序生态系统的中心，提供了无休止的配置选项以适合各种系统和用例。最重要的是，Linux可以高效地扩展，从而可以运行从微小的远程传感器到整个服务器场的所有内容。</p>
+<p><strong>辅助功能</strong></p>
+<p>在传统环境中，可从专用设备（例如台式机或笔记本电脑）访问IT资源。在云计算中，应用程序和数据驻留在中央，并且可以通过网络从任何设备（例如台式机，移动设备或瘦客户端）从网络上的任何位置进行访问，并且这些设备中的每一个都有一个Linux版本。</p>
+<p><strong>具有成本效益</strong></p>
+<p>云计算之所以具有吸引力，是因为它具有降低消费者IT成本的潜力。在云计算中，消费者可以单方面自动扩展IT资源以满足工作负载需求，从而消除未充分利用资源的开销。此外，减少了与IT配置，管理，占地面积，电源和冷却相关的费用。</p>
+<p>云提供商承担了这些基础架构成本，但必须保持低成本的替代方案。选择Linux是提供商可以部署的最具成本效益的解决方案之一。Linux是最省电的操作系统之一，Linux内核以及许多相关的应用程序，实用程序和其他软件组件都是完全免费的。</p>
+<p>企业和政府组织可以选择购买商业支持的发行版，与经许可的竞争对手相比，这种发行版更具成本效益。对于许多组织来说，支持云计算的非商业发行版也是一个可行的选择。</p>
+<p>供应商不仅可以将这些节省的资金转嫁给客户，而且提供基于Linux的解决方案对于客户来说可以更便宜地实现。在自己的系统上安装Linux可以消除与竞争性操作系统相关的昂贵的用户许可费用。</p>
+<p><strong>可管理性</strong></p>
+<p>尽管Linux最初只是一个小众的操作系统，但它在IT行业中的广泛存在使Linux的使用和管理成为IT专业人员的必备技能。云供应商和消费者变得越来越容易获得必要的人才或重新分配现有的团队成员。</p>
+<p>建立在C编程语言上的Linux的性质也使其适用于自动化管理工具。在云中运行的Linux服务器的很大一部分是由自动化管理程序而不是人工操作人员创建和管理的。此过程使管理员可以腾出时间来监视计算操作，而不必手动配置和更新系统。</p>
+<p><strong>安全</strong></p>
+<p>当使用云解决方案时，尤其是公共云，组织可能会担心与隐私，外部威胁以及对IT资源和数据的控制不足有关。</p>
+<p>Linux可帮助抵消这些问题，因为它是可用的最安全和可靠的操作系统之一。Linux是开源的，这意味着其源代码可供任何人获取，查看和修改。这也意味着可以检查该代码中的漏洞和兼容性问题，从而导致社区进行了广泛的工作来纠正这些问题并维护Linux的良好声誉。</p>
+<p><em><strong>虚拟化</strong></em></p>
+<p>虚拟化是促成计算支持云的最重要进步之一。</p>
+<p>Linux是一个多用户操作系统，这意味着许多不同的用户可以同时在同一个系统上工作，并且在大多数情况下不能做损害其他用户的事情。但是，这确实有局限性–用户可能会占用磁盘空间或占用过多的内存或CPU资源，并使每个人的系统运行缓慢。在多用户模式下共享系统还要求每个人都以非特权用户身份运行，因此，例如，让每个用户运行自己的Web服务器都是一项挑战。</p>
+<p>虚拟化是一个过程，其中一台称为主机的物理计算机运行一个操作系统的多个副本，每个副本称为guest虚拟机。可以为特定功能预先配置这些来宾映像，以在需要时允许自动快速部署。<strong>主机系统运行称为Hypervisor的软件，该软件可在各种来宾之间切换资源</strong>，就像Linux内核对单个进程所做的一样。使用裸机管理程序，管理程序直接在计算机硬件上运行，而不是在操作系统之上运行，从而释放了更多的资源用于来宾映像。</p>
+<p>虚拟化之所以有效，是因为服务器将大部分时间都花在了闲置时间上，并且不需要诸如显示器和键盘之类的物理资源。借助来自<strong>VMWare</strong>和<strong>Openbox之</strong>类的公司的软件，您现在可以使用功能强大的CPU，并通过使用它运行多个虚拟机，管理员可以优化物理资源的使用并大大降低以前的单机，单操作系统数据中心模型的成本。主要限制通常是内存，但是，随着虚拟机监控程序技术和CPU的发展，可以在一台主机上放置比以往更多的虚拟机。</p>
+<p>在虚拟化环境中，一台主机可以运行许多来宾操作系统，并且在CPU本身的支持下，来宾甚至都不知道它们在虚拟机上运行。每个来宾都拥有自己的虚拟资源，并与自己的网络进行通信。甚至没有必要在所有客户机上运行相同的操作系统，这进一步减少了所需的物理服务器的数量。</p>
+<p>虚拟化为企业提供了一种方法，可以通过等效的物理服务器群来降低能耗并减少数据中心空间。来宾现在仅是软件配置，因此很容易启动新机器进行测试，并在其有用性过去时将其销毁。</p>
+<p>由于可以在一台物理计算机上运行一个操作系统的多个实例并通过网络连接到它，因此计算机的位置无关紧要。云计算采用这种方法，并允许管理员在另一家公司拥有的远程数据中心中拥有虚拟机，并且仅需为使用的资源付费。云计算供应商可以利用经济规模来以比运营现场数据中心低得多的价格提供计算资源。</p>
+<p><strong>集装箱和裸机部署</strong></p>
+<p>随着诸如<strong>Docker</strong>和<strong>Kubernetes之</strong>类的容器化技术的兴起，如今正在编写可在无服务器环境中运行的应用程序软件。本质上，程序员正在创建一种软件，该软件执行在容器中运行的系统的一项功能（例如数据库处理或存储）。这些容器组织在节点内运行的Pod中，可以相互通信，并且可以根据需要与外界通信。节点又由主节点组织和控制为结构中的每个组件提供服务。通过这种方式构建应用程序，可以使每个组件彼此分离，并避免运行OS的开销。由于难题的每个部分都可以由主节点自动销毁并重新创建，因此不再需要像在OS顶部运行的软件那样强大。尽管这些新的编程体系结构在许多方面都绕过了对传统OS的需求，但使它们起作用的底层技术仍然是Linux。因此，在Linux中工作的开发团队将越来越多地利用编程，数据库设计，网络和系统管理的学科来创建未来的系统。？？？？看不懂。。</p>
+<h1 id="开源项目和许可"><a href="#开源项目和许可" class="headerlink" title="开源项目和许可"></a>开源项目和许可</h1><p>Software projects take the form of source code, which is a human-readable set of computer instructions. Since source code is not understood directly by the computer, it must be compiled into machine instructions by a compiler. The compiler is a special program that gathers all of the source code files and generates instructions that can be run on the computer, such as by the Linux kernel.</p>
+<p>（个人强烈建议在学习Linux前查看GNU宣言及相关历史）</p>
+<p>在谈论购买软件时，有三个不同的组件：</p>
+<ul>
+<li><strong>所有权</strong>–谁拥有该软件背后的知识产权？</li>
+<li><strong>汇款</strong>–<strong>资金</strong>如何转手（如果有的话）？</li>
+<li><strong>许可</strong>–您会得到什么？您可以使用该软件做什么？您只能在一台计算机上使用它吗？你能把它给别人吗？</li>
+<li>Linux由Linus Torvalds拥有。他已将代码置于称为<strong>GNU通用公共许可证版本2（GPLv2）的许可证下</strong>。该许可证除其他外，规定必须向任何提出要求的人提供源代码，并且允许任何人进行更改。一个警告是，如果有人进行更改并将其分发，则他们必须将更改置于相同的许可下，以便其他人可以从中受益。GPLv2还说，除分发源代码的实际成本（例如将其复制到可移动媒体）外，任何人都不得收取分发源代码的费用。</li>
+</ul>
+<p>通常，当某人创建某物时，他们也有权决定如何使用和分发它。<strong>自由和开源软件（FOSS）</strong>是指已放弃此权利的软件；任何人都可以查看源代码并重新分发。Linus Torvalds使用Linux做到了这一点–即使他创建了Linux，但他也不能禁止某人在其计算机上使用它，因为他已经通过GPLv2许可证放弃了该权利。</p>
+<h2 id="开源计划"><a href="#开源计划" class="headerlink" title="开源计划"></a>开源计划</h2><p>The <strong>Open Source Initiative (OSI)</strong> was founded in 1998 by Bruce Perens and Eric Raymond. They believed that the Free Software Foundation was too politically charged and that less extreme licenses were necessary, particularly around the copyleft aspects of FSF licenses. OSI believes that not only should the source be freely available, but also that no restrictions should be placed on the use of the software, no matter what the intended use. Unlike the FSF, the OSI does not have its own set of licenses. Instead, the OSI has a set of principles and adds licenses to that list if they meet those principles, called open source licenses. Software that conforms to an Open Source license is, therefore, open source software.</p>
+<p>One type of Open Source license is the <strong>BSD (Berkeley Software Distribution)</strong> and its derivatives, which are much simpler than GPL. There are currently two actual “BSD” licenses approved by OSI, a 2-Clause and a 3-Clause. These licenses state that you may redistribute the source and binaries as long as you maintain copyright notices and don’t imply that the original creator endorses your version. In other words “do what you want with this software, just don’t say you wrote it.” According to FSF, the original BSD license had a serious flaw in that it required developers to add a clause acknowledging the University of California, Berkeley in every advertisement for software licensed this way. As others copied this simple license, they included acknowledgment for their own institutions which led to over 75 such acknowledgments in some cases.</p>
+<p>FSF licenses, such as GPLv2, are also open source licenses. However, many open source licenses such as BSD and MIT do not contain the copyleft provisions and are thus not acceptable to the FSF. These licenses are called permissive free software licenses because they are permissive in how you can redistribute the software. You can take BSD licensed software and include it in a closed software product as long as you give proper attribution.</p>
+<p>Rather than dwell over the finer points of Open Source and Free Software, the community has started referring to them collectively as <strong>Free and Open Source Software (FOSS)</strong>. The English word “free” can mean “free as in lunch” (as in no cost) or “free as in speech” (as in no restrictions). This ambiguity led to the inclusion of the word “libre” to refer to the latter definition. Thus, we end up with <strong>Free/Libre/Open Source Software (FLOSS)</strong>.</p>
+<p>The <strong>Creative Commons (CC)</strong> organization has created the Creative Commons Licenses which try to address the intentions behind FOSS licenses for non-software entities. CC licenses can also be used to restrict commercial use if that is the desire of the copyright holder. The CC licenses are made up of the following set of conditions the creator can apply to their work:</p>
+<p>These conditions are then combined to create the six main licenses offered by Creative Commons:</p>
+<ul>
+<li><strong>Attribution (CC BY)</strong> – Much like the BSD license, you can use CC BY content for any use but must credit the copyright holder.</li>
+<li><strong>Attribution ShareAlike (CC BY-SA)</strong> – A copyleft version of the Attribution license. Derived works must be shared under the same license, much like in the Free Software ideals.</li>
+<li><strong>Attribution NoDerivs (CC BY-ND)</strong> – You may redistribute the content under the same conditions as CC-BY but may not change it.</li>
+<li><strong>Attribution-NonCommercial (CC BY-NC)</strong> – Just like CC BY, but you may not use it for commercial purposes.</li>
+<li><strong>Attribution-NonCommercial-ShareAlike (CC BY-NC-SA)</strong> – Builds on the CC BY-NC license but requires that your changes be shared under the same license.</li>
+<li><strong>Attribution-NonCommercial-NoDerivs (CC BY-NC-ND)</strong> – You are sharing the content to be used for non-commercial purposes, but people may not change the content.</li>
+<li><strong>No Rights Reserved (CC0)</strong> – This is the Creative Commons version of public domain.</li>
+</ul>
+<h2 id="开源业务模型"><a href="#开源业务模型" class="headerlink" title="开源业务模型"></a>开源业务模型</h2><p>如果所有这些软件都是免费的，那么谁能从中赚钱呢？</p>
+<p>首先，您必须了解GPL中没有禁止销售软件的任何内容。实际上，销售软件的权利是GPL许可的一部分。同样，请记住，“自由”一词是指自由，而不是价格。鼓励为这些免费程序增加价值的公司赚取尽可能多的钱，并将这些利润重新投入到开发更多更好的软件中。</p>
+<p>赚钱的最简单方法之一是在软件周围出售支持或保修。诸如Canonical，Ubuntu的开发者和Redhat之类的公司已经通过创建Linux发行版和工具来发展为大型企业，这些发行版和工具使商业用户能够管理其企业并为他们的客户提供产品和服务。</p>
+<p>许多其他开源项目也已扩展为大量业务。在1990年代，Gerald Combs在一家互联网服务提供商处工作，并开始编写自己的网络分析工具，因为当时的类似工具价格昂贵。现在有600多人为这个名为Wireshark的项目做出了贡献。现在，它通常被认为比商业产品更好，并导致成立了一家销售产品和支持的公司。与许多其他公司一样，该公司被一家支持其持续发展的大型企业收购。</p>
+<p>像Tivo这样的公司已经打包了硬件或添加了额外的封闭源代码软件，以与免费软件一起出售。使用Linux的设备和嵌入式系统是一项价值数十亿美元的业务，涵盖了从家用DVR到安全摄像机和可穿戴健身设备的所有内容。许多消费者防火墙和娱乐设备都遵循此模型。</p>
+<p>如今，大型和小型雇主都有个人，有时甚至整个团体都致力于开源项目。科技公司争夺机会来影响将改变其行业未来的项目。其他公司则将资源专用于内部使用所需的项目。随着在云资源上完成更多的业务，开源程序员的机会将继续扩大。</p>
+<p>‌⁠</p>
+<hr>
+<p>我吐了</p>
+<h1 id="命令行之始"><a href="#命令行之始" class="headerlink" title="命令行之始"></a>命令行之始</h1><ol>
+<li><p><strong>用户名：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sysadmin @localhost：〜 $</span><br></pre></td></tr></table></figure></li>
+<li><p><strong>系统名称：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sysadmin @本地主机：〜 $</span><br></pre></td></tr></table></figure></li>
+<li><p><strong>当前目录：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sysadmin @ localhost：〜 $</span><br></pre></td></tr></table></figure></li>
+</ol>
+<p>该<code>~</code>符号用作用户主目录的简写。通常，用户的主目录位于该<code>/home</code>目录下，并以用户帐户名命名；例如，<code>/home/sysadmin</code>。</p>
+<p>命令的典型格式如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">命令[选项] [参数]</span><br></pre></td></tr></table></figure>
+
+<p>选项用于修改命令的核心行为，而参数用于提供其他信息</p>
+<p>请记住，Linux区分大小写。命令，选项，参数，变量和文件名必须完全按照所示输入。</p>
+<p>组合选项的顺序并不重要。所有这些示例的输出将是相同的：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ls -l -r </span><br><span class="line">ls -rl </span><br><span class="line">ls -lr</span><br></pre></td></tr></table></figure>
+
+<p>选项通常是单个字母；但是，有时它们也是单词或短语。通常，较旧的命令使用单个字母，而较新的命令使用完整的单词作为选项。<code>-</code>像该<code>-h</code>选项一样，单字母选项前面带有一个破折号。全字选项前面有两个破折号<code>--</code>。该<code>-h</code>选项还具有等效的全字形式；该<code>--human-readable</code>选项。</p>
+<p>Bash shell中使用了两种类型的变量：local和environment。</p>
+<p>Bash在解释命令和执行任务时使用的所有shell中，环境变量（也称为全局变量）在系统范围内可用。当打开新的外壳程序时，系统会自动重新创建环境变量</p>
+<p>要理解的最重要的Bash shell变量之一是<code>PATH</code>变量。它包含一个列表，该列表定义了外壳程序在哪些目录中查找命令。如果输入了有效命令，并且外壳程序返回“找不到命令”错误，那是因为Bash Shell无法在路径中包含的任何目录中以该名称找到命令</p>
+<p>列表中的每个目录都用冒号分隔<code>:</code>。根据前面的输出，该路径包含以下目录。Shell将按照列出的顺序检查目录：</p>
+<p>更新<code>PATH</code>变量时，<strong>请始终包含当前路径</strong>，以免失去对这些目录中命令的访问权限。这可以通过<code>$PATH</code>在赋值表达式中附加值来实现。回想一下，以美元符号开头的变量名称表示该变量的值。<strong>而且最后那个分隔符冒号是要自己加的！</strong></p>
+<h2 id="命令类型"><a href="#命令类型" class="headerlink" title="命令类型"></a>命令类型</h2><p>There are several different sources of commands within the shell of your CLI including internal commands, external commands, aliases, and functions.内部命令，外部命令，别名，函数</p>
+<p>一个别名可以用于映射到更短的按键序列长的命令。当外壳程序看到别名正在执行时，它将替换较长的序列，然后继续解释命令。</p>
+<p>例如，该命令<code>ls -l</code>通常别名为<code>l</code>或<code>ll</code>。由于这些较小的命令更易于键入，因此运行<code>ls -l</code>命令行的速度会更快。</p>
+<p>也可以使用现有命令来构建函数，以创建新命令，或覆盖Shell内置命令或存储在文件中的命令。通常在外壳程序首次启动时从初始化文件中加载别名和函数。</p>
+<h2 id="特殊符号"><a href="#特殊符号" class="headerlink" title="特殊符号"></a>特殊符号</h2><h3 id="quoting引号"><a href="#quoting引号" class="headerlink" title="quoting引号"></a>quoting引号</h3><p>double “  single ‘  back  `</p>
+<p>双引号阻止外壳程序解释某些元字符（特殊字符），包括全局字符。</p>
+<p>Glob字符，也称为通配符（wild cards），是对shell具有特殊含义的符号；它们会在尝试运行任何命令之前由外壳程序本身解释。球形字符包括星号<code>*</code>，<code>?</code>问号字符和方括号<code>[ ]</code>等。</p>
+<p>稍后将在本课程中更详细地介绍globbing。</p>
+<p>双引号仍然允许命令替换，变量替换（$），并允许一些尚未讨论的其他shell元字符</p>
+<p>单引号可防止外壳对特殊字符进行任何解释，包括glob，变量，命令替换和其他尚未讨论的元字符。</p>
+<h1 id="操作集"><a href="#操作集" class="headerlink" title="操作集"></a>操作集</h1><ol>
+<li>variable = value创建局部变量，引用时前面加$</li>
+<li></li>
+</ol>
+<h1 id="命令集"><a href="#命令集" class="headerlink" title="命令集"></a>命令集</h1><ol>
+<li><p>ls 可加多个参数则依次打印</p>
+<p>-l详细模式  -r 反顺序打印（默认字母顺序）</p>
+<p>-h == –human-readable</p>
+</li>
+<li><p>history</p>
+<p>感叹号!+数字（负号倒数）来选择历史命令</p>
+<p>！！执行最新</p>
+<p>！+命令 为特定命令的最新迭代</p>
+</li>
+<li><p>echo</p>
+</li>
+<li><p>data / env</p>
+</li>
+<li><p>export / unset 设置/删除导出变量（全局）</p>
+</li>
+<li><p>which 查看命令路径</p>
+</li>
+<li><p>type </p>
+<p>shell builtin(internal commands)</p>
+<p>路径（external commands）</p>
+<p>a is aliased to “b”(alias)</p>
+<p>-a 输出所有（有时会有多种）</p>
+</li>
+<li><p>alias 显示所有别名</p>
+<p>alias a = “b” 设置别名</p>
+</li>
+</ol>
 
     </div>
 
@@ -461,7 +600,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F"><span class="nav-number">1.</span> <span class="nav-text">操作系统</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E7%9F%A5%E8%AF%86"><span class="nav-number">1.1.</span> <span class="nav-text">基本知识</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%84%E7%A7%8D%E5%8F%91%E8%A1%8C%E7%89%88"><span class="nav-number">1.2.</span> <span class="nav-text">各种发行版</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Red-Hat"><span class="nav-number">1.2.1.</span> <span class="nav-text">Red Hat</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SUSE"><span class="nav-number">1.2.2.</span> <span class="nav-text">SUSE</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Debian"><span class="nav-number">1.2.3.</span> <span class="nav-text">Debian</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Android"><span class="nav-number">1.2.4.</span> <span class="nav-text">Android</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Other"><span class="nav-number">1.2.5.</span> <span class="nav-text">Other</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Linux%E5%B5%8C%E5%85%A5%E6%97%A0%E5%A4%84%E4%B8%8D%E5%9C%A8%EF%BC%81"><span class="nav-number">1.3.</span> <span class="nav-text">Linux嵌入无处不在！</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8Linux%E5%B7%A5%E4%BD%9C"><span class="nav-number">2.</span> <span class="nav-text">使用Linux工作</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%BB%E8%A6%81%E5%BA%94%E7%94%A8"><span class="nav-number">2.1.</span> <span class="nav-text">主要应用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="nav-number">2.1.1.</span> <span class="nav-text">服务器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A1%8C%E9%9D%A2%E5%BA%94%E7%94%A8"><span class="nav-number">2.1.2.</span> <span class="nav-text">桌面应用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8E%A7%E5%88%B6%E5%8F%B0%E5%B7%A5%E5%85%B7"><span class="nav-number">2.1.3.</span> <span class="nav-text">控制台工具</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8%EF%BC%81%EF%BC%81"><span class="nav-number">2.1.4.</span> <span class="nav-text">包管理器！！</span></a></li></ol></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F"><span class="nav-number">1.</span> <span class="nav-text">操作系统</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E7%9F%A5%E8%AF%86"><span class="nav-number">1.1.</span> <span class="nav-text">基本知识</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%84%E7%A7%8D%E5%8F%91%E8%A1%8C%E7%89%88"><span class="nav-number">1.2.</span> <span class="nav-text">各种发行版</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Red-Hat"><span class="nav-number">1.2.1.</span> <span class="nav-text">Red Hat</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SUSE"><span class="nav-number">1.2.2.</span> <span class="nav-text">SUSE</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Debian"><span class="nav-number">1.2.3.</span> <span class="nav-text">Debian</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Android"><span class="nav-number">1.2.4.</span> <span class="nav-text">Android</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Other"><span class="nav-number">1.2.5.</span> <span class="nav-text">Other</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Linux%E5%B5%8C%E5%85%A5%E6%97%A0%E5%A4%84%E4%B8%8D%E5%9C%A8%EF%BC%81"><span class="nav-number">1.3.</span> <span class="nav-text">Linux嵌入无处不在！</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8Linux%E5%B7%A5%E4%BD%9C"><span class="nav-number">2.</span> <span class="nav-text">使用Linux工作</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%BB%E8%A6%81%E5%BA%94%E7%94%A8"><span class="nav-number">2.1.</span> <span class="nav-text">主要应用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="nav-number">2.1.1.</span> <span class="nav-text">服务器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A1%8C%E9%9D%A2%E5%BA%94%E7%94%A8"><span class="nav-number">2.1.2.</span> <span class="nav-text">桌面应用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8E%A7%E5%88%B6%E5%8F%B0%E5%B7%A5%E5%85%B7"><span class="nav-number">2.1.3.</span> <span class="nav-text">控制台工具</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8%EF%BC%81%EF%BC%81"><span class="nav-number">2.1.4.</span> <span class="nav-text">包管理器！！</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%91%E4%B8%8ELINUX"><span class="nav-number">2.2.</span> <span class="nav-text">云与LINUX</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%E5%92%8C%E8%AE%B8%E5%8F%AF"><span class="nav-number">3.</span> <span class="nav-text">开源项目和许可</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%80%E6%BA%90%E8%AE%A1%E5%88%92"><span class="nav-number">3.1.</span> <span class="nav-text">开源计划</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%80%E6%BA%90%E4%B8%9A%E5%8A%A1%E6%A8%A1%E5%9E%8B"><span class="nav-number">3.2.</span> <span class="nav-text">开源业务模型</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%91%BD%E4%BB%A4%E8%A1%8C%E4%B9%8B%E5%A7%8B"><span class="nav-number">4.</span> <span class="nav-text">命令行之始</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%91%BD%E4%BB%A4%E7%B1%BB%E5%9E%8B"><span class="nav-number">4.1.</span> <span class="nav-text">命令类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7"><span class="nav-number">4.2.</span> <span class="nav-text">特殊符号</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#quoting%E5%BC%95%E5%8F%B7"><span class="nav-number">4.2.1.</span> <span class="nav-text">quoting引号</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%93%8D%E4%BD%9C%E9%9B%86"><span class="nav-number">5.</span> <span class="nav-text">操作集</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%91%BD%E4%BB%A4%E9%9B%86"><span class="nav-number">6.</span> <span class="nav-text">命令集</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -548,7 +687,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共69.9k字</span>
+  <span class="post-count">博客全站共75.7k字</span>
 </div>
         
 
