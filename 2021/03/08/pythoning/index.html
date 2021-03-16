@@ -31,7 +31,7 @@
 <meta property="og:description" content="web-backend-base">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-03-08T06:28:04.000Z">
-<meta property="article:modified_time" content="2021-03-13T12:58:13.653Z">
+<meta property="article:modified_time" content="2021-03-16T15:44:56.313Z">
 <meta property="article:author" content="Darren">
 <meta property="article:tag" content="python">
 <meta name="twitter:card" content="summary">
@@ -235,7 +235,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-03-13 20:58:13" itemprop="dateModified" datetime="2021-03-13T20:58:13+08:00">2021-03-13</time>
+                <time title="修改时间：2021-03-16 23:44:56" itemprop="dateModified" datetime="2021-03-16T23:44:56+08:00">2021-03-16</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -259,7 +259,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="Python学习中！"><a href="#Python学习中！" class="headerlink" title="Python学习中！"></a>Python学习中！</h1><p>[toc]</p>
+        <p>[toc]</p>
 <h2 id="python要学的"><a href="#python要学的" class="headerlink" title="python要学的"></a>python要学的</h2><ol>
 <li>基础语法（Y）</li>
 <li>进阶语法（）</li>
@@ -446,6 +446,89 @@
 <p>doctest严格按照Python交互式命令行的输入和输出来判断测试结果是否正确。只有测试异常的时候，可以用<code>...</code>表示中间一大段烦人的输出。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> __name__==<span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    <span class="keyword">import</span> doctest</span><br><span class="line">    doctest.testmod()</span><br></pre></td></tr></table></figure></li>
 </ol>
+<h3 id="IO"><a href="#IO" class="headerlink" title="IO"></a>IO</h3><ol>
+<li><p>异步的理解</p>
+<p>read(size)读取size</p>
+<p>readline()读一行</p>
+<p>readlines()一次读取并按行返回list</p>
+<p>清理每行结尾自动加的\n</p>
+</li>
+<li><p>有个<code>read()</code>方法的对象，在Python中统称为file-like Object。除了file外，还可以是内存的字节流，网络流，自定义流等等。file-like Object不要求从特定类继承，只要写个<code>read()</code>方法就行</p>
+<p><code>StringIO</code>就是在内存中创建的file-like Object，常用作临时缓冲</p>
+</li>
+<li><p>open（url,encoding=’gbk’,errors=’igone’）默认编码UTF-8，在出现非法字符时，由errors决定解决方式，直接‘igone’。。。</p>
+</li>
+<li><p>StringIO在内存中读写str</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> io <span class="keyword">import</span> StringIO</span><br><span class="line">f= StringIO(<span class="string">&#x27;initial&#x27;</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line"><span class="meta">... </span>    s = f.readline()</span><br><span class="line"><span class="meta">... </span>    <span class="keyword">if</span> s == <span class="string">&#x27;&#x27;</span>:</span><br><span class="line"><span class="meta">... </span>        <span class="keyword">break</span></span><br><span class="line"><span class="meta">... </span>    print(s.strip())</span><br></pre></td></tr></table></figure>
+
+
+
+<p>getvalue()获得写入后的str</p>
+<p>BytesIO操作的是二进制</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">from</span> io <span class="keyword">import</span> BytesIO</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>f = BytesIO()</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>f.write(<span class="string">&#x27;中文&#x27;</span>.encode(<span class="string">&#x27;utf-8&#x27;</span>))</span><br><span class="line"><span class="number">6</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(f.getvalue())</span><br><span class="line"><span class="string">b&#x27;\xe4\xb8\xad\xe6\x96\x87&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<p>写入的是utf-8编码的bytes，也可以初始化，其他读取方式和文件一样</p>
+</li>
+<li><p>操作文件和目录</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line">os.name  posix  nt</span><br><span class="line">os.uname()不适用于windows</span><br><span class="line">os.environ</span><br><span class="line">os.environ.get(<span class="string">&#x27;key&#x27;</span>)</span><br><span class="line">os.path.abspath(<span class="string">&#x27;.&#x27;</span>)<span class="comment">#查看绝对路径</span></span><br><span class="line"><span class="string">&#x27;/Users/michael&#x27;</span></span><br><span class="line"><span class="comment">#创建目录</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>os.path.join(<span class="string">&#x27;/Users/michael&#x27;</span>, <span class="string">&#x27;testdir&#x27;</span>)</span><br><span class="line"><span class="string">&#x27;/Users/michael/testdir&#x27;</span></span><br><span class="line"><span class="comment"># 然后创建一个目录:</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>os.mkdir(<span class="string">&#x27;/Users/michael/testdir&#x27;</span>)</span><br><span class="line"><span class="comment"># 删掉一个目录:</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>os.rmdir(<span class="string">&#x27;/Users/michael/testdir&#x27;</span>)</span><br><span class="line"><span class="comment">#合成路径不要拼接字符串，才能正确处理不同操作系统的路径分隔符</span></span><br><span class="line">os.path.split()函数，这样可以把一个路径拆分为两部分，后一部分总是最后级别的目录或文件名</span><br><span class="line">os.path.splitext()可以直接让你得到文件扩展名</span><br><span class="line">os.rename()重命名</span><br><span class="line">os.remove()删除</span><br><span class="line">shutil模块提供了copyfile()的函数，你还可以在shutil模块中找到很多实用函数，它们可以看做是os模块的补充</span><br><span class="line">Python的os模块封装了操作系统的目录和文件操作，要注意这些函数有的在os模块中，有的在os.path模块中。</span><br><span class="line">还有很多操作，需要用到时去找os库吧！</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h3 id="序列化"><a href="#序列化" class="headerlink" title="序列化"></a>序列化</h3><p>序列化指把变量从内存中变成可存储或传输的过程称之为序列化 pickling</p>
+<p>比起pickle库，json库更好，更通用</p>
+<table>
+<thead>
+<tr>
+<th>JSON类型</th>
+<th>Python类型</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>{}</td>
+<td>dict</td>
+</tr>
+<tr>
+<td>[]</td>
+<td>list</td>
+</tr>
+<tr>
+<td>“string”</td>
+<td>str</td>
+</tr>
+<tr>
+<td>1234.56</td>
+<td>int或float</td>
+</tr>
+<tr>
+<td>true/false</td>
+<td>True/False</td>
+</tr>
+<tr>
+<td>null</td>
+<td>None</td>
+</tr>
+</tbody></table>
+<p>Python内置的<code>json</code>模块提</p>
+<p>json.dump()   json.dumps(d,f)</p>
+<p>json.load()   json.loads(f)</p>
+<p>加了s是序列化和反序列化,没加则是操作文件同时序列化和反序列化。UTF-8</p>
+<p>很多时候json不够智能，需要我们加上很多自定义参数来辅助，default是dumps用的，object_hook是loads用的，json好复杂啊</p>
+<p><a target="_blank" rel="noopener" href="https://docs.python.org/3/library/json.html#json.dumps">https://docs.python.org/3/library/json.html#json.dumps</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.json.org/json-en.html">https://www.json.org/json-en.html</a></p>
+<h3 id="正则表达式"><a href="#正则表达式" class="headerlink" title="正则表达式"></a>正则表达式</h3><ol>
+<li><p>强烈建议使用Python的<code>r</code>前缀，就不用考虑转义的问题了</p>
+</li>
+<li><p>```python<br>import re<br>test = ‘用户输入的字符串’<br>if re.match(r’正则表达式’, test):</p>
+<pre><code>print(&#39;ok&#39;)
+</code></pre>
+<p>else:</p>
+<pre><code>print(&#39;failed&#39;)
+</code></pre>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">3. 可用于切分字符串</span><br><span class="line"></span><br><span class="line">   &#96;&#96;&#96;python</span><br><span class="line">   &gt;&gt;&gt; re.split(r&#39;\s+&#39;, &#39;a b   c&#39;)</span><br><span class="line">   [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;]</span><br></pre></td></tr></table></figure></li>
+<li><p>提取字串！</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">m=re.match(<span class="string">r&#x27;正则表达式&#x27;</span>, string)</span><br><span class="line">m.group(<span class="number">0</span>)=string</span><br><span class="line">m.group(n)是第n个</span><br></pre></td></tr></table></figure></li>
+<li><p>如果一个正则表达式要重复使用几千次，出于效率的考虑，我们可以预编译该正则表达式，接下来重复使用时就不需要编译这个步骤了，直接匹配：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> re</span><br><span class="line"><span class="comment"># 编译:</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>re_telephone = re.<span class="built_in">compile</span>(<span class="string">r&#x27;^(\d&#123;3&#125;)-(\d&#123;3,8&#125;)$&#x27;</span>)</span><br><span class="line"><span class="comment"># 使用：</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>re_telephone.match(<span class="string">&#x27;010-12345&#x27;</span>).groups()</span><br><span class="line">(<span class="string">&#x27;010&#x27;</span>, <span class="string">&#x27;12345&#x27;</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>re_telephone.match(<span class="string">&#x27;010-8086&#x27;</span>).groups()</span><br><span class="line">(<span class="string">&#x27;010&#x27;</span>, <span class="string">&#x27;8086&#x27;</span>)</span><br></pre></td></tr></table></figure></li>
+<li></li>
+</ol>
 <h2 id="功能函数"><a href="#功能函数" class="headerlink" title="功能函数"></a>功能函数</h2><ol>
 <li><p><code>str.replace(&#39;a&#39;,&#39;A&#39;) 把字符串里的a替换成A</code></p>
 </li>
@@ -478,17 +561,19 @@
 
 <p>可以传入一个default参数，如果属性不存在，就返回默认值：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">getattr</span>(obj, <span class="string">&#x27;z&#x27;</span>, <span class="number">404</span>) <span class="comment"># 获取属性&#x27;z&#x27;，如果不存在，返回默认值404</span></span><br></pre></td></tr></table></figure></li>
-<li><pre><code class="python"> raise ValueError(&#39;score must be an integer!&#39;)
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">15. eval()解析字符串为指令</span><br><span class="line"></span><br><span class="line">## 一些包</span><br><span class="line"></span><br><span class="line">1. math包用很多常用数学函数</span><br><span class="line"></span><br><span class="line">2. Python内置的&#96;enumerate&#96;函数可以把一个list变成索引-元素对，这样就可以在&#96;for&#96;循环中同时迭代索引和元素本身：</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-&gt;&gt;&gt; for i, value in enumerate([&#39;A&#39;, &#39;B&#39;, &#39;C&#39;]):
-...     print(i, value)
-...
-0 A
-1 B
-2 C
-</code></pre>
-</li>
+<li><p>```python<br> raise ValueError(‘score must be an integer!’)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">15. eval()解析字符串为指令</span><br><span class="line"></span><br><span class="line">## 常用内建模块</span><br><span class="line"></span><br><span class="line">还是看廖雪峰吧</span><br><span class="line"></span><br><span class="line">1. datetime----datetime里有个datetime包！</span><br><span class="line"></span><br><span class="line">   &#96;datetime.now()&#96;返回当前日期和时间，其类型是&#96;datetime&#96;。</span><br><span class="line"></span><br><span class="line">   &#96;&#96;&#96;python</span><br><span class="line">   from datetime import datetime</span><br><span class="line">   &gt;&gt;&gt; dt &#x3D; datetime(2015, 4, 19, 12, 20) # 用指定日期时间创建datetime</span><br><span class="line">   &gt;&gt;&gt; print(dt)</span><br><span class="line">   2015-04-19 12:20:00</span><br><span class="line">   dt.timestamp() # 把datetime转换为timestamp</span><br><span class="line">   1429417200.0</span><br><span class="line">   datetime.(时区如utc)fromtimestamp(dt)</span><br><span class="line">   &gt;&gt;&gt;2015-04-19 12:20:00</span><br></pre></td></tr></table></figure></li>
 </ol>
+<p>   <u>我们把1970年1月1日 00:00:00 UTC+00:00时区的时刻称为epoch time，记为<code>0</code>（1970年以前的时间timestamp为负数），当前时间就是相对于epoch time的秒数，称为timestamp。</u>对应的北京时间是：</p>
+   <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">timestamp = <span class="number">0</span> = <span class="number">1970</span>-<span class="number">1</span>-<span class="number">1</span> 08:<span class="number">00</span>:<span class="number">00</span> UTC+<span class="number">8</span>:<span class="number">00</span></span><br></pre></td></tr></table></figure>
+
+<p>   str转换为datetime用datetime.strptime(‘time’,’格式参数’)具体参考<a target="_blank" rel="noopener" href="https://docs.python.org/3/library/datetime.html#strftime-strptime-behavior">Python文档</a>此处得到的datetime无时区信息</p>
+<p>   datetime转str用strftime</p>
+<h3 id="datetime加减"><a href="#datetime加减" class="headerlink" title="datetime加减"></a>datetime加减</h3><p>   对日期和时间进行加减实际上就是把datetime往后或往前计算，得到新的datetime。加减可以直接用<code>+</code>和<code>-</code>运算符，不过需要导入<code>timedelta</code>这个类：</p>
+   <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">from</span> datetime <span class="keyword">import</span> datetime, timedelta</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>now = datetime.now()</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>now</span><br><span class="line">datetime.datetime(<span class="number">2015</span>, <span class="number">5</span>, <span class="number">18</span>, <span class="number">16</span>, <span class="number">57</span>, <span class="number">3</span>, <span class="number">540997</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>now + timedelta(hours=<span class="number">10</span>)</span><br><span class="line">datetime.datetime(<span class="number">2015</span>, <span class="number">5</span>, <span class="number">19</span>, <span class="number">2</span>, <span class="number">57</span>, <span class="number">3</span>, <span class="number">540997</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>now - timedelta(days=<span class="number">1</span>)</span><br><span class="line">datetime.datetime(<span class="number">2015</span>, <span class="number">5</span>, <span class="number">17</span>, <span class="number">16</span>, <span class="number">57</span>, <span class="number">3</span>, <span class="number">540997</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>now + timedelta(days=<span class="number">2</span>, hours=<span class="number">12</span>)</span><br><span class="line">datetime.datetime(<span class="number">2015</span>, <span class="number">5</span>, <span class="number">21</span>, <span class="number">4</span>, <span class="number">57</span>, <span class="number">3</span>, <span class="number">540997</span>)</span><br></pre></td></tr></table></figure>
+
+
+
 <h2 id="规范"><a href="#规范" class="headerlink" title="规范"></a>规范</h2><ol>
 <li><p>正常的函数和变量名是公开的（public），可以被直接引用，比如：<code>abc</code>，<code>x123</code>，<code>PI</code>等；</p>
 <p>类似<code>__xxx__</code>这样的变量是特殊变量，可以被直接引用，但是有特殊用途，比如上面的<code>__author__</code>，<code>__name__</code>就是特殊变量，<code>hello</code>模块定义的文档注释也可以用特殊变量<code>__doc__</code>访问，我们自己的变量一般不要用这种变量名；</p>
@@ -497,8 +582,19 @@
 </ol>
 <h2 id="以后再学"><a href="#以后再学" class="headerlink" title="以后再学"></a>以后再学</h2><ol>
 <li><a target="_blank" rel="noopener" href="https://www.liaoxuefeng.com/wiki/1016959663602400/1017590712115904" title="廖雪峰">定制类</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.liaoxuefeng.com/wiki/1016959663602400/1017627212385376">进程和线程</a></li>
 <li></li>
 </ol>
+<h1 id="思科补充"><a href="#思科补充" class="headerlink" title="思科补充"></a>思科补充</h1><p>print(“..”,end=”分隔符”)分隔符用于指示结尾，默认为换行、</p>
+<p>print(“a”,”b”,sep=”在句号间的分割标志”)</p>
+<p><code>None</code>可以安全使用的情况只有两种：</p>
+<ul>
+<li>当您<strong>将其分配给变量</strong>（或将其作为<strong>函数的结果</strong>返回）时</li>
+<li>当您<strong>将其与变量</strong>进行<strong>比较</strong>以诊断其内部状态时。</li>
+</ul>
+<p>它<strong>不能参与任何表达式</strong>。</p>
+<p>列表和元组可以用*操作符“繁殖”</p>
+<p>python3函数先定义再调用</p>
 
     </div>
 
@@ -540,8 +636,8 @@
       <i class="fa fa-chevron-left"></i> git
     </a></div>
       <div class="post-nav-item">
-    <a href="/2021/03/09/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" rel="next" title="正则表达式">
-      正则表达式 <i class="fa fa-chevron-right"></i>
+    <a href="/2021/03/09/Regular%20expression/" rel="next" title="Regular expression">
+      Regular expression <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -601,7 +697,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Python%E5%AD%A6%E4%B9%A0%E4%B8%AD%EF%BC%81"><span class="nav-number">1.</span> <span class="nav-text">Python学习中！</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#python%E8%A6%81%E5%AD%A6%E7%9A%84"><span class="nav-number">1.1.</span> <span class="nav-text">python要学的</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%9F%A5%E8%AF%86%E7%82%B9"><span class="nav-number">1.2.</span> <span class="nav-text">知识点</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9F%BA%E7%A1%80"><span class="nav-number">1.2.1.</span> <span class="nav-text">基础</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%B1%BB"><span class="nav-number">1.2.2.</span> <span class="nav-text">类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%94%99%E8%AF%AF-amp-%E5%BC%82%E5%B8%B8"><span class="nav-number">1.2.3.</span> <span class="nav-text">错误&amp;异常</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8A%9F%E8%83%BD%E5%87%BD%E6%95%B0"><span class="nav-number">1.3.</span> <span class="nav-text">功能函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%84%E8%8C%83"><span class="nav-number">1.4.</span> <span class="nav-text">规范</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%A5%E5%90%8E%E5%86%8D%E5%AD%A6"><span class="nav-number">1.5.</span> <span class="nav-text">以后再学</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#python%E8%A6%81%E5%AD%A6%E7%9A%84"><span class="nav-number">1.</span> <span class="nav-text">python要学的</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%9F%A5%E8%AF%86%E7%82%B9"><span class="nav-number">2.</span> <span class="nav-text">知识点</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9F%BA%E7%A1%80"><span class="nav-number">2.1.</span> <span class="nav-text">基础</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%B1%BB"><span class="nav-number">2.2.</span> <span class="nav-text">类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%94%99%E8%AF%AF-amp-%E5%BC%82%E5%B8%B8"><span class="nav-number">2.3.</span> <span class="nav-text">错误&amp;异常</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#IO"><span class="nav-number">2.4.</span> <span class="nav-text">IO</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BA%8F%E5%88%97%E5%8C%96"><span class="nav-number">2.5.</span> <span class="nav-text">序列化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F"><span class="nav-number">2.6.</span> <span class="nav-text">正则表达式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8A%9F%E8%83%BD%E5%87%BD%E6%95%B0"><span class="nav-number">3.</span> <span class="nav-text">功能函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#datetime%E5%8A%A0%E5%87%8F"><span class="nav-number">3.1.</span> <span class="nav-text">datetime加减</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%84%E8%8C%83"><span class="nav-number">4.</span> <span class="nav-text">规范</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%A5%E5%90%8E%E5%86%8D%E5%AD%A6"><span class="nav-number">5.</span> <span class="nav-text">以后再学</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%80%9D%E7%A7%91%E8%A1%A5%E5%85%85"><span class="nav-number"></span> <span class="nav-text">思科补充</span></a></div>
       </div>
       <!--/noindex-->
 
@@ -688,7 +784,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共75.7k字</span>
+  <span class="post-count">博客全站共77k字</span>
 </div>
         
 
