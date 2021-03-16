@@ -31,7 +31,7 @@
 <meta property="og:description" content="web-first(continue)">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-03-10T16:12:05.000Z">
-<meta property="article:modified_time" content="2021-03-13T12:53:50.534Z">
+<meta property="article:modified_time" content="2021-03-16T02:02:42.545Z">
 <meta property="article:author" content="Darren">
 <meta name="twitter:card" content="summary">
 
@@ -234,7 +234,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-03-13 20:53:50" itemprop="dateModified" datetime="2021-03-13T20:53:50+08:00">2021-03-13</time>
+                <time title="修改时间：2021-03-16 10:02:42" itemprop="dateModified" datetime="2021-03-16T10:02:42+08:00">2021-03-16</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -348,16 +348,16 @@
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">address</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">p</span>&gt;</span>Chris Mills, Manchester, The Grim North, UK<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">address</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
 <li><p>上下标<sup><sub></p>
 </li>
-<li><p><code>：用于组成通用的计算机代码。</p>
+<li><p>code&gt;：用于组成通用的计算机代码。</p>
 </li>
 <li><pre>：用于标记固定宽度的文本块，其中保留空白（通常是代码块）。</li>
-<li><p><var>：用于专门标记变量名。</p>
+<li><p>var&gt;：用于专门标记变量名。</p>
 </li>
-<li><p><kbd>：用于标记输入到计算机中的键盘（和其他类型的）输入。</p>
+<li><p>kbd&gt;：用于标记输入到计算机中的键盘（和其他类型的）输入。</p>
 </li>
-<li><p><samp>：用于标记计算机程序的输出。</p>
+<li><p>samp&gt;：用于标记计算机程序的输出。</p>
 </li>
-<li><p><time>：datetime属性标记元素时间</p>
+<li><p>time&gt;：datetime属性标记元素时间</p>
 </li>
 </ul>
 <h2 id="html结构布局"><a href="#html结构布局" class="headerlink" title="html结构布局"></a>html结构布局</h2><p><em><strong>信息架构</strong></em></p>
@@ -392,7 +392,7 @@
 
 <h1 id="HTML多媒体"><a href="#HTML多媒体" class="headerlink" title="HTML多媒体"></a>HTML多媒体</h1><h2 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h2><p>你不应该使用HTML属性来改变图片的大小。如果你把尺寸设定的太大，最终图片看起来会模糊；如果太小，会在下载远远大于你需要的图片时浪费带宽。如果你没有保持正确的<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E9%95%B7%E5%AF%AC%E6%AF%94_(%E5%BD%B1%E5%83%8F)">宽高比</a>，图片可能看起来会扭曲。在把图片放到你的网站页面之前，你应该使用图形编辑器使图片的尺寸正确。</p>
 <p>善用alt属性</p>
-<p>使用 HTML5 的 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/figure">``</a> 和 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/figcaption">``</a> 元素，它正是为此而被创造出来的：为图片提供一个语义容器，在标题和图片之间建立清晰的关联。我们之前的例子可以重写为:</p>
+<p>使用 HTML5 的 figure和figcaption元素，它正是为此而被创造出来的：为图片提供一个语义容器，在标题和图片之间建立清晰的关联。我们之前的例子可以重写为:</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">figure</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;https://raw.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-embedding/images-in-html/dinosaur_small.jpg&quot;</span></span></span><br><span class="line"><span class="tag">     <span class="attr">alt</span>=<span class="string">&quot;一只恐龙头部和躯干的骨架，它有一个巨大的头，长着锋利的牙齿。&quot;</span></span></span><br><span class="line"><span class="tag">     <span class="attr">width</span>=<span class="string">&quot;400&quot;</span></span></span><br><span class="line"><span class="tag">     <span class="attr">height</span>=<span class="string">&quot;341&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">figcaption</span>&gt;</span>曼彻斯特大学博物馆展出的一只霸王龙的化石<span class="tag">&lt;/<span class="name">figcaption</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">figure</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <p><strong>注意：</strong>从无障碍的角度来说，说明文字和 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/img#attr-alt"><code>alt</code></a> 文本扮演着不同的角色。看得见图片的人们同样可以受益于说明文字，而 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/img#attr-alt"><code>alt</code></a> 文字只有在图片无法显示时才这样。 所以，说明文字和 <code>alt</code> 的内容不应该一样，因为当图片无法显示时，它们会同时出现。尝试让你的图片不显示，看看效果如何。</p>
@@ -712,7 +712,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">10</span>
+          <span class="site-state-item-count">11</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -725,7 +725,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-count">6</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
