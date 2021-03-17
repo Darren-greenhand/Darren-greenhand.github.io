@@ -32,7 +32,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://gitee.com/darren-greenhand//picture/raw/master/border-radius-sh.png">
 <meta property="article:published_time" content="2021-03-13T12:51:04.000Z">
-<meta property="article:modified_time" content="2021-03-14T06:31:47.973Z">
+<meta property="article:modified_time" content="2021-03-17T15:55:49.727Z">
 <meta property="article:author" content="Darren">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://gitee.com/darren-greenhand//picture/raw/master/border-radius-sh.png">
@@ -236,7 +236,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-03-14 14:31:47" itemprop="dateModified" datetime="2021-03-14T14:31:47+08:00">2021-03-14</time>
+                <time title="修改时间：2021-03-17 23:55:49" itemprop="dateModified" datetime="2021-03-17T23:55:49+08:00">2021-03-17</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -587,8 +587,8 @@
 <p>也可以有多个背景图像——在单个属性值中指定多个<code>background-image</code>值，用逗号分隔每个值。</p>
 <p>当你这样做时，你可能会以背景图像互相重叠而告终。背景将与最后列出的背景图像层在堆栈的底部，背景图像在代码列表中最先出现的在顶端。</p>
 <p><strong>background-attachment</strong></p>
-<p><code>background-attachment: scroll</code>使元素的背景固定在页面上，以便在滚动页面时滚动。如果滚动元素内容，则背景不会移动。</p>
-<p><code>background-attachment: fixed</code>导致将元素的背景固定到视口，以便在滚动页面或元素内容时不会滚动。它将始终保持在屏幕上的相同位置。</p>
+<p><code>background-attachment: scroll</code>使元素的背景固定在<strong>页面</strong>上，以便在滚动页面时滚动。如果滚动元素内容，则背景不会移动。</p>
+<p><code>background-attachment: fixed</code>导致将元素的背景固定到<strong>视口（你看到的？）</strong>，以便在滚动页面或元素内容时不会滚动。它将始终保持在屏幕上的相同位置。</p>
 <p><code>background-attachment: local</code>，是CSS3的新增功能，可将元素的背景固定为实际的元素本身。因此，当滚动页面时，仅当元素这样做时，元素的背景才会随之移动（对于带有<code>position: fixed</code>。的元素则不会）。滚动元素的内容时，背景将与其一起滚动。</p>
 <p>看这个很清晰。。个屁啊视口是啥</p>
 <p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/background-attachment">https://developer.mozilla.org/zh-CN/docs/Web/CSS/background-attachment</a></p>
@@ -623,8 +623,174 @@
 <p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/padding-left"><code>padding-left</code></a>属性映射到 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/padding-inline-start"><code>padding-inline-start</code></a>，这是应用到内联开始方向（这是该书写模式文本开始的地方）上的内边距。<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/border-bottom"><code>border-bottom</code></a>属性映射到的是<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/border-block-end"><code>border-block-end</code></a>，也就是块级维度结尾处的边框。</p>
 <p>挺好理解的，不需要死记</p>
 <p>但此时你的物理属性仍然适用</p>
-<h2 id="CSS溢出"><a href="#CSS溢出" class="headerlink" title="CSS溢出"></a>CSS溢出</h2><p>溢出是在盒子无法容纳下太多的内容的时候发生的。在这篇教程里面，你将会学习到什么是溢出，以及如何控制它。<strong>CSS中万物皆盒</strong>，因此我们可以通过给<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/width"><code>width</code></a>和<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/height"><code>height</code></a>（或者 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/inline-size"><code>inline-size</code></a> 和 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/block-size"><code>block-size</code></a>）赋值的方式来约束盒子的尺寸。溢出是在你往盒子里面塞太多东西的时候发生的，所以盒子里面的东西也不会老老实实待着</p>
-<h1 id="以后再学"><a href="#以后再学" class="headerlink" title="以后再学"></a>以后再学</h1><h2 id="css层叠"><a href="#css层叠" class="headerlink" title="css层叠"></a><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/Cascade#origin_of_css_declarations">css层叠</a></h2><h2 id="外边距重叠"><a href="#外边距重叠" class="headerlink" title="外边距重叠"></a><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing">外边距重叠</a></h2><h2 id="视口-视口概念-CSS（层叠样式表）-MDN-mozilla-org"><a href="#视口-视口概念-CSS（层叠样式表）-MDN-mozilla-org" class="headerlink" title="[视口](视口概念 - CSS（层叠样式表） | MDN (mozilla.org))"></a>[视口](<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/Viewport_concepts">视口概念 - CSS（层叠样式表） | MDN (mozilla.org)</a>)</h2>
+<h2 id="CSS溢出"><a href="#CSS溢出" class="headerlink" title="CSS溢出"></a>CSS溢出</h2><p>溢出是在盒子无法容纳下太多的内容的时候发生的。在这篇教程里面，你将会学习到什么是溢出，以及如何控制它。<strong>CSS中万物皆盒</strong>，因此我们可以通过给<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/width"><code>width</code></a>和<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/height"><code>height</code></a>（或者 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/inline-size"><code>inline-size</code></a> 和 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/block-size"><code>block-size</code></a>）赋值的方式来约束盒子的尺寸。溢出是在你往盒子里面塞太多东西的时候发生的，所以盒子里面的东西也不会老老实实待着，CSS给了你好几种工具来控制溢出</p>
+<p>CSS的默认原则是“尽力减少数据损失”，所以你溢出就是溢出了。不然很难debug是吧</p>
+<h3 id="overflow属性"><a href="#overflow属性" class="headerlink" title="overflow属性"></a>overflow属性</h3><p>默认visible  可以hidden  scroll（滚动条）</p>
+<p>scroll会加x和y，只要一边可以用overflow-y : scroll</p>
+<p>你可以用<code>overflow</code>属性指定x轴和y轴方向的滚动，同时使用两个值进行传递。如果指定了两个关键字，第一个对<code>overflow-x</code>生效而第二个对<code>overflow-y</code>生效</p>
+<p>overflow-wrap：</p>
+<p>是用来说明当一个不能被分开的字符串太长而不能填充其包裹盒时，为防止其溢出，浏览器是否允许这样的单词中断换行。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">normal 行只能在正常的单词断点处中断。（例如两个单词之间的空格）</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">break-word 表示如果行内没有多余的地方容纳该单词到结尾，则那些正常的不能被分割的单词会被强制分割换行。</span><br></pre></td></tr></table></figure>
+
+
+
+<p>现代网页布局的方式（正如<a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout">CSS layout</a>模块中所介绍的那些）可以很好地处理溢出。我们不一定能预料到网页上会有多少内容，人们很好地设计它们，使得它们能与这种现状协调。但是在以往，开发者会更多地使用固定高度，尽力让毫无关联的盒子的底部对齐。这是很脆弱的，在旧时的应用里面，你偶尔会遇到一些盒子，它们的内容遮到了页面上的其他内容。如果你看到了，那么你现在应该知道，这就是溢出，理论上你应该能重新排布这些布局，使得它不必依赖于盒子尺寸的调整。</p>
+<p>在开发网站的时候，你应该一直把溢出的问题挂在心头，你应该用或多或少的内容测试设计，增加文本的字号，确保你的CSS可以正常地协调。改变溢出属性的值，来隐藏内容或者增加滚动条，会是你仅仅在少数特别情况下需要的，例如在你确实需要一个可滚动盒子的时候。</p>
+<h2 id="CSS值"><a href="#CSS值" class="headerlink" title="CSS值"></a>CSS值</h2><p>在CSS规范和MDN的属性页上，您将能够发现值的存在，因为它们将被尖括号包围</p>
+<p><strong>Note</strong>: You’ll also see CSS values referred to as <em>data types</em>. The terms are basically interchangeable — when you see something in CSS referred to as a data type, it is really just a fancy way of saying value type. The term <em>value</em> refers to any particular expression supported by a value type that you choose to use.</p>
+<p><strong>注意</strong>：您还将看到被称为数据类型的CSS值。这些术语基本上是可以互换的——当你在CSS中看到一些被称为数据类型的东西时，它实际上只是一种表示值的奇特方式。</p>
+<p><strong>CSS中的值是一种定义允许子值集合的方法。</strong>这意味着如果您看到<code>&lt;color&gt;</code>是有效的，那么您就不需要考虑可以使用哪些不同类型的颜色值—关键字、十六进制值、<code>rgb()</code>函数等等。</p>
+<p>您可能会发现自己在CSS中使用了各种数值数据类型。 以下全部归类为数值：</p>
+<table>
+<thead>
+<tr>
+<th align="left">数值类型</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>&lt;integer&gt;</code></td>
+<td align="left"><code>&lt;integer&gt;</code>是一个整数，比如1024或-55。</td>
+</tr>
+<tr>
+<td align="left"><code>&lt;number&gt;</code></td>
+<td align="left"><code>&lt;number&gt;</code>表示一个小数——它可能有小数点后面的部分，也可能没有，例如0.255、128或-1.2。</td>
+</tr>
+<tr>
+<td align="left"><code>&lt;dimension&gt;</code></td>
+<td align="left"><code>&lt;dimension&gt;</code>是一个<code>&lt;number&gt;</code>，它有一个附加的单位，例如45deg、5s或10px。<code>&lt;dimension&gt;</code>是一个<strong>伞形类别</strong>，包括<code>&lt;length&gt;</code>、<code>&lt;angle&gt;</code>、<code>&lt;time&gt;</code>和<code>&lt;resolution&gt;</code>类型。</td>
+</tr>
+<tr>
+<td align="left"><code>&lt;percentage&gt;</code></td>
+<td align="left"><code>&lt;percentage&gt;</code>表示一些其他值的一部分，例如50%。百分比值总是相对于另一个量，例如，一个元素的长度相对于其父元素的长度。</td>
+</tr>
+</tbody></table>
+<h3 id="长度length"><a href="#长度length" class="headerlink" title="长度length"></a>长度length</h3><p>以下都是<strong>绝对</strong>长度单位——它们与其他任何东西都没有关系，通常被认为总是相同的大小。</p>
+<table>
+<thead>
+<tr>
+<th align="left">单位</th>
+<th align="left">名称</th>
+<th align="left">等价换算</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>cm</code></td>
+<td align="left">厘米</td>
+<td align="left">1cm = 96px/2.54</td>
+</tr>
+<tr>
+<td align="left"><code>mm</code></td>
+<td align="left">毫米</td>
+<td align="left">1mm = 1/10th of 1cm</td>
+</tr>
+<tr>
+<td align="left"><code>Q</code></td>
+<td align="left">四分之一毫米</td>
+<td align="left">1Q = 1/40th of 1cm</td>
+</tr>
+<tr>
+<td align="left"><code>in</code></td>
+<td align="left">英寸</td>
+<td align="left">1in = 2.54cm = 96px</td>
+</tr>
+<tr>
+<td align="left"><code>pc</code></td>
+<td align="left">十二点活字</td>
+<td align="left">1pc = 1/16th of 1in</td>
+</tr>
+<tr>
+<td align="left"><code>pt</code></td>
+<td align="left">点</td>
+<td align="left">1pt = 1/72th of 1in</td>
+</tr>
+<tr>
+<td align="left"><code>px</code></td>
+<td align="left">像素</td>
+<td align="left">1px = 1/96th of 1in</td>
+</tr>
+</tbody></table>
+<p>这些值中的大多数在用于打印时比用于屏幕输出时更有用。例如，我们通常不会在屏幕上使用cm。惟一一个您经常使用的值，估计就是px(像素)</p>
+<p>相对长度单位相对于其他一些东西，比如父元素的字体大小，或者视图端口的大小。使用相对单位的好处是，经过一些仔细的规划，您可以使文本或其他元素的大小与页面上的其他内容相对应。下表列出了web开发中一些最有用的单位。</p>
+<table>
+<thead>
+<tr>
+<th align="left">单位</th>
+<th align="left">相对于</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>em</code></td>
+<td align="left">在 font-size 中使用是相对于父元素的字体大小，在其他属性中使用是相对于自身的字体大小，如 width</td>
+</tr>
+<tr>
+<td align="left"><code>ex</code></td>
+<td align="left">字符“x”的高度</td>
+</tr>
+<tr>
+<td align="left"><code>ch</code></td>
+<td align="left">数字“0”的宽度</td>
+</tr>
+<tr>
+<td align="left"><code>rem</code></td>
+<td align="left">根元素的字体大小</td>
+</tr>
+<tr>
+<td align="left"><code>lh</code></td>
+<td align="left">元素的line-height</td>
+</tr>
+<tr>
+<td align="left"><code>vw</code></td>
+<td align="left">视窗宽度的1%</td>
+</tr>
+<tr>
+<td align="left"><code>vh</code></td>
+<td align="left">视窗高度的1%</td>
+</tr>
+<tr>
+<td align="left"><code>vmin</code></td>
+<td align="left">视窗较小尺寸的1%</td>
+</tr>
+<tr>
+<td align="left"><code>vmax</code></td>
+<td align="left">视图大尺寸的1%</td>
+</tr>
+</tbody></table>
+<p>ems and rems</p>
+<p><code>em</code>和<code>rem</code>是您在从框到文本调整大小时最常遇到的两个相对长度。</p>
+<p><strong>概括地说，在排版属性中 em 单位的意思是“父元素的字体大小”</strong>。</p>
+<p><strong>概括地说，rem单位的意思是“根元素的字体大小”</strong>。</p>
+<p><strong>百分比</strong></p>
+<p>百分比的问题在于，它们总是相对于其他值设置的。例如，如果将元素的字体大小设置为百分比，那么它将是元素父元素字体大小的百分比。如果使用百分比作为宽度值，那么它将是父值宽度的百分比。</p>
+<p>注意，虽然许多值接受长度或百分比，但也有一些值只接受长度。您可以在MDN属性引用页面上看到它能接受哪些值。如果允许的值包括<code>&lt;length-percent&gt;</code>，则可以使用长度或百分比。如果允许的值只包含<length>，则不可能使用百分比。</p>
+<h3 id="颜色color"><a href="#颜色color" class="headerlink" title="颜色color"></a>颜色color</h3><p>在CSS中指定颜色的方法有很多，其中一些是最近才实现的。在CSS中，相同的颜色值可以在任何地方使用，无论您指定的是文本颜色、背景颜色还是其他颜色。</p>
+<p><strong>颜色关键词</strong></p>
+<p>是一种指定颜色的简单易懂的方式。有一些关键词，其中一些有相当有趣的名字！您可以在<a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value">这里</a>看到 <code>&lt;color&gt;</code>值的完整列表。</p>
+<p><strong>十六进制RGB值</strong></p>
+<p>每两个值表示一个通道（channels）—红色、绿色和蓝色—并允许我们为每个通道指定256个可用值中的任意一个(16 x 16 = 256)。#128a7d;</p>
+<p><strong>RGB和RGBA值</strong></p>
+<p>RGB值是一个函数—RGB()—它有三个参数，表示颜色的红色、绿色和蓝色通道值，与十六进制值的方法非常相似</p>
+<p>您还可以使用RGBA颜色——它们的工作方式与RGB颜色完全相同，因此您可以使用任何RGB值，但是有第四个值表示颜色的alpha通道，它控制不透明度。如果将这个值设置为<code>0</code>，它将使颜色完全透明（默认0），而设置为<code>1</code>将使颜色完全不透明。介于两者之间的值提供了不同级别的透明度。</p>
+<p><strong>注意</strong>: 在颜色上设置alpha通道与使用我们前面看到的<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/opacity"><code>opacity</code></a>属性有一个关键区别。当你使用不透明度时，你让元素和它里面的所有东西都不透明，而使用RGBA颜色只让你指定的颜色不透明。</p>
+<p><strong>HSL和HSLA值</strong></p>
+<p>与RGB相比，HSL颜色模型的支持稍差一些(在旧版本的IE中不支持)，它是在设计师们感兴趣之后实现的。<code>hsl()</code> 函数接受色调、饱和度和亮度值作为参数，而不是红色、绿色和蓝色值，这些值的不同方式组合，可以区分1670万种颜色：</p>
+<ul>
+<li><strong>色调</strong>： 颜色的底色。这个值在0和360之间，表示色轮周围的角度。</li>
+<li><strong>饱和度</strong>： 颜色有多饱和？ 它的值为0 - 100%，其中0为无颜色(它将显示为灰色阴影)，100%为全色饱和度</li>
+<li><strong>亮度</strong>：颜色有多亮？ 它从0 - 100%中获取一个值，其中0表示没有光(它将完全显示为黑色)，100%表示完全亮(它将完全显示为白色)</li>
+</ul>
+<p>HSLA类似RGBA</p>
+<h3 id="其他value"><a href="#其他value" class="headerlink" title="其他value"></a>其他value</h3><p><code>&lt;image&gt;</code> 数据类型用于图像为有效值的任何地方。它可以是一个通过 <code>url()</code>函数指向的实际图像文件，也可以是一个渐变。<a target="_blank" rel="noopener" href="https://cssgradient.io/">https://cssgradient.io/</a></p>
+<p><code>&lt;position&gt;</code> 数据类型表示一组2D坐标，用于定位一个元素，如背景图像(通过 <code>background-position</code>)。它可以使用关键字(如 <code>top</code>, <code>left</code>, <code>bottom</code>, <code>right</code>, 以及<code>center</code> )将元素与2D框的特定边界对齐，以及表示框的顶部和左侧边缘偏移量的长度。</p>
+<p>一个典型的位置值由两个值组成——第一个值水平地设置位置，第二个值垂直地设置位置。如果只指定一个轴的值，另一个轴将默认为 <code>center</code>。</p>
+<h3 id="字符串vs标识符"><a href="#字符串vs标识符" class="headerlink" title="字符串vs标识符"></a>字符串vs标识符</h3><p>我们看到关键字被用作值的地方(例如<code>&lt;color&gt;</code>关键字，如 <code>red</code>, <code>black</code>, <code>rebeccapurple</code>, and <code>goldenrod</code>)。这些关键字被更准确地描述为标识符，一个CSS可以理解的特殊值。因此它们没有使用引号括起来——它们不被当作字符串。</p>
+<p>在某些地方可以使用CSS中的字符串，例如 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements#Generating_content_with_before_and_after">在指定生成的内容时</a>。content比如</p>
+<h3 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h3><p>我们将查看的最后一种类型的值是一组称为函数的值。在编程中，函数是一段可重用的代码，可以多次运行，以完成重复的任务，对开发人员和计算机都是如此。函数通常与JavaScript、Python或c++等语言相关联，但它们也以属性值的形式存在于CSS中。我们已经在颜色部分看到了函数的作用——<code>rgb()</code>、<code>hsl()</code>等。用于从文件返回图像的值——<code>url()</code>——也是一个函数。</p>
+<p>行为更类似于传统编程语言的值是<code>calc()</code>函数。这个函数使您能够在CSS中进行简单的计算。如果您希望计算出在为项目编写CSS时<strong>无法定义的值</strong>，并且需要浏览器在运行时为您计算出这些值，那么它特别有用。直接把参数表达式按照正常表达式输入就好了</p>
+<p>你可以看看所有不同类型的 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Values_and_Units">CSS的值和单位</a> 参考页面</p>
+<h2 id="调整大小"><a href="#调整大小" class="headerlink" title="调整大小"></a>调整大小</h2><h1 id="以后再学"><a href="#以后再学" class="headerlink" title="以后再学"></a>以后再学</h1><h2 id="css层叠"><a href="#css层叠" class="headerlink" title="css层叠"></a><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/Cascade#origin_of_css_declarations">css层叠</a></h2><h2 id="外边距重叠"><a href="#外边距重叠" class="headerlink" title="外边距重叠"></a><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing">外边距重叠</a></h2><h2 id="视口-视口概念-CSS（层叠样式表）-MDN-mozilla-org"><a href="#视口-视口概念-CSS（层叠样式表）-MDN-mozilla-org" class="headerlink" title="[视口](视口概念 - CSS（层叠样式表） | MDN (mozilla.org))"></a>[视口](<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/Viewport_concepts">视口概念 - CSS（层叠样式表） | MDN (mozilla.org)</a>)</h2>
     </div>
 
     
@@ -723,7 +889,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#CSS%E5%85%A5%E9%97%A8"><span class="nav-number">1.</span> <span class="nav-text">CSS入门</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9E%84%E5%BB%BACSS"><span class="nav-number">1.1.</span> <span class="nav-text">构建CSS</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A7%84%E5%88%99"><span class="nav-number">1.1.1.</span> <span class="nav-text">@规则</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%80%9F%E8%AE%B0%E5%B1%9E%E6%80%A7"><span class="nav-number">1.1.2.</span> <span class="nav-text">速记属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#tips"><span class="nav-number">1.1.3.</span> <span class="nav-text">tips</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#CSS%E6%9E%84%E5%BB%BA"><span class="nav-number">2.</span> <span class="nav-text">CSS构建</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B1%82%E5%8F%A0%E5%92%8C%E7%BB%A7%E6%89%BF"><span class="nav-number">2.1.</span> <span class="nav-text">层叠和继承</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8E%A7%E5%88%B6%E7%BB%A7%E6%89%BF"><span class="nav-number">2.1.1.</span> <span class="nav-text">控制继承</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BC%98%E5%85%88%E7%BA%A7"><span class="nav-number">2.1.2.</span> <span class="nav-text">优先级</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%80%89%E6%8B%A9%E5%99%A8"><span class="nav-number">2.2.</span> <span class="nav-text">选择器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B1%9E%E6%80%A7"><span class="nav-number">2.2.1.</span> <span class="nav-text">属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E2%80%9C%E4%BC%AA%E2%80%9C"><span class="nav-number">2.2.2.</span> <span class="nav-text">“伪“</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B3%E7%B3%BB%E9%80%89%E6%8B%A9"><span class="nav-number">2.2.3.</span> <span class="nav-text">关系选择</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%9B%92%E6%A8%A1%E5%9E%8B"><span class="nav-number">2.3.</span> <span class="nav-text">盒模型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%96%E8%BE%B9%E8%B7%9D%E6%8A%98%E5%8F%A0"><span class="nav-number">2.3.1.</span> <span class="nav-text">外边距折叠</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%B9%E6%A1%86"><span class="nav-number">2.3.2.</span> <span class="nav-text">边框</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%83%8C%E6%99%AF"><span class="nav-number">2.4.</span> <span class="nav-text">背景</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#background%E7%AE%80%E5%86%99"><span class="nav-number">2.4.1.</span> <span class="nav-text">background简写</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%84%E7%90%86%E6%96%87%E6%9C%AC"><span class="nav-number">2.5.</span> <span class="nav-text">处理文本</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CSS%E6%BA%A2%E5%87%BA"><span class="nav-number">2.6.</span> <span class="nav-text">CSS溢出</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BB%A5%E5%90%8E%E5%86%8D%E5%AD%A6"><span class="nav-number">3.</span> <span class="nav-text">以后再学</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#css%E5%B1%82%E5%8F%A0"><span class="nav-number">3.1.</span> <span class="nav-text">css层叠</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%96%E8%BE%B9%E8%B7%9D%E9%87%8D%E5%8F%A0"><span class="nav-number">3.2.</span> <span class="nav-text">外边距重叠</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%86%E5%8F%A3-%E8%A7%86%E5%8F%A3%E6%A6%82%E5%BF%B5-CSS%EF%BC%88%E5%B1%82%E5%8F%A0%E6%A0%B7%E5%BC%8F%E8%A1%A8%EF%BC%89-MDN-mozilla-org"><span class="nav-number">3.3.</span> <span class="nav-text">[视口](视口概念 - CSS（层叠样式表） | MDN (mozilla.org))</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#CSS%E5%85%A5%E9%97%A8"><span class="nav-number">1.</span> <span class="nav-text">CSS入门</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9E%84%E5%BB%BACSS"><span class="nav-number">1.1.</span> <span class="nav-text">构建CSS</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A7%84%E5%88%99"><span class="nav-number">1.1.1.</span> <span class="nav-text">@规则</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%80%9F%E8%AE%B0%E5%B1%9E%E6%80%A7"><span class="nav-number">1.1.2.</span> <span class="nav-text">速记属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#tips"><span class="nav-number">1.1.3.</span> <span class="nav-text">tips</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#CSS%E6%9E%84%E5%BB%BA"><span class="nav-number">2.</span> <span class="nav-text">CSS构建</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B1%82%E5%8F%A0%E5%92%8C%E7%BB%A7%E6%89%BF"><span class="nav-number">2.1.</span> <span class="nav-text">层叠和继承</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8E%A7%E5%88%B6%E7%BB%A7%E6%89%BF"><span class="nav-number">2.1.1.</span> <span class="nav-text">控制继承</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BC%98%E5%85%88%E7%BA%A7"><span class="nav-number">2.1.2.</span> <span class="nav-text">优先级</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%80%89%E6%8B%A9%E5%99%A8"><span class="nav-number">2.2.</span> <span class="nav-text">选择器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B1%9E%E6%80%A7"><span class="nav-number">2.2.1.</span> <span class="nav-text">属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E2%80%9C%E4%BC%AA%E2%80%9C"><span class="nav-number">2.2.2.</span> <span class="nav-text">“伪“</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B3%E7%B3%BB%E9%80%89%E6%8B%A9"><span class="nav-number">2.2.3.</span> <span class="nav-text">关系选择</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%9B%92%E6%A8%A1%E5%9E%8B"><span class="nav-number">2.3.</span> <span class="nav-text">盒模型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%96%E8%BE%B9%E8%B7%9D%E6%8A%98%E5%8F%A0"><span class="nav-number">2.3.1.</span> <span class="nav-text">外边距折叠</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%B9%E6%A1%86"><span class="nav-number">2.3.2.</span> <span class="nav-text">边框</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%83%8C%E6%99%AF"><span class="nav-number">2.4.</span> <span class="nav-text">背景</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#background%E7%AE%80%E5%86%99"><span class="nav-number">2.4.1.</span> <span class="nav-text">background简写</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%84%E7%90%86%E6%96%87%E6%9C%AC"><span class="nav-number">2.5.</span> <span class="nav-text">处理文本</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CSS%E6%BA%A2%E5%87%BA"><span class="nav-number">2.6.</span> <span class="nav-text">CSS溢出</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#overflow%E5%B1%9E%E6%80%A7"><span class="nav-number">2.6.1.</span> <span class="nav-text">overflow属性</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CSS%E5%80%BC"><span class="nav-number">2.7.</span> <span class="nav-text">CSS值</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%95%BF%E5%BA%A6length"><span class="nav-number">2.7.1.</span> <span class="nav-text">长度length</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A2%9C%E8%89%B2color"><span class="nav-number">2.7.2.</span> <span class="nav-text">颜色color</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B6%E4%BB%96value"><span class="nav-number">2.7.3.</span> <span class="nav-text">其他value</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2vs%E6%A0%87%E8%AF%86%E7%AC%A6"><span class="nav-number">2.7.4.</span> <span class="nav-text">字符串vs标识符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%87%BD%E6%95%B0"><span class="nav-number">2.7.5.</span> <span class="nav-text">函数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%B0%83%E6%95%B4%E5%A4%A7%E5%B0%8F"><span class="nav-number">2.8.</span> <span class="nav-text">调整大小</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BB%A5%E5%90%8E%E5%86%8D%E5%AD%A6"><span class="nav-number">3.</span> <span class="nav-text">以后再学</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#css%E5%B1%82%E5%8F%A0"><span class="nav-number">3.1.</span> <span class="nav-text">css层叠</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%96%E8%BE%B9%E8%B7%9D%E9%87%8D%E5%8F%A0"><span class="nav-number">3.2.</span> <span class="nav-text">外边距重叠</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%86%E5%8F%A3-%E8%A7%86%E5%8F%A3%E6%A6%82%E5%BF%B5-CSS%EF%BC%88%E5%B1%82%E5%8F%A0%E6%A0%B7%E5%BC%8F%E8%A1%A8%EF%BC%89-MDN-mozilla-org"><span class="nav-number">3.3.</span> <span class="nav-text">[视口](视口概念 - CSS（层叠样式表） | MDN (mozilla.org))</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -810,7 +976,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共86.1k字</span>
+  <span class="post-count">博客全站共88.9k字</span>
 </div>
         
 
