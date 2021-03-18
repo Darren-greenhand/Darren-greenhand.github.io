@@ -31,8 +31,10 @@
 <meta property="og:description" content="An important skill">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://gitee.com/darren-greenhand//picture/raw/master/image-20210316171316621.png">
+<meta property="og:image" content="https://gitee.com/darren-greenhand//picture/raw/master/LEv2_7_4.png">
+<meta property="og:image" content="https://ndg-content-dev.s3.amazonaws.com/media/images/linux-essentials-v2/LEv2_7_5.png">
 <meta property="article:published_time" content="2021-03-14T12:57:21.000Z">
-<meta property="article:modified_time" content="2021-03-17T01:54:24.274Z">
+<meta property="article:modified_time" content="2021-03-18T08:19:12.209Z">
 <meta property="article:author" content="Darren">
 <meta property="article:tag" content="cisco">
 <meta name="twitter:card" content="summary">
@@ -112,7 +114,7 @@
       <h1 class="site-title">Darren Blog</h1>
       <span class="logo-line-after"><i></i></span>
     </a>
-      <p class="site-subtitle" itemprop="description">Stratch to WWW</p>
+      <p class="site-subtitle" itemprop="description">A little spider long for WWW</p>
   </div>
 
   <div class="site-nav-right">
@@ -237,7 +239,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-03-17 09:54:24" itemprop="dateModified" datetime="2021-03-17T09:54:24+08:00">2021-03-17</time>
+                <time title="修改时间：2021-03-18 16:19:12" itemprop="dateModified" datetime="2021-03-18T16:19:12+08:00">2021-03-18</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -475,6 +477,10 @@
 <h1 id="内置帮助"><a href="#内置帮助" class="headerlink" title="内置帮助"></a>内置帮助</h1><h2 id="Man-Pages"><a href="#Man-Pages" class="headerlink" title="Man Pages"></a>Man Pages</h2><p>man + 命令</p>
 <p>The <code>man</code> command uses a pager to display documents. Usually, <strong>this pager is the <code>less</code> command</strong>, but on some distributions, it may be the <code>more</code> command. Both are very similar in how they perform.</p>
 <p>To view the various movement commands that are available, use the <em><strong>H key</strong></em> while viewing a man page. This displays a help page.</p>
+<p>man手册使用less命令，less和more是查看文件的方法命令，less 与 more 类似，但使用 less 可以随意浏览文件，而 more 仅能向前移动，却不能向后移动，而且 less 在查看之前不会加载整个文件。那些操作都是less命令提供的，用</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Commands marked with * may be preceded by a number, N.     </span><br><span class="line">   Notes in parentheses indicate the behavior if N is given.        </span><br><span class="line">   A key preceded by a caret indicates the Ctrl key; thus ^K is ctrl-K.</span><br></pre></td></tr></table></figure>
+
+<p>请注意，手册页现在可能对您来说还是个谜，但是随着您对Linux的更多了解，您会发现它们是非常有价值的资源</p>
 <p><strong>Name</strong></p>
 <p><strong>SYNOPSIS</strong></p>
 <p>好像是使用类似正则表达式规则，[bda]表示b,d,a都可用，均为可选</p>
@@ -500,25 +506,207 @@
 <li>System Administration Commands</li>
 <li>Kernel Routines</li>
 </ol>
+<p>不同的手册页由“部分”区分。默认情况下，手册页有九个部分：</p>
+<ul>
+<li>可执行程序或外壳命令</li>
+<li>系统调用（内核提供的功能）</li>
+<li>库调用（程序库中的函数）</li>
+<li>特殊文件（通常在中找到<code>/dev</code>）</li>
+<li>文件格式和约定，例如 <code>/etc/passwd</code></li>
+<li>游戏类</li>
+<li>其他（包括宏包和约定），例如<code>man(7)&gt;</code>，<code>groff(7)</code></li>
+<li>系统管理命令（通常仅用于root用户）</li>
+<li>内核例程</li>
+</ul>
 <p>搜索指令时依次搜索</p>
 <p>默认输出第一个找到的手册页</p>
-<p>该<code>whereis</code>命令专门用于查找命令和手册页。尽管这很有用，但通常需要查找文件或目录，而不仅仅是查找命令或手册页文件。</p>
+<p>该<code>whereis</code>命令专门用于<strong>查找命令和手册页</strong>。尽管这很有用，但通常需要查找文件或目录，而不仅仅是查找命令或手册页文件。</p>
 <p>要查找任何文件或目录，请使用<code>locate</code>命令。创建数据库时，此命令将搜索系统中所有文件和目录的数据库。通常，生成该数据库的命令每晚运行一次。</p>
+<h2 id="INFO文档"><a href="#INFO文档" class="headerlink" title="INFO文档"></a>INFO文档</h2><p>手册页是很好的信息来源，但是它们确实有一些缺点。一个示例是，每个手册页都是单独的文档，与任何其他手册页都不相关。尽管某些手册页的某个<code>SEE ALSO</code>部分可能引用其他手册页，但它们往往是独立的文档来源。</p>
+<p>该<code>info</code>命令还提供有关操作系统命令和功能的文档。目标与手册页略有不同：提供一个文档资源，该文档资源给出了合理的组织结构，使阅读文档更加容易。</p>
+<p>所有文档都合并到一个代表所有可用文档的“书”中。在信息文档中，信息分为几类，其工作方式与书中的目录非常相似。为页面提供超链接，其中包含有关特定命令或功能的各个主题的信息。</p>
+<p>信息相对于手册页的另一个优点是，信息文档的写作风格通常更有利于学习主题。手册页更多地是参考资源，而信息文档更多地是学习指南。</p>
+<p>首行显示了索引信息，下一章/上一章</p>
+<p>尾行显示了当前节点</p>
+<p>菜单列出了相关话题的超链接，选择+enter可选择</p>
+<p>请注意，进入有关排序的节点会将线索带入原始节点的子节点。要返回上一个节点，请使用<strong>U</strong>键。当<strong>U</strong>导致上一级节点的开始时，<strong>L</strong>键返回到与进入排序节点之前相同的位置。U是上级，L是来回</p>
+<p>shift+H是移动命令列表</p>
+<p>L返回当前文档，Q退出info</p>
+<p><strong>与其使用信息文档来查找有关特定命令或功能的信息，不如考虑通过阅读信息文档来探索Linux的功能。执行<code>info</code>不带任何参数的命令，将其带入文档的顶层。这是探索许多功能的一个很好的起点：</strong></p>
+<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><p>Many commands will provide basic information, very similar to the <code>SYNOPSIS</code> found in man pages, by simply using the <code>--help</code> option to the command. This option is useful to learn the basic usage of a command quickly而且不用离开终端</p>
+<p>在大多数系统上，存在一个目录，在该目录中可以找到其他文档（例如，第三方软件供应商存储的文档文件）。</p>
+<p>这些文档文件通常称为自述文件，因为这些文件通常具有诸如<code>README</code>或的名称<code>readme.txt</code>。这些文件的位置可能会有所不同，具体取决于您所使用的分发。典型的位置包括<code>/usr/share/doc</code>和<code>/usr/doc</code>。</p>
+<p>通常，此目录是系统管理员用来学习如何设置更复杂的软件服务的目录。但是，有时普通用户也会发现此文档很有用。</p>
+<h1 id="文件系统导航"><a href="#文件系统导航" class="headerlink" title="文件系统导航"></a>文件系统导航</h1><p>在Linux中，所有内容均视为文件。文件用于存储文本，图形和程序等数据。目录是一种用于存储其他文件的文件；Windows和Mac OS X用户通常将它们称为文件夹。在任何情况下，目录都用于提供分层的组织结构。但是，此结构可能会有所不同，具体取决于使用的系统类型。</p>
+<p>与Windows一样，Linux目录结构（通常称为文件系统）也具有顶层。但是，它而不是“我的电脑”被称为根目录，**并且用斜杠符号表示<code>/</code>**。此外，Linux中没有驱动器。每个物理设备都可在目录（而不是驱动器号）下访问。</p>
+<p>请注意，有许多目录具有描述性名称，包括<code>/boot</code>，其中包含用于引导计算机的文件。</p>
+<p>主目录（home directory）一词通常会使新的Linux用户感到困惑。首先，在大多数Linux发行版中<code>home</code>，根<code>/</code>目录下有一个目录。</p>
+<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/LEv2_7_4.png" alt="根目录中有一个名为home的目录。"></p>
+<p>在此<code>/home</code>目录下，为系统上的每个用户提供一个目录。目录名与用户名相同，因此名为的用户<code>sysadmin</code>将具有一个名为<code>/home/sysadmin</code>的主目录</p>
+<p><img src="https://ndg-content-dev.s3.amazonaws.com/media/images/linux-essentials-v2/LEv2_7_5.png" alt="用户的主目录位于/ home目录中，该目录又位于/字符表示的根目录中。 例如，sysadmin用户在/ home目录中有一个主目录（也称为sysadmin）。">首先，当用户打开shell程序时，应将其自动放置在其主目录中，因为通常这是他们执行大部分工作的地方。</p>
+<p>此外，主目录是用户可以完全控制创建和删除其他文件和目录的少数目录之一。在大多数Linux发行版中，唯一可以访问主目录中文件的用户是系统的所有者和管理员。Linux文件系统中的大多数其他目录受文件权限保护。</p>
+<p>主目录的特殊符号是 <code>~</code></p>
+<p>父目录<code>..</code> 当前目录<code>.</code></p>
+<p>~username 可以引用别的用户的主目录</p>
+<p>pwd    </p>
+<p>cd 如果不加参数，则回到主目录</p>
+<p>绝对路径·总是从根目录开始 /   相对路径则从现在的目录开始</p>
+<h2 id="powerful-ls"><a href="#powerful-ls" class="headerlink" title="powerful ls"></a>powerful ls</h2><p>在许多Linux发行版中，包括在我们的虚拟机中使用的发行版，该<code>ls</code>命令使用颜色按文件类型进行区分。例如，目录可以显示为蓝色，可执行文件可以显示为绿色，符号链接可以显示为青色。</p>
+<p>彩色输出不是<code>ls</code>命令的默认行为，而是该<code>--color</code>选项的效果。在<code>ls</code>似乎因为对于一个别名来自动执行此着色<code>ls</code>指令，因此它与运行<code>--color</code>选项。</p>
+<p>ls -l属性</p>
+<p>每行的第一个字符表示文件的类型。文件类型为：</p>
+<table>
+<thead>
+<tr>
+<th align="left">象征</th>
+<th align="left">文件类型</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>d</code></td>
+<td align="left">目录</td>
+<td align="left">用于存储其他文件的文件。</td>
+</tr>
+<tr>
+<td align="left"><code>-</code></td>
+<td align="left">常规文件</td>
+<td align="left">包括可读文件，图像文件，二进制文件和压缩文件。</td>
+</tr>
+<tr>
+<td align="left"><code>l</code></td>
+<td align="left">符号链接</td>
+<td align="left">指向另一个文件。</td>
+</tr>
+<tr>
+<td align="left"><code>s</code></td>
+<td align="left">插座socket</td>
+<td align="left">允许进程之间的通信。</td>
+</tr>
+<tr>
+<td align="left"><code>p</code></td>
+<td align="left">管道pipe</td>
+<td align="left">允许进程之间的通信。</td>
+</tr>
+<tr>
+<td align="left"><code>b</code></td>
+<td align="left">block文件</td>
+<td align="left">用于与硬件通信。</td>
+</tr>
+<tr>
+<td align="left"><code>c</code></td>
+<td align="left">字符文件</td>
+<td align="left">用于与硬件通信。</td>
+</tr>
+</tbody></table>
+<p>随后是权限，硬连接数，用户所有者，小组所有者，文件大小，时间戳，文档名称</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-rw-r--r-- 1 root   root  35330 May 26  2018 bootstrap.log</span><br></pre></td></tr></table></figure>
+
+<p>对于符号链接，将显示链接名称以及箭头和原始文件的路径名。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lrwxrwxrwx。1 root root 2018年11月22日/etc/grub.conf- &gt; ../boot/grub/grub.conf</span><br></pre></td></tr></table></figure>
+
+<p>使用该<code>-d</code>选项时，它引用的是当前目录，而不是其中的内容。如果没有其他选择，那就毫无意义。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sysadmin@localhost:~$ ls -ld                                           </span><br><span class="line">drwxr-xr-x 1 sysadmin sysadmin 224 Nov  7 17:07 .</span><br></pre></td></tr></table></figure>
+
+<p>详细的看命令集[]</p>
+<p>颜色指示该项目是什么类型。下表描述了一些较常见的颜色：</p>
+<table>
+<thead>
+<tr>
+<th align="left">颜色</th>
+<th align="left">档案类型</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">黑或白</td>
+<td align="left">常规文件</td>
+</tr>
+<tr>
+<td align="left">蓝色</td>
+<td align="left">目录文件</td>
+</tr>
+<tr>
+<td align="left">青色</td>
+<td align="left">符号链接文件（指向另一个文件的文件）</td>
+</tr>
+<tr>
+<td align="left">绿色的</td>
+<td align="left">可执行文件（程序）</td>
+</tr>
+</tbody></table>
+<h1 id="管理文件和目录"><a href="#管理文件和目录" class="headerlink" title="管理文件和目录"></a>管理文件和目录</h1><p>Linux中的所有内容都区分大小写</p>
+<p>Glob字符 are often referred to as wild cards（通配符）.</p>
+<p>Globs功能强大，因为它们允许您指定与目录中的文件名匹配的模式。因此，您可以轻松地执行影响多个文件的命令，而不必一次处理一个文件。例如，通过使用全局字符，可以处理具有特定扩展名或特定文件名长度的所有文件。</p>
+<p>与shell运行的命令或shell传递给命令的选项和参数不同，<strong>glob字符在尝试运行任何命令之前由shell本身解释</strong>。结果，全局字符可以与任何命令一起使用。</p>
+<p>*  匹配任意个字符（包括0个）</p>
+<p>？ 匹配单个字符</p>
+<p>*+n？搭配表示匹配至少n个字符</p>
+<p>[ ]匹配一系列，也可以[ ]*,这不就是正则表达式吗</p>
+<p>但是取反是[!xx]而不是 ^</p>
+<p>请记住，是将shell（而不是<code>echo</code>or<code>ls</code>命令）将全局模式扩展为相应的文件名。换句话说，如果<code>echo /etc/a*</code>执行了该命令，则在执行echo命令之前，外壳程序将<code>a*</code>用<code>/etc</code>与该模式匹配的目录中的所有文件和目录替换。</p>
+<p>ls 在使用通配符时你可能不知道他到底显示的是哪里的文件夹，可以用 -d来显示路径而不是内容</p>
+<p><strong>cp</strong>是复制 cp sour des  -v可以显示输出</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sysadmin @ localhost：〜 $ cp -v &#x2F; etc &#x2F; hosts〜                              </span><br><span class="line">&#96;&#x2F; etc &#x2F; hosts&#39;-&gt;&#96;&#x2F; home &#x2F; sysadmin &#x2F; hosts&#39;</span><br></pre></td></tr></table></figure>
+
+<p>默认同名，新名字可以加在路径里，<strong>默认覆盖重名文件！</strong></p>
+<p>-i会提供交互式警戒，确认后才会覆盖  -n选项则代表 no clobber（没有破坏力）不会覆盖！</p>
+<p>默认不能复制目录，-r可以递归复制整个目录，-p保留时间戳</p>
+<p><strong>mv</strong> 语法类似 cp用于移动</p>
+<p>还可以用来重命名，mv former newer如果在相同目录，就是重命名</p>
+<p>-i  -n  -v作用类似，但没有-r因为默认可以移动目录，-p保留时间戳</p>
+<p>创建文件touch</p>
+<p>rm命令，小心使用</p>
+<p><strong>警告：</strong>文件将被永久删除。没有取消删除文件的命令，也没有从中恢复已删除文件的垃圾桶。</p>
+<p>在删除搭配通配符时还是最好使用-i   </p>
+<p>rm -r删除目录 最好-i</p>
+<p>rmdir删除空目录，mkdir创建空目录</p>
+<h1 id="存档和压缩"><a href="#存档和压缩" class="headerlink" title="存档和压缩"></a>存档和压缩</h1><p>archiving and compression</p>
+<ul>
+<li>归档：将多个文件合并为一个，从而消除了单个文件的开销，并使文件更易于传输。</li>
+<li>压缩：通过删除冗余信息来缩小文件的大小。</li>
+<li>Files can be compressed individually, or multiple files can be combined into a single archive and then subsequently compressed. The latter is still referred to as archiving.</li>
+</ul>
+<p>即使磁盘空间相对便宜，归档和压缩仍然有价值：</p>
+<ul>
+<li>当提供大量文件（例如应用程序的源代码或文档集合）时，与单独下载文件相比，人们下载压缩的存档要容易得多。</li>
+<li>日志文件有填充磁盘的习惯，因此按日期拆分日志并压缩较旧的版本很有帮助。</li>
+<li>备份目录时，将其全部保存在一个存档中比对每个文件进行版本控制（更新）要容易得多。</li>
+<li>如果您发送的是数据流而不是单个文件，则某些流式传输设备（例如磁带）的性能会更好。</li>
+<li>通常，在将文件发送到磁带驱动器或通过较慢的网络进行压缩之前，在另一端进行压缩比在不压缩的情况下进行压缩通常会更快。</li>
+</ul>
+<p>压缩算法是一个计算机使用来编码原始文件的过程，并且作为结果，使其变小。计算机科学家研究了这些算法，并提出了更好的算法，它们可以更快地工作或使输入文件更小。</p>
+<p>在谈论压缩时，有两种类型：</p>
+<ul>
+<li>无损：不会从文件中删除任何信息。压缩文件并解压缩后，会留下与原始文件相同的内容。</li>
+<li>有损：信息可能已从文件中删除。它的压缩方式是，解压缩文件将导致文件与原始文件略有不同。例如，可以通过将这两个阴影视为相同来缩小具有两个略微不同的绿色阴影的图像。通常，眼睛总是无法分辨出差异。</li>
+</ul>
 <h1 id="操作集"><a href="#操作集" class="headerlink" title="操作集"></a>操作集</h1><ol>
-<li>variable = value创建局部变量，引用时前面加$</li>
-<li>指导书man page里 /搜索 n下一个 shift+n上一个</li>
+<li><p>variable = value创建局部变量，引用时前面加$</p>
+</li>
+<li><p>指导书man page里 /搜索 n下一个 shift+n上一个</p>
+</li>
+<li><p>info里shift+H是移动命令列表</p>
+<p>L返回当前文档，Q退出info</p>
+</li>
+<li></li>
 </ol>
 <h1 id="命令集"><a href="#命令集" class="headerlink" title="命令集"></a>命令集</h1><ol>
 <li><p>ls 可加多个参数则依次打印</p>
-<p>-l详细模式  -r 反顺序打印（默认字母顺序）</p>
-<p>-h == –human-readable</p>
+<p>-l详细模式  -r 反顺序打印（默认字母顺序）ls -a 打印包括隐藏文件</p>
+<p>-h == –human-readable   该<code>-h</code>选项必须与该<code>-l</code>选项一起使用。</p>
+<p>-d引用当前目录 -r 递归</p>
+<p>ls 在使用通配符时你可能不知道他到底显示的是哪里的文件夹，可以用 -d来显示路径而不是内容</p>
+<p>-s按文件大小排序 -t按时间，新的放前面</p>
+<p><code>--full-time</code>选项显示完整的时间戳（包括小时，分钟，秒）。它将自动采用<code>-l</code>选项：</p>
+<p>仅为创建较早的文件提供</p>
+<p>ls也可查看文件信息，最好跟着 -l不然没啥用</p>
 </li>
 <li><p>history+5 显示最后5个指令</p>
 <p>感叹号!+数字（负号倒数）来选择历史命令</p>
 <p>！！执行最新</p>
 <p>！+命令 为特定命令的最新迭代</p>
 </li>
-<li><p>echo</p>
+<li><p>echo  ascii</p>
 </li>
 <li><p>data / env /whoami </p>
 </li>
@@ -542,15 +730,23 @@
 <ol start="11">
 <li><p>alias 显示所有别名</p>
 <p>alias a = “b” 设置别名</p>
+<p>/+别名可以使别名失效</p>
 </li>
 <li><p>man +command</p>
 <p>man -f command 显示所有包含该命令的手册(==whatis)</p>
+<p>man 5 password 在5部分查看该命令</p>
 <p>man -k coomand在手册页的名称和描述中搜索关键字!(==apropos)</p>
 </li>
 <li><p>locate 查找所有文件和目录</p>
 <p>updatedb更新数据库，免得晚上才更新</p>
 <p>不加参数则匹配包含字符串的，输出一堆</p>
 <p>-c  显示有多少匹配</p>
+<p>locate -b仅匹配包含基本名</p>
+<p>如果 locate -b “\….”加上破折号就是完全匹配，连后缀都没有那种</p>
+</li>
+<li><p>find是搜索实时文件系统，而不是静态数据库</p>
+</li>
+<li><p>info command    </p>
 </li>
 </ol>
 <p>​    </p>
@@ -661,7 +857,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F"><span class="nav-number">1.</span> <span class="nav-text">操作系统</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E7%9F%A5%E8%AF%86"><span class="nav-number">1.1.</span> <span class="nav-text">基本知识</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%84%E7%A7%8D%E5%8F%91%E8%A1%8C%E7%89%88"><span class="nav-number">1.2.</span> <span class="nav-text">各种发行版</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Red-Hat"><span class="nav-number">1.2.1.</span> <span class="nav-text">Red Hat</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SUSE"><span class="nav-number">1.2.2.</span> <span class="nav-text">SUSE</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Debian"><span class="nav-number">1.2.3.</span> <span class="nav-text">Debian</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Android"><span class="nav-number">1.2.4.</span> <span class="nav-text">Android</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Other"><span class="nav-number">1.2.5.</span> <span class="nav-text">Other</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Linux%E5%B5%8C%E5%85%A5%E6%97%A0%E5%A4%84%E4%B8%8D%E5%9C%A8%EF%BC%81"><span class="nav-number">1.3.</span> <span class="nav-text">Linux嵌入无处不在！</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8Linux%E5%B7%A5%E4%BD%9C"><span class="nav-number">2.</span> <span class="nav-text">使用Linux工作</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%BB%E8%A6%81%E5%BA%94%E7%94%A8"><span class="nav-number">2.1.</span> <span class="nav-text">主要应用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="nav-number">2.1.1.</span> <span class="nav-text">服务器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A1%8C%E9%9D%A2%E5%BA%94%E7%94%A8"><span class="nav-number">2.1.2.</span> <span class="nav-text">桌面应用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8E%A7%E5%88%B6%E5%8F%B0%E5%B7%A5%E5%85%B7"><span class="nav-number">2.1.3.</span> <span class="nav-text">控制台工具</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8%EF%BC%81%EF%BC%81"><span class="nav-number">2.1.4.</span> <span class="nav-text">包管理器！！</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%91%E4%B8%8ELINUX"><span class="nav-number">2.2.</span> <span class="nav-text">云与LINUX</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%E5%92%8C%E8%AE%B8%E5%8F%AF"><span class="nav-number">3.</span> <span class="nav-text">开源项目和许可</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%80%E6%BA%90%E8%AE%A1%E5%88%92"><span class="nav-number">3.1.</span> <span class="nav-text">开源计划</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%80%E6%BA%90%E4%B8%9A%E5%8A%A1%E6%A8%A1%E5%9E%8B"><span class="nav-number">3.2.</span> <span class="nav-text">开源业务模型</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%91%BD%E4%BB%A4%E8%A1%8C%E4%B9%8B%E5%A7%8B"><span class="nav-number">4.</span> <span class="nav-text">命令行之始</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%91%BD%E4%BB%A4%E7%B1%BB%E5%9E%8B"><span class="nav-number">4.1.</span> <span class="nav-text">命令类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7"><span class="nav-number">4.2.</span> <span class="nav-text">特殊符号</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#quoting%E5%BC%95%E5%8F%B7"><span class="nav-number">4.2.1.</span> <span class="nav-text">quoting引号</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Control-Statement"><span class="nav-number">4.2.2.</span> <span class="nav-text">Control Statement</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%86%85%E7%BD%AE%E5%B8%AE%E5%8A%A9"><span class="nav-number">5.</span> <span class="nav-text">内置帮助</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Man-Pages"><span class="nav-number">5.1.</span> <span class="nav-text">Man Pages</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%93%8D%E4%BD%9C%E9%9B%86"><span class="nav-number">6.</span> <span class="nav-text">操作集</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%91%BD%E4%BB%A4%E9%9B%86"><span class="nav-number">7.</span> <span class="nav-text">命令集</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F"><span class="nav-number">1.</span> <span class="nav-text">操作系统</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E7%9F%A5%E8%AF%86"><span class="nav-number">1.1.</span> <span class="nav-text">基本知识</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%84%E7%A7%8D%E5%8F%91%E8%A1%8C%E7%89%88"><span class="nav-number">1.2.</span> <span class="nav-text">各种发行版</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Red-Hat"><span class="nav-number">1.2.1.</span> <span class="nav-text">Red Hat</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SUSE"><span class="nav-number">1.2.2.</span> <span class="nav-text">SUSE</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Debian"><span class="nav-number">1.2.3.</span> <span class="nav-text">Debian</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Android"><span class="nav-number">1.2.4.</span> <span class="nav-text">Android</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Other"><span class="nav-number">1.2.5.</span> <span class="nav-text">Other</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Linux%E5%B5%8C%E5%85%A5%E6%97%A0%E5%A4%84%E4%B8%8D%E5%9C%A8%EF%BC%81"><span class="nav-number">1.3.</span> <span class="nav-text">Linux嵌入无处不在！</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8Linux%E5%B7%A5%E4%BD%9C"><span class="nav-number">2.</span> <span class="nav-text">使用Linux工作</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%BB%E8%A6%81%E5%BA%94%E7%94%A8"><span class="nav-number">2.1.</span> <span class="nav-text">主要应用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="nav-number">2.1.1.</span> <span class="nav-text">服务器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A1%8C%E9%9D%A2%E5%BA%94%E7%94%A8"><span class="nav-number">2.1.2.</span> <span class="nav-text">桌面应用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8E%A7%E5%88%B6%E5%8F%B0%E5%B7%A5%E5%85%B7"><span class="nav-number">2.1.3.</span> <span class="nav-text">控制台工具</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8%EF%BC%81%EF%BC%81"><span class="nav-number">2.1.4.</span> <span class="nav-text">包管理器！！</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%91%E4%B8%8ELINUX"><span class="nav-number">2.2.</span> <span class="nav-text">云与LINUX</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%E5%92%8C%E8%AE%B8%E5%8F%AF"><span class="nav-number">3.</span> <span class="nav-text">开源项目和许可</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%80%E6%BA%90%E8%AE%A1%E5%88%92"><span class="nav-number">3.1.</span> <span class="nav-text">开源计划</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%80%E6%BA%90%E4%B8%9A%E5%8A%A1%E6%A8%A1%E5%9E%8B"><span class="nav-number">3.2.</span> <span class="nav-text">开源业务模型</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%91%BD%E4%BB%A4%E8%A1%8C%E4%B9%8B%E5%A7%8B"><span class="nav-number">4.</span> <span class="nav-text">命令行之始</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%91%BD%E4%BB%A4%E7%B1%BB%E5%9E%8B"><span class="nav-number">4.1.</span> <span class="nav-text">命令类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7"><span class="nav-number">4.2.</span> <span class="nav-text">特殊符号</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#quoting%E5%BC%95%E5%8F%B7"><span class="nav-number">4.2.1.</span> <span class="nav-text">quoting引号</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Control-Statement"><span class="nav-number">4.2.2.</span> <span class="nav-text">Control Statement</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%86%85%E7%BD%AE%E5%B8%AE%E5%8A%A9"><span class="nav-number">5.</span> <span class="nav-text">内置帮助</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Man-Pages"><span class="nav-number">5.1.</span> <span class="nav-text">Man Pages</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#INFO%E6%96%87%E6%A1%A3"><span class="nav-number">5.2.</span> <span class="nav-text">INFO文档</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B6%E4%BB%96"><span class="nav-number">5.3.</span> <span class="nav-text">其他</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E5%AF%BC%E8%88%AA"><span class="nav-number">6.</span> <span class="nav-text">文件系统导航</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#powerful-ls"><span class="nav-number">6.1.</span> <span class="nav-text">powerful ls</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AE%A1%E7%90%86%E6%96%87%E4%BB%B6%E5%92%8C%E7%9B%AE%E5%BD%95"><span class="nav-number">7.</span> <span class="nav-text">管理文件和目录</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AD%98%E6%A1%A3%E5%92%8C%E5%8E%8B%E7%BC%A9"><span class="nav-number">8.</span> <span class="nav-text">存档和压缩</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%93%8D%E4%BD%9C%E9%9B%86"><span class="nav-number">9.</span> <span class="nav-text">操作集</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%91%BD%E4%BB%A4%E9%9B%86"><span class="nav-number">10.</span> <span class="nav-text">命令集</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -748,7 +944,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共90k字</span>
+  <span class="post-count">博客全站共93.4k字</span>
 </div>
         
 
