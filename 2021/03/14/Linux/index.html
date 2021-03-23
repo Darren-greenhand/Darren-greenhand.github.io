@@ -33,8 +33,9 @@
 <meta property="og:image" content="https://gitee.com/darren-greenhand//picture/raw/master/image-20210316171316621.png">
 <meta property="og:image" content="https://gitee.com/darren-greenhand//picture/raw/master/LEv2_7_4.png">
 <meta property="og:image" content="https://ndg-content-dev.s3.amazonaws.com/media/images/linux-essentials-v2/LEv2_7_5.png">
+<meta property="og:image" content="https://gitee.com/darren-greenhand//picture/raw/master/image-20210323185628820.png">
 <meta property="article:published_time" content="2021-03-14T12:57:21.000Z">
-<meta property="article:modified_time" content="2021-03-18T11:44:57.545Z">
+<meta property="article:modified_time" content="2021-03-23T12:12:05.228Z">
 <meta property="article:author" content="Darren">
 <meta property="article:tag" content="cisco">
 <meta name="twitter:card" content="summary">
@@ -239,7 +240,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-03-18 19:44:57" itemprop="dateModified" datetime="2021-03-18T19:44:57+08:00">2021-03-18</time>
+                <time title="修改时间：2021-03-23 20:12:05" itemprop="dateModified" datetime="2021-03-23T20:12:05+08:00">2021-03-23</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -457,18 +458,18 @@
 <p>Bash在解释命令和执行任务时使用的所有shell中，环境变量（也称为全局变量）在系统范围内可用。当打开新的外壳程序时，系统会自动重新创建环境变量</p>
 <p>要理解的最重要的Bash shell变量之一是<code>PATH</code>变量。它包含一个列表，该列表定义了外壳程序在哪些目录中查找命令。如果输入了有效命令，并且外壳程序返回“找不到命令”错误，那是因为Bash Shell无法在路径中包含的任何目录中以该名称找到命令</p>
 <p>列表中的每个目录都用冒号分隔<code>:</code>。根据前面的输出，该路径包含以下目录。Shell将按照列出的顺序检查目录：</p>
-<p>更新<code>PATH</code>变量时，<strong>请始终包含当前路径</strong>，以免失去对这些目录中命令的访问权限。这可以通过<code>$PATH</code>在赋值表达式中附加值来实现。回想一下，以美元符号开头的变量名称表示该变量的值。<strong>而且最后那个分隔符冒号是要自己加的！</strong></p>
+<p>更新<code>PATH</code>变量时，<strong>请始终包含当前路径</strong>，以免失去对这些目录中命令的访问权限。这可以通过<code>$PATH</code>在赋值表达式中附加值来实现。回想一下，以美元符号开头的变量名称表示该变量的值。<strong>而且最后那个分隔符冒号是要自己加的！</strong><code>$ PATH = / usr / bin / custom：$ PATH  </code></p>
 <h2 id="命令类型"><a href="#命令类型" class="headerlink" title="命令类型"></a>命令类型</h2><p>There are several different sources of commands within the shell of your CLI including internal commands, external commands, aliases, and functions.内部命令，外部命令，别名，函数</p>
 <p>一个别名可以用于映射到更短的按键序列长的命令。当外壳程序看到别名正在执行时，它将替换较长的序列，然后继续解释命令。</p>
 <p>例如，该命令<code>ls -l</code>通常别名为<code>l</code>或<code>ll</code>。由于这些较小的命令更易于键入，因此运行<code>ls -l</code>命令行的速度会更快。</p>
 <p>也可以使用现有命令来构建函数，以创建新命令，或覆盖Shell内置命令或存储在文件中的命令。通常在外壳程序首次启动时从初始化文件中加载别名和函数。</p>
 <h2 id="特殊符号"><a href="#特殊符号" class="headerlink" title="特殊符号"></a>特殊符号</h2><h3 id="quoting引号"><a href="#quoting引号" class="headerlink" title="quoting引号"></a>quoting引号</h3><p>double “  single ‘  back  `</p>
 <p>双引号阻止外壳程序解释某些元字符（特殊字符），包括全局字符。</p>
-<p>Glob字符，也称为通配符（wild cards），是对shell具有特殊含义的符号；它们会在尝试运行任何命令之前由外壳程序本身解释。球形字符包括星号<code>*</code>，<code>?</code>问号字符和方括号<code>[ ]</code>等。</p>
+<p>Glob字符，也称为通配符（wild cards），是对shell具有特殊含义的符号；<em><strong>它们会在尝试运行任何命令之前由外壳程序本身解释</strong></em>。球形字符包括星号<code>*</code>，<code>?</code>问号字符和方括号<code>[ ]</code>等。</p>
 <p>稍后将在本课程中更详细地介绍globbing。</p>
 <p>双引号仍然允许命令替换，变量替换（$），并允许一些尚未讨论的其他shell元字符</p>
 <p>单引号可防止外壳对特殊字符进行任何解释，包括glob，变量，命令替换和其他尚未讨论的元字符。</p>
-<p>反引号，或反引号，用于指定一个命令内的命令时，这个过程被称为命令替换。这允许强大而复杂的命令使用</p>
+<p>反引号，或反引号，用于指定一个命令内的命令时，<strong>这个过程被称为命令替换</strong>。这允许强大而复杂的命令使用</p>
 <p>echo data 和 echo back data back</p>
 <h3 id="Control-Statement"><a href="#Control-Statement" class="headerlink" title="Control Statement"></a>Control Statement</h3><p>控制语句允许您一次使用多个命令或运行其他命令，具体取决于上一个命令的成功。通常，这些控制语句在脚本内使用，但是它们也可以在命令行上使用。</p>
 <p>分号；依次执行，彼此独立。</p>
@@ -644,16 +645,17 @@
 <p>[ ]匹配一系列，也可以[ ]*,这不就是正则表达式吗</p>
 <p>但是取反是[!xx]而不是 ^</p>
 <p>请记住，是将shell（而不是<code>echo</code>or<code>ls</code>命令）将全局模式扩展为相应的文件名。换句话说，如果<code>echo /etc/a*</code>执行了该命令，则在执行echo命令之前，外壳程序将<code>a*</code>用<code>/etc</code>与该模式匹配的目录中的所有文件和目录替换。</p>
-<p>ls 在使用通配符时你可能不知道他到底显示的是哪里的文件夹，可以用 -d来显示路径而不是内容</p>
-<p><strong>cp</strong>是复制 cp sour des  -v可以显示输出</p>
+<p><strong>ls 在使用通配符时你可能不知道他到底显示的是哪里的文件夹，可以用 -d来显示路径而不是内容</strong></p>
+<p><strong>cp</strong>是复制 cp sour des  </p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sysadmin @ localhost：〜 $ cp -v &#x2F; etc &#x2F; hosts〜                              </span><br><span class="line">&#96;&#x2F; etc &#x2F; hosts&#39;-&gt;&#96;&#x2F; home &#x2F; sysadmin &#x2F; hosts&#39;</span><br></pre></td></tr></table></figure>
 
 <p>默认同名，新名字可以加在路径里，<strong>默认覆盖重名文件！</strong></p>
+<p>-v可以显示具体操作</p>
 <p>-i会提供交互式警戒，确认后才会覆盖  -n选项则代表 no clobber（没有破坏力）不会覆盖！</p>
-<p>默认不能复制目录，-r可以递归复制整个目录，-p保留时间戳</p>
+<p><strong>默认不能复制目录</strong>，-r可以递归复制整个目录，-p保留时间戳</p>
 <p><strong>mv</strong> 语法类似 cp用于移动</p>
-<p>还可以用来重命名，mv former newer如果在相同目录，就是重命名</p>
-<p>-i  -n  -v作用类似，但没有-r因为默认可以移动目录，-p保留时间戳</p>
+<p>还可以用来重命名，mv former newer如果在相同目录，就是<strong>重命名</strong></p>
+<p>-i  -n  -v作用类似，但没有-r因为<strong>默认可以移动目录</strong>，-p保留时间戳</p>
 <p>创建文件touch</p>
 <p>rm命令，小心使用</p>
 <p><strong>警告：</strong>文件将被永久删除。没有取消删除文件的命令，也没有从中恢复已删除文件的垃圾桶。</p>
@@ -683,26 +685,26 @@
 <p>压缩已经压缩的文件不会使其变小。当涉及到图像时，通常会忘记这一事实，因为它们已经以压缩格式存储。使用无损压缩，这种多重压缩不是问题，但是，如果使用有损算法多次压缩和解压缩文件，最终将导致无法识别的内容。</p>
 <h2 id="压缩工具"><a href="#压缩工具" class="headerlink" title="压缩工具"></a>压缩工具</h2><p>Linux提供了几种工具来压缩文件。最常见的是<code>gzip</code>。</p>
 <p>gzip xxx 将压缩xxx并加上.gz后缀  </p>
-<p>-l选项将提供压缩信息，压缩前/后大小，压缩率</p>
-<p>gunzip  gzip -d 是解压缩</p>
+<p> -l 选项将提供压缩信息，压缩前/后大小，压缩率</p>
+<p>gunzip 或 gzip -d 是解压缩</p>
 <p>The <code>gunzip</code> command is just a script that calls <code>gzip</code> with the right parameters.</p>
 <p>使用<strong>Lempel-Ziv</strong>数据压缩算法，</p>
-<p>bzip2  bunzip2     它们具有<code>.bz</code>或<code>.bz2</code>扩展名,  <code>bzip</code>实用程序使用另一种称为<strong>Burrows-Wheeler</strong>块排序的压缩算法，该算法可以压缩较小的文件，而不用<code>gzip</code>花费那么多多的CPU时间。</p>
+<p>bzip2  bunzip2     它们具有<code>.bz</code>或<code>.bz2</code>扩展名,  <code>bzip</code>实用程序使用另一种称为<strong>Burrows-Wheeler</strong>块排序的压缩算法，该算法可以<strong>压缩较小</strong>的文件，而不用<code>gzip</code>花费那么多多的CPU时间。</p>
 <p>xz unxz   .xz拓展名   <strong>Lempel-Ziv-Markov (LZMA)</strong> chain algorithm，</p>
 <p>同时拥有比gzip快的时间和比bzip2快的压缩率</p>
 <h2 id="归档"><a href="#归档" class="headerlink" title="归档"></a>归档</h2><p><code>tar</code>命令接收多个文件，并创建一个输出文件，该文件可在传输的另一端再次拆分为原始文件。</p>
 <p>该<code>tar</code>命令具有三种有助于熟悉的模式：</p>
 <ul>
-<li>创建：从一系列文件中创建一个新的存档。</li>
-<li>提取：从存档中提取一个或多个文件。</li>
-<li>列表：显示存档的内容而不进行提取。</li>
+<li>创建c：从一系列文件中创建一个新的存档。</li>
+<li>提取x：从存档中提取一个或多个文件。</li>
+<li>列表t：显示存档的内容而不进行提取。</li>
 </ul>
 <p>记住模式是弄清执行所需操作所需的命令行选项的关键。除了该模式外，还请记住在何处指定档案名称，因为您可能会在命令行上输入多个文件名。</p>
 <p>虽然文件扩展名不会影响文件的处理方式，但约定是将其<code>.tar</code>用于tarball</p>
 <p><code>.tar.gz</code>或<code>.tgz</code>称呼用gzip压缩的tarball。</p>
 <p><code>.tar.bz2</code>，<code>.tbz</code>或者<code>.tbz2</code>称呼用bzip2压缩的tarball</p>
-<p><code>tar</code> stands for <strong>T</strong>ape <strong>AR</strong>chive</p>
-<p><strong>将<code>–f</code>标志保留在末尾很重要，因为<code>tar</code>假定此选项后的所有内容均为文件名。在下一个示例中，对<code>–f</code>和<code>–v</code>标志进行了转置，导致<code>tar</code>将该命令解释为对名为的文件的操作，该文件<code>v</code>不存在</strong>。</p>
+<p><code>tar</code> stands for <strong>Tape ARchive</strong></p>
+<p><strong>将<code>–f</code>标志保留在末尾很重要，因为<code>tar</code>假定此选项后的所有内容均为文件名。如果放错了位置，导致<code>tar</code>将该命令解释为对名为的文件的操作，该文件<code>v</code>不存在</strong>。</p>
 <h3 id="创建模式"><a href="#创建模式" class="headerlink" title="创建模式"></a>创建模式</h3><table>
 <thead>
 <tr>
@@ -748,7 +750,7 @@
 <td align="left">在给定的存档上进行操作。</td>
 </tr>
 </tbody></table>
-<p>默认使用递归查看子目录</p>
+<p><strong>默认使用递归查看子目录</strong></p>
 <h3 id="提取模式"><a href="#提取模式" class="headerlink" title="提取模式"></a>提取模式</h3><table>
 <thead>
 <tr>
@@ -775,6 +777,8 @@
 </tbody></table>
 <p>提取时原始文件未更改，并创建了新目录。目录内是原始目录和文件</p>
 <p>如果后面加了完全正确的路径名，则可以提取单个文件</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -xjvf folders.tbz School/Art/linux.txt</span><br></pre></td></tr></table></figure>
+
 <h2 id="ZIP文件"><a href="#ZIP文件" class="headerlink" title="ZIP文件"></a>ZIP文件</h2><p>Microsoft中的事实上的归档实用程序是ZIP文件。ZIP在Linux中并不普遍，但是<code>zip</code>and<code>unzip</code>命令很好地支持ZIP 。尽管和<code>tar</code>和<code>gzip</code>/<code>gunzip</code>相同的命令和选项可以互换使用来进行创建和提取，但是并非如此<code>zip</code>。对于两个不同的命令，相同的选项具有不同的含义。</p>
 <p><code>zip</code>的默认模式是将文件添加到存档并进行压缩。</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">zip [OPTIONS] [zipfile [file…]]</span><br></pre></td></tr></table></figure>
@@ -784,13 +788,152 @@
 <p>unzip的 -l选项是列出文件</p>
 <p>提取文件就像创建存档一样，因为<code>unzip</code>命令的默认操作是提取。如果解压缩文件会覆盖现有文件，它将提供几个选项：</p>
 <p>也可以加上具体路径提取具体的</p>
-<h1 id="使用文本"><a href="#使用文本" class="headerlink" title="使用文本"></a>使用文本</h1><h1 id="操作集"><a href="#操作集" class="headerlink" title="操作集"></a>操作集</h1><ol>
+<h1 id="使用文本"><a href="#使用文本" class="headerlink" title="使用文本"></a>使用文本</h1><p>典型文件系统中的大量文件是文本文件(text files)。文本文件仅包含文本，不包含您可能在文字处理文件中看到的额外增加的格式。</p>
+<p>因为在典型的Linux系统上有许多这样的文件，所以存在大量命令来帮助用户操纵文本文件。有用于以各种方式查看和修改这些文件的命令。</p>
+<p>此外，外壳程序还提供一些功能来控制命令的输出，因此可以将输出重定向到另一个文件或另一个命令中，而不是将输出放置在终端窗口中。这些重定向功能为用户提供了更加灵活和强大的工作环境。</p>
+<p><code>cat</code>命令是concatenate的缩写，是一个简单但有用的命令，其功能包括创建和显示文本文件，以及合并文本文件的副本。最受欢迎的用途之一<code>cat</code>是显示文本文件的内容。要使用<code>cat</code>命令在标准输出中显示文件，请键入命令，然后输入文件名</p>
+<p>尽管终端是此命令的默认输出，但是该<code>cat</code>命令也可以用于将文件内容重定向到其他文件，或者通过使用重定向字符输入另一个命令。</p>
+<h2 id="寻呼机"><a href="#寻呼机" class="headerlink" title="寻呼机"></a>寻呼机</h2><p>尽管使用<code>cat</code>命令查看小文件没有问题，但对于大文件而言，这不是理想的选择。<code>cat</code>命令没有提供任何简单的方法来暂停和重新开始显示，因此整个文件内容都转储到了屏幕上。</p>
+<p>对于较大的文件，请使用Pager命令来查看内容。分页器pager命令一次显示一页数据，允许您使用移动键在文件中前后移动。</p>
+<p>有两种常用的寻呼机命令：</p>
+<ul>
+<li><code>less</code>命令提供了非常高级的分页功能。它通常是命令（例如<code>man</code>命令）使用的默认寻呼机。</li>
+<li><code>more</code>自UNIX成立以来，该命令就已存在。尽管它的功能少于<code>less</code>命令，但是该<code>less</code>命令并不包含在所有Linux发行版中。该<code>more</code>命令始终可用。Use the <code>more</code> command to display the entire contents of the <code>/etc/passwd</code> file:</li>
+</ul>
+<p><code>more</code>和<code>less</code>命令允许用户使用按键命令文件走动。因为开发人员基于<code>less</code>命令的功能来使用<code>more</code>命令，所以该命令中可用的所有击键命令<code>more</code>也可以在<code>less</code>命令中使用。</p>
+<p>我们内容的重点是更高级的<code>less</code>命令。在<code>more</code>命令<code>less</code>不可用时，该命令对于记住该命令仍然很有用。请记住，大多数击键命令都可用于这两个命令!</p>
+<p>less filename</p>
+<p>use the <strong>H</strong> key or <strong>Shift</strong>+<strong>H</strong> to display a help screen:</p>
+<p>最常用的几个：</p>
+<table>
+<thead>
+<tr>
+<th align="left">Key</th>
+<th align="left">Movement</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><strong>Spacebar</strong></td>
+<td align="left">Window forward</td>
+</tr>
+<tr>
+<td align="left"><strong>B</strong></td>
+<td align="left">Window backward</td>
+</tr>
+<tr>
+<td align="left"><strong>Enter</strong></td>
+<td align="left">Line forward</td>
+</tr>
+<tr>
+<td align="left"><strong>Q</strong></td>
+<td align="left">Exit</td>
+</tr>
+<tr>
+<td align="left"><strong>H</strong></td>
+<td align="left">Help</td>
+</tr>
+</tbody></table>
+<p>/从头开始找  ？从现在位置开始找  n下一个  shift+n 上一个</p>
+<p>head和tail用来显示文件头尾，默认10行</p>
+<table>
+<thead>
+<tr>
+<th>command</th>
+<th>head</th>
+<th>tail</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>-n</td>
+<td>显示前n行</td>
+<td>显示后n行</td>
+</tr>
+<tr>
+<td>-n  -3</td>
+<td>从头到倒数第三行（负值期权）</td>
+<td>显示后3行</td>
+</tr>
+<tr>
+<td>-n  (+)3</td>
+<td>显示前3行</td>
+<td>从第三行显示到结尾（正值期权）</td>
+</tr>
+</tbody></table>
+<p>加上-f 选项则变成可以实时观测更改。。可以用来检查日志啥的</p>
+<h2 id="重定向"><a href="#重定向" class="headerlink" title="重定向"></a>重定向</h2><p>pipe <code>|</code>字符可以被用于将一个命令的输出发送到另一个。通常，当命令有输出或产生错误时，输出将显示在屏幕上。但是，并非必须如此。一条命令的输出而不是打印到屏幕上，而成为下一条命令的输入。该工具功能强大，尤其是在查找特定数据时；管道通常用于优化初始命令的结果。</p>
+<p>例如<code>ls | head</code> 查看当前目录的前十个</p>
+<p>可以连续使用多个管道将多个命令链接在一起。依次传输</p>
+<p>nl 会将输入按行编号并显示在屏幕上</p>
+<p>输出</p>
+<p>STDIN STDOUT STDEER</p>
+<p>I/O redirection allows the user to redirect STDIN so that <strong>data comes from a file</strong> and STDOUT/STDERR so that <strong>output goes to a file.</strong> Redirection is achieved by using the arrow <code>&lt;</code> <code>&gt;</code> characters.</p>
+<p>但是<code>1&gt; 或 &gt;</code>重定向到文件会覆盖原内容，&gt;&gt;是附加</p>
+<p>而STDEER的重定向是<code>2&gt;</code>，虽然它和STDOUT都默认显示在屏幕上，但是流是不一样的</p>
+<p>而<code>&amp;&gt;</code>将两者同时重定向.，下面这种诡异的写法也可以定向到同一个文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find &#x2F;etc -name hosts &gt; find.out 2&gt;&amp;1</span><br></pre></td></tr></table></figure>
+
+<p>也可以分开放，如下所示：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">~$</span><span class="bash"> ls /fake /etc/ppp &gt; example.txt 2&gt; error.txt</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p>输入</p>
+<p>重定向STDIN的概念很困难，因为很难理解为什么要重定向STDIN。使用STDOUT和STDERR，它们的目的很简单。有时将输出存储到文件中以备将来使用会很有帮助。</p>
+<p>对于某些命令，如果您未指定文件名作为参数，则它们将恢复为使用STDIN来获取数据。例如，cat</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">sysadmin@localhost:~$ cat</span><br><span class="line">hello</span><br><span class="line">hello</span><br><span class="line">how are you?</span><br><span class="line">how are you?</span><br><span class="line">ctrl+c终止</span><br></pre></td></tr></table></figure>
+
+<p>tr 接受一个字符集并将它们转化为另一个字符集<code>tr &#39;a-z&#39; &#39;A-Z&#39;</code>该命令不支持跟文件</p>
+<p>只能<code>tr &#39;a-z&#39; &#39;A-Z&#39; &lt;file &gt;save</code> 可对文件进行处理</p>
+<p>Most commands do accept file names as arguments, so this use case is relatively rare. </p>
+<h2 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h2><p><em><strong>sort</strong></em></p>
+<p>The <code>sort</code> command can rearrange the output based on the contents of one or more fields. Fields are determined by a field delimiter contained on each line.</p>
+<p>-t 指定分界符<em>delimiter</em>（默认空格）比如按照 : 分界，就 -t:</p>
+<p>-kn 指定根据哪一项排序，项间以分界符隔开</p>
+<p>-n 指定排序类型为数字的</p>
+<p>-r 反向排序</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">sysadmin@localhost:~$ sort -t: -n -k3 mypasswd</span><br><span class="line">root:x:0:0:root:/root:/bin/bash</span><br><span class="line">daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin</span><br><span class="line">bin:x:2:2:bin:/bin:/usr/sbin/nologin</span><br><span class="line">sys:x:3:3:sys:/dev:/usr/sbin/nologin</span><br><span class="line">sync:x:4:65534:sync:/bin:/bin/sync</span><br></pre></td></tr></table></figure>
+
+<p>用逗号可以依次指定多次排序</p>
+<p>To sort first by the operating system (field #2) and then year (field #1) and then by last name (field #3), use the following command:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sysadmin@localhost:~$ sort -t, -k2 -k1n -k3 os.csv</span><br><span class="line">1991,Linux,Torvalds</span><br><span class="line">1987,Minix,Tanenbaum</span><br><span class="line">1970,Unix,Richie</span><br><span class="line">1970,Unix,Thompson</span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>wc</strong></p>
+<p>分别打印行数，单词数，字符数和文件名</p>
+<p>如果提供了多个文件还会打印一行总的</p>
+<p>-l 只显示行数   -w单词数  -c字节数</p>
+<p><strong>cut</strong></p>
+<p><code>cut</code>命令可以从文件或标准输入中提取文本列。它主要用于处理带分隔符的数据库文件。同样，定界文件(delimited flies)是包含由定界符分隔的列的文件。这些文件在Linux系统上非常常见。</p>
+<p>-d 也是指定分界符（默认tab）</p>
+<p>-f 指定范围</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">sysadmin@localhost:~$ cut -d: -f1,5-7 mypasswd</span><br><span class="line">root:root:/root:/bin/bash</span><br><span class="line">daemon:daemon:/usr/sbin:/usr/sbin/nologin</span><br><span class="line">bin:bin:/bin:/usr/sbin/nologin</span><br><span class="line">sys:sys:/dev:/usr/sbin/nologin</span><br><span class="line">sync:sync:/bin:/bin/sync</span><br></pre></td></tr></table></figure>
+
+<p>-c 选项根据字符位置提取文本列-在使用固定宽度的数据库文件或命令输出时很有用。</p>
+<p>The following will display just the file type (character 1), permissions (characters 2-10), a space (character 11), and filename (characters 50+):</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">sysadmin@localhost:~$ ls -l | cut -c1-11,50-</span><br><span class="line">total 44</span><br><span class="line">drwxr-xr-x Desktop</span><br><span class="line">drwxr-xr-x Documents</span><br><span class="line">drwxr-xr-x Downloads</span><br><span class="line">drwxr-xr-x Music</span><br><span class="line">drwxr-xr-x Pictures</span><br><span class="line">drwxr-xr-x Public</span><br><span class="line">drwxr-xr-x Templates</span><br><span class="line">drwxr-xr-x Videos</span><br><span class="line">-rw-rw-r-- all.txt</span><br><span class="line">-rw-rw-r-- example.txt</span><br><span class="line">-rw-rw-r-- mypasswd</span><br><span class="line">-rw-rw-r-- new.txt</span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>grep</strong></p>
+<p><code>grep</code>命令可用于过滤文件中的行或与指定模式匹配的另一个命令的输出。该模式可以与您要匹配的确切文本一样简单，也可以通过使用正则表达式来使其更加先进。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sysadmin@localhost:~$ grep bash /etc/passwd</span><br><span class="line">root:x:0:0:root:/root:/bin/bash</span><br><span class="line">sysadmin:x:1001:1001:System Administrator,,,,:/home/sysadmin:/bin/bash</span><br></pre></td></tr></table></figure>
+
+<p>–color 会用红色高亮匹配到的项，上文中的bash就会变成红色</p>
+<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210323185628820.png" alt="image-20210323185628820"></p>
+<p>-c 会显示匹配的行数而不会输出内容</p>
+<p>-n会在每行前面加上原始行号</p>
+<p><code>-v</code>选项反转匹配，输出不包含模式的所有行</p>
+<p>-i 将忽略大小写</p>
+<p>-w 会显示完全匹配该单词的，比如are只匹配are 不然会匹配ware</p>
+<p><strong>可以使用基本的正则表达式，但是多了一个  <code>.</code>表示匹配单个字符！</strong></p>
+<p>请注意<code>grep</code>，默认情况下该命令不会将管道识别为交替运算符。该<code>grep</code>命令实际上是将管道作为普通字符包含在要匹配的模式中。使用<code>grep -E</code>或<code>egrep</code>允许使用扩展的正则表达式，包括交替。像{3}这种东西也是需要拓展模式使用。。</p>
+<h1 id="操作集"><a href="#操作集" class="headerlink" title="操作集"></a>操作集</h1><ol>
 <li><p>variable = value创建局部变量，引用时前面加$</p>
 </li>
-<li><p>指导书man page里 /搜索 n下一个 shift+n上一个</p>
-</li>
-<li><p>info里shift+H是移动命令列表</p>
+<li><p>info里用less命令shift+H或H是移动命令列表</p>
 <p>L返回当前文档，Q退出info</p>
+<p>/从头开始找  ？从现在位置开始找  n下一个  shift+n 上一个</p>
 </li>
 <li></li>
 </ol>
@@ -800,7 +943,7 @@
 <p>-h == –human-readable   该<code>-h</code>选项必须与该<code>-l</code>选项一起使用。</p>
 <p>-d引用当前目录 -r 递归</p>
 <p>ls 在使用通配符时你可能不知道他到底显示的是哪里的文件夹，可以用 -d来显示路径而不是内容</p>
-<p>-s按文件大小排序 -t按时间，新的放前面</p>
+<p>-s按文件大小排序 -t按时间，大的/新的放前面</p>
 <p><code>--full-time</code>选项显示完整的时间戳（包括小时，分钟，秒）。它将自动采用<code>-l</code>选项：</p>
 <p>仅为创建较早的文件提供</p>
 <p>ls也可查看文件信息，最好跟着 -l不然没啥用</p>
@@ -820,7 +963,7 @@
 </li>
 <li><p>export / unset 设置/删除导出变量（全局）</p>
 </li>
-<li><p>which 查看命令路径 whereis command查看手册页位置</p>
+<li><p>which 查看命令路径   whereis command查看手册页位置</p>
 </li>
 <li><p>type </p>
 </li>
@@ -828,7 +971,7 @@
 <p>   shell builtin(internal commands)</p>
 <p>   路径（external commands）</p>
 <p>   a is aliased to “b”(alias)</p>
-<p>   -a 输出所有（有时会有多种）</p>
+<p>   -a 输出所有（因为有时会有多种）</p>
 <ol start="11">
 <li><p>alias 显示所有别名</p>
 <p>alias a = “b” 设置别名</p>
@@ -837,18 +980,61 @@
 <li><p>man +command</p>
 <p>man -f command 显示所有包含该命令的手册(==whatis)</p>
 <p>man 5 password 在5部分查看该命令</p>
-<p>man -k coomand在手册页的名称和描述中搜索关键字!(==apropos)</p>
+<p>man -k key-words在手册页的名称和描述中搜索关键字!(==apropos)</p>
 </li>
 <li><p>locate 查找所有文件和目录</p>
 <p>updatedb更新数据库，免得晚上才更新</p>
 <p>不加参数则匹配包含字符串的，输出一堆</p>
 <p>-c  显示有多少匹配</p>
-<p>locate -b仅匹配包含基本名</p>
+<p>locate -b仅匹配包含基本名,不然目录里面的杂项都会出来</p>
 <p>如果 locate -b “\….”加上破折号就是完全匹配，连后缀都没有那种</p>
 </li>
 <li><p>find是搜索实时文件系统，而不是静态数据库</p>
 </li>
 <li><p>info command    </p>
+</li>
+<li><p>less/more filename</p>
+</li>
+<li><p>cat</p>
+</li>
+<li><p>head和tail用来显示文件头尾，默认10行</p>
+<table>
+<thead>
+<tr>
+<th>command</th>
+<th>head</th>
+<th>tail</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>-n</td>
+<td>显示前n行</td>
+<td>显示后n行</td>
+</tr>
+<tr>
+<td>-n  -3</td>
+<td>从头到倒数第三行（负值期权）</td>
+<td>显示后3行</td>
+</tr>
+<tr>
+<td>-n  (+)3</td>
+<td>显示前3行</td>
+<td>从第三行显示到结尾（正值期权）</td>
+</tr>
+</tbody></table>
+<p>加上-f 选项则变成可以实时观测更改。。可以用来检查日志啥的</p>
+</li>
+<li><p>nl 会将输入按行编号并显示在屏幕上</p>
+</li>
+<li><p>tr 接受一个字符集并将它们转化为另一个字符集<code>tr &#39;a-z&#39; &#39;A-Z&#39;该命令不支持跟文件</code>只能重定向</p>
+<p>只能<code>tr &#39;a-z&#39; &#39;A-Z&#39; &lt;file &gt;save</code> 可对文件进行处理</p>
+</li>
+<li><p>sort 排序（ASCII？？）详细在使用文本-&gt;重定向那里</p>
+</li>
+<li><p><strong>wc</strong></p>
+<p>分别打印行数，单词数，字符数和文件名</p>
+<p>如果提供了多个文件还会打印一行总的</p>
+<p>-l 只显示行数   -w单词数  -c字节数</p>
 </li>
 </ol>
 <p>​    </p>
@@ -958,7 +1144,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F"><span class="nav-number">1.</span> <span class="nav-text">操作系统</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E7%9F%A5%E8%AF%86"><span class="nav-number">1.1.</span> <span class="nav-text">基本知识</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%84%E7%A7%8D%E5%8F%91%E8%A1%8C%E7%89%88"><span class="nav-number">1.2.</span> <span class="nav-text">各种发行版</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Red-Hat"><span class="nav-number">1.2.1.</span> <span class="nav-text">Red Hat</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SUSE"><span class="nav-number">1.2.2.</span> <span class="nav-text">SUSE</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Debian"><span class="nav-number">1.2.3.</span> <span class="nav-text">Debian</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Android"><span class="nav-number">1.2.4.</span> <span class="nav-text">Android</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Other"><span class="nav-number">1.2.5.</span> <span class="nav-text">Other</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Linux%E5%B5%8C%E5%85%A5%E6%97%A0%E5%A4%84%E4%B8%8D%E5%9C%A8%EF%BC%81"><span class="nav-number">1.3.</span> <span class="nav-text">Linux嵌入无处不在！</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8Linux%E5%B7%A5%E4%BD%9C"><span class="nav-number">2.</span> <span class="nav-text">使用Linux工作</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%BB%E8%A6%81%E5%BA%94%E7%94%A8"><span class="nav-number">2.1.</span> <span class="nav-text">主要应用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="nav-number">2.1.1.</span> <span class="nav-text">服务器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A1%8C%E9%9D%A2%E5%BA%94%E7%94%A8"><span class="nav-number">2.1.2.</span> <span class="nav-text">桌面应用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8E%A7%E5%88%B6%E5%8F%B0%E5%B7%A5%E5%85%B7"><span class="nav-number">2.1.3.</span> <span class="nav-text">控制台工具</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8%EF%BC%81%EF%BC%81"><span class="nav-number">2.1.4.</span> <span class="nav-text">包管理器！！</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%91%E4%B8%8ELINUX"><span class="nav-number">2.2.</span> <span class="nav-text">云与LINUX</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%E5%92%8C%E8%AE%B8%E5%8F%AF"><span class="nav-number">3.</span> <span class="nav-text">开源项目和许可</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%80%E6%BA%90%E8%AE%A1%E5%88%92"><span class="nav-number">3.1.</span> <span class="nav-text">开源计划</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%80%E6%BA%90%E4%B8%9A%E5%8A%A1%E6%A8%A1%E5%9E%8B"><span class="nav-number">3.2.</span> <span class="nav-text">开源业务模型</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%91%BD%E4%BB%A4%E8%A1%8C%E4%B9%8B%E5%A7%8B"><span class="nav-number">4.</span> <span class="nav-text">命令行之始</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%91%BD%E4%BB%A4%E7%B1%BB%E5%9E%8B"><span class="nav-number">4.1.</span> <span class="nav-text">命令类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7"><span class="nav-number">4.2.</span> <span class="nav-text">特殊符号</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#quoting%E5%BC%95%E5%8F%B7"><span class="nav-number">4.2.1.</span> <span class="nav-text">quoting引号</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Control-Statement"><span class="nav-number">4.2.2.</span> <span class="nav-text">Control Statement</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%86%85%E7%BD%AE%E5%B8%AE%E5%8A%A9"><span class="nav-number">5.</span> <span class="nav-text">内置帮助</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Man-Pages"><span class="nav-number">5.1.</span> <span class="nav-text">Man Pages</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#INFO%E6%96%87%E6%A1%A3"><span class="nav-number">5.2.</span> <span class="nav-text">INFO文档</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B6%E4%BB%96"><span class="nav-number">5.3.</span> <span class="nav-text">其他</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E5%AF%BC%E8%88%AA"><span class="nav-number">6.</span> <span class="nav-text">文件系统导航</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#powerful-ls"><span class="nav-number">6.1.</span> <span class="nav-text">powerful ls</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AE%A1%E7%90%86%E6%96%87%E4%BB%B6%E5%92%8C%E7%9B%AE%E5%BD%95"><span class="nav-number">7.</span> <span class="nav-text">管理文件和目录</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AD%98%E6%A1%A3%E5%92%8C%E5%8E%8B%E7%BC%A9"><span class="nav-number">8.</span> <span class="nav-text">存档和压缩</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8E%8B%E7%BC%A9%E5%B7%A5%E5%85%B7"><span class="nav-number">8.1.</span> <span class="nav-text">压缩工具</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BD%92%E6%A1%A3"><span class="nav-number">8.2.</span> <span class="nav-text">归档</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E6%A8%A1%E5%BC%8F"><span class="nav-number">8.2.1.</span> <span class="nav-text">创建模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%97%E8%A1%A8%E6%A8%A1%E5%BC%8F"><span class="nav-number">8.2.2.</span> <span class="nav-text">列表模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8F%90%E5%8F%96%E6%A8%A1%E5%BC%8F"><span class="nav-number">8.2.3.</span> <span class="nav-text">提取模式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ZIP%E6%96%87%E4%BB%B6"><span class="nav-number">8.3.</span> <span class="nav-text">ZIP文件</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E6%96%87%E6%9C%AC"><span class="nav-number">9.</span> <span class="nav-text">使用文本</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%93%8D%E4%BD%9C%E9%9B%86"><span class="nav-number">10.</span> <span class="nav-text">操作集</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%91%BD%E4%BB%A4%E9%9B%86"><span class="nav-number">11.</span> <span class="nav-text">命令集</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F"><span class="nav-number">1.</span> <span class="nav-text">操作系统</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E7%9F%A5%E8%AF%86"><span class="nav-number">1.1.</span> <span class="nav-text">基本知识</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%84%E7%A7%8D%E5%8F%91%E8%A1%8C%E7%89%88"><span class="nav-number">1.2.</span> <span class="nav-text">各种发行版</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Red-Hat"><span class="nav-number">1.2.1.</span> <span class="nav-text">Red Hat</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SUSE"><span class="nav-number">1.2.2.</span> <span class="nav-text">SUSE</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Debian"><span class="nav-number">1.2.3.</span> <span class="nav-text">Debian</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Android"><span class="nav-number">1.2.4.</span> <span class="nav-text">Android</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Other"><span class="nav-number">1.2.5.</span> <span class="nav-text">Other</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Linux%E5%B5%8C%E5%85%A5%E6%97%A0%E5%A4%84%E4%B8%8D%E5%9C%A8%EF%BC%81"><span class="nav-number">1.3.</span> <span class="nav-text">Linux嵌入无处不在！</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8Linux%E5%B7%A5%E4%BD%9C"><span class="nav-number">2.</span> <span class="nav-text">使用Linux工作</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%BB%E8%A6%81%E5%BA%94%E7%94%A8"><span class="nav-number">2.1.</span> <span class="nav-text">主要应用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="nav-number">2.1.1.</span> <span class="nav-text">服务器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A1%8C%E9%9D%A2%E5%BA%94%E7%94%A8"><span class="nav-number">2.1.2.</span> <span class="nav-text">桌面应用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8E%A7%E5%88%B6%E5%8F%B0%E5%B7%A5%E5%85%B7"><span class="nav-number">2.1.3.</span> <span class="nav-text">控制台工具</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8%EF%BC%81%EF%BC%81"><span class="nav-number">2.1.4.</span> <span class="nav-text">包管理器！！</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%91%E4%B8%8ELINUX"><span class="nav-number">2.2.</span> <span class="nav-text">云与LINUX</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%E5%92%8C%E8%AE%B8%E5%8F%AF"><span class="nav-number">3.</span> <span class="nav-text">开源项目和许可</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%80%E6%BA%90%E8%AE%A1%E5%88%92"><span class="nav-number">3.1.</span> <span class="nav-text">开源计划</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%80%E6%BA%90%E4%B8%9A%E5%8A%A1%E6%A8%A1%E5%9E%8B"><span class="nav-number">3.2.</span> <span class="nav-text">开源业务模型</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%91%BD%E4%BB%A4%E8%A1%8C%E4%B9%8B%E5%A7%8B"><span class="nav-number">4.</span> <span class="nav-text">命令行之始</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%91%BD%E4%BB%A4%E7%B1%BB%E5%9E%8B"><span class="nav-number">4.1.</span> <span class="nav-text">命令类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7"><span class="nav-number">4.2.</span> <span class="nav-text">特殊符号</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#quoting%E5%BC%95%E5%8F%B7"><span class="nav-number">4.2.1.</span> <span class="nav-text">quoting引号</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Control-Statement"><span class="nav-number">4.2.2.</span> <span class="nav-text">Control Statement</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%86%85%E7%BD%AE%E5%B8%AE%E5%8A%A9"><span class="nav-number">5.</span> <span class="nav-text">内置帮助</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Man-Pages"><span class="nav-number">5.1.</span> <span class="nav-text">Man Pages</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#INFO%E6%96%87%E6%A1%A3"><span class="nav-number">5.2.</span> <span class="nav-text">INFO文档</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B6%E4%BB%96"><span class="nav-number">5.3.</span> <span class="nav-text">其他</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E5%AF%BC%E8%88%AA"><span class="nav-number">6.</span> <span class="nav-text">文件系统导航</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#powerful-ls"><span class="nav-number">6.1.</span> <span class="nav-text">powerful ls</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AE%A1%E7%90%86%E6%96%87%E4%BB%B6%E5%92%8C%E7%9B%AE%E5%BD%95"><span class="nav-number">7.</span> <span class="nav-text">管理文件和目录</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AD%98%E6%A1%A3%E5%92%8C%E5%8E%8B%E7%BC%A9"><span class="nav-number">8.</span> <span class="nav-text">存档和压缩</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8E%8B%E7%BC%A9%E5%B7%A5%E5%85%B7"><span class="nav-number">8.1.</span> <span class="nav-text">压缩工具</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BD%92%E6%A1%A3"><span class="nav-number">8.2.</span> <span class="nav-text">归档</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E6%A8%A1%E5%BC%8F"><span class="nav-number">8.2.1.</span> <span class="nav-text">创建模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%97%E8%A1%A8%E6%A8%A1%E5%BC%8F"><span class="nav-number">8.2.2.</span> <span class="nav-text">列表模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8F%90%E5%8F%96%E6%A8%A1%E5%BC%8F"><span class="nav-number">8.2.3.</span> <span class="nav-text">提取模式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ZIP%E6%96%87%E4%BB%B6"><span class="nav-number">8.3.</span> <span class="nav-text">ZIP文件</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E6%96%87%E6%9C%AC"><span class="nav-number">9.</span> <span class="nav-text">使用文本</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AF%BB%E5%91%BC%E6%9C%BA"><span class="nav-number">9.1.</span> <span class="nav-text">寻呼机</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%87%8D%E5%AE%9A%E5%90%91"><span class="nav-number">9.2.</span> <span class="nav-text">重定向</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4"><span class="nav-number">9.3.</span> <span class="nav-text">常用命令</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%93%8D%E4%BD%9C%E9%9B%86"><span class="nav-number">10.</span> <span class="nav-text">操作集</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%91%BD%E4%BB%A4%E9%9B%86"><span class="nav-number">11.</span> <span class="nav-text">命令集</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -1045,7 +1231,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共102.4k字</span>
+  <span class="post-count">博客全站共105.1k字</span>
 </div>
         
 
