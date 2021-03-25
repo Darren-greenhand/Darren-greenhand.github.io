@@ -35,7 +35,7 @@
 <meta property="og:image" content="https://ndg-content-dev.s3.amazonaws.com/media/images/linux-essentials-v2/LEv2_7_5.png">
 <meta property="og:image" content="https://gitee.com/darren-greenhand//picture/raw/master/image-20210323185628820.png">
 <meta property="article:published_time" content="2021-03-14T12:57:21.000Z">
-<meta property="article:modified_time" content="2021-03-23T12:12:05.228Z">
+<meta property="article:modified_time" content="2021-03-25T03:27:11.650Z">
 <meta property="article:author" content="Darren">
 <meta property="article:tag" content="cisco">
 <meta name="twitter:card" content="summary">
@@ -240,7 +240,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-03-23 20:12:05" itemprop="dateModified" datetime="2021-03-23T20:12:05+08:00">2021-03-23</time>
+                <time title="修改时间：2021-03-25 11:27:11" itemprop="dateModified" datetime="2021-03-25T11:27:11+08:00">2021-03-25</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -793,11 +793,11 @@
 <p>此外，外壳程序还提供一些功能来控制命令的输出，因此可以将输出重定向到另一个文件或另一个命令中，而不是将输出放置在终端窗口中。这些重定向功能为用户提供了更加灵活和强大的工作环境。</p>
 <p><code>cat</code>命令是concatenate的缩写，是一个简单但有用的命令，其功能包括创建和显示文本文件，以及合并文本文件的副本。最受欢迎的用途之一<code>cat</code>是显示文本文件的内容。要使用<code>cat</code>命令在标准输出中显示文件，请键入命令，然后输入文件名</p>
 <p>尽管终端是此命令的默认输出，但是该<code>cat</code>命令也可以用于将文件内容重定向到其他文件，或者通过使用重定向字符输入另一个命令。</p>
-<h2 id="寻呼机"><a href="#寻呼机" class="headerlink" title="寻呼机"></a>寻呼机</h2><p>尽管使用<code>cat</code>命令查看小文件没有问题，但对于大文件而言，这不是理想的选择。<code>cat</code>命令没有提供任何简单的方法来暂停和重新开始显示，因此整个文件内容都转储到了屏幕上。</p>
+<h2 id="Pager"><a href="#Pager" class="headerlink" title="Pager"></a>Pager</h2><p>尽管使用<code>cat</code>命令查看小文件没有问题，但对于大文件而言，这不是理想的选择。<code>cat</code>命令没有提供任何简单的方法来暂停和重新开始显示，因此整个文件内容都转储到了屏幕上。</p>
 <p>对于较大的文件，请使用Pager命令来查看内容。分页器pager命令一次显示一页数据，允许您使用移动键在文件中前后移动。</p>
-<p>有两种常用的寻呼机命令：</p>
+<p>有两种常用的Pager命令：</p>
 <ul>
-<li><code>less</code>命令提供了非常高级的分页功能。它通常是命令（例如<code>man</code>命令）使用的默认寻呼机。</li>
+<li><code>less</code>命令提供了非常高级的分页功能。它通常是命令（例如<code>man</code>命令）使用的默认Pager。</li>
 <li><code>more</code>自UNIX成立以来，该命令就已存在。尽管它的功能少于<code>less</code>命令，但是该<code>less</code>命令并不包含在所有Linux发行版中。该<code>more</code>命令始终可用。Use the <code>more</code> command to display the entire contents of the <code>/etc/passwd</code> file:</li>
 </ul>
 <p><code>more</code>和<code>less</code>命令允许用户使用按键命令文件走动。因为开发人员基于<code>less</code>命令的功能来使用<code>more</code>命令，所以该命令中可用的所有击键命令<code>more</code>也可以在<code>less</code>命令中使用。</p>
@@ -844,7 +844,7 @@
 </tr>
 </thead>
 <tbody><tr>
-<td>-n</td>
+<td>-number</td>
 <td>显示前n行</td>
 <td>显示后n行</td>
 </tr>
@@ -928,7 +928,293 @@
 <p>-w 会显示完全匹配该单词的，比如are只匹配are 不然会匹配ware</p>
 <p><strong>可以使用基本的正则表达式，但是多了一个  <code>.</code>表示匹配单个字符！</strong></p>
 <p>请注意<code>grep</code>，默认情况下该命令不会将管道识别为交替运算符。该<code>grep</code>命令实际上是将管道作为普通字符包含在要匹配的模式中。使用<code>grep -E</code>或<code>egrep</code>允许使用扩展的正则表达式，包括交替。像{3}这种东西也是需要拓展模式使用。。</p>
-<h1 id="操作集"><a href="#操作集" class="headerlink" title="操作集"></a>操作集</h1><ol>
+<h1 id="基本脚本"><a href="#基本脚本" class="headerlink" title="基本脚本"></a>基本脚本</h1><p>一个shell脚本是已被存储在一个文本文件，可执行命令的文件。运行文件时，将执行每个命令。Shell脚本可以访问Shell的所有命令，包括逻辑。因此，脚本可以测试文件的存在或寻找特定的输出并相应地更改其行为。您可以构建脚本来自动化重复的工作，这可以节省您的时间并确保每次使用脚本时的一致性。例如，如果您每天运行相同的五个命令，则可以将它们转换为shell脚本，从而将您的工作减少为一个命令</p>
+<p>脚本后缀名.sh 两种运行方法：</p>
+<p>1.命令 sh 文件名  2. 直接输入路径（因为很少会有脚本文件放到PATH里，所以直接引用相对路径./）</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sysadmin@localhost:~$ sh test.sh</span><br><span class="line">Hello, World!</span><br><span class="line">sysadmin@localhost:~$ ./test.sh</span><br></pre></td></tr></table></figure>
+
+<p>因为很多shell都有他们各自的语法，因此很多复杂的脚本会<em><strong>指定特定的shell</strong></em>来执行本文件，他们会在第一行首先添加绝对路径，并加上前缀<code>#!</code></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">!/bin/sh  也可以<span class="comment">#!/bin/bash</span></span></span><br><span class="line">echo &quot;Hello, World!&quot;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>The two characters <code>#!</code> are traditionally called the hash and the bang respectively, which leads to the shortened form of “shebang” when they’re used at the beginning of a script.</p>
+<p>顺便说一句，shebang（或crunchbang）用于传统的shell脚本和其他基于文本的语言，如Perl，Ruby和Python。只要直接运行脚本，任何标记为可执行文件的文本文件都将在第一行中指定的解释器下运行。如果直接将脚本作为解释器的参数, 例如<code>sh script</code>或调用<code>bash script</code>，则无论shebang行中的内容如何，都将使用给定的shell。</p>
+<h2 id="编辑shell脚本"><a href="#编辑shell脚本" class="headerlink" title="编辑shell脚本"></a>编辑shell脚本</h2><p>LPI Essentials教学大纲中特别提到了两个：GNU nano编辑器是一个非常简单的编辑器，非常适合编辑小文本文件。可视编辑器（<code>vi</code>或更高版本，VI改进（<code>vim</code>））是一种功能强大的编辑器，但学习曲线陡峭。我们将专注于<code>nano</code>。</p>
+<p>nano filename</p>
+<p><code>nano</code>编辑器的功能很少，可以助您一臂之力。您只需使用键盘输入内容，即可使用<strong>箭头键</strong>四处移动，并使用<strong>Delete</strong> / <strong>Backspace</strong>按钮删除文本。在屏幕底部，您可以看到一些可用的命令，这些命令是上下文相关的，并且会根据您的操作进行更改。如果您直接在Linux机器上，而不是通过网络进行连接，则还可以使用鼠标移动光标并突出显示文本。</p>
+<table>
+<thead>
+<tr>
+<th align="left">命令</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><strong>Ctrl</strong> + <strong>W</strong></td>
+<td align="left">搜索文件</td>
+</tr>
+<tr>
+<td align="left"><strong>Ctrl</strong> + <strong>W</strong>，然后按<strong>Control</strong> + <strong>R</strong></td>
+<td align="left">搜索并替换</td>
+</tr>
+<tr>
+<td align="left"><strong>Ctrl</strong> + <strong>G</strong></td>
+<td align="left">显示所有可能的命令</td>
+</tr>
+<tr>
+<td align="left"><strong>Ctrl</strong> + <strong>Y</strong> / <strong>V</strong></td>
+<td align="left">向上/向下翻页</td>
+</tr>
+<tr>
+<td align="left"><strong>Ctrl</strong> + <strong>C</strong></td>
+<td align="left">显示文件中的当前位置和文件的大小</td>
+</tr>
+<tr>
+<td align="left">Ctrl+ X</td>
+<td align="left">退出</td>
+</tr>
+<tr>
+<td align="left">Ctrl + O</td>
+<td align="left">不退出的情况下保存</td>
+</tr>
+<tr>
+<td align="left">Ctrl + K   +U</td>
+<td align="left">剪贴本行，释放剪贴板</td>
+</tr>
+</tbody></table>
+<p>除了运行命令之外，您还必须熟悉3个主题：</p>
+<h2 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h2><p>variable_name=value   <strong>不准有空格在 = 两边！！</strong></p>
+<p>$variable_name调用</p>
+<p>read命令从STDIN接受一个参数，当然也可以重定向</p>
+<p>程序运行后（无论是二进制程序还是脚本程序），它将返回退出代码，该退出代码是0到255之间的整数。您可以通过<code>$?</code>变量进行测试，以查看前一个命令是否成功完成。</p>
+<p><code>grep</code>命令用于在带有<code>–q</code>标志的文件中查找字符串，这意味着“安静”的<code>grep</code>，而在安静模式下运行，如果字符串被发现则返回<code>0</code>如果是<code>1</code>代表其他情况。此信息可以在条件中用于根据另一个命令的输出执行操作。</p>
+<p>注释是#，保持一行，可以手动exit number 来设定退出代码</p>
+<p>按照惯例，退出代码的<code>0</code>意思是“一切都OK”。任何大于该退出代码的代码<code>0</code>均表示发生了某种错误，这是该程序所特有的</p>
+<p>$number表示传给脚本的第n个参数,$0是脚本名，这和c命令行argv一样，传的是字符串</p>
+<h2 id="判断和分支"><a href="#判断和分支" class="headerlink" title="判断和分支"></a>判断和分支</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">if grep -q root /etc/passwd; then</span><br><span class="line">  echo root is in the password file</span><br><span class="line">else</span><br><span class="line">  echo root is missing from the password file</span><br><span class="line">fi</span><br></pre></td></tr></table></figure>
+
+<p>语法有点诡异，要用fi闭合</p>
+<p><code>test</code>命令使您可以轻松访问比较和文件测试运算符。例如：</p>
+<table>
+<thead>
+<tr>
+<th align="left">命令</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>test –f /dev/ttyS0</code></td>
+<td align="left"><code>0</code> 如果文件存在</td>
+</tr>
+<tr>
+<td align="left"><code>test ! –f /dev/ttyS0</code></td>
+<td align="left"><code>0</code> 如果文件不存在</td>
+</tr>
+<tr>
+<td align="left"><code>test –d /tmp</code></td>
+<td align="left"><code>0</code> 如果目录存在</td>
+</tr>
+<tr>
+<td align="left"><code>test –x </code> ‘ which ls’</td>
+<td align="left">查看命令ls并判断能否被用户执行</td>
+</tr>
+<tr>
+<td align="left"><code>test 1 –eq 1</code></td>
+<td align="left"><code>0</code> 如果数值比较成功</td>
+</tr>
+<tr>
+<td align="left"><code>test ! 1 –eq 1</code></td>
+<td align="left"><code>NOT – 0</code> 如果比较失败</td>
+</tr>
+<tr>
+<td align="left"><code>test 1 –ne 1</code></td>
+<td align="left">同上，不相同返回0，其实是OP</td>
+</tr>
+<tr>
+<td align="left"><code>test “a” = “a”</code></td>
+<td align="left"><code>0</code> 如果字符串比较成功</td>
+</tr>
+<tr>
+<td align="left"><code>test “a” != “a”</code></td>
+<td align="left"><code>0</code> 如果字符串不同</td>
+</tr>
+<tr>
+<td align="left"><code>test 1 –eq 1 –o 2 –eq 2</code></td>
+<td align="left"><code>-o</code> 是OR：可以相同</td>
+</tr>
+<tr>
+<td align="left"><code>test 1 –eq 1 –a 2 –eq 2</code></td>
+<td align="left"><code>-a</code> 是AND：两者必须相同</td>
+</tr>
+</tbody></table>
+<p><em><strong>OP是 -eq，-ne，-lt，-le，-gt，-ge的一个，分别代表</strong></em></p>
+<p><em><strong>相等，不等, 小于，小于等于，大于，大于等于</strong></em></p>
+<p><code>test</code> is fairly verbose for a command that gets used so frequently, so there is an alias for it called <code>[</code> (left square bracket). If you enclose your conditions in square brackets, it’s the same as running <code>test</code>. So, these statements are identical.</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">if test –f /tmp/foo; then</span><br><span class="line">if [ -f /tmp/foo]; then</span><br></pre></td></tr></table></figure>
+
+<p><em><strong>Important</strong></em></p>
+<p><em><strong>There must be spaces around the square brackets. <code>[$age -lt 16]</code> would fail, but <code>[ $age -lt 16 ]</code> would work.</strong></em></p>
+<p>The <code>if</code> statement has a final form that lets you do multiple comparisons at one time using <code>elif</code> (short for <code>else</code> <code>if</code>).</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">!/bin/bash</span></span><br><span class="line"></span><br><span class="line">if [ &quot;$1&quot; = &quot;hello&quot; ]; then</span><br><span class="line">  echo &quot;hello yourself&quot;</span><br><span class="line">elif [ &quot;$1&quot; = &quot;goodbye&quot; ]; then</span><br><span class="line">  echo &quot;nice to have met you&quot;</span><br><span class="line">  echo &quot;I hope to see you again&quot;</span><br><span class="line">else</span><br><span class="line">  echo &quot;I didn&#x27;t understand that&quot;</span><br><span class="line">fi</span><br></pre></td></tr></table></figure>
+
+<p>还有诡异的case语法</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">!/bin/bash</span></span><br><span class="line"></span><br><span class="line">case &quot;$1&quot; in</span><br><span class="line">hello|hi)</span><br><span class="line">  echo &quot;hello yourself&quot;</span><br><span class="line">  ;;</span><br><span class="line">goodbye)</span><br><span class="line">  echo &quot;nice to have met you&quot;</span><br><span class="line">  echo &quot;I hope to see you again&quot;</span><br><span class="line">  ;;</span><br><span class="line">*)</span><br><span class="line">  echo &quot;I didn&#x27;t understand that&quot;</span><br><span class="line">esac</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="循环"><a href="#循环" class="headerlink" title="循环"></a>循环</h2><p>for循环</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">!/bin/bash</span></span><br><span class="line"></span><br><span class="line">for NAME in Sean Jon Isaac David; do</span><br><span class="line">  echo &quot;Hello $NAME&quot;</span><br><span class="line">done</span><br><span class="line"></span><br><span class="line">for S in *; do</span><br><span class="line">  echo &quot;Doing something to $S&quot;</span><br><span class="line">done</span><br><span class="line">//Shell将*其扩展到当前目录中的所有文件。</span><br></pre></td></tr></table></figure>
+
+<p>while循环</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">!/bin/bash</span></span><br><span class="line"></span><br><span class="line">i=0</span><br><span class="line">while [ $i -lt 10 ]; do</span><br><span class="line">  echo $i</span><br><span class="line">  i=$(( $i + 1))</span><br><span class="line">done</span><br><span class="line">echo “Done counting”</span><br></pre></td></tr></table></figure>
+
+<p>可以直接在命令行使用</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">sysadmin@localhost:~$ for name in /etc/passwd /etc/hosts /etc/group           </span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> <span class="keyword">do</span></span>                                                                          </span><br><span class="line"><span class="meta">&gt;</span><span class="bash">     wc <span class="variable">$name</span></span>                                                                </span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> <span class="keyword">done</span></span>                                                                        </span><br><span class="line">  24   30 1001 /etc/passwd                                                    </span><br><span class="line">  7  15 161 /etc/hosts                                                        </span><br><span class="line">  46  46 561 /etc/group                                                        </span><br><span class="line">sysadmin@localhost:~$</span><br></pre></td></tr></table></figure>
+
+<p>seq用来生成列表。。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">for num in `seq 1 12`</span><br><span class="line">do</span><br><span class="line">          touch test$num</span><br><span class="line">done</span><br></pre></td></tr></table></figure>
+
+<h2 id="vi基本"><a href="#vi基本" class="headerlink" title="vi基本"></a>vi基本</h2><p><code>vi</code>编辑器有两种模式：插入和命令。在插入模式下，您将文本添加到文档中。在命令模式下，可以执行导航，搜索，保存和退出编辑器之类的操作。</p>
+<p>vi filename 创建或开始处理一个文本文件</p>
+<p>Insert modes include: <code>i</code>, <code>I</code>, <code>a</code>, <code>A</code>, <code>o</code>, and <code>O</code>.</p>
+<p>i 直接进入插入模式，a光标右移一格进入，<code>I</code>从本行首进入插入模式，A在行尾进入</p>
+<p><code>o</code>  在当前行的下一行开始新的一行并进入输入模式</p>
+<p>cw进入替换模式，将依次替换该单词内的字符，完成后进入普通插入</p>
+<p><em><strong>大写字母既可以用大写，也可以用shift+小写代替</strong></em></p>
+<p>搜索/ 和 ？ n/N用法和less一致</p>
+<table>
+<thead>
+<tr>
+<th align="left">Key</th>
+<th align="left">Function</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>j</code></td>
+<td align="left">到下一行</td>
+</tr>
+<tr>
+<td align="left"><code>k</code></td>
+<td align="left">上一行</td>
+</tr>
+<tr>
+<td align="left"><code>l</code></td>
+<td align="left">后移字符</td>
+</tr>
+<tr>
+<td align="left"><code>h</code></td>
+<td align="left">前移字符</td>
+</tr>
+<tr>
+<td align="left"><code>w</code></td>
+<td align="left">下n个单词的开头</td>
+</tr>
+<tr>
+<td align="left"><code>e</code></td>
+<td align="left">单词的结尾</td>
+</tr>
+<tr>
+<td align="left"><code>b</code></td>
+<td align="left">前n个单词开头</td>
+</tr>
+<tr>
+<td align="left"><code>$</code></td>
+<td align="left">当前行尾</td>
+</tr>
+<tr>
+<td align="left"><code>0</code> (zero)</td>
+<td align="left">当前行首</td>
+</tr>
+<tr>
+<td align="left"><code>3G</code></td>
+<td align="left">Jumps to third line (<code>nG</code> jumps to the nth line)(要大写G)</td>
+</tr>
+<tr>
+<td align="left"><strong>Shift</strong>+<strong>G</strong></td>
+<td align="left">Jumps to the last line</td>
+</tr>
+<tr>
+<td align="left"><code>3dw</code></td>
+<td align="left">删除该光标后的第三个单词，不完整则删掉下个空格前，不加数字默认1</td>
+</tr>
+<tr>
+<td align="left"><code>4u</code></td>
+<td align="left">取消4次操作，同时该4u命令将成为上一个命令</td>
+</tr>
+<tr>
+<td align="left"><code>14x</code></td>
+<td align="left">同delete，删除，而backspace是向前移动一位</td>
+</tr>
+<tr>
+<td align="left"><code>5X</code></td>
+<td align="left">删除前面的</td>
+</tr>
+<tr>
+<td align="left"><code>2dd</code></td>
+<td align="left">删除两行</td>
+</tr>
+<tr>
+<td align="left"><code>p P</code></td>
+<td align="left">凡是最后删除或复制的都被加到黏贴栏，用u可以黏贴 P为插在光标前</td>
+</tr>
+<tr>
+<td align="left"><code>D/d$</code></td>
+<td align="left">删除从光标到行末</td>
+</tr>
+<tr>
+<td align="left"><code>J</code></td>
+<td align="left">将下一行合并到本行尾</td>
+</tr>
+<tr>
+<td align="left"><code>yw</code></td>
+<td align="left">复制当前单词</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><code>5~</code></td>
+<td align="left">转换大小写</td>
+</tr>
+</tbody></table>
+<p>还有保存的：</p>
+<table>
+<thead>
+<tr>
+<th align="left">命令</th>
+<th align="left">功能/按键</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>:x</code></td>
+<td align="left">将保存并关闭文件。</td>
+</tr>
+<tr>
+<td align="left"><code>:wq</code></td>
+<td align="left">将写入文件并退出。</td>
+</tr>
+<tr>
+<td align="left"><code>:wq!</code></td>
+<td align="left">如果可能，将写入一个只读文件，然后退出。</td>
+</tr>
+<tr>
+<td align="left"><code>ZZ</code></td>
+<td align="left">将保存并关闭。请注意，<code>:</code>在这种情况下不使用冒号。</td>
+</tr>
+<tr>
+<td align="left"><code>:q!</code></td>
+<td align="left">退出而不保存更改</td>
+</tr>
+<tr>
+<td align="left"><code>:e!</code></td>
+<td align="left">放弃更改并重新加载文件</td>
+</tr>
+<tr>
+<td align="left"><code>:w!</code></td>
+<td align="left">如果可能，写为只读。</td>
+</tr>
+</tbody></table>
+<h1 id="操作集？"><a href="#操作集？" class="headerlink" title="操作集？"></a>操作集？</h1><ol>
 <li><p>variable = value创建局部变量，引用时前面加$</p>
 </li>
 <li><p>info里用less命令shift+H或H是移动命令列表</p>
@@ -1144,7 +1430,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F"><span class="nav-number">1.</span> <span class="nav-text">操作系统</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E7%9F%A5%E8%AF%86"><span class="nav-number">1.1.</span> <span class="nav-text">基本知识</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%84%E7%A7%8D%E5%8F%91%E8%A1%8C%E7%89%88"><span class="nav-number">1.2.</span> <span class="nav-text">各种发行版</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Red-Hat"><span class="nav-number">1.2.1.</span> <span class="nav-text">Red Hat</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SUSE"><span class="nav-number">1.2.2.</span> <span class="nav-text">SUSE</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Debian"><span class="nav-number">1.2.3.</span> <span class="nav-text">Debian</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Android"><span class="nav-number">1.2.4.</span> <span class="nav-text">Android</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Other"><span class="nav-number">1.2.5.</span> <span class="nav-text">Other</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Linux%E5%B5%8C%E5%85%A5%E6%97%A0%E5%A4%84%E4%B8%8D%E5%9C%A8%EF%BC%81"><span class="nav-number">1.3.</span> <span class="nav-text">Linux嵌入无处不在！</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8Linux%E5%B7%A5%E4%BD%9C"><span class="nav-number">2.</span> <span class="nav-text">使用Linux工作</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%BB%E8%A6%81%E5%BA%94%E7%94%A8"><span class="nav-number">2.1.</span> <span class="nav-text">主要应用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="nav-number">2.1.1.</span> <span class="nav-text">服务器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A1%8C%E9%9D%A2%E5%BA%94%E7%94%A8"><span class="nav-number">2.1.2.</span> <span class="nav-text">桌面应用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8E%A7%E5%88%B6%E5%8F%B0%E5%B7%A5%E5%85%B7"><span class="nav-number">2.1.3.</span> <span class="nav-text">控制台工具</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8%EF%BC%81%EF%BC%81"><span class="nav-number">2.1.4.</span> <span class="nav-text">包管理器！！</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%91%E4%B8%8ELINUX"><span class="nav-number">2.2.</span> <span class="nav-text">云与LINUX</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%E5%92%8C%E8%AE%B8%E5%8F%AF"><span class="nav-number">3.</span> <span class="nav-text">开源项目和许可</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%80%E6%BA%90%E8%AE%A1%E5%88%92"><span class="nav-number">3.1.</span> <span class="nav-text">开源计划</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%80%E6%BA%90%E4%B8%9A%E5%8A%A1%E6%A8%A1%E5%9E%8B"><span class="nav-number">3.2.</span> <span class="nav-text">开源业务模型</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%91%BD%E4%BB%A4%E8%A1%8C%E4%B9%8B%E5%A7%8B"><span class="nav-number">4.</span> <span class="nav-text">命令行之始</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%91%BD%E4%BB%A4%E7%B1%BB%E5%9E%8B"><span class="nav-number">4.1.</span> <span class="nav-text">命令类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7"><span class="nav-number">4.2.</span> <span class="nav-text">特殊符号</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#quoting%E5%BC%95%E5%8F%B7"><span class="nav-number">4.2.1.</span> <span class="nav-text">quoting引号</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Control-Statement"><span class="nav-number">4.2.2.</span> <span class="nav-text">Control Statement</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%86%85%E7%BD%AE%E5%B8%AE%E5%8A%A9"><span class="nav-number">5.</span> <span class="nav-text">内置帮助</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Man-Pages"><span class="nav-number">5.1.</span> <span class="nav-text">Man Pages</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#INFO%E6%96%87%E6%A1%A3"><span class="nav-number">5.2.</span> <span class="nav-text">INFO文档</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B6%E4%BB%96"><span class="nav-number">5.3.</span> <span class="nav-text">其他</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E5%AF%BC%E8%88%AA"><span class="nav-number">6.</span> <span class="nav-text">文件系统导航</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#powerful-ls"><span class="nav-number">6.1.</span> <span class="nav-text">powerful ls</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AE%A1%E7%90%86%E6%96%87%E4%BB%B6%E5%92%8C%E7%9B%AE%E5%BD%95"><span class="nav-number">7.</span> <span class="nav-text">管理文件和目录</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AD%98%E6%A1%A3%E5%92%8C%E5%8E%8B%E7%BC%A9"><span class="nav-number">8.</span> <span class="nav-text">存档和压缩</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8E%8B%E7%BC%A9%E5%B7%A5%E5%85%B7"><span class="nav-number">8.1.</span> <span class="nav-text">压缩工具</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BD%92%E6%A1%A3"><span class="nav-number">8.2.</span> <span class="nav-text">归档</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E6%A8%A1%E5%BC%8F"><span class="nav-number">8.2.1.</span> <span class="nav-text">创建模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%97%E8%A1%A8%E6%A8%A1%E5%BC%8F"><span class="nav-number">8.2.2.</span> <span class="nav-text">列表模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8F%90%E5%8F%96%E6%A8%A1%E5%BC%8F"><span class="nav-number">8.2.3.</span> <span class="nav-text">提取模式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ZIP%E6%96%87%E4%BB%B6"><span class="nav-number">8.3.</span> <span class="nav-text">ZIP文件</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E6%96%87%E6%9C%AC"><span class="nav-number">9.</span> <span class="nav-text">使用文本</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AF%BB%E5%91%BC%E6%9C%BA"><span class="nav-number">9.1.</span> <span class="nav-text">寻呼机</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%87%8D%E5%AE%9A%E5%90%91"><span class="nav-number">9.2.</span> <span class="nav-text">重定向</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4"><span class="nav-number">9.3.</span> <span class="nav-text">常用命令</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%93%8D%E4%BD%9C%E9%9B%86"><span class="nav-number">10.</span> <span class="nav-text">操作集</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%91%BD%E4%BB%A4%E9%9B%86"><span class="nav-number">11.</span> <span class="nav-text">命令集</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F"><span class="nav-number">1.</span> <span class="nav-text">操作系统</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E7%9F%A5%E8%AF%86"><span class="nav-number">1.1.</span> <span class="nav-text">基本知识</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%84%E7%A7%8D%E5%8F%91%E8%A1%8C%E7%89%88"><span class="nav-number">1.2.</span> <span class="nav-text">各种发行版</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Red-Hat"><span class="nav-number">1.2.1.</span> <span class="nav-text">Red Hat</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SUSE"><span class="nav-number">1.2.2.</span> <span class="nav-text">SUSE</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Debian"><span class="nav-number">1.2.3.</span> <span class="nav-text">Debian</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Android"><span class="nav-number">1.2.4.</span> <span class="nav-text">Android</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Other"><span class="nav-number">1.2.5.</span> <span class="nav-text">Other</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Linux%E5%B5%8C%E5%85%A5%E6%97%A0%E5%A4%84%E4%B8%8D%E5%9C%A8%EF%BC%81"><span class="nav-number">1.3.</span> <span class="nav-text">Linux嵌入无处不在！</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8Linux%E5%B7%A5%E4%BD%9C"><span class="nav-number">2.</span> <span class="nav-text">使用Linux工作</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%BB%E8%A6%81%E5%BA%94%E7%94%A8"><span class="nav-number">2.1.</span> <span class="nav-text">主要应用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="nav-number">2.1.1.</span> <span class="nav-text">服务器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A1%8C%E9%9D%A2%E5%BA%94%E7%94%A8"><span class="nav-number">2.1.2.</span> <span class="nav-text">桌面应用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8E%A7%E5%88%B6%E5%8F%B0%E5%B7%A5%E5%85%B7"><span class="nav-number">2.1.3.</span> <span class="nav-text">控制台工具</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8%EF%BC%81%EF%BC%81"><span class="nav-number">2.1.4.</span> <span class="nav-text">包管理器！！</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%91%E4%B8%8ELINUX"><span class="nav-number">2.2.</span> <span class="nav-text">云与LINUX</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%E5%92%8C%E8%AE%B8%E5%8F%AF"><span class="nav-number">3.</span> <span class="nav-text">开源项目和许可</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%80%E6%BA%90%E8%AE%A1%E5%88%92"><span class="nav-number">3.1.</span> <span class="nav-text">开源计划</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%80%E6%BA%90%E4%B8%9A%E5%8A%A1%E6%A8%A1%E5%9E%8B"><span class="nav-number">3.2.</span> <span class="nav-text">开源业务模型</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%91%BD%E4%BB%A4%E8%A1%8C%E4%B9%8B%E5%A7%8B"><span class="nav-number">4.</span> <span class="nav-text">命令行之始</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%91%BD%E4%BB%A4%E7%B1%BB%E5%9E%8B"><span class="nav-number">4.1.</span> <span class="nav-text">命令类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7"><span class="nav-number">4.2.</span> <span class="nav-text">特殊符号</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#quoting%E5%BC%95%E5%8F%B7"><span class="nav-number">4.2.1.</span> <span class="nav-text">quoting引号</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Control-Statement"><span class="nav-number">4.2.2.</span> <span class="nav-text">Control Statement</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%86%85%E7%BD%AE%E5%B8%AE%E5%8A%A9"><span class="nav-number">5.</span> <span class="nav-text">内置帮助</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Man-Pages"><span class="nav-number">5.1.</span> <span class="nav-text">Man Pages</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#INFO%E6%96%87%E6%A1%A3"><span class="nav-number">5.2.</span> <span class="nav-text">INFO文档</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B6%E4%BB%96"><span class="nav-number">5.3.</span> <span class="nav-text">其他</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E5%AF%BC%E8%88%AA"><span class="nav-number">6.</span> <span class="nav-text">文件系统导航</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#powerful-ls"><span class="nav-number">6.1.</span> <span class="nav-text">powerful ls</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AE%A1%E7%90%86%E6%96%87%E4%BB%B6%E5%92%8C%E7%9B%AE%E5%BD%95"><span class="nav-number">7.</span> <span class="nav-text">管理文件和目录</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AD%98%E6%A1%A3%E5%92%8C%E5%8E%8B%E7%BC%A9"><span class="nav-number">8.</span> <span class="nav-text">存档和压缩</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8E%8B%E7%BC%A9%E5%B7%A5%E5%85%B7"><span class="nav-number">8.1.</span> <span class="nav-text">压缩工具</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BD%92%E6%A1%A3"><span class="nav-number">8.2.</span> <span class="nav-text">归档</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E6%A8%A1%E5%BC%8F"><span class="nav-number">8.2.1.</span> <span class="nav-text">创建模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%97%E8%A1%A8%E6%A8%A1%E5%BC%8F"><span class="nav-number">8.2.2.</span> <span class="nav-text">列表模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8F%90%E5%8F%96%E6%A8%A1%E5%BC%8F"><span class="nav-number">8.2.3.</span> <span class="nav-text">提取模式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ZIP%E6%96%87%E4%BB%B6"><span class="nav-number">8.3.</span> <span class="nav-text">ZIP文件</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E6%96%87%E6%9C%AC"><span class="nav-number">9.</span> <span class="nav-text">使用文本</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Pager"><span class="nav-number">9.1.</span> <span class="nav-text">Pager</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%87%8D%E5%AE%9A%E5%90%91"><span class="nav-number">9.2.</span> <span class="nav-text">重定向</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4"><span class="nav-number">9.3.</span> <span class="nav-text">常用命令</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E8%84%9A%E6%9C%AC"><span class="nav-number">10.</span> <span class="nav-text">基本脚本</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BC%96%E8%BE%91shell%E8%84%9A%E6%9C%AC"><span class="nav-number">10.1.</span> <span class="nav-text">编辑shell脚本</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%98%E9%87%8F"><span class="nav-number">10.2.</span> <span class="nav-text">变量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%A4%E6%96%AD%E5%92%8C%E5%88%86%E6%94%AF"><span class="nav-number">10.3.</span> <span class="nav-text">判断和分支</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BE%AA%E7%8E%AF"><span class="nav-number">10.4.</span> <span class="nav-text">循环</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#vi%E5%9F%BA%E6%9C%AC"><span class="nav-number">10.5.</span> <span class="nav-text">vi基本</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%93%8D%E4%BD%9C%E9%9B%86%EF%BC%9F"><span class="nav-number">11.</span> <span class="nav-text">操作集？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%91%BD%E4%BB%A4%E9%9B%86"><span class="nav-number">12.</span> <span class="nav-text">命令集</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -1231,7 +1517,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共106.1k字</span>
+  <span class="post-count">博客全站共108.2k字</span>
 </div>
         
 
