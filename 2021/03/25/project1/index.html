@@ -40,8 +40,18 @@
 <meta property="og:image" content="https://gitee.com/darren-greenhand//picture/raw/master/image-20210325232153076.png">
 <meta property="og:image" content="https://gitee.com/darren-greenhand//picture/raw/master/image-20210325234135580.png">
 <meta property="og:image" content="https://gitee.com/darren-greenhand//picture/raw/master/image-20210325235111811.png">
+<meta property="og:image" content="https://gitee.com/darren-greenhand//picture/raw/master/image-20210326090419517.png">
+<meta property="og:image" content="https://gitee.com/darren-greenhand//picture/raw/master/image-20210326093035542.png">
+<meta property="og:image" content="https://gitee.com/darren-greenhand//picture/raw/master/image-20210326100552707.png">
+<meta property="og:image" content="https://gitee.com/darren-greenhand//picture/raw/master/image-20210326124432405.png">
+<meta property="og:image" content="https://gitee.com/darren-greenhand//picture/raw/master/image-20210326165136439.png">
+<meta property="og:image" content="https://gitee.com/darren-greenhand//picture/raw/master/image-20210326170501978.png">
+<meta property="og:image" content="https://gitee.com/darren-greenhand//picture/raw/master/image-20210326174519979.png">
+<meta property="og:image" content="https://gitee.com/darren-greenhand//picture/raw/master/image-20210326193738689.png">
+<meta property="og:image" content="https://gitee.com/darren-greenhand//picture/raw/master/image-20210326200421317.png">
+<meta property="og:image" content="https://gitee.com/darren-greenhand//picture/raw/master/image-20210326200935860.png">
 <meta property="article:published_time" content="2021-03-25T13:19:32.000Z">
-<meta property="article:modified_time" content="2021-03-25T16:11:55.833Z">
+<meta property="article:modified_time" content="2021-03-26T13:12:17.388Z">
 <meta property="article:author" content="Darren">
 <meta property="article:tag" content="品优购电商静态页面">
 <meta name="twitter:card" content="summary">
@@ -246,7 +256,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-03-26 00:11:55" itemprop="dateModified" datetime="2021-03-26T00:11:55+08:00">2021-03-26</time>
+                <time title="修改时间：2021-03-26 21:12:17" itemprop="dateModified" datetime="2021-03-26T21:12:17+08:00">2021-03-26</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -304,13 +314,13 @@
 <p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210325220548104.png" alt="image-20210325220548104"></p>
 </li>
 </ol>
-<h1 id="首页"><a href="#首页" class="headerlink" title="首页"></a>首页</h1><p>网站首页一般都是index.html或index.php</p>
+<h1 id="公共样式"><a href="#公共样式" class="headerlink" title="公共样式"></a>公共样式</h1><p>网站首页一般都是index.html或index.php</p>
 <p>注意到头部底部可用于多个网页，采用模块化开发</p>
 <p>注意采用约定的命名模块，这些比较常用规范</p>
+<p>我也不知道为什么他总是 &lt;nav class=”nav”&gt;这种写法，dt和dd也是类名，其实是div</p>
 <p><em><strong>先写公共部分！！！！</strong></em></p>
 <p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210325221956379.png" alt="image-20210325221956379"></p>
-<h2 id="快捷导航"><a href="#快捷导航" class="headerlink" title="快捷导航"></a>快捷导航</h2><p>shortcut</p>
-<p>子元素都需要浮动，则直接.shortcut ul li{float}</p>
+<h2 id="头部"><a href="#头部" class="headerlink" title="头部"></a>头部</h2><h3 id="快捷导航"><a href="#快捷导航" class="headerlink" title="快捷导航"></a>快捷导航</h3><p>子元素都需要浮动，则直接.shortcut ul li{float}</p>
 <p>都需要居中，因为行高会继承，所以直接给父元素 .shortcut加这个line-height就好了</p>
 <p><strong>多态思想：很多浮动，则直接指定fl类为左浮，fr右浮，很多红色，则 style_red类设置红色</strong></p>
 <p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210325232153076.png" alt="image-20210325232153076"></p>
@@ -326,6 +336,65 @@
 <h3 id="search"><a href="#search" class="headerlink" title="search"></a>search</h3><p>把input边框和默认蓝边去掉</p>
 <p>border:0</p>
 <p>outline:none</p>
+<p>小心li里放a的时候搞混字体颜色，其实是a的字体颜色</p>
+<p>那些不固定大小的，仅需要包围效果的，可能1位，可能2位，就不用指定宽度，让内容撑开就好了</p>
+<p>要是需要大一点就利用padding （border-box模型）</p>
+<p>那个冒泡的时候绝对定位右对齐左对齐会导致位数变多的时候往哪边移动。。。好细啊（尽量左对齐）</p>
+<h3 id="nav"><a href="#nav" class="headerlink" title="nav"></a>nav</h3><p><strong>dropdown</strong> 和 navitems</p>
+<p>按照语义，详细的分类应该是”全部分类“的列表项！</p>
+<img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210326090419517.png" alt="image-20210326090419517" style="zoom:50%;" />
+
+<p>奇怪。。这个dropdown的dt部分占满空间，dd部分都显示在盒子外面。。全是overflow</p>
+<p>注意鼠标放上去的时候，选项左边有个两像素的小空隙margin，右边不加。。也不知道为啥。。</p>
+<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210326093035542.png" alt="image-20210326093035542"></p>
+<p><strong>间距通过a的padding值挤开而不是li的padding值，增大超链接选择范围，更利于点击</strong></p>
+<h2 id="底部"><a href="#底部" class="headerlink" title="底部"></a>底部</h2><p>同样最大的盒子不要给宽度，仅指定高度，边距，背景啥的，里面放一个版心，然后再细分成几个盒子</p>
+<p>那一个 li 就分成是一个图标（h5）+一个文字框（div里一个h4一个p）</p>
+<p>还有这一堆小图片，可以用一张精灵图</p>
+<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210326100552707.png" alt="image-20210326100552707"></p>
+<p>完成。。。</p>
+<h1 id="首页"><a href="#首页" class="headerlink" title="首页"></a>首页</h1><h2 id="主体模块"><a href="#主体模块" class="headerlink" title="主体模块"></a>主体模块</h2><p>main主体模块是index.html专有的，应该新建一个样式文件Index.css</p>
+<p>注意<strong>算好距离</strong>，免得被那个越界的压住，然后可以直接指定高度，免得清除浮动</p>
+<p>里面有俩，焦点图focus  还有  新闻快报newsflash</p>
+<p>因为焦点图经常更换，应该放到uploads里面</p>
+<h3 id="newsflash"><a href="#newsflash" class="headerlink" title="newsflash"></a>newsflash</h3><p>news新闻，放一些新闻呗，前面还有[xx]，老气的很<img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210326124432405.png" alt="image-20210326124432405" style="zoom:25%;" /></p>
+<p>没啥好说的</p>
+<p>lifeservice生活，很多图标，小功能区域</p>
+<p>给每个小图标加<em><strong>右边框和下边框</strong></em>，浮动就有了这种效果</p>
+<p>一行只能装下3个，装不下第四个（差一点），此时可以修改ul的宽度（透明），</p>
+<p>再用.liferserver的overflow：hidden来切掉超界的</p>
+<p>那个小方块可以用行内块元素来做，行内块元素也可以用text-align:center来居中</p>
+<p>bargin 特价商品，放广告的</p>
+<p>不过是一个臭盒子罢了。。放一张图片咯</p>
+<h3 id="推荐模块"><a href="#推荐模块" class="headerlink" title="推荐模块"></a>推荐模块</h3><p>recon大模块</p>
+<p>他好像很喜欢用hd做盒中盒子头，bd用来做盒中盒子体</p>
+<p>记得要约束img的尺寸</p>
+<p>.recom_bd ul li:nth-child(-n+3)::after 给前三个加一条width:1px,有backgroundcolor的后置就好了</p>
+<p>绝对布局，右0，上10.</p>
+<h3 id="楼层区域"><a href="#楼层区域" class="headerlink" title="楼层区域"></a>楼层区域</h3><p>常用的网页布局，左边有个“电梯导航栏”，可以快捷到达楼层凹凹造型</p>
+<p>floor没有高度，因为不知道具体多高</p>
+<p>里面再放各个楼层，比如一楼家用电器，二楼。。。。。</p>
+<h3 id="Tab栏原理-布局需求"><a href="#Tab栏原理-布局需求" class="headerlink" title="Tab栏原理-布局需求"></a>Tab栏原理-布局需求</h3><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210326165136439.png" alt="image-20210326165136439" style="zoom: 33%;" />
+
+<p>虽然需要JS来实现，但是可以先熟悉它的布局</p>
+<p>box_hd 盒子里放了标题和tab_list</p>
+<p>box_bd盒子里再放tab_content</p>
+<p>这样可以在tab栏外额外添加一些鬼东西嗷</p>
+<img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210326170501978.png" alt="image-20210326170501978" style="zoom:33%;" />
+
+<p>这是骚操作。。。。把类当id用呗</p>
+<p>a如果要包含块级元素，最好把a转化成块级元素</p>
+<p>不想写列表页了。。。我复制了我靠</p>
+<p>小心浮动溢出影响别的，可以用overflow:hidden来解决</p>
+<p>一定要弄清楚尺寸以及覆盖关系，小偏差也可以用overflow:hidden解决</p>
+<p>hover边框效果，要先搞透明边框，hover变色，而不是加边框，不然引起其他元素移动</p>
+<h3 id="注册页面"><a href="#注册页面" class="headerlink" title="注册页面"></a>注册页面</h3><p><strong>注册页面比较隐私，为了保护用户信息，不需要SEO优化</strong></p>
+<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210326174519979.png" alt="image-20210326174519979"></p>
+<p>右边那个提示输入正不正确的格式是span盒子，嵌套一个小盒子，背景放X，小盒子外一行字</p>
+<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210326193738689.png" alt="image-20210326193738689"></p>
+<p>要在ul外面加一个表单域form才可以将数据发送到后台，form里面原来可以放好多东西</p>
+<h1 id="上传"><a href="#上传" class="headerlink" title="上传"></a>上传</h1><p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210326200421317.png" alt="image-20210326200421317"></p>
+<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210326200935860.png" alt="image-20210326200935860"></p>
 
     </div>
 
@@ -425,7 +494,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%BD%91%E9%A1%B5%E5%88%B6%E4%BD%9C%E6%B5%81%E7%A8%8B"><span class="nav-number">1.</span> <span class="nav-text">网页制作流程</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%A1%B9%E7%9B%AE%E4%BB%8B%E7%BB%8D"><span class="nav-number">2.</span> <span class="nav-text">项目介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A1%B9%E7%9B%AE%E6%90%AD%E5%BB%BA"><span class="nav-number">2.1.</span> <span class="nav-text">项目搭建</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A8%A1%E5%9D%97%E5%8C%96%E5%BC%80%E5%8F%91"><span class="nav-number">2.2.</span> <span class="nav-text">模块化开发</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BD%91%E7%AB%99TDK%E4%B8%89%E5%A4%A7%E6%A0%87%E7%AD%BESEO%E4%BC%98%E5%8C%96"><span class="nav-number">2.3.</span> <span class="nav-text">网站TDK三大标签SEO优化</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%A6%96%E9%A1%B5"><span class="nav-number">3.</span> <span class="nav-text">首页</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BF%AB%E6%8D%B7%E5%AF%BC%E8%88%AA"><span class="nav-number">3.1.</span> <span class="nav-text">快捷导航</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#header%E6%A8%A1%E5%9D%97"><span class="nav-number">3.1.1.</span> <span class="nav-text">header模块</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#logo-SEO-%E4%BC%98%E5%8C%96"><span class="nav-number">3.1.2.</span> <span class="nav-text">logo SEO 优化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#search"><span class="nav-number">3.1.3.</span> <span class="nav-text">search</span></a></li></ol></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%BD%91%E9%A1%B5%E5%88%B6%E4%BD%9C%E6%B5%81%E7%A8%8B"><span class="nav-number">1.</span> <span class="nav-text">网页制作流程</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%A1%B9%E7%9B%AE%E4%BB%8B%E7%BB%8D"><span class="nav-number">2.</span> <span class="nav-text">项目介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A1%B9%E7%9B%AE%E6%90%AD%E5%BB%BA"><span class="nav-number">2.1.</span> <span class="nav-text">项目搭建</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A8%A1%E5%9D%97%E5%8C%96%E5%BC%80%E5%8F%91"><span class="nav-number">2.2.</span> <span class="nav-text">模块化开发</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BD%91%E7%AB%99TDK%E4%B8%89%E5%A4%A7%E6%A0%87%E7%AD%BESEO%E4%BC%98%E5%8C%96"><span class="nav-number">2.3.</span> <span class="nav-text">网站TDK三大标签SEO优化</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%85%AC%E5%85%B1%E6%A0%B7%E5%BC%8F"><span class="nav-number">3.</span> <span class="nav-text">公共样式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%B4%E9%83%A8"><span class="nav-number">3.1.</span> <span class="nav-text">头部</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BF%AB%E6%8D%B7%E5%AF%BC%E8%88%AA"><span class="nav-number">3.1.1.</span> <span class="nav-text">快捷导航</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#header%E6%A8%A1%E5%9D%97"><span class="nav-number">3.1.2.</span> <span class="nav-text">header模块</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#logo-SEO-%E4%BC%98%E5%8C%96"><span class="nav-number">3.1.3.</span> <span class="nav-text">logo SEO 优化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#search"><span class="nav-number">3.1.4.</span> <span class="nav-text">search</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#nav"><span class="nav-number">3.1.5.</span> <span class="nav-text">nav</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BA%95%E9%83%A8"><span class="nav-number">3.2.</span> <span class="nav-text">底部</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%A6%96%E9%A1%B5"><span class="nav-number">4.</span> <span class="nav-text">首页</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%BB%E4%BD%93%E6%A8%A1%E5%9D%97"><span class="nav-number">4.1.</span> <span class="nav-text">主体模块</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#newsflash"><span class="nav-number">4.1.1.</span> <span class="nav-text">newsflash</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8E%A8%E8%8D%90%E6%A8%A1%E5%9D%97"><span class="nav-number">4.1.2.</span> <span class="nav-text">推荐模块</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A5%BC%E5%B1%82%E5%8C%BA%E5%9F%9F"><span class="nav-number">4.1.3.</span> <span class="nav-text">楼层区域</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tab%E6%A0%8F%E5%8E%9F%E7%90%86-%E5%B8%83%E5%B1%80%E9%9C%80%E6%B1%82"><span class="nav-number">4.1.4.</span> <span class="nav-text">Tab栏原理-布局需求</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B3%A8%E5%86%8C%E9%A1%B5%E9%9D%A2"><span class="nav-number">4.1.5.</span> <span class="nav-text">注册页面</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%8A%E4%BC%A0"><span class="nav-number">5.</span> <span class="nav-text">上传</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -512,7 +581,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共111.3k字</span>
+  <span class="post-count">博客全站共112.4k字</span>
 </div>
         
 
