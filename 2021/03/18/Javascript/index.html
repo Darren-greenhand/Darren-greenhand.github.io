@@ -37,7 +37,7 @@
 <meta property="og:image" content="https://gitee.com/darren-greenhand//picture/raw/master/image-20210327153407994.png">
 <meta property="og:image" content="https://gitee.com/darren-greenhand//picture/raw/master/image-20210327163947742.png">
 <meta property="article:published_time" content="2021-03-18T12:57:35.000Z">
-<meta property="article:modified_time" content="2021-03-27T15:18:08.518Z">
+<meta property="article:modified_time" content="2021-03-28T16:10:25.813Z">
 <meta property="article:author" content="Darren">
 <meta property="article:tag" content="JS1">
 <meta name="twitter:card" content="summary">
@@ -242,7 +242,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-03-27 23:18:08" itemprop="dateModified" datetime="2021-03-27T23:18:08+08:00">2021-03-27</time>
+                <time title="修改时间：2021-03-29 00:10:25" itemprop="dateModified" datetime="2021-03-29T00:10:25+08:00">2021-03-29</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -286,7 +286,7 @@
 <p>ECMAScript连输入输出都没有，他只是一个基准</p>
 <p><strong>Web浏览器是其实现的一种宿主环境（node.js也是一种），提供ECMAScript的基准实现和与环境自身交互必须的拓展！</strong></p>
 <p>拓展，比如DOM，使用ECMAScript核心类型和语法，提供特定于环境的额外功能，</p>
-<p>ESMAScript描述了这门语言的：语法，类型，语句，关键字，保留字，操作符，全局对象</p>
+<p>ESMAScript描述了这门语言的：<strong>语法，类型，语句，关键字，保留字，操作符，全局对象</strong></p>
 <p>现在都到ES12了。。。。</p>
 <p>ECMAScript的符合性具备极大的自由度，给了实现开发者很大的权限！</p>
 <p><strong>好多东西没写，一定要到时候好好看看红宝书，太棒了！</strong></p>
@@ -300,7 +300,7 @@
 <p>还有一些比如“文档模式”啥的鬼东西，看不懂。。。</p>
 <p>&lt;noscript&gt;元素用于优雅降级，先用于那些金庸JS的浏览器，在浏览器不支持脚本或者支持被关闭时，将会渲染在noscript标签中的内容，否则则会被忽视掉，</p>
 <h3 id="前提"><a href="#前提" class="headerlink" title="前提"></a>前提</h3><p>单行注释//   对应快捷键 ctrl + /</p>
-<p>多行注释和c语言一样，是/* */ ,对应快捷键ctrl+shift+/  改了以后</p>
+<p>多行注释和c语言一样，是/* <em>/ ,对应快捷键*<em>ctrl+shift+/</em></em>  改了以后</p>
 <p>左下角设置可以直接更改快捷方式</p>
 <p><strong>Js标识符可使用 字母  数字   下划线   美元符号   但是开头不能是数字，惯例是驼峰大小写！</strong></p>
 <p>严格模式</p>
@@ -345,7 +345,7 @@
 <p>虽然函数也被ES认为是对象，但它们有特殊的属性，因此被typeof独立区分</p>
 <h4 id="Undefined"><a href="#Undefined" class="headerlink" title="Undefined"></a>Undefined</h4><p>只有一个值undefined, var/let声明对象但未初始化就会赋予undefined</p>
 <p>他理论上永远不用与显式赋值，只是为了<em><strong>区别空对象指针null和未初始化指针</strong></em></p>
-<p>但由于未声明的变量typeof也会返回undefined，所以最好还是在声明时就初始化</p>
+<p><strong>但由于未声明的变量typeof也会返回undefined，所以最好还是在声明时就初始化</strong></p>
 <p>这是一个假值，但是也有很多其他的假值，所以不要依靠真假判断是否是undefined</p>
 <h4 id="Null"><a href="#Null" class="headerlink" title="Null"></a>Null</h4><p>只有一个值null，<strong>逻辑上讲，null值表示一个空对象指针，</strong>所以typeof null返回object</p>
 <p>声明时如果暂时不用赋值，最好赋一个null</p>
@@ -373,7 +373,7 @@
 </tr>
 <tr>
 <td>Number</td>
-<td>非零值（包括无穷）</td>
+<td>非零值（<strong>包括无穷</strong>）</td>
 <td>0  NaN</td>
 </tr>
 <tr>
@@ -390,10 +390,10 @@
 <p>非常重要，因为if等流控制语句会自动执行该转换</p>
 <h4 id="Number"><a href="#Number" class="headerlink" title="Number"></a>Number</h4><p>整数</p>
 <p>八进制和十六进制规则和C一样，但是八进制如果写错了直接忽略0当成十进制，数学操作中都当成十进制</p>
-<p>严格模式不能使用八进制前缀0，要用0o</p>
+<p><strong>严格模式不能使用八进制前缀0，要用0o</strong></p>
 <p>由于JS保存数值的方式，会存在正零，负零，是等价的</p>
 <p>浮点数</p>
-<p>存储空间是整数两倍，所以JS会尽可能把它们变成整数，如果小数点后为0，直接给你改成整数(21.0)</p>
+<p>存储空间是整数两倍，所以JS会尽可能把它们变成整数，如果小数点后为0，<strong>直接给你改成整数</strong>(如21.0)</p>
 <p>ES会将小数点后至少6个0的浮点数转换为科学计数法</p>
 <p>浮点数精确度高达17位小数，但是也存在如C般很小的偏差问题，因此不要用 == 对待浮点数</p>
 <p>这是IEEE 754数值标准导致的。。</p>
@@ -403,9 +403,152 @@
 <p>NaN有一些诡异的属性：</p>
 <ol>
 <li>任何设计NaN的操作始终返回NaN(如NaN/10)</li>
-<li></li>
+<li>NaN不等于包括自己在内的任何值！</li>
 </ol>
-<h1 id="疑惑"><a href="#疑惑" class="headerlink" title="疑惑"></a>疑惑</h1><h2 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h2><h3 id="3-32-条件-amp-for声明"><a href="#3-32-条件-amp-for声明" class="headerlink" title="3.32 条件&amp;for声明"></a>3.32 条件&amp;for声明</h3>
+<p>数值转换：</p>
+<p>Number()   parseInt()   parseFloat()</p>
+<p>Number的转换规则和一元加操作符一样，值得注意的是：</p>
+<p>null返回0，undefined返回null。</p>
+<p>字符串包含有效的16进制，会转化成对应的十进制值。</p>
+<p>如果字符串包含正常情况外的词，返回NaN。</p>
+<p>对于对象：先调用valueof（）方法，再按照正常规则转换，如果结果是NaN，则先调用toString，再按字符串规则转换。</p>
+<p>parseInt规则：</p>
+<p>跳过空白，开始检索，第一个不是数值，加减号，返回NaN,否则开始检索至结束或非法。</p>
+<p>未加第二个参数则检索0x开头，0开头，最好加上，可以省略前缀</p>
+<p>parseInt(“10100101”, 2),表示按<strong>二进制解析！</strong></p>
+<p>parseFloat类似，但忽略开头的0，只用于十进制，若结果为整数，会返回整数</p>
+<h4 id="String"><a href="#String" class="headerlink" title="String"></a>String</h4><p>可用单，双，没有语法意义。。。pink推荐使用单引号</p>
+<p>转义字符（字符字面量）（算一个字符）基本无二，\xnn ASCII   \unnnn  nnnn表示Unicode字符</p>
+<p>字符串是不可变的！任何更改都导致原字符串销毁</p>
+<p>toString方法可用于数值，布尔值，对象，字符串值（返回副本），</p>
+<p><strong>null/undefined没有,调用则返回本身的字符串null-&gt;”null”</strong></p>
+<p>在对待数值时可以指定显示的进制 </p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> num = <span class="number">10</span>;</span><br><span class="line"><span class="built_in">console</span>.log(num.toString(<span class="number">2</span>))  -<span class="string">&quot;1010&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>模板字面量</strong></p>
+<p>通过<strong>反引号定义（但是这里书写用单引号。。不然变成代码块我靠）</strong>，保留内部的空白结构</p>
+<p>技术上讲，模板字面量不是字符串而是一种特殊的JS句法表达式，只不过求之后得到的是字符串</p>
+<p><strong>字符串插值</strong></p>
+<p>模板字面量求值时立刻转换成字符串实例，任何插入的变量也会从它们最接近的作用域中提取</p>
+<p>‘${}’来进行调用，可以变量，会将表达式用toString转化成字符串，可以调用函数和方法，可以插入自己以前的值</p>
+<p>value = ‘${value}abc’  附加abc</p>
+<p><strong>标签函数</strong></p>
+<p>用来自定义插值行为，直接把定义的函数放在模板字面量前即可</p>
+<p>function xxx(){}</p>
+<p>let a = xxx’….’</p>
+<p>注意传进去的第一个参量是[“”,”+”,]这种，其中所有的$被换成空字符串，符号保留</p>
+<p>原始字符串则调用了默认的String.raw标签函数,也可通过string(某字符串变量).raw来取得原始内容</p>
+<h4 id="Symbol"><a href="#Symbol" class="headerlink" title="Symbol"></a>Symbol</h4><p>ES6新增，符号是原始值，符号实例唯一，不可变</p>
+<p>用途是确保对象属性使用唯一标识符，不会发生属性冲突的危险</p>
+<p>符号需要使用Symbol（）函数初始化，</p>
+<h4 id="Object"><a href="#Object" class="headerlink" title="Object"></a>Object</h4><p>JS对象实质是一组数据和功能的集合，通过new+对象类型的名称来创建</p>
+<p>可以通过创建Object实例来创建对象，再添加属性和方法</p>
+<p>每个对象内置了一大堆方法，<strong>p56</strong></p>
+<h3 id="操作符"><a href="#操作符" class="headerlink" title="操作符"></a>操作符</h3><p>ES中的操作符可用于各种类型的值，在处理对象时会调用valueOf和toString来处理（C++重构吗）</p>
+<p>因为数据类型有限，不会出现重构等问题，因此符号的所有规则都可以列出来！</p>
+<h4 id="一元运算符"><a href="#一元运算符" class="headerlink" title="一元运算符"></a>一元运算符</h4><p>++  – 和C差不多，可用于任意值，应用后均变为数值类型</p>
+<p>字符串非法则NaN,false和true变成0和1，对象先调用valueof（）方法，再按照正常规则转换，如果结果是NaN，则先调用toString，再按字符串规则转换。</p>
+<p>+ and  - 会对非数值进行Number（）转换，</p>
+<h4 id="位操作符"><a href="#位操作符" class="headerlink" title="位操作符"></a>位操作符</h4><p>虽然实际64位，但位操作时仅应用32位，第32位<strong>0正1负</strong>，无符号数就大一倍。</p>
+<p>正值前31位正常，负值则是补码。（这里称二补数）</p>
+<p><strong>但特殊值NaN和Infinity在位操作中被当成0</strong></p>
+<p>C有的这里都有！右移使用符号位来填补空位，无符号右移<code>&gt;&gt;&gt;</code>则用0来填补！</p>
+<h4 id="布尔操作符"><a href="#布尔操作符" class="headerlink" title="布尔操作符"></a>布尔操作符</h4><p>非操作符 ！ 无论对什么数据类型，先转换成布尔值，然后取反</p>
+<p>！！ 相当于调用Boolean（）</p>
+<p>&amp;&amp;逻辑与可以用于任何类型的操作数，不限于布尔，同样具有短路特性，如果操作数不全为布尔，则：</p>
+<ul>
+<li>如果第一个操作数是对象，返回第二个操作数</li>
+<li>如果第两个操作数是对象，返回第二个操作数</li>
+<li>如果第二个操作数为对象，只有第一个操作数为true时才会返回该对象</li>
+<li>只要出现null/NaN,undefined,就返回相应的</li>
+</ul>
+<p>||逻辑或，也会短路，如果操作数不全为布尔，则：</p>
+<ul>
+<li>如果第一个操作数是对象，返回第一个操作数</li>
+<li>如果第一个操作数求值为false，则返回第二个操作数</li>
+<li>如果第两个操作数是对象，返回第一个操作数</li>
+<li>如果俩都为null/NaN,undefined,就返回相应的</li>
+</ul>
+<h4 id="乘性运算符"><a href="#乘性运算符" class="headerlink" title="乘性运算符"></a>乘性运算符</h4><p>*  也会在处理非数值自动调用Number（）</p>
+<p>特性：</p>
+<ul>
+<li>任意操作数NaN返回NaN</li>
+<li>Infinity * 0  -&gt;NaN</li>
+<li>Infinity相乘，或乘有限数，返回+-Infinity</li>
+</ul>
+<p>/   特性:</p>
+<ul>
+<li>有NaN,返回NaN</li>
+<li>无限除无限返回NaN</li>
+<li>无限除有限（包括0）返回对应无穷</li>
+<li>0 / 0 返回NaN</li>
+<li>有限值 / 0 返回正负无穷</li>
+</ul>
+<p>% ：</p>
+<ul>
+<li>无限除任何 NaN</li>
+<li>有限除 0 NaN</li>
+<li>有限除无限  有限</li>
+<li>0除 非0  0</li>
+</ul>
+<h4 id="指数操作符"><a href="#指数操作符" class="headerlink" title="指数操作符"></a>指数操作符</h4><p>**  和  **==</p>
+<h4 id="加性操作符"><a href="#加性操作符" class="headerlink" title="加性操作符"></a>加性操作符</h4><p>+   注意：</p>
+<ul>
+<li>有NaN 返回NaN</li>
+<li>无穷+负无穷  返回NaN</li>
+<li>0相加，都是-0返回-0，否则返回+0</li>
+<li>俩字符串则拼接</li>
+<li>不然就转换成字符串，如果有undefined和null，变为”undefined”然后再拼接</li>
+</ul>
+<p>-  注意：</p>
+<ul>
+<li>同类无穷相减（其实就是难以判断正负的时候）为NaN</li>
+<li>无穷相减，可判断正负则返回对应无穷</li>
+<li>0相减，同号得正0，异号得-0</li>
+<li>会转化成数值而不是字符串，对象也是和以前一样的处理</li>
+</ul>
+<h4 id="关系运算符"><a href="#关系运算符" class="headerlink" title="关系运算符"></a>关系运算符</h4><p>还是四个，只返回布尔值</p>
+<ul>
+<li>出现数值，全转为数值比较</li>
+<li>都是字符串则逐个比较（大写字母比小写字母顺序小）</li>
+<li>对象先调用valueof（）方法，再按照正常规则转换，如果没有valueof操作符，则调用toString，再按字符串规则转换。</li>
+<li>布尔被转化为0和1</li>
+<li><strong>只要出现NaN，结果就为false</strong></li>
+</ul>
+<h4 id="相等操作符"><a href="#相等操作符" class="headerlink" title="相等操作符"></a>相等操作符</h4><p>两组，等于和不等于 == ，  全等和不全等 ===</p>
+<p>第一组进行强转再判断：</p>
+<ul>
+<li>布尔-&gt;数值</li>
+<li>字符串比数值，字符串-&gt;数值</li>
+<li>对象，用valueof对象再比较</li>
+<li>null ==  undefined</li>
+<li>null   undefined不能转化为其他类型的值再比较，因此不等于false，因为false-&gt;0</li>
+<li>有NaN就返回false，不相等返回true</li>
+</ul>
+<p>全等不转换！null !== undefined  因为数据类型不同</p>
+<p>条件运算符 () ?  :</p>
+<p>赋值运算符 &gt;&gt;&gt;=</p>
+<p>逗号运算符</p>
+<h3 id="语句"><a href="#语句" class="headerlink" title="语句"></a>语句</h3><p>也称流控制语句</p>
+<p>if中自动调用Boolean，也有do-while，while，swtich(break规则一样的)</p>
+<p><strong>for - in</strong>是一种严格的迭代语句，用于枚举对象中的<strong>非符号键属性</strong></p>
+<p>for(const property in expression) {statement;}</p>
+<p>这里的const不是必须的，但是为了确保局部变量不被修改，推荐使用const</p>
+<p>ES中的对象属性是无序的，for-in不能保证返回的顺序，甚至因浏览器而异</p>
+<p>如果迭代的变量是null / undefiend 则不执行循环体</p>
+<p><strong>for-of</strong> 是一种严格的迭代语句，用于遍历可迭代对象的元素</p>
+<p>for(const property of expression) {statement;}若尝试迭代的变量不支持迭代则抛出错误</p>
+<p><strong>标签语句</strong></p>
+<p>在语句前可以通过标签语句加标签，常用于嵌套循环中</p>
+<p>break和continue + 标签可以生效后跳到label位置</p>
+<p><strong>with语句</strong>将代码作用域设置为特定的变量</p>
+<p>严格模式下不允许</p>
+<p>with(location){………}</p>
+<p>在with语句内部，每个变量首先被认为是局部变量，如果不是，就搜索location对象，看他是否有一个同名属性，使得话，该变量就被求值为location对象的同名属性</p>
+<p>swtich特性：</p>
+<p>可以用于所有数据类型，case后面不加括号，可以加表达式！</p>
+<p>甚至可以swtich(true)然后case里面放一堆判别式，<em><strong>不过case判断是全等！</strong></em></p>
+<h1 id="疑惑"><a href="#疑惑" class="headerlink" title="疑惑"></a>疑惑</h1><h2 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h2><h3 id="3-32-条件-amp-for声明"><a href="#3-32-条件-amp-for声明" class="headerlink" title="3.32 条件&amp;for声明"></a>3.32 条件&amp;for声明</h3><h3 id="Symbol类型"><a href="#Symbol类型" class="headerlink" title="Symbol类型"></a>Symbol类型</h3><h3 id=""><a href="#" class="headerlink" title=""></a></h3>
     </div>
 
     
@@ -507,7 +650,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#JS%E5%AF%BC%E8%AF%BB"><span class="nav-number">1.</span> <span class="nav-text">JS导读</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AE%80%E5%8F%B2"><span class="nav-number">1.1.</span> <span class="nav-text">简史</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80"><span class="nav-number">1.2.</span> <span class="nav-text">语言基础</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B5%8C%E5%85%A5HTML"><span class="nav-number">1.2.1.</span> <span class="nav-text">嵌入HTML</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%89%8D%E6%8F%90"><span class="nav-number">1.2.2.</span> <span class="nav-text">前提</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%98%E9%87%8F"><span class="nav-number">1.2.3.</span> <span class="nav-text">变量</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9A%82%E6%97%B6%E6%80%A7%E6%AD%BB%E5%8C%BA"><span class="nav-number">1.2.3.1.</span> <span class="nav-text">暂时性死区</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%A3%8E%E6%A0%BC%E5%92%8C%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5%EF%BC%81"><span class="nav-number">1.2.3.2.</span> <span class="nav-text">风格和最佳实践！</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="nav-number">1.2.4.</span> <span class="nav-text">数据类型</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Undefined"><span class="nav-number">1.2.4.1.</span> <span class="nav-text">Undefined</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Null"><span class="nav-number">1.2.4.2.</span> <span class="nav-text">Null</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Boolean"><span class="nav-number">1.2.4.3.</span> <span class="nav-text">Boolean</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Number"><span class="nav-number">1.2.4.4.</span> <span class="nav-text">Number</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%96%91%E6%83%91"><span class="nav-number">2.</span> <span class="nav-text">疑惑</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86"><span class="nav-number">2.1.</span> <span class="nav-text">基础知识</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-32-%E6%9D%A1%E4%BB%B6-amp-for%E5%A3%B0%E6%98%8E"><span class="nav-number">2.1.1.</span> <span class="nav-text">3.32 条件&amp;for声明</span></a></li></ol></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#JS%E5%AF%BC%E8%AF%BB"><span class="nav-number">1.</span> <span class="nav-text">JS导读</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AE%80%E5%8F%B2"><span class="nav-number">1.1.</span> <span class="nav-text">简史</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80"><span class="nav-number">1.2.</span> <span class="nav-text">语言基础</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B5%8C%E5%85%A5HTML"><span class="nav-number">1.2.1.</span> <span class="nav-text">嵌入HTML</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%89%8D%E6%8F%90"><span class="nav-number">1.2.2.</span> <span class="nav-text">前提</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%98%E9%87%8F"><span class="nav-number">1.2.3.</span> <span class="nav-text">变量</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9A%82%E6%97%B6%E6%80%A7%E6%AD%BB%E5%8C%BA"><span class="nav-number">1.2.3.1.</span> <span class="nav-text">暂时性死区</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%A3%8E%E6%A0%BC%E5%92%8C%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5%EF%BC%81"><span class="nav-number">1.2.3.2.</span> <span class="nav-text">风格和最佳实践！</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="nav-number">1.2.4.</span> <span class="nav-text">数据类型</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Undefined"><span class="nav-number">1.2.4.1.</span> <span class="nav-text">Undefined</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Null"><span class="nav-number">1.2.4.2.</span> <span class="nav-text">Null</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Boolean"><span class="nav-number">1.2.4.3.</span> <span class="nav-text">Boolean</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Number"><span class="nav-number">1.2.4.4.</span> <span class="nav-text">Number</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#String"><span class="nav-number">1.2.4.5.</span> <span class="nav-text">String</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Symbol"><span class="nav-number">1.2.4.6.</span> <span class="nav-text">Symbol</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Object"><span class="nav-number">1.2.4.7.</span> <span class="nav-text">Object</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%93%8D%E4%BD%9C%E7%AC%A6"><span class="nav-number">1.2.5.</span> <span class="nav-text">操作符</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%80%E5%85%83%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="nav-number">1.2.5.1.</span> <span class="nav-text">一元运算符</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BD%8D%E6%93%8D%E4%BD%9C%E7%AC%A6"><span class="nav-number">1.2.5.2.</span> <span class="nav-text">位操作符</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%B8%83%E5%B0%94%E6%93%8D%E4%BD%9C%E7%AC%A6"><span class="nav-number">1.2.5.3.</span> <span class="nav-text">布尔操作符</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B9%98%E6%80%A7%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="nav-number">1.2.5.4.</span> <span class="nav-text">乘性运算符</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%8C%87%E6%95%B0%E6%93%8D%E4%BD%9C%E7%AC%A6"><span class="nav-number">1.2.5.5.</span> <span class="nav-text">指数操作符</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8A%A0%E6%80%A7%E6%93%8D%E4%BD%9C%E7%AC%A6"><span class="nav-number">1.2.5.6.</span> <span class="nav-text">加性操作符</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%85%B3%E7%B3%BB%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="nav-number">1.2.5.7.</span> <span class="nav-text">关系运算符</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%9B%B8%E7%AD%89%E6%93%8D%E4%BD%9C%E7%AC%A6"><span class="nav-number">1.2.5.8.</span> <span class="nav-text">相等操作符</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AF%AD%E5%8F%A5"><span class="nav-number">1.2.6.</span> <span class="nav-text">语句</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%96%91%E6%83%91"><span class="nav-number">2.</span> <span class="nav-text">疑惑</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86"><span class="nav-number">2.1.</span> <span class="nav-text">基础知识</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-32-%E6%9D%A1%E4%BB%B6-amp-for%E5%A3%B0%E6%98%8E"><span class="nav-number">2.1.1.</span> <span class="nav-text">3.32 条件&amp;for声明</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Symbol%E7%B1%BB%E5%9E%8B"><span class="nav-number">2.1.2.</span> <span class="nav-text">Symbol类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">2.1.3.</span> <span class="nav-text"></span></a></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -594,7 +737,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共114.7k字</span>
+  <span class="post-count">博客全站共116.8k字</span>
 </div>
         
 
