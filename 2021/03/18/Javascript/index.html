@@ -23,18 +23,25 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.json"};
   </script>
 
-  <meta name="description" content="stride in the real structure">
+  <meta name="description" content="学完html和css（370集卧槽），继续跟着粉老师学JS，以后回来补移动端">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Javascript">
 <meta property="og:url" content="http://example.com/2021/03/18/Javascript/index.html">
 <meta property="og:site_name" content="Darren Blog">
-<meta property="og:description" content="stride in the real structure">
+<meta property="og:description" content="学完html和css（370集卧槽），继续跟着粉老师学JS，以后回来补移动端">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://gitee.com/darren-greenhand//picture/raw/master/image-20210327151203222.png">
+<meta property="og:image" content="https://gitee.com/darren-greenhand//picture/raw/master/image-20210327151652147.png">
+<meta property="og:image" content="https://gitee.com/darren-greenhand//picture/raw/master/image-20210327153158993.png">
+<meta property="og:image" content="https://gitee.com/darren-greenhand//picture/raw/master/image-20210327153242894%C2%B7.png">
+<meta property="og:image" content="https://gitee.com/darren-greenhand//picture/raw/master/image-20210327153407994.png">
+<meta property="og:image" content="https://gitee.com/darren-greenhand//picture/raw/master/image-20210327163947742.png">
 <meta property="article:published_time" content="2021-03-18T12:57:35.000Z">
-<meta property="article:modified_time" content="2021-03-19T05:04:20.037Z">
+<meta property="article:modified_time" content="2021-03-27T15:18:08.518Z">
 <meta property="article:author" content="Darren">
 <meta property="article:tag" content="JS1">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://gitee.com/darren-greenhand//picture/raw/master/image-20210327151203222.png">
 
 <link rel="canonical" href="http://example.com/2021/03/18/Javascript/">
 
@@ -235,7 +242,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-03-19 13:04:20" itemprop="dateModified" datetime="2021-03-19T13:04:20+08:00">2021-03-19</time>
+                <time title="修改时间：2021-03-27 23:18:08" itemprop="dateModified" datetime="2021-03-27T23:18:08+08:00">2021-03-27</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -248,7 +255,7 @@
             </span>
 
           
-            <div class="post-description">stride in the real structure</div>
+            <div class="post-description">学完html和css（370集卧槽），继续跟着粉老师学JS，以后回来补移动端</div>
 
         </div>
       </header>
@@ -259,7 +266,146 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        
+        <p>[toc]</p>
+<h1 id="JS导读"><a href="#JS导读" class="headerlink" title="JS导读"></a>JS导读</h1><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210327151203222.png" alt="image-20210327151203222" style="zoom:50%;" />
+
+<img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210327151652147.png" alt="image-20210327151652147" style="zoom:50%;" />
+
+<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210327153158993.png" alt="image-20210327153158993"></p>
+<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210327153242894%C2%B7.png" alt="image-20210327153242894"></p>
+<p>第一门课主要学习JS语法，但是最好还是之后看一下JS红宝书</p>
+<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210327153407994.png" alt="image-20210327153407994"></p>
+<h2 id="简史"><a href="#简史" class="headerlink" title="简史"></a>简史</h2><p>这是我去先看了看红宝书第一章</p>
+<p>JS被用于处理表单内容，但让网景公司成为了老大，微软眼红并仿写出了JScript，这是一个基于JS的实现，但由于两者不统一，最后1997年Ecma（欧洲计算机制造商协会）的TC39委员会制定出标准，花费数月时间出台了传说中的ECMA-262,也就是ECMAScript，<strong>此后，各浏览器以此作为实现的依据，但是他们的实现仍有偏好性</strong></p>
+<p>虽然JS和ECMAScript基本是同义词，但是完整的JS实现应包含：</p>
+<ol>
+<li>核心  ECMAScript</li>
+<li>文档对象模型  DOM</li>
+<li>浏览器对象模型  BOM</li>
+</ol>
+<p>ECMAScript连输入输出都没有，他只是一个基准</p>
+<p><strong>Web浏览器是其实现的一种宿主环境（node.js也是一种），提供ECMAScript的基准实现和与环境自身交互必须的拓展！</strong></p>
+<p>拓展，比如DOM，使用ECMAScript核心类型和语法，提供特定于环境的额外功能，</p>
+<p>ESMAScript描述了这门语言的：语法，类型，语句，关键字，保留字，操作符，全局对象</p>
+<p>现在都到ES12了。。。。</p>
+<p>ECMAScript的符合性具备极大的自由度，给了实现开发者很大的权限！</p>
+<p><strong>好多东西没写，一定要到时候好好看看红宝书，太棒了！</strong></p>
+<h2 id="语言基础"><a href="#语言基础" class="headerlink" title="语言基础"></a>语言基础</h2><p>我还是结合着看吧，红宝书全，但是视频有实战经验。</p>
+<h3 id="嵌入HTML"><a href="#嵌入HTML" class="headerlink" title="嵌入HTML"></a>嵌入HTML</h3><p>主要方法是&lt;script&gt;方法，后来被正式加入到HTML规范，他有8个属性，没几个看得懂</p>
+<p>但是defer这个属性使得script不用放在body前（兼容性不好，而且有时候可能出现顺序错乱，最好是只有一个这样的脚本，<strong>更好还是放在body的最后。。。</strong>），src允许使用外部js文件，integrity防止你在引用其他网站js文件时接受到恶意内容，async有很多限制，不推荐使用。。。</p>
+<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210327163947742.png" alt="image-20210327163947742"></p>
+<p>从上到下解释，浏览器解析行内脚本的方式决定了即使字符串出现&lt;/script&gt;也会结束！</p>
+<p>浏览器按照script出现的顺序解释他们，除了defer和async属性。</p>
+<p>引用外部时，script标签之间绝对不能写代码</p>
+<p>还有一些比如“文档模式”啥的鬼东西，看不懂。。。</p>
+<p>&lt;noscript&gt;元素用于优雅降级，先用于那些金庸JS的浏览器，在浏览器不支持脚本或者支持被关闭时，将会渲染在noscript标签中的内容，否则则会被忽视掉，</p>
+<h3 id="前提"><a href="#前提" class="headerlink" title="前提"></a>前提</h3><p>单行注释//   对应快捷键 ctrl + /</p>
+<p>多行注释和c语言一样，是/* */ ,对应快捷键ctrl+shift+/  改了以后</p>
+<p>左下角设置可以直接更改快捷方式</p>
+<p><strong>Js标识符可使用 字母  数字   下划线   美元符号   但是开头不能是数字，惯例是驼峰大小写！</strong></p>
+<p>严格模式</p>
+<p>所有浏览器都支持严格模式，会在遇到不规范写法时抛出错误</p>
+<p>在整个脚本或者某个具体函数开头加上 <code>“use strict”;</code> 来开启</p>
+<p>分号不是必须，但是有助于防止很多问题，也有利于压缩代码，提升性能等</p>
+<p>和C一样，也用{}标识一个代码块</p>
+<p>if类语句和C一样在多条时，必须要代码块，但好习惯是一句也要加代码块</p>
+<p>很多关键字都在各个语言见过，没见过的有</p>
+<p>catch   delete   extends   finally   instanceof   super   throw </p>
+<p>还有一些未来的保留字</p>
+<p>enum  implements  interface  let  package  protected  await</p>
+<h3 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h3><p>ECMAScript变量松散，可以存储任何类型数据，ES6之后才可以用let  const ，var啥时都能用</p>
+<p>基本使用无二，不知道为啥说不推荐改变变量存储的类型，但是完全有效</p>
+<p>在函数内部var会创建局部变量，但是省略var可以创建一个全局变量！</p>
+<p>但是这种做法不被推荐，甚至在严格模式下会抛出ReferenceError</p>
+<p>*<strong>var声明提升！</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    语句<span class="number">1</span></span><br><span class="line">    <span class="keyword">var</span> age = <span class="number">26</span>;</span><br><span class="line">&#125;</span><br><span class="line">实际上被ECMAScript理解为</span><br><span class="line"><span class="keyword">var</span> age;</span><br><span class="line">语句<span class="number">1</span>;</span><br><span class="line">age = <span class="number">26</span></span><br><span class="line">这使得变量可以后声明，也使得变量可以重复声明</span><br></pre></td></tr></table></figure>
+
+<p>var的作用域是函数作用域，if块中声明的var可在外面调用</p>
+<p>let声明的范围是块作用域，而且<strong>不允许冗余声明</strong>（<strong>SyntaxError</strong>）</p>
+<p>但是由于JS引擎会记录变量声明的标识符和所在的块作用域，可以嵌套使用相同的标签</p>
+<p><strong>冗余报错会发生在同时使用var和let时，两个关键字声明的变量是相同的，只是指出变量在相关作用域如何存在。</strong></p>
+<h4 id="暂时性死区"><a href="#暂时性死区" class="headerlink" title="暂时性死区"></a>暂时性死区</h4><p>只要块级作用域内存在<code>let</code>命令，它所声明的变量就“绑定”（binding）这个区域，不再受外部的影响。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> tmp = <span class="number">123</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> (<span class="literal">true</span>) &#123;</span><br><span class="line">  tmp = <span class="string">&#x27;abc&#x27;</span>; <span class="comment">// ReferenceError</span></span><br><span class="line">  <span class="keyword">let</span> tmp;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>上面代码中，存在全局变量<code>tmp</code>，但是块级作用域内<code>let</code>又声明了一个局部变量<code>tmp</code>，导致后者绑定这个块级作用域，所以在<code>let</code>声明变量前，对<code>tmp</code>赋值会报错。</p>
+<p>ES6 明确规定，如果区块中存在<code>let</code>和<code>const</code>命令，这个区块对这些命令声明的变量，从一开始就形成了封闭作用域。凡是在声明之前就使用这些变量，就会报错。</p>
+<p>总之，在代码块内，使用<code>let</code>命令声明变量之前，该变量都是不可用的。这在语法上，称为“暂时性死区”（temporal dead zone，简称 TDZ）。</p>
+<p>这甚至会导致typeof出错，</p>
+<p><strong>与var关键字不同，let在全局作用域中声明的变量不会成为window对象的属性？不懂。。</strong></p>
+<p>const声明时必须同时初始化，而且不能修改，限制只适用于它指向的变量的引用，跟python一样</p>
+<p>对for-of  for-in循环中的不会修改的变量特别有意义。。。。不懂</p>
+<h4 id="风格和最佳实践！"><a href="#风格和最佳实践！" class="headerlink" title="风格和最佳实践！"></a>风格和最佳实践！</h4><ol>
+<li>不使用var</li>
+<li>const优先，let次之</li>
+</ol>
+<h3 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h3><p>6种原始(简单)数据类型：Undefined Null Boolean Number String Symbol(ES6)</p>
+<p>1中复杂数据类型：Object，这是一种无序名值对的集合</p>
+<p>ES中不能定义自己的数据类型，但这些类型很灵活，一种能当多种数据类型用</p>
+<p>typeof <strong>操作符，它不是函数</strong>，返回数据类型，也可以判断函数（返回’function’）</p>
+<p>虽然函数也被ES认为是对象，但它们有特殊的属性，因此被typeof独立区分</p>
+<h4 id="Undefined"><a href="#Undefined" class="headerlink" title="Undefined"></a>Undefined</h4><p>只有一个值undefined, var/let声明对象但未初始化就会赋予undefined</p>
+<p>他理论上永远不用与显式赋值，只是为了<em><strong>区别空对象指针null和未初始化指针</strong></em></p>
+<p>但由于未声明的变量typeof也会返回undefined，所以最好还是在声明时就初始化</p>
+<p>这是一个假值，但是也有很多其他的假值，所以不要依靠真假判断是否是undefined</p>
+<h4 id="Null"><a href="#Null" class="headerlink" title="Null"></a>Null</h4><p>只有一个值null，<strong>逻辑上讲，null值表示一个空对象指针，</strong>所以typeof null返回object</p>
+<p>声明时如果暂时不用赋值，最好赋一个null</p>
+<p>undefined是由null值派生的，所以表面相等(null == undifined)</p>
+<p>这是一个假值，但是也有很多其他的假值，所以不要依靠真假判断是否是null</p>
+<h4 id="Boolean"><a href="#Boolean" class="headerlink" title="Boolean"></a>Boolean</h4><p>俩值，true  false，但是此处的布尔值不同于数值，所以不再是等于 1 和 0（哈哈，特意提醒）</p>
+<p>所有类型的值都有相应布尔值的等价形式，通过Boolean（）转型函数转换</p>
+<table>
+<thead>
+<tr>
+<th>数据类型</th>
+<th>true值</th>
+<th>false值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Boolean</td>
+<td>true</td>
+<td>false</td>
+</tr>
+<tr>
+<td>String</td>
+<td>非空字符串</td>
+<td>“”</td>
+</tr>
+<tr>
+<td>Number</td>
+<td>非零值（包括无穷）</td>
+<td>0  NaN</td>
+</tr>
+<tr>
+<td>Object</td>
+<td>任意对象</td>
+<td>null</td>
+</tr>
+<tr>
+<td>Undefined</td>
+<td></td>
+<td>undefined</td>
+</tr>
+</tbody></table>
+<p>非常重要，因为if等流控制语句会自动执行该转换</p>
+<h4 id="Number"><a href="#Number" class="headerlink" title="Number"></a>Number</h4><p>整数</p>
+<p>八进制和十六进制规则和C一样，但是八进制如果写错了直接忽略0当成十进制，数学操作中都当成十进制</p>
+<p>严格模式不能使用八进制前缀0，要用0o</p>
+<p>由于JS保存数值的方式，会存在正零，负零，是等价的</p>
+<p>浮点数</p>
+<p>存储空间是整数两倍，所以JS会尽可能把它们变成整数，如果小数点后为0，直接给你改成整数(21.0)</p>
+<p>ES会将小数点后至少6个0的浮点数转换为科学计数法</p>
+<p>浮点数精确度高达17位小数，但是也存在如C般很小的偏差问题，因此不要用 == 对待浮点数</p>
+<p>这是IEEE 754数值标准导致的。。</p>
+<p>最小值Number.MIN_VALUE  5e-324  再小 -Infinity（Number.NEGATIVE_INFINITY）</p>
+<p>最大值Number.Max_VALUE 1.79………………r+308, 再大 Infinity（Number.POSITIVE_INFINITY）</p>
+<p>0作分子返回NaN（not a number） 作分母返回正负Infinity</p>
+<p>NaN有一些诡异的属性：</p>
+<ol>
+<li>任何设计NaN的操作始终返回NaN(如NaN/10)</li>
+<li></li>
+</ol>
+<h1 id="疑惑"><a href="#疑惑" class="headerlink" title="疑惑"></a>疑惑</h1><h2 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h2><h3 id="3-32-条件-amp-for声明"><a href="#3-32-条件-amp-for声明" class="headerlink" title="3.32 条件&amp;for声明"></a>3.32 条件&amp;for声明</h3>
     </div>
 
     
@@ -361,6 +507,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#JS%E5%AF%BC%E8%AF%BB"><span class="nav-number">1.</span> <span class="nav-text">JS导读</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AE%80%E5%8F%B2"><span class="nav-number">1.1.</span> <span class="nav-text">简史</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80"><span class="nav-number">1.2.</span> <span class="nav-text">语言基础</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B5%8C%E5%85%A5HTML"><span class="nav-number">1.2.1.</span> <span class="nav-text">嵌入HTML</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%89%8D%E6%8F%90"><span class="nav-number">1.2.2.</span> <span class="nav-text">前提</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%98%E9%87%8F"><span class="nav-number">1.2.3.</span> <span class="nav-text">变量</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9A%82%E6%97%B6%E6%80%A7%E6%AD%BB%E5%8C%BA"><span class="nav-number">1.2.3.1.</span> <span class="nav-text">暂时性死区</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%A3%8E%E6%A0%BC%E5%92%8C%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5%EF%BC%81"><span class="nav-number">1.2.3.2.</span> <span class="nav-text">风格和最佳实践！</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="nav-number">1.2.4.</span> <span class="nav-text">数据类型</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Undefined"><span class="nav-number">1.2.4.1.</span> <span class="nav-text">Undefined</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Null"><span class="nav-number">1.2.4.2.</span> <span class="nav-text">Null</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Boolean"><span class="nav-number">1.2.4.3.</span> <span class="nav-text">Boolean</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Number"><span class="nav-number">1.2.4.4.</span> <span class="nav-text">Number</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%96%91%E6%83%91"><span class="nav-number">2.</span> <span class="nav-text">疑惑</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86"><span class="nav-number">2.1.</span> <span class="nav-text">基础知识</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-32-%E6%9D%A1%E4%BB%B6-amp-for%E5%A3%B0%E6%98%8E"><span class="nav-number">2.1.1.</span> <span class="nav-text">3.32 条件&amp;for声明</span></a></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -447,7 +594,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共112.4k字</span>
+  <span class="post-count">博客全站共114.7k字</span>
 </div>
         
 
