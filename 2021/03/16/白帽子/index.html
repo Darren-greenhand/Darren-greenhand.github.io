@@ -4,7 +4,7 @@
 
 <head>
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
-    <meta name="keywords" content="dom和bom超浅先学, 一隅于浮华">
+    <meta name="keywords" content="白帽子讲web安全, 一隅于浮华">
     <meta name="description" content="犹豫的学习Web全栈和安全的新手博客">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>dom和bom超浅先学 | 一隅于浮华</title>
+    <title>白帽子讲web安全 | 一隅于浮华</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -312,12 +312,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/20.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/1.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">dom和bom超浅先学</h1>
+                    <h1 class="description center-align post-title">白帽子讲web安全</h1>
                 </div>
             </div>
         </div>
@@ -433,8 +433,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/pink/">
-                                <span class="chip bg-color">pink</span>
+                            <a href="/tags/web-security/">
+                                <span class="chip bg-color">web-security</span>
                             </a>
                         
                     </div>
@@ -445,8 +445,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/web-front-end/" class="post-category">
-                                web-front-end
+                            <a href="/categories/security/" class="post-category">
+                                security
                             </a>
                         
                     </div>
@@ -458,7 +458,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-04-02
+                    2021-03-16
                 </div>
                 
 
@@ -474,7 +474,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    4 分
+                    13 分
                 </div>
                 
 
@@ -494,207 +494,69 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>为了应付俩招新而学学黑马</p>
-<p>结果学着学着忘记原先目的了。。。</p>
-<p>既然都记了这么多了</p>
-<h1 id="对象"><a href="#对象" class="headerlink" title="对象"></a>对象</h1><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210330093612480.png" alt="image-20210330093612480" style="zoom:50%;" />
-
-<img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210330093644248.png" alt="image-20210330093644248" style="zoom:50%;" />
-
-
-
-<p><strong>构造函数首字母大写</strong></p>
-<p>this！</p>
-<p>!(<a target="_blank" rel="noopener" href="https://gitee.com/darren-greenhand//picture/raw/master/image-20210330213907799.png">https://gitee.com/darren-greenhand//picture/raw/master/image-20210330213907799.png</a>)</p>
-<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210330214012724.png" alt="image-20210330214012724"></p>
-<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210330225348643.png" alt="image-20210330225348643"></p>
-<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210330225823667.png" alt="image-20210330225823667"></p>
-<p>其实函数也能遍历到，但是很少用</p>
-<h1 id="内置对象"><a href="#内置对象" class="headerlink" title="内置对象"></a>内置对象</h1><p>对象分：自定义，内置，浏览器对象</p>
-<p>前俩是ES里的，浏览器对象是JS独有的</p>
-<p>内置对象就是JS自带的，提供了最常用的和最基本的功能</p>
-<p>可以查询MDN文档</p>
-<h3 id="Math"><a href="#Math" class="headerlink" title="Math"></a>Math</h3><p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210330231721351.png" alt="image-20210330231721351"></p>
-<p>Math.random()返回一个随机小数 0&lt;= x &lt; 1</p>
-<p>MDN提供了以此为基础的得到各种随机数的方法</p>
-<h1 id="DOM"><a href="#DOM" class="headerlink" title="DOM"></a>DOM</h1><p>元素是标签</p>
-<p>节点：所有内容，标签，属性，。。。</p>
-<p>DOM把所有内容看作对象</p>
-<p>因为文档页面从上往下加载，所以script</p>
-<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210330233811008.png" alt="image-20210330233811008"></p>
-<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210330234121849.png" alt="image-20210330234121849"></p>
-<p>如果没有</p>
-<p>小心不要把伪数组当初对象哟</p>
-<p>document.querySelector 返回指定选择器的第一个元素对象</p>
-<p>document.querySelectorAll</p>
-<p>获取<strong>body</strong>直接document.body，HTML 是documentElement</p>
-<h2 id="事件基础"><a href="#事件基础" class="headerlink" title="事件基础"></a>事件基础</h2><p>事件是可以被JS侦测到的行为</p>
-<p>是一种触发–响应机制</p>
-<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210330235606717.png" alt="image-20210330235606717"></p>
-<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210330235841646.png" alt="image-20210330235841646"></p>
-<h2 id="改变内容"><a href="#改变内容" class="headerlink" title="改变内容"></a>改变内容</h2><p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210330235939513.png" alt="image-20210330235939513"></p>
-<p>innerHTML是W3C推荐的</p>
-<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210331000356033.png" alt="image-20210331000356033"></p>
-<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210331001227962.png" alt="image-20210331001227962"></p>
-<p>所以标签的属性在DOM中被当作属性</p>
-<p>记得表单里显示的内容是value属性</p>
-<h2 id="修改样式"><a href="#修改样式" class="headerlink" title="修改样式"></a>修改样式</h2><p><strong>行内样式（优先级最高）</strong></p>
-<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210331084125584.png" alt="image-20210331084125584"></p>
-<p>循环精灵图</p>
-<p>onfocus</p>
-<p>onblur</p>
-<p>提前准备好另一个类，然后修改类名</p>
-<p>element.className = “change”</p>
-<p>这会覆盖原先的类名</p>
-<p>不想覆盖则 .class<strong>Name</strong> += “ new”</p>
-<h3 id="排他思想"><a href="#排他思想" class="headerlink" title="排他思想"></a>排他思想</h3><p>先清除其他所有，再给自己设置</p>
-<p>onmouseovr          onmouseout</p>
-<h2 id="获得属性"><a href="#获得属性" class="headerlink" title="获得属性"></a>获得属性</h2><p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210331234557420.png" alt="image-20210331234557420"></p>
-<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210331234830475.png" alt="image-20210331234830475"></p>
-<p>.removeAttribute(‘index’)</p>
-<p>display none/block</p>
-<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210331235859797.png" alt="image-20210331235859797"></p>
-<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210401000324162.png" alt="image-20210401000324162"></p>
-<p><strong>自定义属性</strong>（在页面而不是服务器存储并使用数据）</p>
-<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210401000808430.png" alt="image-20210401000808430"></p>
-<p>ie11以上才有dataset，一般使用getAttribute</p>
-<h2 id="节点操作"><a href="#节点操作" class="headerlink" title="节点操作"></a>节点操作</h2><h3 id="获得节点"><a href="#获得节点" class="headerlink" title="获得节点"></a>获得节点</h3><p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210401001133305.png" alt="image-20210401001133305"></p>
-<p>dir方法用来对一个对象进行检查（inspect），并以易于阅读和打印的格式显示。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(&#123;<span class="attr">f1</span>: <span class="string">&#x27;foo&#x27;</span>, <span class="attr">f2</span>: <span class="string">&#x27;bar&#x27;</span>&#125;)</span><br><span class="line"><span class="comment">// Object &#123;f1: &quot;foo&quot;, f2: &quot;bar&quot;&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.dir(&#123;<span class="attr">f1</span>: <span class="string">&#x27;foo&#x27;</span>, <span class="attr">f2</span>: <span class="string">&#x27;bar&#x27;</span>&#125;)</span><br><span class="line"><span class="comment">// Object</span></span><br><span class="line"><span class="comment">//   f1: &quot;foo&quot;</span></span><br><span class="line"><span class="comment">//   f2: &quot;bar&quot;</span></span><br><span class="line"><span class="comment">//   __proto__: Object</span></span><br></pre></td></tr></table></figure>
-
-<p>上面代码显示dir方法的输出结果，比log方法更易读，信息也更丰富。</p>
-<p>该方法对于输出DOM对象非常有用，因为会显示DOM对象的所有属性。</p>
-<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210401001628811.png" alt="image-20210401001628811"></p>
-<p><strong>父子关系</strong></p>
-<p>node.parentNode(离元素最近的父级节点，找不到返回null)</p>
-<p>.node.childNodes()集合(包含元素节点和文本节点等等)，用nodetype加以筛选</p>
-<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210401103705538.png" alt="image-20210401103705538"></p>
-<p>非官方但是被广泛支持<strong>：.children</strong>(集合)</p>
-<p>.firstChild    .lastChild   这个会返回（元素节点或文本节点，超坑的是换行也是一个文本节点！）</p>
-<p>兼容性问题👇IE9</p>
-<p>.firstElementChild</p>
-<p>.lastElementChild</p>
-<p>兄弟节点用的很少</p>
-<p>实际开发写法还是用ol.children[0]和ol.children[ol.children.length-1]或者自己知道数量</p>
-<p>.node.nextSibling </p>
-<p>.node.previousSibling</p>
-<p>这俩也会看到文本节点</p>
-<p>兼容性问题👇IE9</p>
-<p>.node.nextElementSibling</p>
-<p>node.previousElementSibling</p>
-<h3 id="创建添加节点"><a href="#创建添加节点" class="headerlink" title="创建添加节点"></a>创建添加节点</h3><p>document.createElement(‘li’)</p>
-<p>node.appendChild(child) node 父级  child子级</p>
-<p>这是后面追加元素</p>
-<p>node.insertBefore()</p>
-<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210401152243420.png" alt="image-20210401152243420"></p>
-<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210401155757774.png" alt="image-20210401155757774"></p>
-<h3 id="删除节点"><a href="#删除节点" class="headerlink" title="删除节点"></a>删除节点</h3><p>node.removeChild() 删的必须是子元素，</p>
-<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210401153308442.png" alt="image-20210401153308442"></p>
-<h3 id="复制添加节点"><a href="#复制添加节点" class="headerlink" title="复制添加节点"></a>复制添加节点</h3><p>new = node.cloneNode()</p>
-<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210401154336923.png" alt="image-20210401154336923"></p>
-<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210401160340035.png" alt="image-20210401160340035"></p>
-<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210401160426412.png" alt="image-20210401160426412"></p>
-<h1 id="事件高级"><a href="#事件高级" class="headerlink" title="事件高级"></a>事件高级</h1><h2 id="注册事件"><a href="#注册事件" class="headerlink" title="注册事件"></a>注册事件</h2><p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210401162928938.png" alt="image-20210401162928938"></p>
-<h2 id="删除事件"><a href="#删除事件" class="headerlink" title="删除事件"></a>删除事件</h2><p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210401164058073.png" alt="image-20210401164058073"></p>
-<h2 id="事件流"><a href="#事件流" class="headerlink" title="事件流"></a>事件流</h2><p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210401164303889.png" alt="image-20210401164303889"></p>
-<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210401165042532.png" alt="image-20210401165042532"></p>
-<h2 id="事件对象"><a href="#事件对象" class="headerlink" title="事件对象"></a>事件对象</h2><p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210401165508731.png" alt="image-20210401165508731"></p>
-<p>兼容性问题 e = <strong>e||window.event</strong></p>
-<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210401165948856.png" alt="image-20210401165948856"></p>
-<p>event有个类似this的属性 currentTarget,没啥鬼用</p>
-<p><strong>兼容性问题处理👇</strong></p>
-<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210401170039029.png" alt="image-20210401170039029"></p>
-<p><strong>阻止默认行为</strong></p>
-<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210401170434080.png" alt="image-20210401170434080"></p>
-<p>或者直接return false; 谁都能用但是return后的代码不执行，而且只用于传统的注册方式</p>
-<p>直接preventDefault吧，</p>
-<p><strong>阻止冒泡</strong></p>
-<p>event.stopPropagation(); 兼容性问题。。</p>
-<p>event.cancelBubble;老版本</p>
-<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210401172331089.png" alt="image-20210401172331089"></p>
-<h2 id="事件委托"><a href="#事件委托" class="headerlink" title="事件委托"></a>事件委托</h2><p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210401172602216.png" alt="image-20210401172602216"></p>
-<p>配合e.target就很牛逼</p>
-<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210401172819901.png" alt="image-20210401172819901"></p>
-<h2 id="常用事件"><a href="#常用事件" class="headerlink" title="常用事件"></a>常用事件</h2><h3 id="禁止右键和选中文字"><a href="#禁止右键和选中文字" class="headerlink" title="禁止右键和选中文字"></a>禁止右键和选中文字</h3><p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210401193332860.png" alt="image-20210401193332860"></p>
-<p>然而做得好的网站也不知道用什么方法防住了偷取内容。。</p>
-<h3 id="鼠标事件对象"><a href="#鼠标事件对象" class="headerlink" title="鼠标事件对象"></a>鼠标事件对象</h3><p>MouseEvent</p>
-<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210401194638742.png" alt="image-20210401194638742"></p>
-<p>mousemove 鼠标移动1px就会触发</p>
-<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210401195727163.png" alt="image-20210401195727163"></p>
-<p>记得css修改img为position: absolute</p>
-<h3 id="键盘数据对象"><a href="#键盘数据对象" class="headerlink" title="键盘数据对象"></a>键盘数据对象</h3><p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210401200249491.png" alt="image-20210401200249491"></p>
-<p>如果一直按着，down和press会一直输出。。</p>
-<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210401200749931.png" alt="image-20210401200749931"></p>
-<img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210401202950239.png" alt="image-20210401202950239"  />
-
-
-
-<h1 id="BOM"><a href="#BOM" class="headerlink" title="BOM"></a>BOM</h1><p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210401205111068.png" alt="image-20210401205111068"></p>
-<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210401205237508.png" alt="image-20210401205237508"></p>
-<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210401205457047.png" alt="image-20210401205457047"></p>
-<p>所以不要声明名叫name的全局变量</p>
-<h2 id="常见事件"><a href="#常见事件" class="headerlink" title="常见事件"></a>常见事件</h2><p><strong>窗口加载</strong></p>
-<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210401205732846.png" alt="image-20210401205732846"></p>
-<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210401205907695.png" alt="image-20210401205907695"></p>
-<p><strong>调整窗口大小</strong></p>
-<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210401210145839.png" alt="image-20210401210145839"></p>
-<p>只要大小像素变化就会触发resize</p>
-<h3 id="定时器"><a href="#定时器" class="headerlink" title="定时器"></a><em><strong>定时器</strong></em></h3><p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210401210627622.png" alt="image-20210401210627622"></p>
-<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210401210647133.png" alt="image-20210401210647133"></p>
-<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210401210753231.png" alt="image-20210401210753231"></p>
-<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210401211057397.png" alt="image-20210401211057397"></p>
-<p>拯救男主角  clearTimeout(timerID)</p>
-<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210401211607592.png" alt="image-20210401211607592"></p>
-<p><strong>倒计时！</strong></p>
-<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210401212252996.png" alt="image-20210401212252996"></p>
-<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210401212543518.png" alt="image-20210401212543518"></p>
-<h2 id="JS执行队列"><a href="#JS执行队列" class="headerlink" title="JS执行队列"></a>JS执行队列</h2><p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210401213938731.png" alt="image-20210401213938731"></p>
-<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210401214513695.png" alt="image-20210401214513695"></p>
-<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210401214628030.png" alt="image-20210401214628030"></p>
-<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210401215019237.png" alt="image-20210401215019237"></p>
-<p>如定时器3秒，就是3秒后吧事件放到任务队列中</p>
-<h2 id="location对象"><a href="#location对象" class="headerlink" title="location对象"></a>location对象</h2><p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210401215151934.png" alt="image-20210401215151934"></p>
-<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210401215422449.png" alt="image-20210401215422449"></p>
-<p>传递参数</p>
-<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210401220658628.png" alt="image-20210401220658628"></p>
-<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210401220733210.png" alt="image-20210401220733210"></p>
-<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210401220946122.png" alt="image-20210401220946122"></p>
-<h2 id="navigator对象"><a href="#navigator对象" class="headerlink" title="navigator对象"></a>navigator对象</h2><p>navigator.userAgent对象存储了用户使用的浏览器的信息</p>
-<h2 id="history对象"><a href="#history对象" class="headerlink" title="history对象"></a>history对象</h2><p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210401221612109.png" alt="image-20210401221612109"></p>
-<h1 id="网页特效"><a href="#网页特效" class="headerlink" title="网页特效"></a>网页特效</h1><h2 id="offset系列"><a href="#offset系列" class="headerlink" title="offset系列"></a>offset系列</h2><p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210401221901011.png" alt="image-20210401221901011"></p>
-<p>在用后面俩的时候记得加上 + ‘px’</p>
-<p>没有带定位的父亲则以一直网上找直到。。body</p>
-<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210401222324755.png" alt="image-20210401222324755"></p>
-<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210401222559804.png" alt="image-20210401222559804"></p>
-<h3 id="拖动模态框"><a href="#拖动模态框" class="headerlink" title="拖动模态框"></a>拖动模态框</h3><p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210401230220830.png" alt="image-20210401230220830"></p>
-<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210401230651020.png" alt="image-20210401230651020"></p>
-<h3 id="电商放大图"><a href="#电商放大图" class="headerlink" title="电商放大图"></a>电商放大图</h3><p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210401231203726.png" alt="image-20210401231203726"></p>
-<p>大图片是一个图片，overflow:hidden</p>
-<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210401231551677.png" alt="image-20210401231551677"></p>
-<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210401231934835.png" alt="image-20210401231934835"></p>
-<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210401232233398.png" alt="image-20210401232233398"></p>
-<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210401232246907.png" alt="image-20210401232246907"></p>
-<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210401233200379.png" alt="image-20210401233200379"></p>
-<h2 id="client系列"><a href="#client系列" class="headerlink" title="client系列"></a>client系列</h2><p>可视区</p>
-<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210401233316513.png" alt="image-20210401233316513"></p>
-<h3 id="立即执行函数"><a href="#立即执行函数" class="headerlink" title="立即执行函数"></a>立即执行函数</h3><p>无需调用，立马自己执行的函数，第二个小括号可以看成是调用函数</p>
-<p>最大的作用是独立创建了个作用域</p>
-<ol>
-<li><p>(function () {} )  ()</p>
-<p>如 (function (a.b) {console.log(a+b); } )  (1,2)  //传参</p>
+                <p>[toc]</p>
+<h1 id="思想和前提"><a href="#思想和前提" class="headerlink" title="思想和前提"></a>思想和前提</h1><h2 id="简史"><a href="#简史" class="headerlink" title="简史"></a>简史</h2><p>​    在黑客的世界里，有的黑客，精通计算机技术，能自己挖掘漏洞，并编写exploit；而有的黑客，则只对攻击本身感兴趣，对计算机原理和各种编程技术的了解比较粗浅，因此只懂得编译别人的代码，自己并没有动手能力，这种黑客被称为“Script Kids”，即“脚本小子”。在现实世界里，真正造成破坏的，往往并非那些挖掘并研究漏洞的“黑客”们，而是这些脚本小子。而在今天已经形成产业的计算机犯罪、网络犯罪中，造成主要破坏的，也是这些“脚本小子”。</p>
+<p>​    中国黑客的发展分为几个阶段，到今天已经形成了一条黑色产业链。</p>
+<p>笔者把中国黑客的发展分为了：<strong>启蒙时代、黄金时代、黑暗时代。</strong></p>
+<p>​    首先是启蒙时代，这个时期大概处在20世纪90年代，此时中国的互联网也刚刚处于起步阶段，一些热爱新兴技术的青年受到国外黑客技术的影响，开始研究安全漏洞。启蒙时代的黑客们大多是由于个人爱好而走上这条道路，好奇心与求知欲是驱使他们前进的动力，没有任何利益的瓜葛。这个时期的中国黑客们通过互联网，看到了世界，因此与西方发达国家同期诞生的黑客精神是一脉相传的，他们崇尚分享、自由、免费的互联网精神，并热衷于分享自己的最新研究成果。</p>
+<p>​    接下来是黄金时代，这个时期以中美黑客大战为标志。在这个历史背景下，黑客这个特殊的群体一下子几乎吸引了社会的所有眼球，而此时黑客圈子所宣扬的黑客文化以及黑客技术的独特魅力也吸引了无数的青少年走上这条道路。自此事件后，各种黑客组织如雨后春笋般冒出。此阶段的中国黑客，其普遍的特点是年轻，有活力，充满激情，但在技术上也许还不够成熟。此时期黑客圈子里贩卖漏洞、恶意软件的现象开始升温，同时因为黑客群体的良莠不齐，也开始出现以赢利为目的的攻击行为，黑色产业链逐渐成型。</p>
+<p>​    最后是黑暗时代，这个阶段从几年前开始一直延续到今天，也许还将继续下去。在这个时期黑客组织也遵循着社会发展规律，优胜劣汰，大多数的黑客组织没有坚持下来。在上一个时期非常流行的黑客技术论坛越来越缺乏人气，最终走向没落。所有门户型的漏洞披露站点，也不再公布任何漏洞相关的技术细节。</p>
+<h2 id="web安全发展"><a href="#web安全发展" class="headerlink" title="web安全发展"></a>web安全发展</h2><p>Web攻击技术的发展也可以分为几个阶段。在Web 1.0时代，人们更多的是关注服务器端动态脚本的安全问题，比如将一个可执行脚本（俗称webshell）上传到服务器上，从而获得权限。动态脚本语言的普及，以及Web技术发展初期对安全问题认知的不足导致很多“血案”的发生，同时也遗留下很多历史问题，比如PHP语言至今仍然只能靠<br>较好的代码规范来保证没有文件包含漏洞，而无法从语言本身杜绝此类安全问题的发生。</p>
+<p>SQL注入的出现是Web安全史上的一个里程碑，它最早出现大概是在1999年，并很快就成为Web安全的头号大敌。就如同缓冲区溢出出现时一样，程序员们不得不日以继夜地去修改程序中存在的漏洞。黑客们发现通过SQL注入攻击，可以获取很多重要的、敏感的数据，甚至能够通过数据库获取系统访问权限，这种效果并不比直接攻击系<br>统软件差，Web攻击一下子就流行起来。SQL注入漏洞至今仍然是Web安全领域中的一个重要组成部分。</p>
+<p>XSS（跨站脚本攻击）的出现则是Web安全史上的另一个里程碑。实际上，XSS的出现时间和SQL注入差不多，但是真正引起人们重视则是在大概2003年以后。在经历了MySpace的XSS蠕虫事件后，安全界对XSS的重视程度提高了很多，OWASP 2007TOP 10威胁甚至把XSS排在榜首。伴随着Web 2.0的兴起，XSS、CSRF等攻击已经变得更为强大。Web攻击的思路也从服务器端转向了客户端，转向了浏览器和用户。黑客们天马行空的思路，覆盖了Web的每一个环节，变得更加的多样化，这些安全问题，在本书后续的章节中会深入地探讨。</p>
+<h2 id="军备竞赛"><a href="#军备竞赛" class="headerlink" title="军备竞赛"></a>军备竞赛</h2><p>对于黑帽子来说，只要能够找到系统的一个弱点，就可以达到入侵系统的目的；而对于白帽子来说，必须找到系统的所有弱点，不能有遗漏，才能保证系统不会出现问题。这种差异是由于工作环境与工作目标的不同所导致的。白帽子一般为企业或安全公司服务，工作的出发点就是要解决所有的安全问题，因此所看所想必然要求更加的全面、宏观；黑帽子的主要目的是要入侵系统，找到对他们有价值的数据，因此黑帽子只需要以点突破，找到对他们最有用的一点，以此渗透，因此思考问题的出发点必然是有选择性的、微观的。</p>
+<p>从对待问题的角度来看，黑帽子为了完成一次入侵，需要利用各种不同漏洞的组合来达到目的，是在不断地组合问题；而白帽子在设计解决方案时，如果只看到各种问题组合后产生的效果，就会把事情变复杂，难以细致入微地解决根本问题，所以白帽子必然是在不断地分解问题，再对分解后的问题逐个予以解决。</p>
+<p>防御技术在不断完善的同时，攻击技术也在不断地发展。这就像一场军备竞赛，看谁跑在前面。白帽子们刚把某一种漏洞全部堵上，黑帽子们转眼又会玩出新花样。谁能在技术上领先，谁就能占据主动。互联网技术日新月异，在新技术领域的发展中，也存在着同样的博弈过程。可现状是，如果新技术不在一开始就考虑安全设计的话，防御技术就必然会落后于攻击技术，导致历史不断地重复。</p>
+<h2 id="安全是什么"><a href="#安全是什么" class="headerlink" title="安全是什么"></a>安全是什么</h2><p>笔者认为，安全问题的本质是<strong>信任的问题</strong>。<br>一切的安全方案设计的基础，都是建立在信任关系上的。我们必须相信一些东西，必须有一些最基本的假设，安全方案才能得以建立；如果我们否定一切，安全方案就会如无源之水，无根之木，无法设计，也无法完成。</p>
+<p>在现实生活中，我们很少设想最极端的前提条件，因为极端的条件往往意味者小概率以及高成本，因此在成本有限的情况下，我们往往会根据成本来设计安全方案，并将一些可能性较大的条件作为决策的主要依据。</p>
+<p>从另一个角度来说，一旦我们作为决策依据的条件被打破、被绕过，那么就会导致安全假设的前提条件不再可靠，变成一个伪命题。因此，把握住信任条件的度，使其恰到好处，正是设计安全方案的难点所在，也是安全这门学问的艺术魅力所在</p>
+<h2 id="三要素"><a href="#三要素" class="headerlink" title="三要素"></a>三要素</h2><p>安全三要素是安全的基本组成元素，分别是<br>机密性（Confidentiality）、完整性（Integrity）、可用性（Availability）。</p>
+<p>机密性要求保护数据内容不能泄露，加密是实现机密性要求的常见手段。</p>
+<p>完整性则要求保护数据内容是完整、没有被篡 改的。常见的保证一致性的技术手段是数字签名。</p>
+<p>可用性要求保护资源是“随需而得”</p>
+<p>在安全领域中，最基本的要素就是这三个，后来还有人想扩充这些要素，增加了诸如可审计性、不可抵赖性等，但最最重要的还是以上三个要素。在设计安全方案时，也要以这三个要素为基本的出发点，去全面地思考所面对的问题</p>
+<h2 id="安全评估"><a href="#安全评估" class="headerlink" title="安全评估"></a>安全评估</h2><p>一个安全评估的过程，可以简单地分为4个阶段：资产等级划分、威胁分析、风险分析、确认解决方案。</p>
+<p>如果面对的是一个尚未评估的系统，那么应该从第一个阶段开始实施；如果是由专职的安全团队长期维护的系统，那么有些阶段可以只实施一次。在这几个阶段中，上一个阶段将决定下一个阶段的目标，需要实施到什么程度</p>
+<p>我们前面提到安全三要素时，机密性和完整性都是与数据相关的，在可用性的定义里，笔者则用到了“资源”一词。“资源”这个概念描述的范围比数据要更加广阔，但很多时候，资源的可用性也可以理解为数据的可用性。</p>
+<p>互联网安全的核心问题，是数据安全的问题。</p>
+<h2 id="威胁-amp-风险分析"><a href="#威胁-amp-风险分析" class="headerlink" title="威胁&amp;风险分析"></a>威胁&amp;风险分析</h2><p>在安全领域里，我们把可能造成危害的来源称为威胁（Threat），而把可能会出现的损失称为风险（Risk）。风险<br>一定是和损失联系在一起的，很多专业的安全工程师也经常把这两个概念弄混，在写文档时张冠李戴。现在把这两个概念区分好，有助于我们接下来要提到的“威胁建模”和“风险分析”两个阶段，这两个阶段的联系是很紧密的</p>
+<p>STRIDE是6个单词的首字母缩写，我们在分析威胁时，可以从以下6个方面去考虑。</p>
+<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210316115131257.png" alt="image-20210316115131257"></p>
+<p>在进行威胁分析时，要尽可能地不遗漏威胁，头脑风暴的过程可以确定攻击面（Attack Sur-face）</p>
+<p>风险由以下因素组成：<br>Risk = Probability * Damage Potential<br>影响风险高低的因素，除了造成损失的大小外，还需要考虑到发生的可能性</p>
+<p>微软DREAD模型</p>
+<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210316115222398.png" alt="image-20210316115222398"></p>
+<p>模型是死的，人是活的，再好的模型也是需要人来使用的，在确定攻击面，以及判断风险高低时，都需要有一定的经验，这也是安全工程师的价值所在。模型只能起到一个辅助的作用，最终做出决策的还是人</p>
+<h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><p>安全评估的产出物，就是安全解决方案。解决方案一定要有针对性，这种针对性是由资产等级划分、威胁分析、风险分析等阶段的结果给出的</p>
+<p>在设计安全方案时应该尽可能地不要改变商业需求的初衷</p>
+<p>最终，一个优秀的安全方案应该具备以下特点：</p>
+<ul>
+<li>能够有效解决问题；</li>
+<li>用户体验好；</li>
+<li>高性能；</li>
+<li>低耦合；</li>
+<li>易于扩展与升级。</li>
+</ul>
+<h2 id="白帽子兵法"><a href="#白帽子兵法" class="headerlink" title="白帽子兵法"></a>白帽子兵法</h2><p>Secure By Default，是时刻要牢记的总则；</p>
+<p>纵深防御，是要更全面、更正确地看待问题；</p>
+<p>数据与代码分离，是从漏洞成因上看问题，</p>
+<p>“不可预测性”原则，则是从克服攻击方法的角度看问题</p>
+<h3 id="Secure-By-Default原则"><a href="#Secure-By-Default原则" class="headerlink" title="Secure By Default原则"></a>Secure By Default原则</h3><p>Secure by Default”原则，也可以归纳为白名单、黑名单的思想。如果更多地使用白名单，那么系统就会变得更安全，黑名单可能会有遗漏</p>
+<p>选择白名单的思想，基于白名单来设计安全方案，其实就是信任白名单是好的，是安全的。但是一旦这个信任基础不存在了，那么安全就荡然无存</p>
+<h3 id="最小权限原则"><a href="#最小权限原则" class="headerlink" title="最小权限原则"></a>最小权限原则</h3><p>最小权限原则也是安全设计的基本原则之一。最小权限原则要求系统只授予主体必要的权限，而不要过度授权，这<br>样能有效地减少系统、网络、应用、数据库出错的机会。</p>
+<h3 id="纵深防御原则"><a href="#纵深防御原则" class="headerlink" title="纵深防御原则"></a>纵深防御原则</h3><ol>
+<li><p>首先，要在各个不同层面、不同方面实施安全方案，避免出现疏漏，不同安全方案之间需要相互配合，构成一个整体纵深防御并不是同一个安全方案要做两遍或多遍，而是要从不同的层面、不同的角度对系统做出整体的解决方案，在这些不同层面设计的安全方案，将共同组成整个防御体系，这也就是纵深防御的思想</p>
 </li>
-<li><p>(function () {} () )</p>
+<li><p>其次，要在正确的地方做正确的事情，即：在解决根本问题的地方实施针对性的安全方案，必须把防御方案<br>放到最合适的地方去解决</p>
 </li>
 </ol>
-<p>很多flexble核心源码是有关这个的</p>
-<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210401234824479.png" alt="image-20210401234824479"></p>
-<h2 id="Scroll系列"><a href="#Scroll系列" class="headerlink" title="Scroll系列"></a>Scroll系列</h2><p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210401235104065.png" alt="image-20210401235104065"></p>
-<p>onscroll事件，滚动事件</p>
-<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210401235720069.png" alt="image-20210401235720069"></p>
-<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210401235854824.png" alt="image-20210401235854824"></p>
-<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210402000122850.png" alt="image-20210402000122850"></p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p><img src="C:/Users/Lenovo/AppData/Roaming/Typora/typora-user-images/image-20210402000256076.png" alt="image-20210402000256076"></p>
-<p><img src="../AppData/Roaming/Typora/typora-user-images/image-20210402000309513.png" alt="image-20210402000309513"></p>
+<h3 id="数据与代码分离原则"><a href="#数据与代码分离原则" class="headerlink" title="数据与代码分离原则"></a>数据与代码分离原则</h3><p>这一原则广泛适用于各种由于“注入”而引发安全问题的场景</p>
+<p>实际上，缓冲区溢出，也可以认为是程序违背了这一原则的后果——程序在栈或者堆中，将用户数据当做代码执行，混淆了代码与数据的边界，从而导致安全问题的发生。</p>
+<h3 id="不可预测性原则"><a href="#不可预测性原则" class="headerlink" title="不可预测性原则"></a>不可预测性原则</h3><p>即使无法修复code，但是如果能够使得攻击的方法无效，那么也可以算是成功的防御。</p>
+<p>微软使用的ASLR技术，在较新版本的Linux内核中也支持。在ASLR的控制下，一<br>个程序每次启动时，其进程的栈基址都不相同，具有一定的随机性，对于攻击者来说，<br>这就是“不可预测性”。不可预测性的实现往往需要用到加密算法、随机数算法、哈希算法，好好使用这条<br>原则，在设计安全方案时往往会事半功倍</p>
+<p><em><strong>安全是一门朴素的学问，也是一种平衡的艺术。无论是传统安全，还是互联网安全，其内在的原理都是一样的！！</strong></em></p>
+<h1 id="客户端安全"><a href="#客户端安全" class="headerlink" title="客户端安全"></a>客户端安全</h1><h2 id="浏览器安全"><a href="#浏览器安全" class="headerlink" title="浏览器安全"></a>浏览器安全</h2><p>近年来随着互联网的发展，人们发现浏览器才是互联网最大的入口，绝大多数用户<br>使用互联网的工具是浏览器。因此浏览器市场的竞争也日趋白热化。浏览器安全在这种<br>激烈竞争的环境中被越来越多的人所重视。一方面，浏览器天生就是一个客户端，如果<br>具备了安全功能，就可以像安全软件一样对用户上网起到很好的保护作用；另一方面，<br>浏览器安全也成为浏览器厂商之间竞争的一张底牌，浏览器厂商希望能够针对安全建立<br>起技术门槛，以获得竞争优势。因此近年来随着浏览器版本的不断更新，浏览器安全功<br>能变得越来越强大。在本章中，我们将介绍一些主要的浏览器安全功能</p>
+<h3 id="同源策略"><a href="#同源策略" class="headerlink" title="同源策略"></a>同源策略</h3><p>同源策略（Same Origin Policy）是一种约定，它是浏览器最核心也最基本的安全<br>功能，如果缺少了同源策略，则浏览器的正常功能可能都会受到影响。<strong>可以说Web是构</strong><br><strong>建在同源策略的基础之上的</strong>，浏览器只是针对同源策略的一种实现。</p>
 
                 
             </div>
@@ -721,7 +583,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2021/04/02/temp/">http://example.com/2021/04/02/temp/</a>
+                    <a href="http://example.com/2021/03/16/%E7%99%BD%E5%B8%BD%E5%AD%90/">http://example.com/2021/03/16/%E7%99%BD%E5%B8%BD%E5%AD%90/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -759,8 +621,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/pink/">
-                                    <span class="chip bg-color">pink</span>
+                                <a href="/tags/web-security/">
+                                    <span class="chip bg-color">web-security</span>
                                 </a>
                             
                         </div>
@@ -930,30 +792,29 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2021/04/02/temp/">
+                <a href="/2021/03/18/Javascript/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="dom和bom超浅先学">
+                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="Javascript">
                         
-                        <span class="card-title">dom和bom超浅先学</span>
+                        <span class="card-title">Javascript</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            只是为了应付。。。
+                            Js真难！加油加油，有些深层的地方导致的bug太恶心了，一定要学好啊！红宝书劳资来了！
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-04-02
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-03-18
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -966,12 +827,11 @@
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/pink/">
-                        <span class="chip bg-color">pink</span>
+                    <a href="/tags/javascript/">
+                        <span class="chip bg-color">javascript</span>
                     </a>
                     
                 </div>
@@ -985,31 +845,31 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/03/25/project1/">
+                <a href="/2021/03/15/ctf-misc/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="project1">
+                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="misc">
                         
-                        <span class="card-title">project1</span>
+                        <span class="card-title">misc</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            跟着网课学习制作一下没有任何JS的静态电商网页，熟悉一下整个web静态页面的流程，挺好玩的嘀
+                            好想学web安全啊，这是打viking题的时候学的鬼东西。。学不下去了，不喜欢密码学
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-03-25
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-03-15
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/web-front-end/" class="post-category">
-                                    web-front-end
+                            <a href="/categories/security/" class="post-category">
+                                    security
                                 </a>
                             
                             
@@ -1019,8 +879,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E5%93%81%E4%BC%98%E8%B4%AD/">
-                        <span class="chip bg-color">品优购</span>
+                    <a href="/tags/misc/">
+                        <span class="chip bg-color">misc</span>
                     </a>
                     
                 </div>
