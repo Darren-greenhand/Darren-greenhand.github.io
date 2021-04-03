@@ -465,7 +465,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-04-03
+                    2021-04-04
                 </div>
                 
 
@@ -474,7 +474,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    3 分
                 </div>
                 
 
@@ -494,7 +494,54 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <p>[toc]</p>
+<h1 id="一、基础知识"><a href="#一、基础知识" class="headerlink" title="一、基础知识"></a>一、基础知识</h1><p>人们天生好奇，很少完整地看一遍规范全文才开始动手写代码</p>
+<p>自己动手写是值得鼓励的，但是可能之前误解了某个重要概念，漏了一些奇奇怪怪的特性，从而挣扎在bug里面，这一章主要回顾一些基础但容易误解的概念，讲一讲怎么让HTML和CSS保持组织分明和结构良好</p>
+<p>关于这一点我逐渐有了很深的感悟，对于前端来说，html总是被新手忽视的一环，但是在踩坑中和pink老师的教导中我发现，html的良好架构是css和js清晰代码的最重要保障，怎样的结构才满足语义化，怎样的架构才能保证未来的可维护性和可拓展性。希望我能学到，而且前端是一门很”规整“的学科，工程师的条理非常重要，我也得注意养成更有条理的习惯，这一点从我的TOC应有体现。</p>
+<h2 id="1-1组织代码"><a href="#1-1组织代码" class="headerlink" title="1.1组织代码"></a>1.1组织代码</h2><p><strong>可维护性</strong></p>
+<p>css确实是最难维护的代码之一，没有变量，环境，命名空间的约束，彼此之间相互干扰，还有诸多层次。所以我们需要特殊的方法来对应。</p>
+<h3 id="简史"><a href="#简史" class="headerlink" title="简史"></a>简史</h3><p>了解历史和诞生的原因有助于更好的理解和记忆某件事物</p>
+<p>css从标签汤中拯救了html，<strong>他的目的是结构和表现分离</strong></p>
+<p>而它确实有诸多好处：</p>
+<ul>
+<li>一种专用于控制视觉样式和布局的语言</li>
+<li>在同一网站中更易于重用的样式</li>
+<li>通过关注点分离得到了良好的代码结构</li>
+</ul>
+<p>应该更深入的理解耦合性和可复用性，每块代码负责一个功能，一小块结构，彼此之间尽量不相互依存，而不同小块组合起来却能完成各种任务，每块各司其职，得到通用的数据，返回<strong>通用</strong>的结果，最好还能满足某些约定和规范，这样的代码才是最棒的</p>
+<p><strong>css版本</strong></p>
+<p>事实上不存在所谓的CSS3规范，它指的其实是一系列级别独立的模块</p>
+<p>每个全新的技术从1级（level 1），此后更新则升级</p>
+<p>比如 CSS Color Level  这就是耦合的很好的运用！！！！</p>
+<p><strong>html版本</strong></p>
+<p>这个早就知道。。XHTML惨啊，不过现在有俩份标准，HTML和HTML5，当然它们相当接近</p>
+<p><strong>选择版本</strong></p>
+<p>我们暂时无需关注其标准的开发进度</p>
+<p>我们需要关注的是HTML和CSS哪些部分在那些浏览器实现了，是否稳健</p>
+<p>比如哪些特性不是实验性特性，哪些特性得到了多数浏览器的支持</p>
+<p>有一些地方可以查询浏览器支持情况：</p>
+<ol>
+<li><a target="_blank" rel="noopener" href="https://caniuse.com/">Can I use</a></li>
+<li><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/">MDN</a></li>
+</ol>
+<p>需要支持老版本的浏览器，就准备好可接受的后备代码，我们仍要<strong>大胆使用新的方便的特性</strong>！</p>
+<p>CSS大师能游刃有余地处理向后兼容的代码和未来友好得代码</p>
+<h3 id="渐进增强"><a href="#渐进增强" class="headerlink" title="*渐进增强"></a>*渐进增强</h3><p>平衡<strong>向后兼容性</strong>和最新的HTML和CSS特性，设计渐进增强（progressive enhancement）策略</p>
+<p>“首先为最小公分母准备可用的内容，然后再为支持新特性的浏览器添加更多交互优化”</p>
+<p>意味着代码要分层，每一层“增强代码”只在响应特性被支持或被认为适当的情况下应用</p>
+<p>HTML和CSS实现已经部分内置了这一策略。太棒了！！！</p>
+<p>css中直接把新样式写在旧样式的下方就好</p>
+<p><strong>厂商前缀</strong></p>
+<p>这导致浏览器不接受来自其他厂商的代码，这样厂商就可以添加规范中没有的或者不成熟的属性！</p>
+<p>-webkit-  :Safari  Chrome  Opera</p>
+<p>-moz-   :  Mozilla</p>
+<p>-ms-   :  Internet  Explorer   这垃圾。。</p>
+<p><strong>在最后记得加上一条不带前缀的声明，这样哪些只支持标准属性名称的浏览器也可以正常显示</strong></p>
+<p>有很多其他的方法服务于兼容性：</p>
+<p>比如@supports 块，当然其本身就很新，这也是个问题</p>
+<p>如： @supports(display: grid){…} 只有条件满足的时候才会执行其中的内容</p>
+<p>当然还可以通过JS来检测，比如使用Modernizr这个库，其为HTML添加支持提示信息，依此编写CSS</p>
+
                 
             </div>
             <hr/>
@@ -1057,7 +1104,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">121.2k</span>&nbsp;字
+                class="white-color">122.3k</span>&nbsp;字
             
             
             
