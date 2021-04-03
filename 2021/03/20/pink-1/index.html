@@ -321,7 +321,7 @@
 <script src="/libs/cryptojs/crypto-js.min.js"></script>
 <script>
     (function() {
-        let pwd = '42a185047bd105c58f6bc5e5b69d318c248922d2390658e5d746ac440f3be';
+        let pwd = '42a185047bd105c58f6bc5e5b69d318c248922d2390658e5d746ac440f3bed6e';
         if (pwd && pwd.length > 0) {
             if (pwd !== CryptoJS.SHA256(prompt('密码是简单的8位数字（我的宿舍号是？）')).toString(CryptoJS.enc.Hex)) {
                 alert('显示博客内容....');
@@ -1300,7 +1300,17 @@
 <p>然后选择匀速，无限循环  小心权重问题</p>
 <p>然后单独给后面几个加上delay  注意间隔相等。比如一共1.2秒 3个波纹 则第二个0.4 第三个0.8</p>
 <p>元素可以添加多个动画，用逗号分隔</p>
-<h2 id="3D！！！"><a href="#3D！！！" class="headerlink" title="3D！！！"></a>3D！！！</h2>
+<h2 id="3D！！！"><a href="#3D！！！" class="headerlink" title="3D！！！"></a>3D！！！</h2><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210403173429153.png" alt="image-20210403173429153"  />
+
+<img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210403173546861.png" alt="image-20210403173546861" style="zoom:50%;" />
+
+<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210403174500115.png" alt="image-20210403174500115"></p>
+<h3 id="透视原理图"><a href="#透视原理图" class="headerlink" title="透视原理图"></a><strong>透视原理图</strong></h3><p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210403175448612.png" alt="image-20210403175448612"></p>
+<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210403175954749.png" alt="image-20210403175954749"></p>
+<p>这个沿着。。其实是以。。为轴</p>
+<p>方向正负可以用左手。。大拇指指向某轴正方向，。。。</p>
+<p>rotate3d(x,y,z,deg) 其中xyz表示旋转轴矢量</p>
+
                 
             </div>
             <hr/>
