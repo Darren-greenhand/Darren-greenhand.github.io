@@ -94,11 +94,11 @@
   </entry>
   
   <entry>
-    <title>plans</title>
+    <title>plan</title>
     <link href="http://example.com/2021/03/19/plan/"/>
     <id>http://example.com/2021/03/19/plan/</id>
     <published>2021-03-19T04:06:23.000Z</published>
-    <updated>2021-04-03T09:14:17.126Z</updated>
+    <updated>2021-04-03T09:32:47.509Z</updated>
     
     <content type="html"><![CDATA[<h1 id="Darren’s-Carrer"><a href="#Darren’s-Carrer" class="headerlink" title="Darren’s Carrer"></a>Darren’s Carrer</h1><p>[toc]</p><h2 id="引子"><a href="#引子" class="headerlink" title="引子"></a>引子</h2><p>​    在经历了近半年的对计算机领域努力探索后，如今我已大致明白我们专业的处境和一些出路，现实就是如此，毕竟高考考砸了，够不着很多资源。。。只希望能如诸位前辈们般，凭借才能和热情，靠自学成为大佬，这篇博文用于记载我对未来发展方向的规划，反映了我在不同阶段的想法吧，请不要把以前的想法删掉。</p><h2 id="第一次"><a href="#第一次" class="headerlink" title="第一次"></a>第一次</h2><p>2021 . 3. 19日，大一下学期第三周</p><p>统计一下现在自己的技术栈。。C语言了解基本语法，数据结构起步，linux基本操作，可以熟练安装虚拟机，git基本操作和github基本操作，python学完基本语法和部分高级语法，会使用anaconda，前端有了大致轮廓，会html，css，js基本和一些jq，通过思科课程大致了解互联网，c++学到友元，拥有一大堆计算机领域的资源和导航还有工具，ctf各方向有所了解。。。好少。。。上学期没怎么课外学习，结果现在技术栈也太拉跨了。</p><p>结合了我们学校开的课程和目前了解的信息，做出第一次计划：</p><p>大一下：</p><p>认真学习数据结构，多在leetcode上刷题（剑指offer），学完思科第一期课程：ITN，Linux，Python，学几个python库，啥数据分析，机器学习的简单一点的。</p><p>先学前端，html，css，JS（重中之重），前端工具和框架，因为比较简单</p><p>大二上：</p><p>肝JAVA，看看是继续前端还是肝一肝后端技术栈，还有web安全有没有机会。</p>]]></content>
     
