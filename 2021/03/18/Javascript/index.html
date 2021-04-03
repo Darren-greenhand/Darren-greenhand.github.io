@@ -4,8 +4,8 @@
 
 <head>
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
-    <meta name="keywords" content="Javascript, Darren Blog">
-    <meta name="description" content="刚开始学习Web全栈和安全的新手博客">
+    <meta name="keywords" content="Javascript, 一隅于浮华">
+    <meta name="description" content="犹豫的学习Web全栈和安全的新手博客">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Javascript | Darren Blog</title>
+    <title>Javascript | 一隅于浮华</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -29,12 +29,22 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="Darren Blog" type="application/atom+xml"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="一隅于浮华" type="application/atom+xml"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 
 
 
 
+ <script type="text/javascript" src="/libs/others/sakura.js"></script> 
+
+	
+ <script type="text/javascript">
+        var OriginTitile = document.title, st;
+        document.addEventListener("visibilitychange", function () {
+            document.hidden ? (document.title = "页面崩溃了QWQ，抢修中", clearTimeout(st)) : (document.title = "(๑•̀ㅂ•́) ✧修好啦！", st = setTimeout(function () { document.title = OriginTitile }, 3e3))
+        }) 
+    </script>
+	
 <body>
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><header class="navbar-fixed">
     <nav id="headNav" class="bg-color nav-transparent">
@@ -44,7 +54,7 @@
                     
                     <img src="/medias/logo.png" class="logo-img" alt="LOGO">
                     
-                    <span class="logo-span">Darren Blog</span>
+                    <span class="logo-span">一隅于浮华</span>
                 </a>
             </div>
             
@@ -143,10 +153,10 @@
         
         <img src="/medias/logo.png" class="logo-img circle responsive-img">
         
-        <div class="logo-name">Darren Blog</div>
+        <div class="logo-name">一隅于浮华</div>
         <div class="logo-desc">
             
-            刚开始学习Web全栈和安全的新手博客
+            犹豫的学习Web全栈和安全的新手博客
             
         </div>
     </div>
@@ -313,8 +323,8 @@
     (function() {
         let pwd = '42a185047bd105c58f6bc5e5b69d318c248922d2390658e5d746ac440f3bed6e';
         if (pwd && pwd.length > 0) {
-            if (pwd !== CryptoJS.SHA256(prompt('欸！你知道密码吗？')).toString(CryptoJS.enc.Hex)) {
-                alert('输错啦，要不要问作者要下密码呢');
+            if (pwd !== CryptoJS.SHA256(prompt('密码是简单的8位数字（我的宿舍号是？）')).toString(CryptoJS.enc.Hex)) {
+                alert('显示博客内容....');
                 location.href = '/';
             }
         }
@@ -477,7 +487,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-04-02
+                    2021-04-03
                 </div>
                 
 
@@ -1118,15 +1128,15 @@
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="plan">
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="plans">
                         
-                        <span class="card-title">plan</span>
+                        <span class="card-title">plans</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            隐私(＾Ｕ＾)ノ~ＹＯ
                         
                     </div>
                     <div class="publish-info">
@@ -1175,7 +1185,7 @@
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            道哥读书笔记！
                         
                     </div>
                     <div class="publish-info">
@@ -1239,7 +1249,7 @@
 
         var url = document.location.href;
         newdiv.innerHTML += '<br />'
-            + '来源: Darren Blog<br />'
+            + '来源: 一隅于浮华<br />'
             + '文章作者: Darren<br />'
             + '文章链接: <a href="' + url + '">' + url + '</a><br />'
             + '本文章著作权归作者所有，任何形式的转载都请注明出处哦亲。';
@@ -1292,7 +1302,7 @@
             contentSelector: '#articleContent',
             headingsOffset: -($(window).height() * 0.4 - 45),
             collapseDepth: Number('0'),
-            headingSelector: 'h2, h3, h4'
+            headingSelector: 'h1, h2, h3, h4'
         });
 
         // modify the toc link href to support Chinese.
@@ -1304,7 +1314,7 @@
 
         // modify the heading title id to support Chinese.
         i = 0;
-        $('#articleContent').children('h2, h3, h4').each(function () {
+        $('#articleContent').children('h1, h2, h3, h4').each(function () {
             $(this).attr('id', tocHeading + (++i));
         });
 
@@ -1434,6 +1444,9 @@
             |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
             |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
             <br>
+            
+            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                class="white-color">120.6k</span>&nbsp;字
             
             
             
@@ -1642,9 +1655,16 @@ $(function () {
 
 	
     
+    <script type="text/javascript" color="0,0,255"
+        pointColor="0,0,255" opacity='0.7'
+        zIndex="-1" count="99"
+        src="/libs/background/canvas-nest.js"></script>
+    
 
     
 
+    
+    <script type="text/javascript" src="/libs/background/ribbon-dynamic.js" async="async"></script>
     
 
     

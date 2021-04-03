@@ -4,8 +4,8 @@
 
 <head>
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
-    <meta name="keywords" content="pink-1, Darren Blog">
-    <meta name="description" content="刚开始学习Web全栈和安全的新手博客">
+    <meta name="keywords" content="pink-1, 一隅于浮华">
+    <meta name="description" content="犹豫的学习Web全栈和安全的新手博客">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>pink-1 | Darren Blog</title>
+    <title>pink-1 | 一隅于浮华</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -29,12 +29,22 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="Darren Blog" type="application/atom+xml"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="一隅于浮华" type="application/atom+xml"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 
 
 
 
+ <script type="text/javascript" src="/libs/others/sakura.js"></script> 
+
+	
+ <script type="text/javascript">
+        var OriginTitile = document.title, st;
+        document.addEventListener("visibilitychange", function () {
+            document.hidden ? (document.title = "页面崩溃了QWQ，抢修中", clearTimeout(st)) : (document.title = "(๑•̀ㅂ•́) ✧修好啦！", st = setTimeout(function () { document.title = OriginTitile }, 3e3))
+        }) 
+    </script>
+	
 <body>
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><header class="navbar-fixed">
     <nav id="headNav" class="bg-color nav-transparent">
@@ -44,7 +54,7 @@
                     
                     <img src="/medias/logo.png" class="logo-img" alt="LOGO">
                     
-                    <span class="logo-span">Darren Blog</span>
+                    <span class="logo-span">一隅于浮华</span>
                 </a>
             </div>
             
@@ -143,10 +153,10 @@
         
         <img src="/medias/logo.png" class="logo-img circle responsive-img">
         
-        <div class="logo-name">Darren Blog</div>
+        <div class="logo-name">一隅于浮华</div>
         <div class="logo-desc">
             
-            刚开始学习Web全栈和安全的新手博客
+            犹豫的学习Web全栈和安全的新手博客
             
         </div>
     </div>
@@ -311,10 +321,10 @@
 <script src="/libs/cryptojs/crypto-js.min.js"></script>
 <script>
     (function() {
-        let pwd = '42a185047bd105c58f6bc5e5b69d318c248922d2390658e5d746ac440f3bed6e';
+        let pwd = '42a185047bd105c58f6bc5e5b69d318c248922d2390658e5d746ac440f3be';
         if (pwd && pwd.length > 0) {
-            if (pwd !== CryptoJS.SHA256(prompt('欸！你知道密码吗？')).toString(CryptoJS.enc.Hex)) {
-                alert('输错啦，要不要问作者要下密码呢');
+            if (pwd !== CryptoJS.SHA256(prompt('密码是简单的8位数字（我的宿舍号是？）')).toString(CryptoJS.enc.Hex)) {
+                alert('显示博客内容....');
                 location.href = '/';
             }
         }
@@ -477,7 +487,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-04-02
+                    2021-04-03
                 </div>
                 
 
@@ -486,7 +496,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    29 分
+                    30 分
                 </div>
                 
 
@@ -506,7 +516,7 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="pink老师yyds"><a href="#pink老师yyds" class="headerlink" title="pink老师yyds"></a>pink老师yyds</h1><p>本教程缺失一些不常用的知识，以后见到了再学</p>
+                <h1 id="第一阶段"><a href="#第一阶段" class="headerlink" title="第一阶段"></a>第一阶段</h1><p>本教程缺失一些不常用的知识，以后见到了再学</p>
 <h2 id="html标签（上）"><a href="#html标签（上）" class="headerlink" title="html标签（上）"></a>html标签（上）</h2><p>浏览器内核</p>
 <p>（又称渲染引擎）负责读取网页内容，整理信息，计算网页的显示方式并显示页面</p>
 <p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210320214750898.png" alt="image-20210320214750898"></p>
@@ -684,6 +694,8 @@
 <p>盒子阴影(box-shadow)</p>
 <p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210321214655930.png" alt="image-20210321214655930"></p>
 <p><em><strong>但只准写inset不能写outset！！影子不占空间</strong></em></p>
+<p>其中blur代表模糊程度</p>
+<p>spread代表对模糊范围的等密度放缩</p>
 <p>文字阴影：（text-shadow）</p>
 <p>h-shadow  v-shadow   blur   color</p>
 <p>css三种传统布局方式</p>
@@ -1232,9 +1244,63 @@
 <p>比如：calc(100%-30px)</p>
 <p>还增加了一些动画 2D 3D等特性</p>
 <p>ps：肝了一天案例，在另一篇博文里</p>
-<h2 id="第一阶段完结"><a href="#第一阶段完结" class="headerlink" title="第一阶段完结"></a>第一阶段完结</h2><p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210326211235526.png" alt="image-20210326211235526"></p>
+<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210326211235526.png" alt="image-20210326211235526"></p>
 <p>我的网站地址：<a target="_blank" rel="noopener" href="http://darrenisme.usa3v.vip/">http://darrenisme.usa3v.vip/</a></p>
+<h1 id="第二阶段"><a href="#第二阶段" class="headerlink" title="第二阶段"></a>第二阶段</h1><h2 id="2D转换"><a href="#2D转换" class="headerlink" title="2D转换"></a>2D转换</h2><p><strong>transform 位移，旋转，缩放，不过是二维的哟</strong></p>
+<p><strong>配合transition牛逼极了</strong></p>
+<p><strong>translate(x,y</strong>) 在x，y轴上移动的位置</p>
+<p>或translateX(n)           translateY(n)</p>
+<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210403113752031.png" alt="image-20210403113752031"></p>
+<p>所以水平垂直居中就可以:</p>
+<p>position: absolute  left:50%   top:50%</p>
+<p>transform : translate(-50%, -50%)</p>
+<p><strong>rotate</strong></p>
+<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210403114931593.png" alt="image-20210403114931593"></p>
+<p>可以用边框旋转来弄出三角哈哈哈哈</p>
+<p><strong>旋转中心点</strong></p>
+<p>transform-origin : x,y</p>
+<p>可以是百分比，像素值，关键词tblrc</p>
+<p>案例：</p>
+<img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210403125024006.png" alt="image-20210403125024006" style="zoom:33%;" />
 
+<p>overflow:hidden  默认转90  hover时转上来</p>
+<p><strong>scale</strong></p>
+<p>transform:scale(x,y);</p>
+<p>里面的参数是不跟参数的数字，表示倍数</p>
+<h3 id="综合写法"><a href="#综合写法" class="headerlink" title="综合写法"></a>综合写法</h3><p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210403130305541.png" alt="image-20210403130305541"></p>
+<p>注意顺序，如果先旋转后位移，则位移是按照旋转瞬间的角度位移的</p>
+<h2 id="动画"><a href="#动画" class="headerlink" title="动画"></a>动画</h2><p>animation 颠覆性 </p>
+<img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210403130558562.png" alt="image-20210403130558562" style="zoom:50%;" />
+
+<img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210403130710410.png" alt="image-20210403130710410" style="zoom:50%;" />
+
+<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210403130745131.png" alt="image-20210403130745131"></p>
+<img src="C:/Users/Lenovo/AppData/Roaming/Typora/typora-user-images/image-20210403130917882.png" alt="image-20210403130917882" style="zoom:50%;" />
+
+<p>duration 单位是秒 s  或毫秒ms</p>
+<h3 id="属性一览"><a href="#属性一览" class="headerlink" title="属性一览"></a>属性一览</h3><p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210403131802217.png" alt="image-20210403131802217"></p>
+<p><strong>animation - play -state  应该是paused</strong></p>
+<p><strong>经常与hover 配合使用 就可以鼠标放上去就停止，鼠标离开继续走</strong></p>
+<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210403132727955.png" alt="image-20210403132727955"></p>
+<p>注意时间如果有俩 必然先是持续时间 后是何时开始</p>
+<p>steps可以做出诡异的效果👇</p>
+<p>可以用那种做出那种连续动画的效果，准备好不同动作的图片就好了</p>
+<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210403150156949.png" alt="image-20210403150156949"></p>
+<h3 id="热点图案例"><a href="#热点图案例" class="headerlink" title="热点图案例"></a>热点图案例</h3><p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210403132930592.png" alt="image-20210403132930592"></p>
+<p>大致结构（1个城市）</p>
+<p>city相对定位到小圆点除</p>
+<p>先放1个小圆点，再放几圈波纹</p>
+<img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210403143518688.png" alt="image-20210403143518688" style="zoom:50%;" />
+
+<p>css波纹</p>
+<img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210403143925973.png" alt="image-20210403143925973" style="zoom:50%;" />
+
+<p>动画效果</p>
+<p>pink用的是 0%- 70%长宽变大，透明度不变，70 -100 长宽变大 ，透明度变为0，scale会导致阴影本身也变大</p>
+<p>然后选择匀速，无限循环  小心权重问题</p>
+<p>然后单独给后面几个加上delay  注意间隔相等。比如一共1.2秒 3个波纹 则第二个0.4 第三个0.8</p>
+<p>元素可以添加多个动画，用逗号分隔</p>
+<h2 id="3D！！！"><a href="#3D！！！" class="headerlink" title="3D！！！"></a>3D！！！</h2>
                 
             </div>
             <hr/>
@@ -1485,7 +1551,7 @@
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            跟着网课学习制作一下没有任何JS的静态电商网页，熟悉一下整个web静态页面的流程，挺好玩的嘀
                         
                     </div>
                     <div class="publish-info">
@@ -1507,8 +1573,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E5%93%81%E4%BC%98%E8%B4%AD%E7%94%B5%E5%95%86%E9%9D%99%E6%80%81%E9%A1%B5%E9%9D%A2/">
-                        <span class="chip bg-color">品优购电商静态页面</span>
+                    <a href="/tags/%E5%93%81%E4%BC%98%E8%B4%AD/">
+                        <span class="chip bg-color">品优购</span>
                     </a>
                     
                 </div>
@@ -1526,15 +1592,15 @@
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="plan">
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="plans">
                         
-                        <span class="card-title">plan</span>
+                        <span class="card-title">plans</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            隐私(＾Ｕ＾)ノ~ＹＯ
                         
                     </div>
                     <div class="publish-info">
@@ -1598,7 +1664,7 @@
 
         var url = document.location.href;
         newdiv.innerHTML += '<br />'
-            + '来源: Darren Blog<br />'
+            + '来源: 一隅于浮华<br />'
             + '文章作者: Darren<br />'
             + '文章链接: <a href="' + url + '">' + url + '</a><br />'
             + '本文章著作权归作者所有，任何形式的转载都请注明出处哦亲。';
@@ -1651,7 +1717,7 @@
             contentSelector: '#articleContent',
             headingsOffset: -($(window).height() * 0.4 - 45),
             collapseDepth: Number('0'),
-            headingSelector: 'h2, h3, h4'
+            headingSelector: 'h1, h2, h3, h4'
         });
 
         // modify the toc link href to support Chinese.
@@ -1663,7 +1729,7 @@
 
         // modify the heading title id to support Chinese.
         i = 0;
-        $('#articleContent').children('h2, h3, h4').each(function () {
+        $('#articleContent').children('h1, h2, h3, h4').each(function () {
             $(this).attr('id', tocHeading + (++i));
         });
 
@@ -1793,6 +1859,9 @@
             |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
             |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
             <br>
+            
+            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                class="white-color">120.6k</span>&nbsp;字
             
             
             
@@ -2001,9 +2070,16 @@ $(function () {
 
 	
     
+    <script type="text/javascript" color="0,0,255"
+        pointColor="0,0,255" opacity='0.7'
+        zIndex="-1" count="99"
+        src="/libs/background/canvas-nest.js"></script>
+    
 
     
 
+    
+    <script type="text/javascript" src="/libs/background/ribbon-dynamic.js" async="async"></script>
     
 
     
