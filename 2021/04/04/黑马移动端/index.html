@@ -474,7 +474,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    2 分
                 </div>
                 
 
@@ -533,19 +533,57 @@
 <p>流式布局主要看的是宽度，所以高度有时候可以写像素！</p>
 <p>但是拉伸的时候也会影响到内部内容，所以必须加以限制！</p>
 <p>可以用max/min - width/height 来辅助实现</p>
+<hr>
 <h3 id="京东案例"><a href="#京东案例" class="headerlink" title="京东案例"></a>京东案例</h3><p>懒得做了。。。记笔记吧</p>
 <p><strong>准备</strong></p>
 <p>方案：单独制作页面</p>
 <p>技术选型：流式布局</p>
 <p>文件布局： css  images  upload  js  index.html</p>
 <p>准备：设置视口标签，引入css移动端初始化，引入自己的css文件。。。</p>
-<p><strong>分析</strong></p>
+<hr>
+<p><strong>body</strong></p>
 <p>因为竖直下来每个盒子基本都是百分百宽度</p>
 <p>**所以可以直接给body一个宽度100%**，而子盒子都能继承</p>
 <p>但是一味地放大缩小会拉伸的很丑！所以指定宽度限制！然后居中对齐</p>
 <img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210404112849868.png" alt="image-20210404112849868" style="zoom:50%;" />
 
-<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210404112952388.png" alt="image-20210404112952388" style="zoom:50%;" /><img src="" alt="img"></p>
+<img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210404112952388.png" alt="image-20210404112952388" style="zoom:50%;" />
+
+
+
+<p><strong>顶栏展示</strong></p>
+<img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210404114145471.png" alt="image-20210404114145471" style="zoom:67%;" />
+
+<p><strong>京东做法</strong></p>
+<img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210404114233468.png" alt="image-20210404114233468" style="zoom:67%;" />
+
+<p>但是<strong>高度设置的是固定的45px</strong>，这个应该是总结和调试出来的</p>
+<p><em>用一个ul代表这一长条，里面有4个小li，好像特别喜欢用列表</em></p>
+<p><em>不过这样确实满足“语义化” 这是个顶栏列表，里面包含了若干元素</em></p>
+<p>他那个小叉和图片竟然是<strong>固定尺寸</strong>的！记得verticle-align : center;</p>
+<p>然后这个不用a，到时候用js来做跳转特效就好了。。。果然结构和功能也要分离</p>
+<hr>
+<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210404115119107.png" alt="image-20210404115119107"></p>
+<p>宽度改变时，中间变短，俩边不变的效果</p>
+<p>直接先做好两边的，用绝对定位和固定尺寸分别固定到这个长条盒子的两侧</p>
+<img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210404115442039.png" alt="image-20210404115442039" style="zoom:50%;" />
+
+<p>然后中间放的是没有宽度（使其铺满）的标准流，然后指定左右margin，略大于两侧盒子的宽度即可</p>
+<p>然后使其居中，通过加上边距，但这样会导致外边距合并，加overflow:hidden解决</p>
+<hr>
+<p><em>ps：在div里面有子元素div1时，若父元素div在没有设置overflow:hidden或者是border属性，则父元素div的margin-top的值为父元素div和子元素div1中的margin-top的最大值。</em></p>
+<hr>
+<p><strong>列表栏和登陆栏</strong>写法：</p>
+<img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210404120242284.png" alt="image-20210404120242284" style="zoom:67%;" />
+
+<hr>
+<p><strong>search栏</strong>：</p>
+<p><strong>子元素均采用定位效果实现</strong></p>
+<p>京东图标后面的小竖线：<img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210404120515491.png" alt="image-20210404120515491"></p>
+<p>记得after和before是作为子元素，所以这里加个position:absolute定位</p>
+<p>再调定位到合适的位置呗</p>
+<hr>
+<p><em><strong>小放大镜是二倍精灵图</strong></em></p>
 
                 
             </div>
@@ -1109,7 +1147,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">122.7k</span>&nbsp;字
+                class="white-color">123.1k</span>&nbsp;字
             
             
             
