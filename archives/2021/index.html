@@ -329,7 +329,7 @@
 
 <script>
     // 每天切换 banner 图.  Switch banner image every day.
-    var bannerUrl = "/medias/banner/" + new Date().getDay() + '.jpg';
+    var bannerUrl = "/medias/banner/" +Math.floor(Math.random()*(10))  + '.jpg'; //new Date().getDay()
     $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
 </script>
 
@@ -457,8 +457,7 @@
                         <a href="/2021/04/04/%E9%BB%91%E9%A9%AC%E7%A7%BB%E5%8A%A8%E7%AB%AF/">
                             <div class="card-image">
                                 
-                                
-                                <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="黑马移动端">
+                                <img src="/4.png" class="responsive-img" alt="黑马移动端">
                                 
                                 <span class="card-title">黑马移动端</span>
                             </div>
@@ -817,9 +816,9 @@
                             <div class="card-image">
                                 
                                 
-                                <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="Javascript">
+                                <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="Javascript红宝书">
                                 
-                                <span class="card-title">Javascript</span>
+                                <span class="card-title">Javascript红宝书</span>
                             </div>
                         </a>
                         <div class="card-content article-content">
@@ -1511,7 +1510,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">123.4k</span>&nbsp;字
+                class="white-color">123.6k</span>&nbsp;字
             
             
             

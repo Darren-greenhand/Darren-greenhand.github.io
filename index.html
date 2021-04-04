@@ -383,7 +383,7 @@
 
 <script>
     // 每天切换 banner 图.  Switch banner image every day.
-    var bannerUrl = "/medias/banner/" + new Date().getDay() + '.jpg';
+    var bannerUrl = "/medias/banner/" +Math.floor(Math.random()*(10))  + '.jpg'; //new Date().getDay()
     $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
 </script>
 
@@ -441,11 +441,11 @@
         
             
             <div class="carousel-item amber white-text carousel-post bg-cover"
-                 style="background-image: url('/medias/featureimages/11.jpg');">
+                 style="background-image: url('http://img.netbian.com/file/2021/0129/c13d65f52a48c5f2e6f5e7bd6c44aac5.jpg');">
                 <div class="container">
                     <div class="row">
                         <div class="col s10 offset-s1">
-                            <div class="title center-align">Javascript</div>
+                            <div class="title center-align">Javascript红宝书</div>
                             <div class="description center-align">
                                 
                                     Js真难！加油加油，有些深层的地方导致的bug太恶心了，一定要学好啊！红宝书劳资来了！
@@ -618,7 +618,7 @@
     
     <div class="col s12" >
         
-            <div class="post-card" style="background-image: url('/medias/featureimages/11.jpg')">
+            <div class="post-card" style="background-image: url('/medias/featureimages/22.jpg')">
             
             <div class="post-body">
                 <div class="post-categories">
@@ -629,7 +629,7 @@
                     
                 </div>
                 <a href="/2021/03/18/Javascript/">
-                    <h3 class="post-title">Javascript</h3>
+                    <h3 class="post-title">Javascript红宝书</h3>
                 </a>
                 <p class="post-description">Js真难！加油加油，有些深层的地方导致的bug太恶心了，一定要学好啊！红宝书劳资来了！</p>
                 <a href="/2021/03/18/Javascript/" class="read-more btn waves-effect waves-light" style="background: linear-gradient(to right, #FF5E3A 0%, #FF2A68 100%)" target="_blank">
@@ -710,8 +710,7 @@
                     <a href="/2021/04/04/%E9%BB%91%E9%A9%AC%E7%A7%BB%E5%8A%A8%E7%AB%AF/">
                         <div class="card-image">
                             
-                            
-                            <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="黑马移动端">
+                            <img src="/4.png" class="responsive-img" alt="黑马移动端">
                             
                             <span class="card-title">黑马移动端</span>
                         </div>
@@ -993,9 +992,9 @@
                         <div class="card-image">
                             
                             
-                            <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="Javascript">
+                            <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="Javascript红宝书">
                             
-                            <span class="card-title">Javascript</span>
+                            <span class="card-title">Javascript红宝书</span>
                         </div>
                     </a>
 
@@ -1565,7 +1564,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">123.4k</span>&nbsp;字
+                class="white-color">123.6k</span>&nbsp;字
             
             
             
