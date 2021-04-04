@@ -474,7 +474,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    3 分
                 </div>
                 
 
@@ -511,6 +511,8 @@
 <p><strong>开发尺寸 * 物理像素比 = 分辨率</strong>             所以一个px可能由多个（dpr）物理像素组成</p>
 <p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210404095756776.png" alt="image-20210404095756776"></p>
 <p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210404100314630.png" alt="image-20210404100314630"></p>
+<hr>
+<p><strong>图片缩放使用的属性</strong>：</p>
 <p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210404101151359.png" alt="image-20210404101151359"></p>
 <p>cutterman插件可以直接切出多倍图</p>
 <h2 id="开发选择"><a href="#开发选择" class="headerlink" title="开发选择"></a>开发选择</h2><p>单独设计和响应式</p>
@@ -584,6 +586,12 @@
 <p>再调定位到合适的位置呗</p>
 <hr>
 <p><em><strong>小放大镜是二倍精灵图</strong></em></p>
+<p>错误做法：亮出精灵图相应图标的位置，直接用那个位置，然后缩放</p>
+<p>这样是错误的，因为缩放是对整个图片进行缩放的，所以坐标也会发生变化</p>
+<p>应该把坐标换为原来的n分之一，然后把图片缩放,background-size:</p>
+<hr>
+<p>主体内容部分是导航栏以下的所有内容的一个大盒子</p>
+<p>包含了焦点图和商品啊，分类啊巴拉巴拉的</p>
 
                 
             </div>
@@ -1147,7 +1155,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">123.1k</span>&nbsp;字
+                class="white-color">123.2k</span>&nbsp;字
             
             
             
