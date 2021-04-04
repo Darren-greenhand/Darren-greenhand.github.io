@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-04-03T16:36:35.661Z</updated>
+  <updated>2021-04-04T01:55:22.007Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>黑马移动端</title>
+    <link href="http://example.com/2021/04/04/%E9%BB%91%E9%A9%AC%E7%A7%BB%E5%8A%A8%E7%AB%AF/"/>
+    <id>http://example.com/2021/04/04/%E9%BB%91%E9%A9%AC%E7%A7%BB%E5%8A%A8%E7%AB%AF/</id>
+    <published>2021-04-04T01:14:19.000Z</published>
+    <updated>2021-04-04T01:55:22.007Z</updated>
+    
+    <content type="html"><![CDATA[<p>[toc]</p><h1 id="一、移动端基础"><a href="#一、移动端基础" class="headerlink" title="一、移动端基础"></a>一、移动端基础</h1><p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210404092048961.png" alt="image-20210404092048961"></p><p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210404092110874.png" alt="image-20210404092110874"></p><p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210404092902977.png" alt="image-20210404092902977"></p><p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210404093501592.png" alt="image-20210404093501592"></p><h1 id="二、视口"><a href="#二、视口" class="headerlink" title="二、视口"></a>二、视口</h1><p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210404094158699.png" alt="image-20210404094158699"></p><p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210404094215546.png" alt="image-20210404094215546"></p><p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210404094229638.png" alt="image-20210404094229638"></p><p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210404094241052.png" alt="image-20210404094241052"></p><p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210404094749176.png" alt="image-20210404094749176"></p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210404094809333.png" alt="image-20210404094809333" style="zoom:50%;" /><h1 id="三、二倍图"><a href="#三、二倍图" class="headerlink" title="三、二倍图"></a>三、二倍图</h1><p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210404095411161.png" alt="image-20210404095411161"></p><p>开发尺寸显示在开发者工具中，我们开发网页根据这个就好了</p><p>开发尺寸 * 物理像素比 = 分辨率             所以一个px可能由多个（dpr）物理像素组成</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;[toc]&lt;/p&gt;
+&lt;h1 id=&quot;一、移动端基础&quot;&gt;&lt;a href=&quot;#一、移动端基础&quot; class=&quot;headerlink&quot; title=&quot;一、移动端基础&quot;&gt;&lt;/a&gt;一、移动端基础&lt;/h1&gt;&lt;p&gt;&lt;img src=&quot;https://gitee.com/darren-gr</summary>
+      
+    
+    
+    
+    <category term="web-front-end" scheme="http://example.com/categories/web-front-end/"/>
+    
+    
+    <category term="html&amp;&amp;css入门" scheme="http://example.com/tags/html-css%E5%85%A5%E9%97%A8/"/>
+    
+  </entry>
   
   <entry>
     <title>精通css</title>
