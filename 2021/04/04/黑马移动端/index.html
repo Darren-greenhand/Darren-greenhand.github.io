@@ -465,7 +465,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-04-04
+                    2021-04-05
                 </div>
                 
 
@@ -474,7 +474,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    4 分
+                    6 分
                 </div>
                 
 
@@ -619,6 +619,88 @@
 
 <p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210404202720250.png" alt="image-20210404202720250"></p>
 <hr>
+<h3 id="父级属性"><a href="#父级属性" class="headerlink" title="*父级属性"></a>*父级属性</h3><p>display:flex</p>
+<img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210404203058261.png" alt="image-20210404203058261" style="zoom:80%;" />
+
+<hr>
+<p><strong>flex-direction</strong></p>
+<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210404203413186.png" alt="image-20210404203413186"></p>
+<p>默认主轴是x轴（row）</p>
+<hr>
+<p><strong>justify-content</strong></p>
+<img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210404203804127.png" alt="image-20210404203804127" style="zoom: 67%;" />
+
+<p>注意space-around是每个盒子的两边的外边距都一样</p>
+<img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210404203910838.png" alt="image-20210404203910838" style="zoom:50%;" />
+
+<hr>
+<p><strong>flex-wrap</strong></p>
+<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210404204314797.png" alt="image-20210404204314797"></p>
+<p>默认会自动缩小元素在排列方向的长度（水平则缩小宽度）</p>
+<hr>
+<p><strong>align-items</strong></p>
+<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210404204924293.png" alt="image-20210404204924293"></p>
+<p>stretch会拉到和父亲一个尺寸，当然隔着一个margin，如果设置了相应方向的尺寸，则失效</p>
+<hr>
+<p><strong>align-content</strong></p>
+<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210404205130782.png" alt="image-20210404205130782"></p>
+<p>为啥要搞出俩属性。。。</p>
+<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210404205514687.png" alt="image-20210404205514687"></p>
+<hr>
+<p><strong>flex-flow</strong></p>
+<img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210404205750060.png" alt="image-20210404205750060" style="zoom:50%;" />
+
+<p>还有一些其他的属性，以后得补补</p>
+<hr>
+<h3 id="子项属性"><a href="#子项属性" class="headerlink" title="子项属性"></a>子项属性</h3><p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210404205938407.png" alt="image-20210404205938407"></p>
+<hr>
+<h4 id="flex"><a href="#flex" class="headerlink" title="flex"></a><strong>flex</strong></h4><p>默认是0，分配剩余空间，所以不加宽度再设为1就可以占满剩下的所有</p>
+<p>卧槽牛逼啊，横的竖的组合起来不是无敌了！顶多加个啥边距</p>
+<p>无敌何须多言？？？！！！</p>
+<hr>
+<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210404211047059.png" alt="image-20210404211047059"></p>
+<p>align-self属性不适用于块类型的盒模型和表格单元。如果任何 flexbox 元素的侧轴方向 margin 值设置为 auto，则会忽略 <code>align-self</code>。</p>
+<p>这货的属性蛮多的。。不知道有啥用</p>
+<hr>
+<p><strong>order</strong></p>
+<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210404211641830.png" alt="image-20210404211641830"></p>
+<p>挺不错的欸，这个order</p>
+<h3 id="携程网案例"><a href="#携程网案例" class="headerlink" title="携程网案例"></a>携程网案例</h3><p>仍然懒得做。。记笔记吧<img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210404211730880.png" alt="image-20210404211730880" style="zoom:50%;" /></p>
+<p><strong>初始化</strong></p>
+<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210404212240317.png" alt="image-20210404212240317"></p>
+<p>overflow-x:hidden 不出现水平滚动条</p>
+<p>还是技术选型。。。flex，好无聊，高度还是定死的，巧用flex一下就完了</p>
+<p><strong>固定在上方的导航栏</strong></p>
+<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210404213131595.png" alt="image-20210404213131595"></p>
+<p>要兼容的话，在transform前加上一句-webkit-transform : translateX(-50%);</p>
+<p>里面一个搜索框一个头像，给头像（右）加个宽度，搜索框不加宽度，用flex:1，tql吧！！</p>
+<p>这边突然有个坑，CSS3模型，如果有边框，那么行高=高来垂直居中会偏下，必须行高=内容区域</p>
+<img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210404232317142.png" alt="image-20210404232317142" style="zoom:80%;" />
+
+<hr>
+<h3 id="图-文字结构"><a href="#图-文字结构" class="headerlink" title="图+文字结构"></a><strong>图+文字结构</strong></h3><p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210404232725505.png" alt="image-20210404232725505"></p>
+<p>上面一个span背景设成2倍精灵图，下面一个span里面写字，然后整个放进a里面</p>
+<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210404232851846.png" alt="image-20210404232851846"></p>
+<p><code>flex-direction: column</code></p>
+<p><code>align-items : center</code></p>
+<hr>
+<h3 id="渐变"><a href="#渐变" class="headerlink" title="渐变"></a>渐变</h3><p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210405000418333.png" alt="image-20210405000418333"></p>
+<p>好像支持不太好，注意格式哟</p>
+<hr>
+<p><strong>subnav</strong></p>
+<p>卧槽，flex的指可以是百分比，按照父亲的给</p>
+<p>虽然flex为主，但是也可以搭配其他的做</p>
+<hr>
+<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210405001344268.png" alt="image-20210405001344268"></p>
+<p>这边用了传统布局，h2标签是为了SEO优化。。。</p>
+<p><strong>传统布局有时候一些盒子最好不用设置宽度，而是用内容+padding挤开</strong>，比如：</p>
+<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210405001902452.png" alt="image-20210405001902452"></p>
+<h2 id="rem适配布局"><a href="#rem适配布局" class="headerlink" title="rem适配布局"></a>rem适配布局</h2><p>非常重要！<img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210405002252282.png" alt="image-20210405002252282"></p>
+<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210405003212779.png" alt="image-20210405003212779"></p>
+<hr>
+<h3 id="媒体查询"><a href="#媒体查询" class="headerlink" title="媒体查询"></a>媒体查询</h3><p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210405003354284.png" alt="image-20210405003354284"></p>
+<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210405003444816.png" alt="image-20210405003444816"></p>
+<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210405003529315.png" alt="image-20210405003529315"></p>
 
                 
             </div>
@@ -1182,7 +1264,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">123.7k</span>&nbsp;字
+                class="white-color">124.3k</span>&nbsp;字
             
             
             
