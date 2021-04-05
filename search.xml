@@ -6513,15 +6513,175 @@
 <h2 id="rem适配布局"><a href="#rem适配布局" class="headerlink" title="rem适配布局"></a>rem适配布局</h2><p>非常重要！<img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210405002252282.png" alt="image-20210405002252282"></p>
 <p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210405003212779.png" alt="image-20210405003212779"></p>
 <hr>
-<h3 id="媒体查询"><a href="#媒体查询" class="headerlink" title="媒体查询"></a>媒体查询</h3><p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210405003354284.png" alt="image-20210405003354284"></p>
+<h3 id="媒体查询"><a href="#媒体查询" class="headerlink" title="媒体查询"></a>媒体查询</h3><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210405003354284.png" alt="image-20210405003354284" style="zoom:67%;" />
+
 <p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210405003444816.png" alt="image-20210405003444816"></p>
 <p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210405003529315.png" alt="image-20210405003529315"></p>
+<p>screen….</p>
+<img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210405092324456.png" alt="image-20210405092324456" style="zoom:67%;" />
+
+<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210405092639075.png" alt="image-20210405092639075"></p>
+<hr>
+<p>tips：</p>
+<p><strong>如果判断最小值，应该从小到大写（pink推荐。。），如果判断最大值，应该从大到小写</strong></p>
+<p><strong>min-width 和 max-width  是自带等于号的！</strong>and两边要留下空格。数字后必须跟单位</p>
+<p> <code>@media screen and (min-width:540px) and (max-width:969px)</code> 在540和970分界</p>
+<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210405093944821.png" alt="image-20210405093944821"></p>
+<hr>
+<p><strong>引入资源</strong></p>
+<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210405094452887.png" alt="image-20210405094452887"></p>
+<h1 id="Less基础"><a href="#Less基础" class="headerlink" title="Less基础"></a>Less基础</h1><p>怎么风评less 没有 sass好。。。</p>
+<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210405095114785.png" alt="image-20210405095114785"></p>
+<hr>
+<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210405095201588.png" alt="image-20210405095201588"></p>
+<hr>
+<h2 id="概览"><a href="#概览" class="headerlink" title="概览"></a>概览</h2><blockquote>
+<p>Less （Leaner Style Sheets 的缩写） 是一门向后兼容的 CSS 扩展语言。这里呈现的是 Less 的官方文档（中文版），包含了 Less 语言以及利用 JavaScript 开发的用于将 Less 样式转换成 CSS 样式的 Less.js 工具。</p>
+</blockquote>
+<p>因为 Less 和 CSS 非常像，因此很容易学习。而且 Less 仅对 CSS 语言增加了少许方便的扩展，这就是 Less 如此易学的原因之一。</p>
+<ul>
+<li><em>有关 Less 语言特性的详细文档，请参阅 <a href="https://less.bootcss.com/features/">Less 语言特性</a> 章节</em></li>
+<li><em>有关 Less 内置函数的列表，请参阅 <a href="https://less.bootcss.com/functions/">Less 函数手册</a> 章节</em></li>
+<li><em>有关详细的使用说明，请参阅 <a href="https://less.bootcss.com/usage/">Less.js 用法</a> 章节</em></li>
+<li><em>有关第三方工具的详细信息，请参阅 <a href="https://less.bootcss.com/tools/">工具</a> 章节</em></li>
+</ul>
+<p>Less 到底为 CSS 添加了什么功能？以下就是这些新加功能的概览。</p>
+<h2 id="变量（Variables）"><a href="#变量（Variables）" class="headerlink" title="变量（Variables）"></a>变量（Variables）</h2><p>无需多说，看代码一目了然：</p>
+<figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="variable">@width:</span> <span class="number">10px</span>;</span><br><span class="line"><span class="variable">@height:</span> <span class="variable">@width</span> + <span class="number">10px</span>;</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#header</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="variable">@width</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="variable">@height</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>编译为：</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-id">#header</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">10px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">20px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong><a href="https://less.bootcss.com/features/#variables-feature">了解关于变量的更多信息</a></strong></p>
+<h2 id="混合（Mixins）"><a href="#混合（Mixins）" class="headerlink" title="混合（Mixins）"></a>混合（Mixins）</h2><p>混合（Mixin）是一种将一组属性从一个规则集包含（或混入）到另一个规则集的方法。假设我们定义了一个类（class）如下：</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.bordered</span> &#123;</span><br><span class="line">  <span class="attribute">border-top</span>: dotted <span class="number">1px</span> black;</span><br><span class="line">  <span class="attribute">border-bottom</span>: solid <span class="number">2px</span> black;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>如果我们希望在其它规则集中使用这些属性呢？没问题，我们只需像下面这样输入所需属性的类（class）名称即可，如下所示：</p>
+<figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="selector-id">#menu</span> <span class="selector-tag">a</span> &#123;</span><br><span class="line">  <span class="attribute">color</span>: <span class="number">#111</span>;</span><br><span class="line">  <span class="selector-class">.bordered</span>();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.post</span> <span class="selector-tag">a</span> &#123;</span><br><span class="line">  <span class="attribute">color</span>: red;</span><br><span class="line">  <span class="selector-class">.bordered</span>();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><code>.bordered</code> 类所包含的属性就将同时出现在 <code>#menu a</code> 和 <code>.post a</code> 中了。（注意，你也可以使用 <code>#ids</code> 作为 mixin 使用。）</p>
+<p><strong><a href="https://less.bootcss.com/features/#mixins-feature">了解关于混合（Mixin）的更多信息</a></strong></p>
+<h2 id="嵌套（Nesting）"><a href="#嵌套（Nesting）" class="headerlink" title="嵌套（Nesting）"></a>嵌套（Nesting）</h2><p>Less 提供了使用嵌套（nesting）代替层叠或与层叠结合使用的能力。假设我们有以下 CSS 代码：</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-id">#header</span> &#123;</span><br><span class="line">  <span class="attribute">color</span>: black;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#header</span> <span class="selector-class">.navigation</span> &#123;</span><br><span class="line">  <span class="attribute">font-size</span>: <span class="number">12px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#header</span> <span class="selector-class">.logo</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">300px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>用 Less 语言我们可以这样书写代码：</p>
+<figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="selector-id">#header</span> &#123;</span><br><span class="line">  <span class="attribute">color</span>: black;</span><br><span class="line">  <span class="selector-class">.navigation</span> &#123;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">12px</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="selector-class">.logo</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">300px</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>用 Less 书写的代码更加简洁，并且模仿了 HTML 的组织结构。</p>
+<p>你还可以使用此方法将伪选择器（pseudo-selectors）与混合（mixins）一同使用。下面是一个经典的 clearfix 技巧，重写为一个混合（mixin） (<code>&amp;</code> 表示当前选择器的父级）：</p>
+<figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.clearfix</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: block;</span><br><span class="line">  zoom: 1;</span><br><span class="line"></span><br><span class="line">  <span class="selector-tag">&amp;</span>:<span class="selector-tag">after</span> &#123;</span><br><span class="line">    <span class="attribute">content</span>: <span class="string">&quot; &quot;</span>;</span><br><span class="line">    <span class="attribute">display</span>: block;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">clear</span>: both;</span><br><span class="line">    <span class="attribute">visibility</span>: hidden;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong><a href="https://less.bootcss.com/features/#parent-selectors-feature">了解有关夫选择器的详细信息</a></strong></p>
+<h3 id="规则嵌套和冒泡"><a href="#规则嵌套和冒泡" class="headerlink" title="@规则嵌套和冒泡"></a>@规则嵌套和冒泡</h3><p>@ 规则（例如 <code>@media</code> 或 <code>@supports</code>）可以与选择器以相同的方式进行嵌套。@ 规则会被放在前面，同一规则集中的其它元素的相对顺序保持不变。这叫做冒泡（bubbling）。</p>
+<figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.component</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">300px</span>;</span><br><span class="line">  <span class="keyword">@media</span> (<span class="attribute">min-width</span>: <span class="number">768px</span>) &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">600px</span>;</span><br><span class="line">    <span class="keyword">@media</span>  (<span class="attribute">min-resolution</span>: <span class="number">192dpi</span>) &#123;</span><br><span class="line">      <span class="attribute">background-image</span>: url(<span class="string">/img/retina2x.png</span>);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">@media</span> (<span class="attribute">min-width</span>: <span class="number">1280px</span>) &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">800px</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>编译为：</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.component</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">300px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">@media</span> (<span class="attribute">min-width</span>: <span class="number">768px</span>) &#123;</span><br><span class="line">  <span class="selector-class">.component</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">600px</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">@media</span> (<span class="attribute">min-width</span>: <span class="number">768px</span>) <span class="keyword">and</span> (<span class="attribute">min-resolution</span>: <span class="number">192dpi</span>) &#123;</span><br><span class="line">  <span class="selector-class">.component</span> &#123;</span><br><span class="line">    <span class="attribute">background-image</span>: <span class="built_in">url</span>(<span class="string">/img/retina2x.png</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">@media</span> (<span class="attribute">min-width</span>: <span class="number">1280px</span>) &#123;</span><br><span class="line">  <span class="selector-class">.component</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">800px</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="运算（Operations）"><a href="#运算（Operations）" class="headerlink" title="运算（Operations）"></a>运算（Operations）</h2><p>算术运算符 <code>+</code>、<code>-</code>、<code>*</code>、<code>/</code> 可以对任何数字、颜色或变量进行运算。如果可能的话，算术运算符在加、减或比较之前会进行<strong>单位换算</strong>。<strong>计算的结果以最左侧操作数的单位类型为准</strong>。如果<strong>单位换算无效或失去意义，则忽略单位</strong>。无效的单位换算例如：px 到 cm 或 rad 到 % 的转换。</p>
+<figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 所有操作数被转换成相同的单位</span></span><br><span class="line"><span class="variable">@conversion-1:</span> <span class="number">5cm</span> + <span class="number">10mm</span>; <span class="comment">// 结果是 6cm</span></span><br><span class="line"><span class="variable">@conversion-2:</span> <span class="number">2</span> - <span class="number">3cm</span> - <span class="number">5mm</span>; <span class="comment">// 结果是 -1.5cm</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// conversion is impossible</span></span><br><span class="line"><span class="variable">@incompatible-units:</span> <span class="number">2</span> + <span class="number">5px</span> - <span class="number">3cm</span>; <span class="comment">// 结果是 4px</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// example with variables</span></span><br><span class="line"><span class="variable">@base:</span> <span class="number">5%</span>;</span><br><span class="line"><span class="variable">@filler:</span> <span class="variable">@base</span> * <span class="number">2</span>; <span class="comment">// 结果是 10%</span></span><br><span class="line"><span class="variable">@other:</span> <span class="variable">@base</span> + <span class="variable">@filler</span>; <span class="comment">// 结果是 15%</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>乘法和除法不作转换。因为这两种运算在大多数情况下都没有意义</strong>，一个长度乘以一个长度就得到一个区域，而 CSS 是不支持指定区域的。Less 将按数字的原样进行操作，并将为计算结果指定明确的单位类型。</p>
+<figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="variable">@base:</span> <span class="number">2cm</span> * <span class="number">3mm</span>; <span class="comment">// 结果是 6cm</span></span><br></pre></td></tr></table></figure>
+
+<p>你还可以对颜色进行算术运算：</p>
+<figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="variable">@color:</span> <span class="number">#224488</span> / <span class="number">2</span>; <span class="comment">//结果是 #112244</span></span><br><span class="line"><span class="attribute">background-color</span>: <span class="number">#112244</span> + <span class="number">#111</span>; <span class="comment">// 结果是 #223355</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>运算符两侧尽量有空格，除法必须用括号括起来！！！！</strong></p>
+<p>不过，Less 提供的 <a href="https://less.bootcss.com/functions/#color-operations">色彩函数</a> 更有使用价值。</p>
+<h3 id="calc-特例"><a href="#calc-特例" class="headerlink" title="calc() 特例"></a>calc() 特例</h3><p><em>Released <a href="https://github.com/less/less.js/blob/master/CHANGELOG.md">v3.0.0</a></em></p>
+<p>为了与 CSS 保持兼容，**<code>calc()</code> 并不对数学表达式进行计算**，但是在嵌套函数中会计算变量和数学公式的值。</p>
+<figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="variable">@var:</span> <span class="number">50vh</span>/<span class="number">2</span>;</span><br><span class="line"><span class="attribute">width</span>: calc(<span class="number">50%</span> + (<span class="variable">@var</span> - <span class="number">20px</span>));  <span class="comment">// 结果是 calc(50% + (25vh - 20px))</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="转义（Escaping）"><a href="#转义（Escaping）" class="headerlink" title="转义（Escaping）"></a>转义（Escaping）</h2><p>转义（Escaping）允许你使用任意字符串作为属性或变量值。任何 <code>~&quot;anything&quot;</code> 或 <code>~&#39;anything&#39;</code> 形式的内容都将按原样输出，除非 <a href="https://less.bootcss.com/features/#variables-feature-variable-interpolation">interpolation</a>。</p>
+<figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="variable">@min768:</span> <span class="string">~&quot;(min-width: 768px)&quot;</span>;</span><br><span class="line"><span class="selector-class">.element</span> &#123;</span><br><span class="line">  <span class="keyword">@media</span> <span class="variable">@min768</span> &#123;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">1.2rem</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>编译为：</p>
+<figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="keyword">@media</span> (<span class="attribute">min-width</span>: <span class="number">768px</span>) &#123;</span><br><span class="line">  <span class="selector-class">.element</span> &#123;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">1.2rem</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>注意，从 Less 3.5 开始，可以简写为：</p>
+<figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="variable">@min768:</span> (<span class="attribute">min-width</span>: <span class="number">768px</span>);</span><br><span class="line"><span class="selector-class">.element</span> &#123;</span><br><span class="line">  <span class="keyword">@media</span> <span class="variable">@min768</span> &#123;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">1.2rem</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>在 Less 3.5+ 版本中，许多以前需要“引号转义”的情况就不再需要了。</p>
+<h2 id="函数（Functions）"><a href="#函数（Functions）" class="headerlink" title="函数（Functions）"></a>函数（Functions）</h2><p>Less 内置了多种函数用于转换颜色、处理字符串、算术运算等。这些函数在<a href="https://less.bootcss.com/functions/">Less 函数手册</a>中有详细介绍。</p>
+<p>函数的用法非常简单。下面这个例子将介绍如何利用 percentage 函数将 0.5 转换为 50%，将颜色饱和度增加 5%，以及颜色亮度降低 25% 并且色相值增加 8 等用法：</p>
+<figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="variable">@base:</span> <span class="number">#f04615</span>;</span><br><span class="line"><span class="variable">@width:</span> <span class="number">0.5</span>;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.class</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: percentage(<span class="variable">@width</span>); <span class="comment">// returns `50%`</span></span><br><span class="line">  <span class="attribute">color</span>: saturate(<span class="variable">@base</span>, <span class="number">5%</span>);</span><br><span class="line">  <span class="attribute">background-color</span>: spin(lighten(<span class="variable">@base</span>, <span class="number">25%</span>), <span class="number">8</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong><a href="https://less.bootcss.com/functions/">参见：函数手册</a></strong></p>
+<h2 id="命名空间和访问符"><a href="#命名空间和访问符" class="headerlink" title="命名空间和访问符"></a>命名空间和访问符</h2><p>(不要和 <a href="http://www.w3.org/TR/css3-namespace/">CSS <code>@namespace</code></a> 或 <a href="http://www.w3.org/TR/css3-selectors/#typenmsp">namespace selectors</a> 混淆了)。</p>
+<p>有时，出于组织结构或仅仅是为了提供一些封装的目的，你希望对混合（mixins）进行分组。你可以用 Less 更直观地实现这一需求。假设你希望将一些混合（mixins）和变量置于 <code>#bundle</code> 之下，为了以后方便重用或分发：</p>
+<figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="selector-id">#bundle</span>() &#123;</span><br><span class="line">  <span class="selector-class">.button</span> &#123;</span><br><span class="line">    <span class="attribute">display</span>: block;</span><br><span class="line">    <span class="attribute">border</span>: <span class="number">1px</span> solid black;</span><br><span class="line">    <span class="attribute">background-color</span>: grey;</span><br><span class="line">    <span class="selector-tag">&amp;</span><span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">      <span class="attribute">background-color</span>: white;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="selector-class">.tab</span> &#123; ... &#125;</span><br><span class="line">  <span class="selector-class">.citation</span> &#123; ... &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>现在，如果我们希望把 <code>.button</code> 类混合到 <code>#header a</code> 中，我们可以这样做：</p>
+<figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="selector-id">#header</span> <span class="selector-tag">a</span> &#123;</span><br><span class="line">  <span class="attribute">color</span>: orange;</span><br><span class="line">  <span class="selector-id">#bundle</span><span class="selector-class">.button</span>();  <span class="comment">// 还可以书写为 #bundle &gt; .button 形式</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>注意：如果不希望它们出现在输出的 CSS 中，例如 <code>#bundle .tab</code>，请将 <code>()</code> 附加到命名空间（例如 <code>#bundle()</code>）后面。</p>
+<h2 id="映射（Maps）"><a href="#映射（Maps）" class="headerlink" title="映射（Maps）"></a>映射（Maps）</h2><p>从 Less 3.5 版本开始，你还可以将混合（mixins）和规则集（rulesets）作为一组值的映射（map）使用。</p>
+<figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="selector-id">#colors</span>() &#123;</span><br><span class="line">  primary: blue;</span><br><span class="line">  secondary: green;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.button</span> &#123;</span><br><span class="line">  <span class="attribute">color</span>: #colors[primary];</span><br><span class="line">  <span class="attribute">border</span>: <span class="number">1px</span> solid #colors[secondary];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>输出符合预期：</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.button</span> &#123;</span><br><span class="line">  <span class="attribute">color</span>: blue;</span><br><span class="line">  <span class="attribute">border</span>: <span class="number">1px</span> solid green;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong><a href="https://less.bootcss.com/features/#maps-feature">参见： 映射（Maps）</a></strong></p>
+<h2 id="作用域（Scope）"><a href="#作用域（Scope）" class="headerlink" title="作用域（Scope）"></a>作用域（Scope）</h2><p>Less 中的作用域与 CSS 中的作用域非常类似。首先在本地查找变量和混合（mixins），如果找不到，则从“父”级作用域继承。</p>
+<figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="variable">@var:</span> red;</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#page</span> &#123;</span><br><span class="line">  <span class="variable">@var:</span> white;</span><br><span class="line">  <span class="selector-id">#header</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: <span class="variable">@var</span>; <span class="comment">// white</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>与 CSS 自定义属性一样，混合（mixin）和变量的定义不必在引用之前事先定义。因此，下面的 Less 代码示例和上面的代码示例是相同的：</p>
+<figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="variable">@var:</span> red;</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#page</span> &#123;</span><br><span class="line">  <span class="selector-id">#header</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: <span class="variable">@var</span>; <span class="comment">// white</span></span><br><span class="line">  &#125;</span><br><span class="line">  <span class="variable">@var:</span> white;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong><a href="https://less.bootcss.com/features/#variables-feature-lazy-loading">参见：懒加载</a></strong></p>
+<h2 id="注释（Comments）"><a href="#注释（Comments）" class="headerlink" title="注释（Comments）"></a>注释（Comments）</h2><p>块注释和行注释都可以使用：</p>
+<figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="comment">/* 一个块注释</span></span><br><span class="line"><span class="comment"> * style comment! */</span></span><br><span class="line"><span class="variable">@var:</span> red;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 这一行被注释掉了！</span></span><br><span class="line"><span class="variable">@var:</span> white;</span><br></pre></td></tr></table></figure>
+
+<h2 id="导入（Importing）"><a href="#导入（Importing）" class="headerlink" title="导入（Importing）"></a>导入（Importing）</h2><p>“导入”的工作方式和你预期的一样。你可以导入一个 <code>.less</code> 文件，此文件中的所有变量就可以全部使用了。如果导入的文件是 <code>.less</code> 扩展名，则可以将扩展名省略掉：</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="keyword">@import</span> <span class="string">&quot;library&quot;</span>; // library<span class="selector-class">.less</span></span><br><span class="line"><span class="keyword">@import</span> <span class="string">&quot;typo.css&quot;</span>;</span><br></pre></td></tr></table></figure>
+
+<p><strong><a href="https://less.bootcss.com/features/#imports-feature">了解更多关于导入(Importing)的知识</a></strong></p>
 ]]></content>
       <categories>
         <category>web-front-end</category>
       </categories>
       <tags>
         <tag>html&amp;&amp;css入门</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>hot key</title>
+    <url>/2021/04/05/%E9%82%A3%E4%BA%9B%E5%BF%AB%E6%8D%B7%E9%94%AE/</url>
+    <content><![CDATA[<h1 id="通用"><a href="#通用" class="headerlink" title="通用"></a>通用</h1><p>Fn + 左右箭头快速抵达行头行尾</p>
+<p>Fn + shift + 左右箭头快速选中整行</p>
+<p>C + f 搜索</p>
+<h1 id="vscode"><a href="#vscode" class="headerlink" title="vscode"></a>vscode</h1><p>C + g  快速到达某一行</p>
+<p>C + A + 上下  为上下行的该位置添加光标，如果为空，则尽量左移</p>
+<p>S + A + 拖动鼠标 选中规则同上</p>
+<hr>
+<p>C + /  单行注释</p>
+<p>C + S + /   多行注释（改的，原来是S + A + a）</p>
+<p>C + ~  打开终端</p>
+<p>C + d 快速选中相同的</p>
+<p>C + f 搜索</p>
+<p>C + h 替换（可以全部替换）</p>
+<p>C + +/-  放大/缩小布局</p>
+<p>Tab 到达下一个光标</p>
+<p>自定义快捷键</p>
+<p>有些快捷键，我们使用不习惯，其实我们可以自定义快捷键的。</p>
+<p>比如js 的多行注释是 shift + alt  + a  ，我们想修改为 ctrl + shfit +  /   </p>
+<p>设置方法：   管理按钮  —   键盘快捷方式  —  输入  shift + alt  + a  找到这个快捷键  —– 点击编辑按钮  —- 直接按下  ctrl + shift  +  /     —- 最后按下回车 修改完毕。</p>
+<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/070e4f32b7326196062f020bbc3a91b30c7e470c.gif" alt="img"></p>
+<h1 id="浏览器"><a href="#浏览器" class="headerlink" title="浏览器"></a>浏览器</h1><p>C + S + j   开发者模式（谷歌），在火狐有些不同</p>
+<p>C + h   历史记录</p>
+<p>C + n  打开新窗口</p>
+<p>C + S + n  新无痕窗口</p>
+<p>C + 左键:打开新标签方式</p>
+<h1 id="Typora"><a href="#Typora" class="headerlink" title="Typora"></a>Typora</h1><p>C + b 加粗</p>
+<p>C + i  斜体</p>
+<p>C + k 设为超链接</p>
+]]></content>
+      <categories>
+        <category>others</category>
+      </categories>
+      <tags>
+        <tag>hot key</tag>
       </tags>
   </entry>
 </search>
