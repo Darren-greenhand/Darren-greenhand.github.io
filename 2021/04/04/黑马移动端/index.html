@@ -41,7 +41,7 @@
  <script type="text/javascript">
         var OriginTitile = document.title, st;
         document.addEventListener("visibilitychange", function () {
-            document.hidden ? (document.title = "页面崩溃了QWQ，抢修中", clearTimeout(st)) : (document.title = "(๑•̀ㅂ•́) ✧修好啦！", st = setTimeout(function () { document.title = OriginTitile }, 3e3))
+            document.hidden ? (document.title = "短暂的离别，是为了更好的相遇", clearTimeout(st)) : (document.title = "一隅于浮华，荧惑下天星", st = setTimeout(function () { document.title = OriginTitile }, 3e3))
         }) 
     </script>
 	
@@ -753,7 +753,7 @@
 <figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#header</span> &#123;</span><br><span class="line">  <span class="attribute">color</span>: black;</span><br><span class="line">  <span class="selector-class">.navigation</span> &#123;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">12px</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="selector-class">.logo</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">300px</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>用 Less 书写的代码更加简洁，并且模仿了 HTML 的组织结构。</p>
-<p>你还可以使用此方法将伪选择器（pseudo-selectors）与混合（mixins）一同使用。下面是一个经典的 clearfix 技巧，重写为一个混合（mixin） (<code>&amp;</code> 表示当前选择器的父级）：</p>
+<p>你还可以使用此方法将伪选择器（pseudo-selectors）与混合（mixins）一同使用。下面是一个经典的 clearfix 技巧，重写为一个混合（mixin） (<code>&amp;</code> 表示当前选择器的父级）(伪元素也要这样)：</p>
 <figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.clearfix</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: block;</span><br><span class="line">  zoom: 1;</span><br><span class="line"></span><br><span class="line">  <span class="selector-tag">&amp;</span>:<span class="selector-tag">after</span> &#123;</span><br><span class="line">    <span class="attribute">content</span>: <span class="string">&quot; &quot;</span>;</span><br><span class="line">    <span class="attribute">display</span>: block;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">clear</span>: both;</span><br><span class="line">    <span class="attribute">visibility</span>: hidden;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p><strong><a target="_blank" rel="noopener" href="https://less.bootcss.com/features/#parent-selectors-feature">了解有关夫选择器的详细信息</a></strong></p>
@@ -763,16 +763,16 @@
 <p>编译为：</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.component</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">300px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">@media</span> (<span class="attribute">min-width</span>: <span class="number">768px</span>) &#123;</span><br><span class="line">  <span class="selector-class">.component</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">600px</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">@media</span> (<span class="attribute">min-width</span>: <span class="number">768px</span>) <span class="keyword">and</span> (<span class="attribute">min-resolution</span>: <span class="number">192dpi</span>) &#123;</span><br><span class="line">  <span class="selector-class">.component</span> &#123;</span><br><span class="line">    <span class="attribute">background-image</span>: <span class="built_in">url</span>(<span class="string">/img/retina2x.png</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">@media</span> (<span class="attribute">min-width</span>: <span class="number">1280px</span>) &#123;</span><br><span class="line">  <span class="selector-class">.component</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">800px</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h2 id="运算（Operations）"><a href="#运算（Operations）" class="headerlink" title="运算（Operations）"></a>运算（Operations）</h2><p>算术运算符 <code>+</code>、<code>-</code>、<code>*</code>、<code>/</code> 可以对任何数字、颜色或变量进行运算。如果可能的话，算术运算符在加、减或比较之前会进行<strong>单位换算</strong>。<strong>计算的结果以最左侧操作数的单位类型为准</strong>。如果<strong>单位换算无效或失去意义，则忽略单位</strong>。无效的单位换算例如：px 到 cm 或 rad 到 % 的转换。</p>
+<h2 id="运算（Operations）"><a href="#运算（Operations）" class="headerlink" title="运算（Operations）"></a>运算（Operations）</h2><p>算术运算符 <code>+</code>、<code>-</code>、<code>*</code>、<code>/</code> 可以对任何数字、颜色或变量进行运算。如果可能的话，算术运算符在加、减或比较之前会进行<strong>单位换算</strong>。<strong>计算的结果以最左侧操作数的单位类型为准</strong>。如果<strong>单位换算无效或失去意义，则忽略单位</strong>，<strong>结果以第一个单位为准</strong>。若只有一个单位，以该单位为准<strong>无效</strong>的单位换算例如：px 到 cm 或 rad 到 % 的转换。</p>
 <figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 所有操作数被转换成相同的单位</span></span><br><span class="line"><span class="variable">@conversion-1:</span> <span class="number">5cm</span> + <span class="number">10mm</span>; <span class="comment">// 结果是 6cm</span></span><br><span class="line"><span class="variable">@conversion-2:</span> <span class="number">2</span> - <span class="number">3cm</span> - <span class="number">5mm</span>; <span class="comment">// 结果是 -1.5cm</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// conversion is impossible</span></span><br><span class="line"><span class="variable">@incompatible-units:</span> <span class="number">2</span> + <span class="number">5px</span> - <span class="number">3cm</span>; <span class="comment">// 结果是 4px</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// example with variables</span></span><br><span class="line"><span class="variable">@base:</span> <span class="number">5%</span>;</span><br><span class="line"><span class="variable">@filler:</span> <span class="variable">@base</span> * <span class="number">2</span>; <span class="comment">// 结果是 10%</span></span><br><span class="line"><span class="variable">@other:</span> <span class="variable">@base</span> + <span class="variable">@filler</span>; <span class="comment">// 结果是 15%</span></span><br></pre></td></tr></table></figure>
 
 <p><strong>乘法和除法不作转换。因为这两种运算在大多数情况下都没有意义</strong>，一个长度乘以一个长度就得到一个区域，而 CSS 是不支持指定区域的。Less 将按数字的原样进行操作，并将为计算结果指定明确的单位类型。</p>
 <figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">@base:</span> <span class="number">2cm</span> * <span class="number">3mm</span>; <span class="comment">// 结果是 6cm</span></span><br></pre></td></tr></table></figure>
 
-<p>你还可以对颜色进行算术运算：</p>
+<p>你还可以对<strong>颜色</strong>进行算术运算：</p>
 <figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">@color:</span> <span class="number">#224488</span> / <span class="number">2</span>; <span class="comment">//结果是 #112244</span></span><br><span class="line"><span class="attribute">background-color</span>: <span class="number">#112244</span> + <span class="number">#111</span>; <span class="comment">// 结果是 #223355</span></span><br></pre></td></tr></table></figure>
 
-<p><strong>运算符两侧尽量有空格，除法必须用括号括起来！！！！</strong></p>
+<p><strong>运算符两侧尽量有空格，<em>除法必须用括号括起来</em>！！！！</strong></p>
 <p>不过，Less 提供的 <a target="_blank" rel="noopener" href="https://less.bootcss.com/functions/#color-operations">色彩函数</a> 更有使用价值。</p>
 <h3 id="calc-特例"><a href="#calc-特例" class="headerlink" title="calc() 特例"></a>calc() 特例</h3><p><em>Released <a target="_blank" rel="noopener" href="https://github.com/less/less.js/blob/master/CHANGELOG.md">v3.0.0</a></em></p>
 <p>为了与 CSS 保持兼容，**<code>calc()</code> 并不对数学表达式进行计算**，但是在嵌套函数中会计算变量和数学公式的值。</p>
@@ -1065,7 +1065,7 @@
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="hot key">
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="hot key">
                         
                         <span class="card-title">hot key</span>
                     </div>
@@ -1114,7 +1114,7 @@
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="精通css">
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="精通css">
                         
                         <span class="card-title">精通css</span>
                     </div>
