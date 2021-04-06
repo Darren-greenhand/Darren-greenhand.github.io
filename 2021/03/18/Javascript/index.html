@@ -312,7 +312,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/1.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/22.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -549,14 +549,27 @@
 <p>在函数内部var会创建局部变量，但是省略var可以创建一个全局变量！</p>
 <p>但是这种做法不被推荐，甚至在严格模式下会抛出ReferenceError</p>
 <p>*<strong>var声明提升！</strong></p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    语句<span class="number">1</span></span><br><span class="line">    <span class="keyword">var</span> age = <span class="number">26</span>;</span><br><span class="line">&#125;</span><br><span class="line">实际上被ECMAScript理解为</span><br><span class="line"><span class="keyword">var</span> age;</span><br><span class="line">语句<span class="number">1</span>;</span><br><span class="line">age = <span class="number">26</span></span><br><span class="line">这使得变量可以后声明，也使得变量可以重复声明</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+    语句<span class="token number">1</span>
+    <span class="token keyword">var</span> age <span class="token operator">=</span> <span class="token number">26</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+实际上被ECMAScript理解为
+<span class="token keyword">var</span> age<span class="token punctuation">;</span>
+语句<span class="token number">1</span><span class="token punctuation">;</span>
+age <span class="token operator">=</span> <span class="token number">26</span>
+这使得变量可以后声明，也使得变量可以重复声明<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>var的作用域是函数作用域，if块中声明的var可在外面调用</p>
 <p>let声明的范围是块作用域，而且<strong>不允许冗余声明</strong>（<strong>SyntaxError</strong>）</p>
 <p>但是由于JS引擎会记录变量声明的标识符和所在的块作用域，可以嵌套使用相同的标签</p>
 <p><strong>冗余报错会发生在同时使用var和let时，两个关键字声明的变量是相同的，只是指出变量在相关作用域如何存在。</strong></p>
 <h4 id="暂时性死区"><a href="#暂时性死区" class="headerlink" title="暂时性死区"></a>暂时性死区</h4><p>只要块级作用域内存在<code>let</code>命令，它所声明的变量就“绑定”（binding）这个区域，不再受外部的影响。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> tmp = <span class="number">123</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> (<span class="literal">true</span>) &#123;</span><br><span class="line">  tmp = <span class="string">&#x27;abc&#x27;</span>; <span class="comment">// ReferenceError</span></span><br><span class="line">  <span class="keyword">let</span> tmp;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">var</span> tmp <span class="token operator">=</span> <span class="token number">123</span><span class="token punctuation">;</span>
+
+<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  tmp <span class="token operator">=</span> <span class="token string">'abc'</span><span class="token punctuation">;</span> <span class="token comment">// ReferenceError</span>
+  <span class="token keyword">let</span> tmp<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>上面代码中，存在全局变量<code>tmp</code>，但是块级作用域内<code>let</code>又声明了一个局部变量<code>tmp</code>，导致后者绑定这个块级作用域，所以在<code>let</code>声明变量前，对<code>tmp</code>赋值会报错。</p>
 <p>ES6 明确规定，如果区块中存在<code>let</code>和<code>const</code>命令，这个区块对这些命令声明的变量，从一开始就形成了封闭作用域。凡是在声明之前就使用这些变量，就会报错。</p>
@@ -657,7 +670,8 @@
 <p>toString方法可用于数值，布尔值，对象，字符串值（返回副本），</p>
 <p><strong>null/undefined没有,调用则返回本身的字符串null-&gt;”null”</strong></p>
 <p>在对待数值时可以指定显示的进制 </p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> num = <span class="number">10</span>;</span><br><span class="line"><span class="built_in">console</span>.log(num.toString(<span class="number">2</span>))  -<span class="string">&quot;1010&quot;</span></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token keyword">let</span> num <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>num<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token operator">-</span><span class="token string">"1010"</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <p><strong>模板字面量</strong></p>
 <p>通过<strong>反引号定义（但是这里书写用单引号。。不然变成代码块我靠）</strong>，保留内部的空白结构</p>
@@ -720,7 +734,7 @@
 </tr>
 </tbody></table>
 <p>你可以在自己的代码中使用<code>valueOf</code>将内置对象转换为原始值。 创建自定义对象时，可以覆盖<code>Object.prototype.valueOf()</code>来调用自定义方法，而不是默认<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object"><code>Object</code></a>方法。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">MyNumberType.prototype.valueOf = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123; <span class="keyword">return</span> customPrimitiveValue; &#125;;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token class-name">MyNumberType</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function-variable function">valueOf</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span> <span class="token keyword">return</span> customPrimitiveValue<span class="token punctuation">;</span> <span class="token punctuation">&#125;</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 
 
@@ -1501,7 +1515,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">130.8k</span>&nbsp;字
+                class="white-color">130.7k</span>&nbsp;字
             
             
             
