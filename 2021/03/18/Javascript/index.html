@@ -465,7 +465,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-04-04
+                    2021-04-06
                 </div>
                 
 
@@ -474,7 +474,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    22 分
+                    27 分
                 </div>
                 
 
@@ -500,7 +500,6 @@
 <img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210327151652147.png" alt="image-20210327151652147" style="zoom:50%;" />
 
 <p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210327153158993.png" alt="image-20210327153158993"></p>
-<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210327153242894%C2%B7.png" alt="image-20210327153242894"></p>
 <p>第一门课主要学习JS语法，但是最好还是之后看一下JS红宝书</p>
 <p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210327153407994.png" alt="image-20210327153407994"></p>
 <h2 id="简史"><a href="#简史" class="headerlink" title="简史"></a>简史</h2><p>这是我去先看了看红宝书第一章</p>
@@ -561,13 +560,14 @@
 <p>这甚至会导致typeof出错，</p>
 <p><strong>与var关键字不同，let在全局作用域中声明的变量不会成为window对象的属性？不懂。。</strong></p>
 <p>const声明时必须同时初始化，而且不能修改，限制只适用于它指向的变量的引用，跟python一样</p>
-<p>对for-of  for-in循环中的不会修改的变量特别有意义。。。。不懂</p>
+<p>对for-of  for-in循环中的不会修改的变量特别有意义</p>
 <h4 id="风格和最佳实践！"><a href="#风格和最佳实践！" class="headerlink" title="风格和最佳实践！"></a>风格和最佳实践！</h4><ol>
 <li>不使用var</li>
 <li>const优先，let次之</li>
 </ol>
-<h3 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h3><p>6种原始(简单)数据类型：Undefined Null Boolean Number String Symbol(ES6)</p>
-<p>1中复杂数据类型：Object，这是一种无序名值对的集合</p>
+<h3 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h3><p>对象的转换：<em><strong>如果操作数是对象，则这个对象将先使用valueOf()转换成原始值，如果结果还不是原始值，则再使用toString()方法转换；</strong></em></p>
+<p>6种原始(简单)数据类型：Undefined Null Boolean Number String Symbol(ES6)</p>
+<p>1种复杂数据类型：Object，这是一种无序名值对的集合</p>
 <p>ES中不能定义自己的数据类型，但这些类型很灵活，一种能当多种数据类型用</p>
 <p>typeof <strong>操作符，它不是函数</strong>，返回数据类型，也可以判断函数（返回’function’）</p>
 <p>虽然函数也被ES认为是对象，但它们有特殊的属性，因此被typeof独立区分</p>
@@ -576,6 +576,7 @@
 <p><strong>但由于未声明的变量typeof也会返回undefined，所以最好还是在声明时就初始化</strong></p>
 <p>这是一个假值，但是也有很多其他的假值，所以不要依靠真假判断是否是undefined</p>
 <h4 id="Null"><a href="#Null" class="headerlink" title="Null"></a>Null</h4><p>只有一个值null，<strong>逻辑上讲，null值表示一个空对象指针，</strong>所以typeof null返回object</p>
+<p>null 有属于自己的类型 Null，而不属于Object类型，typeof 之所以会判定为 Object 类型，是因为JavaScript 数据类型在底层都是以二进制的形式表示的，二进制的前三位为 0 会被 typeof 判断为对象类型，而 null 的二进制位恰好都是 0 ，因此，null 被误判断为 Object 类型。</p>
 <p>声明时如果暂时不用赋值，最好赋一个null</p>
 <p>undefined是由null值派生的，所以表面相等(null == undifined)</p>
 <p>这是一个假值，但是也有很多其他的假值，所以不要依靠真假判断是否是null</p>
@@ -626,7 +627,7 @@
 <p>浮点数精确度高达17位小数，但是也存在如C般很小的偏差问题，因此不要用 == 对待浮点数</p>
 <p>这是IEEE 754数值标准导致的。。</p>
 <p>最小值Number.MIN_VALUE  5e-324  再小 -Infinity（Number.NEGATIVE_INFINITY）</p>
-<p>最大值Number.Max_VALUE 1.79………………r+308, 再大 Infinity（Number.POSITIVE_INFINITY）</p>
+<p>最大值Number.Max_VALUE 1.79………………e+308, 再大 Infinity（Number.POSITIVE_INFINITY）</p>
 <p>0作分子返回NaN（not a number） 作分母返回正负Infinity</p>
 <p>NaN有一些诡异的属性：</p>
 <ol>
@@ -665,7 +666,7 @@
 <p>用来自定义插值行为，直接把定义的函数放在模板字面量前即可</p>
 <p>function xxx(){}</p>
 <p>let a = xxx’….’</p>
-<p>注意传进去的第一个参量是[“”,”+”,]这种，其中所有的$被换成空字符串，符号保留</p>
+<p>注意传进去的第一个参量是[“”,”+”,]这种，其中所有的$被换成空字符串，符号保留，经常采用“剩余操作符”收集不确定的参数</p>
 <p>原始字符串则调用了默认的String.raw标签函数,也可通过string(某字符串变量).raw来取得原始内容</p>
 <h4 id="Symbol"><a href="#Symbol" class="headerlink" title="Symbol"></a>Symbol</h4><p>ES6新增，符号是原始值，符号实例唯一，不可变</p>
 <p>用途是确保对象属性使用唯一标识符，不会发生属性冲突的危险</p>
@@ -673,6 +674,52 @@
 <h4 id="Object"><a href="#Object" class="headerlink" title="Object"></a>Object</h4><p>JS对象实质是一组数据和功能的集合，通过new+对象类型的名称来创建</p>
 <p>可以通过创建Object实例来创建对象，再添加属性和方法</p>
 <p>每个对象内置了一大堆方法，<strong>p56</strong></p>
+<p>valueof方法将对象转换为原始值。你很少需要自己调用<code>valueOf</code>方法；当遇到要预期的原始值的对象时，JavaScript会自动调用它。如果对象没有原始值，则<code>valueOf</code>将返回对象本身。JavaScript的许多内置对象都重写了该函数，以实现更适合自身的功能需要。因此，不同类型对象的valueOf()方法的返回值和返回值类型均可能不同。此外你也可以自己写valueof来覆盖</p>
+<table>
+<thead>
+<tr>
+<th align="left"><strong>对象</strong></th>
+<th align="left"><strong>返回值</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Array</td>
+<td align="left">返回数组对象本身。</td>
+</tr>
+<tr>
+<td align="left">Boolean</td>
+<td align="left">布尔值。</td>
+</tr>
+<tr>
+<td align="left">Date</td>
+<td align="left">存储的时间是从 1970 年 1 月 1 日午夜开始计的毫秒数 UTC。</td>
+</tr>
+<tr>
+<td align="left">Function</td>
+<td align="left">函数本身。</td>
+</tr>
+<tr>
+<td align="left">Number</td>
+<td align="left">数字值。</td>
+</tr>
+<tr>
+<td align="left">Object</td>
+<td align="left">对象本身。这是默认情况。</td>
+</tr>
+<tr>
+<td align="left">String</td>
+<td align="left">字符串值。</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left">Math 和 Error 对象没有 valueOf 方法。</td>
+</tr>
+</tbody></table>
+<p>你可以在自己的代码中使用<code>valueOf</code>将内置对象转换为原始值。 创建自定义对象时，可以覆盖<code>Object.prototype.valueOf()</code>来调用自定义方法，而不是默认<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object"><code>Object</code></a>方法。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">MyNumberType.prototype.valueOf = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123; <span class="keyword">return</span> customPrimitiveValue; &#125;;</span><br></pre></td></tr></table></figure>
+
+
+
 <h3 id="操作符"><a href="#操作符" class="headerlink" title="操作符"></a>操作符</h3><p>ES中的操作符可用于各种类型的值，在处理对象时会调用valueOf和toString来处理（C++重构吗）</p>
 <p>因为数据类型有限，不会出现重构等问题，因此符号的所有规则都可以列出来！</p>
 <h4 id="一元运算符"><a href="#一元运算符" class="headerlink" title="一元运算符"></a>一元运算符</h4><p>++  – 和C差不多，可用于任意值，应用后均变为数值类型</p>
@@ -684,14 +731,14 @@
 <p>C有的这里都有！右移使用符号位来填补空位，无符号右移<code>&gt;&gt;&gt;</code>则用0来填补！</p>
 <h4 id="布尔操作符"><a href="#布尔操作符" class="headerlink" title="布尔操作符"></a>布尔操作符</h4><p>非操作符 ！ 无论对什么数据类型，先转换成布尔值，然后取反</p>
 <p>！！ 相当于调用Boolean（）</p>
-<p>&amp;&amp;逻辑与可以用于任何类型的操作数，不限于布尔，同样具有短路特性，如果操作数不全为布尔，则：</p>
+<p>&amp;&amp;逻辑与可以用于任何类型的操作数，不限于布尔，同样具有短路特性，如果操作数不全为布尔，则逻辑与并不一定返回布尔值：</p>
 <ul>
 <li>如果第一个操作数是对象，返回第二个操作数</li>
 <li>如果两个操作数都是对象，返回第二个操作数</li>
 <li>如果第二个操作数为对象，只有第一个操作数为true时才会返回该对象</li>
 <li>只要出现null/NaN,undefined,就返回相应的</li>
 </ul>
-<p>||逻辑或，也会短路，如果操作数不全为布尔，则：</p>
+<p>||逻辑或，也会短路，如果操作数不全为布尔，则同样：</p>
 <ul>
 <li>如果第一个操作数是对象，返回第一个操作数</li>
 <li>如果第一个操作数求值为false，则返回第二个操作数</li>
@@ -743,7 +790,24 @@
 <li>对象先调用valueof（）方法，再按照正常规则转换，如果没有valueof操作符，则调用toString，再按字符串规则转换。</li>
 <li>布尔被转化为0和1</li>
 <li><strong>只要出现NaN，结果就为false</strong></li>
+<li>null和undefined好像也是</li>
 </ul>
+<p>1、大于运算符</p>
+<p>　　　　大于运算符的操作数可能是任意类型，然而，只有数字和字符串才能真正执行比较操作，因此那些不是数字和字符串的操作数都将进行类型转换。规则如下：</p>
+<p>　　　　如果操作数是对象，则这个对象将先使用valueOf()转换成原始值，如果结果还不是原始值，则再使用toString()方法转换；</p>
+<p>　　　　 在对象转换为原始值之后，如果两个操作数都是字符串，则按照字母表的顺序对两个字符串进行比较，这里提到的字母表顺序是指组成这个字符串的16位unicode字符的索引顺序；</p>
+<p>　　　　 在对象转换为原始值之后，如果至少有一个操作数不是字符串，则两个操作数都转换成数字进行比较。</p>
+<p>　　　　需要注意的是Javascript字符串是一个由16位整数值组成的序列，字符串的比较也只是两个字符串中的字符的数值比较，由unicode定义的字符编码和任何特定语言或者本地语言字符集中的传统字符编码顺序不尽相同。字符串比较是区分大小写的，所以一般首先会将字符串通过String.toLowerCase()或者是String.toUpperCase()做大小写的转换。</p>
+<p>　　　　2、大于等于运算符</p>
+<p>　　　　大于等于运算符并不依赖于大于或等于运算符的比较规则，而是遵循小于运算符的比较规则，结果取反</p>
+<p>　　　　3、小于等于运算符</p>
+<p>　　　　小于等于运算符(&lt;=)并不依赖于小于或等于运算符的比较规则，而是遵循大于运算符的比较规则，结果取反。</p>
+<p>　　　　4、小于运算符</p>
+<p>　　　　小于运算符(&lt;)用于比较两个操作数，如果第一个操作数小于第二个操作数，则小于运算符的计算结果为true，否则为false。</p>
+<hr>
+<p>所以要考虑到底是不满足条件，还是出现了NaN</p>
+<p>大写字母的排序在小写字母前面，所以偏小</p>
+<p>按照规则，null和undifined</p>
 <h4 id="相等操作符"><a href="#相等操作符" class="headerlink" title="相等操作符"></a>相等操作符</h4><p>两组，等于和不等于 == ，  全等和不全等 ===</p>
 <p>第一组进行强转再判断：</p>
 <ul>
@@ -784,17 +848,25 @@
 <p>引用值可以随意添加,修改和删除属性和方法</p>
 <p>原始值不能有属性,但是添加时不会报错,但试图引用会返回undefined.</p>
 <p>复制的时候,原始值是复制,引用值是引用原来内存里的变量,而不是创建副本</p>
-<p><strong>但是所有函数的参数都是按值传递的</strong>,只不过可能传进去一个引用而已,</p>
-<p>typeof能区分是否是对象,但是它却不能区分对象的具体类型</p>
+<p><strong>但是所有函数的参数都是按值传递的</strong>,只不过引用值传进去的时候传的是一个指向（类似指针），所以在里面修改外面也能体现，但仍然是按值传递。</p>
+<p>typeof能区分是否是对象,但是它却不能区分对象的具体类型，对引用值意义不大</p>
 <p>instanceof对给定引用类型的对象十分有用,比如 person instanceof Object  变量person是Object吗?</p>
 <p>所以该操作符检测任何引用值和Object构造函数都会返回true,但是检测原始值则始终返回false</p>
 <h4 id="上下文"><a href="#上下文" class="headerlink" title="上下文"></a>上下文</h4><p>变量或者函数的上下文决定了可以访问的数据和行为.全局，函数，块级</p>
 <p><strong>每个上下文都有一个关联的变量对象</strong>，虽然代码无法访问，但是后台处理数据可能用到</p>
-<p>全局上下文是最外层的，根据实现的宿主，可能对象不一样，在浏览器中全局上下文是window对象</p>
+<p>全局上下文是最外层的，根据实现的宿主，可能对象不一样，在<strong>浏览器中全局上下文是window对象</strong></p>
 <p><strong>所有通过var方法定义的全局变量和函数都会成为对象的属性和方法</strong></p>
 <p>上下文在其所有代码执行完成后会销毁，包括所有定义在它上面的变量和函数，全局上下文则在应用程序退出前才会销毁，比如关闭网页或者退出浏览器，函数参数被视为当前上下文的变量</p>
 <p>上下文的代码在执行的时候，会创建变量对象的一个作用域链，从当前上下文往外直到全局上下文</p>
 <p>自己理解下吧。。。</p>
+<p><a target="_blank" rel="noopener" href="https://knightyun.github.io/2019/09/02/js-hoisting#:~:text=%E5%8F%98%E9%87%8F%E6%8F%90%E5%8D%87%20%E6%98%AF%20JavaScript,%E7%9A%84%E4%B8%80%E7%A7%8D%E6%89%A7%E8%A1%8C%E6%9C%BA%E5%88%B6%EF%BC%8C%E5%A4%A7%E8%87%B4%E5%B0%B1%E6%98%AF%E5%AD%97%E9%9D%A2%E6%84%8F%E6%80%9D%EF%BC%8C%E5%B0%86%E5%A3%B0%E6%98%8E%E7%9A%84%E5%8F%98%E9%87%8F%E6%8F%90%E5%89%8D%EF%BC%8C%E4%BD%86%E5%B9%B6%E4%B8%8D%E6%98%AF%E6%8C%87%E5%9C%A8%E7%BC%96%E8%AF%91%E6%97%B6%E6%94%B9%E5%8F%98%E8%AF%AD%E5%8F%A5%E7%9A%84%E9%A1%BA%E5%BA%8F%EF%BC%8C%E8%80%8C%E6%98%AF%E5%B0%86%E5%8F%98%E9%87%8F%20%E6%8F%90%E5%89%8D%20%E6%94%BE%E5%85%A5%E5%86%85%E5%AD%98%E4%B8%AD%EF%BC%8C%E4%BE%9B%E5%90%8E%E7%BB%AD%E6%93%8D%E4%BD%9C%EF%BC%8C%E4%B8%8B%E9%9D%A2%E9%80%9A%E8%BF%87%E5%AE%9E%E4%BE%8B%E8%BF%9B%E8%A1%8C%E5%88%86%E6%9E%90%EF%BC%9B">变量提升</a></p>
+<p>个人理解，声明被提升到最前面，而赋值仍留在原地</p>
+<p><strong>作用域增强？</strong></p>
+<p>通常有两种情况：</p>
+<ul>
+<li>with(location)的location对象会被添加到作用域链的前端。</li>
+<li>try/catch 回创建一个新的变量对象，该对象包含即将抛出的错误的声明。</li>
+</ul>
 <p><strong>执行上下文的生命周期</strong></p>
 <p>执行上下文的生命周期包括三个阶段：<strong>创建阶段 → 执行阶段 → 回收阶段</strong>，本文重点介绍创建阶段。</p>
 <ol>
@@ -816,9 +888,6 @@
 <li>回收阶段</li>
 </ol>
 <p>执行上下文出栈等待虚拟机回收执行上下文</p>
-<p><strong>作用域增强</strong></p>
-<p>try/catch 语句的catch块会创建一个新的变量对象，该对象包含要抛出的错误对象的声明</p>
-<p>with语句会向作用域链前端添加指定的对象</p>
 <h4 id="变量声明"><a href="#变量声明" class="headerlink" title="变量声明"></a>变量声明</h4><p>和之前一样，赋值为const的对象变量不能被重新赋值为引用值，但对象的键却不受限制</p>
 <p>要想对象不能修改，可以 const variable = Object.freeze({})</p>
 <p>这样会“静默失败”，即不提示出错，但是调用则返回undefined</p>
@@ -827,11 +896,11 @@
 <p>使用块级作用域不会改变搜索流程，但会添加额外的层次</p>
 <h4 id="垃圾回收"><a href="#垃圾回收" class="headerlink" title="垃圾回收"></a>垃圾回收</h4><p>垃圾回收有可能明显拖慢渲染的速度和帧速度</p>
 <p>JS使用垃圾回收，即执行环境负责在代码执行时管理内存</p>
-<p>周期性执行垃圾回收程序以处理不再使用的变量并释放其内存（近似且不完美）</p>
+<p>周期性执行垃圾回收程序以处理不再使用的变量并释放其内存（<strong>近似且不完美</strong>）</p>
 <p>历史上两种主要的标记策略：</p>
 <ol>
 <li><p>标记清理（常用）</p>
-<p>运行时首先标记内存中存储的所有变量，然后将所有上下文中的变量以及被上下文的变量引用的变量的标记清理掉，在此之后再被加上标记或存在标记就会被清理</p>
+<p>运行时首先标记内存中存储的所有变量，然后将所有上下文中的变量以及被上下文的变量引用的变量的标记清理掉，在此之后再被加上标记或存在标记就会被清理，标记的实现并不重要，关键是打标记的策略</p>
 </li>
 <li><p>引用标记</p>
 <p>记录每个值被引用的次数，当次数为0时清除，但可能导致循环引用，神之间接导致DOM,BOM由JS实现</p>
@@ -855,15 +924,16 @@
 <p>可能有函数内部全局变量，定时器调用，闭包。。</p>
 </li>
 <li><p>静态分配和对象池（优化的极端形式，不太常见）</p>
-<p>压榨浏览器，一个关键问题是如何减少浏览器回收垃圾的次数，可以间接触发回收条件</p>
+<p>压榨浏览器，一个关键问题是如何减少浏览器回收垃圾的次数，可以间接触发回收条件。浏览器决定何时运行垃圾回收程序的一个标准就是对象更替的速度，如果有很多对象一下被初始化，马上又超出作用域，那么就会被浏览器用更激进的方式回收。</p>
 <p><strong>如果函数会初始化变量，而马上又失去引用，则会被“盯上”，一个方案是函数调用已存在的对象，给他赋值</strong></p>
 <p>那在哪里新建第一个已存在的对象才不会被盯上呢？一个策略是对象池：</p>
-<p>在初始化的某一刻创建一个对象池，用来管理一组可回收的对象，其他代码可以向这里请求对象，更改或使用，然后返还它</p>
+<p>在初始化的某一刻创建一个对象池，用来管理一组可回收的对象，其他代码可以向这里请求对象，更改或使用，然后返还它。这样垃圾回收检测就不会发现有对象更替，也就不会那么频繁地运行。</p>
 </li>
 </ol>
-<h2 id="基本引用类型"><a href="#基本引用类型" class="headerlink" title="基本引用类型"></a>基本引用类型</h2><p>JS没有类，虽然是面向对象，<strong>引用类型是把数据和功能组织到一起的结构</strong>，也被称对象定义</p>
-<p>引用值（或对象）时某个特定引用类型的实例</p>
-<h1 id="疑惑"><a href="#疑惑" class="headerlink" title="疑惑"></a>疑惑</h1><h2 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h2><h3 id="3-32-条件-amp-for声明"><a href="#3-32-条件-amp-for声明" class="headerlink" title="3.32 条件&amp;for声明"></a>3.32 条件&amp;for声明</h3><h3 id="Symbol类型"><a href="#Symbol类型" class="headerlink" title="Symbol类型"></a>Symbol类型</h3><h3 id=""><a href="#" class="headerlink" title=""></a></h3>
+<h2 id="基本引用类型"><a href="#基本引用类型" class="headerlink" title="基本引用类型"></a>基本引用类型</h2><p>JS没有类，虽然是面向对象，但缺少某些基本结构比如类和接口，<strong>引用类型是把数据和功能组织到一起的结构</strong>，也被称<strong>对象定义</strong>，它们描述了自己的对象应有的属性和方法。</p>
+<p>引用值（或对象）是某个特定引用类型的实例，新对象通过new操作符后+一个构造函数来创建。</p>
+<p><em>构造函数是用来创建新对象的函数，负责创建一个只有默认属性和方法的简单对象</em></p>
+<h1 id="疑惑"><a href="#疑惑" class="headerlink" title="疑惑"></a>疑惑</h1><h2 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h2><h3 id="2-3文档模式"><a href="#2-3文档模式" class="headerlink" title="2.3文档模式"></a>2.3文档模式</h3><h3 id="3-32-条件-amp-for声明"><a href="#3-32-条件-amp-for声明" class="headerlink" title="3.32 条件&amp;for声明"></a>3.32 条件&amp;for声明</h3><h3 id="Symbol类型"><a href="#Symbol类型" class="headerlink" title="Symbol类型"></a>Symbol类型</h3><h3 id=""><a href="#" class="headerlink" title=""></a></h3>
                 
             </div>
             <hr/>
@@ -1424,7 +1494,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">129.4k</span>&nbsp;字
+                class="white-color">130.6k</span>&nbsp;字
             
             
             
