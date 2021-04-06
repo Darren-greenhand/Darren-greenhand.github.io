@@ -312,7 +312,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/13.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/11.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -465,7 +465,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-04-03
+                    2021-04-06
                 </div>
                 
 
@@ -504,17 +504,25 @@
 <p><strong>重要事项：</strong>如果属性未知或某个值对给定属性无效，则声明被视为无效，并被浏览器的CSS引擎完全忽略。</p>
 <p><strong>重要：</strong>在CSS(和其他网络标准)中，当语言表达存在不确定性时，美国的拼写被视作公认的标准。例如，颜色应该始终拼写为color。colour是不起作用的。</p>
 <p>虽然大多数值是相对简单的关键字或数值，但也有一些可能的值以函数的形式出现。一个例子是calc()函数。这个函数允许您在CSS中进行简单的计算，例如：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">width: calc(90% - 30px);</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-html" data-language="html"><code class="language-html">width: calc(90% - 30px);<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">transform: rotate(0.8turn);</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-html" data-language="html"><code class="language-html">transform: rotate(0.8turn);<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>一个函数由函数名和一些括号组成，其中放置了该函数的允许值。在上面的calc()示例中，我要求此框的宽度为包含块宽度的90%，减去30像素。这不是我可以提前计算的东西，只是在CSS中输入值，因为我不知道90%会是什么。与所有值一样，MDN上的相关页面将有使用示例，这样您就可以看到函数是如何工作的。</p>
 <h2 id="构建CSS"><a href="#构建CSS" class="headerlink" title="构建CSS"></a>构建CSS</h2><h3 id="规则"><a href="#规则" class="headerlink" title="@规则"></a><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Learn/CSS/First_steps/How_CSS_is_structured#%E8%A7%84%E5%88%99">@规则</a></h3><p>到目前为止，我们还没有遇到 <code>@rules</code> (pronounced “at-rules”). 这是一些特殊的规则，为 CSS提供了一些关于如何表现的指导。 有些<code>@rules</code> 规则很简单，有规则名和值。例如，要将额外的样式表导入主CSS样式表，可以使用<code>@import</code>:</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@import</span> <span class="string">&#x27;styles2.css&#x27;</span>;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token atrule"><span class="token rule">@import</span> <span class="token string">'styles2.css'</span><span class="token punctuation">;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>您将遇到的最常见的 <code>@rules</code> 之一是@media，它允许您使用 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries">媒体查询 </a>来应用CSS，仅当某些条件成立(例如，当屏幕分辨率高于某一数量，或屏幕宽度大于某一宽度时)。</p>
 <p>在下面的 CSS中，我们将给 <code>&lt;body&gt;</code> 元素一个粉红色的背景色。但是，我们随后使用@media创建样式表的一个部分，该部分仅适用于视口大于30em的浏览器。如果浏览器的宽度大于30em，则背景色将为蓝色。</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">  <span class="attribute">background-color</span>: pink;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">@media</span> (<span class="attribute">min-width</span>: <span class="number">30em</span>) &#123;</span><br><span class="line">  <span class="selector-tag">body</span> &#123;</span><br><span class="line">    <span class="attribute">background-color</span>: blue;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">body</span> <span class="token punctuation">&#123;</span>
+  <span class="token property">background-color</span><span class="token punctuation">:</span> pink<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token atrule"><span class="token rule">@media</span> <span class="token punctuation">(</span><span class="token property">min-width</span><span class="token punctuation">:</span> 30em<span class="token punctuation">)</span></span> <span class="token punctuation">&#123;</span>
+  <span class="token selector">body</span> <span class="token punctuation">&#123;</span>
+    <span class="token property">background-color</span><span class="token punctuation">:</span> blue<span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 
 
@@ -582,7 +590,7 @@
 <p>对于web开发人员的样式表来说，覆盖用户样式表是有意义的，因此设计可以按预期进行，但是有时用户充足的理由覆盖web开发人员样式，正如上面提到的—这可以通过在他们的规则中使用<code>!important</code>来实现。</p>
 <h2 id="选择器"><a href="#选择器" class="headerlink" title="选择器"></a>选择器</h2><p>当你使用选择器列表时，如果任何一个选择器无效 (存在语法错误)，那么整条规则都会被忽略。</p>
 <p>但是在被组合起来以后，整个规则都会失效，无论是<code>h1</code>还是这个class都不会被样式化。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">h1, ..special &#123;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">h1, ..special &#123;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>这组选择器包含了伪类，用来样式化一个元素的特定状态。</p>
 <p>它还可以包含了伪元素，选择一个元素的某个部分而不是元素自己。</p>
@@ -652,7 +660,7 @@
 </tbody></table>
 <p>将所有类连成一串代表匹配包含所有这些类的元素</p>
 <p>.a.b.c{}匹配同时含有a,b,c类的标签</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span> =<span class="string">&#x27;a b&#x27;</span>&gt;</span>此处li拥有a和b类<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span class="token attr-name">class</span> <span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">'</span>a b<span class="token punctuation">'</span></span><span class="token punctuation">></span></span>此处li拥有a和b类<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <h3 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h3><table>
 <thead>
@@ -711,11 +719,13 @@
 <p>普通伪类如：first-child   invaild使用 :</p>
 <p><strong>用户行为伪类</strong>，有时叫做<strong>动态伪类</strong></p>
 <p>伪元素以类似方式表现，不过表现得是像你往标记文本中加入全新的HTML元素一样，而不是向现有的元素上应用类。伪元素开头为双冒号<code>::</code>。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">::pseudo-element-name</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">::pseudo-element-name<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p><strong>备注：</strong>一些早期的伪元素曾使用单冒号的语法，所以你可能会在代码或者示例中看到。现代的浏览器为了保持后向兼容，支持早期的带有单双冒号语法的伪元素。</p>
 <p>如果你想在大小写不敏感的情况下，匹配属性值的话，你可以在闭合括号之前，使用<code>i</code>值。</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">li</span><span class="selector-attr">[class^=<span class="string">&quot;a&quot;</span> i]</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">li[class^="a" i]</span> <span class="token punctuation">&#123;</span>
+    <span class="token property">color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 <h3 id="“伪“"><a href="#“伪“" class="headerlink" title="“伪“"></a>“伪“</h3><p>:first-child 表示选择的对象是其父元素的首个子元素，而不是选择它的首个子元素,伪类表状态！！！</p>
 <p>：：before和：：after可以使用content属性插入字符串，而无法被阅读器识别，一般插入符号</p>
@@ -761,7 +771,12 @@
 <p>​    你可能会认为盒子的大小还要加上边框和内边距，这样很麻烦，而且你的想法是对的! 因为这个原因，css还有一个替代盒模型。使用这个模型，所有宽度都是可见宽度，所以内容宽度是该宽度减去边框和填充部分。使用上面相同的样式得到 (width = 350px, height = 150px).</p>
 <p>​    这种模型设定了总大小后，增加边距会压缩内容，换算时注意*2的关系</p>
 <p>如果你希望所有元素都使用替代模式，而且确实很常用，设置 <code>box-sizing</code> 在 <code>&lt;html&gt;</code> 元素上，然后设置所有元素继承该属性，正如下面的例子。如果想要深入理解，请看 <a target="_blank" rel="noopener" href="https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/">the CSS Tricks article on box-sizing</a>。</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">html</span> &#123;</span><br><span class="line">  <span class="attribute">box-sizing</span>: border-box;</span><br><span class="line">&#125;</span><br><span class="line">*, *<span class="selector-pseudo">::before</span>, *<span class="selector-pseudo">::after</span> &#123;</span><br><span class="line">  <span class="attribute">box-sizing</span>: inherit;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">html</span> <span class="token punctuation">&#123;</span>
+  <span class="token property">box-sizing</span><span class="token punctuation">:</span> border-box<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+<span class="token selector">*, *::before, *::after</span> <span class="token punctuation">&#123;</span>
+  <span class="token property">box-sizing</span><span class="token punctuation">:</span> inherit<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h3 id="外边距折叠"><a href="#外边距折叠" class="headerlink" title="外边距折叠"></a><strong>外边距折叠</strong></h3><p>理解外边距的一个关键是外边距折叠的概念。如果你有两个外边距相接的元素，这些外边距将合并为一个外边距，即最大的单个外边距的大小。</p>
 <h3 id="边框"><a href="#边框" class="headerlink" title="边框"></a><strong>边框</strong></h3><p>是在边距和填充框之间绘制的。如果您正在使用标准的盒模型，边框的大小将添加到框的宽度和高度。如果您使用的是替代盒模型，那么边框的大小会使内容框更小，因为它会占用一些可用的宽度和高度。</p>
@@ -814,7 +829,11 @@
 <p>参数都在这：<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/background-position">https://developer.mozilla.org/zh-CN/docs/Web/CSS/background-position</a></p>
 <p>有关键字：长度值.百分比，可混用</p>
 <p>最后，您还可以使用4-value语法来指示到盒子的某些边的距离——在本例中，长度单位是与其前面的值的偏移量。所以在下面的CSS中，我们将背景从顶部调整20px，从右侧调整10px:</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span> &#123;</span><br><span class="line">  <span class="attribute">background-image</span>: <span class="built_in">url</span>(<span class="string">star.png</span>);</span><br><span class="line">  <span class="attribute">background-repeat</span>: no-repeat;</span><br><span class="line">  <span class="attribute">background-position</span>: top <span class="number">20px</span> right <span class="number">10px</span>;</span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">.box</span> <span class="token punctuation">&#123;</span>
+  <span class="token property">background-image</span><span class="token punctuation">:</span> <span class="token url"><span class="token function">url</span><span class="token punctuation">(</span>star.png<span class="token punctuation">)</span></span><span class="token punctuation">;</span>
+  <span class="token property">background-repeat</span><span class="token punctuation">:</span> no-repeat<span class="token punctuation">;</span>
+  <span class="token property">background-position</span><span class="token punctuation">:</span> top 20px right 10px<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span> <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 
 
@@ -831,13 +850,13 @@
 <p><code>background-clip</code> 设置元素的背景（背景图片或颜色）是否延伸到边框、内边距盒子、内容盒子下</p>
 <p>border-box,padding-box,content-box,text</p>
 <p>background-origin</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">border-box</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">border-box<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>背景图片的摆放以border区域为参考</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">padding-box</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">padding-box<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>背景图片的摆放以padding区域为参考</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">content-box</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">content-box<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>背景图片的摆放以content区域为参考</p>
 <h3 id="background简写"><a href="#background简写" class="headerlink" title="background简写"></a>background简写</h3><p>如果使用多个背景，则需要为第一个背景指定所有普通属性，然后在逗号后面添加下一个背景。</p>
@@ -867,9 +886,9 @@
 <p>你可以用<code>overflow</code>属性指定x轴和y轴方向的滚动，同时使用两个值进行传递。如果指定了两个关键字，第一个对<code>overflow-x</code>生效而第二个对<code>overflow-y</code>生效</p>
 <p>overflow-wrap：</p>
 <p>是用来说明当一个不能被分开的字符串太长而不能填充其包裹盒时，为防止其溢出，浏览器是否允许这样的单词中断换行。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">normal 行只能在正常的单词断点处中断。（例如两个单词之间的空格）</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">normal 行只能在正常的单词断点处中断。（例如两个单词之间的空格）<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">break-word 表示如果行内没有多余的地方容纳该单词到结尾，则那些正常的不能被分割的单词会被强制分割换行。</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">break-word 表示如果行内没有多余的地方容纳该单词到结尾，则那些正常的不能被分割的单词会被强制分割换行。<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 
 
@@ -1051,12 +1070,19 @@
 <li><code>fill</code>–调整比例以适应盒子</li>
 </ul>
 <p>如果你是按顺序读这些课，那么你可能还没有看到布局的部分，只要记住替换元素在成为网格或者弹性布局的一部分时，有不同的默认行为，这很必要，避免了他们被布局奇怪地拉伸。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">width: 100%;</span><br><span class="line">height: 100%;&#x2F;&#x2F;要拉伸的话</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">width: 100%;
+height: 100%;&#x2F;&#x2F;要拉伸的话<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <p>正如在本教程的HTML部分的<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Learn/Forms/Styling_web_forms">form styling</a>课里解释的那样，许多更加复杂的输入类型是由操作系统渲染的，无法进行样式化。因而你应该总是假设表单在不同的访客看来十分不同，并在许多浏览器上测试复杂的表单。</p>
 <h3 id="文本输入元素"><a href="#文本输入元素" class="headerlink" title="文本输入元素"></a>文本输入元素</h3><p>允许文本输入的元素，例如<code>&lt;input type=&quot;text&quot;&gt;</code>，特定的类型例如<code>&lt;input type=&quot;email&quot;&gt;</code>以及<code>&lt;textarea&gt;</code>元素，是相当容易样式化的，它们会试图表现得和在你的页面上其他盒子一样。不过这些元素默认的样式化方式会改变，取决于你的用户访问站点时所使用的操作系统和浏览器。</p>
 <p>在一些浏览器中，表单元素默认不会继承字体样式，因此如果你想要确保你的表单填入区域使用body中或者一个父元素中定义的字体，你需要向你的CSS中加入这条规则。</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">button</span>,</span><br><span class="line"><span class="selector-tag">input</span>,</span><br><span class="line">select,</span><br><span class="line"><span class="selector-tag">textarea</span> &#123;</span><br><span class="line">  <span class="attribute">font-family</span> : inherit;</span><br><span class="line">  <span class="attribute">font-size</span> : <span class="number">100%</span>;</span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">button,
+input,
+select,
+textarea</span> <span class="token punctuation">&#123;</span>
+  <span class="token property">font-family</span> <span class="token punctuation">:</span> inherit<span class="token punctuation">;</span>
+  <span class="token property">font-size</span> <span class="token punctuation">:</span> 100%<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span> <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 
 
@@ -1070,7 +1096,7 @@
 <li>我们在《th》和《td》元素上设置了一些<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/padding"><code>padding</code></a>——这些元素使数据项有了一些空间，使表看起来更加清晰。</li>
 <li>用letter-spaceing属性设置字体间距</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">caption-side: bottom;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-选择标题位置" data-language="选择标题位置"><code class="language-选择标题位置">caption-side: bottom;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <h2 id="调试CSS"><a href="#调试CSS" class="headerlink" title="调试CSS"></a>调试CSS</h2><p>善用web开发者工具，审查元素并修改值，选择满意的代码copy掉，查看同时应用的选择器并比较优先级，可以先放到检测网站检验，浏览器的支持性，</p>
 <p>如果上述步骤未能解决问题，则您需要做更多调查。 此时最好的做法是创建一个称为简化测试用例的东西。</p>
@@ -1100,20 +1126,23 @@
 <p>使用这些工具的任何一部分都需要你的开发环境能运行进行处理工作的脚本。许多代码编辑器能为你做这项工作，或者你也可以安装一个命令行工具来辅助工作。</p>
 <p>最为流行的预处理工具是<a target="_blank" rel="noopener" href="https://sass-lang.com/">Sass</a>，这里不是Sass的教程，所以我只会简要地解释一些Sass能做的事情，在组织的时候真的会帮到你，即使你没有用到Sass的任何其他的独特功能。</p>
 <h3 id="CSS自定义属性！"><a href="#CSS自定义属性！" class="headerlink" title="CSS自定义属性！"></a>CSS自定义属性！</h3><p>通过在 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/:root"><code>:root</code></a> 伪类上设置自定义属性，然后在整个文档需要的地方使用</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-pseudo">:root</span> &#123;</span><br><span class="line">  --<span class="selector-tag">main</span>-bg-<span class="attribute">color</span>: brown;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">:root</span> <span class="token punctuation">&#123;</span>
+  <span class="token property">--main-bg-color</span><span class="token punctuation">:</span> brown<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 <p>在属性里用var（–xxx）使用，如：</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">background-color</span>: <span class="built_in">var</span>(--main-bg-color);</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--main-bg-color<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>注意，这些是自定义属性，并不是你在其他编程语言中遇到的实际的变量。这些值仅当需要的时候才会计算，而并不会按其他规则进行保存。比如，你不能为元素设置一个属性，然后让它从兄弟或旁支子孙规则上获取值。属性仅用于匹配当前选择器及其子孙，这和通常的CSS是一样的。</p>
 <p>可以指定备用值</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">background-color</span>: <span class="built_in">var</span>(--my-var, <span class="built_in">var</span>(--my-background, pink，blue));</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--my-var<span class="token punctuation">,</span> <span class="token function">var</span><span class="token punctuation">(</span>--my-background<span class="token punctuation">,</span> pink，blue<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>本例展示了如何处理一个以上的 fallback。该技术可能会导致性能问题，它花了更多的时间在处理这些变量上。</p>
 <p>像<a target="_blank" rel="noopener" href="https://www.w3.org/TR/css-variables/#custom-property">自定义属性</a>这些 fallback 语法允许使用逗号。比如 <code>var(--foo, red, blue)</code> 定义了一个 <code>red, blue</code> 的备用值——从第一个逗号到最后的全部内容，都会被作为备用值的一部分。</p>
 <p>当浏览器遇到无效的 <code>var()</code> 时，会使用继承值或初始值代替。</p>
 <p>在 JavaScript 中获取或者修改 CSS 变量和操作普通 CSS 属性是一样的：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 获取一个 Dom 节点上的 CSS 变量</span></span><br><span class="line">element.style.getPropertyValue(<span class="string">&quot;--my-var&quot;</span>);</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">// 获取一个 Dom 节点上的 CSS 变量</span>
+element<span class="token punctuation">.</span>style<span class="token punctuation">.</span><span class="token function">getPropertyValue</span><span class="token punctuation">(</span><span class="token string">"--my-var"</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 
 
@@ -1359,8 +1388,7 @@
                 <a href="/2021/03/13/http/">
                     <div class="card-image">
                         
-                        
-                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="http协议基础">
+                        <img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/monitor-1307227_960_720.jpg" class="responsive-img" alt="http协议基础">
                         
                         <span class="card-title">http协议基础</span>
                     </div>
@@ -1400,8 +1428,7 @@
                 <a href="/2021/03/11/html-mdn/">
                     <div class="card-image">
                         
-                        
-                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="html-mdn">
+                        <img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/1595789246885.jpg" class="responsive-img" alt="html-mdn">
                         
                         <span class="card-title">html-mdn</span>
                     </div>
@@ -1672,7 +1699,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">130.7k</span>&nbsp;字
+                class="white-color">130.2k</span>&nbsp;字
             
             
             

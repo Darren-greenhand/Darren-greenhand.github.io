@@ -312,7 +312,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/9.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -465,7 +465,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-04-03
+                    2021-04-06
                 </div>
                 
 
@@ -751,7 +751,7 @@
 <h3 id="XXencoding"><a href="#XXencoding" class="headerlink" title="XXencoding"></a>XXencoding</h3><p>XXencode 将输入文本以每三个字节为单位进行编码。如果最后剩下的资料少于三个字节，不够的部份用零补齐。这三个字节共有 24 个 Bit，以 6bit 为单位分为 4 个组，每个组以十进制来表示所出现的数值只会落在 0 到 63 之间。以所对应值的位置字符代替。</p>
 <p>原理：<a target="_blank" rel="noopener" href="http://blog.chacuo.net/778.html">http://blog.chacuo.net/778.html</a></p>
 <p>工具： <a target="_blank" rel="noopener" href="http://web.chacuo.net/charsetxxencode">http://web.chacuo.net/charsetxxencode</a></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">跟base64打印字符相比，就是XXencode多一个“-” 字符，少一个”&#x2F;” 字符。</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">跟base64打印字符相比，就是XXencode多一个“-” 字符，少一个”&#x2F;” 字符。<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 
 
@@ -793,17 +793,38 @@
 <p>打印文件中可打印的字符，经常用来发现文件中的一些提示信息或是一些特殊的编码信息，常常用来发现题目的突破口。</p>
 <ul>
 <li><p>可以配合 <code>grep</code> 命令探测指定信息</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">strings test|grep -i XXCTF</span><br></pre></td></tr></table></figure></li>
+<pre class="line-numbers language-none"><code class="language-none">strings test|grep -i XXCTF<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
 <li><p>也可以配合 <code>-o</code> 参数获取所有 ASCII 字符偏移</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">root in ~/Desktop/tmp λ strings -o flag|head</span><br><span class="line">    14 IHDR</span><br><span class="line">    45 gAMA</span><br><span class="line">    64  cHRM</span><br><span class="line">    141 bKGD</span><br><span class="line">    157 tIME</span><br><span class="line">    202 IDATx</span><br><span class="line">    223 NFdVK3</span><br><span class="line">    361 |;*-</span><br><span class="line">    410 Ge%&lt;W</span><br><span class="line">    431 5duX@%</span><br></pre></td></tr></table></figure></li>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">root in ~&#x2F;Desktop&#x2F;tmp λ strings -o flag|head
+    14 IHDR
+    45 gAMA
+    64  cHRM
+    141 bKGD
+    157 tIME
+    202 IDATx
+    223 NFdVK3
+    361 |;*-
+    410 Ge%&lt;W
+    431 5duX@%<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
 </ul>
 <p>`binwalk` 命令</p>
 <p>binwalk 本是一个固件的分析工具，比赛中常用来发现多个文件粘合再在一起的情况。根据文件头去识别一个文件中夹杂的其他文件，有时也会存在误报率（尤其是对 Pcap 流量包等文件时）。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">root in ~&#x2F;Desktop&#x2F;tmp λ binwalk flag</span><br><span class="line"></span><br><span class="line">DECIMAL       HEXADECIMAL     DESCRIPTION</span><br><span class="line">--------------------------------------------------------------------------------</span><br><span class="line">0             0x0             PNG image, 450 x 450, 8-bit grayscale, non-interlaced</span><br><span class="line">134           0x86            Zlib compressed data, best compression</span><br><span class="line">25683         0x6453          Zip archive data, at least v2.0 to extract, compressed size: 675, uncompressed size: 1159, name: readme.txt</span><br><span class="line">26398         0x671E          Zip archive data, at least v2.0 to extract, compressed size: 430849, uncompressed size: 1027984, name: trid</span><br><span class="line">457387        0x6FAAB         End of Zip archive</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">root in ~&#x2F;Desktop&#x2F;tmp λ binwalk flag
+
+DECIMAL       HEXADECIMAL     DESCRIPTION
+--------------------------------------------------------------------------------
+0             0x0             PNG image, 450 x 450, 8-bit grayscale, non-interlaced
+134           0x86            Zlib compressed data, best compression
+25683         0x6453          Zip archive data, at least v2.0 to extract, compressed size: 675, uncompressed size: 1159, name: readme.txt
+26398         0x671E          Zip archive data, at least v2.0 to extract, compressed size: 430849, uncompressed size: 1027984, name: trid
+457387        0x6FAAB         End of Zip archive<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>配合 <code>-e</code> 参数可以进行自动化提取。</p>
 <p>也可以结合 <code>dd</code> 命令进行手动切割。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">root in ~&#x2F;Desktop&#x2F;tmp λ dd if&#x3D;flag of&#x3D;1.zip bs&#x3D;1 skip&#x3D;25683</span><br><span class="line">431726+0 records in</span><br><span class="line">431726+0 records out</span><br><span class="line">431726 bytes (432 kB, 422 KiB) copied, 0.900973 s, 479 kB&#x2F;s</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">root in ~&#x2F;Desktop&#x2F;tmp λ dd if&#x3D;flag of&#x3D;1.zip bs&#x3D;1 skip&#x3D;25683
+431726+0 records in
+431726+0 records out
+431726 bytes (432 kB, 422 KiB) copied, 0.900973 s, 479 kB&#x2F;s<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
 
 
@@ -1054,8 +1075,7 @@
                 <a href="/2021/03/16/%E7%99%BD%E5%B8%BD%E5%AD%90/">
                     <div class="card-image">
                         
-                        
-                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="白帽子讲web安全">
+                        <img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/cb8065380cd791235ae33b4cae345982b2b78083.jpg" class="responsive-img" alt="白帽子讲web安全">
                         
                         <span class="card-title">白帽子讲web安全</span>
                     </div>
@@ -1103,7 +1123,7 @@
                 <a href="/2021/03/14/introduction-to-Networks/">
                     <div class="card-image">
                         
-                        <img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/background2.jpg" class="responsive-img" alt="introduction-to-Network">
+                        <img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/22.jpg" class="responsive-img" alt="introduction-to-Network">
                         
                         <span class="card-title">introduction-to-Network</span>
                     </div>
@@ -1374,7 +1394,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">130.7k</span>&nbsp;字
+                class="white-color">130.2k</span>&nbsp;字
             
             
             

@@ -312,7 +312,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/13.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/monitor-1307227_960_720.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -461,7 +461,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-04-03
+                    2021-04-06
                 </div>
                 
 
@@ -511,10 +511,13 @@
 <h2 id="标识互联网内容"><a href="#标识互联网内容" class="headerlink" title="标识互联网内容"></a>标识互联网内容</h2><p>每个资源都由一个 (<a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Glossary/URI">URI</a>) 来进行标识。</p>
 <p>一般情况下，资源的名称和位置由同一个 URL（统一资源定位符，它是 URI 的一种）来标识。也有某些特殊情况，资源的名称和位置由不同的 URI 进行标识：例如，待请求的资源希望客户端从另外一个位置访问它。我们可以使用一个特定的首部字段，<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Headers/Alt-Svc"><code>Alt-Svc</code></a>，来指示这种情况。</p>
 <p>URI 的最常见形式是统一资源定位符 (<a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Glossary/URL">URL</a>)，它也被称为 <em>Web 地址</em>。</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">https://developer.mozilla.org</span><br><span class="line">https://developer.mozilla.org/en-US/docs/Learn/</span><br><span class="line">https://developer.mozilla.org/en-US/search?q=URL</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-http" data-language="http"><code class="language-http"><span class="token header-name keyword">https:</span>//developer.mozilla.org
+<span class="token header-name keyword">https:</span>//developer.mozilla.org/en-US/docs/Learn/
+<span class="token header-name keyword">https:</span>//developer.mozilla.org/en-US/search?q=URL<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 <p>URN 是另一种形式的 URI，它通过特定命名空间中的唯一名称来标识资源。</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">urn:isbn:9780141036144</span><br><span class="line">urn:ietf:rfc:7230</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-http" data-language="http"><code class="language-http"><span class="token header-name keyword">urn:</span><span class="token header-name keyword">isbn:</span>9780141036144
+<span class="token header-name keyword">urn:</span><span class="token header-name keyword">ietf:</span><span class="token header-name keyword">rfc:</span>7230<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <h3 id="URI语法"><a href="#URI语法" class="headerlink" title="URI语法"></a>URI语法</h3><ol>
 <li><p>“://“前是方案或协议</p>
@@ -584,7 +587,8 @@
 </li>
 </ol>
 <h3 id="Data-URLs"><a href="#Data-URLs" class="headerlink" title="Data URLs"></a>Data URLs</h3><p>Data URLs 由四个部分组成：前缀(<code>data:</code>)、指示数据类型的MIME类型、如果非文本则为可选的<code>base64</code>标记、数据本身：</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">data:[&lt;mediatype&gt;][;base64],&lt;data&gt;</span><br><span class="line">mediatype `是个 MIME 类型的字符串，例如 &quot;`image/jpeg`&quot; 表示 JPEG 图像文件。如果被省略，则默认值为 `text/plain;charset=US-ASCII</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-http" data-language="http"><code class="language-http"><span class="token header-name keyword">data:</span>[&lt;mediatype>][;base64],&lt;data>
+mediatype `是个 MIME 类型的字符串，例如 "`image/jpeg`" 表示 JPEG 图像文件。如果被省略，则默认值为 `text/plain;charset=US-ASCII<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <p>有很多问题：</p>
 <ol>
@@ -982,8 +986,7 @@
                 <a href="/2021/03/13/Linux/">
                     <div class="card-image">
                         
-                        
-                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="Linux(basic)">
+                        <img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/internet-1593448_960_720.jpg" class="responsive-img" alt="Linux(basic)">
                         
                         <span class="card-title">Linux(basic)</span>
                     </div>
@@ -1031,8 +1034,7 @@
                 <a href="/2021/03/13/css-mdn/">
                     <div class="card-image">
                         
-                        
-                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="css-mdn">
+                        <img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/11.jpg" class="responsive-img" alt="css-mdn">
                         
                         <span class="card-title">css-mdn</span>
                     </div>
@@ -1303,7 +1305,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">130.7k</span>&nbsp;字
+                class="white-color">130.2k</span>&nbsp;字
             
             
             

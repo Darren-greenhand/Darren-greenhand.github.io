@@ -312,7 +312,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/17.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/internet-1593448_960_720.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -465,7 +465,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-04-03
+                    2021-04-06
                 </div>
                 
 
@@ -671,20 +671,22 @@
 <p>我吐了</p>
 <h1 id="命令行之始"><a href="#命令行之始" class="headerlink" title="命令行之始"></a>命令行之始</h1><ol>
 <li><p><strong>用户名：</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sysadmin @localhost：〜 $</span><br></pre></td></tr></table></figure></li>
+<pre class="line-numbers language-none"><code class="language-none">sysadmin @localhost：〜 $<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
 <li><p><strong>系统名称：</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sysadmin @本地主机：〜 $</span><br></pre></td></tr></table></figure></li>
+<pre class="line-numbers language-none"><code class="language-none">sysadmin @本地主机：〜 $<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
 <li><p><strong>当前目录：</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sysadmin @ localhost：〜 $</span><br></pre></td></tr></table></figure></li>
+<pre class="line-numbers language-none"><code class="language-none">sysadmin @ localhost：〜 $<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
 </ol>
 <p>该<code>~</code>符号用作用户主目录的简写。通常，用户的主目录位于该<code>/home</code>目录下，并以用户帐户名命名；例如，<code>/home/sysadmin</code>。</p>
 <p>命令的典型格式如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">命令[选项] [参数]</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">命令[选项] [参数]<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>选项用于修改命令的核心行为，而参数用于提供其他信息</p>
 <p>请记住，Linux区分大小写。命令，选项，参数，变量和文件名必须完全按照所示输入。</p>
 <p>组合选项的顺序并不重要。所有这些示例的输出将是相同的：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ls -l -r </span><br><span class="line">ls -rl </span><br><span class="line">ls -lr</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">ls -l -r 
+ls -rl 
+ls -lr<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 <p>选项通常是单个字母；但是，有时它们也是单词或短语。通常，较旧的命令使用单个字母，而较新的命令使用完整的单词作为选项。<code>-</code>像该<code>-h</code>选项一样，单字母选项前面带有一个破折号。全字选项前面有两个破折号<code>--</code>。该<code>-h</code>选项还具有等效的全字形式；该<code>--human-readable</code>选项。</p>
 <p>Bash shell中使用了两种类型的变量：local和environment。</p>
@@ -712,7 +714,9 @@
 <p>The <code>man</code> command uses a pager to display documents. Usually, <strong>this pager is the <code>less</code> command</strong>, but on some distributions, it may be the <code>more</code> command. Both are very similar in how they perform.</p>
 <p>To view the various movement commands that are available, use the <em><strong>H key</strong></em> while viewing a man page. This displays a help page.</p>
 <p>man手册使用less命令，less和more是查看文件的方法命令，less 与 more 类似，但使用 less 可以随意浏览文件，而 more 仅能向前移动，却不能向后移动，而且 less 在查看之前不会加载整个文件。那些操作都是less命令提供的，用</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Commands marked with * may be preceded by a number, N.     </span><br><span class="line">   Notes in parentheses indicate the behavior if N is given.        </span><br><span class="line">   A key preceded by a caret indicates the Ctrl key; thus ^K is ctrl-K.</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">Commands marked with * may be preceded by a number, N.     
+   Notes in parentheses indicate the behavior if N is given.        
+   A key preceded by a caret indicates the Ctrl key; thus ^K is ctrl-K.<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 <p>请注意，手册页现在可能对您来说还是个谜，但是随着您对Linux的更多了解，您会发现它们是非常有价值的资源</p>
 <p><strong>Name</strong></p>
@@ -834,13 +838,14 @@
 </tr>
 </tbody></table>
 <p>随后是权限，硬连接数，用户所有者，小组所有者，文件大小，时间戳，文档名称</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-rw-r--r-- 1 root   root  35330 May 26  2018 bootstrap.log</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">-rw-r--r-- 1 root   root  35330 May 26  2018 bootstrap.log<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>对于符号链接，将显示链接名称以及箭头和原始文件的路径名。</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lrwxrwxrwx。1 root root 2018年11月22日/etc/grub.conf- &gt; ../boot/grub/grub.conf</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">lrwxrwxrwx。1 root root 2018年11月22日&#x2F;etc&#x2F;grub.conf- &gt; ..&#x2F;boot&#x2F;grub&#x2F;grub.conf<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>使用该<code>-d</code>选项时，它引用的是当前目录，而不是其中的内容。如果没有其他选择，那就毫无意义。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sysadmin@localhost:~$ ls -ld                                           </span><br><span class="line">drwxr-xr-x 1 sysadmin sysadmin 224 Nov  7 17:07 .</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">sysadmin@localhost:~$ ls -ld                                           
+drwxr-xr-x 1 sysadmin sysadmin 224 Nov  7 17:07 .<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <p>详细的看命令集[]</p>
 <p>颜色指示该项目是什么类型。下表描述了一些较常见的颜色：</p>
@@ -880,7 +885,8 @@
 <p>请记住，是将shell（而不是<code>echo</code>or<code>ls</code>命令）将全局模式扩展为相应的文件名。换句话说，如果<code>echo /etc/a*</code>执行了该命令，则在执行echo命令之前，外壳程序将<code>a*</code>用<code>/etc</code>与该模式匹配的目录中的所有文件和目录替换。</p>
 <p><strong>ls 在使用通配符时你可能不知道他到底显示的是哪里的文件夹，可以用 -d来显示路径而不是内容</strong></p>
 <p><strong>cp</strong>是复制 cp sour des  </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sysadmin @ localhost：〜 $ cp -v &#x2F; etc &#x2F; hosts〜                              </span><br><span class="line">&#96;&#x2F; etc &#x2F; hosts&#39;-&gt;&#96;&#x2F; home &#x2F; sysadmin &#x2F; hosts&#39;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">sysadmin @ localhost：〜 $ cp -v &#x2F; etc &#x2F; hosts〜                              
+&#96;&#x2F; etc &#x2F; hosts&#39;-&gt;&#96;&#x2F; home &#x2F; sysadmin &#x2F; hosts&#39;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <p>默认同名，新名字可以加在路径里，<strong>默认覆盖重名文件！</strong></p>
 <p>-v可以显示具体操作</p>
@@ -1010,11 +1016,11 @@
 </tbody></table>
 <p>提取时原始文件未更改，并创建了新目录。目录内是原始目录和文件</p>
 <p>如果后面加了完全正确的路径名，则可以提取单个文件</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -xjvf folders.tbz School/Art/linux.txt</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">tar -xjvf folders.tbz School&#x2F;Art&#x2F;linux.txt<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <h2 id="ZIP文件"><a href="#ZIP文件" class="headerlink" title="ZIP文件"></a>ZIP文件</h2><p>Microsoft中的事实上的归档实用程序是ZIP文件。ZIP在Linux中并不普遍，但是<code>zip</code>and<code>unzip</code>命令很好地支持ZIP 。尽管和<code>tar</code>和<code>gzip</code>/<code>gunzip</code>相同的命令和选项可以互换使用来进行创建和提取，但是并非如此<code>zip</code>。对于两个不同的命令，相同的选项具有不同的含义。</p>
 <p><code>zip</code>的默认模式是将文件添加到存档并进行压缩。</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">zip [OPTIONS] [zipfile [file…]]</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">zip [OPTIONS] [zipfile [file…]]<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>应当注意的是，<code>tar</code>需要使用<code>–f</code>选项来指示正在传递文件名，而需要<code>zip</code>并<code>unzip</code>使用文件名，因此不需要您通知命令正在传递文件名。</p>
 <p><code>zip</code>默认情况下，该命令不会递归到子目录中，这与<code>tar</code>命令的行为不同。也就是说，仅添加<code>School</code>将仅添加空目录，而不添加其下的文件。如果您想要<code>tar</code>类似的行为，则必须使用该<code>–r</code>选项指示要使用递归：</p>
@@ -1103,17 +1109,22 @@
 <p>但是<code>1&gt; 或 &gt;</code>重定向到文件会覆盖原内容，&gt;&gt;是附加</p>
 <p>而STDEER的重定向是<code>2&gt;</code>，虽然它和STDOUT都默认显示在屏幕上，但是流是不一样的</p>
 <p>而<code>&amp;&gt;</code>将两者同时重定向.，下面这种诡异的写法也可以定向到同一个文件</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find &#x2F;etc -name hosts &gt; find.out 2&gt;&amp;1</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">find &#x2F;etc -name hosts &gt; find.out 2&gt;&amp;1<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>也可以分开放，如下所示：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">~$</span><span class="bash"> ls /fake /etc/ppp &gt; example.txt 2&gt; error.txt</span></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">~$ ls &#x2F;fake &#x2F;etc&#x2F;ppp &gt; example.txt 2&gt; error.txt<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 
 
 <p>输入</p>
 <p>重定向STDIN的概念很困难，因为很难理解为什么要重定向STDIN。使用STDOUT和STDERR，它们的目的很简单。有时将输出存储到文件中以备将来使用会很有帮助。</p>
 <p>对于某些命令，如果您未指定文件名作为参数，则它们将恢复为使用STDIN来获取数据。例如，cat</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">sysadmin@localhost:~$ cat</span><br><span class="line">hello</span><br><span class="line">hello</span><br><span class="line">how are you?</span><br><span class="line">how are you?</span><br><span class="line">ctrl+c终止</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">sysadmin@localhost:~$ cat
+hello
+hello
+how are you?
+how are you?
+ctrl+c终止<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>tr 接受一个字符集并将它们转化为另一个字符集<code>tr &#39;a-z&#39; &#39;A-Z&#39;</code>该命令不支持跟文件</p>
 <p>只能<code>tr &#39;a-z&#39; &#39;A-Z&#39; &lt;file &gt;save</code> 可对文件进行处理</p>
@@ -1124,11 +1135,20 @@
 <p>-kn 指定根据哪一项排序，项间以分界符隔开</p>
 <p>-n 指定排序类型为数字的</p>
 <p>-r 反向排序</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">sysadmin@localhost:~$ sort -t: -n -k3 mypasswd</span><br><span class="line">root:x:0:0:root:/root:/bin/bash</span><br><span class="line">daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin</span><br><span class="line">bin:x:2:2:bin:/bin:/usr/sbin/nologin</span><br><span class="line">sys:x:3:3:sys:/dev:/usr/sbin/nologin</span><br><span class="line">sync:x:4:65534:sync:/bin:/bin/sync</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">sysadmin@localhost:~$ sort -t: -n -k3 mypasswd
+root:x:0:0:root:&#x2F;root:&#x2F;bin&#x2F;bash
+daemon:x:1:1:daemon:&#x2F;usr&#x2F;sbin:&#x2F;usr&#x2F;sbin&#x2F;nologin
+bin:x:2:2:bin:&#x2F;bin:&#x2F;usr&#x2F;sbin&#x2F;nologin
+sys:x:3:3:sys:&#x2F;dev:&#x2F;usr&#x2F;sbin&#x2F;nologin
+sync:x:4:65534:sync:&#x2F;bin:&#x2F;bin&#x2F;sync<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>用逗号可以依次指定多次排序</p>
 <p>To sort first by the operating system (field #2) and then year (field #1) and then by last name (field #3), use the following command:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sysadmin@localhost:~$ sort -t, -k2 -k1n -k3 os.csv</span><br><span class="line">1991,Linux,Torvalds</span><br><span class="line">1987,Minix,Tanenbaum</span><br><span class="line">1970,Unix,Richie</span><br><span class="line">1970,Unix,Thompson</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">sysadmin@localhost:~$ sort -t, -k2 -k1n -k3 os.csv
+1991,Linux,Torvalds
+1987,Minix,Tanenbaum
+1970,Unix,Richie
+1970,Unix,Thompson<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 
 
@@ -1140,17 +1160,37 @@
 <p><code>cut</code>命令可以从文件或标准输入中提取文本列。它主要用于处理带分隔符的数据库文件。同样，定界文件(delimited flies)是包含由定界符分隔的列的文件。这些文件在Linux系统上非常常见。</p>
 <p>-d 也是指定分界符（默认tab）</p>
 <p>-f 指定范围</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">sysadmin@localhost:~$ cut -d: -f1,5-7 mypasswd</span><br><span class="line">root:root:/root:/bin/bash</span><br><span class="line">daemon:daemon:/usr/sbin:/usr/sbin/nologin</span><br><span class="line">bin:bin:/bin:/usr/sbin/nologin</span><br><span class="line">sys:sys:/dev:/usr/sbin/nologin</span><br><span class="line">sync:sync:/bin:/bin/sync</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">sysadmin@localhost:~$ cut -d: -f1,5-7 mypasswd
+root:root:&#x2F;root:&#x2F;bin&#x2F;bash
+daemon:daemon:&#x2F;usr&#x2F;sbin:&#x2F;usr&#x2F;sbin&#x2F;nologin
+bin:bin:&#x2F;bin:&#x2F;usr&#x2F;sbin&#x2F;nologin
+sys:sys:&#x2F;dev:&#x2F;usr&#x2F;sbin&#x2F;nologin
+sync:sync:&#x2F;bin:&#x2F;bin&#x2F;sync<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>-c 选项根据字符位置提取文本列-在使用固定宽度的数据库文件或命令输出时很有用。</p>
 <p>The following will display just the file type (character 1), permissions (characters 2-10), a space (character 11), and filename (characters 50+):</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">sysadmin@localhost:~$ ls -l | cut -c1-11,50-</span><br><span class="line">total 44</span><br><span class="line">drwxr-xr-x Desktop</span><br><span class="line">drwxr-xr-x Documents</span><br><span class="line">drwxr-xr-x Downloads</span><br><span class="line">drwxr-xr-x Music</span><br><span class="line">drwxr-xr-x Pictures</span><br><span class="line">drwxr-xr-x Public</span><br><span class="line">drwxr-xr-x Templates</span><br><span class="line">drwxr-xr-x Videos</span><br><span class="line">-rw-rw-r-- all.txt</span><br><span class="line">-rw-rw-r-- example.txt</span><br><span class="line">-rw-rw-r-- mypasswd</span><br><span class="line">-rw-rw-r-- new.txt</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">sysadmin@localhost:~$ ls -l | cut -c1-11,50-
+total 44
+drwxr-xr-x Desktop
+drwxr-xr-x Documents
+drwxr-xr-x Downloads
+drwxr-xr-x Music
+drwxr-xr-x Pictures
+drwxr-xr-x Public
+drwxr-xr-x Templates
+drwxr-xr-x Videos
+-rw-rw-r-- all.txt
+-rw-rw-r-- example.txt
+-rw-rw-r-- mypasswd
+-rw-rw-r-- new.txt<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 
 
 <p><strong>grep</strong></p>
 <p><code>grep</code>命令可用于过滤文件中的行或与指定模式匹配的另一个命令的输出。该模式可以与您要匹配的确切文本一样简单，也可以通过使用正则表达式来使其更加先进。</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sysadmin@localhost:~$ grep bash /etc/passwd</span><br><span class="line">root:x:0:0:root:/root:/bin/bash</span><br><span class="line">sysadmin:x:1001:1001:System Administrator,,,,:/home/sysadmin:/bin/bash</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">sysadmin@localhost:~$ grep bash &#x2F;etc&#x2F;passwd
+root:x:0:0:root:&#x2F;root:&#x2F;bin&#x2F;bash
+sysadmin:x:1001:1001:System Administrator,,,,:&#x2F;home&#x2F;sysadmin:&#x2F;bin&#x2F;bash<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 <p>–color 会用红色高亮匹配到的项，上文中的bash就会变成红色</p>
 <p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210323185628820.png" alt="image-20210323185628820"></p>
@@ -1164,10 +1204,14 @@
 <h1 id="基本脚本"><a href="#基本脚本" class="headerlink" title="基本脚本"></a>基本脚本</h1><p>一个shell脚本是已被存储在一个文本文件，可执行命令的文件。运行文件时，将执行每个命令。Shell脚本可以访问Shell的所有命令，包括逻辑。因此，脚本可以测试文件的存在或寻找特定的输出并相应地更改其行为。您可以构建脚本来自动化重复的工作，这可以节省您的时间并确保每次使用脚本时的一致性。例如，如果您每天运行相同的五个命令，则可以将它们转换为shell脚本，从而将您的工作减少为一个命令</p>
 <p>脚本后缀名.sh 两种运行方法：</p>
 <p>1.命令 sh 文件名  2. 直接输入路径（因为很少会有脚本文件放到PATH里，所以直接引用相对路径./）</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sysadmin@localhost:~$ sh test.sh</span><br><span class="line">Hello, World!</span><br><span class="line">sysadmin@localhost:~$ ./test.sh</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">sysadmin@localhost:~$ sh test.sh
+Hello, World!
+sysadmin@localhost:~$ .&#x2F;test.sh<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 <p>因为很多shell都有他们各自的语法，因此很多复杂的脚本会<em><strong>指定特定的shell</strong></em>来执行本文件，他们会在第一行首先添加绝对路径，并加上前缀<code>#!</code></p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">!/bin/sh  也可以<span class="comment">#!/bin/bash</span></span></span><br><span class="line">echo &quot;Hello, World!&quot;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">#!&#x2F;bin&#x2F;sh  也可以#!&#x2F;bin&#x2F;bash
+echo &quot;Hello, World!&quot;
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <p>The two characters <code>#!</code> are traditionally called the hash and the bang respectively, which leads to the shortened form of “shebang” when they’re used at the beginning of a script.</p>
 <p>顺便说一句，shebang（或crunchbang）用于传统的shell脚本和其他基于文本的语言，如Perl，Ruby和Python。只要直接运行脚本，任何标记为可执行文件的文本文件都将在第一行中指定的解释器下运行。如果直接将脚本作为解释器的参数, 例如<code>sh script</code>或调用<code>bash script</code>，则无论shebang行中的内容如何，都将使用给定的shell。</p>
@@ -1223,7 +1267,11 @@
 <p>注释是#，保持一行，可以手动exit number 来设定退出代码</p>
 <p>按照惯例，退出代码的<code>0</code>意思是“一切都OK”。任何大于该退出代码的代码<code>0</code>均表示发生了某种错误，这是该程序所特有的</p>
 <p>$number表示传给脚本的第n个参数,$0是脚本名，这和c命令行argv一样，传的是字符串</p>
-<h2 id="判断和分支"><a href="#判断和分支" class="headerlink" title="判断和分支"></a>判断和分支</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">if grep -q root /etc/passwd; then</span><br><span class="line">  echo root is in the password file</span><br><span class="line">else</span><br><span class="line">  echo root is missing from the password file</span><br><span class="line">fi</span><br></pre></td></tr></table></figure>
+<h2 id="判断和分支"><a href="#判断和分支" class="headerlink" title="判断和分支"></a>判断和分支</h2><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">if grep -q root &#x2F;etc&#x2F;passwd; then
+  echo root is in the password file
+else
+  echo root is missing from the password file
+fi<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>语法有点诡异，要用fi闭合</p>
 <p><code>test</code>命令使您可以轻松访问比较和文件测试运算符。例如：</p>
@@ -1282,29 +1330,77 @@
 <p><em><strong>OP是 -eq，-ne，-lt，-le，-gt，-ge的一个，分别代表</strong></em></p>
 <p><em><strong>相等，不等, 小于，小于等于，大于，大于等于</strong></em></p>
 <p><code>test</code> is fairly verbose for a command that gets used so frequently, so there is an alias for it called <code>[</code> (left square bracket). If you enclose your conditions in square brackets, it’s the same as running <code>test</code>. So, these statements are identical.</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">if test –f /tmp/foo; then</span><br><span class="line">if [ -f /tmp/foo]; then</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">if test –f &#x2F;tmp&#x2F;foo; then
+if [ -f &#x2F;tmp&#x2F;foo]; then<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <p><em><strong>Important</strong></em></p>
 <p><em><strong>There must be spaces around the square brackets. <code>[$age -lt 16]</code> would fail, but <code>[ $age -lt 16 ]</code> would work.</strong></em></p>
 <p>The <code>if</code> statement has a final form that lets you do multiple comparisons at one time using <code>elif</code> (short for <code>else</code> <code>if</code>).</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">!/bin/bash</span></span><br><span class="line"></span><br><span class="line">if [ &quot;$1&quot; = &quot;hello&quot; ]; then</span><br><span class="line">  echo &quot;hello yourself&quot;</span><br><span class="line">elif [ &quot;$1&quot; = &quot;goodbye&quot; ]; then</span><br><span class="line">  echo &quot;nice to have met you&quot;</span><br><span class="line">  echo &quot;I hope to see you again&quot;</span><br><span class="line">else</span><br><span class="line">  echo &quot;I didn&#x27;t understand that&quot;</span><br><span class="line">fi</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">#!&#x2F;bin&#x2F;bash
+
+if [ &quot;$1&quot; &#x3D; &quot;hello&quot; ]; then
+  echo &quot;hello yourself&quot;
+elif [ &quot;$1&quot; &#x3D; &quot;goodbye&quot; ]; then
+  echo &quot;nice to have met you&quot;
+  echo &quot;I hope to see you again&quot;
+else
+  echo &quot;I didn&#39;t understand that&quot;
+fi<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>还有诡异的case语法</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">!/bin/bash</span></span><br><span class="line"></span><br><span class="line">case &quot;$1&quot; in</span><br><span class="line">hello|hi)</span><br><span class="line">  echo &quot;hello yourself&quot;</span><br><span class="line">  ;;</span><br><span class="line">goodbye)</span><br><span class="line">  echo &quot;nice to have met you&quot;</span><br><span class="line">  echo &quot;I hope to see you again&quot;</span><br><span class="line">  ;;</span><br><span class="line">*)</span><br><span class="line">  echo &quot;I didn&#x27;t understand that&quot;</span><br><span class="line">esac</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">#!&#x2F;bin&#x2F;bash
+
+case &quot;$1&quot; in
+hello|hi)
+  echo &quot;hello yourself&quot;
+  ;;
+goodbye)
+  echo &quot;nice to have met you&quot;
+  echo &quot;I hope to see you again&quot;
+  ;;
+*)
+  echo &quot;I didn&#39;t understand that&quot;
+esac<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 
 
 <h2 id="循环"><a href="#循环" class="headerlink" title="循环"></a>循环</h2><p>for循环</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">!/bin/bash</span></span><br><span class="line"></span><br><span class="line">for NAME in Sean Jon Isaac David; do</span><br><span class="line">  echo &quot;Hello $NAME&quot;</span><br><span class="line">done</span><br><span class="line"></span><br><span class="line">for S in *; do</span><br><span class="line">  echo &quot;Doing something to $S&quot;</span><br><span class="line">done</span><br><span class="line">//Shell将*其扩展到当前目录中的所有文件。</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">#!&#x2F;bin&#x2F;bash
+
+for NAME in Sean Jon Isaac David; do
+  echo &quot;Hello $NAME&quot;
+done
+
+for S in *; do
+  echo &quot;Doing something to $S&quot;
+done
+&#x2F;&#x2F;Shell将*其扩展到当前目录中的所有文件。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>while循环</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">!/bin/bash</span></span><br><span class="line"></span><br><span class="line">i=0</span><br><span class="line">while [ $i -lt 10 ]; do</span><br><span class="line">  echo $i</span><br><span class="line">  i=$(( $i + 1))</span><br><span class="line">done</span><br><span class="line">echo “Done counting”</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">#!&#x2F;bin&#x2F;bash
+
+i&#x3D;0
+while [ $i -lt 10 ]; do
+  echo $i
+  i&#x3D;$(( $i + 1))
+done
+echo “Done counting”<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>可以直接在命令行使用</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">sysadmin@localhost:~$ for name in /etc/passwd /etc/hosts /etc/group           </span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> <span class="keyword">do</span></span>                                                                          </span><br><span class="line"><span class="meta">&gt;</span><span class="bash">     wc <span class="variable">$name</span></span>                                                                </span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> <span class="keyword">done</span></span>                                                                        </span><br><span class="line">  24   30 1001 /etc/passwd                                                    </span><br><span class="line">  7  15 161 /etc/hosts                                                        </span><br><span class="line">  46  46 561 /etc/group                                                        </span><br><span class="line">sysadmin@localhost:~$</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">sysadmin@localhost:~$ for name in &#x2F;etc&#x2F;passwd &#x2F;etc&#x2F;hosts &#x2F;etc&#x2F;group           
+&gt; do                                                                          
+&gt;     wc $name                                                                
+&gt; done                                                                        
+  24   30 1001 &#x2F;etc&#x2F;passwd                                                    
+  7  15 161 &#x2F;etc&#x2F;hosts                                                        
+  46  46 561 &#x2F;etc&#x2F;group                                                        
+sysadmin@localhost:~$<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>seq用来生成列表。。</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">for num in `seq 1 12`</span><br><span class="line">do</span><br><span class="line">          touch test$num</span><br><span class="line">done</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">for num in &#96;seq 1 12&#96;
+do
+          touch test$num
+done<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h2 id="vi基本"><a href="#vi基本" class="headerlink" title="vi基本"></a>vi基本</h2><p><code>vi</code>编辑器有两种模式：插入和命令。在插入模式下，您将文本添加到文档中。在命令模式下，可以执行导航，搜索，保存和退出编辑器之类的操作。</p>
 <p>vi filename 创建或开始处理一个文本文件</p>
@@ -1803,7 +1899,7 @@
                 <a href="/2021/03/14/introduction-to-Networks/">
                     <div class="card-image">
                         
-                        <img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/background2.jpg" class="responsive-img" alt="introduction-to-Network">
+                        <img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/22.jpg" class="responsive-img" alt="introduction-to-Network">
                         
                         <span class="card-title">introduction-to-Network</span>
                     </div>
@@ -1851,8 +1947,7 @@
                 <a href="/2021/03/13/http/">
                     <div class="card-image">
                         
-                        
-                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="http协议基础">
+                        <img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/monitor-1307227_960_720.jpg" class="responsive-img" alt="http协议基础">
                         
                         <span class="card-title">http协议基础</span>
                     </div>
@@ -2115,7 +2210,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">130.7k</span>&nbsp;字
+                class="white-color">130.2k</span>&nbsp;字
             
             
             
