@@ -8282,7 +8282,18 @@ R(config-line)# modem autoconfigure discovery   发现和自动配置连接到�
         <category>web-back-end</category>
       </categories>
       <tags>
-        <tag>cisco</tag>
+        <tag>MySQL</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>GoLang</title>
+    <url>/2021/04/06/GoLang/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>web-back-end</category>
+      </categories>
+      <tags>
+        <tag>go</tag>
       </tags>
   </entry>
 </search>
