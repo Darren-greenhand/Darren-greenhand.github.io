@@ -474,7 +474,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    23 分
+                    24 分
                 </div>
                 
 
@@ -756,16 +756,19 @@
 <h4 id="方案2"><a href="#方案2" class="headerlink" title="方案2"></a>方案2</h4><p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210405150949559.png" alt="image-20210405150949559"></p>
 <p><strong>我就说嘛。那么高的精度，不管分几份好像都没关系</strong></p>
 <p>初始化css叫normalize.css</p>
-<p>cssrem修改默认html尺寸</p>
+<p>cssrem修改默认html尺寸，按照设计图的样式来。</p>
 <p><strong>flexible默认全屏。若要限制最大宽度</strong></p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">@media</span> screen <span class="keyword">and</span> (<span class="attribute">min-width</span>: <span class="number">750px</span>)&#123;</span><br><span class="line">    <span class="selector-tag">html</span>&#123;</span><br><span class="line">        <span class="attribute">font-size</span> : <span class="number">75px</span> <span class="meta">!important</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>rem + flexible + less 用的挺好的，再配上cssrem插件</p>
+<p>flexible.js划分是按全屏幕的10等份，在移动端需要更改一下</p>
+<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210406083616174.png" alt="image-20210406083616174"></p>
 <h2 id="响应式布局"><a href="#响应式布局" class="headerlink" title="响应式布局"></a>响应式布局</h2><p>一个网站，所有设备！！！</p>
 <h3 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h3><p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210405204535363.png" alt="image-20210405204535363"></p>
 <p><strong>常见划分尺寸👇</strong>，并不是绝对！原来屏幕竟然是定死的！</p>
 <p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210405204933124.png" alt="image-20210405204933124"></p>
 <p>尺寸稍小是因为两侧流出空白比装不下好看</p>
+<p>调整cssrem，在插件的设置栏可以调整默认一html单位的大小</p>
 <hr>
 <h4 id="条件注释"><a href="#条件注释" class="headerlink" title="条件注释"></a>条件注释</h4><p>由于浏览器版本的不同，对CSS里某些元素的解释也不一样，针对浏览器版本不同而选择不同CSS的代码，<br>其实我们还可以利用条件注释的方法来达到类似的目的，什么是条件注释，在此简单介绍一下，无非就是一些if判断啦，呵呵，但这些判断不是在脚本里执行的，而是直接在html代码里执行的，下面来介绍一下使用方法吧。</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--<span class="selector-attr">[if XXX]</span>&gt;</span><br><span class="line">这里是正常的<span class="selector-tag">html</span>代码</span><br><span class="line">&lt;!<span class="selector-attr">[endif]</span>–&gt;</span><br><span class="line">这里XXX是一些特定的东东，在此列表几个出来，详细介绍各自的含义：</span><br><span class="line">&lt;!–<span class="selector-attr">[if IE]</span>&gt; / 如果浏览器是IE /</span><br><span class="line">&lt;!–<span class="selector-attr">[if IE 5]</span>&gt; / 如果浏览器是IE <span class="number">5</span> 的版本 /</span><br><span class="line">&lt;!–<span class="selector-attr">[if IE 6]</span>&gt; / 如果浏览器是IE <span class="number">6</span> 的版本 /</span><br><span class="line">&lt;!–<span class="selector-attr">[if IE 7]</span>&gt; / 如果浏览器是IE <span class="number">7</span> 的版本 /</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">上面是几个常用的判断IE浏览器版本的语法，下面再来介绍一下相对比较少用的逻辑判断的参数：</span><br><span class="line">有几个参数：lte，lt，gte，gt及!</span><br><span class="line">各自的详细解释如下：</span><br><span class="line">lte：就是Less than or equal <span class="selector-tag">to</span>的简写，也就是小于或等于的意思。</span><br><span class="line">lt ：就是Less than的简写，也就是小于的意思。</span><br><span class="line">gte：就是Greater than or equal <span class="selector-tag">to</span>的简写，也就是大于或等于的意思。</span><br><span class="line">gt ：就是Greater than的简写，也就是大于的意思。</span><br><span class="line"></span><br><span class="line">例句:</span><br><span class="line"></span><br><span class="line">&lt;!--[if gt IE <span class="number">5.5</span>]&gt; / 如果IE版本大于<span class="number">5.5</span> /</span><br><span class="line">&lt;!–[if lte IE <span class="number">6</span>]&gt; / 如果IE版本小于等于<span class="number">6</span> /</span><br><span class="line">&lt;!–[if !IE]&gt; / 如果浏览器不是IE /</span><br></pre></td></tr></table></figure>
@@ -798,10 +801,18 @@
 <p>卧槽。<strong>container可以有很多个，可以单独适用于某些行，挺棒的</strong></p>
 <hr>
 <p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210405213715077.png" alt="image-20210405213715077"></p>
+<p><strong>行数</strong></p>
+<p>行应始终位于容器中。</p>
+<p>该行为列提供了一个居住的地方，理想情况下，列的总数为12。它还可以作为包装器使用，因为所有列都向左浮动，当浮动变得怪异时，其他行不会重叠。</p>
+<p>行的每边也有15px的负边距。组成该行的div通常会被限制在容器的填充内部，而不是粉红色区域的边缘，但不能超出。15px的负边距将行压到容器顶部15px的填充上方，从而使行基本无效。此外，行确保您其中的所有div都显示在自己的行上，与上一行和下一行分开。</p>
+<hr>
+<p><strong>列</strong></p>
+<p>列现在具有15px的填充。这种填充意味着列实际上接触行的边缘，由于行具有负边距，而容器具有正的填充，列本身就接触容器的边缘。但是，列上的填充将列内的任何内容推入所需的位置，并且在列之间提供了30px的装订线。切勿在行外使用列，否则将无法使用。</p>
+<hr>
 <p>如果份数相加小于12：</p>
 <p>占不满整个屏幕，默认左对齐</p>
 <p>如果分数相加大于12：</p>
-<p>装不开的那些，整体另起一行</p>
+<p>装不开的那些，超出的整体另起一行</p>
 <p>通过给同一个盒子添加不同情况下的自定义类名来决定。卧槽，我悟了！</p>
 <hr>
 <p><strong>列嵌套</strong></p>
@@ -1559,7 +1570,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">129k</span>&nbsp;字
+                class="white-color">129.4k</span>&nbsp;字
             
             
             
