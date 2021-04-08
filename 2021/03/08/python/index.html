@@ -4,8 +4,8 @@
 
 <head>
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
-    <meta name="keywords" content="pythoning, 一隅于浮华">
-    <meta name="description" content="犹豫的学习Web全栈和安全的新手博客">
+    <meta name="keywords" content="python, 一隅于浮华">
+    <meta name="description" content="willing to enter the field of god">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>pythoning | 一隅于浮华</title>
+    <title>python | 一隅于浮华</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -145,7 +145,7 @@
         <div class="logo-name">一隅于浮华</div>
         <div class="logo-desc">
             
-            犹豫的学习Web全栈和安全的新手博客
+            willing to enter the field of god
             
         </div>
     </div>
@@ -249,12 +249,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/16.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/69297688_p0.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">pythoning</h1>
+                    <h1 class="description center-align post-title">python</h1>
                 </div>
             </div>
         </div>
@@ -382,8 +382,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/others/" class="post-category">
-                                others
+                            <a href="/categories/%E5%89%8D%E7%BD%AE/" class="post-category">
+                                前置
                             </a>
                         
                     </div>
@@ -402,7 +402,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-04-06
+                    2021-04-08
                 </div>
                 
 
@@ -435,12 +435,12 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <p>[toc]</p>
+<p><img src="" alt="69297688_p0"></p>
 <h2 id="python要学的"><a href="#python要学的" class="headerlink" title="python要学的"></a>python要学的</h2><ol>
 <li>基础语法（Y）</li>
 <li>进阶语法（）</li>
 <li>内置函数（）</li>
 <li>高级：库（），正则表达式（），进程线程（），mySQL（）</li>
-<li>后端三大框架（Django、 Flask以及Tornado）</li>
 </ol>
 <h2 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h2><h3 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h3><ol>
 <li><p>在Python中，代码不是越多越好，而是越少越好。代码不是越复杂越好，而是越简单越好。</p>
@@ -457,7 +457,7 @@
 </li>
 <li><p>函数可以同时返回多个值，但其实就是一个tuple，多个变量可以同时接收一个tuple，按位置赋给对应的值</p>
 </li>
-<li><p>定义默认参数要牢记一点：默认参数必须指向不变对象！如果指向可变对象如一个list，默认参数则指向这个list，且内容会被记住，每次调用都有继承，通过妙用不变对象来规避</p>
+<li><p>定义默认参数要牢记一点：<strong>默认参数必须指向不变对象</strong>！如果指向可变对象如一个list，默认参数则指向这个list，且内容会被记住，每次调用都有继承，通过妙用不变对象来规避</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">add_end</span><span class="token punctuation">(</span>L<span class="token operator">=</span><span class="token boolean">None</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
     <span class="token keyword">if</span> L <span class="token keyword">is</span> <span class="token boolean">None</span><span class="token punctuation">:</span>
         L <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
@@ -467,14 +467,14 @@
 <p>​    因为Python函数在定义的时候，默认参数<code>L</code>的值就被计算出来了，即<code>[]</code>，因为默认参数<code>L</code>也是一个变量，它指向对象<code>[]</code>，每次调用该函数，如果改变了<code>L</code>的内容，则下次调用时，默认参数的内容就变了，不再是函数定义时的<code>[]</code>了。</p>
 </li>
 <li><p>参数前加*可以接受list和tuple并组装成tuple，加**则自动组装成dict，不过此时的key不用加引号</p>
-</li>
-<li><p>命名关键字：</p>
-</li>
+<ol start="11">
 <li><p>命名关键字参数需要一个特殊分隔符<code>*</code>，<code>*</code>后面的参数被视为命名关键字参数。</p>
 </li>
 <li><p>如果函数定义中已经有了一个可变参数，后面跟着的命名关键字参数就不再需要一个特殊分隔符<code>*</code>了：</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">person</span><span class="token punctuation">(</span>name<span class="token punctuation">,</span> age<span class="token punctuation">,</span> <span class="token operator">*</span>args<span class="token punctuation">,</span> city<span class="token punctuation">,</span> job<span class="token punctuation">)</span><span class="token punctuation">:</span>
     <span class="token keyword">print</span><span class="token punctuation">(</span>name<span class="token punctuation">,</span> age<span class="token punctuation">,</span> args<span class="token punctuation">,</span> city<span class="token punctuation">,</span> job<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></li>
+</ol>
+</li>
 <li><p>函数参数规则：</p>
 <ol>
 <li><em><strong>参数定义的顺序必须是：必选参数、默认参数、可变参数、命名关键字参数和关键字参数。</strong></em></li>
@@ -967,10 +967,15 @@ datetime<span class="token punctuation">.</span>datetime<span class="token punct
 
 
 
-<h2 id="规范"><a href="#规范" class="headerlink" title="规范"></a>规范</h2><ol>
+<h2 id="规范"><a href="#规范" class="headerlink" title="规范"></a>规范</h2><p>参考PEP8    </p>
+<ol>
 <li><p>正常的函数和变量名是公开的（public），可以被直接引用，比如：<code>abc</code>，<code>x123</code>，<code>PI</code>等；</p>
 <p>类似<code>__xxx__</code>这样的变量是特殊变量，可以被直接引用，但是有特殊用途，比如上面的<code>__author__</code>，<code>__name__</code>就是特殊变量，<code>hello</code>模块定义的文档注释也可以用特殊变量<code>__doc__</code>访问，我们自己的变量一般不要用这种变量名；</p>
 <p>类似<code>_xxx</code>和<code>__xxx</code>这样的函数或变量就是非公开的（private），不应该被直接引用，比如<code>_abc</code>，<code>__abc</code>等；</p>
+</li>
+<li><p>运算符的空格要看出运算顺序，<code>x = 3*4 + 5</code>  <code>y = 3 + 5</code></p>
+</li>
+<li><p>每行代码应该不超过 <strong>80</strong> 个字符，虽然在某些使用情况下，<strong>99</strong> 个字符也可以</p>
 </li>
 </ol>
 <h2 id="以后再学"><a href="#以后再学" class="headerlink" title="以后再学"></a>以后再学</h2><ol>
@@ -1014,7 +1019,7 @@ datetime<span class="token punctuation">.</span>datetime<span class="token punct
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2021/03/08/pythoning/">http://example.com/2021/03/08/pythoning/</a>
+                    <a href="http://example.com/2021/03/08/python/">http://example.com/2021/03/08/python/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -1541,7 +1546,7 @@ datetime<span class="token punctuation">.</span>datetime<span class="token punct
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">130.2k</span>&nbsp;字
+                class="white-color">131.4k</span>&nbsp;字
             
             
             
