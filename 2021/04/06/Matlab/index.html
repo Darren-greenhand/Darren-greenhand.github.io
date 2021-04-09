@@ -411,7 +411,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    6 分
+                    9 分
                 </div>
                 
 
@@ -545,7 +545,139 @@ v <span class="token operator">=</span>
 <pre class="line-numbers language-matlab" data-language="matlab"><code class="language-matlab"><span class="token function">x</span><span class="token punctuation">(</span>x<span class="token operator">==</span><span class="token number">999</span><span class="token punctuation">)</span> <span class="token operator">=</span> <span class="token number">1</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>这里的和和或是  <code>&amp;  |</code></p>
-<h2 id="编程构造"><a href="#编程构造" class="headerlink" title="编程构造"></a>编程构造</h2>
+<h2 id="编程构造"><a href="#编程构造" class="headerlink" title="编程构造"></a>编程构造</h2><pre class="line-numbers language-matlab" data-language="matlab"><code class="language-matlab"><span class="token keyword">if</span> xxx
+	xxxxxxxxx
+<span class="token keyword">elseif</span> xxx
+	xxxx
+<span class="token keyword">else</span>
+	xxx
+<span class="token keyword">end</span>  <span class="token operator">/</span><span class="token operator">/</span>这些语言非得加个<span class="token keyword">end</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-matlab" data-language="matlab"><code class="language-matlab"><span class="token keyword">for</span> 向量（有多个值）
+	xxxx
+	xxxxx
+<span class="token keyword">end</span>
+<span class="token function">disp</span><span class="token punctuation">(</span>"done<span class="token punctuation">!</span>"<span class="token punctuation">)</span>  <span class="token operator">/</span><span class="token operator">/</span>display可还行<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>但是如果只是简单的对向量进行处理，matlab提供了更简单的做法</p>
+<p>比如点乘<code>.*</code>，比如<code>.^</code></p>
+<p>length() 求长度 pause(second) 可以观察其生成过程，奇异值</p>
+<h2 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h2><pre class="line-numbers language-matlab" data-language="matlab"><code class="language-matlab">
+基本语法
+示例	说明
+x <span class="token operator">=</span> <span class="token keyword">pi</span>	使用等号 <span class="token punctuation">(</span><span class="token operator">=</span><span class="token punctuation">)</span> 创建变量。
+左侧 <span class="token punctuation">(</span>x<span class="token punctuation">)</span> 是变量的名称，其值为右侧 <span class="token punctuation">(</span><span class="token keyword">pi</span><span class="token punctuation">)</span> 的值。
+y <span class="token operator">=</span> <span class="token function">sin</span><span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">5</span><span class="token punctuation">)</span>	您可以使用括号提供函数的输入。
+ 
+
+桌面管理
+函数	示例	说明
+save	save data<span class="token punctuation">.</span>mat	将当前工作区保存到 MAT 文件中。
+load	load data<span class="token punctuation">.</span>mat	将 MAT 文件中的变量加载到工作区。
+clear	clear	清除工作区中的所有变量。
+clc	clc	清除命令行窗口中的所有文本。
+format	format long	更改数值输出的显示方式。
+ 
+
+数组类型
+示例	说明
+<span class="token number">4</span>	标量
+<span class="token punctuation">[</span><span class="token number">3</span> <span class="token number">5</span><span class="token punctuation">]</span>	行向量
+<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">;</span><span class="token number">3</span><span class="token punctuation">]</span>	列向量
+<span class="token punctuation">[</span><span class="token number">3</span> <span class="token number">4</span> <span class="token number">5</span><span class="token punctuation">;</span><span class="token number">6</span> <span class="token number">7</span> <span class="token number">8</span><span class="token punctuation">]</span>	矩阵
+ 
+
+等间距向量
+示例	说明
+<span class="token number">1</span><span class="token operator">:</span><span class="token number">4</span>	使用冒号 <span class="token punctuation">(</span><span class="token operator">:</span><span class="token punctuation">)</span> 运算符，创建一个从 <span class="token number">1</span> 到 <span class="token number">4</span>，间距为 <span class="token number">1</span> 的向量。
+<span class="token number">1</span><span class="token operator">:</span><span class="token number">0.5</span><span class="token operator">:</span><span class="token number">4</span>	创建一个从 <span class="token number">1</span> 到 <span class="token number">4</span>，间距为 <span class="token number">0.5</span> 的向量。
+<span class="token function">linspace</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">10</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">)</span>	创建一个包含 <span class="token number">5</span> 个元素的向量。这些值从 <span class="token number">1</span> 到 <span class="token number">10</span> 均匀间隔。
+ 
+
+创建矩阵
+示例	说明
+<span class="token function">rand</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span>	创建一个 <span class="token number">2</span> 行 <span class="token number">2</span> 列的方阵。
+<span class="token function">zeros</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">)</span>	创建一个 <span class="token number">2</span> 行 <span class="token number">3</span> 列的矩形矩阵。
+ 
+
+索引
+示例	说明
+<span class="token function">A</span><span class="token punctuation">(</span><span class="token keyword">end</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span>	访问最后一行的第二列中的元素。
+<span class="token function">A</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token operator">:</span><span class="token punctuation">)</span>	访问第二行所有元素。
+<span class="token function">A</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token operator">:</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token operator">:</span><span class="token punctuation">)</span>	访问前三行的所有列。
+<span class="token function">A</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span> <span class="token operator">=</span> <span class="token number">11</span>	将数组中第二个元素的值更改为 <span class="token number">11</span>。
+ 
+
+数组运算
+示例	说明
+<span class="token punctuation">[</span><span class="token number">1</span> <span class="token number">1</span><span class="token punctuation">;</span> <span class="token number">1</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">*</span><span class="token punctuation">[</span><span class="token number">2</span> <span class="token number">2</span><span class="token punctuation">;</span><span class="token number">2</span> <span class="token number">2</span><span class="token punctuation">]</span>
+ans <span class="token operator">=</span>
+     <span class="token number">4</span>    <span class="token number">4</span>
+     <span class="token number">4</span>    <span class="token number">4</span>	执行矩阵乘法。
+<span class="token punctuation">[</span><span class="token number">1</span> <span class="token number">1</span><span class="token punctuation">;</span> <span class="token number">1</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">.*</span><span class="token punctuation">[</span><span class="token number">2</span> <span class="token number">2</span><span class="token punctuation">;</span><span class="token number">2</span> <span class="token number">2</span><span class="token punctuation">]</span>
+ans <span class="token operator">=</span>
+     <span class="token number">2</span>    <span class="token number">2</span>
+     <span class="token number">2</span>    <span class="token number">2</span>	执行按元素乘法。
+ 
+
+多个输出
+示例	说明
+<span class="token punctuation">[</span>xrow<span class="token punctuation">,</span>xcol<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">size</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span>	将 x 中的行数和列数保存为两个不同变量。
+<span class="token punctuation">[</span>xMax<span class="token punctuation">,</span>idx<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">max</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span>	计算 x 的最大值及其对应的索引值。
+ 
+
+文档
+示例	说明
+doc randi	打开 randi 函数的文档页。
+ 
+
+绘图
+示例	说明
+<span class="token function">plot</span><span class="token punctuation">(</span>x<span class="token punctuation">,</span>y<span class="token punctuation">,</span>"ro<span class="token operator">-</span>"<span class="token punctuation">,</span>"LineWidth"<span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">)</span>	绘制一条红色 <span class="token punctuation">(</span>r<span class="token punctuation">)</span> 虚线 <span class="token punctuation">(</span><span class="token operator">-</span><span class="token operator">-</span><span class="token punctuation">)</span>
+并使用圆圈 <span class="token punctuation">(</span>o<span class="token punctuation">)</span> 标记，线宽很大。
+hold on	在现有绘图中新增一行。
+hold off	为下一个绘图线条创建一个新坐标区。
+<span class="token function">title</span><span class="token punctuation">(</span>"My Title"<span class="token punctuation">)</span>	为绘图添加标签。
+ 
+
+使用表
+示例	说明
+data<span class="token punctuation">.</span>HeightYards	从表 data 中提取变量 HeightYards。
+data<span class="token punctuation">.</span>HeightMeters <span class="token operator">=</span> data<span class="token punctuation">.</span>HeightYards<span class="token operator">*</span><span class="token number">0.9144</span>	从现有数据中派生一个表变量。
+ 
+
+逻辑运算
+示例	说明
+<span class="token punctuation">[</span><span class="token number">5</span> <span class="token number">10</span> <span class="token number">15</span><span class="token punctuation">]</span> <span class="token operator">></span> <span class="token number">12</span>	将向量与值 <span class="token number">12</span> 进行比较。
+<span class="token function">v1</span><span class="token punctuation">(</span>v1 <span class="token operator">></span> <span class="token number">6</span><span class="token punctuation">)</span>	提取 v1 中大于 <span class="token number">6</span> 的所有元素。
+<span class="token function">x</span><span class="token punctuation">(</span>x<span class="token operator">==</span><span class="token number">999</span><span class="token punctuation">)</span> <span class="token operator">=</span> <span class="token number">1</span>	用值 <span class="token number">1</span> 替换 x 中等于 <span class="token number">999</span> 的所有值。
+ 
+
+编程
+示例	说明
+<span class="token keyword">if</span> x <span class="token operator">></span> <span class="token number">0.5</span>
+    y <span class="token operator">=</span> <span class="token number">3</span>
+<span class="token keyword">else</span>
+    y <span class="token operator">=</span> <span class="token number">4</span>
+<span class="token keyword">end</span>	如果 x 大于 <span class="token number">0.5</span>，则将 y 的值设置为 <span class="token number">3</span>。
+
+否则，将 y 的值设置为 <span class="token number">4</span>。
+<span class="token keyword">for</span> c <span class="token operator">=</span> <span class="token number">1</span><span class="token operator">:</span><span class="token number">3</span>
+    <span class="token function">disp</span><span class="token punctuation">(</span>c<span class="token punctuation">)</span>
+<span class="token keyword">end</span>	循环计数器 <span class="token punctuation">(</span>c<span class="token punctuation">)</span> 遍历
+值 <span class="token number">1</span><span class="token operator">:</span><span class="token number">3</span>（<span class="token number">1</span>、<span class="token number">2</span> 和 <span class="token number">3</span>）。
+
+循环体显示 c 的每个值。
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<hr>
+<h1 id="大佬教程"><a href="#大佬教程" class="headerlink" title="大佬教程"></a>大佬教程</h1><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210409091948941.png" alt="image-20210409091948941"></p>
+<p>先看完前五节基础必看！后面是选学</p>
+<h2 id="基本操作和矩阵操作"><a href="#基本操作和矩阵操作" class="headerlink" title="基本操作和矩阵操作"></a>基本操作和矩阵操作</h2><p>第一步，把matlab当作基本的计算机</p>
+<p>第二部，利用matlab进行矩阵运算</p>
+
                 
             </div>
             <hr/>
@@ -1108,7 +1240,7 @@ v <span class="token operator">=</span>
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">131.4k</span>&nbsp;字
+                class="white-color">136.5k</span>&nbsp;字
             
             
             
