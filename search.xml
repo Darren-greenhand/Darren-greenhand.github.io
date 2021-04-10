@@ -555,6 +555,16 @@ DECIMAL       HEXADECIMAL     DESCRIPTION
 <h1 id="Typora"><a href="#Typora" class="headerlink" title="Typora"></a>Typora</h1><p>C + b 加粗</p>
 <p>C + i  斜体</p>
 <p>C + k 设为超链接</p>
+<h1 id="Jupyter-Notebook"><a href="#Jupyter-Notebook" class="headerlink" title="Jupyter Notebook"></a>Jupyter Notebook</h1><p>A 创建新单元格above当前单元格</p>
+<p>B 创建新单元格below当前单元格</p>
+<p>在markdown 和 code之间进行转换</p>
+<p>markdown -&gt; code Y</p>
+<p>code -&gt; markdown M </p>
+<p>L 是显示行号d</p>
+<p>双击D 可以删除单元格，Z撤销删除</p>
+<p>S 保存！</p>
+<p>最强的是C + S + P</p>
+<p>打开万能的控制栏</p>
 ]]></content>
       <categories>
         <category>others</category>
@@ -8878,6 +8888,105 @@ letters<span class="token punctuation">,</span> nums <span class="token operator
 <p>这些工具组合起来太巧妙了</p>
 <p>tuple,list,dict,zip,enumerate,压包解包,列表解析,lambda,range,iterator还有封装好的函数</p>
 <h2 id="脚本"><a href="#脚本" class="headerlink" title="脚本"></a>脚本</h2><p>Python 是一种“脚本语言”。脚本，对应的英文是：script。一般人看到script这个英文单词，或许想到的更多的是：电影的剧本，就是一段段的脚本，所组成的。电影剧本的脚本，决定了电影中的人和物，都做哪些事情，怎么做。而计算机中的脚本，决定了：计算机中的操作系统和各种软件工具，要做哪些事情，以及具体怎么做。</p>
+<p>学完更全面的Anaconda和Jupyter Notebook  我们继续脚本</p>
+<p>运行python文件得先输入python（理解为执行python命令，毕竟python没有c那么底层）</p>
+<p>输入python进入环境，C + Z退出，或者exit()</p>
+<p>input(‘xx’) 注意返回的是字符串</p>
+<p>内置函数 <code>eval</code> 将用户输入解析为 Python 表达式，感觉非常危险！</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">result <span class="token operator">=</span> <span class="token builtin">eval</span><span class="token punctuation">(</span><span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">"Enter an expression: "</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>如果用户输入 <code>2 * 3</code>，输出为 <code>6</code>。</p>
+<p>ps:</p>
+<p>split </p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token builtin">str</span> <span class="token operator">=</span> <span class="token string">"Line1-abcdef \nLine2-abc \nLine4-abcd"</span><span class="token punctuation">;</span> 
+<span class="token keyword">print</span> <span class="token builtin">str</span><span class="token punctuation">.</span>split<span class="token punctuation">(</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>       <span class="token comment"># 以空格为分隔符，包含 \n </span>
+<span class="token keyword">print</span> <span class="token builtin">str</span><span class="token punctuation">.</span>split<span class="token punctuation">(</span><span class="token string">' '</span><span class="token punctuation">,</span> <span class="token number">1</span> <span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment"># 以空格为分隔符，分隔成两个</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>以上实例输出结果如下：</p>
+<pre class="line-numbers language-none"><code class="language-none">[&#39;Line1-abcdef&#39;, &#39;Line2-abc&#39;, &#39;Line4-abcd&#39;]
+[&#39;Line1-abcdef&#39;, &#39;\nLine2-abc \nLine4-abcd&#39;]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+
+
+<p>下面看一个神奇的例子</p>
+<hr>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">names <span class="token operator">=</span> <span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">"Enter names separated by commas: "</span><span class="token punctuation">)</span><span class="token punctuation">.</span>title<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>split<span class="token punctuation">(</span><span class="token string">","</span><span class="token punctuation">)</span>
+assignments <span class="token operator">=</span> <span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">"Enter assignment counts separated by commas: "</span><span class="token punctuation">)</span><span class="token punctuation">.</span>split<span class="token punctuation">(</span><span class="token string">","</span><span class="token punctuation">)</span>
+grades <span class="token operator">=</span> <span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">"Enter grades separated by commas: "</span><span class="token punctuation">)</span><span class="token punctuation">.</span>split<span class="token punctuation">(</span><span class="token string">","</span><span class="token punctuation">)</span>
+
+message <span class="token operator">=</span> "Hi <span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span><span class="token punctuation">,</span>\n\nThis <span class="token keyword">is</span> a reminder that you have <span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span> assignments left to \
+submit before you can graduate<span class="token punctuation">.</span> You're current grade <span class="token keyword">is</span> <span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span> <span class="token keyword">and</span> can increase \
+to <span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span> <span class="token keyword">if</span> you submit <span class="token builtin">all</span> assignments before the due date<span class="token punctuation">.</span>\n\n"
+
+<span class="token keyword">for</span> name<span class="token punctuation">,</span> assignment<span class="token punctuation">,</span> grade <span class="token keyword">in</span> <span class="token builtin">zip</span><span class="token punctuation">(</span>names<span class="token punctuation">,</span> assignments<span class="token punctuation">,</span> grades<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>message<span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>name<span class="token punctuation">,</span> assignment<span class="token punctuation">,</span> grade<span class="token punctuation">,</span> <span class="token builtin">int</span><span class="token punctuation">(</span>grade<span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token builtin">int</span><span class="token punctuation">(</span>assignment<span class="token punctuation">)</span><span class="token operator">*</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h3 id="错误和异常"><a href="#错误和异常" class="headerlink" title="错误和异常"></a>错误和异常</h3><p>SyntaxError  语法异常</p>
+<p>Exception就是语法正常但是出错</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210410145517500.png" alt="image-20210410145517500"></p>
+<p>Try 语句</p>
+<p>我们可以使用 try 语句处理异常。你可以使用 4 个子句（除了视频中显示的子句之外还有一个子句）。</p>
+<ul>
+<li><p><code>try</code>：这是 <code>try</code> 语句中的唯一必需子句。该块中的代码是 Python 在 <code>try</code> 语句中首先运行的代码。</p>
+</li>
+<li><p><code>except</code>：如果 Python 在运行 <code>try</code> 块时遇到异常，它将跳到处理该异常的 <code>except</code> 块。</p>
+<p>可以明确指明异常种类 except ValueError:   话说竟然C+C是KeyboardInterrupt异常</p>
+<p>也可以用逗号分割来指定多种（实质是转化成一个元组，也可以直接写一个元组上去）</p>
+<p>或者写多条except语句来分别不同情况</p>
+</li>
+<li><p><code>else</code>：如果 Python 在运行 <code>try</code> 块时没有遇到异常，它将在运行 <code>try</code> 块后运行该块中的代码。</p>
+</li>
+<li><p><code>finally</code>：在 Python 离开此 <code>try</code> 语句之前，在任何情形下它都将运行此 <code>finally</code> 块中的代码，即使要结束程序，例如：如果 Python 在运行 <code>except</code> 或 <code>else</code> 块中的代码时遇到错误，在停止程序之前，依然会执行此<code>finally</code> 块。</p>
+</li>
+</ul>
+<p><a href="https://stackoverflow.com/questions/11551996/why-do-we-need-the-finally-clause-in-python">为何在 Python 中需要 <code>finally</code> 子句？</a></p>
+<p>可用于清理代码比如关闭文件之类的👆</p>
+<p>注意一下顺序</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210410145940469.png" alt="image-20210410145940469"></p>
+<p><strong>在这里，当执行了x = xx 时，抛出异常，直接到except里面，而不是执行break！</strong></p>
+<p><strong>访问错误信息</strong></p>
+<p>在处理异常时，依然可以如下所示地访问其错误消息：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">try</span><span class="token punctuation">:</span>
+    <span class="token comment"># some code</span>
+<span class="token keyword">except</span> ZeroDivisionError <span class="token keyword">as</span> e<span class="token punctuation">:</span>
+   <span class="token comment"># some code</span>
+   <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"ZeroDivisionError occurred: &#123;&#125;"</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>应该会输出如下所示的结果：</p>
+<pre class="line-numbers language-txt" data-language="txt"><code class="language-txt">ZeroDivisionError occurred: division by zero<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>因此依然可以访问错误消息，即使已经处理异常以防止程序崩溃！</p>
+<p>如果没有要处理的具体错误，依然可以如下所示地访问消息：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">try</span><span class="token punctuation">:</span>
+    <span class="token comment"># some code</span>
+<span class="token keyword">except</span> Exception <span class="token keyword">as</span> e<span class="token punctuation">:</span>
+   <span class="token comment"># some code</span>
+   <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Exception occurred: &#123;&#125;"</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><strong><code>Exception</code> 是所有内置异常的基础类</strong>。你可以在<a href="https://docs.python.org/3/library/exceptions.html#bltin-exceptions">此处</a>详细了解 Python 的异常。</p>
+<hr>
+<h3 id="文件"><a href="#文件" class="headerlink" title="文件"></a>文件</h3><p>文件其实是一堆数字符号编码</p>
+<p>其他的文件打开应用其实就是解读特定的编码并显示出来的GUI</p>
+<p>在python中打开文件会出现一个公用程序接口</p>
+<p>文件对象时python与文件交互的接口，智能按顺序一次查看一个字符</p>
+<p>open打开，参数w，a，r之类的，write（返回输入的字符数）</p>
+<p>read会从当前位置读取所有字符放进一个字符串，一定要close噢！小心耗尽文件句柄</p>
+<p>如果向 <code>.read()</code> 传入整型参数，它将读取长度是这么多字符的内容，输出所有内容，并使 ‘window’ 保持在该位置以准备继续读取。</p>
+<p>Python 提供了一个特殊的语法with，该语法会在你使用完文件后自动关闭该文件。</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">'my_path/my_file.txt'</span><span class="token punctuation">,</span> <span class="token string">'r'</span><span class="token punctuation">)</span> <span class="token keyword">as</span> f<span class="token punctuation">:</span>
+    file_data <span class="token operator">=</span> f<span class="token punctuation">.</span>read<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>该 <code>with</code> 关键字使你能够打开文件，对文件执行操作，并在缩进代码（在此示例中是读取文件）执行之后自动关闭文件。现在，我们不需要调用 f.close() 了！你只能在此缩进块中访问文件对象 f。</p>
+<p>实质是利用作用域</p>
+<p>请参阅 <a href="https://docs.python.org/3/tutorial/inputoutput.html#reading-and-writing-files">Python 文档的相关部分</a></p>
+<p>readline() 会读取一行</p>
+<p><code>f.tell()</code> returns an integer giving the file object’s current position in the file represented as number of bytes from the beginning of the file when in binary mode and an opaque number when in text mode.</p>
+<p>鬼知道这个不透明数字是个啥玩意</p>
+<p>To change the file object’s position, use <code>f.seek(offset, whence)</code>. The position is computed from adding <em>offset</em> to a reference point; the reference point is selected by the <em>whence</em> argument. A <em>whence</em> value of 0 measures from the beginning of the file, <strong>1 uses the current file position, and 2 uses the end of the file as the reference point</strong>. <em>whence</em> can be omitted and <strong>defaults to 0</strong>, using the beginning of the file as the reference point.</p>
+<p>在文本文件中（那些<code>b</code>在模式字符串中不带a开头的文件），<strong>仅允许相对于文件开头的查找</strong>（查找到以结尾的文件末尾为例外），并且唯一有效的<em>偏移</em>值是从零返回的<em>偏移</em>量值。。任何其他<em>偏移</em>值都会<strong>产生不确定</strong>的行为。<code>seek(0, 2)``f.tell()</code>  这个和c语言一样</p>
 <h1 id="Anaconda"><a href="#Anaconda" class="headerlink" title="Anaconda"></a>Anaconda</h1><p>再看看这里的Anaconda和Jupyterbook</p>
 <ol>
 <li>Anaconda发行版中的可用软件包<code>conda</code>专注于数据科学，而这些软件包<code>pip</code>通常用于一般用途。Conda安装预编译的软件包。例如，Anaconda发行版随附使用<a href="https://docs.continuum.io/mkl-optimizations/">MKL库</a>编译的Numpy，Scipy和Scikit-learn ，从而加快了各种数学运算的速度。<strong>但是，有时候，您可能需要除Anaconda发行版中列出的软件包以外的软件包。</strong></li>
@@ -8957,7 +9066,7 @@ deactivate<span aria-hidden="true" class="line-numbers-rows"><span></span><span>
 <h1 id="Jupyter"><a href="#Jupyter" class="headerlink" title="Jupyter"></a>Jupyter</h1><p>一直想学来着，这个课程也太好了吧！</p>
 <p>jupyter notebook是一个Web应用程序，可让您将说明性文本，数学方程式，代码和可视化结合在一个易于共享的文档中。</p>
 <p>非常适合数据处理，可以执行部分代码，并查看上下文信息等</p>
-<h2 id="Literate-Programming"><a href="#Literate-Programming" class="headerlink" title="Literate Programming"></a>Literate Programming</h2><p>Notebooks are a form of <a href="http://www.literateprogramming.com/">literate programming</a> proposed by Donald Knuth in 1984. With literate programming, the documentation is written as a narrative alongside the code instead of sitting off by its own. In Donald Knuth’s words,</p>
+<h2 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h2><p>Notebooks are a form of <a href="http://www.literateprogramming.com/">literate programming</a> proposed by Donald Knuth in 1984. With literate programming, the documentation is written as a narrative alongside the code instead of sitting off by its own. In Donald Knuth’s words,</p>
 <blockquote>
 <p>Instead of imagining that our main task is to instruct a computer what to do, let us concentrate rather on explaining to human beings what we want a computer to do.</p>
 </blockquote>
@@ -8968,6 +9077,114 @@ deactivate<span aria-hidden="true" class="line-numbers-rows"><span></span><span>
 <p>中心点是笔记本服务器。您通过浏览器连接到服务器，并且笔记本呈现为Web应用程序。您在Web应用程序中编写的代码通过服务器发送到内核。内核运行代码并将其发送回服务器，然后所有输出将在浏览器中呈现。保存笔记本时，它将作为带有<code>.ipynb</code>文件扩展名的JSON文件写入服务器。</p>
 <p>该体系结构的很大一部分是内核不需要运行Python。由于笔记本和内核是分开的，因此可以在它们之间发送任何语言的代码。例如，两个较早的非Python内核分别用于<a href="https://www.r-project.org/">R</a>和<a href="http://julialang.org/">Julia</a>语言。对于R内核，用R编写的代码将被发送到R内核并在其中执行，这与在Python内核上运行的Python代码完全相同。IPython笔记本被重命名，因为笔记本变得与语言无关。新名称<strong>Jupyter</strong>来自<strong>Ju</strong> lia，<strong>Pyt</strong> hon和<strong>R的组合</strong>。如果您有兴趣，这里<a href="https://github.com/jupyter/jupyter/wiki/Jupyter-kernels">是可用内核</a>的<a href="https://github.com/jupyter/jupyter/wiki/Jupyter-kernels">列表</a>。</p>
 <p>另一个好处是服务器可以在任何地方运行并可以通过Internet访问。通常，您将在存储所有数据和笔记本文件的自己的计算机上运行服务器。但是，您也可以在远程计算机或云实例（例如Amazon的EC2）上<a href="http://jupyter-notebook.readthedocs.io/en/latest/public_server.html">设置服务器</a>。然后，您可以从世界任何地方在浏览器中访问笔记本。</p>
+<p>可以同时启动多个笔记本服务器，这会在8888默认端口后继续创建</p>
+<h2 id="启动"><a href="#启动" class="headerlink" title="启动"></a>启动</h2><p>您应该考虑安装Notebook Conda软件包以帮助管理您的环境。运行以下终端命令：</p>
+<pre class="line-numbers language-none"><code class="language-none">conda install nb_conda<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>成功安装<code>nb_conda</code>软件包后，如果您在conda环境中运行笔记本服务器，则还可以访问下面显示的“ Conda”选项卡。在这里，您可以从Jupyter内部管理您的环境。您可以创建新环境，安装软件包，更新软件包，导出环境等等。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210410125054498.png" alt="image-20210410125054498"></p>
+<p>此外，<code>nb_conda</code>安装后，选择内核时，您将可以访问任何conda环境。例如，下图显示了在具有几种不同conda环境的计算机上创建新笔记本的示例：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210410125313617.png" alt="image-20210410125313617"></p>
+<p>关闭前记得保存</p>
+<p>您可以通过标记服务器主页上笔记本旁边的复选框并单击“关闭”来关闭各个笔记本。不过，在执行此操作之前，请确保已保存您的工作！自上次保存以来所做的任何更改都将丢失。您还需要在下次运行笔记本时重新运行代码。</p>
+<p>您可以通过在终端中按两次Control + C来关闭整个服务器。同样，这将立即关闭所有正在运行的笔记本，因此请确保您的工作已保存！</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/server-shutdown.png" alt="img"></p>
+<h2 id="界面"><a href="#界面" class="headerlink" title="界面"></a>界面</h2><p>先新建（选择一个内核）来创建一个notebook</p>
+<p>上面的命令将在名为的新浏览器选项卡中创建一个新笔记本<code>Untitled.ipynb</code></p>
+<p><strong>工具栏</strong></p>
+<p>简单明了，真不戳</p>
+<p>小键盘是命令面板。这将显示一个带有搜索栏的面板，您可以在其中搜索各种命令。这对于加速工作流程非常有帮助，因为您无需使用鼠标在菜单中四处搜索。只需打开命令面板，然后输入您要执行的操作即可。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210410130030588.png" alt="image-20210410130030588"></p>
+<p>选项栏</p>
+<p>右边是内核类型（在我的情况下为Python 3），旁边是一个小圆圈。当内核运行单元时，它将填充。对于大多数快速运行的操作，它不会填充。这是一个小指示器，可以让您知道更长运行的代码实际上正在运行。</p>
+<p>连同工具栏中的“保存”按钮一起，笔记本会定期自动保存。标题右侧会显示最近保存的内容。您可以保存按钮，或者按与手动保存<code>escape</code>，然后<code>s</code>在键盘上。该<code>escape</code>键将更改为命令模式，并且<code>s</code>是“保存”的快捷方式。稍后将介绍命令模式和键盘快捷键。</p>
+<p><strong>存储</strong></p>
+<p>在“文件”菜单中，您可以下载多种格式的笔记本。您通常会希望将其下载为HTML文件，以便与不使用Jupyter的其他人共享。另外，您可以将笔记本作为普通的Python文件下载，所有代码都将正常运行。 The <a href="https://daringfireball.net/projects/markdown/">Markdown</a> and <a href="http://docutils.sourceforge.net/rst.html">reST</a> formats are great for using notebooks in blogs or documentation.</p>
+<p><strong>导入本地</strong></p>
+<p>File -&gt; open 选择合适的<code>.ipynb</code>文件</p>
+<p>或者直接upload，然后在文件导航里面查找你需要的文件</p>
+<p>这里有一个markdown的<a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">备忘单</a></p>
+<h2 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h2><p>又得学新的快捷键卧槽</p>
+<p>首先，在编辑模式和命令模式之间切换。 编辑模式允许您键入单元格，而命令模式将使用按键来执行命令，例如创建新单元格和打开命令面板。 当您选择一个单元格时，您可以通过该单元格周围的框的颜色来判断当前正在使用哪种模式。 在编辑模式下，方框和左粗框显示为绿色。 在命令模式下，它们显示为蓝色。 同样在编辑模式下，您应该在单元格本身中看到一个光标。</p>
+<p>默认情况下，当您创建一个新的单元格或移动到下一个单元格时，您将处于命令模式。 要进入编辑模式，请按<strong>Enter</strong> / Return。 要从编辑模式返回到命令模式，请按<strong>Escape键</strong>。</p>
+<p>练习：单击此单元格，然后按<strong>Enter + Shift进入下一个单元格</strong>。 在编辑和命令模式之间切换几次。</p>
+<p>在命令模式按下H可以打开帮助菜单<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210410131817701.png" alt="image-20210410131817701"></p>
+<hr>
+<p><strong>常用的快捷键</strong></p>
+<p>A 创建新单元格above当前单元格</p>
+<p>B 创建新单元格below当前单元格</p>
+<p>在markdown 和 code之间进行转换</p>
+<p>markdown -&gt; code Y</p>
+<p>code -&gt; markdown M </p>
+<p>L 是显示行号d</p>
+<p>双击D 可以删除单元格，Z撤销删除</p>
+<p>S 保存！</p>
+<p>最强的是C + S + P</p>
+<p>打开万能的控制栏</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210410132647354.png" alt="image-20210410132647354"></p>
+<h2 id="魔术关键字"><a href="#魔术关键字" class="headerlink" title="*魔术关键字"></a>*魔术关键字</h2><p>Magic Keywords</p>
+<p>魔术关键字是特殊命令，您可以在单元格中运行这些命令，以使您可以控制笔记本电脑本身或执行系统调用（例如更改目录）。例如，您可以使用设置matplotlib以在笔记本中进行交互工作<code>%matplotlib</code>。</p>
+<p>魔术命令前面分别带有针对行魔术和单元魔术的一个或两个百分号（<code>%</code>或<code>%%</code>）。线魔术仅适用于在其上写入了魔术命令的行，而单元格魔术适用于整个单元。</p>
+<p><strong>注意：</strong>这些魔术关键字特定于普通的Python内核。如果您使用的是其他内核，那么这些内核很可能无法正常工作。</p>
+<p>如果您想计时整个单元需要多长时间，可以这样使用<code>%%timeit</code>：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/magic-timeit2.png" alt="img"></p>
+<p>以后学学。。。</p>
+<p>在笔记本中嵌入可视化</p>
+<p>如前所述，笔记本使您可以将图像以及文本和代码嵌入其中。当您使用<code>matplotlib</code>或其他绘图程序包创建可视化效果时，此功能最为有用。您可以使用<code>%matplotlib</code>设置<code>matplotlib</code>为在笔记本中进行交互使用。默认情况下，图形将在其自己的窗口中呈现。但是，您可以将参数传递给命令以选择特定的<a href="http://matplotlib.org/faq/usage_faq.html#what-is-a-backend">“后端”</a>，即渲染图像的软件。要直接在笔记本中绘制图形，您应该在命令中使用嵌入式后端<code>%matplotlib inline</code>。</p>
+<blockquote>
+<p><strong>提示：</strong>在高分辨率屏幕（例如Retina显示屏）上，笔记本计算机中的默认图像可能看起来模糊。使用<code>%config InlineBackend.figure_format = &#39;retina&#39;</code>after<code>%matplotlib inline</code>渲染更高分辨率的图像。</p>
+</blockquote>
+<p><img src="https://video.udacity-data.com/topher/2016/November/5833867f_magic-matplotlib/magic-matplotlib.png" alt="img"></p>
+<p>在笔记本中调试</p>
+<p>使用Python内核，您可以使用magic命令打开交互式调试器<code>%pdb</code>。导致错误时，您将能够检查当前名称空间中的变量。</p>
+<p><img src="https://video.udacity-data.com/topher/2016/November/58337eac_magic-pdb/magic-pdb.png" alt="img"></p>
+<p>在笔记本中调试</p>
+<p>在上面可以看到我试图总结一个给出错误的字符串。调试器会引发错误，并提示您检查代码。</p>
+<p><code>pdb</code>在<a href="https://docs.python.org/3/library/pdb.html">文档中</a>了解更多信息。要退出调试器，只需<code>q</code>在提示中输入即可。</p>
+<p>更多阅读</p>
+<p>还有很多其他魔术命令，我只涉及了一些您最常使用的命令。要了解有关它们的更多信息，<a href="http://ipython.readthedocs.io/en/stable/interactive/magics.html">这</a>是所有可用的魔术命令<a href="http://ipython.readthedocs.io/en/stable/interactive/magics.html">的列表</a>。</p>
+<h2 id="转换笔记本"><a href="#转换笔记本" class="headerlink" title="转换笔记本"></a>转换笔记本</h2><p>Notebooks are just big <a href="http://www.json.org/">JSON</a> files with the extension <code>.ipynb</code>.</p>
+<p>由于笔记本是JSON，因此很容易将它们转换为其他格式。Jupyter附带有一个实用程序，<code>nbconvert</code>用于将其转换为HTML，Markdown，幻灯片等。将给定<code>mynotebook.ipynb</code>文件转换为另一个FORMAT的一般语法为：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">jupyter nbconvert --to FORMAT mynotebook.ipynb<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>当前支持的输出<code>FORMAT</code>可以是以下任意一种（忽略大小写）：</p>
+<ol>
+<li>HTML,</li>
+<li>LaTeX,</li>
+<li>PDF,</li>
+<li>WebPDF,</li>
+<li>Reveal.js HTML slideshow,</li>
+<li>Markdown,</li>
+<li>Ascii,</li>
+<li>reStructuredText,</li>
+<li>executable script,</li>
+<li>notebook.</li>
+</ol>
+<p>For example, to convert a notebook to an HTML file, in your terminal use</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># Install the package below, if not already</span>
+pip <span class="token function">install</span> nbconvert
+jupyter nbconvert --to html mynotebook.ipynb<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<blockquote>
+<p><strong>注</strong>-如果您希望在conda中安装Anaconda发行版中<strong>没有的</strong>任何软件包（例如Airbase软件包），请使用<code>pip install airbase</code>，而不是<code>conda install airbase</code>。</p>
+</blockquote>
+<p><strong>转换为HTML可以与不使用笔记本的其他人共享您的笔记本。Markdown非常适合在博客和其他接受Markdown格式的文本编辑器中添加笔记本。</strong></p>
+<p>与往常一样，从<a href="https://nbconvert.readthedocs.io/en/latest/usage.html">文档中</a>了解更多<code>nbconvert</code>信息。</p>
+<h2 id="幻灯片"><a href="#幻灯片" class="headerlink" title="幻灯片"></a>幻灯片</h2><p>幻灯片是像普通笔记本一样在笔记本中创建的，但是您需要指定哪些单元格是幻灯片以及该单元格将是幻灯片的类型。在菜单栏中，单击“视图”&gt;“单元格工具栏”&gt;“幻灯片放映”以在每个单元格上弹出幻灯片单元格菜单。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/slides-cell-toolbar-menu.png" alt="img"></p>
+<p>打开单元格的幻灯片工具栏</p>
+<p>这将在每个单元格上显示一个菜单下拉菜单，使您可以选择该单元格在幻灯片中的显示方式。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/slides-choose-slide-type.png" alt="img"></p>
+<p><strong>Slides</strong> are full slides that you move through left to right. <strong>Sub-slides</strong> show up in the slideshow by pressing up or down. <strong>Fragments</strong> are hidden at first, then appear with a button press. You can skip cells in the slideshow with <strong>Skip</strong> and <strong>Notes</strong> leaves the cell as speaker notes.</p>
+<p>运行幻灯片</p>
+<p>要从笔记本文件创建幻灯片，您需要使用<code>nbconvert</code>：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">jupyter nbconvert notebook.ipynb --to slides<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>这只是将笔记本转换为幻灯片所需的文件，但是您需要将其与HTTP服务器一起使用才能实际查看演示文稿。</p>
+<p>要转换并立即看到它，请使用</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">jupyter nbconvert notebook.ipynb --to slides --post serve<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>这将在您的浏览器中打开幻灯片放映，以便您进行演示。</p>
 ]]></content>
       <categories>
         <category>前置</category>
