@@ -4,11 +4,36 @@
   
     
     <entry>
+      <title>data-analyze</title>
+      <link href="2021/04/10/data-analyze/"/>
+      <url>2021/04/10/data-analyze/</url>
+      
+        <content type="html"><![CDATA[<h1 id=""><a href="#" class="headerlink" title=""></a></h1>]]></content>
+      
+      
+      <categories>
+          
+          <category> python </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> python-data </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>描述性统计</title>
       <link href="2021/04/10/%E6%8F%8F%E8%BF%B0%E6%80%A7%E7%BB%9F%E8%AE%A1/"/>
       <url>2021/04/10/%E6%8F%8F%E8%BF%B0%E6%80%A7%E7%BB%9F%E8%AE%A1/</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<h1 id="入门"><a href="#入门" class="headerlink" title="入门"></a>入门</h1><p>当这门课完结的时，将会掌握对数据集进行收集，整理，计算和可视化的所需要工具</p>]]></content>
       
       
       <categories>
