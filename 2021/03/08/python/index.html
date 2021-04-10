@@ -236,7 +236,7 @@
 <script src="/libs/cryptojs/crypto-js.min.js"></script>
 <script>
     (function() {
-        let pwd = '';
+        let pwd = 'f5684d422b46e9a4921a1e19d92a23277c0cf6a4abbdcbe41f966828f5311161';
         if (pwd && pwd.length > 0) {
             if (pwd !== CryptoJS.SHA256(prompt('密码是简单的8位数字（我的宿舍号是？）')).toString(CryptoJS.enc.Hex)) {
                 alert('加载内容....');
@@ -411,7 +411,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    37 分
+                    46 分
                 </div>
                 
 
@@ -1143,8 +1143,7 @@ hydrogen_weight <span class="token operator">=</span> elements<span class="token
 <span class="token string">'hello world'</span>
 <span class="token operator">>></span><span class="token operator">></span> <span class="token string">"&#123;1&#125; &#123;0&#125; &#123;1&#125;"</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span><span class="token string">"hello"</span><span class="token punctuation">,</span> <span class="token string">"world"</span><span class="token punctuation">)</span>  <span class="token comment"># 设置指定位置</span>
 <span class="token string">'world hello world'</span>
-<span class="token keyword">for</span> point <span class="token keyword">in</span> <span class="token builtin">zip</span><span class="token punctuation">(</span>labels<span class="token punctuation">,</span> x_coord<span class="token punctuation">,</span> y_coord<span class="token punctuation">,</span> z_coord<span class="token punctuation">)</span><span class="token punctuation">:</span>
-    points<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token string">"&#123;&#125;: &#123;&#125;, &#123;&#125;, &#123;&#125;"</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span><span class="token operator">*</span>point<span class="token punctuation">)</span><span class="token punctuation">)</span>
+
 
 也可以设置参数：
 <span class="token comment"># 关键字参数</span>
@@ -1155,13 +1154,16 @@ site <span class="token operator">=</span> <span class="token punctuation">&#123
 <span class="token comment"># 通过列表索引设置参数</span>
 my_list <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'菜鸟教程'</span><span class="token punctuation">,</span> <span class="token string">'www.runoob.com'</span><span class="token punctuation">]</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"网站名：&#123;0[0]&#125;, 地址 &#123;0[1]&#125;"</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>my_list<span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># "0" 是必须的</span>
-
+<span class="token comment"># 仅列表</span>
+<span class="token keyword">for</span> point <span class="token keyword">in</span> <span class="token builtin">zip</span><span class="token punctuation">(</span>labels<span class="token punctuation">,</span> x_coord<span class="token punctuation">,</span> y_coord<span class="token punctuation">,</span> z_coord<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    points<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token string">"&#123;&#125;: &#123;&#125;, &#123;&#125;, &#123;&#125;"</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span><span class="token operator">*</span>point<span class="token punctuation">)</span><span class="token punctuation">)</span>
+    
 此外我们可以使用大括号 <span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span> 来转义大括号
 <span class="token keyword">print</span> <span class="token punctuation">(</span><span class="token string">"&#123;&#125; 对应的位置是 &#123;&#123;0&#125;&#125;"</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span><span class="token string">"runoob"</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
 runoob 对应的位置是 <span class="token punctuation">&#123;</span><span class="token number">0</span><span class="token punctuation">&#125;</span>
 
 数字则在前面加上<span class="token punctuation">:</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <table>
 <thead>
@@ -1266,13 +1268,16 @@ runoob 对应的位置是 <span class="token punctuation">&#123;</span><span cla
 nums <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span>
 
 <span class="token keyword">for</span> letter<span class="token punctuation">,</span> num <span class="token keyword">in</span> <span class="token builtin">zip</span><span class="token punctuation">(</span>letters<span class="token punctuation">,</span> nums<span class="token punctuation">)</span><span class="token punctuation">:</span>
-    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"&#123;&#125;: &#123;&#125;"</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>letter<span class="token punctuation">,</span> num<span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"&#123;&#125;: &#123;&#125;"</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>letter<span class="token punctuation">,</span> num<span class="token punctuation">)</span><span class="token punctuation">)</span>
+这个是两个参数依次匹配，字典的items是用了这个原理<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
+<p>items原理：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210409194823598.png" alt="image-20210409194823598"></p>
 <p>除了可以将两个列表组合到一起之外，还可以使用星号拆分列表。</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python">some_list <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">(</span><span class="token string">'a'</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token string">'b'</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token string">'c'</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">]</span>
 letters<span class="token punctuation">,</span> nums <span class="token operator">=</span> <span class="token builtin">zip</span><span class="token punctuation">(</span><span class="token operator">*</span>some_list<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
-<p>这样可以创建正如之前看到的相同 <code>letters</code> 和 <code>nums</code> 列表</p>
+<p>这样可以创建正如之前看到的相同 <code>letters</code> 和 <code>nums</code> 列表，巧妙👇</p>
 <p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210409190913313.png" alt="image-20210409190913313"></p>
 <hr>
 <p><code>enumerate</code> 是一个会返回元组迭代器的内置函数，这些元组包含列表的索引和值。当你需要在循环中获取可迭代对象的每个元素及其索引时，将经常用到该函数。</p>
@@ -1308,8 +1313,6 @@ letters<span class="token punctuation">,</span> nums <span class="token operator
 <h4 id="例子-1"><a href="#例子-1" class="headerlink" title="例子"></a>例子</h4><p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210409194302935.png" alt="image-20210409194302935"></p>
 <p>这个课程总有一些奇怪的知识藏在题解里面卧槽，split是个很重要的工具</p>
 <p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210409194648954.png" alt="image-20210409194648954"></p>
-<p>items原理：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210409194823598.png" alt="image-20210409194823598"></p>
 <h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><ol>
 <li>仅在函数名称中使用普通字母、数字和下划线。不能有空格，需要以字母或下划线开头。</li>
 <li><strong>不能使用在 Python 中具有重要作用的保留字或内置标识符</strong>，我们将在这门课程中学习这方面的知识。要了解 python 保留字列表，请参阅<a target="_blank" rel="noopener" href="https://pentangle.net/python/handbook/node52.html">此处</a>。</li>
@@ -1317,8 +1320,29 @@ letters<span class="token punctuation">,</span> nums <span class="token operator
 </ol>
 <h3 id="python变量"><a href="#python变量" class="headerlink" title="python变量"></a>python变量</h3><p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210409234143765.png" alt="image-20210409234143765"></p>
 <p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210409234153818.png" alt="image-20210409234153818"></p>
-<p>你发现在函数内，我们可以成功地输出外部变量的值。因为我们只是访问该变量的值。当我们尝试将此变量的值<strong>更改</strong>或<strong>重新赋值为</strong>另一个值时，我们将遇到错误。Python 不允许函数修改不在函数作用域内的变量。</p>
-<p>但是上面的原则仅适用于整数和字符串，列表、字典、集合、类中可以在子程序（子函数）中通过修改局部变量达到修改全局变量的目的。</p>
+<p><em><strong>你发现在函数内，我们可以成功地输出外部变量的值。因为我们只是访问该变量的值。当我们尝试将此变量的值更改或重新赋值为另一个值时，我们将遇到错误。Python 不允许函数修改不在函数作用域内的变量。</strong></em></p>
+<p><em><strong>但是上面的原则仅适用于整数和字符串，列表、字典、集合、类中可以在子程序（子函数）中通过修改局部变量达到修改全局变量的目的。</strong></em></p>
+<h3 id="打包和解包"><a href="#打包和解包" class="headerlink" title="打包和解包"></a>打包和解包</h3><p>通用写法是*arg  **kwargs</p>
+<p>*args就是就是传递一个可变参数列表给函数实参，这个参数列表的数目未知，甚至长度可以为0。</p>
+<p>打包后成为元组tuple</p>
+<p>**kwargs则是将一个可变的关键字参数的字典传给函数实参，同样参数列表长度可以为0或为其他值</p>
+<p>打包后是一个字典</p>
+<p>args 必须放在 kwargs 前面</p>
+<p>打包就是zip</p>
+<p>解包可以是之前介绍的写法，一个变量对应一项，对应不上就报错</p>
+<p>可以用*var 代替任意项<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210410111047193.png" alt="image-20210410111047193"></p>
+<p><strong>函数定义时</strong>，我们用的*和**其实也是压包解包过程</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token operator">>></span><span class="token operator">></span> <span class="token keyword">def</span> <span class="token function">myfun</span><span class="token punctuation">(</span><span class="token operator">*</span>num<span class="token punctuation">)</span><span class="token punctuation">:</span>
+<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>     <span class="token keyword">print</span><span class="token punctuation">(</span>num<span class="token punctuation">)</span>
+<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+<span class="token operator">>></span><span class="token operator">></span> myfun<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">6</span><span class="token punctuation">)</span>
+<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>参数用<code>*num</code>表示，<code>num</code>变量就可以当成元组调用了。</p>
+<p>其实这个过程相当于<code>*num, = 1,2,5,6</code></p>
+<p>但是在<strong>传递参数</strong>时，是解包过程<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210410111344033.png" alt="image-20210410111344033"></p>
+<p>这个应用牛啊</p>
+<p>可以看看<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/33896402">原文</a></p>
 <h3 id="文档字符串"><a href="#文档字符串" class="headerlink" title="文档字符串"></a>文档字符串</h3><p>docstrings，文档字符串是一种注释，用于解释函数的作用以及使用方式。</p>
 <p>文档字符串用三个引号引起来，第一行简要解释了<strong>函数的作用</strong>。如果你觉得信息已经足够了，可以在文档字符串中只提供这么多的信息；</p>
 <p>如果你觉得需要更长的句子来解释函数，可以在一行摘要后面添加更多信息</p>
@@ -1336,6 +1360,7 @@ letters<span class="token punctuation">,</span> nums <span class="token operator
 <h3 id="迭代器和生成器"><a href="#迭代器和生成器" class="headerlink" title="迭代器和生成器"></a>迭代器和生成器</h3><p>Iterator   and   generator </p>
 <p><strong>迭代器</strong>是每次可以返回一个对象元素的对象，例如返回一个列表。我们到目前为止使用的很多内置函数（例如 enumerate）都会返回一个迭代器。</p>
 <p><strong>迭代器</strong>是一种表示数据流的对象。这与列表不同，列表是可迭代对象，但不是迭代器，因为它不是数据流。</p>
+<p>第一种方法很简单，只要把一个列表解析式的<code>[]</code>改成<code>()</code></p>
 <p><strong>生成器</strong>是使用函数创建迭代器的简单方式。也可以使用<strong>类</strong>定义迭代器，更多详情请参阅<a target="_blank" rel="noopener" href="https://docs.python.org/3/tutorial/classes.html#iterators">此处</a></p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">my_range</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">:</span>
     i <span class="token operator">=</span> <span class="token number">0</span>
@@ -1347,6 +1372,101 @@ letters<span class="token punctuation">,</span> nums <span class="token operator
 <p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210410003534992.png" alt="image-20210410003534992"></p>
 <p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210410003603746.png" alt="image-20210410003603746"></p>
 <p>妙啊！用size指定间距，用切片进行范围切取</p>
+<p><strong>python和c的思维方式是不一样的！</strong></p>
+<p>C要利用有限的工具进行微操，而python要巧妙利用已有的强大工具进行组合！</p>
+<p>这些工具组合起来太巧妙了</p>
+<p>tuple,list,dict,zip,enumerate,压包解包,列表解析,lambda,range,iterator还有封装好的函数</p>
+<h2 id="脚本"><a href="#脚本" class="headerlink" title="脚本"></a>脚本</h2><p>Python 是一种“脚本语言”。脚本，对应的英文是：script。一般人看到script这个英文单词，或许想到的更多的是：电影的剧本，就是一段段的脚本，所组成的。电影剧本的脚本，决定了电影中的人和物，都做哪些事情，怎么做。而计算机中的脚本，决定了：计算机中的操作系统和各种软件工具，要做哪些事情，以及具体怎么做。</p>
+<h1 id="Anaconda"><a href="#Anaconda" class="headerlink" title="Anaconda"></a>Anaconda</h1><p>再看看这里的Anaconda和Jupyterbook</p>
+<ol>
+<li>Anaconda发行版中的可用软件包<code>conda</code>专注于数据科学，而这些软件包<code>pip</code>通常用于一般用途。Conda安装预编译的软件包。例如，Anaconda发行版随附使用<a target="_blank" rel="noopener" href="https://docs.continuum.io/mkl-optimizations/">MKL库</a>编译的Numpy，Scipy和Scikit-learn ，从而加快了各种数学运算的速度。<strong>但是，有时候，您可能需要除Anaconda发行版中列出的软件包以外的软件包。</strong></li>
+<li>Pip可以安装Python软件包和非Python软件包。Pip可以安装<a target="_blank" rel="noopener" href="https://pypi.org/">Python软件包索引</a>（PyPI）上列出的任何软件包。</li>
+</ol>
+<p>conda list 列出安装的所有包</p>
+<p>conda env list 检查环境列表</p>
+<p>为了避免以后出现错误，最好在默认环境中更新所有软件包。打开终端/ Anaconda Prompt应用程序。在提示符下，运行以下命令：</p>
+<pre class="line-numbers language-none"><code class="language-none">conda upgrade conda
+conda upgrade --all<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>并在询问是否要安装软件包时回答是。最初安装时附带的软件包往往已过时，因此立即更新它们可以防止将来的软件过时错误。</p>
+<p>新环境里最好安装个pip</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># Check if pip is already installed, by running this command on Terminal/Anaconda Prompt</span>
+pip --version
+
+<span class="token comment"># Once you have conda installed, run the command below on Terminal/Anaconda Prompt</span>
+conda <span class="token function">install</span> pip<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="装包"><a href="#装包" class="headerlink" title="装包"></a>装包</h2><p>您可以同时安装多个软件包。例如，下面的命令将同时安装所有三个软件包。</p>
+<pre class="line-numbers language-none"><code class="language-none">conda install numpy scipy pandas<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>也可以通过添加版本号（例如）来指定所需的软件包版本<code>conda install numpy=1.10</code>。</p>
+<p>Conda还会自动为您安装依赖项。例如<code>scipy</code>使用和要求<code>numpy</code>。如果仅安装<code>scipy</code>（<code>conda install scipy</code>），<code>numpy</code>则尚未安装的Conda也将安装。</p>
+<pre class="line-numbers language-none"><code class="language-none">conda remove PACKAGE_NAME<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<pre class="line-numbers language-none"><code class="language-none">conda update package_name
+conda update --all<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>如果您不知道要查找的软件包的确切名称，可以尝试使用进行搜索<code>conda search *SEARCH_TERM*</code>。例如，我知道我想安装<a target="_blank" rel="noopener" href="https://www.crummy.com/software/BeautifulSoup/">Beautiful Soup</a>，但是我不确定确切的软件包名称。因此，我尝试<code>conda search *beautifulsoup*</code>。请注意，<code>*</code>在运行conda命令之前，您的shell可能会扩展通配符。要解决此问题，请将搜索字符串用单引号或双引号引起来，例如<code>conda search &#39;*beautifulsoup*&#39;</code>。</p>
+<p>请参阅《<a target="_blank" rel="noopener" href="https://conda.io/projects/conda/en/latest/commands.html">Conda命令参考指南》</a>以了解有关conda命令的更多信息</p>
+<h2 id="管理环境"><a href="#管理环境" class="headerlink" title="管理环境"></a>管理环境</h2><pre class="line-numbers language-none"><code class="language-none">conda create -n env_name [python&#x3D;X.X] [LIST_OF_PACKAGES]<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>此处<code>-n env_name</code>设置环境<code>-n</code>名称（用于名称），并且<code>LIST_OF_PACKAGES</code>是要在环境中安装的软件包的列表。如果要安装要安装的特定版本的Python，例如3.7，请使用<code>python=3.7</code>。例如，要创建一个以<code>my_env</code>Python 3.7命名的环境，并在其中安装NumPy和Keras，请使用以下命令。</p>
+<pre class="line-numbers language-none"><code class="language-none">conda create -n my_env python&#x3D;3.7 numpy Keras<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p><strong>激活</strong></p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">activate my_env
+deactivate<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+
+
+<p><strong>保存和加载环境</strong></p>
+<p>一个真正有用的功能是共享环境，以便其他人可以使用正确的版本安装代码中使用的所有软件包。让我们使用以下命令查看所有软件包名称，包括当前环境中存在的Python版本：</p>
+<pre class="line-numbers language-none"><code class="language-none">conda env export<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/conda-env-export.png" alt="img"></p>
+<p>导出环境打印到终端</p>
+<p>在上图中，您可以看到环境的名称，并且列出了所有依赖项（<em>以及版本</em>）。您可以将上述所有信息保存到<a target="_blank" rel="noopener" href="http://www.yaml.org/">YAML</a>文件中<code>environment.yaml</code>，然后再通过GitHub或其他方式与其他用户共享此文件。该文件将在当前目录中创建（或覆盖）。</p>
+<pre class="line-numbers language-none"><code class="language-none">conda env export &gt; environment.yaml<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>上面的export命令的第二部分，<code>&gt; environment.yaml</code>将导出的文本写入<code>environment.yaml</code>。现在可以使用Github存储库（或任何其他方式）共享此文件，其他人将能够创建与项目所用的环境相同的环境。</p>
+<hr>
+<p>对于不使用conda的用户，您可能希望共享当前环境中安装的软件包列表。您可以使用以下<code>pip</code>命令生成此类列表作为<code>requirements.txt</code>文件：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">pip freeze <span class="token operator">></span> requirements.txt<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>稍后，您可以<code>requirements.txt</code>通过Github与其他用户共享此文件。用户（或您自己）切换到另一个环境后，可以使用以下命令安装<code>requirements.txt</code>文件中提到的所有软件包：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">pip <span class="token function">install</span> -r requirements.txt<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>您可以<a target="_blank" rel="noopener" href="https://pip.pypa.io/en/stable/reference/pip_freeze/">在此处了解更多</a>有关使用<code>pip</code>而不是的信息<code>conda</code>。这将使人们更容易为您的代码安装所有依赖项</p>
+<p><strong>创建环境</strong></p>
+<p>要从环境文件创建环境，请使用以下命令：</p>
+<pre class="line-numbers language-none"><code class="language-none">conda env create -f environment.yaml<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>上面的命令将创建一个新环境，其名称与中列出的相同<code>environment.yaml</code>。</p>
+<pre class="line-numbers language-none"><code class="language-none">conda env list &#x2F;&#x2F;检查现有的环境<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>如果有不再使用的环境，请使用下面的命令删除指定的环境（此处名为<code>env_name</code>）。</p>
+<pre class="line-numbers language-none"><code class="language-none">conda env remove -n env_name<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+
+
+<ul>
+<li>要了解有关conda及其在Python生态系统中的适用性的更多信息，请查看Jake Vanderplas的这篇文章：<a target="_blank" rel="noopener" href="https://jakevdp.github.io/blog/2016/08/25/conda-myths-and-misconceptions/">Conda的神话和误解</a>。</li>
+<li>这是<a target="_blank" rel="noopener" href="https://docs.conda.io/projects/conda/en/latest/glossary.html">conda词汇表文档，</a>供您参考。</li>
+</ul>
+<h1 id="Jupyter"><a href="#Jupyter" class="headerlink" title="Jupyter"></a>Jupyter</h1><p>一直想学来着，这个课程也太好了吧！</p>
+<p>jupyter notebook是一个Web应用程序，可让您将说明性文本，数学方程式，代码和可视化结合在一个易于共享的文档中。</p>
+<p>非常适合数据处理，可以执行部分代码，并查看上下文信息等</p>
+<h2 id="Literate-Programming"><a href="#Literate-Programming" class="headerlink" title="Literate Programming"></a>Literate Programming</h2><p>Notebooks are a form of <a target="_blank" rel="noopener" href="http://www.literateprogramming.com/">literate programming</a> proposed by Donald Knuth in 1984. With literate programming, the documentation is written as a narrative alongside the code instead of sitting off by its own. In Donald Knuth’s words,</p>
+<blockquote>
+<p>Instead of imagining that our main task is to instruct a computer what to do, let us concentrate rather on explaining to human beings what we want a computer to do.</p>
+</blockquote>
+<p>After all, code is written for humans, not for computers. Notebooks provide exactly this capability. You are able to write documentation as narrative text, along with code. This is not only useful for the people reading your notebooks, but for your future self coming back to the analysis.</p>
+<p>Just a small aside: recently, this idea of literate programming has been extended to a whole programming language, <a target="_blank" rel="noopener" href="http://www.witheve.com/">Eve</a>.</p>
+<p>Jupyter笔记本源自Fernando Perez发起的<a target="_blank" rel="noopener" href="https://ipython.org/">IPython项目</a>。IPython是一个交互式shell，类似于普通的Python shell，但具有诸如语法突出显示和代码完成之类的强大功能。最初，笔记本通过将消息从Web应用程序（您在浏览器中看到的笔记本）发送到IPython内核（在后台运行的IPython应用程序）来工作。内核执行了代码，然后将其发送回笔记本。当前的架构与此类似，如下所示。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/notebook-components.png" alt="img"></p>
+<p>中心点是笔记本服务器。您通过浏览器连接到服务器，并且笔记本呈现为Web应用程序。您在Web应用程序中编写的代码通过服务器发送到内核。内核运行代码并将其发送回服务器，然后所有输出将在浏览器中呈现。保存笔记本时，它将作为带有<code>.ipynb</code>文件扩展名的JSON文件写入服务器。</p>
+<p>该体系结构的很大一部分是内核不需要运行Python。由于笔记本和内核是分开的，因此可以在它们之间发送任何语言的代码。例如，两个较早的非Python内核分别用于<a target="_blank" rel="noopener" href="https://www.r-project.org/">R</a>和<a target="_blank" rel="noopener" href="http://julialang.org/">Julia</a>语言。对于R内核，用R编写的代码将被发送到R内核并在其中执行，这与在Python内核上运行的Python代码完全相同。IPython笔记本被重命名，因为笔记本变得与语言无关。新名称<strong>Jupyter</strong>来自<strong>Ju</strong> lia，<strong>Pyt</strong> hon和<strong>R的组合</strong>。如果您有兴趣，这里<a target="_blank" rel="noopener" href="https://github.com/jupyter/jupyter/wiki/Jupyter-kernels">是可用内核</a>的<a target="_blank" rel="noopener" href="https://github.com/jupyter/jupyter/wiki/Jupyter-kernels">列表</a>。</p>
+<p>另一个好处是服务器可以在任何地方运行并可以通过Internet访问。通常，您将在存储所有数据和笔记本文件的自己的计算机上运行服务器。但是，您也可以在远程计算机或云实例（例如Amazon的EC2）上<a target="_blank" rel="noopener" href="http://jupyter-notebook.readthedocs.io/en/latest/public_server.html">设置服务器</a>。然后，您可以从世界任何地方在浏览器中访问笔记本。</p>
 
                 
             </div>
@@ -1900,7 +2020,7 @@ letters<span class="token punctuation">,</span> nums <span class="token operator
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">136.5k</span>&nbsp;字
+                class="white-color">139k</span>&nbsp;字
             
             
             
