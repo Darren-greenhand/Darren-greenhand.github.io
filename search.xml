@@ -8987,6 +8987,161 @@ to <span class="token punctuation">&#123;</span><span class="token punctuation">
 <p>鬼知道这个不透明数字是个啥玩意</p>
 <p>To change the file object’s position, use <code>f.seek(offset, whence)</code>. The position is computed from adding <em>offset</em> to a reference point; the reference point is selected by the <em>whence</em> argument. A <em>whence</em> value of 0 measures from the beginning of the file, <strong>1 uses the current file position, and 2 uses the end of the file as the reference point</strong>. <em>whence</em> can be omitted and <strong>defaults to 0</strong>, using the beginning of the file as the reference point.</p>
 <p>在文本文件中（那些<code>b</code>在模式字符串中不带a开头的文件），<strong>仅允许相对于文件开头的查找</strong>（查找到以结尾的文件末尾为例外），并且唯一有效的<em>偏移</em>值是从零返回的<em>偏移</em>量值。。任何其他<em>偏移</em>值都会<strong>产生不确定</strong>的行为。<code>seek(0, 2)``f.tell()</code>  这个和c语言一样</p>
+<p>很方便的是，Python 将使用语法 <code>for line in file</code> 循环访问文件中的各行内容。 我可以使用该语法创建列表中的行列表。因为<strong>每行依然包含换行符</strong>，因此我使用 <code>.strip()</code> 删掉换行符。也可以rstrip()</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">camelot_lines <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+<span class="token keyword">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">"camelot.txt"</span><span class="token punctuation">)</span> <span class="token keyword">as</span> f<span class="token punctuation">:</span>
+    <span class="token keyword">for</span> line <span class="token keyword">in</span> f<span class="token punctuation">:</span>
+        camelot_lines<span class="token punctuation">.</span>append<span class="token punctuation">(</span>line<span class="token punctuation">.</span>strip<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span>camelot_lines<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>输出：</p>
+<pre class="line-numbers language-txt" data-language="txt"><code class="language-txt">[&quot;We&#39;re the knights of the round table&quot;, &quot;We dance whenever we&#39;re able&quot;]<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>比如提取每行的信息，前提是你知道怎么分离的</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">create_cast_list</span><span class="token punctuation">(</span>filename<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    cast_list <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    <span class="token comment"># use with to open the file filename</span>
+    <span class="token keyword">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span>filename<span class="token punctuation">)</span> <span class="token keyword">as</span> f<span class="token punctuation">:</span>
+    <span class="token comment"># use the for loop syntax to process each line        </span>
+    <span class="token comment"># and add the actor name to cast_list</span>
+        <span class="token keyword">for</span> line <span class="token keyword">in</span> f<span class="token punctuation">:</span>
+            line_data <span class="token operator">=</span> line<span class="token punctuation">.</span>split<span class="token punctuation">(</span><span class="token string">','</span><span class="token punctuation">)</span>
+            cast_list<span class="token punctuation">.</span>append<span class="token punctuation">(</span>line_data<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span> cast_list<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h3 id="库"><a href="#库" class="headerlink" title="库"></a>库</h3><p>只能在导入语句之后使用相应python代码，所以习惯放在顶部</p>
+<p><strong>模块是具有python定义和语句的文件</strong></p>
+<p>import  xxx as xx</p>
+<p>还有python里面的<strong>main函数</strong> if __name__ ==  “__main__“</p>
+<p>这样的结构不错：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># useful_functions.py</span>
+
+<span class="token keyword">def</span> <span class="token function">mean</span><span class="token punctuation">(</span>num_list<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">return</span> <span class="token builtin">sum</span><span class="token punctuation">(</span>num_list<span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token builtin">len</span><span class="token punctuation">(</span>num_list<span class="token punctuation">)</span>
+
+<span class="token keyword">def</span> <span class="token function">add_five</span><span class="token punctuation">(</span>num_list<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">return</span> <span class="token punctuation">[</span>n <span class="token operator">+</span> <span class="token number">5</span> <span class="token keyword">for</span> n <span class="token keyword">in</span> num_list<span class="token punctuation">]</span>
+
+<span class="token keyword">def</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Testing mean function"</span><span class="token punctuation">)</span>
+    n_list <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">34</span><span class="token punctuation">,</span> <span class="token number">44</span><span class="token punctuation">,</span> <span class="token number">23</span><span class="token punctuation">,</span> <span class="token number">46</span><span class="token punctuation">,</span> <span class="token number">12</span><span class="token punctuation">,</span> <span class="token number">24</span><span class="token punctuation">]</span>
+    correct_mean <span class="token operator">=</span> <span class="token number">30.5</span>
+    <span class="token keyword">assert</span><span class="token punctuation">(</span>mean<span class="token punctuation">(</span>n_list<span class="token punctuation">)</span> <span class="token operator">==</span> correct_mean<span class="token punctuation">)</span>
+
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Testing add_five function"</span><span class="token punctuation">)</span>
+    correct_list <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">39</span><span class="token punctuation">,</span> <span class="token number">49</span><span class="token punctuation">,</span> <span class="token number">28</span><span class="token punctuation">,</span> <span class="token number">51</span><span class="token punctuation">,</span> <span class="token number">17</span><span class="token punctuation">,</span> <span class="token number">29</span><span class="token punctuation">]</span>
+    <span class="token keyword">assert</span><span class="token punctuation">(</span>add_five<span class="token punctuation">(</span>n_list<span class="token punctuation">)</span> <span class="token operator">==</span> correct_list<span class="token punctuation">)</span>
+
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"All tests passed!"</span><span class="token punctuation">)</span>
+
+<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">'__main__'</span><span class="token punctuation">:</span>
+    main<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>在<a href="https://pymotw.com/3/">python标准库里查看并引用需要的module</a></p>
+<p>datetime 用来处理日期和时间</p>
+<p>os可以用来处理操作系统相关的，还有当前目录</p>
+<p><strong>直接导入</strong></p>
+<p>from module_name import object_name   </p>
+<p>from module_name import object_name,object_name2</p>
+<p>只获取所需要的对象，所以说函数其实也是一个对象</p>
+<p>廖雪峰教材里确实有提到：函数名其实就是指向一个函数对象的引用，完全可以把函数名赋给一个变量，相当于给这个函数起了一个“别名”</p>
+<p>总结：</p>
+<ol>
+<li><p>要从模块中导入单个函数或类：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> module_name <span class="token keyword">import</span> object_name<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<li><p>要从模块中导入多个单个对象：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> module_name <span class="token keyword">import</span> first_object<span class="token punctuation">,</span> second_object<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<li><p>要重命名模块：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> module_name <span class="token keyword">as</span> new_name<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<li><p>要从模块中导入对象并重命名：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> module_name <span class="token keyword">import</span> object_name <span class="token keyword">as</span> new_name<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<li><p>要从模块中单个地导入所有对象（请勿这么做）：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> module_name <span class="token keyword">import</span> <span class="token operator">*</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<li><p>如果你真的想使用模块中的所有对象，请使用标准导入 module_name 语句并使用点记法访问每个对象。</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> module_name<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+</ol>
+<hr>
+<p>为了更好地管理代码，Standard 标准库中的模块被拆分成了子模块并包含在软件包中。<strong>软件包</strong>是一个包含子模块的模块。子模块使用普通的点记法指定。</p>
+<p>子模块的指定方式是软件包名称、点，然后是子模块名称。你可以如下所示地导入子模块。</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> package_name<span class="token punctuation">.</span>submodule_name<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<hr>
+<p>python的标准库非常庞大，但即使这样，仍有成千上万的第三方库</p>
+<p>pip和conda下载这些库的的软件包，这样你可以使用与导入标准库相同的语法来导入第三方软件包</p>
+<p><strong>conda据说专门针对数据科学！</strong>pip是内置，也是一般情况</p>
+<p>按照规范，最好把第三方库放在导入标准库的语句后面</p>
+<p><strong>使用 <code>requirements.txt</code> 文件</strong></p>
+<p>大型 Python 程序可能依赖于十几个第三方软件包。为了更轻松地分享这些程序，程序员经常会在叫做 requirements.txt 的文件中列出项目的依赖项。下面是一个 requirements.txt 文件示例。</p>
+<pre class="line-numbers language-txt" data-language="txt"><code class="language-txt">beautifulsoup4&#x3D;&#x3D;4.5.1
+bs4&#x3D;&#x3D;0.0.1
+pytz&#x3D;&#x3D;2016.7
+requests&#x3D;&#x3D;2.11.1<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>该文件的每行包含软件包名称和版本号。版本号是可选项，但是通常都会包含。不同版本的库之间可能变化不大，可能截然不同，因此有必要使用程序作者在写程序时用到的库版本。</p>
+<p>你可以使用 pip 一次性安装项目的所有依赖项，方法是在命令行中输入 <code>pip install -r requirements.txt</code>。</p>
+<h3 id="实用的第三方软件包"><a href="#实用的第三方软件包" class="headerlink" title="实用的第三方软件包"></a>实用的第三方软件包</h3><p>能够安装并导入第三方库很有用，但是要成为优秀的程序员，还需要知道有哪些库可以使用。大家通常通过在线推荐或同事介绍了解实用的新库。如果你是一名 Python 编程新手，可能没有很多同事，因此为了帮助你了解入门信息，下面是优达学城工程师很喜欢使用的软件包列表。（可能部分网站在国内网络中无法打开）</p>
+<ul>
+<li><a href="https://ipython.org/">IPython</a> - 更好的交互式 Python 解释器</li>
+<li><a href="http://docs.python-requests.org/">requests</a> - 提供易于使用的方法来发出网络请求。适用于访问网络 API。</li>
+<li><a href="http://flask.pocoo.org/">Flask</a> - 一个小型框架，用于构建网络应用和 API。</li>
+<li><a href="https://www.djangoproject.com/">Django</a> - 一个功能更丰富的网络应用构建框架。Django 尤其适合设计复杂、内容丰富的网络应用。</li>
+<li><a href="https://www.crummy.com/software/BeautifulSoup/">Beautiful Soup</a> - 用于解析 HTML 并从中提取信息。适合网页数据抽取。</li>
+<li><a href="http://doc.pytest.org/">pytest</a> - 扩展了 Python 的内置断言，并且是最具单元性的模块。</li>
+<li><a href="http://pyyaml.org/wiki/PyYAML">PyYAML</a> - 用于读写 <a href="https://en.wikipedia.org/wiki/YAML">YAML</a> 文件。</li>
+<li><a href="http://www.numpy.org/">NumPy</a> - 用于使用 Python 进行科学计算的最基本软件包。它包含一个强大的 N 维数组对象和实用的线性代数功能等。</li>
+<li><a href="http://pandas.pydata.org/">pandas</a> - 包含高性能、数据结构和数据分析工具的库。尤其是，pandas 提供 dataframe！</li>
+<li><a href="http://matplotlib.org/">matplotlib</a> - 二维绘制库，会生成达到发布标准的高品质图片，并且采用各种硬拷贝格式和交互式环境。</li>
+<li><a href="http://ggplot.yhathq.com/">ggplot</a> - 另一种二维绘制库，基于 R’s ggplot2 库。</li>
+<li><a href="https://python-pillow.org/">Pillow</a> - Python 图片库可以向你的 Python 解释器添加图片处理功能。</li>
+<li><a href="http://www.pyglet.org/">pyglet</a> - 专门面向游戏开发的跨平台应用框架。</li>
+<li><a href="http://www.pygame.org/">Pygame</a> - 用于编写游戏的一系列 Python 模块。</li>
+<li><a href="http://pytz.sourceforge.net/">pytz</a> - Python 的世界时区定义。</li>
+</ul>
+<h3 id="IPython"><a href="#IPython" class="headerlink" title="IPython"></a>IPython</h3><p>通过在终端里输入 <code>python</code> 启动 python 交互式解释器。你可以接着输入内容，直接与 Python 交互。这是每次实验和尝试一段 Python 代码的很棒工具。只需输入 Python 代码，输出将出现在下一行。</p>
+<pre class="line-numbers language-none"><code class="language-none">&gt;&gt;&gt; type(5.23)
+&lt;class &#39;float&#39;&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>在解释器中，提示符窗口中最后一行的值将自动输出。如果有多行代码需要输出值，依然需要使用 print。</p>
+<p>如果你开始定义函数，你将在提示符窗口中看到变化，表示这是可以继续的行。在定义函数时，你需要自己添加缩进。</p>
+<pre class="line-numbers language-none"><code class="language-none">&gt;&gt;&gt; def cylinder_volume(height, radius):
+...         pi &#x3D; 3.14159
+...         return height * pi * radius ** 2<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>解释器的不足之处是修改代码比较麻烦。如果你在输入该函数时出现了拼写错误，或者忘记缩进函数的主体部分，无法使用鼠标将光标点到要点击的位置。需要使用箭头键在代码行中来回移动。有必要了解一些实用的快捷方式，例如移到一行的开头或结尾。</p>
+<p>注意，我可以引用我在解释器中之前定义的任何对象！</p>
+<p>实际上有一个代替默认 python 交互式解释器的强大解释器 IPython，它具有很多其他功能。</p>
+<p>在命令行输入ipython就可以打开</p>
+<ul>
+<li>Tab 键补充完整</li>
+<li><code>?</code>：关于对象的详细信息</li>
+<li><code>!</code>：执行系统 shell 命令</li>
+<li>语法突出显示</li>
+</ul>
+<p>你可以在<a href="https://ipython.org/ipython-doc/3/interactive/tutorial.html">此处</a>查看更多其他功能！</p>
+<h3 id="快速查询"><a href="#快速查询" class="headerlink" title="快速查询"></a>快速查询</h3><p>要想成为熟练的程序员，需要掌握大量知识。需要了解库、记住语法以及其他细节。此外，让这一切更具挑战的是，技术在不断革新，因为新的技巧和工具会不断出现。</p>
+<p>对于编程新手来说，学习所有这些细节并及时获悉新的发展动态似乎是一项不可能完成的任务。的确是这样！具有多年经验的编程专业人士实际上并不是在脑中记下百科全书一样的知识，而是掌握了快速查找信息的技巧。</p>
+<p>下面是高效网络搜索的一些技巧：</p>
+<ul>
+<li>在查询时，尝试使用 Python 或要使用的库的名称作为第一个字词。这样会告诉搜索引擎优先显示与你要使用的工具明确相关的结果。</li>
+<li>创建良好的搜索查询需要多次尝试。如果第一次尝试时没有找到有用的结果，再试一遍。</li>
+<li>尝试使用在一开始搜索时发现的网页上发现的关键字，使搜索引擎在后续搜索中转到更好的资源。</li>
+<li>复制粘贴错误消息作为搜索字词。这样会出现错误解释性信息和潜在原因。错误消息可能包括你所写的特定行号引用。只在搜索中包含这些信息之前的错误消息部分。</li>
+<li>如果找不到问题答案，自己提出问题！StackOverflow 等社区有一些行为规则，如果你要加入该社区，必须了解这些规则，但是别因为这些规则而不愿意使用这些资源。</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210410161009668.png" alt="image-20210410161009668"></p>
+<p>虽然有很多关于编程的在线资源，但是并非所有资源都是同等水平的。下面的资源列表按照大致的可靠性顺序排序。</p>
+<ol>
+<li><strong><a href="https://docs.python.org/3/tutorial/">Python 教程</a></strong> - 这部分官方文档给出了 Python 的语法和标准库。它会举例讲解，并且采用的语言比主要文档的要浅显易懂。确保阅读该文档的 Python 3 版本！</li>
+<li><strong><a href="https://docs.python.org/3/index.html">Python 语言和库参考资料</a></strong> - 语言参考资料和库参考资料比教程更具技术性，但肯定是可靠的信息来源。当你越来越熟悉 Python 时，应该更频繁地使用这些资源。</li>
+<li><strong>第三方库文档</strong> - 第三方库会在自己的网站上发布文档，通常发布于 <a href="https://readthedocs.org/">https://readthedocs.org/</a> 。你可以根据文档质量判断第三方库的质量。如果开发者没有时间编写好的文档，很可能也没时间完善库。</li>
+<li><strong>非常专业的网站和博客</strong> - 前面的资源都是主要资源，他们是编写相应代码的同一作者编写的文档。主要资源是最可靠的资源。次要资源也是非常宝贵的资源。次要资源比较麻烦的是需要判断资源的可信度。<a href="https://doughellmann.com/blog/">Doug Hellmann</a> 等作者和 <a href="http://eli.thegreenplace.net/">Eli Bendersky</a> 等开发者的网站很棒。不出名作者的博客可能很棒，也可能很糟糕。</li>
+<li><strong><a href="http://stackoverflow.com/">StackOverflow</a></strong> - 这个问答网站有很多用户访问，因此很有可能有人之前提过相关的问题，并且有人回答了！但是，答案是大家自愿提供的，质量参差不齐。在将解决方案应用到你的程序中之前，始终先理解解决方案。如果答案只有一行，没有解释，则值得怀疑。你可以在此网站上查找关于你的问题的更多信息，或发现替代性搜索字词。</li>
+<li><strong>Bug 跟踪器</strong> - 有时候，你可能会遇到非常罕见的问题或者非常新的问题，没有人在 StackOverflow 上提过。例如，你可能会在 GitHub 上的 bug 报告中找到关于你的错误的信息。这些 bug 报告很有用，但是你可能需要自己开展一些工程方面的研究，才能解决问题。</li>
+<li><strong>随机网络论坛</strong> - 有时候，搜索结果可能会生成一些自 2004 年左右就不再活跃的论坛。如果这些资源是唯一解决你的问题的资源，那么你应该重新思考下寻找解决方案的方式。</li>
+</ol>
 <h1 id="Anaconda"><a href="#Anaconda" class="headerlink" title="Anaconda"></a>Anaconda</h1><p>再看看这里的Anaconda和Jupyterbook</p>
 <ol>
 <li>Anaconda发行版中的可用软件包<code>conda</code>专注于数据科学，而这些软件包<code>pip</code>通常用于一般用途。Conda安装预编译的软件包。例如，Anaconda发行版随附使用<a href="https://docs.continuum.io/mkl-optimizations/">MKL库</a>编译的Numpy，Scipy和Scikit-learn ，从而加快了各种数学运算的速度。<strong>但是，有时候，您可能需要除Anaconda发行版中列出的软件包以外的软件包。</strong></li>
@@ -9187,10 +9342,21 @@ jupyter nbconvert --to html mynotebook.ipynb<span aria-hidden="true" class="line
 <p>这将在您的浏览器中打开幻灯片放映，以便您进行演示。</p>
 ]]></content>
       <categories>
-        <category>前置</category>
+        <category>python</category>
       </categories>
       <tags>
         <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>crawler</title>
+    <url>/2021/04/10/crawler/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+      <tags>
+        <tag>crawler</tag>
       </tags>
   </entry>
 </search>
