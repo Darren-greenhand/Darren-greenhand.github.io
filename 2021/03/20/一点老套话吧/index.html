@@ -4,7 +4,7 @@
 
 <head>
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
-    <meta name="keywords" content="算法1:KMP, 浮华一隅">
+    <meta name="keywords" content="。, 浮华一隅">
     <meta name="description" content="willing to enter the field of god">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>算法1:KMP | 浮华一隅</title>
+    <title>。 | 浮华一隅</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -249,12 +249,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/earth-2254769_960_720.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/pawn-2430046_1920.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">算法1:KMP</h1>
+                    <h1 class="description center-align post-title">。</h1>
                 </div>
             </div>
         </div>
@@ -368,25 +368,12 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                    <div class="article-tag">
-                        
-                            <a href="/tags/KMP/">
-                                <span class="chip bg-color">KMP</span>
-                            </a>
-                        
-                    </div>
+                          <div class="article-tag">
+                            <span class="chip bg-color">无标签</span>
+                          </div>
                     
                 </div>
                 <div class="col s5 right-align">
-                    
-                    <div class="post-cate">
-                        <i class="fas fa-bookmark fa-fw icon-category"></i>
-                        
-                            <a href="/categories/algorithm/" class="post-category">
-                                algorithm
-                            </a>
-                        
-                    </div>
                     
                 </div>
             </div>
@@ -395,14 +382,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-04-06
+                    2021-03-20
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-04-08
+                    2021-04-10
                 </div>
                 
 
@@ -434,18 +421,14 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>[toc]</p>
-<h1 id="算法1：KMP"><a href="#算法1：KMP" class="headerlink" title="算法1：KMP"></a>算法1：KMP</h1><h2 id="感想"><a href="#感想" class="headerlink" title="感想"></a>感想</h2><p>​    没想到我的博客竟然有朝一日也能开始记录算法感想。。大一下。。打算从开发岗转算法岗了。。感觉会有趣一百倍，而不是。。。（并没有歧视，只是个人偏好QWQ）</p>
-<p>​    本着开源的精神，我也开始向各位大佬学习！记录一下自己学过的算法们，当然，由于博主是学生党，并不会也懒得把整个算法的过程都写下来，我会注意把自己学习时遇到的问题和难点记录下来，并总结一下思想方法的噢！</p>
-<p>​    话说KMP也是我第一个遇到的真正需要思考的算法！终于要开始了吗！掉头发的道路！这次想了快两个小时才理解KMP，好菜QWQ，以后加油！</p>
-<h2 id="宏观理解"><a href="#宏观理解" class="headerlink" title="宏观理解"></a>宏观理解</h2><p>KMP能够优化查询，比起暴力主要优化在两点：一是略去了目标字符串的回溯，二是优化了模式字符串的回溯效率，这都是基于前后缀表来实现的。前后缀表的实现有3种以上方法，我学的是整体右移那种，但是其实这只会导致细微的差距。</p>
-<h2 id="操作"><a href="#操作" class="headerlink" title="操作"></a>操作</h2><p>获取前缀表：</p>
-<p>初始化时使后缀表与前缀表错开一位（-1 和 0）</p>
-<p>由于数学规律，在求解某项的next值时，若所有项一一对应，则k一直++，这是最顺利的情况</p>
-<p>但是当某项不匹配时，要通过回退来试图找到稍小的字符串来与开头字符串比较。</p>
-<p>此时把开头字符串通过next表回退一次，这时相当于是找上一个对应好的k，这个k是上一组对应好的前缀组和后缀组，此时肯定大于当前的，这里用到了递归的思想。。因为一组一组都是配好的，发生不匹配的情况时，就往已经匹配好的地方回退。</p>
-<p>需要注意的是，不知道为啥老是想到对称上去。。他这个是前后顺序相同（感觉这样说好蠢），但就是会犯错。。和对称得出的规律差距挺大的</p>
-<p>不管啦就这样吧！</p>
+                <p>竟然被你发现了这篇文章！没想到啊！<br>先约法三章，别跟我提起这篇文章，不然<em><strong>友尽时刻</strong></em>，回去就删好友。</p>
+<hr>
+<ul>
+<li>打暴力游戏真的会激发暴力情绪！像我当年高中那会，特别喜欢恶灵附身，来回玩通最高难度好几遍，其他游戏也是《Dishournerd》这种类型的。。当时真的很暴躁，有一种想砍人的冲动，真不是开玩笑，那种冲动一直持续好久，现在想起来都觉得吓人，就是那种贼反人类的</li>
+<li>那种学自己喜欢的东西，然后别人过来卷你的感觉真的不爽。。。卷王雅思拉雷！</li>
+<li>大一的时候老是被人叫卷王。。哎。。挺烦的，因为我根本卷不起来，初高中一直成绩都挺差的来着，被逼着学东西效率巨低，也超讨厌跟别人竞争（偶尔考好了找朋友凡尔赛是令一码事哈哈），但是探索兴趣贼有趣好吧，比如一开始学的前端，比如后来学的爬虫。。。落到很多人眼里就变成卷了，当然。。向我一样从小学到高中玩了无数（统计了一下游戏时长。。竟然有快15000小时我去）游戏，最终玩腻游戏的人确实很少。从小被父母太放任了哈哈，当年看短视频也挺疯的，弄得我现在性格就有一块就是搞一件事就馅的挺深，很讨厌中途退出这样子。吐槽完了，爽多了</li>
+<li></li>
+</ul>
 
                 
             </div>
@@ -472,7 +455,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2021/04/06/%E7%AE%97%E6%B3%951%EF%BC%9ATMP/">http://example.com/2021/04/06/%E7%AE%97%E6%B3%951%EF%BC%9ATMP/</a>
+                    <a href="http://example.com/2021/03/20/%E4%B8%80%E7%82%B9%E8%80%81%E5%A5%97%E8%AF%9D%E5%90%A7/">http://example.com/2021/03/20/%E4%B8%80%E7%82%B9%E8%80%81%E5%A5%97%E8%AF%9D%E5%90%A7/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -509,11 +492,7 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            
-                                <a href="/tags/KMP/">
-                                    <span class="chip bg-color">KMP</span>
-                                </a>
-                            
+                            <span class="chip bg-color">无标签</span>
                         </div>
                     
                 </div>
@@ -685,30 +664,31 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2021/04/06/Matlab/">
+                <a href="/2021/03/20/%E9%BB%91%E9%A9%AChtml&css/">
                     <div class="card-image">
                         
-                        <img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/5871facaae69848a516a6f4a49842d9e.jpg" class="responsive-img" alt="matlab">
                         
-                        <span class="card-title">matlab</span>
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="黑马html&amp;css">
+                        
+                        <span class="card-title">黑马html&amp;css</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            数据方面的第一篇博文，为了打数模恶补matlab
+                            pink真不戳，以后再深入吧
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-04-06
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-03-20
                         </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/data/" class="post-category">
-                                    data
+                            <a href="/categories/web-front-end/" class="post-category">
+                                    web-front-end
                                 </a>
                             
                             
@@ -718,8 +698,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/matlab/">
-                        <span class="chip bg-color">matlab</span>
+                    <a href="/tags/html-css%E5%85%A5%E9%97%A8/">
+                        <span class="chip bg-color">html&amp;&amp;css入门</span>
                     </a>
                     
                 </div>
@@ -733,30 +713,30 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/04/05/%E9%82%A3%E4%BA%9B%E5%BF%AB%E6%8D%B7%E9%94%AE/">
+                <a href="/2021/03/19/plan/">
                     <div class="card-image">
                         
-                        <img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/technology-785742_960_720.jpg" class="responsive-img" alt="hot key">
+                        <img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/glasses-1052010_960_720.jpg" class="responsive-img" alt="plan">
                         
-                        <span class="card-title">hot key</span>
+                        <span class="card-title">plan</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            这波不记一下，怎么日后装13
+                            隐私(＾Ｕ＾)ノ~ＹＯ
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-04-05
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-03-19
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/others/" class="post-category">
-                                    others
+                            <a href="/categories/log/" class="post-category">
+                                    log
                                 </a>
                             
                             
@@ -766,8 +746,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/hot-key/">
-                        <span class="chip bg-color">hot key</span>
+                    <a href="/tags/plan/">
+                        <span class="chip bg-color">plan</span>
                     </a>
                     
                 </div>
