@@ -402,7 +402,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-04-10
+                    2021-04-11
                 </div>
                 
 
@@ -434,7 +434,44 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <h1 id="背景和配置"><a href="#背景和配置" class="headerlink" title="背景和配置"></a>背景和配置</h1><p>对大数据的获取，处理和分析，以及基于大数据的智能应用，已成为提高竞争力的关键因素</p>
+<p>我们需要的数据大多源于各个网站，但是不同网站结构不一，布局复杂，渲染方式多样</p>
+<p>有的网站还采取了一系列“反爬”，我们也需要针对的反制措施！</p>
+<p>爬虫是服务机器学习和人工智能发展非常重要的技术！为其提供优质的数据</p>
+<p>崔佬提供了多种安装python库的方式：</p>
+<ul>
+<li>pip/conda</li>
+<li>wheel</li>
+<li>去官网/github下载源码再安装</li>
+</ul>
+<p>爬虫可以简单分为：爬取页面，分析页面，存储数据</p>
+<p><strong>请求库：</strong></p>
+<ol>
+<li><p>requests:  爬取html</p>
+</li>
+<li><p>Selenium  自动化测试，驱动浏览器执行某些（点击，下拉）操作，渗透JS渲染</p>
+<p>但还要配置浏览器，此处用最好的ChromeDriver，先更新chrome</p>
+<p>下载后直接放进环境的Scripts里面，或者单独设置环境变量</p>
+</li>
+<li><p>PhantomJS 无界面，可脚本编程的webkit浏览器引擎，被selenium弃用了，推荐chrome无界面模式</p>
+</li>
+<li><p>aiohttp  提供异步web服务，顺便安装cchardet aiodns</p>
+</li>
+</ol>
+<p>下面装解析库，虽然提取信息方式多样，但写起来麻烦，不如强大的库，库还提供解析</p>
+<p><strong>解析库：</strong></p>
+<ol>
+<li><p>lxml 解析HTML /XML  支持XPath解析方式，且效率非常高</p>
+</li>
+<li><p>beautiful soup 解析HTML /XML，可以很方便的提取数据，有强大的API和多样的解析方式</p>
+</li>
+<li><p>pyquery  提供了和jQuery类似的语法来解析HTML文档，还支持CSS选择器</p>
+</li>
+<li><p>tesserocr  通过OCR对抗验证码，是对<a target="_blank" rel="noopener" href="https://github.com/UB-Mannheim/tesseract/wiki">tesseract</a>的再封装</p>
+<p>ps:(Optical Character Recognition 光学字符识别)扫描字符并转换成电子文本</p>
+</li>
+</ol>
+
                 
             </div>
             <hr/>
@@ -995,7 +1032,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">147.3k</span>&nbsp;字
+                class="white-color">148k</span>&nbsp;字
             
             
             
