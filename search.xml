@@ -9546,7 +9546,46 @@ jupyter nbconvert --to html mynotebook.ipynb<span aria-hidden="true" class="line
 <p>你每天走的距离是construct  但如果指定按米测量，它就不是</p>
 <p>从少数样本的研究得出的现象不能说明任何问题：</p>
 <p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210410215056385.png" alt="image-20210410215056385"></p>
-<h1 id="数据可视化"><a href="#数据可视化" class="headerlink" title="数据可视化"></a>数据可视化</h1><h2 id="频率"><a href="#频率" class="headerlink" title="频率"></a>频率</h2>]]></content>
+<h1 id="集中趋势"><a href="#集中趋势" class="headerlink" title="集中趋势"></a>集中趋势</h1><h2 id="频率"><a href="#频率" class="headerlink" title="频率"></a>频率</h2><p>绝对数量（频率）和相对频率（百分比）</p>
+<p>通过整理数据，我们可以清晰地观察变化</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210411184322489.png" alt="image-20210411184322489"></p>
+<h2 id="直方图"><a href="#直方图" class="headerlink" title="直方图"></a>直方图</h2><p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210411184838387.png" alt="image-20210411184838387"></p>
+<p>组距 = 区间大小</p>
+<p>percentage百分比 != porpation比例</p>
+<p>简便性有失会牺牲一些信息</p>
+<p>小心信息被过大的组距隐藏起来了</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210411185724576.png" alt="image-20210411185724576"></p>
+<p>直方图横坐标是同一属性的分布，可以改变组距，而且有顺序</p>
+<p>柱状图的不同柱子是相互独立的，顺序不重要，分类或定性的</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210411190847179.png" alt="image-20210411190847179"></p>
+<p>正偏斜分布</p>
+<p>频率低的分布在右边</p>
+<p>Excel的一些小操作，c和s键，函数公式里，$E$2是常量E2</p>
+<hr>
+<p>这些都是x轴上的自变量</p>
+<p>众数mode   直方图里用最大区间的中位数，受组距影响，与呈现数据的方式有很大关系</p>
+<p>均匀分布没有众数，但是多峰分布由多个众数</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210411194036544.png" alt="image-20210411194036544"></p>
+<p>第一个对的</p>
+<hr>
+<p>中位数median</p>
+<p>用之前要排序噢</p>
+<p>处理高偏斜分布时中位数更可信</p>
+<hr>
+<p>平均数average</p>
+<p><img src="C:/Users/Lenovo/AppData/Roaming/Typora/typora-user-images/image-20210411194453701.png" alt="image-20210411194453701"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210411195527966.png" alt="image-20210411195527966"></p>
+<p>全是对的</p>
+<p>robust 强大且稳定  符合统计的定义</p>
+<p>使用这三个数都是中心测量方法，因为他们都描述分布中心的情况</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210411200914056.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210411204640630.png" alt="image-20210411204640630"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210411204952662.png" alt="image-20210411204952662"><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210411205002462.png" alt="image-20210411205002462"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/4938065-f641e015cbe17d86" alt="img"></p>
+<p>平均数和中位数本来一样，但是平均数被稀少的数据拉过去了</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210411211835965.png" alt="image-20210411211835965"></p>
+<p>所以注意自变量和因变量是谁，此处分数为自变量，人数为因变量，直方图的自变量是均匀的</p>
+<h1 id="可变性"><a href="#可变性" class="headerlink" title="可变性"></a>可变性</h1>]]></content>
       <categories>
         <category>math</category>
       </categories>
@@ -9571,7 +9610,7 @@ jupyter nbconvert --to html mynotebook.ipynb<span aria-hidden="true" class="line
     <content><![CDATA[<p>竟然被你发现了这篇文章！没想到啊！<br>先约法三章，别跟我提起这篇文章，不然<em><strong>友尽时刻</strong></em>，回去就删好友。</p>
 <hr>
 <ul>
-<li>打暴力游戏真的会激发暴力情绪！像我当年高中那会，特别喜欢恶灵附身，来回玩通最高难度好几遍，其他游戏也是《Dishournerd》这种类型的。。当时真的很暴躁，有一种想砍人的冲动，真不是开玩笑，那种冲动一直持续好久，现在想起来都觉得吓人，就是那种贼反人类的</li>
+<li>打暴力游戏真的会激发暴力情绪！像我当年高中那会，特别喜欢恶灵附身，来回玩通最高难度好几遍，其他游戏也是《Dishournerd》这种类型的。。当时真的很暴躁，有一种想砍人的冲动，真不是开玩笑，那种冲动一直持续好久，现在想起来都觉得吓人，就是那种贼反人类的，而且这种影响好像很难消掉。。感觉现在喜欢的游戏（吃鸡，龙之谷）也有点暴力。</li>
 <li>那种学自己喜欢的东西，然后别人过来卷你的感觉真的不爽。。。卷王雅思拉雷！</li>
 <li>大一的时候老是被人叫卷王。。哎。。挺烦的，因为我根本卷不起来，初高中一直成绩都挺差的来着，被逼着学东西效率巨低，也超讨厌跟别人竞争（偶尔考好了找朋友凡尔赛是令一码事哈哈），但是探索兴趣贼有趣好吧，比如一开始学的前端，比如后来学的爬虫。。。落到很多人眼里就变成卷了，当然。。向我一样从小学到高中玩了无数（统计了一下游戏时长。。竟然有快15000小时我去）游戏，最终玩腻游戏的人确实很少。从小被父母太放任了哈哈，当年看短视频也挺疯的，弄得我现在性格就有一块就是搞一件事就馅的挺深，很讨厌中途退出这样子。吐槽完了，爽多了</li>
 <li></li>
