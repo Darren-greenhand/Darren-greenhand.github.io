@@ -402,7 +402,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-04-11
+                    2021-04-13
                 </div>
                 
 
@@ -411,7 +411,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    6 分
+                    7 分
                 </div>
                 
 
@@ -576,7 +576,38 @@
 <p>平均数和中位数本来一样，但是平均数被稀少的数据拉过去了</p>
 <p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210411211835965.png" alt="image-20210411211835965"></p>
 <p>所以注意自变量和因变量是谁，此处分数为自变量，人数为因变量，直方图的自变量是均匀的</p>
-<h1 id="可变性"><a href="#可变性" class="headerlink" title="可变性"></a>可变性</h1>
+<h1 id="可变性"><a href="#可变性" class="headerlink" title="可变性"></a>可变性</h1><h2 id="IQR"><a href="#IQR" class="headerlink" title="IQR"></a>IQR</h2><p>值域提供了一个关于分布的概要信息，但是方便会牺牲一些东西</p>
+<p>因为它参考的是最极端的数据，受到异常数据影响很大</p>
+<p>习惯上，统计学家忽略较低和较高的各25%！</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210412234924656.png" alt="image-20210412234924656"></p>
+<p>Q1  Q2  Q3   Q1和Q3间是<strong>四分位距/四分差</strong>IQR Interquartile range</p>
+<h3 id="异常值"><a href="#异常值" class="headerlink" title="异常值"></a>异常值</h3><p>定义：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210412235434276.png" alt="image-20210412235434276"></p>
+<h3 id="箱线图"><a href="#箱线图" class="headerlink" title="箱线图"></a><strong>箱线图</strong></h3><p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210412235721975.png" alt="image-20210412235721975"></p>
+<p>小点表示异常数据</p>
+<p>均值不一定在IQR中</p>
+<p><strong>不足</strong></p>
+<p>值域和IQR无法考虑所有数据</p>
+<p>完全不同的俩数据分布也可以有相同的IQR</p>
+<p>因此我们需要一个数字，既能显示分布，又能考虑所有的数据</p>
+<p>我们找的是找出每个值与数据集均值之间差的平均值</p>
+<h2 id="平均偏差"><a href="#平均偏差" class="headerlink" title="平均偏差"></a>平均偏差</h2><p>离均差是某个数据减去平均值</p>
+<p>平均偏差 = 离均差之合/n  = 0<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210413000641459.png" alt="image-20210413000641459"></p>
+<p>但这并不能反映甚么，问题是负值会抵消，我们不关心正负，我们只关心绝对距离！平方和取绝对值就可以处理负数。</p>
+<p>引入绝对偏差对应离均差</p>
+<p>平均绝对偏差对应平均偏差</p>
+<p>平方偏差和平均平方偏差（方差）</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210413001254455.png" alt="image-20210413001254455"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210413001417511.png" alt="image-20210413001417511"></p>
+<p>方差可以看成那个橙色的，而标准差即为边长。</p>
+<p>标准差是最常用的分布测量方法，小写西格玛</p>
+<p>步骤：平均值-&gt;离均差-&gt;每个偏差的平方值-&gt;方差-&gt;标准差</p>
+<hr>
+<p>思考：</p>
+<p>为何不直接获得平均绝对偏差。</p>
+<p>它具有重要意义，比如正态分布中，68% 和 95%是一个和两个</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210413094303444.png" alt="image-20210413094303444"></p>
+
                 
             </div>
             <hr/>
@@ -1137,7 +1168,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">106.3k</span>&nbsp;字
+                class="white-color">106.7k</span>&nbsp;字
             
             
             
