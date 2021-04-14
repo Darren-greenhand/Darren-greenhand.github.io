@@ -402,7 +402,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-04-12
+                    2021-04-15
                 </div>
                 
 
@@ -411,7 +411,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    12 分
+                    22 分
                 </div>
                 
 
@@ -555,7 +555,7 @@
 <img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210412202651492.png" alt="image-20210412202651492" style="zoom:50%;" />
 
 <p>P是行重新排列的单位矩阵，又称<strong>置换矩阵，对A进行行置换</strong></p>
-<p>记住n阶矩阵的数量n!，置换矩阵都可逆，还有一个<strong>很关键的性质</strong>，这可真是数量稀少</p>
+<p>记住n阶矩阵的数量n!，置换矩阵的<strong>逆矩阵等于其转置</strong>，还有一个<strong>很关键的性质</strong>，这可真是数量稀少</p>
 <img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210412203042685.png" alt="image-20210412203042685" style="zoom:50%;" />
 
 <p>还有一个书上的性质</p>
@@ -661,7 +661,194 @@
 <p>最后得到的解空间<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210412223401018.png" alt="image-20210412223401018" style="zoom: 33%;" /></p>
 <p>验证了之前的结果！全新的看法啊。。妙啊！！！！！！！！！！</p>
 <p>那这样子也太好算了吧，左边化成[I F]的过程其实就已经把方程解完了</p>
-<h2 id="8-求解Ax-b可解性和解的结构"><a href="#8-求解Ax-b可解性和解的结构" class="headerlink" title="8.求解Ax = b可解性和解的结构"></a>8.求解Ax = b可解性和解的结构</h2>
+<h2 id="8-求解Ax-b可解性和解的结构"><a href="#8-求解Ax-b可解性和解的结构" class="headerlink" title="8.求解Ax = b可解性和解的结构"></a>8.求解Ax = b可解性和解的结构</h2><p>Ax = b 是否有解，有多少解</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210413233103119.png" alt="image-20210413233103119" style="zoom:50%;" />
+
+<p>Augmented matrix 增广矩阵</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210413233326657.png" alt="image-20210413233326657" style="zoom:50%;" />
+
+<p>这就是有解的条件，左边等价右边，这是显然的，而不是给个概念哈哈</p>
+<p>所以solvability: </p>
+<p>当且仅当b属于A的列空间，即是A各列的线性组合</p>
+<p>如果A各行的线性组合得到0，b端的分量也必为0</p>
+<p>这两种描述是等价的</p>
+<hr>
+<p>下面到算法：<strong>求Ax=b的所有解</strong></p>
+<p>第一步，找一个特解</p>
+<p>因为变量数多于方程数，能找出一堆解，方便的做法是令<strong>所有自由变量为0</strong></p>
+<p>然后求出主变量，组成一个特解</p>
+<p>接下来的关键是，可以加上零空间中的任意x，因为不会影响结果，即为所求全部解</p>
+<p>他给的证明也是<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210413234026689.png" alt="image-20210413234026689" style="zoom:50%;" /></p>
+<p><em><strong>解为：特解加上零空间内任意向量</strong></em>     x = xp + xn</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210413234346430.png" alt="image-20210413234346430" style="zoom: 33%;" />
+
+<p>但此时并不过原点，而是穿过xp（特解），不是子空间，而是子空间从原点平移得到的二维平面</p>
+<hr>
+<p>m x n矩阵  秩（主元数）为 r      r&lt;=m  and  r&lt;=n   两种<strong>满秩情况</strong></p>
+<p><strong>列满秩(r = n ,r&lt;m)：</strong></p>
+<p>没有自由变量，零空间里只有一个零向量  Ax = b 如果有解，那么只剩下一个特解！！</p>
+<p>或者无解，所以只有 0 或 1 个解</p>
+<p>一个例子：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210413235134468.png" alt="image-20210413235134468" style="zoom:25%;" /><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210413235213091.png" alt="image-20210413235213091" style="zoom:25%;" /></p>
+<p>最终化为最简是上面单位阵，下面为0</p>
+<p>此时Ax = b 只有当b正好位于那个二维子空间才有解，此时特解显然为两列之合[4 3 7 6]`</p>
+<p>当然，是可以为 0 的</p>
+<hr>
+<p><strong>行满秩(r = m ,r&lt;n)：</strong></p>
+<p>问题：b取什么时，Ax= b有解？</p>
+<p>消元时，不会出现零行！因此b没有要求（出现零行则b为0那个要求）</p>
+<p><strong>所以对任意b，Ax = b 都有解</strong></p>
+<p><strong>此时有r/m个主变量，自由变量为 n - r/n - m 个</strong></p>
+<p>还是上面那个例子，转置一下</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210413235826318.png" alt="image-20210413235826318" style="zoom:25%;" /><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210413235844601.png" alt="image-20210413235844601" style="zoom:25%;" /></p>
+<p>还记得那个 I F吗</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210412222327626.png" alt="image-20210412222327626" style="zoom:33%;" />
+
+<p>这里就是那种情况，所以说这部分构成零空间的特殊解！牛啊！</p>
+<p>这里左边的 I 和 右边的 F 是可以<strong>交织，混搭</strong>的！</p>
+<p><strong>此时总有无穷解，因为总是有零空间需要处理</strong></p>
+<hr>
+<p>r = m = n，这意味着这是一个令人愉快的可逆矩阵</p>
+<p>而简化后就是单位阵</p>
+<p>零空间只包含零向量，而且这种情况肯定有解，所以，必然仅有一个<strong>唯一解</strong>！！！</p>
+<p>突然感觉好委屈QWQ，当年线代讲空间的时候，理解了好久，现在直接二倍速看懂了</p>
+<hr>
+<p>那 r&lt;m , r&lt;n 的情况就很显然了</p>
+<p>又存在零空间，又可能出现零行，<strong>所以要么无解，要么无穷多解</strong></p>
+<p>所以秩包含了好多有用的信息，这节课为什么没有早点明白QWQ，太惨了</p>
+<p>他给的图是：</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210414000943462.png" alt="image-20210414000943462" style="zoom:50%;" />
+
+<p>感谢strang老师！</p>
+<h2 id="9-线性相关性、基、维数"><a href="#9-线性相关性、基、维数" class="headerlink" title="9.线性相关性、基、维数"></a>9.线性相关性、基、维数</h2><p>线性无关是用来形容向量组，而不是矩阵</p>
+<p>它对无关的定义和我们学的一样。只要出现零向量就必然线性相关。很好理解。</p>
+<p>列向量相关 &lt;=&gt; 零空间存在除了零向量以外的向量,r&lt;n</p>
+<p>列向量无关 &lt;=&gt; 零空间仅存在零向量,r&lt;n ，无自由变量</p>
+<p>向量组“<strong>生成（span）</strong>”一个空间：</p>
+<p><strong>这个空间包含这些向量的所有线性组合</strong></p>
+<hr>
+<p>某空间的基：</p>
+<p>一个拥有两大性质：线性无关，且张成整个空间 的向量组</p>
+<p><strong>子空间的基包含这个子空间的全部有用信息</strong></p>
+<p>对于<strong>方阵</strong>，所选的向量组为基的条件是组成的矩阵<strong>可逆</strong>，显然</p>
+<hr>
+<p>维数：</p>
+<p>每个空间，基向量的个数即为空间的维数</p>
+<p>当然这里讨论的是完整的n维空间，而不是残破的子空间</p>
+<p>矩阵的秩 = 空间的维数 = 主元数量</p>
+<img src="C:/Users/Lenovo/AppData/Roaming/Typora/typora-user-images/image-20210414092552773.png" alt="image-20210414092552773" style="zoom:50%;" />
+
+<p>而在这个秩为2的例子里，零空间的基可以分别设1 0 来找</p>
+<p>零空间的维度是自由变量的个数</p>
+<h2 id="10-四个基本子空间"><a href="#10-四个基本子空间" class="headerlink" title="10.四个基本子空间"></a>10.四个基本子空间</h2><p>核心内容，四个子空间的关系</p>
+<p>其中行空间也是所有行向量的线性组合，<strong>或者说A转置的列的所有组合</strong>，这样考虑就可以使用之前的结论</p>
+<p>列空间C(A)   零空间N(A)   行空间C(AT)   左零空间N(AT)</p>
+<p>列空间在m维，行空间在n维</p>
+<p>零空间在n维，左零空间在m维</p>
+<p>列维数 + 左零维数 = m        行维数 + 零维数 = n </p>
+<p>经典的图片：</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210414093802197.png" alt="image-20210414093802197" style="zoom:50%;" />
+
+<p>关键在basis 和 dimension</p>
+<p>关键结论是：<strong>A 和 AT 的秩相同，确实同一个矩阵从不同方向看，秩不是一个有方向的属性，所以理应是不变的</strong></p>
+<p>对列空间，一组基就是主列，维数就是r</p>
+<p>对列空间，一组基就是主行，维数就是r</p>
+<p>对零空间，一组基就是特殊解们，n - r 个free var 即为维数</p>
+<p>对左零空间，一组基就是特殊解们，m - r 个free var 即为维数</p>
+<p>又根据那个结论，所以 n - r = m - r 个锤子哟，零空间和左零空间的关系<strong>不是</strong>列和行这样作为一个矩阵的两面噢！</p>
+<p>先看求行空间的基</p>
+<img src="C:/Users/Lenovo/AppData/Roaming/Typora/typora-user-images/image-20210414094758222.png" alt="image-20210414094758222" style="zoom:50%;" />
+
+<p>这进行了行变换之后，<strong>列空间变化了！</strong>行空间没变，基发生了变化。</p>
+<p><strong>所以基是R的前r行</strong>，因为是单位阵，所以还是<strong>最佳</strong>的基。</p>
+<p>因为R 执行逆运算 可以得到A，所以A行确实是R行的线性组合</p>
+<hr>
+<p>左零</p>
+<p>为了运用之前的方法，用A来代替AT，转置后，yT到左边去了</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210414095528916.png" alt="image-20210414095528916" style="zoom: 33%;" />
+
+<p>但是老师还是习惯用 AT * y = 0来做</p>
+<p>那怎么求它的基呢，直觉告诉。。。<strong>秘密藏在把A -&gt; R 的过程里</strong></p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210414100050545.png" alt="image-20210414100050545" style="zoom:50%;" />
+
+<p>同样也是高斯 - jordan，E记录了A -&gt; R 的过程</p>
+<p>所以相当于左边乘了一个 E  即  EA = R   EI = E ，当时(chapter2)是个方阵R = I ， 所以E是A的逆</p>
+<p>但是现在 A 不可逆， 但 E 仍能描述很多特性，<strong>先算E</strong></p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210414125257549.png" alt="image-20210414125257549" style="zoom:50%;" />
+
+<p>此处左零空间应该是一维的因为  m -r = 3 - 2 = 1</p>
+<p>即存在一个线性组合使得A这三行结果为0，这个线性组合可以确定左零空间的基。</p>
+<p>因此尝试着找一个能产生零行向量的行组合。此处就是E的最后一行，因为R的最后一行就是该行对A中行向量的线性组合，而结果为0，卧槽！！！所以左零的基就是这些使得R中出现0行的行，牛啊！！</p>
+<p><strong>这样不用把矩阵转置然后从头开始计算。</strong></p>
+<hr>
+<p>新的向量空间：所有的 3 x 3矩阵，把每个矩阵看成一个”向量”</p>
+<p>矩阵可以相加，数乘，也有”零向量”，所以满足向量空间的条件，暂时不考虑乘法！</p>
+<p>用M表示所有3x3矩阵组成的矩阵空间。</p>
+<p>则每个位置放1，其他置0，便可作为所谓的”基“，然后又有上三角和对称矩阵这俩子空间的交是对角矩阵。</p>
+<p>反正就是这种思想，把Rn推广到Rn*n</p>
+<h2 id="11-矩阵空间，秩一矩阵，小世界图"><a href="#11-矩阵空间，秩一矩阵，小世界图" class="headerlink" title="11.矩阵空间，秩一矩阵，小世界图"></a>11.矩阵空间，秩一矩阵，小世界图</h2><p>接着上面的问题，我们不考虑矩阵乘法，因为向量空间仅仅考虑矩阵相加和数乘</p>
+<p>M的基就是9个不同的秩一矩阵</p>
+<p>交集很明显，就是同属两边的向量的组合，如上三角 U 和对称矩阵 S 这俩子空间的交是对角矩阵。</p>
+<p>而并集不是一个子空间，所以我们用 S + U 来描述他们的和而不是并集。</p>
+<p>这代表任取S中的一个元素，再加上U中的任意一个元素，这会得到全部，也就是M的基</p>
+<p><strong>这里 dim S + dim U = 6 + 6    dim(S+U) = 9  dim(S∪U）=3</strong></p>
+<p><strong>前者相加 等于后者相加！</strong>画个韦恩图。。这是显然的结论，重叠了3个（类似鸽笼原理吗）</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210414232350750.png" alt="image-20210414232350750" style="zoom: 50%;" />
+
+<p>然后看看微分方程里的类似思想</p>
+<p><strong>要知道线性微分方程里一个重要内容就是寻找解空间的一组基</strong></p>
+<p>这里的基不像方向，而是函数，但是这样的线性思想是通用的。</p>
+<hr>
+<p>秩一矩阵都可以表示为一列乘以一行</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210414233317891.png" alt="image-20210414233317891" style="zoom: 50%;" />
+
+<p>它就像积木一样</p>
+<p>比如秩为n的矩阵，他就需要n个秩一矩阵来构建</p>
+<p>这里提出了一个问题 M = all 5 x 17 matrics   那么一个由秩四矩阵构成的子集是子空间吗？</p>
+<p>显然不是，因为两个秩四矩阵相加都不一定是秩四矩阵，5维里面挑四维，可能相同，也可能变成五维的空间，这里很好理解，但不好表述。。感觉像是一种排列的关系。</p>
+<p><strong>而秩一矩阵也是这样的原理，它不是子空间。</strong></p>
+<p>一个例子：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210414234947572.png" alt="image-20210414234947572"></p>
+<p>根据这个条件，如何描述出S的维数？首先得找到一组基</p>
+<p>因为[1 1 1 1] [v1 v2 v3 v4]` = 0  所以这个S其实是一个零空间，然后用Ax = 0去研究四个子空间就好了</p>
+<hr>
+<p>小世界图：</p>
+<p>图论和线性代数。。。Graph</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210414235251527.png" alt="image-20210414235251527" style="zoom:33%;" />
+
+<p>如果用点代表一个人，线代表两者认识，那么美国1个人认识另一个人的最远距离是？</p>
+<p>六度分离猜想，大约6步，“小世界”哈哈</p>
+<h2 id="12-图和网络"><a href="#12-图和网络" class="headerlink" title="12.图和网络"></a>12.图和网络</h2><p>这节课专注于线代的应用</p>
+<p>而真正需要人们处理的矩阵来源于生活中的各种问题</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210414235738751.png" alt="image-20210414235738751" style="zoom:50%;" />
+
+<p>今天来探讨图，这是非常重要的应用数学概念，也是矩阵的发源之一</p>
+<p>Nodes and Edges 节点和边</p>
+<img src="C:/Users/Lenovo/AppData/Roaming/Typora/typora-user-images/image-20210414235940380.png" alt="image-20210414235940380" style="zoom:50%;" />
+
+<p>这些是有向线段来区别方向，它将用 potential电势 potential difference 电势差 currents 电流等词汇</p>
+<p>当然这只是一个例子，图能表示各种现实意义上的，我们称这个矩阵为关联矩阵 incidence matrix</p>
+<p>m x n 的矩阵  在第一条边上是节点1到2 所以 1号位为 -1，2号位为 1</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210415000303262.png" alt="image-20210415000303262" style="zoom: 80%;" />
+
+<p>这个子图被称为loop（回路），对图来说，回路的数量和位置至关重要，回路意味着“相关”</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210415000656107.png" alt="image-20210415000656107" style="zoom:50%;" />
+
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210415000709211.png" alt="image-20210415000709211" style="zoom:50%;" />
+
+<p>现在提问题：(这是一个非常稀疏的矩阵，一行只有俩非零)</p>
+<p>零空间是啥，这里仍研究Ax = 0</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210415001052557.png" alt="image-20210415001052557" style="zoom:50%;" />
+
+<p>所以A所进行的组合相当于计算每条边上的差值。</p>
+<p>如果把 x = x1 x2 x3 x4 作为各个节点的电势，</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210415001208855.png" alt="image-20210415001208855" style="zoom:50%;" />
+
+<p>将会得到电势差，牛逼啊！！</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210415001316165.png" alt="image-20210415001316165" style="zoom:50%;" />
+
+<p>C x [1 1 1 1]` 就是整个零空间，维数为1，这个零空间意味着</p>
+
                 
             </div>
             <hr/>
@@ -1224,7 +1411,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">106.7k</span>&nbsp;字
+                class="white-color">100k</span>&nbsp;字
             
             
             

@@ -402,7 +402,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-04-13
+                    2021-04-14
                 </div>
                 
 
@@ -411,7 +411,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    7 分
+                    8 分
                 </div>
                 
 
@@ -434,7 +434,7 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="入门"><a href="#入门" class="headerlink" title="入门"></a>入门</h1><p>当这门课完结的时，将会掌握对数据集进行收集，整理，计算和可视化的所需要工具</p>
+                <h1 id="1-入门"><a href="#1-入门" class="headerlink" title="1.入门"></a>1.入门</h1><p>当这门课完结的时，将会掌握对数据集进行收集，整理，计算和可视化的所需要工具</p>
 <p>创建一个谷歌账户</p>
 <h2 id="BBC记忆测试"><a href="#BBC记忆测试" class="headerlink" title="BBC记忆测试"></a>BBC记忆测试</h2><p>这个例子目前已经被取消了</p>
 <p>可惜，BBC 已经不再提供人脸记忆测试了。</p>
@@ -537,7 +537,7 @@
 <p>你每天走的距离是construct  但如果指定按米测量，它就不是</p>
 <p>从少数样本的研究得出的现象不能说明任何问题：</p>
 <p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210410215056385.png" alt="image-20210410215056385"></p>
-<h1 id="集中趋势"><a href="#集中趋势" class="headerlink" title="集中趋势"></a>集中趋势</h1><h2 id="频率"><a href="#频率" class="headerlink" title="频率"></a>频率</h2><p>绝对数量（频率）和相对频率（百分比）</p>
+<h1 id="2-集中趋势"><a href="#2-集中趋势" class="headerlink" title="2.集中趋势"></a>2.集中趋势</h1><h2 id="频率"><a href="#频率" class="headerlink" title="频率"></a>频率</h2><p>绝对数量（频率）和相对频率（百分比）</p>
 <p>通过整理数据，我们可以清晰地观察变化</p>
 <p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210411184322489.png" alt="image-20210411184322489"></p>
 <h2 id="直方图"><a href="#直方图" class="headerlink" title="直方图"></a>直方图</h2><p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210411184838387.png" alt="image-20210411184838387"></p>
@@ -576,7 +576,7 @@
 <p>平均数和中位数本来一样，但是平均数被稀少的数据拉过去了</p>
 <p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210411211835965.png" alt="image-20210411211835965"></p>
 <p>所以注意自变量和因变量是谁，此处分数为自变量，人数为因变量，直方图的自变量是均匀的</p>
-<h1 id="可变性"><a href="#可变性" class="headerlink" title="可变性"></a>可变性</h1><h2 id="IQR"><a href="#IQR" class="headerlink" title="IQR"></a>IQR</h2><p>值域提供了一个关于分布的概要信息，但是方便会牺牲一些东西</p>
+<h1 id="3-可变性"><a href="#3-可变性" class="headerlink" title="3.可变性"></a>3.可变性</h1><h2 id="IQR"><a href="#IQR" class="headerlink" title="IQR"></a>IQR</h2><p>值域提供了一个关于分布的概要信息，但是方便会牺牲一些东西</p>
 <p>因为它参考的是最极端的数据，受到异常数据影响很大</p>
 <p>习惯上，统计学家忽略较低和较高的各25%！</p>
 <p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210412234924656.png" alt="image-20210412234924656"></p>
@@ -601,12 +601,43 @@
 <p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210413001417511.png" alt="image-20210413001417511"></p>
 <p>方差可以看成那个橙色的，而标准差即为边长。</p>
 <p>标准差是最常用的分布测量方法，小写西格玛</p>
-<p>步骤：平均值-&gt;离均差-&gt;每个偏差的平方值-&gt;方差-&gt;标准差</p>
+<p>步骤：平均值-&gt;离均差（平均差）-&gt;每个偏差的平方值-&gt;方差-&gt;标准差</p>
 <hr>
 <p>思考：</p>
 <p>为何不直接获得平均绝对偏差。</p>
 <p>它具有重要意义，比如正态分布中，68% 和 95%是一个和两个</p>
 <p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210413094303444.png" alt="image-20210413094303444"></p>
+<p>所选样本的标准偏差</p>
+<h3 id="贝塞尔矫正"><a href="#贝塞尔矫正" class="headerlink" title="贝塞尔矫正"></a>贝塞尔矫正</h3><p>通常，抽样中会低估了总体中差异性的数量</p>
+<p>因为抽样往往是总体居于中间的值，用贝塞尔矫正系数，来矫正</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210413100446583.png" alt="image-20210413100446583"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210413101551728.png" alt="image-20210413101551728"></p>
+<p>如果用n，那就是样本的标准差</p>
+<p>如果用n-1，那就是对真实的总体标准差更准确的估算</p>
+<p>具体理论没讲</p>
+<h2 id="习题"><a href="#习题" class="headerlink" title="习题"></a>习题</h2><h1 id="4-归一化"><a href="#4-归一化" class="headerlink" title="4.归一化"></a>4.归一化</h1><p>你已经了解了分析图表的四个值，分布，那么还有什么需要分析的呢？</p>
+<p>象棋：</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210414131710341.png" alt="image-20210414131710341" style="zoom: 50%;" />
+
+<p>第一个不直观，大家不了解，第二个只知道多少人高，不知道有多少人参加</p>
+<h2 id="绝对和相对"><a href="#绝对和相对" class="headerlink" title="绝对和相对"></a>绝对和相对</h2><p>当我们关心的是比例以及和其它元素的关系时，使用相对频率</p>
+<p>相对频率直方图</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210414131958647.png" alt="image-20210414131958647"></p>
+<p>形状几乎一样</p>
+<p>但对于这个图，我们无法说出190-200的比例，这些信息被隐藏起来了</p>
+<p>可以通过减小组距来显示这些信息，看看减小组距会发生怎样的现象</p>
+<p><video class="vjs-tech" id="vjs_video_3_html5_api" tabindex="-1" role="application" crossorigin="anonymous" src="https://s3.cn-north-1.amazonaws.com.cn/u-vid-hd/9ftDJRsfEUI.mp4"></video></p>
+<p>如果再减小时，分布图的形状就会变得松散起来</p>
+<p>问题出现了：</p>
+<p><strong>组距太小，我们会丢失分布图的形状，太大会有信息被隐藏起来</strong></p>
+<p>解决方法是采用连续分布</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210414132617168.png" alt="image-20210414132617168" style="zoom:50%;" />
+
+<p>答案是1</p>
+<h2 id="理论正态分布"><a href="#理论正态分布" class="headerlink" title="理论正态分布"></a>理论正态分布</h2><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210414132718010.png" alt="image-20210414132718010" style="zoom:33%;" />
+
+<p>而众数，中位数，平均数相等</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210414132753312.png" alt="image-20210414132753312"></p>
 
                 
             </div>
@@ -1168,7 +1199,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">106.7k</span>&nbsp;字
+                class="white-color">100k</span>&nbsp;字
             
             
             
