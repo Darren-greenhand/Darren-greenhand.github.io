@@ -402,7 +402,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-04-15
+                    2021-04-16
                 </div>
                 
 
@@ -411,7 +411,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    22 分
+                    31 分
                 </div>
                 
 
@@ -847,8 +847,219 @@
 <p>将会得到电势差，牛逼啊！！</p>
 <img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210415001316165.png" alt="image-20210415001316165" style="zoom:50%;" />
 
-<p>C x [1 1 1 1]` 就是整个零空间，维数为1，这个零空间意味着</p>
+<p>乘以一个常数C得C x [1 1 1 1]` 就是整个零空间，维数为1，这个零空间意味着结点电势都是由一个常数C决定。矩阵的秩为3</p>
+<p>这样的可以任意选取，但是有意义的C在现实生活中十分广泛，比如微积分的常量C。</p>
+<p>那么这里的Ax * C就是物理意义上的电流。</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210415103146096.png" alt="image-20210415103146096" style="zoom: 33%;" />
 
+<p>这个数值是电导，而不是电阻噢</p>
+<p>再研究AT y = 0 <img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210415103013929.png" alt="image-20210415103013929" style="zoom:33%;" /></p>
+<p>显然。。m - r = 2维</p>
+<p>回到原来的。</p>
+<p>这个时候他指出，ATy = 0是👇，也是平衡方程，守恒定律，但是并没有解释为什么。淦。我是这样理解，之前的A每列代表一个节点与各边的关系，Ax = 0 解的是<strong>节点</strong>间的关系，而这个关系体现为电势。这里A转置的列代表一条边，ATy = 0 找的是<strong>边</strong>之间的关系，这个关系体现为电流！</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210415103440461.png" alt="image-20210415103440461" style="zoom:33%;" />
+
+<p>列出以后，AT 对y向量(电流)的组合方程组就是基尔霍夫方程组</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210415103817906.png" alt="image-20210415103817906" style="zoom: 25%;" />
+
+<p>现在回到线性代数，如何求AT的零向量(左零空间)，也就是求两个特定的y</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210415104203613.png" alt="image-20210415104203613" style="zoom:33%;" />
+
+<p>他通过研究每个小回路，由回路不积累电流，一直流通的意义得到线性无关的两个y，而大回路则是这俩小回路得出的y的和</p>
+<p>还要研究行空间（列向量代表边），r = 3 </p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210415104424526.png" alt="image-20210415104424526" style="zoom:33%;" />
+
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210415104453122.png" alt="image-20210415104453122" style="zoom:50%;" />
+
+<p>这些描粗的边与各主列相对应，这一小部分——没有回路。相关性均来自回路，<strong>没有回路的图叫做”树”(tree)</strong></p>
+<p>再根据四个子空间的性质推导：</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210415104754834.png" alt="image-20210415104754834" style="zoom: 25%;" />
+
+<p>因为零向量必为[11111…..]`只有一维，所以r = n -1</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210415104939049.png" alt="image-20210415104939049" style="zoom:50%;" />
+
+<p><strong>结点 - 边长 + 回路数 = 1  这就是欧拉公式，任何图中都具有的一种拓扑性质</strong></p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210415105217496.png" alt="image-20210415105217496" style="zoom:50%;" />
+
+<p>但是这里没考虑外部电源的影响</p>
+<p>如果加入电压源，则加入最左边那一条，电流源则ATy = f</p>
+<p>梳理一下：</p>
+<p>矩阵A是一切的开始，Ax得到电势差，然后再乘以一个物理常量C得CAx = y  </p>
+<p>再用AT乘以y = f 所以 <strong>AT*C*Ax = f</strong></p>
+<p>而AT * A总是对称的，重新理解一遍大概懂了</p>
+<h2 id="13-复习一"><a href="#13-复习一" class="headerlink" title="13.复习一"></a>13.复习一</h2><p>算了。。忍住了跳过的欲望，反正是思修课</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210415112435261.png" alt="image-20210415112435261" style="zoom:50%;" />
+
+<p>因为b和x都是3维的，所以矩阵A = 3x3 ，别忘了格式。</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210415113438382.png" alt="image-20210415113438382" style="zoom: 33%;" />
+
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210415113619522.png" alt="image-20210415113619522" style="zoom:33%;" />
+
+<p>B是 3x4的，N(B) ∈ R4    左矩阵可逆，这里有个结论：可逆矩阵不影响所乘的矩阵的零空间。</p>
+<p>假设 Bx =0  A可逆  那么ABx=0</p>
+<p>这里的秩一看就是2，所以令3，4这俩自由列分别对应的变量赋值为1，另一个为0，算出基。</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210415114513006.png" alt="image-20210415114513006" style="zoom:50%;" />
+
+<p>A和 -A有相同的四个子空间</p>
+<p>如果A 和 B有相同的四个子空间，那么A是B的倍数</p>
+<p>所有满秩方阵都可以。显然是错的</p>
+<p>交换矩阵的两行，行空间和零空间没变，其他的变了</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210415120710838.png" alt="image-20210415120710838" style="zoom:50%;" />
+
+<p>好问题！</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210415120818364.png" alt="image-20210415120818364" style="zoom:50%;" />
+
+<p><strong>行空间和零空间的交集只有零向量！</strong>列空间同理，他们是正交的</p>
+<h2 id="14-正交向量与子空间"><a href="#14-正交向量与子空间" class="headerlink" title="14.正交向量与子空间"></a>14.正交向量与子空间</h2><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210415151139335.png" alt="image-20210415151139335" style="zoom:50%;" />
+
+<p>这个图的性质很明显。两组正交关系</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210415151310235.png" alt="image-20210415151310235" style="zoom:50%;" />
+
+<p>正交的向量：</p>
+<p>这意味着两个向量锤子，夹角为90°</p>
+<p>也是用点乘来定义：👇</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210415151457618.png" alt="image-20210415151457618" style="zoom:33%;" />
+
+<p>得到一个<strong>向量长度的平方 xT * x</strong></p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210415151955142.png" alt="image-20210415151955142" style="zoom: 25%;" />
+
+<p>对于正交的向量  ||x|| 2  +   ||y||2   =  ||x+y||2</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210415152111503.png" alt="image-20210415152111503" style="zoom:33%;" />
+
+<p>如果一个是0向量，另一个就任意了，结果总是0</p>
+<hr>
+<p>推广到正交子空间：</p>
+<p>S和T子空间正交，意味着任何位于两者中的向量与另一者的全部向量正交。</p>
+<p>且它们一定不会拥有某个公共的非零向量</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210415154204699.png" alt="image-20210415154204699" style="zoom:50%;" />
+
+<p><strong>这个等式说明行空间的所有基底都与 x 正交</strong></p>
+<p>很好验证，他们的线性组合，即整个行空间的所有向量，都与x正交。</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210415155952963.png" alt="image-20210415155952963" style="zoom:50%;" />
+
+<p>零空间包含所有垂直行空间的向量</p>
+<hr>
+<p><strong>如何求一个无解的Ax = b 的 “解”</strong></p>
+<p>比如当m &gt; n时大部分情况是无解的，情景引入：</p>
+<p>一个卫星经过，测量位置，你测量了1000次，或为体检者测量频率。</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210415160341547.png" alt="image-20210415160341547" style="zoom:50%;" />
+
+<p>于是Ax = b解不出来了</p>
+<p>去掉坏数据是不现实的，根本没有判断依据。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210415160501205.png" alt="image-20210415160501205"></p>
+<p>这样会得到完整的信息。</p>
+<hr>
+<p><strong>至关重要的矩阵——ATA</strong></p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210415160657584.png" alt="image-20210415160657584" style="zoom:50%;" />
+
+<p>当我们遇到坏矩阵时，可以通过左乘逆来处理</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210415160747586.png" alt="image-20210415160747586" style="zoom:50%;" />
+
+<p>当然，上下两个x是不一样的。</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210415160924180.png" alt="image-20210415160924180" style="zoom: 33%;" />
+
+<p><strong>ATA并不总是可逆的！</strong></p>
+<p>当且仅当A的各列线性无关时，ATA是可逆的，下节课至关重要！</p>
+<h2 id="15-子空间投影"><a href="#15-子空间投影" class="headerlink" title="15.子空间投影"></a>15.子空间投影</h2><p>非常重要，名留青史</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210415211634652.png" alt="image-20210415211634652" style="zoom:50%;" />
+
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210415211808092.png" alt="image-20210415211808092" style="zoom:50%;" />
+
+<p>p是b在a上的投影，e是b和p间的误差，如果引入角度，会导出很复杂的公式，p在a的子空间内，我们要找的就是那个x使得p = xa  关键是垂直a垂直于e</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210415211946824.png" alt="image-20210415211946824" style="zoom:67%;" />
+
+<p>导出两个关键式子：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210415212128075.png" alt="image-20210415212128075" style="zoom:50%;" /><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210415212149485.png" alt="image-20210415212149485" style="zoom:80%;" /></p>
+<p>如果b翻倍，则p翻倍，如果a翻倍无影响，因为分子和分母的倍数抵消了</p>
+<p>这里上升到线代的高度，投影是由矩阵完成的，这个矩阵作用于b得到投影p，设为P👇</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210415212451637.png" alt="image-20210415212451637" style="zoom:50%;" />
+
+<p>现在研究这个矩阵的性质</p>
+<p><strong>列空间的作用：你用任何向量b乘以这个矩阵，总会落到列空间里</strong>，b对列进行线性组合嘛。。当然</p>
+<p>那么Pb = p，落到了这条线上，此处为a那条线，只有一维</p>
+<p>还有这个矩阵是对称的，如果投影两次，第二次没有作用，所以P平方 = P</p>
+<p>请记住x 和 p 和 P的三个公式</p>
+<hr>
+<p>why project？为什么要投影</p>
+<p>因为Ax = b 可能无解，只能求解最接近的。而Ax总是在列空间里，但b不一定在，所以微调b成p</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210415213158197.png" alt="image-20210415213158197" style="zoom:50%;" />
+
+<p>现在研究三维：</p>
+<p>找一个向量b投影到平面的漂亮公式，设平面的一组基为  a1 a2 ，这个平面是[a1 a2] 的列空间</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210415213351976.png" alt="image-20210415213351976" style="zoom:50%;" />
+
+<p>仍然引进e = b-p 垂直于平面</p>
+<p>p = x1a1 + x2a2 写成p = Ax(帽)我们的任务是寻找合适的列组合，让误差e垂直于这个平面，也垂直于俩基</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210415213719636.png" alt="image-20210415213719636" style="zoom:50%;" />
+
+<p>如果换成一个矩阵形式，</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210415213838851.png" alt="image-20210415213838851" style="zoom: 33%;" />
+
+<p>这与之前的二维的方程非常像，因为之前的A是一维的，写成一个a向量而已。</p>
+<p>由方程得出e在左零空间里，然后又由左零和列空间的正交关系得：e垂直于A的列空间</p>
+<p>仍按当时解方程的步骤继续:</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210415214223925.png" alt="image-20210415214223925" style="zoom: 33%;" />
+
+<p>当时的aTa是一个数字，现在是一个n*n的矩阵</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210415214410254.png" alt="image-20210415214410254" style="zoom:33%;" />
+
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210415214607486.png" alt="image-20210415214607486" style="zoom:25%;" />
+
+<p>hahh,好坑啊，不能直接化为 I，如果是可逆方阵，它的列空间为整个n维空间，自然</p>
+<p>经验证，另外两个性质仍然是成立的哈哈。</p>
+<hr>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210415215717027.png" alt="image-20210415215717027" style="zoom:50%;" />
+
+<p>通过最小二乘法拟合一条直线</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210415220041277.png" alt="image-20210415220041277"></p>
+<p>3个点，产生了3处误差，列出矩阵</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210415220211668.png" alt="image-20210415220211668" style="zoom:50%;" />
+
+<p>下节课求解哈哈</p>
+<h2 id="16-投影矩阵和最小二乘"><a href="#16-投影矩阵和最小二乘" class="headerlink" title="16.投影矩阵和最小二乘"></a>16.投影矩阵和最小二乘</h2><p>当b投影到平面A的时候两个极端：</p>
+<ol>
+<li>b如果直接就在列空间里，Pb = b</li>
+<li>b如果垂直于列空间，则Pb = 0</li>
+</ol>
+<p>那么其实Pb的作用是保留第一条的部分，去除第二条的部分（分运动呗。）</p>
+<p>在A列空间里的b可以表现为Ax，这个结论用的很多。。也很好理解</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210416151113284.png" alt="image-20210416151113284" style="zoom: 50%;" />
+
+<p>那么把b投影到列和左零空间（<strong>图一</strong>）：</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210416151251339.png" alt="image-20210416151251339" style="zoom:50%;" />
+
+<p>显然，由性质理解一下，也是容易证明的结论，p和e的平方等于本身</p>
+<p>而只要有了A，就能导出P，就能得出p 和 e</p>
+<hr>
+<p>继续数学问题：</p>
+<p>首先要定义并最小化“误差”的概念，然后用最小二乘（拥有最小平方和的解）</p>
+<p>这里的“误差”是Ax - b，就是e，当然要取其长度。得了解两幅图</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210416152236280.png" alt="image-20210416152236280" style="zoom:33%;" />
+
+<p>这里其实就是线性回归分析，统计学中并不对“离群值”进行处理，因为那很可能是错误的值。</p>
+<p>而线性回归容易受到离群值的影响，当然他仍然很常用。然后用bpe来表示，<strong>图二：</strong></p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210416152609502.png" alt="image-20210416152609502" style="zoom: 33%;" />
+
+<p>p是用来代替b的，它们是列的组合，是最接近的组合。那接下来解一下<strong>ATAx = ATb</strong></p>
+<p>代入A和b，都是已知的，得到x(此处为[C D])</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210416153511992.png" alt="image-20210416153511992" style="zoom:50%;" />
+
+<p>然后就能写出新的方程最优直线y，由此解出p和e来，<strong>而且对应的p+e = b</strong></p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210416153909050.png" alt="image-20210416153909050" style="zoom:33%;" />
+
+<p>当然e垂直于整个列空间，包括p在内，请记住图一和图二，C和D在图二代表那条直线，而在第一张图却并没有出现，<strong>但他们的线性组合就是p</strong></p>
+<p>这样就完成了最小二乘法</p>
+<hr>
+<p>14课末尾的疑问：</p>
+<p>当且仅当A的各列线性无关时，则ATA是可逆的，这是最小二乘法成立的大前提。</p>
+<p>假设ATAx = 0 并且ATA是可逆的，可以推出x只有零解。这里有个我们学的诡异技巧。。</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210416155411342.png" alt="image-20210416155411342" style="zoom:50%;" />
+
+<p>这就证明了Ax = 0，又A列向量无关，所以x所在的零空间只有零向量，所以ATA可逆。</p>
+<hr>
+<p>提出一种情况：</p>
+<p>互相垂直的向量必然线性无关，排除0向量，引入术语：正交，标准正交向量组</p>
+<h2 id="17-正交矩阵和Gram-Schmidt正交化"><a href="#17-正交矩阵和Gram-Schmidt正交化" class="headerlink" title="17.正交矩阵和Gram-Schmidt正交化"></a>17.正交矩阵和Gram-Schmidt正交化</h2>
                 
             </div>
             <hr/>
@@ -1083,49 +1294,36 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2021/04/12/linear-algebra/">
+                <a href="/2021/04/15/excel/">
                     <div class="card-image">
                         
-                        <img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/mathematics-1044091_1920.jpg" class="responsive-img" alt="linear algebra">
                         
-                        <span class="card-title">linear algebra</span>
+                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="excel">
+                        
+                        <span class="card-title">excel</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            重学线代，才能明白它的魅力，也才明白MIT讲的有多清楚QWQ
+                            
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-04-12
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-04-15
+                        </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/math/" class="post-category">
-                                    math
-                                </a>
-                            
+                            <i class="fas fa-user fa-fw"></i>
+                            Darren
                             
                         </span>
                     </div>
-                </div>
-
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/%E7%BA%BF%E4%BB%A3/">
-                        <span class="chip bg-color">线代</span>
-                    </a>
-                    
                 </div>
                 
             </div>
@@ -1411,7 +1609,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">100k</span>&nbsp;字
+                class="white-color">104.8k</span>&nbsp;字
             
             
             
