@@ -4,7 +4,7 @@
 
 <head>
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
-    <meta name="keywords" content="git, 浮华一隅">
+    <meta name="keywords" content="第二次数模, 浮华一隅">
     <meta name="description" content="willing to enter the field of god">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>git | 浮华一隅</title>
+    <title>第二次数模 | 浮华一隅</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -249,12 +249,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/background2.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/cube-2415399_1920.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">git</h1>
+                    <h1 class="description center-align post-title">第二次数模</h1>
                 </div>
             </div>
         </div>
@@ -368,9 +368,13 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E6%95%B0%E6%A8%A1/">
+                                <span class="chip bg-color">数模</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
@@ -378,8 +382,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/others/" class="post-category">
-                                others
+                            <a href="/categories/log/" class="post-category">
+                                log
                             </a>
                         
                     </div>
@@ -391,14 +395,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-03-06
+                    2021-04-18
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-04-06
+                    2021-04-18
                 </div>
                 
 
@@ -407,7 +411,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    7 分
                 </div>
                 
 
@@ -430,62 +434,23 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>git init</p>
-<p>git status</p>
-<p>git add file</p>
-<p>git commit -m “”</p>
-<p>git log –oneline</p>
-<p>git reflog</p>
-<p>git reset –hard HEAD^(版本号)</p>
-<p>HEAD^^  HEAD~100</p>
-<p>git diff HEAD – file</p>
-<p>查看工作区和版本库不同</p>
-<p>命令<code>git checkout -- readme.txt</code>意思就是，把<code>readme.txt</code>文件在工作区的修改全部撤销，这里有两种情况：</p>
-<p>一种是<code>readme.txt</code>自修改后还没有被放到暂存区，现在，撤销修改就回到和版本库一模一样的状态；</p>
-<p>一种是<code>readme.txt</code>已经添加到暂存区后，又作了修改，现在，撤销修改就回到添加到暂存区后的状态。</p>
-<p>checkout  -&gt; restore</p>
-<p><code>git checkout</code>其实是用版本库里的版本替换工作区的版本，无论工作区是修改还是删除，都可以“一键还原”</p>
-<p><code>git reset HEAD &lt;file&gt;</code>可以把暂存区的修改撤销掉（unstage）</p>
-<p> `git reset HEAD -&gt; git restore –staged</p>
-<p>场景1：当你改乱了工作区某个文件的内容，想直接丢弃工作区的修改时，用命令<code>git checkout -- file</code>。</p>
-<p>场景2：当你不但改乱了工作区某个文件的内容，还添加到了暂存区时，想丢弃修改，分两步，第一步用命令<code>git reset HEAD &lt;file&gt;</code>，就回到了场景1，第二步按场景1操作。</p>
-<p>场景3：已经提交了不合适的修改到版本库时，想要撤销本次提交，参考<a target="_blank" rel="noopener" href="https://www.liaoxuefeng.com/wiki/896043488029600/897013573512192">版本回退</a>一节，不过前提是没有推送到远程库。</p>
-<p>远程</p>
-<p>git remote -v</p>
-<p>git remote remove origin</p>
-<p>git remote add origin <a href="mailto:&#103;&#105;&#x74;&#64;&#x67;&#105;&#x74;&#104;&#x75;&#x62;&#46;&#99;&#111;&#109;">&#103;&#105;&#x74;&#64;&#x67;&#105;&#x74;&#104;&#x75;&#x62;&#46;&#99;&#111;&#109;</a>:git_username/repository_name.git</p>
-<p>git pull origin master –allow-unrelated-histories</p>
-<pre class="line-numbers language-none"><code class="language-none">git push -u origin master<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>git push origin master</p>
-<p>git push -u origin main -f 强制push！！</p>
-<p>git clone url</p>
-<pre class="line-numbers language-none"><code class="language-none">&#x2F;&#x2F;创建 &lt;name&gt; 的分支并切换
-git switch -c &lt;name&gt;
-
-&#x2F;&#x2F;创建
-git branch &lt;name&gt;
-
-&#x2F;&#x2F;切换到&lt;name&gt;分支
-git checkout &lt;name&gt;
-git switch &lt;name&gt;
-
-&#x2F;&#x2F;查看分支树
-git branch 
-
-&#x2F;&#x2F;删除分支
-git branch -d &lt;name&gt;
-
-&#x2F;&#x2F;合并分支 假设这里存在 master ， dev 分支
-  &#x2F;&#x2F; 1 切换到要保留的分支——这里是master
-  git checkout master
-  &#x2F;&#x2F; 2 合并掉分支dev
-  git merge dev<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-
-
-<p><code>git log --graph</code>命令可以看到分支合并图</p>
-
+                <h1 id="大一下新生赛"><a href="#大一下新生赛" class="headerlink" title="大一下新生赛"></a>大一下新生赛</h1><h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><p>​        4.16-4.18日，数模新生赛开赛，这是我参加的第二次数模，也是某博，某锐俩巨佬参加的第一次数模。这次数模过程和理想过程仍有较大差距，在第二天晚上，暂时起不到作用（可能有作用但是不知道。。），我开始在两位辛勤的巨佬面前写起了日记。</p>
+<h2 id="赛前准备"><a href="#赛前准备" class="headerlink" title="赛前准备"></a>赛前准备</h2><p>​        这次赛前准备。。。非常不理想，主要是临时起意打数模，并且沉迷学习线代和机器学习前置数学知识等，再加上蓝桥杯和数据结构作业带来的压力，导致准备非常不充分，在赛前一晚上疯狂准备，恶补了数模的一些概念，准备了一些画图软件以供使用。并没有提前学习其他的数学建模知识。</p>
+<h2 id="开赛"><a href="#开赛" class="headerlink" title="开赛"></a>开赛</h2><h3 id="第一天"><a href="#第一天" class="headerlink" title="第一天"></a>第一天</h3><p>​        被某博骗去考了个假的蓝桥杯，明明是星期天才考淦，但是因此翘掉了早上的体育课嘿嘿，因祸得福。。。吧，早上花了3个小时分析题目，但是这里太急了，发生了 <strong>第一个错误：没有逐字逐句的分析题目</strong>，数模题目中，由于许多概念都不熟悉，一不小心就离题千里，就像本次数模发生了好几次纠正理解偏差，一定要真正读懂题意！！</p>
+<p>​        博找了个超好的地方，物质条件远胜酒店，而且各种条件超级方便，这为后面三天的爆肝和肆意讨论提供了非常棒的场所支持，果然。。生活中总是藏着一些不为人见的好地方哈哈。。。</p>
+<p>​        见面后，三个人很快进入状态，开始各抒己见，但是都得出了大致一致的结论，而且受我上午找的资料带来的影响很深（我的锅嘤嘤嘤），一开始都跑偏了，而且这里团队也出现了一个问题，就是<strong>揪住了某个点</strong>，比如那个宕机是啥不放，这样子大概浪费了30分钟，所幸。。。吃过上次的亏，即使止住了，嘿嘿还好队友很棒，没有上次那么咳咳。。</p>
+<p>​        然后我们从头开始梳理题意，一开始就发现一堆概念不会。。啥负载啊，什么什么的，这个时候其实有一个小错误：就是<strong>不了解数模规则</strong>，开始准备随意设变量，这就跟我上次一样哈哈:joy:，这次还好我有一点点经验，不然会浪费很多时间，这确实提醒，一定要熟悉比赛的规则，有方向的用力！还有讨论过程中好几次陷入某个牛角尖，偏离主线，不过这个问题马上就被众人杜绝了，这就是大佬的学习能力嘛，可怕:man_shrugging:，还好是队友哈哈，下次打数模肯定不会这么被动了。</p>
+<p>​        开始我们关注点放在云计算上，找了一堆“调度算法”，静态的，动态的，想着是找一个能够满足约束条件的现实模型，然后对他选择一个算法，比如启发式算法啊，巴拉巴拉的，结果弄了半天，甚至拉上了xxx，分析头疼到晚上八点，然后。。。我从头看题的时候tm的灵光一现。。这个第一句话。。。“并行计算”，tm的是个这么大的方向！所以，<strong>一定要细读题目，确保真正理解题意</strong>，我全国一卷130的语文，阅读题从来都是接近满分，就这还被坑了好久，而且后面第二句也是个被忽略的点好像。切记啊！！！</p>
+<p>​        晚上，我犯了个打错。。就是“偷懒”，我感觉三个人一起想有些浪费，而队伍里没有会写论文的人！！！然后我当时挺慌，就马上临时抱佛脚，开始找了个b站好点的教程开始啃格式和写作要求，虽然读完发现真的很重要，但是这本来是可以避免的，这也导致我错过了他们的思路，后来的分析从3个人变成了2个人，我只能提供技术支持，还有准备本不应该在建模时准备的模板啥的。。第一天比正常效率低很多，一方面是因为上午下午都有一些事情，如果是正规比赛，<strong>绝对要提前做好准备</strong>，不过我们不至于请假哈哈QWQ。</p>
+<h3 id="第二天"><a href="#第二天" class="headerlink" title="第二天"></a>第二天</h3><p>​        八点起床嘿嘿嘿，果然还是没有太大的压力，聚在一起以后大家又开始继续一些错误的思路，但是少了一位神秘大佬的帮助QWQ，我仍是尽量借助自己辛勤经营了大半年的信息搜索系统，尽量帮大佬们准备资料，然后就是努力啃教程，这部分主要是他们俩讨论，研究，下午的时候。。。大家心态都炸了，我因为连续看了6，7小时教程好恶心，他们也是长期的高速思考，而且中途不断推翻，假设新模型，这个他们是真辛苦，我大概受不了:cry:。</p>
+<p>​        然后下午大概四点有一段时间挺浮躁的，还好不久，而且有了一个突破，于是还是熬过去了，五点就赶紧去吃饭缓解一下，干饭的时候交流了一下，其实我们仨可以组一个长期队伍，队伍里仨，应该说是各有特色，而且智商都不戳，理解能力和沟通能力都挺好（外联每月之星带带我吧QWQ）。</p>
+<p>​        <em>我应该算是那种不喜欢钻研，喜欢寻找各种各样方便的工具（有兴趣找我拿噢，各种功能的小软件，小网站，还有很多领域的最佳学习路线我都有。。。吧），而且了解很多各个领域，但是都是一知半解，而且英语还不戳，高中英语挺好，四级660，语文也行，不如以后向写论文和制作图片，爬虫收集数据，辅助方向发展。。但是不能拉下基本知识学习</em></p>
+<p>​        <em>锐佬很强，他的电脑让我一言难尽。。。只能说基本配废了（和我同款），不过他啃问题是真的强，看论文也看得下去，不像我。。神马鬼论文，看十几篇就快死了（每篇都是浏览大意然后甩给队友嘿嘿），这样的特点是真的强，不过锐佬感觉比较适合钻研某个问题，而不是总结方向。</em></p>
+<p>​        <em>博佬也很强，感觉是我们俩的综合版嘛，电脑还不戳，好歹不会像大部分的电脑一样被我嫌弃。。。智商也很高，能和锐佬一起讨论，并提出很多建设性的意见，流弊！！！而且会的小工具啥的也挺多的，不戳不戳，以后不愁找不到女朋友。。。啊不是偏题了。</em></p>
+<p>​        <em>个人感觉以后分工可以是：三个人读题，然后一起弄清楚概念，我尽量帮助他们提供资料和工具，图片上的支援（跑腿买奶茶也行O(∩_∩)O），然后三个人开始建模，先确定正确的方向，然后开始现场学习相关理论，（主要靠锐佬和博佬），然后建模！这个还得学公式的使用，不过我买了Axmath永久的，到时候看看怎么分任务，最后开始写论文，如果是美赛，我可以直接查谷歌翻译敲，国赛我就尽量在他们肝的时候写一些内容比如问题分析，重述啥的。大概设想吧只是。。。</em></p>
+<p>​        周二晚上，仍然讨论到九点才开始写论文，这时我也基本了解了工具和写法，并写了个总结快速给他们介绍了一下，然后写出了问题重述和大致模板，他俩也肝出了（好苦啊。。我看的都苦，一点一点的挤出了）问题分析，中途还出了几个让人心态爆炸的bug（我记得有一个是好像以为从头理解错了啥的。。搞得我整个人都佛了，好歹后来好像⚪回来了）。</p>
+<p>​        明早蓝桥杯，但是估计打不了多久，也没啥准备，数模最难的论文主体，那些公式和图片！！表格啥的。。哎，希望这个能有个稍微不错的结果，不要太打击人吧！锐哥好像还在肝，真是辛苦了。:vulcan_salute:</p>
+<h3 id="第三天"><a href="#第三天" class="headerlink" title="第三天"></a>第三天</h3>
                 
             </div>
             <hr/>
@@ -511,7 +476,7 @@ git branch -d &lt;name&gt;
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2021/03/06/git/">http://example.com/2021/03/06/git/</a>
+                    <a href="http://example.com/2021/04/18/%E7%AC%AC%E4%BA%8C%E6%AC%A1%E6%95%B0%E6%A8%A1/">http://example.com/2021/04/18/%E7%AC%AC%E4%BA%8C%E6%AC%A1%E6%95%B0%E6%A8%A1/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -548,7 +513,11 @@ git branch -d &lt;name&gt;
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/%E6%95%B0%E6%A8%A1/">
+                                    <span class="chip bg-color">数模</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -716,45 +685,47 @@ git branch -d &lt;name&gt;
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2021/03/08/python/">
+                <a href="/2021/04/18/%E7%AC%AC%E4%BA%8C%E6%AC%A1%E6%95%B0%E6%A8%A1/">
                     <div class="card-image">
                         
-                        <img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/69297688_p0.jpg" class="responsive-img" alt="python">
+                        <img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/cube-2415399_1920.jpg" class="responsive-img" alt="第二次数模">
                         
-                        <span class="card-title">python</span>
+                        <span class="card-title">第二次数模</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            数据分析和机器学习的必备语言。。
+                            第二次数模的记录吧！
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-03-08
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-04-18
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/python/" class="post-category">
-                                    python
+                            <a href="/categories/log/" class="post-category">
+                                    log
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/python/">
-                        <span class="chip bg-color">python</span>
+                    <a href="/tags/%E6%95%B0%E6%A8%A1/">
+                        <span class="chip bg-color">数模</span>
                     </a>
                     
                 </div>
@@ -765,40 +736,47 @@ git branch -d &lt;name&gt;
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/03/06/git/">
+                <a href="/2021/04/15/%E6%95%B0%E6%A8%A1%E8%AE%BA%E6%96%87/">
                     <div class="card-image">
                         
-                        <img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/background2.jpg" class="responsive-img" alt="git">
+                        <img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/writing-1209121_1920.jpg" class="responsive-img" alt="数模论文格式和内容">
                         
-                        <span class="card-title">git</span>
+                        <span class="card-title">数模论文格式和内容</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            这是大概的git命令吧，感觉应该不止这么点，还不如直接看看廖雪峰的
+                            第二次数模有好队友，但是忘了学咋写论文了。。。赶紧补一补
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-03-06
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-04-15
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/others/" class="post-category">
-                                    others
+                            <a href="/categories/%E6%95%B0%E6%A8%A1/" class="post-category">
+                                    数模
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
-
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E6%95%B0%E6%A8%A1%E8%AE%BA%E6%96%87/">
+                        <span class="chip bg-color">数模论文</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>
