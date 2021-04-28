@@ -4,7 +4,7 @@
 
 <head>
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
-    <meta name="keywords" content="第二次数模, 浮华一隅">
+    <meta name="keywords" content="tensorflow-note, 浮华一隅">
     <meta name="description" content="willing to enter the field of god">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>第二次数模 | 浮华一隅</title>
+    <title>tensorflow-note | 浮华一隅</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -236,7 +236,7 @@
 <script src="/libs/cryptojs/crypto-js.min.js"></script>
 <script>
     (function() {
-        let pwd = '64aa86446ff932d48f4d4c8578644d8b15df3583fed45b86bebc4fcb37e29f55';
+        let pwd = '';
         if (pwd && pwd.length > 0) {
             if (pwd !== CryptoJS.SHA256(prompt('密码是简单的8位数字（我的宿舍号是？）')).toString(CryptoJS.enc.Hex)) {
                 alert('加载内容....');
@@ -249,12 +249,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/cube-2415399_1920.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210426224302.png')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">第二次数模</h1>
+                    <h1 class="description center-align post-title">tensorflow-note</h1>
                 </div>
             </div>
         </div>
@@ -368,13 +368,9 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                    <div class="article-tag">
-                        
-                            <a href="/tags/%E6%95%B0%E6%A8%A1/">
-                                <span class="chip bg-color">数模</span>
-                            </a>
-                        
-                    </div>
+                          <div class="article-tag">
+                            <span class="chip bg-color">无标签</span>
+                          </div>
                     
                 </div>
                 <div class="col s5 right-align">
@@ -382,8 +378,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/log/" class="post-category">
-                                log
+                            <a href="/categories/ML/" class="post-category">
+                                ML
                             </a>
                         
                     </div>
@@ -395,14 +391,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-04-18
+                    2021-04-26
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-04-18
+                    2021-04-27
                 </div>
                 
 
@@ -411,7 +407,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    9 分
+                    3 分
                 </div>
                 
 
@@ -434,28 +430,126 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="大一下新生赛"><a href="#大一下新生赛" class="headerlink" title="大一下新生赛"></a>大一下新生赛</h1><h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><p>​        4.16-4.18日，数模新生赛开赛，这是我参加的第二次数模，也是某博，某锐俩巨佬参加的第一次数模。这次数模过程和理想过程仍有较大差距，在第二天晚上，暂时起不到作用（可能有作用但是不知道。。），我开始在两位辛勤的巨佬面前写起了日记。</p>
-<h2 id="赛前准备"><a href="#赛前准备" class="headerlink" title="赛前准备"></a>赛前准备</h2><p>​        这次赛前准备。。。非常不理想，主要是临时起意打数模，并且沉迷学习线代和机器学习前置数学知识等，再加上蓝桥杯和数据结构作业带来的压力，导致准备非常不充分，在赛前一晚上疯狂准备，恶补了数模的一些概念，准备了一些画图软件以供使用。并没有提前学习其他的数学建模知识。</p>
-<h2 id="开赛"><a href="#开赛" class="headerlink" title="开赛"></a>开赛</h2><h3 id="第一天"><a href="#第一天" class="headerlink" title="第一天"></a>第一天</h3><p>​        被某博骗去考了个假的蓝桥杯，明明是星期天才考淦，但是因此翘掉了早上的体育课嘿嘿，因祸得福。。。吧，早上花了3个小时分析题目，但是这里太急了，发生了 <strong>第一个错误：没有逐字逐句的分析题目</strong>，数模题目中，由于许多概念都不熟悉，一不小心就离题千里，就像本次数模发生了好几次纠正理解偏差，一定要真正读懂题意！！</p>
-<p>​        博找了个超好的地方，物质条件远胜酒店，而且各种条件超级方便，这为后面三天的爆肝和肆意讨论提供了非常棒的场所支持，果然。。生活中总是藏着一些不为人见的好地方哈哈。。。</p>
-<p>​        见面后，三个人很快进入状态，开始各抒己见，但是都得出了大致一致的结论，而且受我上午找的资料带来的影响很深（我的锅嘤嘤嘤），一开始都跑偏了，而且这里团队也出现了一个问题，就是<strong>揪住了某个点</strong>，比如那个宕机是啥不放，这样子大概浪费了30分钟，所幸。。。吃过上次的亏，即使止住了，嘿嘿还好队友很棒，没有上次那么咳咳。。</p>
-<p>​        然后我们从头开始梳理题意，一开始就发现一堆概念不会。。啥负载啊，什么什么的，这个时候其实有一个小错误：就是<strong>不了解数模规则</strong>，开始准备随意设变量，这就跟我上次一样哈哈:joy:，这次还好我有一点点经验，不然会浪费很多时间，这确实提醒，一定要熟悉比赛的规则，有方向的用力！还有讨论过程中好几次陷入某个牛角尖，偏离主线，不过这个问题马上就被众人杜绝了，这就是大佬的学习能力嘛，可怕:man_shrugging:，还好是队友哈哈，下次打数模肯定不会这么被动了。</p>
-<p>​        开始我们关注点放在云计算上，找了一堆“调度算法”，静态的，动态的，想着是找一个能够满足约束条件的现实模型，然后对他选择一个算法，比如启发式算法啊，巴拉巴拉的，结果弄了半天，甚至拉上了xxx，分析头疼到晚上八点，然后。。。我从头看题的时候tm的灵光一现。。这个第一句话。。。“并行计算”，tm的是个这么大的方向！所以，<strong>一定要细读题目，确保真正理解题意</strong>，我全国一卷130的语文，阅读题从来都是接近满分，就这还被坑了好久，而且后面第二句也是个被忽略的点好像。切记啊！！！</p>
-<p>​        晚上，我犯了个打错。。就是“偷懒”，我感觉三个人一起想有些浪费，而队伍里没有会写论文的人！！！然后我当时挺慌，就马上临时抱佛脚，开始找了个b站好点的教程开始啃格式和写作要求，虽然读完发现真的很重要，但是这本来是可以避免的，这也导致我错过了他们的思路，后来的分析从3个人变成了2个人，我只能提供技术支持，还有准备本不应该在建模时准备的模板啥的。。第一天比正常效率低很多，一方面是因为上午下午都有一些事情，如果是正规比赛，<strong>绝对要提前做好准备</strong>，不过我们不至于请假哈哈QWQ。</p>
-<h3 id="第二天"><a href="#第二天" class="headerlink" title="第二天"></a>第二天</h3><p>​        八点起床嘿嘿嘿，果然还是没有太大的压力，聚在一起以后大家又开始继续一些错误的思路，但是少了一位神秘大佬的帮助QWQ，我仍是尽量借助自己辛勤经营了大半年的信息搜索系统，尽量帮大佬们准备资料，然后就是努力啃教程，这部分主要是他们俩讨论，研究，下午的时候。。。大家心态都炸了，我因为连续看了6，7小时教程好恶心，他们也是长期的高速思考，而且中途不断推翻，假设新模型，这个他们是真辛苦，我大概受不了:cry:。</p>
-<p>​        然后下午大概四点有一段时间挺浮躁的，还好不久，而且有了一个突破，于是还是熬过去了，五点就赶紧去吃饭缓解一下，干饭的时候交流了一下，其实我们仨可以组一个长期队伍，队伍里仨，应该说是各有特色，而且智商都不戳，理解能力和沟通能力都挺好（外联每月之星带带我吧QWQ）。</p>
-<p>​        <em>我应该算是那种不喜欢钻研，喜欢寻找各种各样方便的工具（有兴趣找我拿噢，各种功能的小软件，小网站，还有很多领域的最佳学习路线我都有。。。吧），而且了解很多各个领域，但是都是一知半解，而且英语还不戳，高中英语挺好，四级660，语文也行，不如以后向写论文和制作图片，爬虫收集数据，辅助方向发展。。但是不能拉下基本知识学习</em></p>
-<p>​        <em>锐佬很强，他的电脑让我一言难尽。。。只能说基本配废了（和我同款），不过他啃问题是真的强，看论文也看得下去，不像我。。神马鬼论文，看十几篇就快死了（每篇都是浏览大意然后甩给队友嘿嘿），这样的特点是真的强，不过锐佬感觉比较适合钻研某个问题，而不是总结方向。</em></p>
-<p>​        <em>博佬也很强，感觉是我们俩的综合版嘛，电脑还不戳，好歹不会像大部分的电脑一样被我嫌弃。。。智商也很高，能和锐佬一起讨论，并提出很多建设性的意见，流弊！！！而且会的小工具啥的也挺多的，不戳不戳，以后不愁找不到女朋友。。。啊不是偏题了。</em></p>
-<p>​        <em>个人感觉以后分工可以是：三个人读题，然后一起弄清楚概念，我尽量帮助他们提供资料和工具，图片上的支援（跑腿买奶茶也行O(∩_∩)O），然后三个人开始建模，先确定正确的方向，然后开始现场学习相关理论，（主要靠锐佬和博佬），然后建模！这个还得学公式的使用，不过我买了Axmath永久的，到时候看看怎么分任务，最后开始写论文，如果是美赛，我可以直接查谷歌翻译敲，国赛我就尽量在他们肝的时候写一些内容比如问题分析，重述啥的。大概设想吧只是。。。</em></p>
-<p>​        周二晚上，仍然讨论到九点才开始写论文，这时我也基本了解了工具和写法，并写了个总结快速给他们介绍了一下，然后写出了问题重述和大致模板，他俩也肝出了（好苦啊。。我看的都苦，一点一点的挤出了）问题分析，中途还出了几个让人心态爆炸的bug（我记得有一个是好像以为从头理解错了啥的。。搞得我整个人都佛了，好歹后来好像⚪回来了）。</p>
-<p>​        明早蓝桥杯，但是估计打不了多久，也没啥准备，数模最难的论文主体，那些公式和图片！！表格啥的。。哎，希望这个能有个稍微不错的结果，不要太打击人吧！锐哥好像还在肝，真是辛苦了。:vulcan_salute:</p>
-<h3 id="第三天"><a href="#第三天" class="headerlink" title="第三天"></a>第三天</h3><p>​        打完了！！！！！！！！没想到啊，蓝桥杯我和x博俩菜笔十一点就交卷了哈哈，都只写了三道题，然后赶紧回来打数模，真的，要是打到一点，这次数模绝对凉凉，从上午开始逐步写论文，做图片，调格式，还有棒队友们打公式。。。中午草草的吃了一餐饭，回来连觉都没睡，将符号和公式慢慢实现成了论文，不过写的时候还是出现了很多的问题，比如本来负责写论文的我，由于听不懂他们在讲什么。。。好多地方没法写，只能帮忙做做语言上的修改和格式上的美化。。。呜呜呜我是废物QWQ，还有就是效率，锐哥写公式效率有亿点慢，对电脑的操作也不行。。。或者说是不是他把电脑配炸了。。但是即使这样，一切还是比较顺利的进行着，当然，中途比较混乱，有时候一会写这个，一会写那个，这里有个问题就是他俩，甚至我都对论文内容不是很熟悉，有好几次都是写错位置，还需要改改放到别的地方啥的，这是个新手问题吧哈哈哈QWQ。</p>
-<p>​        最后心态还是很炸的，因为只有不到一个小时写摘要，还有一些其他的补充内容，比如问题一的结论图都是临时x博赶紧随便编的，我当时心态还炸了哈哈，以后这些工具还是得多学学，别再坑队友了，而且搞到最后才发现连第二问都没做，我把第一问一部分抽取过来，加上某锐临时写的一长段瞎编的，凑成了奇奇怪怪的第二个问题哈哈哈哈哈。</p>
-<p>​        最后十分钟！汇总成一篇摘要，调好格式，导出PDF，在27分的时候提交了，提交了以后发现要压缩，又赶回来压缩了重新交了一份，交完后整个人都要飞了，博博放了植物大战僵尸背景曲哈哈，我们仨光在原地兴奋就兴奋了20分钟，有好队友真的爽啊！虽然我们这次过程比起正规比赛还差的很远，但是那种氛围是真的喜欢，这就是好队友加成吧！</p>
-<p>​        晚上第一次去了传说中的海底捞，真的惊艳到了！服务员小哥哥小姐姐超级超级好，还有各种想不到的服务！真是上帝般的体验，我们仨说了几百句谢谢哈哈，有些不习惯这么好的服务，而且菜也超级好吃，总的来说真的体验炒鸡炒鸡棒，让本就好的心情锦上添花！</p>
-<h2 id="结尾"><a href="#结尾" class="headerlink" title="结尾"></a>结尾</h2><p>谢谢两位大佬这仨天的陪伴，真的开心！</p>
-<p>希望下次打数模的时候我们每个人都有了极大的进步！下次就是真正的比赛了！</p>
+                <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p><img src="C:/Users/Lenovo/Desktop/%25E4%25BA%25BA%25E5%25B7%25A5%25E6%2599%25BA%25E8%2583%25BD%25E5%25AE%259E%25E8%25B7%25B5%25E5%2585%25A5%25E9%2597%25A8Tensorflow2.0-Day1%25E5%25BC%2595%25E5%2585%25A5_%25E4%25B8%258B%25E9%259B%25A8%25E5%25A4%25A9%25E7%259A%2584%25E5%25B0%258F%25E9%25B1%25BC%25E7%259A%2584%25E5%258D%259A%25E5%25AE%25A2-CSDN%25E5%258D%259A%25E5%25AE%25A2_files/20200610171914530.png" alt="20200610171914530"></p>
+<h2 id="人工智能三学派"><a href="#人工智能三学派" class="headerlink" title="人工智能三学派"></a>人工智能三学派</h2><p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210426224228.png" alt="image-20210426224227762"></p>
+<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/20210426222525.png" alt="image-20210426222525560"></p>
+<p>那么仿制过程就像这样：</p>
+<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/20210426222631.png" alt="image-20210426222631384"></p>
+<h2 id="鸢尾花1"><a href="#鸢尾花1" class="headerlink" title="鸢尾花1"></a>鸢尾花1</h2><p>专家系统是理性的。（if case。）</p>
+<p>但是有些花农直接可以看出种类，因为他们见了太多，而且经验越丰富，识别准确率越高</p>
+<p>这是一种感性的直觉，是这门课介绍的神经网络方法</p>
+<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/20210426223114.png" alt="image-20210426223114751"></p>
+<hr>
+<p>具体实现</p>
+<p>MP模型，每个输入特征乘以线上的权重，再通过一个非线性函数输出，简化是去掉非线性函数</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210426224043.png" alt="image-20210426224042748"></p>
+<p>每个输出节点都链接了所有的输入关系，称为全连接网络</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210426224129.png" alt="image-20210426224129109"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210426224149.png" alt="image-20210426224149049"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210426224534.png" alt="image-20210426224533641"></p>
+<p>看一个例子</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210426225106.png" alt="image-20210426225106282"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210426225453.png" alt="image-20210426225453483"></p>
+<p>好神奇！原来这么简单</p>
+<h2 id="TF2"><a href="#TF2" class="headerlink" title="TF2"></a>TF2</h2><p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210426225602.png" alt="image-20210426225602306"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210426225705.png" alt="image-20210426225704756"></p>
+<p>数据类型：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210426225810.png" alt="image-20210426225810424"></p>
+<h3 id="创建张量"><a href="#创建张量" class="headerlink" title="创建张量"></a>创建张量</h3><p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210426230148.png" alt="image-20210426230148638"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210426230237.png" alt="image-20210426230237443"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210426230355.png" alt="image-20210426230355041"></p>
+<p>比如这个a的shape：第一个维度有俩元素，第二个维度有仨元素</p>
+<p>正态：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210426230717.png" alt="image-20210426230717430"></p>
+<p>均匀：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210426230844.png" alt="image-20210426230843745"></p>
+<h3 id="常用函数"><a href="#常用函数" class="headerlink" title="常用函数"></a>常用函数</h3><p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210426231026.png" alt="image-20210426231025877"></p>
+<p>axis = n 则表示处理n+1维的</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210426231330.png" alt="image-20210426231330288"></p>
+<p>所以tensorflow里的向量是列向量！</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210426231940.png" alt="image-20210426231939729"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210426232546.png" alt="image-20210426232546124"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210426232612.png" alt="image-20210426232612177"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210426232638.png" alt="image-20210426232638470"></p>
+<p><strong>配对特征和标签：</strong></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210426232859.png" alt="image-20210426232859750"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210426233027.png" alt="image-20210426233027400"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210426233321.png" alt="image-20210426233321529"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210426233504.png" alt="image-20210426233504518"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210426233858.png" alt="image-20210426233858363"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210426234107.png" alt="image-20210426234106875"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210426234243.png" alt="image-20210426234242794"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210426234353.png" alt="image-20210426234352747"></p>
+<p> 归一化：１）把数据变成(０，１)或者（1,1）之间的小数。主要是为了数据处理方便提出来的，把数据映射到0～1范围之内处理，更加便捷快速。２）把有量纲表达式变成无量纲表达式，便于不同单位或量级的指标能够进行比较和加权。归一化是一种简化计算的方式，即将有量纲的表达式，经过变换，化为无量纲的表达式，成为纯量。归一化/标准化实质是一种线性变换，线性变换有很多良好的性质，这些性质决定了对数据改变后不会造成“失效”，反而能提高数据的表现，这些性质是归一化/标准化的前提。比如有一个很重要的性质：线性变换不会改变原始数据的数值排序。</p>
+<p><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/95a8f035c86c">大佬链接</a></p>
+<p>参数自更新</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210426234507.png" alt="image-20210426234507351"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210426234621.png" alt="image-20210426234621653"></p>
+<h2 id="鸢尾花2"><a href="#鸢尾花2" class="headerlink" title="鸢尾花2"></a>鸢尾花2</h2><h3 id="数据读入"><a href="#数据读入" class="headerlink" title="数据读入"></a>数据读入</h3><p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210426235316.png" alt="image-20210426235316370"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210426235340.png" alt="image-20210426235340183"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210426235530.png" alt="image-20210426235530705"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210427092516.png" alt="image-20210427092508918"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210427093046.png" alt="image-20210427093045917"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210427093447.png" alt="image-20210427093446319"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210427093705.png" alt="image-20210427093704998"></p>
+<h1 id="预备知识"><a href="#预备知识" class="headerlink" title="预备知识"></a>预备知识</h1><p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210427094602.png" alt="image-20210427094601274"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210427095155.png" alt="image-20210427095154111"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210427095313.png" alt="image-20210427095312159"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210427095555.png" alt="image-20210427095554858"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210427095925.png" alt="image-20210427095924361"></p>
+<h2 id="复杂度学习率"><a href="#复杂度学习率" class="headerlink" title="复杂度学习率"></a>复杂度学习率</h2><p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210427132521.png" alt="image-20210427132521189"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210427132837.png" alt="image-20210427132837285"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210427132843.png" alt="image-20210427132843385"></p>
+<h2 id="激活函数"><a href="#激活函数" class="headerlink" title="激活函数"></a>激活函数</h2><p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210427190842.png" alt="image-20210427190841912"></p>
+<p>从此神经网络可以随层数的增加提示表达能力了</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210427191332.png" alt="image-20210427191331703"></p>
+<h3 id="常见激活函数"><a href="#常见激活函数" class="headerlink" title="常见激活函数"></a>常见激活函数</h3><p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210427191556.png" alt="image-20210427191555569"></p>
+<p>因为从输出层向输入层逐层求导，每一层的导数都落在0-0.25，多了以后趋于0，称为梯度消失</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210427191737.png" alt="image-20210427191736628"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210427192058.png" alt="image-20210427192057509"></p>
+<p>通过调整初始化来避免“神经元死亡”，可以设置更小的学习率，减少参数分布的巨大变化，来👆</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210427192342.png" alt="image-20210427192341285"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210427192420.png" alt="image-20210427192419591"></p>
+<p>对零均值化的解释：</p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/wtrnash/article/details/87893725">https://blog.csdn.net/wtrnash/article/details/87893725</a></p>
+<h2 id="损失函数"><a href="#损失函数" class="headerlink" title="损失函数"></a>损失函数</h2><p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210427194702.png" alt="image-20210427194701731"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210427200949.png" alt="image-20210427200948436"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210427201314.png" alt="image-20210427201313381"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210427201845.png" alt="image-20210427201844108"></p>
+<h2 id="欠拟合和过拟合"><a href="#欠拟合和过拟合" class="headerlink" title="欠拟合和过拟合"></a>欠拟合和过拟合</h2><p>欠拟合是对现有数据集学习的不太彻底，拟合效果不好</p>
+<p>过拟合是对现有数据拟合的太好，却对新数据难以处理</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210427202023.png" alt="image-20210427202022905"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210427202203.png" alt="image-20210427202203477"></p>
+<p>ps：</p>
+<p>在机器学习的<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E4%B8%8A%E4%B8%8B%E6%96%87">上下文</a>中，超参数是在开始学习过程之前设置值的参数。 相反，其他参数的值通过训练得出。</p>
+<p>超参数：</p>
+<ul>
+<li>定义关于模型的更高层次的概念，如复杂性或学习能力。</li>
+<li>不能直接从标准模型培训过程中的数据中学习，需要预先定义。</li>
+<li>可以通过设置不同的值，训练不同的模型和选择更好的测试值来决定</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210427202855.png" alt="image-20210427202854377"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210427203023.png" alt="image-20210427203022383"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210427204015.png" alt="image-20210427204014435"></p>
+<p>把区分0和1的分界线0.5标出颜色</p>
+<h2 id="优化器"><a href="#优化器" class="headerlink" title="优化器"></a>优化器</h2><p>神经网络参数优化器</p>
+<p>当<strong>网络结构固定后</strong>（达到学龄的孩子脑结构大致相仿），不同参数的选取（不同的引导方法）对模型的表达力影响很大，（成年达到高度不同）</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210427212011.png" alt="image-20210427212002917"></p>
+<h3 id="常用的优化器"><a href="#常用的优化器" class="headerlink" title="常用的优化器"></a>常用的优化器</h3><p>gt是梯度</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210427212319.png" alt="image-20210427212319347"></p>
+<hr>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210427212651.png" alt="image-20210427212650534"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210427212820.png" alt="image-20210427212819603"></p>
+<hr>
+<p>通过增加了一个二阶动量</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210427212903.png" alt="image-20210427212902304"></p>
+<p>移动平均-&gt;指数滑动平均：</p>
+<p>指数平滑法是在<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E7%A7%BB%E5%8A%A8%E5%B9%B3%E5%9D%87%E6%B3%95/10785547">移动平均法</a>基础上发展起来的，它具有移动平均法的优点，又可以减少运算过程中的数据储存量，同时还考虑了不同时期的数据所起的不同作用。采用指数平滑法的关键是确定α值。一般情况下，α值的大小，既和反映近期数据的能力有关，也和数据波动状况有关。通常不直接利用一次指数平滑法来预测，而是利用二次指数平滑法，求出平滑系数，建立起预测模型，再进行预测</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210427213327.png" alt="image-20210427213326655"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210427213358.png" alt="image-20210427213357398"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210427213417.png" alt="image-20210427213415984"></p>
+<h1 id="八股文！"><a href="#八股文！" class="headerlink" title="八股文！"></a>八股文！</h1><p>使用keras搭建</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210427213648.png" alt="image-20210427213647692"></p>
 
                 
             </div>
@@ -482,7 +576,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2021/04/18/%E7%AC%AC%E4%BA%8C%E6%AC%A1%E6%95%B0%E6%A8%A1/">http://example.com/2021/04/18/%E7%AC%AC%E4%BA%8C%E6%AC%A1%E6%95%B0%E6%A8%A1/</a>
+                    <a href="http://example.com/2021/04/26/tensorflow-note/">http://example.com/2021/04/26/tensorflow-note/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -519,11 +613,7 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            
-                                <a href="/tags/%E6%95%B0%E6%A8%A1/">
-                                    <span class="chip bg-color">数模</span>
-                                </a>
-                            
+                            <span class="chip bg-color">无标签</span>
                         </div>
                     
                 </div>
@@ -691,9 +781,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2021/04/26/tensorflow-note/">
                     <div class="card-image">
@@ -710,9 +801,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-04-26
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-04-26
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -725,6 +816,7 @@
                         </span>
                     </div>
                 </div>
+
                 
             </div>
         </div>
@@ -735,30 +827,30 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/04/15/%E6%95%B0%E6%A8%A1%E8%AE%BA%E6%96%87/">
+                <a href="/2021/04/18/%E7%AC%AC%E4%BA%8C%E6%AC%A1%E6%95%B0%E6%A8%A1/">
                     <div class="card-image">
                         
-                        <img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/writing-1209121_1920.jpg" class="responsive-img" alt="数模论文格式和内容">
+                        <img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/cube-2415399_1920.jpg" class="responsive-img" alt="第二次数模">
                         
-                        <span class="card-title">数模论文格式和内容</span>
+                        <span class="card-title">第二次数模</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            第二次数模有好队友，但是忘了学咋写论文了。。。赶紧补一补
+                            第二次数模的记录吧！
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-04-15
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-04-18
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E6%95%B0%E6%A8%A1/" class="post-category">
-                                    数模
+                            <a href="/categories/log/" class="post-category">
+                                    log
                                 </a>
                             
                             
@@ -768,8 +860,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E6%95%B0%E6%A8%A1%E8%AE%BA%E6%96%87/">
-                        <span class="chip bg-color">数模论文</span>
+                    <a href="/tags/%E6%95%B0%E6%A8%A1/">
+                        <span class="chip bg-color">数模</span>
                     </a>
                     
                 </div>

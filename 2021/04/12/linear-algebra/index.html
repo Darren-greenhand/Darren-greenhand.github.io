@@ -402,7 +402,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-04-16
+                    2021-04-20
                 </div>
                 
 
@@ -411,7 +411,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    31 分
+                    33 分
                 </div>
                 
 
@@ -747,7 +747,7 @@
 <p>零空间在n维，左零空间在m维</p>
 <p>列维数 + 左零维数 = m        行维数 + 零维数 = n </p>
 <p>经典的图片：</p>
-<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210414093802197.png" alt="image-20210414093802197" style="zoom:50%;" />
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210414093802197.png" alt="image-20210414093802197" style="zoom: 33%;" />
 
 <p>关键在basis 和 dimension</p>
 <p>关键结论是：<strong>A 和 AT 的秩相同，确实同一个矩阵从不同方向看，秩不是一个有方向的属性，所以理应是不变的</strong></p>
@@ -757,7 +757,7 @@
 <p>对左零空间，一组基就是特殊解们，m - r 个free var 即为维数</p>
 <p>又根据那个结论，所以 n - r = m - r 个锤子哟，零空间和左零空间的关系<strong>不是</strong>列和行这样作为一个矩阵的两面噢！</p>
 <p>先看求行空间的基</p>
-<img src="C:/Users/Lenovo/AppData/Roaming/Typora/typora-user-images/image-20210414094758222.png" alt="image-20210414094758222" style="zoom:50%;" />
+<img src="C:/Users/Lenovo/AppData/Roaming/Typora/typora-user-images/image-20210414094758222.png" alt="image-20210414094758222" style="zoom: 33%;" />
 
 <p>这进行了行变换之后，<strong>列空间变化了！</strong>行空间没变，基发生了变化。</p>
 <p><strong>所以基是R的前r行</strong>，因为是单位阵，所以还是<strong>最佳</strong>的基。</p>
@@ -852,7 +852,7 @@
 <p>那么这里的Ax * C就是物理意义上的电流。</p>
 <img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210415103146096.png" alt="image-20210415103146096" style="zoom: 33%;" />
 
-<p>这个数值是电导，而不是电阻噢</p>
+<p>这个数值是<strong>电导</strong>，而不是电阻噢</p>
 <p>再研究AT y = 0 <img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210415103013929.png" alt="image-20210415103013929" style="zoom:33%;" /></p>
 <p>显然。。m - r = 2维</p>
 <p>回到原来的。</p>
@@ -1029,7 +1029,7 @@
 <img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210416151251339.png" alt="image-20210416151251339" style="zoom:50%;" />
 
 <p>显然，由性质理解一下，也是容易证明的结论，p和e的平方等于本身</p>
-<p>而只要有了A，就能导出P，就能得出p 和 e</p>
+<p>而只要有了A和b，就能导出x，就能得出P和p 和 e</p>
 <hr>
 <p>继续数学问题：</p>
 <p>首先要定义并最小化“误差”的概念，然后用最小二乘（拥有最小平方和的解）</p>
@@ -1065,7 +1065,80 @@
 <hr>
 <p>提出一种情况：</p>
 <p>互相垂直的向量必然线性无关，排除0向量，引入术语：正交，标准正交向量组</p>
-<h2 id="17-正交矩阵和Gram-Schmidt正交化"><a href="#17-正交矩阵和Gram-Schmidt正交化" class="headerlink" title="17.正交矩阵和Gram-Schmidt正交化"></a>17.正交矩阵和Gram-Schmidt正交化</h2>
+<h2 id="17-正交矩阵和Gram-Schmidt正交化"><a href="#17-正交矩阵和Gram-Schmidt正交化" class="headerlink" title="17.正交矩阵和Gram-Schmidt正交化"></a>17.正交矩阵和Gram-Schmidt正交化</h2><p>用q来作为向量的符号提示正交</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210420172240548.png" alt="image-20210420172240548" style="zoom:50%;" />
+
+<p>在标准正交的情况下</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210420172448080.png" alt="image-20210420172448080" style="zoom:50%;" />
+
+<p><strong>但是只有在Q为方阵的时候，根据惯例我们才叫它正交矩阵，此时QT = Q-</strong></p>
+<p>这和置换矩阵的性质是一样的，只要将1放在不同位置哈哈就是正交的</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210420172940446.png" alt="image-20210420172940446"></p>
+<p>注意除了列之间正交，还要保证列向量长度为1</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210420182510033.png" alt="image-20210420182510033" style="zoom:50%;" />
+
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210420182658450.png" alt="image-20210420182658450" style="zoom:50%;" />
+
+<hr>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210420183921298.png" alt="image-20210420183921298" style="zoom: 50%;" />
+
+<p>还是提醒一下，正交矩阵得是方阵，不然得这样说👆</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210420184017949.png" alt="image-20210420184017949" style="zoom:50%;" />
+
+<p>如果Q是方阵，又有Q各列向量线性无关，则列空间为整个n维，那么投影矩阵为 I</p>
+<p>而事实上，在这种情况下，Q为正交矩阵，那QT = Q-，则得到单位阵，此时投影矩阵的两个性质：平方等于本身，对称都满足。</p>
+<p>而此时的投影有很大的优势！</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210420184624095.png" alt="image-20210420184624095" style="zoom:50%;" />
+
+<p><strong>非常重要的式子！！！</strong></p>
+<p>向量和标准正交基作点乘，则投影到标准正交空间（编的名词），此时的性质非常棒！</p>
+<hr>
+<p><strong>Graham-Schmidt 格拉姆-施密特正交化法</strong></p>
+<p>这里的大写字母表示正交化后的基</p>
+<p>使列向量正交化，即A -&gt; Q，记得向量点乘是一个数字！</p>
+<p>先得到<strong>正交的向量</strong>，再标准化，这里求正交的向量其实是求当年的误差向量e</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210420185445350.png" alt="image-20210420185445350" style="zoom:50%;" />
+
+<p>现在求第三个向量C，此时也就是求C分别对A和B的误差。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210420190752725.png" alt="image-20210420190752725"></p>
+<p>几何上很好理解</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210420191126160.png" alt="image-20210420191126160" style="zoom:33%;" />
+
+<p>而A和正交化的Q的列空间是一样的。只是把基换成正交来优化而已</p>
+<hr>
+<p>类比A = LU这样，那么必然存在A = QR，这也是正交化方法的表达式</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210420192238053.png" alt="image-20210420192238053"></p>
+<h2 id="18-行列式及其性质"><a href="#18-行列式及其性质" class="headerlink" title="18.行列式及其性质"></a>18.行列式及其性质</h2><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210420195953318.png" alt="image-20210420195953318" style="zoom:50%;" />
+
+<p>三个性质：</p>
+<ol>
+<li><p>单位矩阵行列式为1</p>
+</li>
+<li><p>交换两行，行列数符号取反，这里有啥逆序啥的（任何一种置换都分奇偶！）</p>
+</li>
+<li><p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210420200617195.png" alt="image-20210420200617195"></p>
+</li>
+<li><p>两列成倍数，则行列式为0，以后的结论都可以从上面3个结论推出来，确实简单，倍数提出来，交换后行列数相等，但是又要加符号，所以。。</p>
+</li>
+<li><p>任意行加减任意行不改变行列式，先用性质三拆出来，再用性质四</p>
+</li>
+<li><p>要是有一行为0，则行列式为0</p>
+</li>
+<li><p><strong>任意矩阵化为U则行列式为对角元乘积</strong>（这揭示了提出行列式的部分目的。。）</p>
+<p>应用性质5消去上面的不变，然后用性质三提出系数，再用性质1</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210420204658436.png" alt="image-20210420204658436" style="zoom:50%;" />
+
+<p>如果主元存在0，那么得到0</p>
+</li>
+<li><p>detA = 0  &lt;=&gt; A是奇异的，不可逆，而可逆必然detA≠0</p>
+</li>
+</ol>
+<p>任何性质都离不开消元法</p>
+<ol start="9">
+<li>det(AB) = detA * detB</li>
+<li>det AT = detA，连接了行和列</li>
+</ol>
+<h2 id="19-行列式公式和代数余子式"><a href="#19-行列式公式和代数余子式" class="headerlink" title="19.行列式公式和代数余子式"></a>19.行列式公式和代数余子式</h2>
                 
             </div>
             <hr/>
@@ -1626,7 +1699,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">110.1k</span>&nbsp;字
+                class="white-color">111.9k</span>&nbsp;字
             
             
             
