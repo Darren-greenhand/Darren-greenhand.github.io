@@ -1,0 +1,1433 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+    <meta name="keywords" content="黑马dom&amp;bom预习, 浮华一隅">
+    <meta name="description" content="willing to enter the field of god">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>黑马dom&amp;bom预习 | 浮华一隅</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="浮华一隅" type="application/atom+xml"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</head>
+
+
+
+
+ <script type="text/javascript" src="/libs/others/sakura.js"></script> 
+
+	
+ <script type="text/javascript">
+        var OriginTitile = document.title, st;
+        document.addEventListener("visibilitychange", function () {
+            document.hidden ? (document.title = "短暂的离别，是为了更好的相遇", clearTimeout(st)) : (document.title = "一隅于浮华，荧惑下天星", st = setTimeout(function () { document.title = OriginTitile }, 3e3))
+        }) 
+    </script>
+	
+<body>
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">浮华一隅</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">浮华一隅</div>
+        <div class="logo-desc">
+            
+            willing to enter the field of god
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+    </nav>
+
+</header>
+
+    
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('密码是简单的8位数字（我的宿舍号是？）')).toString(CryptoJS.enc.Hex)) {
+                alert('加载内容....');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
+
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/24.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">黑马dom&amp;bom预习</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        padding: 35px 0 15px 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        padding-bottom: 30px;
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/javascript/">
+                                <span class="chip bg-color">javascript</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/web-front-end/" class="post-category">
+                                web-front-end
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2021-04-02
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2021-04-08
+                </div>
+                
+
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    4 分
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.css">
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <p>为了应付俩招新而学学黑马</p>
+<p>结果学着学着忘记原先目的了。。。</p>
+<p>既然都记了这么多了</p>
+<h1 id="对象"><a href="#对象" class="headerlink" title="对象"></a>对象</h1><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210330093612480.png" alt="image-20210330093612480" style="zoom:50%;" />
+
+<img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210330093644248.png" alt="image-20210330093644248" style="zoom:50%;" />
+
+
+
+<p><strong>构造函数首字母大写</strong></p>
+<p>this！</p>
+<p>!(<a target="_blank" rel="noopener" href="https://gitee.com/darren-greenhand//picture/raw/master/image-20210330213907799.png">https://gitee.com/darren-greenhand//picture/raw/master/image-20210330213907799.png</a>)</p>
+<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210330214012724.png" alt="image-20210330214012724"></p>
+<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210330225348643.png" alt="image-20210330225348643"></p>
+<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210330225823667.png" alt="image-20210330225823667"></p>
+<p>其实函数也能遍历到，但是很少用</p>
+<h1 id="内置对象"><a href="#内置对象" class="headerlink" title="内置对象"></a>内置对象</h1><p>对象分：自定义，内置，浏览器对象</p>
+<p>前俩是ES里的，浏览器对象是JS独有的</p>
+<p>内置对象就是JS自带的，提供了最常用的和最基本的功能</p>
+<p>可以查询MDN文档</p>
+<h3 id="Math"><a href="#Math" class="headerlink" title="Math"></a>Math</h3><p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210330231721351.png" alt="image-20210330231721351"></p>
+<p>Math.random()返回一个随机小数 0&lt;= x &lt; 1</p>
+<p>MDN提供了以此为基础的得到各种随机数的方法</p>
+<h1 id="DOM"><a href="#DOM" class="headerlink" title="DOM"></a>DOM</h1><p>元素是标签</p>
+<p>节点：所有内容，标签，属性，。。。</p>
+<p>DOM把所有内容看作对象</p>
+<p>因为文档页面从上往下加载，所以script</p>
+<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210330233811008.png" alt="image-20210330233811008"></p>
+<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210330234121849.png" alt="image-20210330234121849"></p>
+<p>如果没有</p>
+<p>小心不要把伪数组当初对象哟</p>
+<p>document.querySelector 返回指定选择器的第一个元素对象</p>
+<p>document.querySelectorAll</p>
+<p>获取<strong>body</strong>直接document.body，HTML 是documentElement</p>
+<h2 id="事件基础"><a href="#事件基础" class="headerlink" title="事件基础"></a>事件基础</h2><p>事件是可以被JS侦测到的行为</p>
+<p>是一种触发–响应机制</p>
+<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210330235606717.png" alt="image-20210330235606717"></p>
+<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210330235841646.png" alt="image-20210330235841646"></p>
+<h2 id="改变内容"><a href="#改变内容" class="headerlink" title="改变内容"></a>改变内容</h2><p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210330235939513.png" alt="image-20210330235939513"></p>
+<p>innerHTML是W3C推荐的</p>
+<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210331000356033.png" alt="image-20210331000356033"></p>
+<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210331001227962.png" alt="image-20210331001227962"></p>
+<p>所以标签的属性在DOM中被当作属性</p>
+<p>记得表单里显示的内容是value属性</p>
+<h2 id="修改样式"><a href="#修改样式" class="headerlink" title="修改样式"></a>修改样式</h2><p><strong>行内样式（优先级最高）</strong></p>
+<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210331084125584.png" alt="image-20210331084125584"></p>
+<p>循环精灵图</p>
+<p>onfocus</p>
+<p>onblur</p>
+<p>提前准备好另一个类，然后修改类名</p>
+<p>element.className = “change”</p>
+<p>这会覆盖原先的类名</p>
+<p>不想覆盖则 .class<strong>Name</strong> += “ new”</p>
+<h3 id="排他思想"><a href="#排他思想" class="headerlink" title="排他思想"></a>排他思想</h3><p>先清除其他所有，再给自己设置</p>
+<p>onmouseovr          onmouseout</p>
+<h2 id="获得属性"><a href="#获得属性" class="headerlink" title="获得属性"></a>获得属性</h2><p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210331234557420.png" alt="image-20210331234557420"></p>
+<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210331234830475.png" alt="image-20210331234830475"></p>
+<p>.removeAttribute(‘index’)</p>
+<p>display none/block</p>
+<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210331235859797.png" alt="image-20210331235859797"></p>
+<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210401000324162.png" alt="image-20210401000324162"></p>
+<p><strong>自定义属性</strong>（在页面而不是服务器存储并使用数据）</p>
+<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210401000808430.png" alt="image-20210401000808430"></p>
+<p>ie11以上才有dataset，一般使用getAttribute</p>
+<h2 id="节点操作"><a href="#节点操作" class="headerlink" title="节点操作"></a>节点操作</h2><h3 id="获得节点"><a href="#获得节点" class="headerlink" title="获得节点"></a>获得节点</h3><p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210401001133305.png" alt="image-20210401001133305"></p>
+<p>dir方法用来对一个对象进行检查（inspect），并以易于阅读和打印的格式显示。</p>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js">console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span>f1<span class="token operator">:</span> <span class="token string">'foo'</span><span class="token punctuation">,</span> f2<span class="token operator">:</span> <span class="token string">'bar'</span><span class="token punctuation">&#125;</span><span class="token punctuation">)</span>
+<span class="token comment">// Object &#123;f1: "foo", f2: "bar"&#125;</span>
+
+console<span class="token punctuation">.</span><span class="token function">dir</span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span>f1<span class="token operator">:</span> <span class="token string">'foo'</span><span class="token punctuation">,</span> f2<span class="token operator">:</span> <span class="token string">'bar'</span><span class="token punctuation">&#125;</span><span class="token punctuation">)</span>
+<span class="token comment">// Object</span>
+<span class="token comment">//   f1: "foo"</span>
+<span class="token comment">//   f2: "bar"</span>
+<span class="token comment">//   __proto__: Object</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>上面代码显示dir方法的输出结果，比log方法更易读，信息也更丰富。</p>
+<p>该方法对于输出DOM对象非常有用，因为会显示DOM对象的所有属性。</p>
+<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210401001628811.png" alt="image-20210401001628811"></p>
+<p><strong>父子关系</strong></p>
+<p>node.parentNode(离元素最近的父级节点，找不到返回null)</p>
+<p>.node.childNodes()集合(包含元素节点和文本节点等等)，用nodetype加以筛选</p>
+<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210401103705538.png" alt="image-20210401103705538"></p>
+<p>非官方但是被广泛支持<strong>：.children</strong>(集合)</p>
+<p>.firstChild    .lastChild   这个会返回（元素节点或文本节点，超坑的是换行也是一个文本节点！）</p>
+<p>兼容性问题👇IE9</p>
+<p>.firstElementChild</p>
+<p>.lastElementChild</p>
+<p>兄弟节点用的很少</p>
+<p>实际开发写法还是用ol.children[0]和ol.children[ol.children.length-1]或者自己知道数量</p>
+<p>.node.nextSibling </p>
+<p>.node.previousSibling</p>
+<p>这俩也会看到文本节点</p>
+<p>兼容性问题👇IE9</p>
+<p>.node.nextElementSibling</p>
+<p>node.previousElementSibling</p>
+<h3 id="创建添加节点"><a href="#创建添加节点" class="headerlink" title="创建添加节点"></a>创建添加节点</h3><p>document.createElement(‘li’)</p>
+<p>node.appendChild(child) node 父级  child子级</p>
+<p>这是后面追加元素</p>
+<p>node.insertBefore()</p>
+<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210401152243420.png" alt="image-20210401152243420"></p>
+<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210401155757774.png" alt="image-20210401155757774"></p>
+<h3 id="删除节点"><a href="#删除节点" class="headerlink" title="删除节点"></a>删除节点</h3><p>node.removeChild() 删的必须是子元素，</p>
+<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210401153308442.png" alt="image-20210401153308442"></p>
+<h3 id="复制添加节点"><a href="#复制添加节点" class="headerlink" title="复制添加节点"></a>复制添加节点</h3><p>new = node.cloneNode()</p>
+<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210401154336923.png" alt="image-20210401154336923"></p>
+<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210401160340035.png" alt="image-20210401160340035"></p>
+<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210401160426412.png" alt="image-20210401160426412"></p>
+<h1 id="事件高级"><a href="#事件高级" class="headerlink" title="事件高级"></a>事件高级</h1><h2 id="注册事件"><a href="#注册事件" class="headerlink" title="注册事件"></a>注册事件</h2><p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210401162928938.png" alt="image-20210401162928938"></p>
+<h2 id="删除事件"><a href="#删除事件" class="headerlink" title="删除事件"></a>删除事件</h2><p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210401164058073.png" alt="image-20210401164058073"></p>
+<h2 id="事件流"><a href="#事件流" class="headerlink" title="事件流"></a>事件流</h2><p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210401164303889.png" alt="image-20210401164303889"></p>
+<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210401165042532.png" alt="image-20210401165042532"></p>
+<h2 id="事件对象"><a href="#事件对象" class="headerlink" title="事件对象"></a>事件对象</h2><p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210401165508731.png" alt="image-20210401165508731"></p>
+<p>兼容性问题 e = <strong>e||window.event</strong></p>
+<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210401165948856.png" alt="image-20210401165948856"></p>
+<p>event有个类似this的属性 currentTarget,没啥鬼用</p>
+<p><strong>兼容性问题处理👇</strong></p>
+<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210401170039029.png" alt="image-20210401170039029"></p>
+<p><strong>阻止默认行为</strong></p>
+<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210401170434080.png" alt="image-20210401170434080"></p>
+<p>或者直接return false; 谁都能用但是return后的代码不执行，而且只用于传统的注册方式</p>
+<p>直接preventDefault吧，</p>
+<p><strong>阻止冒泡</strong></p>
+<p>event.stopPropagation(); 兼容性问题。。</p>
+<p>event.cancelBubble;老版本</p>
+<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210401172331089.png" alt="image-20210401172331089"></p>
+<h2 id="事件委托"><a href="#事件委托" class="headerlink" title="事件委托"></a>事件委托</h2><p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210401172602216.png" alt="image-20210401172602216"></p>
+<p>配合e.target就很牛逼</p>
+<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210401172819901.png" alt="image-20210401172819901"></p>
+<h2 id="常用事件"><a href="#常用事件" class="headerlink" title="常用事件"></a>常用事件</h2><h3 id="禁止右键和选中文字"><a href="#禁止右键和选中文字" class="headerlink" title="禁止右键和选中文字"></a>禁止右键和选中文字</h3><p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210401193332860.png" alt="image-20210401193332860"></p>
+<p>然而做得好的网站也不知道用什么方法防住了偷取内容。。</p>
+<h3 id="鼠标事件对象"><a href="#鼠标事件对象" class="headerlink" title="鼠标事件对象"></a>鼠标事件对象</h3><p>MouseEvent</p>
+<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210401194638742.png" alt="image-20210401194638742"></p>
+<p>mousemove 鼠标移动1px就会触发</p>
+<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210401195727163.png" alt="image-20210401195727163"></p>
+<p>记得css修改img为position: absolute</p>
+<h3 id="键盘数据对象"><a href="#键盘数据对象" class="headerlink" title="键盘数据对象"></a>键盘数据对象</h3><p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210401200249491.png" alt="image-20210401200249491"></p>
+<p>如果一直按着，down和press会一直输出。。</p>
+<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210401200749931.png" alt="image-20210401200749931"></p>
+<img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210401202950239.png" alt="image-20210401202950239"  />
+
+
+
+<h1 id="BOM"><a href="#BOM" class="headerlink" title="BOM"></a>BOM</h1><p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210401205111068.png" alt="image-20210401205111068"></p>
+<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210401205237508.png" alt="image-20210401205237508"></p>
+<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210401205457047.png" alt="image-20210401205457047"></p>
+<p>所以不要声明名叫name的全局变量</p>
+<h2 id="常见事件"><a href="#常见事件" class="headerlink" title="常见事件"></a>常见事件</h2><p><strong>窗口加载</strong></p>
+<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210401205732846.png" alt="image-20210401205732846"></p>
+<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210401205907695.png" alt="image-20210401205907695"></p>
+<p><strong>调整窗口大小</strong></p>
+<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210401210145839.png" alt="image-20210401210145839"></p>
+<p>只要大小像素变化就会触发resize</p>
+<h3 id="定时器"><a href="#定时器" class="headerlink" title="定时器"></a><em><strong>定时器</strong></em></h3><p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210401210627622.png" alt="image-20210401210627622"></p>
+<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210401210647133.png" alt="image-20210401210647133"></p>
+<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210401210753231.png" alt="image-20210401210753231"></p>
+<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210401211057397.png" alt="image-20210401211057397"></p>
+<p>拯救男主角  clearTimeout(timerID)</p>
+<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210401211607592.png" alt="image-20210401211607592"></p>
+<p><strong>倒计时！</strong></p>
+<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210401212252996.png" alt="image-20210401212252996"></p>
+<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210401212543518.png" alt="image-20210401212543518"></p>
+<h2 id="JS执行队列"><a href="#JS执行队列" class="headerlink" title="JS执行队列"></a>JS执行队列</h2><p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210401213938731.png" alt="image-20210401213938731"></p>
+<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210401214513695.png" alt="image-20210401214513695"></p>
+<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210401214628030.png" alt="image-20210401214628030"></p>
+<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210401215019237.png" alt="image-20210401215019237"></p>
+<p>如定时器3秒，就是3秒后吧事件放到任务队列中</p>
+<h2 id="location对象"><a href="#location对象" class="headerlink" title="location对象"></a>location对象</h2><p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210401215151934.png" alt="image-20210401215151934"></p>
+<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210401215422449.png" alt="image-20210401215422449"></p>
+<p>传递参数</p>
+<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210401220658628.png" alt="image-20210401220658628"></p>
+<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210401220733210.png" alt="image-20210401220733210"></p>
+<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210401220946122.png" alt="image-20210401220946122"></p>
+<h2 id="navigator对象"><a href="#navigator对象" class="headerlink" title="navigator对象"></a>navigator对象</h2><p>navigator.userAgent对象存储了用户使用的浏览器的信息</p>
+<h2 id="history对象"><a href="#history对象" class="headerlink" title="history对象"></a>history对象</h2><p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210401221612109.png" alt="image-20210401221612109"></p>
+<h1 id="网页特效"><a href="#网页特效" class="headerlink" title="网页特效"></a>网页特效</h1><h2 id="offset系列"><a href="#offset系列" class="headerlink" title="offset系列"></a>offset系列</h2><p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210401221901011.png" alt="image-20210401221901011"></p>
+<p>在用后面俩的时候记得加上 + ‘px’</p>
+<p>没有带定位的父亲则以一直网上找直到。。body</p>
+<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210401222324755.png" alt="image-20210401222324755"></p>
+<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210401222559804.png" alt="image-20210401222559804"></p>
+<h3 id="拖动模态框"><a href="#拖动模态框" class="headerlink" title="拖动模态框"></a>拖动模态框</h3><p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210401230220830.png" alt="image-20210401230220830"></p>
+<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210401230651020.png" alt="image-20210401230651020"></p>
+<h3 id="电商放大图"><a href="#电商放大图" class="headerlink" title="电商放大图"></a>电商放大图</h3><p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210401231203726.png" alt="image-20210401231203726"></p>
+<p>大图片是一个图片，overflow:hidden</p>
+<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210401231551677.png" alt="image-20210401231551677"></p>
+<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210401231934835.png" alt="image-20210401231934835"></p>
+<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210401232233398.png" alt="image-20210401232233398"></p>
+<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210401232246907.png" alt="image-20210401232246907"></p>
+<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210401233200379.png" alt="image-20210401233200379"></p>
+<h2 id="client系列"><a href="#client系列" class="headerlink" title="client系列"></a>client系列</h2><p>可视区</p>
+<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210401233316513.png" alt="image-20210401233316513"></p>
+<h3 id="立即执行函数"><a href="#立即执行函数" class="headerlink" title="立即执行函数"></a>立即执行函数</h3><p>无需调用，立马自己执行的函数，第二个小括号可以看成是调用函数</p>
+<p>最大的作用是独立创建了个作用域</p>
+<ol>
+<li><p>(function () {} )  ()</p>
+<p>如 (function (a.b) {console.log(a+b); } )  (1,2)  //传参</p>
+</li>
+<li><p>(function () {} () )</p>
+</li>
+</ol>
+<p>很多flexble核心源码是有关这个的</p>
+<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210401234824479.png" alt="image-20210401234824479"></p>
+<h2 id="Scroll系列"><a href="#Scroll系列" class="headerlink" title="Scroll系列"></a>Scroll系列</h2><p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210401235104065.png" alt="image-20210401235104065"></p>
+<p>onscroll事件，滚动事件</p>
+<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210401235720069.png" alt="image-20210401235720069"></p>
+<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210401235854824.png" alt="image-20210401235854824"></p>
+<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210402000122850.png" alt="image-20210402000122850"></p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p><img src="C:/Users/Lenovo/AppData/Roaming/Typora/typora-user-images/image-20210402000256076.png" alt="image-20210402000256076"></p>
+<p><img src="../AppData/Roaming/Typora/typora-user-images/image-20210402000309513.png" alt="image-20210402000309513"></p>
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">Darren</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://darren-dong.com/2021/04/02/%E9%BB%91%E9%A9%ACdom&bom/">https://darren-dong.com/2021/04/02/%E9%BB%91%E9%A9%ACdom&bom/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">Darren</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/javascript/">
+                                    <span class="chip bg-color">javascript</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">谢谢你，嘿嘿</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2021/04/04/%E9%BB%91%E9%A9%AC%E7%A7%BB%E5%8A%A8%E7%AB%AF/">
+                    <div class="card-image">
+                        
+                        <img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/5.jpg" class="responsive-img" alt="黑马移动端">
+                        
+                        <span class="card-title">黑马移动端</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            没想到黑马竟然更新了移动端，先来康康是啥吧
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-04-04
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/web-front-end/" class="post-category">
+                                    web-front-end
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/html-css%E5%85%A5%E9%97%A8/">
+                        <span class="chip bg-color">html&amp;&amp;css入门</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2021/03/25/%E9%A1%B9%E7%9B%AE1%E5%93%81%E4%BC%98%E8%B4%AD/">
+                    <div class="card-image">
+                        
+                        <img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/15.jpg" class="responsive-img" alt="项目1品优购">
+                        
+                        <span class="card-title">项目1品优购</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            跟着网课学习制作一下没有任何JS的静态电商网页，熟悉一下整个web静态页面的流程，挺好玩的嘀
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-03-25
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/project/" class="post-category">
+                                    project
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%93%81%E4%BC%98%E8%B4%AD/">
+                        <span class="chip bg-color">品优购</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('20')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: 浮华一隅<br />'
+            + '文章作者: Darren<br />'
+            + '文章链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处哦亲。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h1, h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h1, h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="966298391"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+
+    
+    <div class="container row center-align" style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2019-2021</span>
+            
+            <span id="year">2019</span>
+            <a href="/about" target="_blank">Darren</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                class="white-color">167.5k</span>&nbsp;字
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/Darren-greenhand" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:1275972958@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1275972958" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1275972958" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+	
+    
+    <script type="text/javascript" color="0,0,255"
+        pointColor="0,0,255" opacity='0.7'
+        zIndex="-1" count="99"
+        src="/libs/background/canvas-nest.js"></script>
+    
+
+    
+
+    
+    <script type="text/javascript" src="/libs/background/ribbon-dynamic.js" async="async"></script>
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+    
+
+</body>
+
+</html>
