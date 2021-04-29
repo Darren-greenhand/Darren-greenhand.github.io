@@ -3,11 +3,11 @@
   <title>浮华一隅</title>
   
   <subtitle>See more, see further.      own the courage to change, be willing to challenge</subtitle>
-  <link href="http://example.com/atom.xml" rel="self"/>
+  <link href="http://darren-dong.com/atom.xml" rel="self"/>
   
-  <link href="http://example.com/"/>
+  <link href="http://darren-dong.com/"/>
   <updated>2021-04-28T09:26:15.954Z</updated>
-  <id>http://example.com/</id>
+  <id>http://darren-dong.com/</id>
   
   <author>
     <name>Darren</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>tensorflow-note</title>
-    <link href="http://example.com/2021/04/26/tensorflow-note/"/>
-    <id>http://example.com/2021/04/26/tensorflow-note/</id>
+    <link href="http://darren-dong.com/2021/04/26/tensorflow-note/"/>
+    <id>http://darren-dong.com/2021/04/26/tensorflow-note/</id>
     <published>2021-04-26T14:02:08.000Z</published>
     <updated>2021-04-28T09:26:15.954Z</updated>
     
@@ -34,15 +34,15 @@
     
     
     
-    <category term="ML" scheme="http://example.com/categories/ML/"/>
+    <category term="ML" scheme="http://darren-dong.com/categories/ML/"/>
     
     
   </entry>
   
   <entry>
     <title>第二次数模</title>
-    <link href="http://example.com/2021/04/18/%E7%AC%AC%E4%BA%8C%E6%AC%A1%E6%95%B0%E6%A8%A1/"/>
-    <id>http://example.com/2021/04/18/%E7%AC%AC%E4%BA%8C%E6%AC%A1%E6%95%B0%E6%A8%A1/</id>
+    <link href="http://darren-dong.com/2021/04/18/%E7%AC%AC%E4%BA%8C%E6%AC%A1%E6%95%B0%E6%A8%A1/"/>
+    <id>http://darren-dong.com/2021/04/18/%E7%AC%AC%E4%BA%8C%E6%AC%A1%E6%95%B0%E6%A8%A1/</id>
     <published>2021-04-17T16:25:21.000Z</published>
     <updated>2021-04-18T13:41:20.139Z</updated>
     
@@ -56,17 +56,17 @@
     
     
     
-    <category term="log" scheme="http://example.com/categories/log/"/>
+    <category term="log" scheme="http://darren-dong.com/categories/log/"/>
     
     
-    <category term="数模" scheme="http://example.com/tags/%E6%95%B0%E6%A8%A1/"/>
+    <category term="数模" scheme="http://darren-dong.com/tags/%E6%95%B0%E6%A8%A1/"/>
     
   </entry>
   
   <entry>
     <title>数模论文格式和内容</title>
-    <link href="http://example.com/2021/04/15/%E6%95%B0%E6%A8%A1%E8%AE%BA%E6%96%87/"/>
-    <id>http://example.com/2021/04/15/%E6%95%B0%E6%A8%A1%E8%AE%BA%E6%96%87/</id>
+    <link href="http://darren-dong.com/2021/04/15/%E6%95%B0%E6%A8%A1%E8%AE%BA%E6%96%87/"/>
+    <id>http://darren-dong.com/2021/04/15/%E6%95%B0%E6%A8%A1%E8%AE%BA%E6%96%87/</id>
     <published>2021-04-15T15:26:54.000Z</published>
     <updated>2021-04-17T13:46:31.835Z</updated>
     
@@ -80,17 +80,17 @@
     
     
     
-    <category term="数模" scheme="http://example.com/categories/%E6%95%B0%E6%A8%A1/"/>
+    <category term="数模" scheme="http://darren-dong.com/categories/%E6%95%B0%E6%A8%A1/"/>
     
     
-    <category term="数模论文" scheme="http://example.com/tags/%E6%95%B0%E6%A8%A1%E8%AE%BA%E6%96%87/"/>
+    <category term="数模论文" scheme="http://darren-dong.com/tags/%E6%95%B0%E6%A8%A1%E8%AE%BA%E6%96%87/"/>
     
   </entry>
   
   <entry>
     <title>linear algebra</title>
-    <link href="http://example.com/2021/04/12/linear-algebra/"/>
-    <id>http://example.com/2021/04/12/linear-algebra/</id>
+    <link href="http://darren-dong.com/2021/04/12/linear-algebra/"/>
+    <id>http://darren-dong.com/2021/04/12/linear-algebra/</id>
     <published>2021-04-12T04:38:47.000Z</published>
     <updated>2021-04-20T13:14:01.461Z</updated>
     
@@ -104,17 +104,17 @@
     
     
     
-    <category term="math" scheme="http://example.com/categories/math/"/>
+    <category term="math" scheme="http://darren-dong.com/categories/math/"/>
     
     
-    <category term="线代" scheme="http://example.com/tags/%E7%BA%BF%E4%BB%A3/"/>
+    <category term="线代" scheme="http://darren-dong.com/tags/%E7%BA%BF%E4%BB%A3/"/>
     
   </entry>
   
   <entry>
     <title>data-analyze</title>
-    <link href="http://example.com/2021/04/10/data-analyze/"/>
-    <id>http://example.com/2021/04/10/data-analyze/</id>
+    <link href="http://darren-dong.com/2021/04/10/data-analyze/"/>
+    <id>http://darren-dong.com/2021/04/10/data-analyze/</id>
     <published>2021-04-10T11:23:24.000Z</published>
     <updated>2021-04-10T11:26:50.339Z</updated>
     
@@ -128,17 +128,17 @@
     
     
     
-    <category term="python" scheme="http://example.com/categories/python/"/>
+    <category term="python" scheme="http://darren-dong.com/categories/python/"/>
     
     
-    <category term="python-data" scheme="http://example.com/tags/python-data/"/>
+    <category term="python-data" scheme="http://darren-dong.com/tags/python-data/"/>
     
   </entry>
   
   <entry>
     <title>统计</title>
-    <link href="http://example.com/2021/04/10/%E7%BB%9F%E8%AE%A1/"/>
-    <id>http://example.com/2021/04/10/%E7%BB%9F%E8%AE%A1/</id>
+    <link href="http://darren-dong.com/2021/04/10/%E7%BB%9F%E8%AE%A1/"/>
+    <id>http://darren-dong.com/2021/04/10/%E7%BB%9F%E8%AE%A1/</id>
     <published>2021-04-10T09:30:55.000Z</published>
     <updated>2021-04-20T03:46:45.359Z</updated>
     
@@ -152,17 +152,17 @@
     
     
     
-    <category term="math" scheme="http://example.com/categories/math/"/>
+    <category term="math" scheme="http://darren-dong.com/categories/math/"/>
     
     
-    <category term="statistics" scheme="http://example.com/tags/statistics/"/>
+    <category term="statistics" scheme="http://darren-dong.com/tags/statistics/"/>
     
   </entry>
   
   <entry>
     <title>crawler</title>
-    <link href="http://example.com/2021/04/10/crawler/"/>
-    <id>http://example.com/2021/04/10/crawler/</id>
+    <link href="http://darren-dong.com/2021/04/10/crawler/"/>
+    <id>http://darren-dong.com/2021/04/10/crawler/</id>
     <published>2021-04-10T08:34:23.000Z</published>
     <updated>2021-04-11T05:01:43.150Z</updated>
     
@@ -177,17 +177,17 @@
     
     
     
-    <category term="python" scheme="http://example.com/categories/python/"/>
+    <category term="python" scheme="http://darren-dong.com/categories/python/"/>
     
     
-    <category term="crawler" scheme="http://example.com/tags/crawler/"/>
+    <category term="crawler" scheme="http://darren-dong.com/tags/crawler/"/>
     
   </entry>
   
   <entry>
     <title>matlab</title>
-    <link href="http://example.com/2021/04/06/Matlab/"/>
-    <id>http://example.com/2021/04/06/Matlab/</id>
+    <link href="http://darren-dong.com/2021/04/06/Matlab/"/>
+    <id>http://darren-dong.com/2021/04/06/Matlab/</id>
     <published>2021-04-06T12:00:25.000Z</published>
     <updated>2021-04-09T01:24:20.216Z</updated>
     
@@ -201,17 +201,17 @@
     
     
     
-    <category term="data" scheme="http://example.com/categories/data/"/>
+    <category term="data" scheme="http://darren-dong.com/categories/data/"/>
     
     
-    <category term="matlab" scheme="http://example.com/tags/matlab/"/>
+    <category term="matlab" scheme="http://darren-dong.com/tags/matlab/"/>
     
   </entry>
   
   <entry>
     <title>算法1:KMP</title>
-    <link href="http://example.com/2021/04/06/%E7%AE%97%E6%B3%951%EF%BC%9ATMP/"/>
-    <id>http://example.com/2021/04/06/%E7%AE%97%E6%B3%951%EF%BC%9ATMP/</id>
+    <link href="http://darren-dong.com/2021/04/06/%E7%AE%97%E6%B3%951%EF%BC%9ATMP/"/>
+    <id>http://darren-dong.com/2021/04/06/%E7%AE%97%E6%B3%951%EF%BC%9ATMP/</id>
     <published>2021-04-06T11:13:12.000Z</published>
     <updated>2021-04-08T15:46:29.309Z</updated>
     
@@ -226,17 +226,17 @@
     
     
     
-    <category term="algorithm" scheme="http://example.com/categories/algorithm/"/>
+    <category term="algorithm" scheme="http://darren-dong.com/categories/algorithm/"/>
     
     
-    <category term="KMP" scheme="http://example.com/tags/KMP/"/>
+    <category term="KMP" scheme="http://darren-dong.com/tags/KMP/"/>
     
   </entry>
   
   <entry>
     <title>hot key</title>
-    <link href="http://example.com/2021/04/05/%E9%82%A3%E4%BA%9B%E5%BF%AB%E6%8D%B7%E9%94%AE/"/>
-    <id>http://example.com/2021/04/05/%E9%82%A3%E4%BA%9B%E5%BF%AB%E6%8D%B7%E9%94%AE/</id>
+    <link href="http://darren-dong.com/2021/04/05/%E9%82%A3%E4%BA%9B%E5%BF%AB%E6%8D%B7%E9%94%AE/"/>
+    <id>http://darren-dong.com/2021/04/05/%E9%82%A3%E4%BA%9B%E5%BF%AB%E6%8D%B7%E9%94%AE/</id>
     <published>2021-04-05T02:36:09.000Z</published>
     <updated>2021-04-10T06:28:35.288Z</updated>
     
@@ -253,17 +253,17 @@
     
     
     
-    <category term="others" scheme="http://example.com/categories/others/"/>
+    <category term="others" scheme="http://darren-dong.com/categories/others/"/>
     
     
-    <category term="hot key" scheme="http://example.com/tags/hot-key/"/>
+    <category term="hot key" scheme="http://darren-dong.com/tags/hot-key/"/>
     
   </entry>
   
   <entry>
     <title>plan</title>
-    <link href="http://example.com/2021/03/19/plan/"/>
-    <id>http://example.com/2021/03/19/plan/</id>
+    <link href="http://darren-dong.com/2021/03/19/plan/"/>
+    <id>http://darren-dong.com/2021/03/19/plan/</id>
     <published>2021-03-19T04:06:23.000Z</published>
     <updated>2021-04-08T00:49:49.616Z</updated>
     
@@ -278,17 +278,17 @@
     
     
     
-    <category term="log" scheme="http://example.com/categories/log/"/>
+    <category term="log" scheme="http://darren-dong.com/categories/log/"/>
     
     
-    <category term="plan" scheme="http://example.com/tags/plan/"/>
+    <category term="plan" scheme="http://darren-dong.com/tags/plan/"/>
     
   </entry>
   
   <entry>
     <title>introduction-to-Network</title>
-    <link href="http://example.com/2021/03/14/introduction-to-Networks/"/>
-    <id>http://example.com/2021/03/14/introduction-to-Networks/</id>
+    <link href="http://darren-dong.com/2021/03/14/introduction-to-Networks/"/>
+    <id>http://darren-dong.com/2021/03/14/introduction-to-Networks/</id>
     <published>2021-03-14T08:10:41.000Z</published>
     <updated>2021-04-08T12:02:40.801Z</updated>
     
@@ -305,17 +305,17 @@
     
     
     
-    <category term="others" scheme="http://example.com/categories/others/"/>
+    <category term="others" scheme="http://darren-dong.com/categories/others/"/>
     
     
-    <category term="cisco" scheme="http://example.com/tags/cisco/"/>
+    <category term="cisco" scheme="http://darren-dong.com/tags/cisco/"/>
     
   </entry>
   
   <entry>
     <title>Linux(basic)</title>
-    <link href="http://example.com/2021/03/13/Linux/"/>
-    <id>http://example.com/2021/03/13/Linux/</id>
+    <link href="http://darren-dong.com/2021/03/13/Linux/"/>
+    <id>http://darren-dong.com/2021/03/13/Linux/</id>
     <published>2021-03-13T12:57:21.000Z</published>
     <updated>2021-04-08T12:03:09.117Z</updated>
     
@@ -329,17 +329,17 @@
     
     
     
-    <category term="others" scheme="http://example.com/categories/others/"/>
+    <category term="others" scheme="http://darren-dong.com/categories/others/"/>
     
     
-    <category term="cisco" scheme="http://example.com/tags/cisco/"/>
+    <category term="cisco" scheme="http://darren-dong.com/tags/cisco/"/>
     
   </entry>
   
   <entry>
     <title>http协议基础</title>
-    <link href="http://example.com/2021/03/13/http/"/>
-    <id>http://example.com/2021/03/13/http/</id>
+    <link href="http://darren-dong.com/2021/03/13/http/"/>
+    <id>http://darren-dong.com/2021/03/13/http/</id>
     <published>2021-03-13T12:51:18.000Z</published>
     <updated>2021-04-08T12:02:53.528Z</updated>
     
@@ -354,15 +354,15 @@
     
     
     
-    <category term="web-back-end" scheme="http://example.com/categories/web-back-end/"/>
+    <category term="web-back-end" scheme="http://darren-dong.com/categories/web-back-end/"/>
     
     
   </entry>
   
   <entry>
     <title>正则表达式</title>
-    <link href="http://example.com/2021/03/10/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/"/>
-    <id>http://example.com/2021/03/10/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/</id>
+    <link href="http://darren-dong.com/2021/03/10/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/"/>
+    <id>http://darren-dong.com/2021/03/10/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/</id>
     <published>2021-03-10T05:15:54.000Z</published>
     <updated>2021-04-06T08:42:27.558Z</updated>
     
@@ -377,17 +377,17 @@
     
     
     
-    <category term="others" scheme="http://example.com/categories/others/"/>
+    <category term="others" scheme="http://darren-dong.com/categories/others/"/>
     
     
-    <category term="Regular expression" scheme="http://example.com/tags/Regular-expression/"/>
+    <category term="Regular expression" scheme="http://darren-dong.com/tags/Regular-expression/"/>
     
   </entry>
   
   <entry>
     <title>python</title>
-    <link href="http://example.com/2021/03/08/python/"/>
-    <id>http://example.com/2021/03/08/python/</id>
+    <link href="http://darren-dong.com/2021/03/08/python/"/>
+    <id>http://darren-dong.com/2021/03/08/python/</id>
     <published>2021-03-08T06:28:04.000Z</published>
     <updated>2021-04-18T00:25:04.787Z</updated>
     
@@ -402,17 +402,17 @@
     
     
     
-    <category term="python" scheme="http://example.com/categories/python/"/>
+    <category term="python" scheme="http://darren-dong.com/categories/python/"/>
     
     
-    <category term="python" scheme="http://example.com/tags/python/"/>
+    <category term="python" scheme="http://darren-dong.com/tags/python/"/>
     
   </entry>
   
   <entry>
     <title>git</title>
-    <link href="http://example.com/2021/03/06/git/"/>
-    <id>http://example.com/2021/03/06/git/</id>
+    <link href="http://darren-dong.com/2021/03/06/git/"/>
+    <id>http://darren-dong.com/2021/03/06/git/</id>
     <published>2021-03-06T12:33:45.000Z</published>
     <updated>2021-04-06T08:39:29.231Z</updated>
     
@@ -432,7 +432,7 @@
     
     
     
-    <category term="others" scheme="http://example.com/categories/others/"/>
+    <category term="others" scheme="http://darren-dong.com/categories/others/"/>
     
     
   </entry>
