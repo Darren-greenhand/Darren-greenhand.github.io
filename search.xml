@@ -26,9 +26,9 @@
 <p>远程</p>
 <p>git remote -v</p>
 <p>git remote remove origin</p>
-<p>git remote add origin <a href="mailto:&#x67;&#x69;&#x74;&#64;&#x67;&#x69;&#x74;&#104;&#x75;&#98;&#x2e;&#x63;&#x6f;&#109;">&#x67;&#x69;&#x74;&#64;&#x67;&#x69;&#x74;&#104;&#x75;&#98;&#x2e;&#x63;&#x6f;&#109;</a>:git_username/repository_name.git</p>
+<p>git remote add origin <a href="mailto:&#x67;&#105;&#x74;&#x40;&#103;&#x69;&#116;&#x68;&#x75;&#98;&#46;&#x63;&#111;&#109;">&#x67;&#105;&#x74;&#x40;&#103;&#x69;&#116;&#x68;&#x75;&#98;&#46;&#x63;&#111;&#109;</a>:git_username/repository_name.git</p>
 <p>git pull origin main –allow-unrelated-histories</p>
-<pre class="line-numbers language-none"><code class="language-none">git push -u origin mai<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-none"><code class="language-none">git push -u origin main<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>git push origin master</p>
 <p>git push -u origin main -f 强制push！！</p>
@@ -87,12 +87,18 @@ git branch -d &lt;name&gt;
 <p>我也确实挺喜欢机器学习的。。毕竟人工智能谁不喜欢呢。。</p>
 <p>可能需要同时学习一些偏底层的东西，为未来转方向做准备了。。。</p>
 <p>要不先学学后端？？？</p>
-<h2 id="第三次"><a href="#第三次" class="headerlink" title="第三次"></a>第三次</h2><p>转行竟然来得如此之快！</p>
+<h2 id="第三次"><a href="#第三次" class="headerlink" title="第三次"></a>第三次</h2><p>2021.4.10</p>
+<p>转行竟然来得如此之快！</p>
 <p>劳资终于不用挣扎在读研和就业的泥沼里了！</p>
 <p>我才不要一下就就业，我也不想整天处在鄙视链的底层，跟一堆没上过专科的一起工作</p>
 <p>劳资比起应用，还是也喜欢理论。</p>
 <p>就是数据挖掘算法工程师了。</p>
 <p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/%E7%AE%97%E6%B3%95%E5%B2%97%E8%B7%AF%E7%BA%BF.png" alt="算法岗路线"></p>
+<h1 id="第四次"><a href="#第四次" class="headerlink" title="第四次"></a>第四次</h1><p>2021.5.4</p>
+<p>今天是青年节啊，距离转行已经过去了将近20天，学了很多数据分析，大概懂了一些机器学习，但离入门还差得远，好在热情不减，这或许是我真正喜欢的东西吧，数据，智能，知识，宏观。</p>
+<p>未来估计就走上这条路了，和数据为伴的路，幸运的是我并不讨厌这个新朋友，近来有些被刺激，比如我电人工智能专业的课表着实伤到我心了，这个资源倾斜挺离谱的，但是这就是命运吧。。。好在我还有能改变的机会，互联网时代，我也能凭自己弄到甚至更好的资源！资源，数据，简直成为我的爱好了。</p>
+<p>值得一提的是我今日顿悟了，我的世界里突然出现了一大块”全新的“领域，所谓金融，理财，经济，众多曾被我嫌弃的词汇，忽地变得有趣了起来，我的辅助专业，可能就是金融或者经济了，谢谢半佛老师的视频，让我懂得了许多知识，尽管前途未卜，但是我将贯彻自己的兴趣，这条让我心动的路。</p>
+<p>先数据，再到金融，不一定是什么算法工程师，我也不知道会成为甚么样的人，但值得庆幸的是，我终于从完美主义的怪圈，从专业带来的束缚里挣脱出来了，即使身在软件专业，我能做的也远远不止敲代码，弄算法，这个世界充满无数可能，我们学院提供了非常充足的自学空间，而我，将利用这些自由向学弟学妹们证明，除了开发，运维，算法，还有一些全新的路。</p>
 ]]></content>
       <categories>
         <category>log</category>
@@ -3632,7 +3638,7 @@ R(config-line)# modem autoconfigure discovery   发现和自动配置连接到�
 <li>save + filename+ var 保存工作区 (或某些变量)</li>
 <li>clear 清空工作区   clc  清除命令行窗口</li>
 <li>load + filename + var 加载工作区(或某些变量)</li>
-<li>加分号会不输出结果，直接输入变量名会输出变量</li>
+<li><strong>加分号会不输出结果</strong>，直接输入变量名会输出变量</li>
 <li>内置了一些常量，pi为Π，虽然显示四位，但内部用高精度存储</li>
 <li>内置了一堆函数，如abs，eig（计算特征值）</li>
 <li>直接转换为虚数，在运算出现时</li>
@@ -3868,7 +3874,7 @@ data<span class="token punctuation">.</span>HeightMeters <span class="token oper
 <hr>
 <h1 id="大佬教程"><a href="#大佬教程" class="headerlink" title="大佬教程"></a>大佬教程</h1><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210409091948941.png" alt="image-20210409091948941"></p>
 <p>先看完前五节基础必看！后面是选学</p>
-<h2 id="基本操作和矩阵操作"><a href="#基本操作和矩阵操作" class="headerlink" title="基本操作和矩阵操作"></a>基本操作和矩阵操作</h2><p>第一步，把matlab当作基本的计算机</p>
+<h2 id="基本操作和矩阵输入"><a href="#基本操作和矩阵输入" class="headerlink" title="基本操作和矩阵输入"></a>基本操作和矩阵输入</h2><p>第一步，把matlab当作基本的计算机</p>
 <p>第二部，利用matlab进行矩阵运算</p>
 ]]></content>
       <categories>
@@ -5233,7 +5239,7 @@ deactivate<span aria-hidden="true" class="line-numbers-rows"><span></span><span>
 <p>L 是显示行号d</p>
 <p>双击D 可以删除单元格，Z撤销删除</p>
 <p>S 保存！</p>
-<p>最强的是C + S + P</p>
+<p>最强的是P</p>
 <p>打开万能的控制栏</p>
 <p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210410132647354.png" alt="image-20210410132647354"></p>
 <h2 id="魔术关键字"><a href="#魔术关键字" class="headerlink" title="*魔术关键字"></a>*魔术关键字</h2><p>Magic Keywords</p>
@@ -11141,5 +11147,155 @@ element<span class="token punctuation">.</span>style<span class="token punctuati
       <tags>
         <tag>css</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>sklearn-application.md</title>
+    <url>/2021/05/03/sklearn-application/</url>
+    <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>Copy一下大佬的总结！</p>
+<p><a href="https://blog.csdn.net/weixin_42186072/article/details/106669979">https://blog.csdn.net/weixin_42186072/article/details/106669979</a></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210428155209.png" alt="课程概览"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210428155220.png" alt="引入"></p>
+<h2 id="人工智能三学派"><a href="#人工智能三学派" class="headerlink" title="人工智能三学派"></a>人工智能三学派</h2><p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210426224228.png" alt="image-20210426224227762"></p>
+<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/20210426222525.png" alt="image-20210426222525560"></p>
+<p>那么仿制过程就像这样：</p>
+<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/20210426222631.png" alt="image-20210426222631384"></p>
+<h2 id="鸢尾花1"><a href="#鸢尾花1" class="headerlink" title="鸢尾花1"></a>鸢尾花1</h2><p>专家系统是理性的。（if case。）</p>
+<p>但是有些花农直接可以看出种类，因为他们见了太多，而且经验越丰富，识别准确率越高</p>
+<p>这是一种感性的直觉，是这门课介绍的神经网络方法</p>
+<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/20210426223114.png" alt="image-20210426223114751"></p>
+<hr>
+<p>具体实现</p>
+<p>MP模型，每个输入特征乘以线上的权重，再通过一个非线性函数输出，简化是去掉非线性函数</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210426224043.png" alt="image-20210426224042748"></p>
+<p>每个输出节点都链接了所有的输入关系，称为全连接网络</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210426224129.png" alt="image-20210426224129109"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210426224149.png" alt="image-20210426224149049"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210426224534.png" alt="image-20210426224533641"></p>
+<p>看一个例子</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210426225106.png" alt="image-20210426225106282"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210426225453.png" alt="image-20210426225453483"></p>
+<p>好神奇！原来这么简单</p>
+<h2 id="TF2"><a href="#TF2" class="headerlink" title="TF2"></a>TF2</h2><p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210426225602.png" alt="image-20210426225602306"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210426225705.png" alt="image-20210426225704756"></p>
+<p>数据类型：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210426225810.png" alt="image-20210426225810424"></p>
+<h3 id="创建张量"><a href="#创建张量" class="headerlink" title="创建张量"></a>创建张量</h3><p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210426230148.png" alt="image-20210426230148638"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210426230237.png" alt="image-20210426230237443"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210426230355.png" alt="image-20210426230355041"></p>
+<p>比如这个a的shape：第一个维度有俩元素，第二个维度有仨元素</p>
+<p>正态：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210426230717.png" alt="image-20210426230717430"></p>
+<p>均匀：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210426230844.png" alt="image-20210426230843745"></p>
+<h3 id="常用函数"><a href="#常用函数" class="headerlink" title="常用函数"></a>常用函数</h3><p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210428155247.png" alt="在这里插入图片描述"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210428155255.png" alt="在这里插入图片描述"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210426231026.png" alt="image-20210426231025877"></p>
+<p>axis = n 则表示处理n+1维的</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210426231330.png" alt="image-20210426231330288"></p>
+<p>所以tensorflow里的向量是列向量！</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210426231940.png" alt="image-20210426231939729"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210426232546.png" alt="image-20210426232546124"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210426232612.png" alt="image-20210426232612177"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210426232638.png" alt="image-20210426232638470"></p>
+<p><strong>配对特征和标签：</strong></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210426232859.png" alt="image-20210426232859750"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210426233027.png" alt="image-20210426233027400"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210426233321.png" alt="image-20210426233321529"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210426233504.png" alt="image-20210426233504518"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210426233858.png" alt="image-20210426233858363"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210426234107.png" alt="image-20210426234106875"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210426234243.png" alt="image-20210426234242794"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210426234353.png" alt="image-20210426234352747"></p>
+<p> 归一化：１）把数据变成(０，１)或者（1,1）之间的小数。主要是为了数据处理方便提出来的，把数据映射到0～1范围之内处理，更加便捷快速。２）把有量纲表达式变成无量纲表达式，便于不同单位或量级的指标能够进行比较和加权。归一化是一种简化计算的方式，即将有量纲的表达式，经过变换，化为无量纲的表达式，成为纯量。归一化/标准化实质是一种线性变换，线性变换有很多良好的性质，这些性质决定了对数据改变后不会造成“失效”，反而能提高数据的表现，这些性质是归一化/标准化的前提。比如有一个很重要的性质：线性变换不会改变原始数据的数值排序。</p>
+<p><a href="https://www.jianshu.com/p/95a8f035c86c">大佬链接</a></p>
+<p>参数自更新</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210426234507.png" alt="image-20210426234507351"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210426234621.png" alt="image-20210426234621653"></p>
+<h2 id="鸢尾花2"><a href="#鸢尾花2" class="headerlink" title="鸢尾花2"></a>鸢尾花2</h2><h3 id="数据读入"><a href="#数据读入" class="headerlink" title="数据读入"></a>数据读入</h3><p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210426235316.png" alt="image-20210426235316370"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210426235340.png" alt="image-20210426235340183"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210426235530.png" alt="image-20210426235530705"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210427092516.png" alt="image-20210427092508918"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210427093046.png" alt="image-20210427093045917"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210427093447.png" alt="image-20210427093446319"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210427093705.png" alt="image-20210427093704998"></p>
+<h1 id="预备知识"><a href="#预备知识" class="headerlink" title="预备知识"></a>预备知识</h1><p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210428155310.png" alt="第二章"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210427094602.png" alt="image-20210427094601274"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210427095155.png" alt="image-20210427095154111"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210427095313.png" alt="image-20210427095312159"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210427095555.png" alt="image-20210427095554858"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210427095925.png" alt="image-20210427095924361"></p>
+<h2 id="复杂度学习率"><a href="#复杂度学习率" class="headerlink" title="复杂度学习率"></a>复杂度学习率</h2><p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210427132521.png" alt="image-20210427132521189"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210427132837.png" alt="image-20210427132837285"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210427132843.png" alt="image-20210427132843385"></p>
+<h2 id="激活函数"><a href="#激活函数" class="headerlink" title="激活函数"></a>激活函数</h2><p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210427190842.png" alt="image-20210427190841912"></p>
+<p>从此神经网络可以随层数的增加提示表达能力了</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210427191332.png" alt="image-20210427191331703"></p>
+<h3 id="常见激活函数"><a href="#常见激活函数" class="headerlink" title="常见激活函数"></a>常见激活函数</h3><p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210427191556.png" alt="image-20210427191555569"></p>
+<p>因为从输出层向输入层逐层求导，每一层的导数都落在0-0.25，多了以后趋于0，称为梯度消失</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210427191737.png" alt="image-20210427191736628"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210427192058.png" alt="image-20210427192057509"></p>
+<p>通过调整初始化来避免“神经元死亡”，可以设置更小的学习率，减少参数分布的巨大变化，来👆</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210427192342.png" alt="image-20210427192341285"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210427192420.png" alt="image-20210427192419591"></p>
+<p>对零均值化的解释：</p>
+<p><a href="https://blog.csdn.net/wtrnash/article/details/87893725">https://blog.csdn.net/wtrnash/article/details/87893725</a></p>
+<h2 id="损失函数"><a href="#损失函数" class="headerlink" title="损失函数"></a>损失函数</h2><p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210427194702.png" alt="image-20210427194701731"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210427200949.png" alt="image-20210427200948436"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210427201314.png" alt="image-20210427201313381"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210427201845.png" alt="image-20210427201844108"></p>
+<h2 id="欠拟合和过拟合"><a href="#欠拟合和过拟合" class="headerlink" title="欠拟合和过拟合"></a>欠拟合和过拟合</h2><p>欠拟合是对现有数据集学习的不太彻底，拟合效果不好</p>
+<p>过拟合是对现有数据拟合的太好，却对新数据难以处理</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210427202023.png" alt="image-20210427202022905"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210427202203.png" alt="image-20210427202203477"></p>
+<p>ps：</p>
+<p>在机器学习的<a href="https://baike.baidu.com/item/%E4%B8%8A%E4%B8%8B%E6%96%87">上下文</a>中，超参数是在开始学习过程之前设置值的参数。 相反，其他参数的值通过训练得出。</p>
+<p>超参数：</p>
+<ul>
+<li>定义关于模型的更高层次的概念，如复杂性或学习能力。</li>
+<li>不能直接从标准模型培训过程中的数据中学习，需要预先定义。</li>
+<li>可以通过设置不同的值，训练不同的模型和选择更好的测试值来决定</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210427202855.png" alt="image-20210427202854377"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210427203023.png" alt="image-20210427203022383"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210427204015.png" alt="image-20210427204014435"></p>
+<p>把区分0和1的分界线0.5标出颜色</p>
+<h2 id="优化器"><a href="#优化器" class="headerlink" title="优化器"></a>优化器</h2><p>神经网络参数优化器</p>
+<p>当<strong>网络结构固定后</strong>（达到学龄的孩子脑结构大致相仿），不同参数的选取（不同的引导方法）对模型的表达力影响很大，（成年达到高度不同）</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210427212011.png" alt="image-20210427212002917"></p>
+<h3 id="常用的优化器"><a href="#常用的优化器" class="headerlink" title="常用的优化器"></a>常用的优化器</h3><p>gt是梯度</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210427212319.png" alt="image-20210427212319347"></p>
+<hr>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210427212651.png" alt="image-20210427212650534"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210427212820.png" alt="image-20210427212819603"></p>
+<hr>
+<p>通过增加了一个二阶动量</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210427212903.png" alt="image-20210427212902304"></p>
+<p>移动平均-&gt;指数滑动平均：</p>
+<p>指数平滑法是在<a href="https://baike.baidu.com/item/%E7%A7%BB%E5%8A%A8%E5%B9%B3%E5%9D%87%E6%B3%95/10785547">移动平均法</a>基础上发展起来的，它具有移动平均法的优点，又可以减少运算过程中的数据储存量，同时还考虑了不同时期的数据所起的不同作用。采用指数平滑法的关键是确定α值。一般情况下，α值的大小，既和反映近期数据的能力有关，也和数据波动状况有关。通常不直接利用一次指数平滑法来预测，而是利用二次指数平滑法，求出平滑系数，建立起预测模型，再进行预测</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210427213327.png" alt="image-20210427213326655"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210427213358.png" alt="image-20210427213357398"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210427213417.png" alt="image-20210427213415984"></p>
+<h1 id="八股文！"><a href="#八股文！" class="headerlink" title="八股文！"></a>八股文！</h1><p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210428155317.png" alt="第三章"></p>
+<p>使用keras搭建</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210427213648.png" alt="image-20210427213647692"></p>
+<h2 id="Sequential"><a href="#Sequential" class="headerlink" title="Sequential"></a>Sequential</h2><p>六步：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210428155521.png" alt="image-20210428155453398"></p>
+<p><strong>导入，设定训练、测试集，前向传播，配置训练方法，执行训练过程，打印网络结构和参数统计</strong></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210428155749.png" alt="image-20210428155635348"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210428155802.png" alt="image-20210428155713205"></p>
+<p>入门先写名字，牛逼了再去官网查看函数用法，调整超参数</p>
+<p>注意from_logits判断是否经过了概率分布，后面经常使用sparse_categorical_accuracy</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210428160240.png" alt="image-20210428160225553"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210428161322.png" alt="image-20210428160233012"></p>
+<p>其中设置图形级随机数可以看这个：</p>
+<p><a href="https://zhuanlan.zhihu.com/p/109238035?from_voters_page=true">https://zhuanlan.zhihu.com/p/109238035?from_voters_page=true</a></p>
+<h2 id="class"><a href="#class" class="headerlink" title="class"></a>class</h2><p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210428172612.png" alt="image-20210428162339160"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210428172607.png" alt="image-20210428162646672"></p>
+<p>param = (输入+1)*输出    1是因为bias(偏差？)</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210428170337.png" alt="image-20210428170337212"></p>
+]]></content>
+      <categories>
+        <category>ML</category>
+      </categories>
   </entry>
 </search>
