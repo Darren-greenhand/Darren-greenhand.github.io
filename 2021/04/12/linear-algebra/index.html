@@ -236,7 +236,7 @@
 <script src="/libs/cryptojs/crypto-js.min.js"></script>
 <script>
     (function() {
-        let pwd = '081ff8678bf01c98dcc2028de5e6a136d66cc6784b336923e6c2018f4a2f4cf5';
+        let pwd = '';
         if (pwd && pwd.length > 0) {
             if (pwd !== CryptoJS.SHA256(prompt('密码是简单的8位数字（我的宿舍号是？）')).toString(CryptoJS.enc.Hex)) {
                 alert('加载内容....');
@@ -402,7 +402,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-04-20
+                    2021-05-10
                 </div>
                 
 
@@ -434,8 +434,7 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="序言"><a href="#序言" class="headerlink" title="序言"></a>序言</h1><p>为了学机器学习，重拾已经快忘干净的线代，接着上学期看的MIT，从头开始看起，没有考试的压力，单纯的探索线代世界，实在是太快乐了！而从中发现的诸多新鲜的，被忽略的知识，更是让人相见恨晚。</p>
-<h1 id="MIT"><a href="#MIT" class="headerlink" title="MIT"></a>MIT</h1><h2 id="1-方程组的几何解释"><a href="#1-方程组的几何解释" class="headerlink" title="1.方程组的几何解释"></a>1.方程组的几何解释</h2><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210412124757970.png" alt="image-20210412124757970" style="zoom:33%;" />
+                <h1 id="MIT"><a href="#MIT" class="headerlink" title="MIT"></a>MIT</h1><h2 id="1-方程组的几何解释"><a href="#1-方程组的几何解释" class="headerlink" title="1.方程组的几何解释"></a>1.方程组的几何解释</h2><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210412124757970.png" alt="image-20210412124757970" style="zoom:33%;" />
 
 <p>老师给出了方程组（n维）按行来解和按列来解完全不一样的几何意义</p>
 <p>按行：</p>
@@ -495,10 +494,10 @@
 <p>第五种，分块相乘，他并没有过多解释，好像在他眼里。。这跟普通矩阵性质一样的。</p>
 <hr>
 <p>可逆就是非奇异！invertible  non-singular</p>
-<p>为什么没有逆！3B1B的解释非常清晰，维度是不可能升高的</p>
+<p>为什么没有逆！3B1B的解释了，维度是不可能升高的</p>
 <p>他从单位矩阵出发分析，[1 3 / 2 6]这构成一条线，而单位向量不在这条线上</p>
 <p>另一个解释，如果存在向量X使得AX = 0，但是X不是0向量，那样总能成立<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210412185525071.png" alt="image-20210412185525071"></p>
-<p>如果有逆，左右×一个逆，得出x为0，与x不为0相悖，看来这么课也不是像3B1B一样那么痴迷几何</p>
+<p>如果有逆，左右×一个逆，得出x为0，与x不为0相悖，看来这么课也不是像3B1B一样那么纯几何</p>
 <p><strong>因为A -&gt; 0时其列能通过线性组合（非零向量0）得到0，但是不可逆矩阵只可以通过0来达到</strong></p>
 <p>但是也必须提个醒，不能太依赖几何，更高深的问题抽象程度太高，难以借用几何</p>
 <p>现在继续回到可逆情况，可以通过第一节学的方法快速解决，解n（此处2）个方程罢了</p>
@@ -599,10 +598,10 @@
 <p>而且这里四个方程，3个未知数，通常我们认为此时无解，但是</p>
 <p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210412211759888.png" alt="image-20210412211759888"></p>
 <p>今天的问题就是取怎样的b能符合这种👆</p>
-<p>b为0当然是一个解，而实际情况是当且仅当b属于A的列空间，即b是各列的线性组合，这也是为啥老师喜欢列空间，这能告诉我们何时方程有解。淦，他竟然讲了independent 线性无关卧槽</p>
+<p>b为0当然是一个解，而实际情况是当且仅当b属于A的列空间，即b是各列的线性组合，这也是为啥老师喜欢列空间，这能告诉我们何时方程有解。他竟然讲了independent 线性无关</p>
 <p>这里可以描述为<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210412212443287.png" alt="image-20210412212443287" style="zoom:33%;" /></p>
 <hr>
-<p>现在讲零空间嘿嘿，这是一种<strong>完全不同</strong>的子空间！Nullspace</p>
+<p>现在讲零空间，这是一种<strong>完全不同</strong>的子空间！Nullspace</p>
 <p>它不包含b，它包含x，看看这个关键字“零”，因此它包含Ax = 0中所有的解</p>
 <img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210412212655491.png" alt="image-20210412212655491" style="zoom:50%;" />
 
@@ -625,7 +624,7 @@
 <li>从向量出发，通过线性组合构筑向量空间</li>
 <li>也可以从一个方程组中，通过让x满足特定条件来得到子空间</li>
 </ol>
-<p>终于理解了。。当年咋都看不懂，不要死扣几何意义。。真的信我。。诱人但坑人</p>
+<p>终于理解了。。当年咋都看不懂，不要死扣几何意义。</p>
 <h2 id="7-求解AX-0主变量-特解"><a href="#7-求解AX-0主变量-特解" class="headerlink" title="7.求解AX = 0主变量 特解"></a>7.求解AX = 0主变量 特解</h2><p>这节课是定义到算法的转折</p>
 <p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210412214959512.png" alt="image-20210412214959512"></p>
 <p>还是消元，不过是长方形，所以即使出现0⚪我们仍要继续</p>
@@ -649,10 +648,10 @@
 
 <p><strong>典型在I 是个R X R矩阵   则Rx = 0  这里求解构造一个“零空间矩阵”N，各列由特解组成，即RN=0</strong></p>
 <p>显然<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210412222327626.png" alt="image-20210412222327626" style="zoom:33%;" />可以达到目的，但如果左边写成[主元 自由]  那N的上面就是-F 下面是主元<strong>而这也正是特解（由自由变的和主的组成）构成的矩阵</strong>，该矩阵可由null（）求出</p>
-<p><strong>Matlab</strong>先算出R，然后找出主变量和自由变量，将1和0分配到自由变量中，复制出主变量，他会使用回代（I是单位阵，<strong>F是自由部分</strong>）得到这个矩阵很迷，<strong>因为I F其实是 两种x的特殊形式吧</strong>，本来左边也应该写成俩个x，然后推出右边，但是左边可以等效化成这个好形式，那再好不过了</p>
+<p><strong>Matlab</strong>先算出R，然后找出主变量和自由变量<strong>，将1和0分配到自由变量中</strong>，复制出主变量，他会使用回代（I是单位阵，<strong>F是自由部分</strong>）这里理解x主元和x自由元。。。。其实是因为这是对应的，x主元对应前面那个矩阵的I部分。。不是什么神奇的东西。。</p>
 <img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210412222807202.png" alt="image-20210412222807202" style="zoom:50%;" />
 
-<p>这是回代的最终结果。意味着<strong>主变量(一条) + F乘自由变量(一条) = 0(主变量总数+自由变量总数 = n)<strong>（卧槽我懂了，x那一列里面有自由变量，也有不能变，要求的主变量）（这里每项都是矩阵）如果我们给xfree（自由变量）分配</strong>单位阵，那么主变量就等于 -F</strong>，下个例子就是这样干的</p>
+<p>这是回代的最终结果。意味着<strong>主变量(一条) + F乘自由变量(一条) = 0(主变量总数+自由变量总数 = n)<strong>（x那一列里面有自由变量，也有不能变，要求的主变量）（这里每项都是矩阵）如果我们给xfree（自由变量）分配</strong>单位阵，那么主变量就等于 -F</strong>，下个例子就是这样干的</p>
 <p>矩阵主列的个数与其转置相同，秩相同，举个例子</p>
 <p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210412224133262.png" alt="image-20210412224133262"></p>
 <p>然后给自由变量赋值，这里是x[]最下面那个，<strong>如果赋0，则主变量都为0没啥意义，还是给1</strong></p>
@@ -902,7 +901,7 @@
 
 <p>A和 -A有相同的四个子空间</p>
 <p>如果A 和 B有相同的四个子空间，那么A是B的倍数</p>
-<p>所有满秩方阵都可以。显然是错的</p>
+<p>所有满秩方阵都可逆。显然是错的</p>
 <p>交换矩阵的两行，行空间和零空间没变，其他的变了</p>
 <img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210415120710838.png" alt="image-20210415120710838" style="zoom:50%;" />
 
@@ -965,7 +964,7 @@
 
 <img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210415211808092.png" alt="image-20210415211808092" style="zoom:50%;" />
 
-<p>p是b在a上的投影，e是b和p间的误差，如果引入角度，会导出很复杂的公式，p在a的子空间内，我们要找的就是那个x使得p = xa  关键是垂直a垂直于e</p>
+<p>p是b在a上的投影，e是b和p间的误差，如果引入角度，会导出很复杂的公式，p在a的子空间内，我们要找的就是那个x使得p = xa  关键是a垂直于e</p>
 <img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210415211946824.png" alt="image-20210415211946824" style="zoom:67%;" />
 
 <p>导出两个关键式子：</p>
@@ -1425,30 +1424,30 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/04/10/data-analyze/">
+                <a href="/2021/04/12/%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0/">
                     <div class="card-image">
                         
-                        <img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/data-4570804_1920.jpg" class="responsive-img" alt="data-analyze">
+                        <img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210514130255.jpg" class="responsive-img" alt="复变函数和积分应用">
                         
-                        <span class="card-title">data-analyze</span>
+                        <span class="card-title">复变函数和积分应用</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            利用python进行数据分析，其实是入门级别的python库学习
+                            学着MIT矩阵，结果蹦出来几个单位根，人都傻了，来补一补复变函数，MIT线代停更了，找到了大佬的笔记
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-04-10
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-04-12
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/python/" class="post-category">
-                                    python
+                            <a href="/categories/math/" class="post-category">
+                                    math
                                 </a>
                             
                             
@@ -1458,8 +1457,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/python-data/">
-                        <span class="chip bg-color">python-data</span>
+                    <a href="/tags/%E5%A4%8D%E5%8F%98/">
+                        <span class="chip bg-color">复变</span>
                     </a>
                     
                 </div>
@@ -1699,7 +1698,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">175.9k</span>&nbsp;字
+                class="white-color">176k</span>&nbsp;字
             
             
             
