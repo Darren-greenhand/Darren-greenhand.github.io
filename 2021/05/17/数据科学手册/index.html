@@ -1,0 +1,1636 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+    <meta name="keywords" content="数据科学手册, 思考人类的蝼蚁">
+    <meta name="description" content="willing to enter the field of god">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>数据科学手册 | 思考人类的蝼蚁</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="思考人类的蝼蚁" type="application/atom+xml"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</head>
+
+
+
+
+ <script type="text/javascript" src="/libs/others/sakura.js"></script> 
+
+	
+ <script type="text/javascript">
+        var OriginTitile = document.title, st;
+        document.addEventListener("visibilitychange", function () {
+            document.hidden ? (document.title = "短暂的离别，是为了更好的相遇", clearTimeout(st)) : (document.title = "一隅于浮华，荧惑下天星", st = setTimeout(function () { document.title = OriginTitile }, 3e3))
+        }) 
+    </script>
+	
+<body>
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">思考人类的蝼蚁</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">思考人类的蝼蚁</div>
+        <div class="logo-desc">
+            
+            willing to enter the field of god
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+    </nav>
+
+</header>
+
+    
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('密码是简单的8位数字（我的宿舍号是？）')).toString(CryptoJS.enc.Hex)) {
+                alert('加载内容....');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
+
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210521204428.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">数据科学手册</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        padding: 35px 0 15px 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        padding-bottom: 30px;
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/data-sience/">
+                                <span class="chip bg-color">data-sience</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/data/" class="post-category">
+                                data
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2021-05-17
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2021-05-21
+                </div>
+                
+
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    21 分
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.css">
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1 id="前言和环境"><a href="#前言和环境" class="headerlink" title="前言和环境"></a>前言和环境</h1><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210510110540.png" alt="查看源图像" style="zoom:50%;" />
+
+<p>我的路线：</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210521204300.png" alt="数据科学之路" style="zoom:25%;" />
+
+<h2 id="ipython"><a href="#ipython" class="headerlink" title="ipython"></a>ipython</h2><p>？和？？    ？还可以用于魔法指令</p>
+<p>Tab补全，配合通配符 * 使用</p>
+<p><strong>快捷键</strong></p>
+<p>C + a/e </p>
+<p>C + u/k 剪掉前面，后面</p>
+<p>C + t 交换前两个字符，怪毙了</p>
+<p>C + r对历史反向搜索，继续ctrl+r往前匹配下一个，找到后回车</p>
+<p>C + l/c/d</p>
+<p><strong>Pycharm</strong></p>
+<p>C + R 是替换</p>
+<p> <strong>魔法指令</strong></p>
+<p>行魔法 %</p>
+<p>单元魔法 %%，用于处理多行输入比如%%timeit</p>
+<p>In是一个列表，记录了历史命令</p>
+<p><strong>Out是一个字典</strong>，将输入的索引对应起输出，很多命令没有输出（None），则不会被记录</p>
+<p>Out[x] 的简写是_x</p>
+<p>print(_) 一二三条下划线对应倒数第几个历史输出，这个厉害</p>
+<p>但是如果输入的最后加上；就不会被添加到历史，也不会把输出显示出来，这样当其他引用被删除时，该空间可以被释放。</p>
+<p><strong>shell</strong></p>
+<p>很多教材说是用 ! 加shell指令，但是pycharm全是%呀</p>
+<p>可以用赋值将任何shell命令的输出保存到一个python列表，这是一个长得像列表的特殊返回类型</p>
+<p>在shell里面用{varname}来调用变量</p>
+<p><strong>调试</strong></p>
+<p>%xmode Plain/Context/Verbose</p>
+<p>plain只会输出函数和行号，context是默认，会显示出错行上下几行代码，verbose还会显示每一级的参数和出错位置的变量值，好方便</p>
+<p>标准调试工具pdb Ipython增强版ipdb，ipython专用</p>
+<p>还有个很方便的%debug魔法指令，在最近的异常点打开一个交互式调试指令符（是用了ipdb）</p>
+<p>%pdb on 会在抛出异常时自动启动，pdb有 up down 等命令配合print来检查</p>
+<p>有一些常用调试命令：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token builtin">list</span> 显示路径
+h<span class="token punctuation">(</span><span class="token builtin">help</span><span class="token punctuation">)</span> 显示命令列表
+q<span class="token punctuation">(</span>uit<span class="token punctuation">)</span> 退出调试器和程序
+c<span class="token punctuation">(</span>ontinue<span class="token punctuation">)</span> 推出调试器，继续程序
+n<span class="token punctuation">(</span>ext<span class="token punctuation">)</span> 跳到程序下一步
+<span class="token operator">&lt;</span>enter<span class="token operator">></span> 重复前一个命令
+p<span class="token punctuation">(</span>rint<span class="token punctuation">)</span> 打印变量
+s<span class="token punctuation">(</span>tep<span class="token punctuation">)</span> 步入子进程
+r<span class="token punctuation">(</span>eturn<span class="token punctuation">)</span> 从子进程跳出<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<p><strong>代码的分析与计时</strong></p>
+<p>“大约百分之97的时间，我们应该忘记微小的效率差别；过早优化是不被推荐的”</p>
+<p>但是当代码跑起来后，提高运行效率是有用的</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token operator">%</span>time 对单个语句的执行时间进行计时<span class="token punctuation">(</span>适合不可重复的，或者时间较长的<span class="token punctuation">)</span>
+<span class="token operator">%</span>timeit 对单个语句的重复执行进行计时，以获得更高的精确度<span class="token punctuation">(</span>但需要保证可重复性，别对排序这样干<span class="token punctuation">)</span>
+在进行相同操作时，timeit总是比time更快，因为timeit在底层采取了一些措施组织系统调用对计时过程的干扰，例如阻止清理未利用的python对象。
+
+👇需要安装line_profiler 和 memory_profiler 拓展
+python包含一个内置的代码分析器，可以通过魔法指令👇简单的调用
+<span class="token operator">%</span>prun 使用分析器运行代码，输出一个时间报告
+<span class="token operator">%</span>lprun 使用逐行分析器运行代码，逐行分析
+<span class="token operator">%</span>memit 测量单个语句的内存使用
+<span class="token operator">%</span>mprun 使用逐行的内存分析器运行代码<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>%%file 来写一个简单的模块文件</p>
+<h1 id="Numpy"><a href="#Numpy" class="headerlink" title="Numpy"></a>Numpy</h1><p>将异构的各种数据都看成数组，第一步将这些数据转化成数值数组形式的可分析数据。</p>
+<p>绝对基础：有效存储数据，操作数值数组</p>
+<h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><p>python<strong>整形</strong>实质：c的一个结构。</p>
+<p>python的整形其实是一个指针，它的结构体里包含了大量额外信息，所以可以自由，动态编码，但也会成为负担。</p>
+<p>python<strong>列表</strong>实质：指向一个指针域，域里的每一个指针指向一个确切的对象</p>
+<p>numpy牺牲了这一点，指向一块类似C的域</p>
+<h2 id="数组基础"><a href="#数组基础" class="headerlink" title="数组基础"></a>数组基础</h2><h3 id="创建"><a href="#创建" class="headerlink" title="创建"></a>创建</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">np<span class="token punctuation">.</span>array<span class="token punctuation">(</span>手打<span class="token punctuation">)</span>
+np<span class="token punctuation">.</span>zeros<span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span>dtype <span class="token operator">=</span> <span class="token builtin">int</span><span class="token punctuation">)</span><span class="token operator">/</span>ones<span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">,</span>dtype <span class="token operator">=</span> <span class="token builtin">float</span><span class="token punctuation">)</span><span class="token operator">/</span>full<span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token number">3.14</span><span class="token punctuation">)</span>
+np<span class="token punctuation">.</span>arange<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">10</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token comment">#左闭右开 默认int</span>
+np<span class="token punctuation">.</span>linspace<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">8</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token comment">#左闭右闭 默认float</span>
+np<span class="token punctuation">.</span>random<span class="token punctuation">.</span>random<span class="token punctuation">(</span><span class="token punctuation">(</span>shape<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token comment"># 0~1均匀分布</span>
+np<span class="token punctuation">.</span>random<span class="token punctuation">.</span>normal<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token punctuation">(</span>shape<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token comment"># 均值 方差 shape</span>
+np<span class="token punctuation">.</span>random<span class="token punctuation">.</span><span class="token builtin">int</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">10</span><span class="token punctuation">,</span><span class="token punctuation">(</span>shape<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token comment">#左闭右开</span>
+np<span class="token punctuation">.</span>eye<span class="token punctuation">(</span>n<span class="token punctuation">)</span> <span class="token comment">#n单位矩阵</span>
+np<span class="token punctuation">.</span>empty<span class="token punctuation">(</span>shape<span class="token punctuation">)</span> <span class="token comment">#未初始化的数组，数组值是内存空间中的任意值</span>
+还有各种_alike<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>dtype可以用字符串参数或者相关的Numpy对象来指定。</p>
+<p>标准类型大概有bool_ int类 float类 complex类  可以查一查，还有更高级的数据类型指定P35</p>
+<h3 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h3><p>ndim 维度  shape 形状（维度大小）   size 元素个数（数组大小）</p>
+<p>dtype 数据类型   itemsize 每个元素的字节大小   nbytes  总字节大小</p>
+<h3 id="索引切片"><a href="#索引切片" class="headerlink" title="索引切片"></a>索引切片</h3><p>与python类似，更改元素时自动发生类型变换</p>
+<p>获取第一列x2[: , 0]</p>
+<p>获取第一行x2[0 , :] #获取行时其实可以省略</p>
+<p><strong>切片返回的是视图</strong>，copy是复制，这意味着可以处理大型数据集的片段而不用花费额外的内存</p>
+<h3 id="变形"><a href="#变形" class="headerlink" title="变形"></a>变形</h3><p>.reshape() 大小必须一致</p>
+<p>或者在索引中使用newaxis 关键字，插入一个新维度，不过记得要加上前缀，即np.newaxis</p>
+<p><strong>拼接</strong></p>
+<p><strong>np.concatenate</strong>(默认沿着第一个轴) #二维就是列，用axis  = 1 可以改成行</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">grid <span class="token operator">=</span> np<span class="token punctuation">.</span>array<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+                 <span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">6</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+np<span class="token punctuation">.</span> concatenate<span class="token punctuation">(</span><span class="token punctuation">[</span>grid<span class="token punctuation">,</span>grid<span class="token punctuation">]</span><span class="token punctuation">,</span>axis <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">)</span>
+array<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+      <span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">6</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">6</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>前三维可以用<strong>np.vstack(垂直) np.hstack(水平) np.dstack(第三维)</strong> 来拼接</p>
+<p><strong>分裂</strong></p>
+<p>np.split(x, [3,5])#后面那个数组记录的是分裂点的位置，如果是3，那就在索引2（第3个元素）和3间断开，返回一个子元组</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">In <span class="token punctuation">[</span><span class="token number">12</span><span class="token punctuation">]</span><span class="token punctuation">:</span> grid
+Out<span class="token punctuation">[</span><span class="token number">12</span><span class="token punctuation">]</span><span class="token punctuation">:</span> 
+array<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">[</span> <span class="token number">0</span><span class="token punctuation">,</span>  <span class="token number">1</span><span class="token punctuation">,</span>  <span class="token number">2</span><span class="token punctuation">,</span>  <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+       <span class="token punctuation">[</span> <span class="token number">4</span><span class="token punctuation">,</span>  <span class="token number">5</span><span class="token punctuation">,</span>  <span class="token number">6</span><span class="token punctuation">,</span>  <span class="token number">7</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+       <span class="token punctuation">[</span> <span class="token number">8</span><span class="token punctuation">,</span>  <span class="token number">9</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">11</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+       <span class="token punctuation">[</span><span class="token number">12</span><span class="token punctuation">,</span> <span class="token number">13</span><span class="token punctuation">,</span> <span class="token number">14</span><span class="token punctuation">,</span> <span class="token number">15</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+In <span class="token punctuation">[</span><span class="token number">8</span><span class="token punctuation">]</span><span class="token punctuation">:</span> x1<span class="token punctuation">,</span>x2<span class="token punctuation">,</span>x3 <span class="token operator">=</span> np<span class="token punctuation">.</span>split<span class="token punctuation">(</span>grid<span class="token punctuation">,</span><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+In <span class="token punctuation">[</span><span class="token number">9</span><span class="token punctuation">]</span><span class="token punctuation">:</span> x1
+Out<span class="token punctuation">[</span><span class="token number">9</span><span class="token punctuation">]</span><span class="token punctuation">:</span> 
+array<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+       <span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+In <span class="token punctuation">[</span><span class="token number">10</span><span class="token punctuation">]</span><span class="token punctuation">:</span> x2
+Out<span class="token punctuation">[</span><span class="token number">10</span><span class="token punctuation">]</span><span class="token punctuation">:</span> array<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">[</span> <span class="token number">8</span><span class="token punctuation">,</span>  <span class="token number">9</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">11</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+<span class="token comment">#np.hsplit 和 np.vsplit 和 np.dsplit 差不多，记得后面那里要用索引列表</span>
+upper<span class="token punctuation">,</span>lower <span class="token operator">=</span> np<span class="token punctuation">.</span>vsplit<span class="token punctuation">(</span>grid<span class="token punctuation">,</span><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token comment">#上下四行均分成两行</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h2 id="通用函数"><a href="#通用函数" class="headerlink" title="通用函数"></a>通用函数</h2><p>Numpy高效的关键是采用 <strong>向量化</strong> 操作，通常用通用函数实现——提高了数组元素重复计算的效率</p>
+<p>Python灵活的数据类型导致序列操作不能被编译成有效的机器码，所以循环操作超级慢</p>
+<p>很多方案试图解决，比如Cpython，Cython，LLVM字节码，但是Cpython是最流行的</p>
+<p>Cpython的主要瓶颈在于每次循环时必须做数据类型检查和函数的调度。</p>
+<p><strong>Numpy为许多类型的操作提供了方便，静态，可编译程序的接口，被称为向量操作。这将被循环推送至Numpy下的编译层。</strong></p>
+<p>只要看到python脚本有循环，就可以考虑能否用向量替代。</p>
+<p>通用函数有两种形式，一元和二元。</p>
+<p>python原生的算术运算符被重构了，相当于调用一些通用函数，比如 * 相当于 np.mulitiply</p>
+<p><code> + - * /  //  **  %</code>都被重构了，还有布尔/位运算符</p>
+<p>Numpy可以理解python内置的绝对值函数 abs(x)，对应的是np.absolute 或者别名np.abs，但这个numpy的处理复数时返回幅值。</p>
+<p>三角函数：sin cos tan arcsin arccos acrtan  还有很多别的</p>
+<p>指对数：exp exp2(2^)  power(底数，操作的数组x)       ||log  log2  log10</p>
+<p>还有专门用来处理小量的：np.expm1(x)  == exp(x) - 1               np.log1p(x)  == log(1+x)   #在x很小时精度较高</p>
+<p>还有很多双曲三角啊，比特位运算，比较运算，弧度角度转化等等等。可以查<a target="_blank" rel="noopener" href="https://numpy.org/">文档</a></p>
+<p>还有一个更专用的子模块scipy.special 里面有一堆牛逼函数比如伽马（广义阶乘）， 高斯积分啥的，可以搜索xxx function python</p>
+<h3 id="高级特性"><a href="#高级特性" class="headerlink" title="高级特性"></a>高级特性</h3><p><strong>指定输出</strong></p>
+<p>有一个out参数指定输出结果的存放位置，此时不创建临时数组，对于较大的数据能有效节约内存</p>
+<p><strong>聚合</strong></p>
+<p><strong>二元通用函数</strong>有些非常有趣的聚合功能，可以直接在对象上计算，会对给定的元素和操作重复执行，直到得到单个结果，这是任何通用函数都有的方法</p>
+<p>比如reduce</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">x <span class="token operator">=</span> np<span class="token punctuation">.</span>arange<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">6</span><span class="token punctuation">)</span>
+np<span class="token punctuation">.</span>add<span class="token punctuation">.</span><span class="token builtin">reduce</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span>
+x <span class="token operator">==</span> <span class="token number">15</span> <span class="token operator">-</span><span class="token operator">-</span><span class="token boolean">True</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>如果需要存储每次计算的中间结果，可以使用accumulate，项数不会变，但是除了第一项其他依次被处理</p>
+<p>np.add.accumulate(x)     –array([1,3,6,10,15])</p>
+<p><strong>外积</strong></p>
+<p>任何输入函数都可以使用<strong>outer</strong>方法获得 两个不同输入数组 <strong>所有元素对</strong> 的函数运算结果</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">In <span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">:</span> x <span class="token operator">=</span> np<span class="token punctuation">.</span>arange<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">6</span><span class="token punctuation">)</span>
+In <span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">:</span> np<span class="token punctuation">.</span>multiply<span class="token punctuation">.</span>outer<span class="token punctuation">(</span>x<span class="token punctuation">,</span>x<span class="token punctuation">)</span>
+Out<span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">:</span> 
+array<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">[</span> <span class="token number">1</span><span class="token punctuation">,</span>  <span class="token number">2</span><span class="token punctuation">,</span>  <span class="token number">3</span><span class="token punctuation">,</span>  <span class="token number">4</span><span class="token punctuation">,</span>  <span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+       <span class="token punctuation">[</span> <span class="token number">2</span><span class="token punctuation">,</span>  <span class="token number">4</span><span class="token punctuation">,</span>  <span class="token number">6</span><span class="token punctuation">,</span>  <span class="token number">8</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+       <span class="token punctuation">[</span> <span class="token number">3</span><span class="token punctuation">,</span>  <span class="token number">6</span><span class="token punctuation">,</span>  <span class="token number">9</span><span class="token punctuation">,</span> <span class="token number">12</span><span class="token punctuation">,</span> <span class="token number">15</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+       <span class="token punctuation">[</span> <span class="token number">4</span><span class="token punctuation">,</span>  <span class="token number">8</span><span class="token punctuation">,</span> <span class="token number">12</span><span class="token punctuation">,</span> <span class="token number">16</span><span class="token punctuation">,</span> <span class="token number">20</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+       <span class="token punctuation">[</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">15</span><span class="token punctuation">,</span> <span class="token number">20</span><span class="token punctuation">,</span> <span class="token number">25</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<p>更多的通用函数信息可以在Numpy和SciPy的文档网站查到</p>
+<h3 id="聚合"><a href="#聚合" class="headerlink" title="聚合"></a>聚合</h3><p>在处理大量数据的时候第一步通常是计算相关概率的概括统计值，比如最常用的均值和方差。</p>
+<p>Numpy又快速的内置聚合函数可用于数组，如下：</p>
+<p>np.sum 和内置的sum都可以起作用，但是numpy的sum再编译码中运行，所以操作更快，而且注意不要混淆，他们的参数有不同的意义，np.sum函数是知道数组的维度的</p>
+<p>np.min  max啥的，还有一种更简洁的语法是数组对象直接调用这些方法: x.min()  x.sum()</p>
+<p><strong>多维度聚合</strong></p>
+<p>可以用axis指定处理的维度，但是要注意，这个指定的是数组将会被折叠的维度，而不是要返回的维度，比如说axis = 0 意味着第一个轴（二维数组的列）将要被折叠。</p>
+<p>numpy有很多内置的聚合函数，大多数聚合都有对NaN的安全处理策略，即计算的时候忽略所有缺失值。</p>
+<pre class="line-numbers language-py" data-language="py"><code class="language-py">np<span class="token punctuation">.</span><span class="token builtin">sum</span>  np<span class="token punctuation">.</span>nansum
+np<span class="token punctuation">.</span>prod np<span class="token punctuation">.</span>nanprod 积
+np<span class="token punctuation">.</span>mean  平均值
+std  标准差
+var  方差
+<span class="token builtin">min</span> <span class="token builtin">max</span>  最小最大
+argmin argmax 最小最大
+median  中位数
+
+percentile  基于元素排序的统计值<span class="token punctuation">,</span>例子如下
+In <span class="token punctuation">[</span><span class="token number">7</span><span class="token punctuation">]</span><span class="token punctuation">:</span> x
+Out<span class="token punctuation">[</span><span class="token number">7</span><span class="token punctuation">]</span><span class="token punctuation">:</span> array<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+In <span class="token punctuation">[</span><span class="token number">8</span><span class="token punctuation">]</span><span class="token punctuation">:</span> np<span class="token punctuation">.</span>percentile<span class="token punctuation">(</span>x<span class="token punctuation">,</span><span class="token number">75</span><span class="token punctuation">)</span>
+Out<span class="token punctuation">[</span><span class="token number">8</span><span class="token punctuation">]</span><span class="token punctuation">:</span> <span class="token number">4.0</span>
+In <span class="token punctuation">[</span><span class="token number">9</span><span class="token punctuation">]</span><span class="token punctuation">:</span> np<span class="token punctuation">.</span>percentile<span class="token punctuation">(</span>x<span class="token punctuation">,</span><span class="token number">100</span><span class="token punctuation">)</span>
+Out<span class="token punctuation">[</span><span class="token number">9</span><span class="token punctuation">]</span><span class="token punctuation">:</span> <span class="token number">5.0</span>
+
+<span class="token builtin">any</span>  <span class="token builtin">all</span>  存在  任意为真<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h2 id="广播"><a href="#广播" class="headerlink" title="广播"></a>广播</h2><p>可以理解为将低维数组拓展，拓展到匹配的维度，但是其实并没有发生这样的内存分配，只是便于理解。</p>
+<p>规则如下：</p>
+<ol>
+<li>如果两个数组的唯独不同，小维度数组在<strong>左边补1</strong></li>
+<li>如果数组在任何一个维度上大小不相等，而且数组某维度为1，则会沿着该维度拓展到匹配另一个数组</li>
+<li>如果数组在任何一个维度上大小不相等，而且并没有某个数组维度为1，那么引发异常。</li>
+</ol>
+<p>最值得注意的就是他补充一个维度是在左边补1而不是右边，如果希望右边补全，可以使用变形数组。</p>
+<p>这些广播规则适用于<em><strong>任意二进制通用函数</strong></em></p>
+<p><strong>实际应用</strong></p>
+<p>数组的归一化</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">In <span class="token punctuation">[</span><span class="token number">12</span><span class="token punctuation">]</span><span class="token punctuation">:</span> X <span class="token operator">=</span> np<span class="token punctuation">.</span>random<span class="token punctuation">.</span>random<span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+In <span class="token punctuation">[</span><span class="token number">13</span><span class="token punctuation">]</span><span class="token punctuation">:</span> Xmean <span class="token operator">=</span> X<span class="token punctuation">.</span>mean<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span>
+In <span class="token punctuation">[</span><span class="token number">14</span><span class="token punctuation">]</span><span class="token punctuation">:</span> X_centered <span class="token operator">=</span> X <span class="token operator">-</span> Xmean
+In <span class="token punctuation">[</span><span class="token number">15</span><span class="token punctuation">]</span><span class="token punctuation">:</span> X_centered<span class="token punctuation">.</span>mean<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span>
+Out<span class="token punctuation">[</span><span class="token number">15</span><span class="token punctuation">]</span><span class="token punctuation">:</span> array<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">8.88178420e-17</span><span class="token punctuation">,</span>  <span class="token number">0.00000000e+00</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">1.11022302e-17</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+妙啊<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>画一个二维函数</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">看不懂他的骚操作，可以翻一下书的P60页<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+
+
+<h2 id="比较，掩码，布尔"><a href="#比较，掩码，布尔" class="headerlink" title="比较，掩码，布尔"></a>比较，掩码，布尔</h2><p>当想基于某些准则来抽取，修改，技术或对一个数组中的值进行其他操作时，掩码就可以派上用场了，在Numpy中，布尔掩码是完成这类任务的最高效完成方式。</p>
+<p>比较有六种运算符<code>== != &lt; &lt;= &gt; &gt;=</code> 两边可以是表达式，<strong>每次返回的结果是布尔数组</strong></p>
+<p>这些比较运算符也是<strong>借助通用函数</strong>来实现的，例如x &lt; 3 其实调用np.less(x,3) </p>
+<h3 id="操作布尔数组"><a href="#操作布尔数组" class="headerlink" title="操作布尔数组"></a>操作布尔数组</h3><p>记录布尔数组中True的个数 np.count_nonzero(x&lt;6) </p>
+<p>或者也可以 np.sum(x&lt;6) 都是返回为True的个数，sum的好处是可以沿着行或者列进行</p>
+<p>np.true 和 np.all </p>
+<p>需要提醒的是python有内置的sum，any，all函数，这些函数在numpy中有对应的版本，但是语法不同，如果在多维数组上混用这两个版本，会导致神奇的错误，请确保使用numpy版本</p>
+<p><strong>布尔运算符</strong></p>
+<p>逻辑运算符也被重载，可以实现对数组的逐位逻辑运算。有<code>&amp; | ^ ~</code></p>
+<p>np.sum((inches &gt; 0.5) &amp; (inches &lt; 1))  注意用括号调整运算次序。表示inches在0.5到1间的数目</p>
+<p>将布尔数组作为掩码</p>
+<p>就是传说中的布尔矩阵作为索引呗。</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">and</span> <span class="token keyword">or</span>  和  <span class="token operator">&amp;</span> <span class="token operator">|</span>  的区别
+<span class="token keyword">and</span> <span class="token operator">/</span> <span class="token keyword">or</span> 判断整个对象是真是假，而后两者是指每个对象中的比特位，依次化成二进制码进行操作
+而布尔矩阵可以被当成比特字符组成的，所以采用后者，而使用前者比较整个对象的时候会出错。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h2 id="花哨的索引"><a href="#花哨的索引" class="headerlink" title="花哨的索引"></a>花哨的索引</h2><p>花哨的索引对多个维度也适用。</p>
+<p>结果的形状与索引数组的形状一致，如果有广播，就是跟广播后的索引数组的形状一致。</p>
+<p>如果是普通的一维一维的</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">a <span class="token operator">=</span> array<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">6</span><span class="token punctuation">,</span><span class="token number">7</span><span class="token punctuation">,</span><span class="token number">8</span><span class="token punctuation">,</span><span class="token number">9</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+b <span class="token operator">=</span> array<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+           <span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">6</span><span class="token punctuation">,</span><span class="token number">7</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+           <span class="token punctuation">[</span><span class="token number">8</span><span class="token punctuation">,</span><span class="token number">9</span><span class="token punctuation">,</span><span class="token number">10</span><span class="token punctuation">,</span><span class="token number">11</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+row <span class="token operator">=</span> np<span class="token punctuation">.</span>array<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+col <span class="token operator">=</span> np<span class="token punctuation">.</span>array<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+b<span class="token punctuation">(</span>row<span class="token punctuation">,</span>col<span class="token punctuation">)</span>那就像坐标一样
+但如果b<span class="token punctuation">(</span>row`<span class="token punctuation">,</span>col<span class="token punctuation">)</span>那就是广播，相当于是按照row的把每一行都弄出来，然后再用col依次花哨索引<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>配合切片，简单索引，布尔效果更好。</p>
+<h3 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h3><p>从一个矩阵中选择行的子集！</p>
+<p>可以用花哨索引来修改值，但是重复的索引会有一些诡异的事情发生</p>
+<p>at函数可以对给定的操作，给定的索引，给定的值进行就地操作。</p>
+<p>比如np.add.at(x,i,1) x为被操作的矩阵，i为索引，1为操作数（+1）</p>
+<h2 id="数组的排序"><a href="#数组的排序" class="headerlink" title="数组的排序"></a>数组的排序</h2><p>python有内置的sort和sorted但是太慢了</p>
+<p>np.sort 是快速排序【N log N】,另外可以选择归并排序和堆排序。</p>
+<p>np.sort(X) 不会修改原始数组，x.sort(X)这种python内置的方法会替代原始数组</p>
+<p>np.argsort(X)返回的是排序好的索引值。</p>
+<p>利用axis可以选择行列排序噢,这是将行和列当成独立数组，任何关系都将丢失</p>
+<p><strong>部分排序：分隔</strong></p>
+<p>np.partition(x,3) 将最小的3个和其他的分隔开，两组数是任意排序的</p>
+<p>当用axis时也会破坏行和列的关系，np.argpartition返回索引</p>
+<h2 id="结构化数据"><a href="#结构化数据" class="headerlink" title="结构化数据"></a>结构化数据</h2><p>numpy的结构化数组和记录数组</p>
+<p>他们为复合的，异构的数据提供了非常有效的存储。</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">name <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'a'</span><span class="token punctuation">,</span><span class="token string">'b'</span><span class="token punctuation">,</span><span class="token string">'c'</span><span class="token punctuation">,</span><span class="token string">'d'</span><span class="token punctuation">]</span>
+age <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">21</span><span class="token punctuation">,</span><span class="token number">21</span><span class="token punctuation">,</span><span class="token number">21</span><span class="token punctuation">,</span><span class="token number">434</span><span class="token punctuation">]</span>
+weight <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">21.21</span><span class="token punctuation">,</span><span class="token number">4.43</span><span class="token punctuation">,</span><span class="token number">4334.65</span><span class="token punctuation">]</span>
+data <span class="token operator">=</span> np<span class="token punctuation">.</span>zeros<span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">,</span>dtype <span class="token operator">=</span> <span class="token punctuation">&#123;</span><span class="token string">'names'</span><span class="token punctuation">:</span><span class="token punctuation">(</span><span class="token string">'name'</span><span class="token punctuation">,</span><span class="token string">'age'</span><span class="token punctuation">,</span><span class="token string">'weight'</span><span class="token punctuation">)</span>
+                          <span class="token string">'format'</span><span class="token punctuation">:</span><span class="token punctuation">(</span><span class="token string">'U10'</span><span class="token punctuation">,</span><span class="token string">'i4'</span><span class="token punctuation">,</span><span class="token string">'f8'</span><span class="token punctuation">)</span><span class="token punctuation">&#125;</span><span class="token punctuation">)</span>
+data<span class="token punctuation">[</span><span class="token string">'name'</span><span class="token punctuation">]</span><span class="token operator">=</span>name
+data<span class="token punctuation">[</span><span class="token string">'age'</span><span class="token punctuation">]</span><span class="token operator">=</span>age
+data<span class="token punctuation">[</span><span class="token string">'weight'</span><span class="token punctuation">]</span><span class="token operator">=</span>weight
+这样可以用连续的内存存储异构的数据，反映了他们间的关系
+可以用date<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>查看是<span class="token punctuation">(</span><span class="token string">'a'</span><span class="token punctuation">,</span><span class="token number">21</span><span class="token punctuation">,</span><span class="token number">21.21</span><span class="token punctuation">)</span>
+然后就有很多骚操作比如
+data<span class="token punctuation">[</span>data<span class="token punctuation">[</span><span class="token string">'age'</span><span class="token punctuation">]</span><span class="token operator">&lt;</span><span class="token number">30</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token string">'name'</span><span class="token punctuation">]</span><span class="token comment">#获得年龄小于30的人的年龄</span>
+数值类型可以用python类型或者Numpy的dtype来指定
+<span class="token operator">&lt;</span> 和 <span class="token operator">></span> 分别表示低字节序 和 高字节序
+b 字节型
+i u 有、无符号整形
+f 浮点型
+c 复数浮点型
+S a 字符串
+U Unicode编码字符串
+V 原生数据
+<span class="token comment">#还有一种格式是元组列表</span>
+np<span class="token punctuation">.</span>dtype<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">(</span><span class="token string">'name'</span><span class="token punctuation">,</span><span class="token string">'U10'</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token string">'age'</span><span class="token punctuation">,</span><span class="token string">'&lt;i4'</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token string">'weight'</span><span class="token punctuation">,</span><span class="token string">'f8'</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+这样就直接生成一个结构化数组
+结构化数组的dtype属性里，第n个反映了每个单元中第n个数据的索引和属性，比如
+data
+<span class="token punctuation">[</span><span class="token punctuation">(</span><span class="token string">'Alice'</span><span class="token punctuation">,</span><span class="token number">25</span><span class="token punctuation">,</span><span class="token number">55.0</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token string">'Bob'</span><span class="token punctuation">,</span><span class="token number">45</span><span class="token punctuation">,</span><span class="token number">85.8</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token string">'Cathy'</span><span class="token punctuation">,</span><span class="token number">37</span><span class="token punctuation">,</span><span class="token number">68.0</span><span class="token punctuation">)</span><span class="token punctuation">]</span>
+data<span class="token punctuation">.</span>dtype
+<span class="token punctuation">[</span><span class="token punctuation">(</span><span class="token string">'name'</span><span class="token punctuation">,</span><span class="token string">'&lt;U10'</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token string">'age'</span><span class="token punctuation">,</span><span class="token string">'&lt;i4'</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token string">'weight'</span><span class="token punctuation">,</span><span class="token string">'&lt;f8'</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<p><strong>结构化数组很好用，可以用来写Python接口与一个遗留的C语言或Fortan库交互。</strong></p>
+<p>如果需要使用结构化数组，更好是掌握pandas包。</p>
+<h1 id="Pandas"><a href="#Pandas" class="headerlink" title="Pandas"></a>Pandas</h1><p>Pandas是在Numpy基础上建立的新程序库，提供了一种高效的DataFrame结构。</p>
+<p>DataFrame本质上是一种带行标签和列标签、支持相同类型数据和缺失值的多维数组。</p>
+<p>Pandas不仅为各种带标签的数据提供了便利的存储界面，还实现了许多强大的操作，这些操作对数据库框架和电子表格程序的用户来说非常熟悉</p>
+<p>当我们需要处理更灵活的数据任务（为数据添加标签，处理缺失值），或者需要分组数据计算，Numpy就会显露出限制，而Pandas为“数据清理”（data munging）任务提供了捷径</p>
+<h2 id="对象简介"><a href="#对象简介" class="headerlink" title="对象简介"></a>对象简介</h2><p>如果从底层视角观察pandas对象，可以看成是增强版的Numpy结构化数组，行列不再是简单的整数索引，还可以带上标签！要理解基本数据结构内部的细节！</p>
+<h3 id="Series"><a href="#Series" class="headerlink" title="Series"></a>Series</h3><p>带索引数据的一维数组</p>
+<p>可以用<strong>数组</strong>创建Series对象 data = pd.Series([0.25,0.5,0.75,1.0])</p>
+<p>values属性返回Numpy数组的对象</p>
+<p>index返回一个类型为pd.Index的类数组对象，后续介绍</p>
+<p><strong>Series比模仿他的一维Numpy数组更加通用，灵活！！</strong></p>
+<p>Numpy隐式定义的索引，Series是显式定义，索引完全可以是任意类型，不按顺序</p>
+<p>pd.Series([2,2,22,],index = [‘a’,’c’,’d’])</p>
+<p>字典将任意键映射到一组任意值，Series将类型键映射到一组类型值，</p>
+<p>Pandas Series的类型信息使得她在某些操作上比Python的字典更高效</p>
+<p>可以用<strong>字典</strong>创建一个Series对象</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token builtin">dict</span>
+Out<span class="token punctuation">[</span><span class="token number">9</span><span class="token punctuation">]</span><span class="token punctuation">:</span> <span class="token punctuation">&#123;</span><span class="token string">'dadaa'</span><span class="token punctuation">:</span> <span class="token number">1223</span><span class="token punctuation">,</span> <span class="token string">'tda'</span><span class="token punctuation">:</span> <span class="token number">12124</span><span class="token punctuation">,</span> <span class="token string">'dada'</span><span class="token punctuation">:</span> <span class="token number">341</span><span class="token punctuation">&#125;</span>
+dict2 <span class="token operator">=</span> pd<span class="token punctuation">.</span>Series<span class="token punctuation">(</span><span class="token builtin">dict</span><span class="token punctuation">)</span>
+dict2
+Out<span class="token punctuation">[</span><span class="token number">11</span><span class="token punctuation">]</span><span class="token punctuation">:</span> 
+dadaa     <span class="token number">1223</span>
+tda      <span class="token number">12124</span>
+dada       <span class="token number">341</span>
+dtype<span class="token punctuation">:</span> int64
+<span class="token comment">#用字典创建对象时，索引按照默认顺序排列</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>Series支持索引切片！</p>
+<p>dict2[‘dadaa’:’dada’] 牛皮啊</p>
+<p>在pd.Series(data,index = index)中，data若是标量，则填充到每个索引上，索引默认0-n序列</p>
+<p>data可以是列表，字典（index是默认的排序字典键）</p>
+<p>每种类型都可以通过显式指定索引筛选需要的结果：<strong>但是字典这样做只会保留显式定义的部分键值对！</strong></p>
+<h3 id="DataFrame"><a href="#DataFrame" class="headerlink" title="DataFrame"></a>DataFrame</h3><p>和Series一样，它也既可以作为一个通用型Numpy数组，也可以看作特殊的Python字典</p>
+<p>可以看成一种既有灵活行索引，又有灵活列名的二维数组</p>
+<p>可以看成有序排列的若干Series对象。这里的“排列”指的是它们拥有共同的索引</p>
+<p>假设a，b是两个Series对象，而且拥有相同的索引，那么可以</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">c <span class="token operator">=</span> pd<span class="token punctuation">.</span>DataFrame<span class="token punctuation">(</span><span class="token punctuation">&#123;</span><span class="token string">'column1'</span><span class="token punctuation">:</span>a<span class="token punctuation">,</span><span class="token string">'column2'</span><span class="token punctuation">:</span>b<span class="token punctuation">&#125;</span><span class="token punctuation">)</span>
+c
+			column1   column2
+index1      <span class="token number">32423</span>     <span class="token number">32423</span>
+index2      <span class="token number">2189</span>      <span class="token number">2198128</span>
+index       <span class="token number">312312</span>    <span class="token number">21312</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>DataFrame的index属性和Series一样，返回Index对象（如果是默认生成的，则是RangeIndex）</p>
+<p>还有个columns属性，也返回Index对象，不过是列</p>
+<p>DataFrame可看成特殊的字典，每列映射一个Series数据，通过列索引c[‘column1’]可以得到一个Series对象</p>
+<p><strong>创建</strong></p>
+<p>（1）可以用单个Series对象</p>
+<p>pd.DataFrame(population,columns = [‘population’])</p>
+<p>（2）可以用元素是字典的列表来创建,若是字典有一些键不在，会用NaN补全</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">data <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">&#123;</span><span class="token string">'a'</span><span class="token punctuation">:</span>i<span class="token punctuation">,</span><span class="token string">'b'</span><span class="token punctuation">:</span><span class="token number">2</span><span class="token operator">*</span>i<span class="token punctuation">&#125;</span><span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">]</span>
+data
+Out<span class="token punctuation">[</span><span class="token number">10</span><span class="token punctuation">]</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">&#123;</span><span class="token string">'a'</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token string">'b'</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">&#125;</span><span class="token punctuation">,</span> <span class="token punctuation">&#123;</span><span class="token string">'a'</span><span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token string">'b'</span><span class="token punctuation">:</span> <span class="token number">2</span><span class="token punctuation">&#125;</span><span class="token punctuation">,</span> <span class="token punctuation">&#123;</span><span class="token string">'a'</span><span class="token punctuation">:</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token string">'b'</span><span class="token punctuation">:</span> <span class="token number">4</span><span class="token punctuation">&#125;</span><span class="token punctuation">]</span>
+    
+pd<span class="token punctuation">.</span>DataFrame<span class="token punctuation">(</span>data<span class="token punctuation">)</span>
+Out<span class="token punctuation">[</span><span class="token number">12</span><span class="token punctuation">]</span><span class="token punctuation">:</span> 
+   a  b
+<span class="token number">0</span>  <span class="token number">0</span>  <span class="token number">0</span>
+<span class="token number">1</span>  <span class="token number">1</span>  <span class="token number">2</span>
+<span class="token number">2</span>  <span class="token number">2</span>  <span class="token number">4</span>
+
+pd<span class="token punctuation">.</span>DataFrame<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">&#123;</span><span class="token string">'a'</span><span class="token punctuation">:</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token string">'b'</span><span class="token punctuation">:</span><span class="token number">2</span><span class="token punctuation">&#125;</span><span class="token punctuation">,</span><span class="token punctuation">&#123;</span><span class="token string">'b'</span><span class="token punctuation">:</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token string">'c'</span><span class="token punctuation">:</span><span class="token number">4</span><span class="token punctuation">&#125;</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+Out<span class="token punctuation">[</span><span class="token number">13</span><span class="token punctuation">]</span><span class="token punctuation">:</span> 
+     a  b    c
+<span class="token number">0</span>  <span class="token number">1.0</span>  <span class="token number">2</span>  NaN
+<span class="token number">1</span>  NaN  <span class="token number">3</span>  <span class="token number">4.0</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>（3）通过Series对象字典创建</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">c <span class="token operator">=</span> pd<span class="token punctuation">.</span>DataFrame<span class="token punctuation">(</span><span class="token punctuation">&#123;</span><span class="token string">'column1'</span><span class="token punctuation">:</span>a<span class="token punctuation">,</span><span class="token string">'column2'</span><span class="token punctuation">:</span>b<span class="token punctuation">&#125;</span><span class="token punctuation">)</span>
+c
+			column1   column2
+index1      <span class="token number">32423</span>     <span class="token number">32423</span>
+index2      <span class="token number">2189</span>      <span class="token number">2198128</span>
+index       <span class="token number">312312</span>    <span class="token number">21312</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>(4)通过Numpy二维数组创建。假如有二维数组，就可以创建一个可以指定行列索引值的DataFrame，如果不指定，那么行列都是默认索引  IndexRange</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">pd<span class="token punctuation">.</span>DataFrame<span class="token punctuation">(</span>np<span class="token punctuation">.</span>random<span class="token punctuation">.</span>rand<span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">,</span>columns <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'foo'</span><span class="token punctuation">,</span><span class="token string">'bar'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>index <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'a'</span><span class="token punctuation">,</span><span class="token string">'b'</span><span class="token punctuation">,</span><span class="token string">'d'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+Out<span class="token punctuation">[</span><span class="token number">15</span><span class="token punctuation">]</span><span class="token punctuation">:</span> 
+        foo       bar
+a  <span class="token number">0.855538</span>  <span class="token number">0.595667</span>
+b  <span class="token number">0.575162</span>  <span class="token number">0.149108</span>
+d  <span class="token number">0.034177</span>  <span class="token number">0.156297</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>(5)通过Numpy结构化数组创建</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">A <span class="token operator">=</span> np<span class="token punctuation">.</span>zeros<span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span>dtype <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">(</span><span class="token string">'A'</span><span class="token punctuation">,</span><span class="token string">'i8'</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token string">'B'</span><span class="token punctuation">,</span><span class="token string">'f8'</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+In <span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">:</span> A
+Out<span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">:</span> array<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">.</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">.</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">.</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">,</span> dtype<span class="token operator">=</span><span class="token punctuation">[</span><span class="token punctuation">(</span><span class="token string">'A'</span><span class="token punctuation">,</span> <span class="token string">'&lt;i8'</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token string">'B'</span><span class="token punctuation">,</span> <span class="token string">'&lt;f8'</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+    
+In <span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">:</span> pd<span class="token punctuation">.</span>DataFrame<span class="token punctuation">(</span>A<span class="token punctuation">)</span>
+Out<span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
+   A    B
+<span class="token number">0</span>  <span class="token number">0</span>  <span class="token number">0.0</span>
+<span class="token number">1</span>  <span class="token number">0</span>  <span class="token number">0.0</span>
+<span class="token number">2</span>  <span class="token number">0</span>  <span class="token number">0.0</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h3 id="Index"><a href="#Index" class="headerlink" title="Index"></a>Index</h3><p>可以看成一个不可变数组或有序集合，可以包含重复值。这两种观点体现了其一些功能</p>
+<ol>
+<li><p>不可变数组</p>
+<p>Index很多操作都像数组，比如切片，还有许多与Numpy数组相似的属性，比如</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">In <span class="token punctuation">[</span><span class="token number">8</span><span class="token punctuation">]</span><span class="token punctuation">:</span> ind <span class="token operator">=</span> pd<span class="token punctuation">.</span>Index<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">7</span><span class="token punctuation">,</span><span class="token number">11</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+In <span class="token punctuation">[</span><span class="token number">9</span><span class="token punctuation">]</span><span class="token punctuation">:</span> ind
+Out<span class="token punctuation">[</span><span class="token number">9</span><span class="token punctuation">]</span><span class="token punctuation">:</span> Int64Index<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">,</span> <span class="token number">11</span><span class="token punctuation">]</span><span class="token punctuation">,</span> dtype<span class="token operator">=</span><span class="token string">'int64'</span><span class="token punctuation">)</span>
+
+In <span class="token punctuation">[</span><span class="token number">10</span><span class="token punctuation">]</span><span class="token punctuation">:</span> ind<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token number">2</span><span class="token punctuation">]</span>
+Out<span class="token punctuation">[</span><span class="token number">10</span><span class="token punctuation">]</span><span class="token punctuation">:</span> Int64Index<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">11</span><span class="token punctuation">]</span><span class="token punctuation">,</span> dtype<span class="token operator">=</span><span class="token string">'int64'</span><span class="token punctuation">)</span>
+
+In <span class="token punctuation">[</span><span class="token number">11</span><span class="token punctuation">]</span><span class="token punctuation">:</span> <span class="token keyword">print</span><span class="token punctuation">(</span>ind<span class="token punctuation">.</span>size<span class="token punctuation">,</span>ind<span class="token punctuation">.</span>shape<span class="token punctuation">,</span>ind<span class="token punctuation">.</span>ndim<span class="token punctuation">,</span>ind<span class="token punctuation">.</span>dtype<span class="token punctuation">)</span>
+<span class="token number">5</span> <span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token punctuation">)</span> <span class="token number">1</span> int64<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>最大的不同在于Index对象的索引是不可变的，ind(1)=0会报错，这使得索引共享更安全</p>
+</li>
+<li><p>有序集合</p>
+<p>Index遵循python标准库的集合（set）数据结构的许多惯用法</p>
+<p>indA &amp; indB 也有indA.intersection(indB)</p>
+</li>
+</ol>
+<h2 id="数据取值与选择"><a href="#数据取值与选择" class="headerlink" title="数据取值与选择"></a>数据取值与选择</h2><p>类推Numpy的各种花式操作</p>
+<h3 id="Series-1"><a href="#Series-1" class="headerlink" title="Series"></a>Series</h3><p>两个类比：<strong>一维Numpy数组和Python字典</strong>，很多操作是一样的</p>
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">Darren</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://darren-dong.com/2021/05/17/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6%E6%89%8B%E5%86%8C/">https://darren-dong.com/2021/05/17/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6%E6%89%8B%E5%86%8C/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">Darren</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/data-sience/">
+                                    <span class="chip bg-color">data-sience</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">谢谢你</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2021/05/21/python%E4%BA%8C%E5%88%B7/">
+                    <div class="card-image">
+                        
+                        <img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210521203409.jpg" class="responsive-img" alt="python二刷">
+                        
+                        <span class="card-title">python二刷</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            感谢某位大佬的课件，这些知识点还是挺不错的
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-05-21
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/python/" class="post-category">
+                                    python
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/python/">
+                        <span class="chip bg-color">python</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2021/05/12/%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0/">
+                    <div class="card-image">
+                        
+                        <img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210514130255.jpg" class="responsive-img" alt="复变函数和积分应用">
+                        
+                        <span class="card-title">复变函数和积分应用</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            学着MIT矩阵，结果蹦出来几个单位根，人都傻了，来补一补复变函数，MIT线代停更了，找到了大佬的笔记
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-12
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/math/" class="post-category">
+                                    math
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%A4%8D%E5%8F%98/">
+                        <span class="chip bg-color">复变</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('20')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: 思考人类的蝼蚁<br />'
+            + '文章作者: Darren<br />'
+            + '文章链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处哦亲。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h1, h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h1, h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="966298391"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+
+    
+    <div class="container row center-align" style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2019-2021</span>
+            
+            <span id="year">2019</span>
+            <a href="/about" target="_blank">Darren</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                class="white-color">188.2k</span>&nbsp;字
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/Darren-greenhand" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:1275972958@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1275972958" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1275972958" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+	
+    
+    <script type="text/javascript" color="0,0,255"
+        pointColor="0,0,255" opacity='0.7'
+        zIndex="-1" count="99"
+        src="/libs/background/canvas-nest.js"></script>
+    
+
+    
+
+    
+    <script type="text/javascript" src="/libs/background/ribbon-dynamic.js" async="async"></script>
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+    
+
+</body>
+
+</html>
