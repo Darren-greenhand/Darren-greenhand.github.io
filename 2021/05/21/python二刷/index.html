@@ -402,7 +402,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-05-21
+                    2021-05-23
                 </div>
                 
 
@@ -411,7 +411,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    25 分
+                    26 分
                 </div>
                 
 
@@ -453,9 +453,9 @@
 
 <img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210521101142.png" alt="image-20210521101142697" style="zoom:50%;" />
 
-<p> Python  解释器会为每个出现的对象分配内存单元，<br>即使它们的值相等，也会这样 </p>
-<p>为了 提高内存利用效率，对于一些简单的对象，<br>如一些数值 较小（-256~256 ）的 整型（int ）对象，<br>Python  采取重用对象内存的办法</p>
-<p>单独的下画线（_ ）是一个特殊变量，用于表示上<br>一次运算的结果</p>
+<p> Python  解释器会为每个出现的对象分配内存单元，即使它们的值相等，也会这样 </p>
+<p>为了 提高内存利用效率，对于一些简单的对象，如一些数值 较小（-256~256 ）的 整型（int ）对象，Python  采取重用对象内存的办法</p>
+<p>单独的下画线（_ ）是一个特殊变量，用于表示上一次运算的结果</p>
 <img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210521110533.png" alt="image-20210521110532912" style="zoom:50%;" />
 
 
@@ -475,10 +475,10 @@
 
 
 
-<h3 id="Random"><a href="#Random" class="headerlink" title="Random"></a>Random</h3><p>seed设置种子，默认将系统时间设为种子值</p>
+<h3 id="Random"><a href="#Random" class="headerlink" title="Random"></a>Random</h3><p>seed设置种子，默认将<strong>系统时间</strong>设为种子值</p>
 <p>choice(seq) ：从 序列的元素中随机挑选一个 元素 。</p>
 <p>sample(seq,k) ：从 序列中随机挑选k 个元素。</p>
-<p>shuffle(seq) ：将 序列的所有元素随机排序 。</p>
+<p>shuffle(seq) ：将 序列的所有元素随机排序 ,这个只能用于可更改的，字符串不可用</p>
 <img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210521111617.png" alt="image-20210521111617520" style="zoom:50%;" />
 
 
@@ -567,6 +567,12 @@ timedelta和datetime可以做加减得到新的datetime
 
 <img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210521113426.png" alt="image-20210521113426104" style="zoom:50%;" />
 
+<p>注意这个居中填充，还有居中不对称时左边少一个</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'what &#123;1:&lt;10&#125;&#123;0&#125;the &#123;c:&amp;&lt;10.1f&#125;'</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span><span class="token string">'a'</span><span class="token punctuation">,</span><span class="token string">'b'</span><span class="token punctuation">,</span>c <span class="token operator">=</span> <span class="token number">21.311</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+what b         athe <span class="token number">21.3</span><span class="token operator">&amp;</span><span class="token operator">&amp;</span><span class="token operator">&amp;</span><span class="token operator">&amp;</span><span class="token operator">&amp;</span><span class="token operator">&amp;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+
+
 <img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210521113449.png" alt="image-20210521113449101" style="zoom:50%;" />
 
 
@@ -598,7 +604,7 @@ timedelta和datetime可以做加减得到新的datetime
 
 <img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210521123527.png" alt="image-20210521123527021" style="zoom:50%;" />
 
-<p>Unicode规定了，所有字符<strong>统一由两个字节</strong>来表示，也就是<strong>16位</strong></p>
+<p>Unicode规定了，所有字符<strong>统一由两个字符</strong>来表示，也就是<strong>16位</strong></p>
 <p>utf-8就是缩小一点，从4到8到12到16分段</p>
 <p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/137875615">详述</a>有一点错误就是最后那个中文例子，看我的👇</p>
 <p>而python字符串默认是unicode编码</p>
@@ -622,12 +628,11 @@ Out<span class="token punctuation">[</span><span class="token number">14</span><
 
 
 
-
-
 <p>分片的操作很灵活，开始和结束 的索引值 可以超<br>过字符串的长度 </p>
 <p>字符串用 +  和 *</p>
 <img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210521130045.png" alt="image-20210521130045599" style="zoom:50%;" />
 
+<p>但是在解释器里面，都是输出普通的’abc’</p>
 <p>Python 的字符串是不可变类型，只能通过新建一<br>个字符串去改变一个字符串的元素</p>
 <img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210521130119.png" alt="image-20210521130119501" style="zoom:50%;" />
 
@@ -641,9 +646,23 @@ Out<span class="token punctuation">[</span><span class="token number">14</span><
 
 <img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210521130327.png" alt="image-20210521130327372" style="zoom:50%;" />
 
+<p>prefix和suffix是字符串，start 可以选择开头位置，end我不知道干嘛的</p>
 <img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210521130413.png" alt="image-20210521130413589" style="zoom:50%;" />
 
 <img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210521130614.png" alt="image-20210521130614495" style="zoom:50%;" />
+
+<p>split如果两个分隔符中没东西，也会拆出空字符串,从左右拆顺序不变，可能只影响matsplit参数</p>
+<p>那个splitlines试了一下：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">c <span class="token operator">=</span> <span class="token string">'dada\nwdad'</span>
+c
+Out<span class="token punctuation">[</span><span class="token number">51</span><span class="token punctuation">]</span><span class="token punctuation">:</span> <span class="token string">'dada\nwdad'</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>c<span class="token punctuation">)</span>
+dada
+wdad
+c<span class="token punctuation">.</span>splitlines<span class="token punctuation">(</span><span class="token punctuation">)</span>
+Out<span class="token punctuation">[</span><span class="token number">53</span><span class="token punctuation">]</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">'dada'</span><span class="token punctuation">,</span> <span class="token string">'wdad'</span><span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
 
 <img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210521130715.png" alt="image-20210521130715304" style="zoom:50%;" />
 
@@ -743,19 +762,18 @@ a  <span class="token operator">=</span>  <span class="token string">"123abc456"
 <p> reduce(f,s[,n]) ：reduce() 函数把序列s 的前两个元素作为 参数，传 给函数f ，返回 计算的结果和 序列的下一个元素重新作为f 的参数，直到序列的最后一个元素 </p>
 <p>enumerate 和 zip不必多言</p>
 <p>利用* 号操作符，可以将对象解压 还原</p>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python"> <span class="token operator">>></span><span class="token operator">></span> t
- <span class="token punctuation">[</span><span class="token punctuation">(</span><span class="token string">'a'</span><span class="token punctuation">,</span> <span class="token string">'1'</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token string">'b'</span><span class="token punctuation">,</span> <span class="token string">'2'</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token string">'c'</span><span class="token punctuation">,</span> <span class="token string">'3'</span><span class="token punctuation">)</span><span class="token punctuation">]</span>
- <span class="token operator">>></span><span class="token operator">></span> m<span class="token operator">=</span><span class="token builtin">zip</span><span class="token punctuation">(</span><span class="token operator">*</span>t<span class="token punctuation">)</span>
- <span class="token operator">>></span><span class="token operator">></span> <span class="token builtin">list</span><span class="token punctuation">(</span>m<span class="token punctuation">)</span>
- <span class="token punctuation">[</span><span class="token punctuation">(</span><span class="token string">'a'</span><span class="token punctuation">,</span> <span class="token string">'b'</span><span class="token punctuation">,</span> <span class="token string">'c'</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token string">'1'</span><span class="token punctuation">,</span> <span class="token string">'2'</span><span class="token punctuation">,</span> <span class="token string">'3'</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token operator">>></span><span class="token operator">></span> t
+<span class="token punctuation">[</span><span class="token punctuation">(</span><span class="token string">'a'</span><span class="token punctuation">,</span> <span class="token string">'1'</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token string">'b'</span><span class="token punctuation">,</span> <span class="token string">'2'</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token string">'c'</span><span class="token punctuation">,</span> <span class="token string">'3'</span><span class="token punctuation">)</span><span class="token punctuation">]</span>
+<span class="token operator">>></span><span class="token operator">></span> m<span class="token operator">=</span><span class="token builtin">zip</span><span class="token punctuation">(</span><span class="token operator">*</span>t<span class="token punctuation">)</span>
+<span class="token operator">>></span><span class="token operator">></span> <span class="token builtin">list</span><span class="token punctuation">(</span>m<span class="token punctuation">)</span>
+<span class="token punctuation">[</span><span class="token punctuation">(</span><span class="token string">'a'</span><span class="token punctuation">,</span> <span class="token string">'b'</span><span class="token punctuation">,</span> <span class="token string">'c'</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token string">'1'</span><span class="token punctuation">,</span> <span class="token string">'2'</span><span class="token punctuation">,</span> <span class="token string">'3'</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p>sorted reversed</p>
-<p>all any</p>
+<p>还有sorted reversed  all any</p>
 <img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210521141444.png" alt="image-20210521141444528" style="zoom:50%;" />
 
 <p>加星号的变量只允许一个，否则会出现语法错误syntaxError 。</p>
 <p>列表可以进行元素赋值（索引不能超）</p>
-<p>元素删除  del   分片赋值  在使用<strong>分片赋值</strong>时，可使用与原序列不等长的序列将分片替换 </p>
+<p>元素删除  del   分片赋值  在使用<strong>分片赋值</strong>时，<strong>可使用与原序列不等长的序列将分片替换</strong> </p>
 <img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210521141731.png" alt="image-20210521141731815" style="zoom:50%;" />
 
 <img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210521141802.png" alt="image-20210521141802120" style="zoom:50%;" />
@@ -786,7 +804,7 @@ a  <span class="token operator">=</span>  <span class="token string">"123abc456"
 
 <p>s.reverse() ：将列表s 中的元素逆序排</p>
 <p> s.pop([i]) ：删除并返回列表s 中指定位置i 的元素，默认是最后一个元素。若i 超出列表长度 ，则 抛出IndexError 异常 </p>
-<p> s.insert(i,x) ：在列表s 的i 位置处插入x 。如果i 大于列表的长度，则插入到列表最后 。</p>
+<p> s.insert(i,x) ：在列表s 的i 位置处插入x 。<strong>如果i 大于列表的长度，则插入到列表最后 。</strong></p>
 <img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210521143709.png" alt="image-20210521143709148" style="zoom:50%;" />
 
 <p>可以看看题目</p>
@@ -799,6 +817,13 @@ a  <span class="token operator">=</span>  <span class="token string">"123abc456"
 <img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210521144729.png" alt="image-20210521144729426" style="zoom:50%;" />
 
 <img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210521144739.png" alt="image-20210521144739088" style="zoom:50%;" />
+
+<p>原先的键会被清除，字符串也可以做序列，但是重复的键会被删除</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">d2 <span class="token operator">=</span> d<span class="token punctuation">.</span>fromkeys<span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token string">'dwad'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+d2
+Out<span class="token punctuation">[</span><span class="token number">92</span><span class="token punctuation">]</span><span class="token punctuation">:</span> <span class="token punctuation">&#123;</span><span class="token string">'d'</span><span class="token punctuation">:</span> <span class="token boolean">None</span><span class="token punctuation">,</span> <span class="token string">'w'</span><span class="token punctuation">:</span> <span class="token boolean">None</span><span class="token punctuation">,</span> <span class="token string">'a'</span><span class="token punctuation">:</span> <span class="token boolean">None</span><span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+
 
 <img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210521144757.png" alt="image-20210521144757764" style="zoom:50%;" />
 
@@ -997,7 +1022,7 @@ TypeError<span class="token punctuation">:</span> person<span class="token punct
 <p>首先python里的默认编码都是Unicode，所有的文件其实本质都是二进制码，二进制文件只能用bytes类型操作，读出来怎么解读自己来，一般都用Unicode规则来decode（  二进制文件 是把数据按其在内存中的存储形式原样输出到磁盘上存放。）</p>
 <p>小心那个文件指针位置，你写入了以后会放在最后，再读取啥都读不出来类似的</p>
 <p>Python你在读写文件的时候<strong>不要打开</strong>。。不然会出现更改不了。。</p>
-<p>理解python的<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_23953717/article/details/78434292">open</a>顺带一提，txt默认是ANSI编码，不是UTF-8</p>
+<p>理解python的<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_23953717/article/details/78434292">open</a>顺带一提，txt默认是ANSI编码，不是UTF-8，坑死了</p>
 <img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210521163612.png" alt="image-20210521163612734" style="zoom:50%;" />
 
 <p>经常需要用到“终端形式”阅读的，用文本，经常修改的，最好用二进制</p>
@@ -1724,7 +1749,7 @@ AssertionError<span class="token punctuation">:</span> 除数不可为<span clas
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">188.2k</span>&nbsp;字
+                class="white-color">188.6k</span>&nbsp;字
             
             
             

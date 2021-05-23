@@ -249,7 +249,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/4.png')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210523102212.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -402,7 +402,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-04-06
+                    2021-05-23
                 </div>
                 
 
@@ -434,7 +434,7 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h1><p>来自菜鸟教程</p>
+                <h1 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h1><p>来自<a target="_blank" rel="noopener" href="https://www.runoob.com/regexp/regexp-tutorial.html">菜鸟教程</a></p>
 <h2 id="为什么使用正则表达式？"><a href="#为什么使用正则表达式？" class="headerlink" title="为什么使用正则表达式？"></a>为什么使用正则表达式？</h2><p>典型的搜索和替换操作要求您提供与预期的搜索结果匹配的确切文本。虽然这种技术对于对静态文本执行简单搜索和替换任务可能已经足够了，但它缺乏灵活性，若采用这种方法搜索动态文本，即使不是不可能，至少也会变得很困难。</p>
 <p>通过使用正则表达式，可以：</p>
 <ul>
@@ -525,7 +525,7 @@
 <td align="left">m 和 n 均为非负整数，其中n &lt;= m。最少匹配 n 次且最多匹配 m 次。例如，”o{1,3}” 将匹配 “fooooood” 中的前三个 o。’o{0,1}’ 等价于 ‘o?’。请注意在逗号和两个数之间不能有空格。</td>
 </tr>
 </tbody></table>
-<p>以下正则表达式匹配一个正整数，**[1-9]<strong>设置第一个数字不是 0，</strong>[0-9]*** 表示任意多个数字：</p>
+<p>以下正则表达式匹配一个正整数，[1-9]设置第一个数字不是 0，[0-9]* 表示任意多个数字：</p>
 </li>
 <li><p>定位符使您能够将正则表达式固定到行首或行尾。它们还使您能够创建这样的正则表达式，这些正则表达式出现在一个单词内、在一个单词的开头或者一个单词的结尾。</p>
 <p>正则表达式的定位符有：</p>
@@ -556,15 +556,15 @@
 </li>
 <li><p>选择</p>
 <p>用圆括号 <strong>()</strong> 将所有选择项括起来，相邻的选择项之间用 <strong>|</strong> 分隔。</p>
-<p><strong>()</strong> 表示捕获分组，**()** 会把每个分组里的匹配的值保存起来， 多个匹配值可以通过数字 n 来查看(<strong>n</strong> 是一个数字，表示第 n 个捕获组的内容)</p>
+<p><strong>()</strong> 表示捕获分组，() 会把每个分组里的匹配的值保存起来， 多个匹配值可以通过数字 n 来查看(<strong>n</strong> 是一个数字，表示第 n 个捕获组的内容)</p>
 <p>但用圆括号会有一个副作用，使相关的匹配会被缓存，此时可用 <strong>?:</strong> 放在第一个选项前来消除这种副作用</p>
 </li>
 <li><p>先/后行断言</p>
 <p>个人感觉这是一种修饰，不会有括号那种缓冲的副作用</p>
-<p>**exp1(?=exp2)**：查找 exp2 前面的 exp1</p>
-<p><strong>(?&lt;=exp2)exp1</strong>：查找 exp2 后面的 exp1。</p>
-<p>**exp1(?!exp2)**：查找后面不是 exp2 的 exp1。</p>
-<p><strong>(?&lt;!exp2)exp1</strong>：查找前面不是 exp2 的 exp1。</p>
+<p>exp1(?=exp2)：查找 exp2 前面的 exp1</p>
+<p>(?&lt;=exp2)exp1：查找 exp2 后面的 exp1。</p>
+<p>exp1(?!exp2)：查找后面不是 exp2 的 exp1。</p>
+<p>(?&lt;!exp2)exp1：查找前面不是 exp2 的 exp1。</p>
 </li>
 <li><p>修饰符：(置于表达式之后)</p>
 <table>
@@ -832,7 +832,7 @@ document<span class="token punctuation">.</span><span class="token function">wri
 
 
 <h2 id="小ps："><a href="#小ps：" class="headerlink" title="小ps："></a>小ps：</h2><ol>
-<li><em>*<em>*</em>** 和 *</em>+** 限定符都是贪婪的，因为它们会尽可能多的匹配文字，只有在它们的后面加上一个 ? 就可以实现非贪婪或最小匹配。**</li>
+<li>* 和 + 限定符都是贪婪的，因为它们会尽可能多的匹配文字，只有在它们的后面加上一个 ? 就可以实现非贪婪或最小匹配。</li>
 </ol>
 <h1 id="常用表达式"><a href="#常用表达式" class="headerlink" title="常用表达式"></a>常用表达式</h1><p>转自<a target="_blank" rel="noopener" href="https://oddfar.com/archives/35/">https://oddfar.com/archives/35/</a></p>
 <h2 id="校验数字的表达式"><a href="#校验数字的表达式" class="headerlink" title="校验数字的表达式"></a>校验数字的表达式</h2><pre class="line-numbers language-none"><code class="language-none">1、数字：^[0-9]*$
@@ -1449,7 +1449,7 @@ document<span class="token punctuation">.</span><span class="token function">wri
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">188.2k</span>&nbsp;字
+                class="white-color">188.6k</span>&nbsp;字
             
             
             
