@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>思考人类的蝼蚁</title>
+  <title>用数据度量世界</title>
   
-  <subtitle>与深刻的人交流    与博学的人共鸣    传播自我的真理    思考人类的命运。</subtitle>
+  <subtitle>传播自我的真理    思考人类的命运。</subtitle>
   <link href="https://darren-dong.com/atom.xml" rel="self"/>
   
   <link href="https://darren-dong.com/"/>
@@ -336,9 +336,9 @@
     <link href="https://darren-dong.com/2021/04/05/%E9%82%A3%E4%BA%9B%E5%BF%AB%E6%8D%B7%E9%94%AE/"/>
     <id>https://darren-dong.com/2021/04/05/%E9%82%A3%E4%BA%9B%E5%BF%AB%E6%8D%B7%E9%94%AE/</id>
     <published>2021-04-05T02:36:09.000Z</published>
-    <updated>2021-04-10T06:28:35.288Z</updated>
+    <updated>2021-05-23T02:56:18.413Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="通用"><a href="#通用" class="headerlink" title="通用"></a>通用</h1><p>Fn + 左右箭头快速抵达行头行尾</p><p>Fn + shift + 左右箭头快速选中整行</p><p>C + f 搜索</p><h1 id="vscode"><a href="#vscode" class="headerlink" title="vscode"></a>vscode</h1><p>C + g  快速到达某一行</p><p>C + A + 上下  为上下行的该位置添加光标，如果为空，则尽量左移</p><p>S + A + 拖动鼠标 选中规则同上</p><p>C + c  +  C + v 快速复制一行</p><p>或者 S + A + 上下</p><hr><p>C + /  单行注释</p><p>C + S + /   多行注释（改的，原来是S + A + a）</p><p>C + ~  打开终端</p><p>C + d 快速选中相同的</p><p>C + f 搜索</p><p>C + h 替换（可以全部替换）</p><p>C + +/-  放大/缩小布局</p><p>Tab 到达下一个光标</p><p>自定义快捷键</p><p>有些快捷键，我们使用不习惯，其实我们可以自定义快捷键的。</p><p>比如js 的多行注释是 shift + alt  + a  ，我们想修改为 ctrl + shfit +  /   </p><p>设置方法：   管理按钮  —   键盘快捷方式  —  输入  shift + alt  + a  找到这个快捷键  —– 点击编辑按钮  —- 直接按下  ctrl + shift  +  /     —- 最后按下回车 修改完毕。</p><p><img src="https://gitee.com/darren-greenhand//picture/raw/master/070e4f32b7326196062f020bbc3a91b30c7e470c.gif" alt="img"></p><h1 id="浏览器"><a href="#浏览器" class="headerlink" title="浏览器"></a>浏览器</h1><p>C + S + j   开发者模式（谷歌），在火狐有些不同</p><p>C + h   历史记录</p><p>C + n  打开新窗口</p><p>C + S + n  新无痕窗口</p><p>C + 左键:打开新标签方式</p><h1 id="Typora"><a href="#Typora" class="headerlink" title="Typora"></a>Typora</h1><p>C + b 加粗</p><p>C + i  斜体</p><p>C + k 设为超链接</p><h1 id="Jupyter-Notebook"><a href="#Jupyter-Notebook" class="headerlink" title="Jupyter Notebook"></a>Jupyter Notebook</h1><p>A 创建新单元格above当前单元格</p><p>B 创建新单元格below当前单元格</p><p>在markdown 和 code之间进行转换</p><p>markdown -&gt; code Y</p><p>code -&gt; markdown M </p><p>L 是显示行号d</p><p>双击D 可以删除单元格，Z撤销删除</p><p>S 保存！</p><p>最强的是C + S + P</p><p>打开万能的控制栏</p>]]></content>
+    <content type="html"><![CDATA[<h1 id="通用"><a href="#通用" class="headerlink" title="通用"></a>通用</h1><p>Fn + 左右箭头快速抵达行头行尾</p><p>Fn + shift + 左右箭头快速选中整行</p><p>C + f 搜索</p><h1 id="vscode"><a href="#vscode" class="headerlink" title="vscode"></a>vscode</h1><p>C + g  快速到达某一行</p><p>C + A + 上下  为上下行的该位置添加光标，如果为空，则尽量左移</p><p>S + A + 拖动鼠标 选中规则同上</p><p>C + c  +  C + v 快速复制一行</p><p>或者 S + A + 上下</p><hr><p>C + /  单行注释</p><p>C + S + /   多行注释（改的，原来是S + A + a）</p><p>C + ~  打开终端</p><p>C + d 快速选中相同的</p><p>C + f 搜索</p><p>C + h 替换（可以全部替换）</p><p>C + +/-  放大/缩小布局</p><p>Tab 到达下一个光标</p><p>自定义快捷键</p><p>有些快捷键，我们使用不习惯，其实我们可以自定义快捷键的。</p><p>比如js 的多行注释是 shift + alt  + a  ，我们想修改为 ctrl + shfit +  /   </p><p>设置方法：   管理按钮  —   键盘快捷方式  —  输入  shift + alt  + a  找到这个快捷键  —– 点击编辑按钮  —- 直接按下  ctrl + shift  +  /     —- 最后按下回车 修改完毕。</p><p><img src="https://gitee.com/darren-greenhand//picture/raw/master/070e4f32b7326196062f020bbc3a91b30c7e470c.gif" alt="img"></p><h1 id="pycharm"><a href="#pycharm" class="headerlink" title="pycharm"></a>pycharm</h1><p>C + R是搜索。。</p><p>ipython里终端 C + r是回溯</p><h1 id="浏览器"><a href="#浏览器" class="headerlink" title="浏览器"></a>浏览器</h1><p>C + S + j   开发者模式（谷歌），在火狐有些不同</p><p>C + h   历史记录</p><p>C + n  打开新窗口</p><p>C + S + n  新无痕窗口</p><p>C + 左键:打开新标签方式</p><h1 id="Typora"><a href="#Typora" class="headerlink" title="Typora"></a>Typora</h1><p>C + b 加粗</p><p>C + i  斜体</p><p>C + k 设为超链接</p><h1 id="Jupyter-Notebook"><a href="#Jupyter-Notebook" class="headerlink" title="Jupyter Notebook"></a>Jupyter Notebook</h1><p>A 创建新单元格above当前单元格</p><p>B 创建新单元格below当前单元格</p><p>在markdown 和 code之间进行转换</p><p>markdown -&gt; code Y</p><p>code -&gt; markdown M </p><p>L 是显示行号d</p><p>双击D 可以删除单元格，Z撤销删除</p><p>S 保存！</p><p>最强的是C + S + P</p><p>打开万能的控制栏</p>]]></content>
     
     
       
