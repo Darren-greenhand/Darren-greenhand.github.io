@@ -15452,19 +15452,186 @@ int TreeHeight2(TSBNode *t)
 
 
 
-<h2 id="二叉树"><a href="#二叉树" class="headerlink" title="二叉树"></a>二叉树</h2><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++"><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h2 id="二叉树"><a href="#二叉树" class="headerlink" title="二叉树"></a>二叉树</h2><p>呜呜呜，好长这里，冲冲冲！</p>
+<p>二叉树是区分左右的，任何m次数都可以转化为二叉树结构</p>
+<p><strong>满二叉树</strong>：叶子节点都集中在二叉树的最下一层，所有分支节点都有左右孩子的树，只有度为0或2的节点。</p>
+<p>可以进行层序编号，第一个是0，若节点为x，则左孩子为2x，右孩子为2x + 1</p>
+<p><strong>完全二叉树</strong>：只有最下两层节点度数可以小于2，且叶子节点全都靠左排列。</p>
+<p>最多只有1个出度为1的节点，且节点有左孩子，结点总数n为奇数时没有出度为1的结点</p>
+<p><strong>满二叉树是完全二叉树的特例</strong></p>
+<p>二叉树性质：</p>
+<ol>
+<li><p>非空二叉树上的<strong>叶子节点数</strong>等于<strong>双分支结点数+1</strong></p>
+<p>用到了：m(度的和) = n-1   度的和 = n1 + 2n2    n = n0(叶子结点数) + n1 + n2</p>
+</li>
+<li><p>非空二叉树的第i层最多只有2^(i-1)个结点</p>
+</li>
+<li><p>高度为h的二叉树最多有 2^h - 1 个结点</p>
+</li>
+<li><p>若节点为x，则左孩子为2x，右孩子为2x + 1，父节点为x/2 向下取整</p>
+</li>
+<li><p>具有n个节点的完全二叉树高度为 log2(n+1)向上取整 或者log2n向下取整 +1</p>
+</li>
+</ol>
+<p>树转二叉树：相邻兄弟加线，保留长子线，其余删除    森林则把根节点链接</p>
+<p>二叉树转树：若某节点为双亲的左孩子，则把该节点的右孩子，右孩子的右孩子都与该节点的双亲连起来，</p>
+<p>删除原二叉树中所有双亲结点与右孩子结点之间的连线。</p>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#include &lt;stdio.h&gt;
+#include &lt;malloc.h&gt;
+&#x2F;*先看看顺序存储结构
+对于完全二叉树和满二叉树，可以实现随机存储，完全二叉树最后几个空的用 # 表示
+对于一般的二叉树，可以增添一些不存在的空结点，使之成为一棵完全二叉树的形式。
+图可以看看P204  *&#x2F;
+#define MaxSize 100 &#x2F;&#x2F;假设最多只有100个非零项
+typedef int ElemType;
+typedef ElemType SqBinTree[MaxSize];
+&#x2F;&#x2F;但是如果空的太多，会造成空间的大量浪费，但是查找子节点和父节点都很方便。
+&#x2F;&#x2F;当然还有一般顺序存储结构的缺点，就是插入，删除很不方便
+
+&#x2F;&#x2F;链式存储，称为二叉链，用根节点指针b唯一标识整个存储结构，称为二叉树b
+typedef struct node
+&#123;
+    ElemType data;
+    struct node *lchild;
+    struct node *rchild;
+    &#x2F;&#x2F;struct node *parent;
+&#125; BTNode;
+&#x2F;&#x2F;这样节省空间，但不方便访问父节点，可以增加一个指向父节点的指针域parent来解决。
+&#x2F;&#x2F;后续一般假设一棵二叉树中所有结点值均不同，为单个字符
+&#x2F;&#x2F;创建，销毁，按值查找（父），找孩子，求高度，输出   创建和输出都用括号表示法
+
+&#x2F;&#x2F;首先得理解二叉树的括号表示，模拟一个栈来实现,因为栈的实现很简单，并没有封装
+&#x2F;&#x2F;这个用栈保存双亲结点的思想太妙了！栈顶存放的是当前处理节点的父节点
+void CreateBTree(BTNode *&amp;b, char *str)
+&#123;
+    BTNode *St[MaxSize], *p; &#x2F;&#x2F;St为顺序栈
+    int top &#x3D; -1, k, j &#x3D; 0;  &#x2F;&#x2F;j为str索引,k用来判断孩子类型
+    char ch;
+    b &#x3D; NULL;
+    ch &#x3D; str[j];
+    while (ch !&#x3D; &#39;\0&#39;)
+    &#123;
+        switch (ch)
+        &#123;
+        case &#39;(&#39;:
+            top++;
+            St[top] &#x3D; p;
+            k &#x3D; 1;
+            break;
+        case &#39;)&#39;:
+            top--;
+            break;
+        case &#39;,&#39;:
+            k &#x3D; 2;
+            break;
+        default:
+            p &#x3D; (BTNode *)malloc(sizeof(BTNode));
+            p-&gt;data &#x3D; ch;
+            p-&gt;lchild &#x3D; p-&gt;rchild &#x3D; NULL;
+            if (b &#x3D;&#x3D; NULL)
+                b &#x3D; p; &#x2F;&#x2F;这是只存在一次的还未建立根节点的情况
+            else
+            &#123;
+                switch (k)
+                &#123;
+                case 1:
+                    St[top]-&gt;lchild &#x3D; p;
+                    break;
+                case 2:
+                    St[top]-&gt;rchild &#x3D; p;
+                    break;
+                &#125;
+            &#125;
+        &#125;
+        j++;
+        ch &#x3D; str[j];
+    &#125;
+&#125;
+
+void DestroyBTree(BTNode *&amp;b)
+&#123;
+    if (b !&#x3D; NULL)
+    &#123;
+        DestroyBTree(b-&gt;lchild);
+        DestroyBTree(b-&gt;rchild);
+        free(b);
+    &#125;
+&#125;
+
+&#x2F;&#x2F;查找x的结点
+BTNode *FindeNode(BTNode *b, ElemType x)
+&#123;
+    BTNode *p;
+    if (b &#x3D;&#x3D; NULL)
+        return NULL;
+    else if (b-&gt;data &#x3D;&#x3D; x)
+        return b;
+    else
+    &#123;
+        p &#x3D; FindeNode(b-&gt;lchild, x);
+        if (p !&#x3D; NULL)
+            return p;
+        else
+            return FindeNode(b-&gt;rchild, x);
+        &#x2F;&#x2F;这也把没找到的情况包含在内了，要学会简化代码
+    &#125;
+&#125;
+
+BTNode *LchildNode(BTNode *p)
+&#123;
+    return p-&gt;lchild;
+&#125;
+
+BTNode *RchildNode(BTNode *p)
+&#123;
+    return p-&gt;rchild;
+&#125;
+
+&#x2F;&#x2F;求高度
+int BTHeight(BTNode *b)
+&#123;
+    int lchild, rchild;
+    if (b &#x3D;&#x3D; NULL)
+        return 0;
+    else
+    &#123;
+        lchild &#x3D; BTHeight(b-&gt;lchild);
+        rchild &#x3D; BTHeight(b-&gt;rchild);
+    &#125;
+    return (lchild &gt; rchild ? lchild : rchild) + 1;
+&#125;
+
+&#x2F;&#x2F;终究还是比广义表简单不少啊,当是NULL的时候不操作，非常流弊
+void DispBTree(BTNode *b)
+&#123;
+    if (b !&#x3D; NULL)
+    &#123;
+        printf(&quot;%c&quot;, b-&gt;data);
+        if (b-&gt;lchild !&#x3D; NULL || b-&gt;rchild !&#x3D; NULL)
+        &#123;
+            printf(&quot;(&quot;);
+            DispBTree(b-&gt;lchild);
+            printf(&quot;,&quot;);
+            DispBTree(b-&gt;rchild);
+            printf(&quot;)&quot;);
+        &#125;
+    &#125;
+&#125;
+
+int main()
+&#123;
+    &#x2F;&#x2F;突然想玩一下下
+    char str[MaxSize] &#x3D; &quot;A(B(D(,G))C(E,F))&quot;;
+    BTNode *BT;
+    CreateBTree(BT, str);
+    DispBTree(BT);
+    printf(&quot;\nI prefer Python, C is to complex and confused&quot;);
+&#125;
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 
 
-
-
-
-
-
-
-
-
-<h1 id="待补充"><a href="#待补充" class="headerlink" title="待补充"></a>待补充</h1><h2 id="串：KMP"><a href="#串：KMP" class="headerlink" title="串：KMP"></a>串：KMP</h2><h2 id="稀疏矩阵快速转置"><a href="#稀疏矩阵快速转置" class="headerlink" title="稀疏矩阵快速转置"></a>稀疏矩阵快速转置</h2>]]></content>
+<h2 id="二叉树遍历"><a href="#二叉树遍历" class="headerlink" title="二叉树遍历"></a>二叉树遍历</h2><h1 id="待补充"><a href="#待补充" class="headerlink" title="待补充"></a>待补充</h1><h2 id="串：KMP"><a href="#串：KMP" class="headerlink" title="串：KMP"></a>串：KMP</h2><h2 id="稀疏矩阵快速转置"><a href="#稀疏矩阵快速转置" class="headerlink" title="稀疏矩阵快速转置"></a>稀疏矩阵快速转置</h2>]]></content>
       <categories>
         <category>算法</category>
       </categories>
