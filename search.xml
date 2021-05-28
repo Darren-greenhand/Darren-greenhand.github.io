@@ -14795,7 +14795,8 @@ void DispStr(LinkStrNode s)
 
 
 
-<h1 id="4-递归"><a href="#4-递归" class="headerlink" title="4.递归"></a>4.递归</h1><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">&#x2F;&#x2F;在算法设计中，任何间接递归都可以转换为直接递归，这是自顶向下，同时考虑最底部的
+<h1 id="4-递归"><a href="#4-递归" class="headerlink" title="4.递归"></a>4.递归</h1><p>只要确保了子结构和大结构 <strong>结构一致</strong>，就不用考虑过多细节，在设计算法的时候留意递归调用的意义，比如求树的深度，在某个地方需要子树的深度了，<strong>就直接调用就好</strong>，只用关心你这最宏观的一层，不用考虑内在的东西，这就是递归的魔力。</p>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">&#x2F;&#x2F;在算法设计中，任何间接递归都可以转换为直接递归，这是自顶向下，同时考虑最底部的
 &#x2F;&#x2F;如果递归过程或者递归函数的递归调用语句是最后一条执行语句，则称为尾递归
 &#x2F;* 三个条件：
 1.问题可以转化为1个或多个
@@ -15199,7 +15200,38 @@ void fun2(GLNode *g)
         fun2(g-&gt;link); &#x2F;&#x2F;处理两种节点的兄弟（不用分类，因为无论什么节点，兄弟都相似于整个表）
     &#125;
 &#125;
-&#x2F;&#x2F;实际问题中根据求解问题的特点自行选择其中来设计递归求解
+&#x2F;&#x2F;实际问题中根据求解问题的特点自行选择其中来设计递归求解，比如计数：
+int Count1(GLNode *g)
+&#123;
+    int n &#x3D; 0;
+    GLNode *gl &#x3D; g-&gt;val.sublist;
+    while (gl !&#x3D; NULL)
+    &#123;
+        if (gl-&gt;tag &#x3D;&#x3D; 0)
+            n++;
+        else
+            n +&#x3D; Count1(gl-&gt;val.sublist);
+        gl &#x3D; gl-&gt;link;
+    &#125;
+    return n;
+&#125;
+
+int Count2(GLNode *g)
+&#123;
+    int n &#x3D; 0;
+    GLNode *gl &#x3D; g-&gt;val.sublist;
+    while (gl !&#x3D; NULL)
+    &#123;
+        if (gl-&gt;tag &#x3D;&#x3D; 1)
+            n +&#x3D; Count2(gl-&gt;val.sublist);
+        else
+            n++;
+        n +&#x3D; Count2(g-&gt;link);
+    &#125;
+    return n;
+&#125;
+
+
 
 int GLLength(GLNode *g)
 &#123;
@@ -15264,6 +15296,7 @@ void DispGL(GLNode *g)
 &#x2F;&#x2F;与输出对应的，建立广义表的链式存储结构,记得空表是 “#”，遇到则将g-&gt;val.sublist置空
 &#x2F;&#x2F;扫描到 （ 则用g递归开启一个子表节点，遇到 ）说明已经处理完，g置空
 &#x2F;&#x2F;时空复杂的均为O（n）
+&#x2F;&#x2F;切记把链式结构和符号表示分开想，不要混在一起！
 GLNode *CreateGL(char *&amp;s)
 &#123;
     GLNode *g;
@@ -15297,7 +15330,30 @@ GLNode *CreateGL(char *&amp;s)
             g-&gt;link &#x3D; NULL;
     &#125;
     return g;
-&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+&#125;
+
+&#x2F;&#x2F;采用解法1,递归销毁，注意要灵活一点，顺序什么的不影响那么怎样方便怎样来
+void DestroyGL(GLNode *&amp;g)
+&#123;
+    GLNode *g1, *g2;
+    g1 &#x3D; g-&gt;val.sublist;
+    while (g1 !&#x3D; NULL)
+    &#123;
+        if (g1-&gt;tag &#x3D;&#x3D; 0)
+        &#123;
+            g2 &#x3D; g1-&gt;link; &#x2F;&#x2F;保存兄弟节点
+            free(g1);
+            g1 &#x3D; g2;
+        &#125;
+        else
+        &#123;
+            g2 &#x3D; g1-&gt;link;
+            DestroyGL(g1-&gt;val.sublist);
+            g1 &#x3D; g2;
+        &#125;
+    &#125;
+    free(g);
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 
 
@@ -15307,7 +15363,107 @@ GLNode *CreateGL(char *&amp;s)
 
 
 
-<h1 id="6-树"><a href="#6-树" class="headerlink" title="6.树"></a>6.树</h1><p>有树形表示法，文氏图表示法，凹入表示法和括号表示法等等。</p>
+<h1 id="6-树"><a href="#6-树" class="headerlink" title="6.树"></a>6.树</h1><h2 id="基本和存储"><a href="#基本和存储" class="headerlink" title="基本和存储"></a>基本和存储</h2><p>有树形表示法，文氏图表示法，凹入表示法和括号表示法等等。</p>
+<p>树的定义是递归的，树的性质在P192</p>
+<ol>
+<li>结点数 = 所有节点的出度（其实就是边数） + 1</li>
+<li>度为m的树（就是节点中最大出度为m）中第i层上最多有m^(i-1)个节点，若每一层都是满的，称为满m次树</li>
+<li>高度为h的m次树最多有(m^h - 1)/(m-1) 个节点</li>
+<li>具有n个结点的m次树的最小高度为logm(n(m-1)+1)向大取整</li>
+</ol>
+<p>其实性质2，3，4说的都是一种情况。。。</p>
+<p>对于m次树，含有n个节点，那么最大高度maxh = n - (m-1) 显然，其他节点度都为1就好了</p>
+<p>基本运算有寻找特定节点，插入/删除特定节点，<strong>遍历</strong></p>
+<p>卧槽，遍历的先中后原来是根节点的输出次序，一般都习惯先左后右。</p>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">&#x2F;&#x2F;存储结构
+#include &lt;stdio.h&gt;
+#include &lt;malloc.h&gt;
+&#x2F;&#x2F;1.双亲存储，顺序存储，根节点的父节点设置为-1，其余设置为父节点在顺序中的位置
+&#x2F;&#x2F;求双亲容易，但是求某个节点的子节点难，要遍历整个存储结构
+#define MaxSize 100 &#x2F;&#x2F;假设最多只有100个非零项
+#define MaxSons 100 &#x2F;&#x2F;假设树的度为100
+typedef int ElemType;
+typedef struct
+&#123;
+    ElemType data;
+    int parent;
+&#125; PTree[MaxSize];
+
+&#x2F;&#x2F;2.子链存储，每个节点有指向所有孩子结点的指针，因为难以确定数目，统一用最大的【树的度】来分配
+&#x2F;&#x2F;找双亲费时，找孩子很方便，树的度与平均度偏差较大时，浪费
+
+#define MaxSons 100 &#x2F;&#x2F;假设树的度为100
+typedef struct node
+&#123;
+    ElemType data;
+    struct node *sons[MaxSons];
+&#125; TSonNode;
+&#x2F;&#x2F;以此为基础求树的高度
+int TreeHeight1(TSonNode *t)
+&#123;
+    TSonNode *p;
+    int i, h, maxh &#x3D; 0;
+    if (t &#x3D;&#x3D; NULL)
+        return 0;
+    else
+    &#123;
+        for (i &#x3D; 0; i &lt; MaxSons; i++)
+        &#123;
+            p &#x3D; t-&gt;sons[i];
+            if (p !&#x3D; NULL)
+            &#123;
+                h &#x3D; TreeHeight1(p); &#x2F;&#x2F;求子树的深度
+                if (maxh &lt; h)
+                    maxh &#x3D; h;
+            &#125;
+        &#125;
+    &#125;
+    return (maxh + 1);
+&#125;
+
+&#x2F;&#x2F;3.孩子兄弟链，每个节点三个域，一个元素，一个指向长子，一个指向兄弟
+typedef struct tnode
+&#123;
+    ElemType data;
+    struct tnode *hp; &#x2F;&#x2F;指向兄弟 horizontal point
+    struct tnode *vp; &#x2F;&#x2F;指向孩子 vertical point
+&#125; TSBNode;
+&#x2F;&#x2F;其实这种结构是把树转换为二叉树的存储结构
+&#x2F;&#x2F;最大的优点就是方便的实现树和二叉树的相互转换,缺点时查找父节点麻烦
+
+int TreeHeight2(TSBNode *t)
+&#123;
+    TSBNode *p;
+    int h, maxh &#x3D; 0;
+    if (t &#x3D;&#x3D; NULL)
+        return 0;
+    p &#x3D; t-&gt;vp;
+    while (p !&#x3D; NULL) &#x2F;&#x2F;遍历同一层的p
+    &#123;
+        h &#x3D; TreeHeight2(p-&gt;vp); &#x2F;&#x2F;求出这一层的最大值
+        if (maxh &lt; h)
+            maxh &#x3D; h;
+        p &#x3D; p-&gt;hp;
+    &#125;
+    return maxh + 1;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+
+
+<h2 id="二叉树"><a href="#二叉树" class="headerlink" title="二叉树"></a>二叉树</h2><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++"><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+
+
+
+
+
+
+
+
+
+
 <h1 id="待补充"><a href="#待补充" class="headerlink" title="待补充"></a>待补充</h1><h2 id="串：KMP"><a href="#串：KMP" class="headerlink" title="串：KMP"></a>串：KMP</h2><h2 id="稀疏矩阵快速转置"><a href="#稀疏矩阵快速转置" class="headerlink" title="稀疏矩阵快速转置"></a>稀疏矩阵快速转置</h2>]]></content>
       <categories>
         <category>算法</category>
