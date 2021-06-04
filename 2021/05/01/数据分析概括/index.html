@@ -1452,7 +1452,7 @@ sort_columns 按字母顺序绘制各列，默认为<span class="token boolean">
 
         var selection = window.getSelection();
         // if the selection is short let's not annoy our users.
-        if (('' + selection).length < Number.parseInt('20')) {
+        if (('' + selection).length < Number.parseInt('200')) {
             return;
         }
 

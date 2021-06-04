@@ -1023,7 +1023,7 @@ mediatype `是个 MIME 类型的字符串，例如 "`image/jpeg`" 表示 JPEG �
 
         var selection = window.getSelection();
         // if the selection is short let's not annoy our users.
-        if (('' + selection).length < Number.parseInt('20')) {
+        if (('' + selection).length < Number.parseInt('200')) {
             return;
         }
 
