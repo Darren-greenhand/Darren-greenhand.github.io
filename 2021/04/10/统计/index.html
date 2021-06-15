@@ -35,7 +35,7 @@
 
 
 
- <script type="text/javascript" src="/libs/others/sakura.js"></script> 
+ <script type="text/javascript" src=""></script> 
 
 	
  <script type="text/javascript">
@@ -236,7 +236,7 @@
 <script src="/libs/cryptojs/crypto-js.min.js"></script>
 <script>
     (function() {
-        let pwd = '081ff8678bf01c98dcc2028de5e6a136d66cc6784b336923e6c2018f4a2f4cf5';
+        let pwd = '';
         if (pwd && pwd.length > 0) {
             if (pwd !== CryptoJS.SHA256(prompt('密码是简单的8位数字（我的宿舍号是？）')).toString(CryptoJS.enc.Hex)) {
                 alert('加载内容....');
@@ -402,7 +402,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-05-21
+                    2021-06-15
                 </div>
                 
 
@@ -938,6 +938,32 @@
     
 
     
+        <div class="disqus-card card" data-aos="fade-up">
+    <div id="disqus_thread" class="card-content">
+        <noscript>Please enable JavaScript to view the
+            <a target="_blank" rel="noopener" href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+    </div>
+</div>
+
+<script type="text/javascript">
+    disqus_config = function () {
+        this.page.url = 'https://darren-dong.com/2021/04/10/%E7%BB%9F%E8%AE%A1/';
+        this.page.identifier = '/2021/04/10/%E7%BB%9F%E8%AE%A1/';
+        this.page.title = '统计';
+    };
+    let disqus_shortname = 'passer-by';
+
+    (function () { // DON'T EDIT BELOW THIS LINE
+        let d = document, s = d.createElement('script');
+        // 如：s.src = 'https://blinkfox.disqus.com/embed.js';
+        s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+
+    
 
     
 
@@ -956,30 +982,30 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2021/04/10/data-analyze/">
+                <a href="/2021/04/12/linear-algebra/">
                     <div class="card-image">
                         
-                        <img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/data-4570804_1920.jpg" class="responsive-img" alt="data-analyze">
+                        <img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/mathematics-1044091_1920.jpg" class="responsive-img" alt="linear algebra">
                         
-                        <span class="card-title">data-analyze</span>
+                        <span class="card-title">linear algebra</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            利用python进行数据分析，其实是入门级别的python库学习
+                            真正抱着好奇的态度探究这门牵扯无数高等数学领域的基础课程，为矩阵分析打打基础( •̀ ω •́ )y
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-04-10
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-04-12
                         </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/python/" class="post-category">
-                                    python
+                            <a href="/categories/math/" class="post-category">
+                                    math
                                 </a>
                             
                             
@@ -989,8 +1015,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/python-data/">
-                        <span class="chip bg-color">python-data</span>
+                    <a href="/tags/%E7%BA%BF%E4%BB%A3/">
+                        <span class="chip bg-color">线代</span>
                     </a>
                     
                 </div>
@@ -1007,7 +1033,7 @@
                 <a href="/2021/04/10/crawler/">
                     <div class="card-image">
                         
-                        <img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/ead8afa3b76e437d998f12b2d8da948e.jpeg" class="responsive-img" alt="crawler">
+                        <img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210615201616.jpg" class="responsive-img" alt="crawler">
                         
                         <span class="card-title">crawler</span>
                     </div>
@@ -1015,7 +1041,7 @@
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            学数据分析前，当然要确保自己有数据啦！
+                            精神是hacker，忌讳是cracker
                         
                     </div>
                     <div class="publish-info">
@@ -1026,8 +1052,8 @@
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/python/" class="post-category">
-                                    python
+                            <a href="/categories/data/" class="post-category">
+                                    data
                                 </a>
                             
                             
@@ -1278,7 +1304,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">214.7k</span>&nbsp;字
+                class="white-color">208.6k</span>&nbsp;字
             
             
             
