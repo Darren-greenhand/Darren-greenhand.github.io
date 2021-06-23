@@ -9625,7 +9625,7 @@ AssertionError<span class="token punctuation">:</span> 除数不可为<span clas
   <entry>
     <title>大一数据结构实现</title>
     <url>/2021/05/25/%E5%A4%A7%E4%B8%80%E4%B8%8B%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</url>
-    <content><![CDATA[<p>卧槽，研究了一下考题，发现考的代码题都极其弱智。。白写了那么多难的。。。</p>
+    <content><![CDATA[<p>考前抱佛脚┭┮﹏┭┮</p>
 <p>记住这里大量用了c++的引用。。好方便，但是答题的时候记得换成 *和全局变量</p>
 <p>一个算法应该具有以下特性：</p>
 <ol>
