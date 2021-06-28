@@ -2598,7 +2598,7 @@ R(config-line)# modem autoconfigure discovery   发现和自动配置连接到�
 
         var selection = window.getSelection();
         // if the selection is short let's not annoy our users.
-        if (('' + selection).length < Number.parseInt('200')) {
+        if (('' + selection).length < Number.parseInt('200000')) {
             return;
         }
 
@@ -2621,7 +2621,7 @@ R(config-line)# modem autoconfigure discovery   发现和自动配置连接到�
             + '来源: Data World<br />'
             + '文章作者: Darren<br />'
             + '文章链接: <a href="' + url + '">' + url + '</a><br />'
-            + '本文章著作权归作者所有，任何形式的转载都请注明出处哦亲。';
+            + '记得点个赞噢！未经允许不可商用！';
 
         selection.selectAllChildren(newdiv);
         window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);

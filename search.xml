@@ -13179,7 +13179,7 @@ bool <span class="token function">DeleteHT</span><span class="token punctuation"
 
 <h2 id="交换排序"><a href="#交换排序" class="headerlink" title="交换排序"></a>交换排序</h2><pre class="line-numbers language-c" data-language="c"><code class="language-c">
 <span class="token comment">//交换排序</span>
-<span class="token comment">//冒泡排序,从后开始</span>
+<span class="token comment">//冒泡排序,从后开始，把有序的冒到最前面</span>
 <span class="token keyword">void</span> <span class="token function">BubbleSort</span><span class="token punctuation">(</span>RecType R<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token keyword">int</span> n<span class="token punctuation">)</span>
 <span class="token punctuation">&#123;</span>
     <span class="token keyword">int</span> i<span class="token punctuation">,</span> j<span class="token punctuation">;</span>
@@ -13228,8 +13228,7 @@ bool <span class="token function">DeleteHT</span><span class="token punctuation"
 
 
 
-<h2 id="选择排序"><a href="#选择排序" class="headerlink" title="选择排序"></a>选择排序</h2><pre class="line-numbers language-c" data-language="c"><code class="language-c">
-<span class="token comment">//选择排序</span>
+<h2 id="选择排序"><a href="#选择排序" class="headerlink" title="选择排序"></a>选择排序</h2><pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token comment">//选择排序</span>
 <span class="token comment">//基本思路是每一趟都挑出最大、最小的，适合从大量元素中选择一部分排序元素</span>
 
 <span class="token comment">//简单选择选择</span>
@@ -13292,7 +13291,7 @@ bool <span class="token function">DeleteHT</span><span class="token punctuation"
         R<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> tmp<span class="token punctuation">;</span>
         <span class="token function">sift</span><span class="token punctuation">(</span>R<span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> i <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">&#125;</span>
-<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 
 
