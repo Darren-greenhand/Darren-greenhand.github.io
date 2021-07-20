@@ -4,7 +4,7 @@
 
 <head>
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
-    <meta name="keywords" content="python课件, Data World">
+    <meta name="keywords" content="python二刷, Data World">
     <meta name="description" content="willing to enter the field of god">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>python课件 | Data World</title>
+    <title>python二刷 | Data World</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -254,7 +254,7 @@
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">python课件</h1>
+                    <h1 class="description center-align post-title">python二刷</h1>
                 </div>
             </div>
         </div>
@@ -370,8 +370,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/python%EF%BC%882%EF%BC%89/">
-                                <span class="chip bg-color">python（2）</span>
+                            <a href="/tags/python/">
+                                <span class="chip bg-color">python</span>
                             </a>
                         
                     </div>
@@ -402,7 +402,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-06-15
+                    2021-07-19
                 </div>
                 
 
@@ -411,7 +411,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    26 分
+                    27 分
                 </div>
                 
 
@@ -436,7 +436,7 @@
             <div id="articleContent">
                 <h1 id="白嫖的python课件总结"><a href="#白嫖的python课件总结" class="headerlink" title="白嫖的python课件总结"></a>白嫖的python课件总结</h1><p>[toc]</p>
 <p>ps：</p>
-<p>这份笔记并不完整，是笔者学了一遍粗糙的python后二刷看课件觉得有用的东西，课件想要的思路，不贵不贵，一杯奶茶:laughing:</p>
+<p>这份笔记并不完整，是笔者学了一遍粗糙的python后二刷看课件觉得有用的东西，课件想要的私聊，不贵不贵，一杯奶茶:laughing:</p>
 <p>还有那份课件的题目值得一做！</p>
 <h2 id="1-语言基础"><a href="#1-语言基础" class="headerlink" title="1.语言基础"></a>1.语言基础</h2><p>面向对象 、 解释型 、 动态数据类型</p>
 <img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210521101010.png" alt="image-20210521100915989" style="zoom:50%;" />
@@ -460,13 +460,16 @@
 
 
 
-<h3 id="Math"><a href="#Math" class="headerlink" title="Math"></a>Math</h3><p>数学常量：e  pi</p>
+<h3 id="Math"><a href="#Math" class="headerlink" title="Math"></a>Math</h3><p>整数二进制0b\0B开头,八进制0o\0O开头，十六进制0x\0X开头</p>
+<p>对于浮点数，Python 3.x  默认提供17  位有效数字的精度，相当<br>于C  语言中的双精度浮点数</p>
+<p>可以通过x.real  和x.imag  来分别获取复数x  的实部和虚部，结果都是浮点型，是j不是i</p>
+<p>数学常量：e  pi</p>
 <p>函数：</p>
-<p>fabs  sqrt  pow(x,y)   exp log(x[,base])  log10()</p>
+<p>fabs  sqrt  pow(x,y)   exp log(x[,base])（base默认是e）  log10()</p>
 <p>ceil floor  </p>
-<p>fmod(x,y) # x/y的余数 </p>
+<p>fmod(x,y) # x/y的余数 （浮点）</p>
 <p>degrees  &lt;=&gt;  radians</p>
-<p>sin cos tan asin acos atan</p>
+<p>sin cos tan asin acos atan（默认用弧度）</p>
 <p>Cmath模块函数基本一致，但是对复数运算</p>
 <p>cmath.sqrt(-1)  ij 用的是j不是i</p>
 <p> cmath 模块包括复数 运算特有的 函数。</p>
@@ -483,15 +486,15 @@
 
 
 
-<h3 id="时间和日历"><a href="#时间和日历" class="headerlink" title="时间和日历"></a>时间和日历</h3><p>datetime基于time进行了优化，跟方便全面</p>
+<h3 id="时间和日历"><a href="#时间和日历" class="headerlink" title="时间和日历"></a>时间和日历</h3><p>datetime基于time进行了优化，更方便全面</p>
 <h4 id="datetime"><a href="#datetime" class="headerlink" title="datetime"></a>datetime</h4><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> datetime <span class="token keyword">import</span> datetime<span class="token punctuation">,</span>date<span class="token punctuation">,</span>time
-dt <span class="token operator">=</span> datetime<span class="token punctuation">(</span><span class="token string">'2021,5,1,21,8,30'</span><span class="token punctuation">)</span>
+dt <span class="token operator">=</span> datetime<span class="token punctuation">(</span><span class="token number">2021</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">21</span><span class="token punctuation">,</span><span class="token number">8</span><span class="token punctuation">,</span><span class="token number">30</span><span class="token punctuation">)</span>
 dt<span class="token punctuation">.</span>year<span class="token punctuation">,</span>month<span class="token punctuation">,</span>day<span class="token punctuation">,</span>hour<span class="token punctuation">,</span>minute<span class="token punctuation">,</span>second
 dt<span class="token punctuation">.</span>date<span class="token punctuation">(</span><span class="token punctuation">)</span>输出前三个
 dt<span class="token punctuation">.</span>time<span class="token punctuation">(</span><span class="token punctuation">)</span>输出后三个
 
 dt<span class="token punctuation">.</span>strftime<span class="token punctuation">(</span><span class="token string">'%x%x%x'</span><span class="token punctuation">)</span>
-datetime<span class="token punctuation">.</span>strptime<span class="token punctuation">(</span><span class="token string">'202151'</span><span class="token punctuation">,</span><span class="token string">"%Y%m%d"</span><span class="token punctuation">)</span><span class="token comment">#转换为datetime对象</span>
+datetime<span class="token punctuation">.</span>strptime<span class="token punctuation">(</span><span class="token string">'202151'</span><span class="token punctuation">,</span><span class="token string">"%Y%m%d"</span><span class="token punctuation">)</span><span class="token comment">#转换为datetime对象！！这个是datetime下的datetime子类！！！</span>
 datetime相减会产生datetime<span class="token punctuation">.</span>delta对象
 delta <span class="token operator">=</span> datetime2 <span class="token operator">-</span> datetime1
 delta <span class="token operator">==</span> datetime<span class="token punctuation">.</span>timedelta<span class="token punctuation">(</span><span class="token number">99</span><span class="token punctuation">,</span><span class="token number">7179</span><span class="token punctuation">)</span> <span class="token comment">#间隔99天,7179秒</span>
@@ -524,7 +527,7 @@ timedelta和datetime可以做加减得到新的datetime
 
 
 
-<h3 id="内置"><a href="#内置" class="headerlink" title="内置"></a>内置</h3><p>range  iter</p>
+<h3 id="python内置"><a href="#python内置" class="headerlink" title="python内置"></a>python内置</h3><p>range  iter</p>
 <img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210521112219.png" alt="image-20210521112219527" style="zoom:50%;" />
 
 <h3 id="帮助"><a href="#帮助" class="headerlink" title="帮助"></a>帮助</h3><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210521112244.png" alt="image-20210521112243912" style="zoom:50%;" />
@@ -569,7 +572,9 @@ timedelta和datetime可以做加减得到新的datetime
 
 <p>注意这个居中填充，还有居中不对称时左边少一个</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'what &#123;1:&lt;10&#125;&#123;0&#125;the &#123;c:&amp;&lt;10.1f&#125;'</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span><span class="token string">'a'</span><span class="token punctuation">,</span><span class="token string">'b'</span><span class="token punctuation">,</span>c <span class="token operator">=</span> <span class="token number">21.311</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-what b         athe <span class="token number">21.3</span><span class="token operator">&amp;</span><span class="token operator">&amp;</span><span class="token operator">&amp;</span><span class="token operator">&amp;</span><span class="token operator">&amp;</span><span class="token operator">&amp;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+what b         athe <span class="token number">21.3</span><span class="token operator">&amp;</span><span class="token operator">&amp;</span><span class="token operator">&amp;</span><span class="token operator">&amp;</span><span class="token operator">&amp;</span><span class="token operator">&amp;</span>
+In <span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">:</span> <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'what &#123;1:&lt;10&#125;&#123;0&#125;the &#123;c:&amp;=+10.1f&#125;'</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span><span class="token string">'a'</span><span class="token punctuation">,</span><span class="token string">'b'</span><span class="token punctuation">,</span>c <span class="token operator">=</span> <span class="token number">21.311</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+what b         athe <span class="token operator">+</span><span class="token operator">&amp;</span><span class="token operator">&amp;</span><span class="token operator">&amp;</span><span class="token operator">&amp;</span><span class="token operator">&amp;</span><span class="token number">21.3</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
 
 
@@ -583,18 +588,25 @@ what b         athe <span class="token number">21.3</span><span class="token ope
 
 
 
-<h2 id="3-循环结构"><a href="#3-循环结构" class="headerlink" title="3.循环结构"></a>3.循环结构</h2><p>for 语句是通过遍历任意序列的元素进行来建立循环的，针对序列的每一个元素执行一次循环体</p>
+<h2 id="3-循环结构"><a href="#3-循环结构" class="headerlink" title="3.循环结构"></a>3.循环结构</h2><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210706145044.png" alt="image-20210706145037154" style="zoom: 50%;" />
+
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210706145338.png" alt="image-20210706145338449" style="zoom:50%;" />
+
+<p>for 语句是通过遍历任意序列的元素进行来建立循环的，针对序列的每一个元素执行一次循环体</p>
 <img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210521113716.png" alt="image-20210521113716491" style="zoom: 67%;" />
 
-<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210521113742.png" alt="image-20210521113742216"></p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210521113742.png" alt="image-20210521113742216" style="zoom: 67%;" />
+
 <p>首先Python 对关键字in 后的对象调用iter() 函数获得迭代 器，然后 调用next() 函数获得迭代器的 元素，直到 抛出stopIteration</p>
+<p> while 语句多用于循环次数不确定的情况，而对于循环次数确定的情况，使用for</p>
 <p>pass空语句</p>
 <p>注意 ：布尔常量True 和False 首字母必须大写 ！</p>
-<h2 id="4-字符串"><a href="#4-字符串" class="headerlink" title="4.字符串"></a>4.字符串</h2><h3 id="编码"><a href="#编码" class="headerlink" title="编码"></a>编码</h3><p>万国码Unicode是python选择的标准符号表，它每种语言中的每个字符设定了<strong>统一并且唯一的二进制编码</strong>，以满足跨语言、跨平台进行文本转换、处理的要求</p>
+<h2 id="4-字符串"><a href="#4-字符串" class="headerlink" title="4.字符串"></a>4.字符串</h2><p><strong>建议看看原文</strong></p>
+<h3 id="编码"><a href="#编码" class="headerlink" title="编码"></a>编码</h3><p>万国码Unicode是python选择的标准符号表，它每种语言中的每个字符设定了<strong>统一并且唯一的二进制编码</strong>，以满足跨语言、跨平台进行文本转换、处理的要求（翻译二进制码的方式）</p>
 <p>ASCII 码中，一个英文字母（不分大小写）为一个字节，一个中文汉字为两个字节。</p>
 <p>UTF-8 编码中，一个英文字为一个字节，一个中文为三个字节。</p>
 <p>Unicode 编码中，一个英文为一个字节，一个中文为两个字节。</p>
-<p>字节只是一个单位罢了，不同的编码中采用不同的规则存储字符，而这些规则实现的时候消耗字节大小不同</p>
+<p>字节只是一个单位（8位）罢了，不同的编码中采用不同的规则存储字符，而这些规则实现的时候消耗字节大小不同</p>
 <p>UTF-8</p>
 <p>​    是 一种为Unicode 字符设计的变长编码系统</p>
 <p>对于ASCII 字符，UTF-8 仅使用1 个字节来编码</p>
@@ -607,24 +619,24 @@ what b         athe <span class="token number">21.3</span><span class="token ope
 <p>Unicode规定了，所有字符<strong>统一由两个字符</strong>来表示，也就是<strong>16位</strong></p>
 <p>utf-8就是缩小一点，从4到8到12到16分段</p>
 <p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/137875615">详述</a>有一点错误就是最后那个中文例子，看我的👇</p>
-<p>而python字符串默认是unicode编码</p>
+<p><strong>而python字符串默认是unicode编码</strong></p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python">In <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">:</span> a <span class="token operator">=</span> <span class="token string">'卧槽'</span>
 
 In <span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">:</span> a<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
 Out<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">:</span> <span class="token string">'卧'</span>
 
 In <span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">:</span> a<span class="token punctuation">.</span>encode<span class="token punctuation">(</span><span class="token string">'utf-8'</span><span class="token punctuation">)</span>
-Out<span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">:</span> <span class="token string">b'\xe5\x8d\xa7\xe6\xa7\xbd'</span>
+Out<span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">:</span> <span class="token string">b'\xe5\x8d\xa7\xe6\xa7\xbd'</span> <span class="token comment">#一个汉字拆成三个字节</span>
     
 In <span class="token punctuation">[</span><span class="token number">10</span><span class="token punctuation">]</span><span class="token punctuation">:</span> c <span class="token operator">=</span> <span class="token string">'dnoad'</span>
 In <span class="token punctuation">[</span><span class="token number">11</span><span class="token punctuation">]</span><span class="token punctuation">:</span> c<span class="token punctuation">.</span>encode<span class="token punctuation">(</span><span class="token string">'utf-8'</span><span class="token punctuation">)</span>
 Out<span class="token punctuation">[</span><span class="token number">11</span><span class="token punctuation">]</span><span class="token punctuation">:</span> <span class="token string">b'dnoad'</span>
-<span class="token comment"># 英文在utf-8中不会发生转换</span>
+<span class="token comment"># 英文在utf-8中不会发生转换，直接用一个字节表示</span>
 In <span class="token punctuation">[</span><span class="token number">13</span><span class="token punctuation">]</span><span class="token punctuation">:</span> <span class="token builtin">ord</span><span class="token punctuation">(</span><span class="token string">'我'</span><span class="token punctuation">)</span>
 Out<span class="token punctuation">[</span><span class="token number">13</span><span class="token punctuation">]</span><span class="token punctuation">:</span> <span class="token number">25105</span> <span class="token comment">#unicode</span>
     
-In <span class="token punctuation">[</span><span class="token number">14</span><span class="token punctuation">]</span><span class="token punctuation">:</span> <span class="token builtin">chr</span><span class="token punctuation">(</span><span class="token number">25105</span><span class="token punctuation">)</span>
-Out<span class="token punctuation">[</span><span class="token number">14</span><span class="token punctuation">]</span><span class="token punctuation">:</span> <span class="token string">'我'</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+In <span class="token punctuation">[</span><span class="token number">14</span><span class="token punctuation">]</span><span class="token punctuation">:</span> <span class="token builtin">chr</span><span class="token punctuation">(</span><span class="token number">25104</span><span class="token punctuation">)</span>
+Out<span class="token punctuation">[</span><span class="token number">14</span><span class="token punctuation">]</span><span class="token punctuation">:</span> <span class="token string">'成'</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 
 
@@ -688,7 +700,7 @@ Out<span class="token punctuation">[</span><span class="token number">53</span><
 
 <img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210521131657.png" alt="image-20210521131656979" style="zoom:50%;" />
 
-<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210521131718.png" alt="image-20210521131718192" style="zoom:33%;" />
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210521131718.png" alt="image-20210521131718192" style="zoom: 50%;" />
 
 <img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210521131726.png" alt="image-20210521131726435" style="zoom:33%;" />
 
@@ -713,7 +725,7 @@ a  <span class="token operator">=</span>  <span class="token string">"123abc456"
 <span class="token keyword">print</span>  re<span class="token punctuation">.</span>search<span class="token punctuation">(</span> <span class="token string">"([0-9]*)([a-z]*)([0-9]*)"</span> <span class="token punctuation">,</span>a<span class="token punctuation">)</span><span class="token punctuation">.</span>group<span class="token punctuation">(</span> <span class="token number">3</span> <span class="token punctuation">)</span>    <span class="token comment">#456</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <ol>
-<li>正则表达式中的三组括号把匹配结果分成三组</li>
+<li>正则表达式中的三组<strong>括号</strong>把匹配结果分成三组</li>
 </ol>
 <ul>
 <li> group() 同group（0）就是匹配正则表达式整体结果</li>
@@ -776,13 +788,16 @@ a  <span class="token operator">=</span>  <span class="token string">"123abc456"
 <p>元素删除  del   分片赋值  在使用<strong>分片赋值</strong>时，<strong>可使用与原序列不等长的序列将分片替换</strong> </p>
 <img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210521141731.png" alt="image-20210521141731815" style="zoom:50%;" />
 
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210706154841.png" alt="image-20210706154841856" style="zoom:50%;" />
+
 <img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210521141802.png" alt="image-20210521141802120" style="zoom:50%;" />
 
 <img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210521141833.png" alt="image-20210521141833822" style="zoom:50%;" />
 
 <img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210521141849.png" alt="image-20210521141849468" style="zoom:50%;" />
 
-
+<p>for前面的部分是一个表达式，它必须根据<code>x</code>计算出一个结果，必须加上else，如：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token punctuation">[</span>x <span class="token keyword">if</span> x <span class="token operator">%</span> <span class="token number">2</span> <span class="token operator">==</span> <span class="token number">0</span> <span class="token keyword">else</span> <span class="token operator">-</span>x <span class="token keyword">for</span> x <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">11</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <h3 id="列表常用方法"><a href="#列表常用方法" class="headerlink" title="列表常用方法"></a>列表常用方法</h3><ol>
 <li><strong>序列都可以用</strong></li>
@@ -810,15 +825,25 @@ a  <span class="token operator">=</span>  <span class="token string">"123abc456"
 <p>可以看看题目</p>
 <h2 id="7-字典"><a href="#7-字典" class="headerlink" title="7.字典"></a>7.字典</h2><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210521144114.png" alt="image-20210521144114555" style="zoom:50%;" />
 
-<p>更新呵创建都用索引，删除则用del，检查关键字用in / not in</p>
+<p>更新和创建都用索引，删除则用del，检查关键字用in / not in</p>
 <p> len() 函数可以获取字典所包含“关键字: 值”对的数目，即字典长度 。虽然 也支持max() 、min() 、sum() 和sorted() 函数，但只针对字典的关键字进行计算，很多情况下没有实际意义。</p>
 <p>  字典不支持连接(+) 和重复操作符(*) ，关系运算中只有“==”  和“!=”  有意义 </p>
-<h3 id="常用方法"><a href="#常用方法" class="headerlink" title="常用方法"></a>常用方法</h3><p>Python 字典和集合实际上也是对象，Python 提供了很多有用的方法。</p>
+<h3 id="常用方法"><a href="#常用方法" class="headerlink" title="常用方法"></a>常用方法</h3><p>dict三用法:</p>
+<ol>
+<li><p>使用dict() 函数创建一个空字典并给变量赋值</p>
+</li>
+<li><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210706160413.png" alt="image-20210706160413494" style="zoom:50%;" />
+
+<p><strong>第二种方法应该是大规模处理中用的多的</strong></p>
+</li>
+<li><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210706160432.png" alt="image-20210706160431903" style="zoom:50%;" /></li>
+</ol>
+<p>Python 字典和集合实际上也是对象，Python 提供了很多有用的方法。</p>
 <img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210521144729.png" alt="image-20210521144729426" style="zoom:50%;" />
 
 <img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210521144739.png" alt="image-20210521144739088" style="zoom:50%;" />
 
-<p>原先的键会被清除，字符串也可以做序列，但是重复的键会被删除</p>
+<p>原先的键会被清除，字符串也可以做序列，   <strong>重复的键会被删除</strong></p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python">d2 <span class="token operator">=</span> d<span class="token punctuation">.</span>fromkeys<span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token string">'dwad'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
 d2
 Out<span class="token punctuation">[</span><span class="token number">92</span><span class="token punctuation">]</span><span class="token punctuation">:</span> <span class="token punctuation">&#123;</span><span class="token string">'d'</span><span class="token punctuation">:</span> <span class="token boolean">None</span><span class="token punctuation">,</span> <span class="token string">'w'</span><span class="token punctuation">:</span> <span class="token boolean">None</span><span class="token punctuation">,</span> <span class="token string">'a'</span><span class="token punctuation">:</span> <span class="token boolean">None</span><span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
@@ -858,10 +883,12 @@ Out<span class="token punctuation">[</span><span class="token number">92</span><
 
 
 
-<h3 id="传统运算"><a href="#传统运算" class="headerlink" title="传统运算"></a>传统运算</h3><p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210521150124.png" alt="image-20210521150124822"></p>
-<p>比较用 == 呵 ！=  还有包含真包含</p>
+<h3 id="传统运算"><a href="#传统运算" class="headerlink" title="传统运算"></a>传统运算</h3><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210521150124.png" alt="image-20210521150124822" style="zoom:50%;" />
+
+<p>比较用 == 和 ！=  还有包含真包含 &lt; &lt;=</p>
 <p>当然还有赋值运算符 s1 |= s2</p>
 <p>集合与for 循环语句配合使用，可实现对集合各个元素的遍历</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210706161507.png" alt="image-20210706161507749"></p>
 <h3 id="常用方法-1"><a href="#常用方法-1" class="headerlink" title="常用方法"></a>常用方法</h3><ol>
 <li><strong>适用于可变和不可变集合</strong></li>
 </ol>
@@ -881,7 +908,9 @@ Out<span class="token punctuation">[</span><span class="token number">92</span><
 
 
 
-<h2 id="9-函数与模块"><a href="#9-函数与模块" class="headerlink" title="9.函数与模块"></a>9.函数与模块</h2><h3 id="主函数"><a href="#主函数" class="headerlink" title="主函数"></a>主函数</h3><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210521151042.png" alt="image-20210521151042923" style="zoom:50%;" />
+<h2 id="9-函数与模块"><a href="#9-函数与模块" class="headerlink" title="9.函数与模块"></a>9.函数与模块</h2><p>在Python 中，实参向形参传送数据的方式是“值传递”，即“拷贝”或“复制”</p>
+<p>  实参 的值传给形参 ，是对象间整体赋值，是 一种单向传递方式，不能由形参传回给实参。</p>
+<h3 id="主函数"><a href="#主函数" class="headerlink" title="主函数"></a>主函数</h3><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210521151042.png" alt="image-20210521151042923" style="zoom:50%;" />
 
 <img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210521151105.png" alt="image-20210521151105021" style="zoom:50%;" />
 
@@ -892,6 +921,7 @@ Out<span class="token punctuation">[</span><span class="token number">92</span><
 <span class="token number">3</span><span class="token punctuation">.</span> 然后就到可变参数，指的是可以接受所有值的元组，<span class="token operator">*</span>args  放在第三位接受所有的
 <span class="token number">4</span><span class="token punctuation">.</span> 第四是命名关键字，或者说可变字典<span class="token operator">**</span>kw  接受所有的 a <span class="token operator">=</span> <span class="token string">'xxx'</span> 这样的参数，并赋给字典，但是key不用加引号
 <span class="token number">5</span><span class="token punctuation">.</span> 最后是关键字参数，不能省略的键值对！
+<span class="token comment">#其实就是无限接受的俩args放中间</span>
 
 如果要限制关键字参数的名字，就可以用命名关键字参数，例如，只接收city和job作为关键字参数。这种方式定义的函数如下：
 <span class="token keyword">def</span> <span class="token function">person</span><span class="token punctuation">(</span>name<span class="token punctuation">,</span> age<span class="token punctuation">,</span> <span class="token operator">*</span><span class="token punctuation">,</span> city<span class="token punctuation">,</span> job<span class="token punctuation">)</span><span class="token punctuation">:</span>
@@ -911,7 +941,7 @@ Jack <span class="token number">24</span> Beijing Engineer
 Traceback <span class="token punctuation">(</span>most recent call last<span class="token punctuation">)</span><span class="token punctuation">:</span>
   File <span class="token string">"&lt;stdin>"</span><span class="token punctuation">,</span> line <span class="token number">1</span><span class="token punctuation">,</span> <span class="token keyword">in</span> <span class="token operator">&lt;</span>module<span class="token operator">></span>
 TypeError<span class="token punctuation">:</span> person<span class="token punctuation">(</span><span class="token punctuation">)</span> takes <span class="token number">2</span> positional arguments but <span class="token number">4</span> were given
-<span class="token comment">#但是命名关键字参数可以有缺省值，从而简化调用</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token comment">#但是命名关键字参数可以有缺省值，从而简化调用</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>函数参数规则：</p>
 <ol>
@@ -932,7 +962,7 @@ TypeError<span class="token punctuation">:</span> person<span class="token punct
 
 <img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210521153130.png" alt="image-20210521153130269" style="zoom:50%;" />
 
-<p>  <strong>把@deco 语句放在函数square_sum() 定义之前，实际上是将square_sum 传递给装饰器deco  ，并将deco 返回的新函数对象赋给原来的函数名</strong></p>
+<p>  <strong>把@deco 语句放在函数square_sum() 定义之前，实际上是将square_sum 传递给装饰器deco  ，并将deco 返回的新函数对象赋给原来的函数名</strong> square_sum=deco(square_sum)</p>
 <p>从本质上，装饰器起到的就是这样一个重新指向函数名的作用，让同一个对象名指向一个新返回的函数，从而达到修改可调用函数的目的 </p>
 <h4 id="有参数"><a href="#有参数" class="headerlink" title="有参数"></a>有参数</h4><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210521153708.png" alt="image-20210521153708816" style="zoom:50%;" />
 
@@ -1022,26 +1052,31 @@ TypeError<span class="token punctuation">:</span> person<span class="token punct
 <p>首先python里的默认编码都是Unicode，所有的文件其实本质都是二进制码，二进制文件只能用bytes类型操作，读出来怎么解读自己来，一般都用Unicode规则来decode（  二进制文件 是把数据按其在内存中的存储形式原样输出到磁盘上存放。）</p>
 <p>小心那个文件指针位置，你写入了以后会放在最后，再读取啥都读不出来类似的</p>
 <p>Python你在读写文件的时候<strong>不要打开</strong>。。不然会出现更改不了。。</p>
-<p>理解python的<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_23953717/article/details/78434292">open</a>顺带一提，txt默认是ANSI编码，不是UTF-8，坑死了</p>
+<p>理解python的<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_23953717/article/details/78434292">open</a>txt默认是ANSI编码，不是UTF-8，坑死了，解决方案👈</p>
 <img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210521163612.png" alt="image-20210521163612734" style="zoom:50%;" />
 
 <p>经常需要用到“终端形式”阅读的，用文本，经常修改的，最好用二进制</p>
 <p>  读/ 写操作是相对于磁盘文件而言的，而输入/ 输出操作是相对于内存储器而言的</p>
 <p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210521163715.png" alt="image-20210521163714938"></p>
 <p> r+是从最开始开始读的</p>
-<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210521163725.png" alt="image-20210521163725099" style="zoom:50%;" />
+<p>文件对象=open( 文件说明符[, 打开方式][, 缓冲区])</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210706170109.png" alt="image-20210706170109487" style="zoom:50%;" />
+
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210706170146.png" alt="image-20210706170146451" style="zoom:50%;" />
 
 
 
 <hr>
 <p>文件对象有一些属性</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210521163754.png" alt="image-20210521163754079"></p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210521163754.png" alt="image-20210521163754079" style="zoom:50%;" />
+
 <p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210521163811.png" alt="image-20210521163811248"></p>
 <h3 id="文本"><a href="#文本" class="headerlink" title="文本"></a>文本</h3><p>文本文件是指以ASCII 码方式存储的文件：英文、数字等字符存储的是ASCII 码 ，而 汉字存储的是机内码。</p>
 <p>  文本文件中除了存储文件有效字符信息（包括能用ASCII 码字符表示的回车、换行等信息）外，不能存储其他任何信息</p>
 <img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210521164102.png" alt="image-20210521164102228" style="zoom:50%;" />
 
 <p>文本文件的 优点：方便 阅读和理解，使用常用的文本编辑器或文字处理器就可以对其创建和修改的，文件 对象提供了read() 、readline() 和readlines() 方法 用于读取文本文件的内容</p>
+<p>  每次write() 方法 执行完后并不 换行，如果 需要换行则在字符串最后加 换行符“\n</p>
 <p>读取中文问题：</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python">InIn <span class="token punctuation">[</span><span class="token number">6</span><span class="token punctuation">]</span><span class="token punctuation">:</span> f <span class="token operator">=</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">'try.txt'</span><span class="token punctuation">,</span><span class="token string">'r+'</span><span class="token punctuation">)</span>
 
@@ -1250,8 +1285,8 @@ AssertionError<span class="token punctuation">:</span> 除数不可为<span clas
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/python%EF%BC%882%EF%BC%89/">
-                                    <span class="chip bg-color">python（2）</span>
+                                <a href="/tags/python/">
+                                    <span class="chip bg-color">python</span>
                                 </a>
                             
                         </div>
@@ -2010,7 +2045,7 @@ AssertionError<span class="token punctuation">:</span> 除数不可为<span clas
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">216k</span>&nbsp;字
+                class="white-color">212.8k</span>&nbsp;字
             
             
             

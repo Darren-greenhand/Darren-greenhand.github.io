@@ -402,7 +402,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-06-15
+                    2021-07-19
                 </div>
                 
 
@@ -1640,7 +1640,7 @@ requests&#x3D;&#x3D;2.11.1<span aria-hidden="true" class="line-numbers-rows"><sp
 <p>conda env list 检查环境列表</p>
 <p>为了避免以后出现错误，最好在默认环境中更新所有软件包。打开终端/ Anaconda Prompt应用程序。在提示符下，运行以下命令：</p>
 <pre class="line-numbers language-none"><code class="language-none">conda upgrade conda
-conda upgrade --all<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+conda upgrade --all #千万不要！！！！！！！不然会带来一堆兼容性错误<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <p>并在询问是否要安装软件包时回答是。最初安装时附带的软件包往往已过时，因此立即更新它们可以防止将来的软件过时错误。</p>
 <p>新环境里最好安装个pip</p>
@@ -1716,10 +1716,10 @@ deactivate<span aria-hidden="true" class="line-numbers-rows"><span></span><span>
 </blockquote>
 <p>After all, code is written for humans, not for computers. Notebooks provide exactly this capability. You are able to write documentation as narrative text, along with code. This is not only useful for the people reading your notebooks, but for your future self coming back to the analysis.</p>
 <p>Just a small aside: recently, this idea of literate programming has been extended to a whole programming language, <a target="_blank" rel="noopener" href="http://www.witheve.com/">Eve</a>.</p>
-<p>Jupyter笔记本源自Fernando Perez发起的<a target="_blank" rel="noopener" href="https://ipython.org/">IPython项目</a>。IPython是一个交互式shell，类似于普通的Python shell，但具有诸如语法突出显示和代码完成之类的强大功能。最初，笔记本通过将消息从Web应用程序（您在浏览器中看到的笔记本）发送到IPython内核（在后台运行的IPython应用程序）来工作。内核执行了代码，然后将其发送回笔记本。当前的架构与此类似，如下所示。</p>
+<p>Jupyter笔记本源自Fernando Perez发起的<a target="_blank" rel="noopener" href="https://ipython.org/">IPython项目</a>。IPython是一个交互式shell，类似于普通的Python shell，但具有诸如语法突出显示和代码之类补全的强大功能。最初，笔记本通过将消息从Web应用程序（您在浏览器中看到的笔记本）发送到IPython内核（在后台运行的IPython应用程序）来工作。内核执行了代码，然后将其发送回笔记本。当前的架构与此类似，如下所示。</p>
 <p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/notebook-components.png" alt="img"></p>
 <p>中心点是笔记本服务器。您通过浏览器连接到服务器，并且笔记本呈现为Web应用程序。您在Web应用程序中编写的代码通过服务器发送到内核。内核运行代码并将其发送回服务器，然后所有输出将在浏览器中呈现。保存笔记本时，它将作为带有<code>.ipynb</code>文件扩展名的JSON文件写入服务器。</p>
-<p>该体系结构的很大一部分是内核不需要运行Python。由于笔记本和内核是分开的，因此可以在它们之间发送任何语言的代码。例如，两个较早的非Python内核分别用于<a target="_blank" rel="noopener" href="https://www.r-project.org/">R</a>和<a target="_blank" rel="noopener" href="http://julialang.org/">Julia</a>语言。对于R内核，用R编写的代码将被发送到R内核并在其中执行，这与在Python内核上运行的Python代码完全相同。IPython笔记本被重命名，因为笔记本变得与语言无关。新名称<strong>Jupyter</strong>来自<strong>Ju</strong> lia，<strong>Pyt</strong> hon和<strong>R的组合</strong>。如果您有兴趣，这里<a target="_blank" rel="noopener" href="https://github.com/jupyter/jupyter/wiki/Jupyter-kernels">是可用内核</a>的<a target="_blank" rel="noopener" href="https://github.com/jupyter/jupyter/wiki/Jupyter-kernels">列表</a>。</p>
+<p>该体系结构的很大一部分是内核不需要运行Python。由于笔记本和内核是分开的，因此可以在它们之间发送任何语言的代码。例如，两个较早的非Python内核分别用于<a target="_blank" rel="noopener" href="https://www.r-project.org/">R</a>和<a target="_blank" rel="noopener" href="http://julialang.org/">Julia</a>语言。对于R内核，用R编写的代码将被发送到R内核并在其中执行，这与在Python内核上运行的Python代码完全相同。IPython笔记本被重命名，因为笔记本变得与语言无关。新名称<strong>Ju pyt er</strong>来自<strong>Ju</strong> lia，<strong>Pyt</strong> hon和<strong>R的组合</strong>。如果您有兴趣，这里<a target="_blank" rel="noopener" href="https://github.com/jupyter/jupyter/wiki/Jupyter-kernels">是可用内核</a>的<a target="_blank" rel="noopener" href="https://github.com/jupyter/jupyter/wiki/Jupyter-kernels">列表</a>。</p>
 <p>另一个好处是服务器可以在任何地方运行并可以通过Internet访问。通常，您将在存储所有数据和笔记本文件的自己的计算机上运行服务器。但是，您也可以在远程计算机或云实例（例如Amazon的EC2）上<a target="_blank" rel="noopener" href="http://jupyter-notebook.readthedocs.io/en/latest/public_server.html">设置服务器</a>。然后，您可以从世界任何地方在浏览器中访问笔记本。</p>
 <p>可以同时启动多个笔记本服务器，这会在8888默认端口后继续创建</p>
 <h2 id="启动"><a href="#启动" class="headerlink" title="启动"></a>启动</h2><p>您应该考虑安装Notebook Conda软件包以帮助管理您的环境。运行以下终端命令：</p>
@@ -1729,7 +1729,7 @@ deactivate<span aria-hidden="true" class="line-numbers-rows"><span></span><span>
 <p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210410125054498.png" alt="image-20210410125054498"></p>
 <p>此外，<code>nb_conda</code>安装后，选择内核时，您将可以访问任何conda环境。例如，下图显示了在具有几种不同conda环境的计算机上创建新笔记本的示例：</p>
 <p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210410125313617.png" alt="image-20210410125313617"></p>
-<p>关闭前记得保存</p>
+<p><strong>关闭前记得保存</strong></p>
 <p>您可以通过标记服务器主页上笔记本旁边的复选框并单击“关闭”来关闭各个笔记本。不过，在执行此操作之前，请确保已保存您的工作！自上次保存以来所做的任何更改都将丢失。您还需要在下次运行笔记本时重新运行代码。</p>
 <p>您可以通过在终端中按两次Control + C来关闭整个服务器。同样，这将立即关闭所有正在运行的笔记本，因此请确保您的工作已保存！</p>
 <p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/server-shutdown.png" alt="img"></p>
@@ -1741,7 +1741,7 @@ deactivate<span aria-hidden="true" class="line-numbers-rows"><span></span><span>
 <p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210410130030588.png" alt="image-20210410130030588"></p>
 <p>选项栏</p>
 <p>右边是内核类型（在我的情况下为Python 3），旁边是一个小圆圈。当内核运行单元时，它将填充。对于大多数快速运行的操作，它不会填充。这是一个小指示器，可以让您知道更长运行的代码实际上正在运行。</p>
-<p>连同工具栏中的“保存”按钮一起，笔记本会定期自动保存。标题右侧会显示最近保存的内容。您可以保存按钮，或者按与手动保存<code>escape</code>，然后<code>s</code>在键盘上。该<code>escape</code>键将更改为命令模式，并且<code>s</code>是“保存”的快捷方式。稍后将介绍命令模式和键盘快捷键。</p>
+<p>连同工具栏中的“保存”按钮一起，笔记本会定期自动保存。标题右侧会显示最近保存的内容。您可以保存按钮，或者按与手动保存<code>escape</code>，然后按<code>s</code>。<code>escape</code>更改为命令模式，然后<code>s</code>是“保存”的快捷方式。稍后将介绍命令模式和键盘快捷键。</p>
 <p><strong>存储</strong></p>
 <p>在“文件”菜单中，您可以下载多种格式的笔记本。您通常会希望将其下载为HTML文件，以便与不使用Jupyter的其他人共享。另外，您可以将笔记本作为普通的Python文件下载，所有代码都将正常运行。 The <a target="_blank" rel="noopener" href="https://daringfireball.net/projects/markdown/">Markdown</a> and <a target="_blank" rel="noopener" href="http://docutils.sourceforge.net/rst.html">reST</a> formats are great for using notebooks in blogs or documentation.</p>
 <p><strong>导入本地</strong></p>
@@ -1758,8 +1758,8 @@ deactivate<span aria-hidden="true" class="line-numbers-rows"><span></span><span>
 <p>A 创建新单元格above当前单元格</p>
 <p>B 创建新单元格below当前单元格</p>
 <p>在markdown 和 code之间进行转换</p>
-<p>markdown -&gt; code Y</p>
-<p>code -&gt; markdown M </p>
+<p>markdown -&gt; code  <strong>Y</strong></p>
+<p>code -&gt; markdown  <strong>M</strong></p>
 <p>L 是显示行号d</p>
 <p>双击D 可以删除单元格，Z撤销删除</p>
 <p>S 保存！</p>
@@ -2824,7 +2824,7 @@ print(&quot;%.2f&quot;%a)<span aria-hidden="true" class="line-numbers-rows"><spa
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">216k</span>&nbsp;字
+                class="white-color">212.8k</span>&nbsp;字
             
             
             
