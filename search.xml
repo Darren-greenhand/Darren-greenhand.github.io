@@ -4672,7 +4672,7 @@ Out<span class="token punctuation">[</span><span class="token number">79</span><
 
 <img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210417212627609.png" alt="image-20210417212627609" style="zoom:33%;" />]]></content>
       <categories>
-        <category>diary</category>
+        <category>memory</category>
       </categories>
       <tags>
         <tag>word</tag>
@@ -5137,7 +5137,7 @@ document<span class="token punctuation">.</span><span class="token function">wri
 - 8、 IP地址：\d+\.\d+\.\d+\.\d+    (提取IP地址时有用)
 - 9、 匹配所有字符：(.*?)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
       <categories>
-        <category>others</category>
+        <category>basic</category>
       </categories>
       <tags>
         <tag>Regular expression</tag>
@@ -14232,7 +14232,7 @@ done<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span
 <p>​    </p>
 ]]></content>
       <categories>
-        <category>basi</category>
+        <category>basic</category>
       </categories>
       <tags>
         <tag>cisco</tag>
@@ -16912,11 +16912,11 @@ R1(config)#<span aria-hidden="true" class="line-numbers-rows"><span></span><span
 Router# copy running-config startup-config<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <h2 id="接口配置"><a href="#接口配置" class="headerlink" title="接口配置"></a>接口配置</h2><p>配置路由器接口的任务与交换机上管理 SVI 非常相似。具体来说，它包括发出以下命令：</p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">Router<span class="token punctuation">(</span>config<span class="token punctuation">)</span><span class="token comment"># interface type-and-number</span>
-Router<span class="token punctuation">(</span>config-if<span class="token punctuation">)</span><span class="token comment"># description description-text</span>
-Router<span class="token punctuation">(</span>config-if<span class="token punctuation">)</span><span class="token comment"># ip address ipv4-address subnet-mask</span>
-Router<span class="token punctuation">(</span>config-if<span class="token punctuation">)</span><span class="token comment"># ipv6 address ipv6-address/prefix-length</span>
-Router<span class="token punctuation">(</span>config-if<span class="token punctuation">)</span><span class="token comment"># no shutdown</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">Router(config)# interface type-and-number
+Router(config-if)# description description-text
+Router(config-if)# ip address ipv4-address subnet-mask
+Router(config-if)# ipv6 address ipv6-address&#x2F;prefix-length
+Router(config-if)# no shutdown<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>此表总结了用于验证接口配置的更常用 <strong>show</strong> 命令。</p>
 <table>
@@ -17387,7 +17387,7 @@ R(config-line)# modemcap edit new_profile_name template existing_profile_name   
 R(config-line)# modem autoconfigure discovery   发现和自动配置连接到一个端口上的调制解调器<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 ]]></content>
       <categories>
-        <category>net</category>
+        <category>network</category>
       </categories>
       <tags>
         <tag>cisco</tag>
@@ -17686,6 +17686,17 @@ R(config-line)# modem autoconfigure discovery   发现和自动配置连接到�
       </categories>
       <tags>
         <tag>投资</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>《鬼谷子》</title>
+    <url>/2021/07/21/%E3%80%8A%E9%AC%BC%E8%B0%B7%E5%AD%90%E3%80%8B/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>psychology</category>
+      </categories>
+      <tags>
+        <tag>鬼谷子</tag>
       </tags>
   </entry>
 </search>
