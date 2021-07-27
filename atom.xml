@@ -6,7 +6,7 @@
   <link href="https://darren-dong.com/atom.xml" rel="self"/>
   
   <link href="https://darren-dong.com/"/>
-  <updated>2021-07-21T12:40:21.402Z</updated>
+  <updated>2021-07-27T14:54:58.925Z</updated>
   <id>https://darren-dong.com/</id>
   
   <author>
@@ -17,12 +17,43 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>《心理学与生活》</title>
+    <link href="https://darren-dong.com/2021/07/27/%E5%BF%83%E7%90%86%E5%AD%A6%E5%AF%BC%E8%AE%BA/"/>
+    <id>https://darren-dong.com/2021/07/27/%E5%BF%83%E7%90%86%E5%AD%A6%E5%AF%BC%E8%AE%BA/</id>
+    <published>2021-07-27T13:27:34.000Z</published>
+    <updated>2021-07-27T14:54:58.925Z</updated>
+    
+    <content type="html"><![CDATA[<p>duo</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;duo&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    <category term="psychology" scheme="https://darren-dong.com/categories/psychology/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>《鬼谷子》</title>
     <link href="https://darren-dong.com/2021/07/21/%E3%80%8A%E9%AC%BC%E8%B0%B7%E5%AD%90%E3%80%8B/"/>
     <id>https://darren-dong.com/2021/07/21/%E3%80%8A%E9%AC%BC%E8%B0%B7%E5%AD%90%E3%80%8B/</id>
     <published>2021-07-21T12:11:50.000Z</published>
-    <updated>2021-07-21T12:40:21.402Z</updated>
+    <updated>2021-07-21T14:36:55.872Z</updated>
     
+    <content type="html"><![CDATA[<h1 id="鬼谷子"><a href="#鬼谷子" class="headerlink" title="鬼谷子"></a>鬼谷子</h1><p>关键词：纵横捭阖、谋略、游说、诡辩</p><h2 id="捭阖第一"><a href="#捭阖第一" class="headerlink" title="捭阖第一"></a>捭阖第一</h2><p>开启与闭藏</p><p>在鬼谷子思想体系中，捭阖是一对极为重要的哲学概念。</p><p>它是万事万物发展变化的规律，也是纵横家游说活动的根本方法，它旨在告诉人们：</p><p>何时应敞开心扉、直言陈辞；何时冷静观察、沉默不语。</p><p>通过捭、阖的密切配合，把握事物发展的关键，从而达到知人、御人</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;鬼谷子&quot;&gt;&lt;a href=&quot;#鬼谷子&quot; class=&quot;headerlink&quot; title=&quot;鬼谷子&quot;&gt;&lt;/a&gt;鬼谷子&lt;/h1&gt;&lt;p&gt;关键词：纵横捭阖、谋略、游说、诡辩&lt;/p&gt;
+&lt;h2 id=&quot;捭阖第一&quot;&gt;&lt;a href=&quot;#捭阖第一&quot; class=&quot;headerl</summary>
+      
     
     
     
@@ -481,33 +512,6 @@
     
     
     <category term="KMP" scheme="https://darren-dong.com/tags/KMP/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>hot key</title>
-    <link href="https://darren-dong.com/2021/04/05/%E9%82%A3%E4%BA%9B%E5%BF%AB%E6%8D%B7%E9%94%AE/"/>
-    <id>https://darren-dong.com/2021/04/05/%E9%82%A3%E4%BA%9B%E5%BF%AB%E6%8D%B7%E9%94%AE/</id>
-    <published>2021-04-05T02:36:09.000Z</published>
-    <updated>2021-06-15T12:37:44.569Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="通用"><a href="#通用" class="headerlink" title="通用"></a>通用</h1><p>Fn + 左右箭头快速抵达行头行尾</p><p>Fn + shift + 左右箭头快速选中整行</p><p>C + f 搜索</p><h2 id="触控板"><a href="#触控板" class="headerlink" title="触控板"></a>触控板</h2><p>单指：</p><p>轻点两下为拖拽，选择</p><p>双指：</p><p>轻击为右键，反方向为滑动</p><p>三指：</p><p>左右滑动选择窗口</p><p>向下，隐藏所有窗口</p><p>向上，依次打开，保留次序</p><p>四指：</p><p>向上：最近打开的文件</p><p>向下：复原</p><p>左右：切换桌面</p><h1 id="vscode"><a href="#vscode" class="headerlink" title="vscode"></a>vscode</h1><p>C + g  快速到达某一行</p><p>C + A + 上下  为上下行的该位置添加光标，如果为空，则尽量左移</p><p>S + A + 拖动鼠标 选中规则同上</p><p>C + c  +  C + v 快速复制一行</p><p>或者 S + A + 上下</p><hr><p>C + /  单行注释</p><p>C + S + /   多行注释（改的，原来是S + A + a）</p><p>C + ~  打开终端</p><p>C + d 快速选中相同的</p><p>C + f 搜索</p><p>C + h 替换（可以全部替换）</p><p>C + +/-  放大/缩小布局</p><p>Tab 到达下一个光标</p><p>自定义快捷键</p><p>有些快捷键，我们使用不习惯，其实我们可以自定义快捷键的。</p><p>比如js 的多行注释是 shift + alt  + a  ，我们想修改为 ctrl + shfit +  /   </p><p>设置方法：   管理按钮  —   键盘快捷方式  —  输入  shift + alt  + a  找到这个快捷键  —– 点击编辑按钮  —- 直接按下  ctrl + shift  +  /     —- 最后按下回车 修改完毕。</p><p><img src="https://gitee.com/darren-greenhand//picture/raw/master/070e4f32b7326196062f020bbc3a91b30c7e470c.gif" alt="img"></p><h1 id="pycharm"><a href="#pycharm" class="headerlink" title="pycharm"></a>pycharm</h1><p>C + R是搜索。。</p><p>ipython里终端 C + r是回溯</p><h1 id="浏览器"><a href="#浏览器" class="headerlink" title="浏览器"></a>浏览器</h1><p>C + S + j   开发者模式（谷歌），在火狐有些不同</p><p>C + h   历史记录</p><p>C + n  打开新窗口</p><p>C + S + n  新无痕窗口</p><p>C + 左键:打开新标签方式</p><h1 id="Typora"><a href="#Typora" class="headerlink" title="Typora"></a>Typora</h1><p>C + b 加粗</p><p>C + i  斜体</p><p>C + k 设为超链接</p><h1 id="Jupyter-Notebook"><a href="#Jupyter-Notebook" class="headerlink" title="Jupyter Notebook"></a>Jupyter Notebook</h1><p>A 创建新单元格above当前单元格</p><p>B 创建新单元格below当前单元格</p><p>在markdown 和 code之间进行转换</p><p>markdown -&gt; code Y</p><p>code -&gt; markdown M </p><p>L 是显示行号d</p><p>双击D 可以删除单元格，Z撤销删除</p><p>S 保存！</p><p>最强的是C + S + P</p><p>打开万能的控制栏</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;通用&quot;&gt;&lt;a href=&quot;#通用&quot; class=&quot;headerlink&quot; title=&quot;通用&quot;&gt;&lt;/a&gt;通用&lt;/h1&gt;&lt;p&gt;Fn + 左右箭头快速抵达行头行尾&lt;/p&gt;
-&lt;p&gt;Fn + shift + 左右箭头快速选中整行&lt;/p&gt;
-&lt;p&gt;C + f 搜索&lt;/p&gt;
-&lt;</summary>
-      
-    
-    
-    
-    <category term="basic" scheme="https://darren-dong.com/categories/basic/"/>
-    
-    
-    <category term="hot key" scheme="https://darren-dong.com/tags/hot-key/"/>
     
   </entry>
   
