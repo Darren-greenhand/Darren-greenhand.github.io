@@ -402,7 +402,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-07-20
+                    2021-07-30
                 </div>
                 
 
@@ -411,7 +411,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    39 分
+                    40 分
                 </div>
                 
 
@@ -525,7 +525,7 @@ python包含一个内置的代码分析器，可以通过魔法指令👇简单�
 np<span class="token punctuation">.</span>zeros<span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span>dtype <span class="token operator">=</span> <span class="token builtin">int</span><span class="token punctuation">)</span><span class="token operator">/</span>ones<span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">,</span>dtype <span class="token operator">=</span> <span class="token builtin">float</span><span class="token punctuation">)</span><span class="token operator">/</span>full<span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token number">3.14</span><span class="token punctuation">)</span>
 np<span class="token punctuation">.</span>full<span class="token punctuation">(</span>size<span class="token punctuation">,</span>fulfiller<span class="token punctuation">)</span> <span class="token comment">#用fulfiller填充</span>
 np<span class="token punctuation">.</span>arange<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">10</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token comment">#左闭右开 默认int</span>
-np<span class="token punctuation">.</span>linspace<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">8</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token comment">#左闭右闭 默认float,</span>
+np<span class="token punctuation">.</span>linspace<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">8</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token comment">#左闭右闭 默认float,找5个等间距点</span>
 np<span class="token punctuation">.</span>random<span class="token punctuation">.</span>random<span class="token punctuation">(</span><span class="token punctuation">(</span>shape<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token comment"># 0~1均匀分布</span>
 np<span class="token punctuation">.</span>random<span class="token punctuation">.</span>normal<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token punctuation">(</span>shape<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token comment"># 均值 方差 shape</span>
 np<span class="token punctuation">.</span>random<span class="token punctuation">.</span><span class="token builtin">int</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">10</span><span class="token punctuation">,</span><span class="token punctuation">(</span>shape<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token comment">#左闭右开 区间[0,10)</span>
@@ -544,7 +544,7 @@ np<span class="token punctuation">.</span>empty<span class="token punctuation">(
 <p>抽取左上角的2x2数组，x2[:2，:2]</p>
 <p><strong>切片返回的是视图</strong>，.copy() 才是复制，这意味着可以处理大型数据集的片段而不用花费额外的内存</p>
 <h3 id="变形"><a href="#变形" class="headerlink" title="变形"></a>变形</h3><p>.reshape() 大小必须一致</p>
-<p>或者在索引中使用newaxis 关键字，插入一个新维度，不过记得要加上前缀，即np.newaxis</p>
+<p>或者在索引中使用newaxis 关键字，插入一个新维度，不过记得要加上前缀，即np.newaxis,比如原来有个是3（一行），后插变成（3，1）（一列）</p>
 <p>x = x[np.newaxis,:] 在前面加了一个维度，反之则是在后面插入</p>
 <h3 id="拼接和分裂"><a href="#拼接和分裂" class="headerlink" title="拼接和分裂"></a>拼接和分裂</h3><p><strong>np.concatenate</strong>(默认沿着第一个轴) #二维就是列，用axis  = 1 可以改成行</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python">grid <span class="token operator">=</span> np<span class="token punctuation">.</span>array<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
@@ -581,7 +581,7 @@ upper<span class="token punctuation">,</span>lower <span class="token operator">
 <h2 id="通用函数"><a href="#通用函数" class="headerlink" title="通用函数"></a>通用函数</h2><p>Numpy高效的关键是采用 <strong>向量化</strong> 操作，通常用通用函数（ufunc）实现——提高了数组元素重复计算的效率</p>
 <p>Python灵活的数据类型导致序列操作不能被编译成有效的机器码，所以循环操作超级慢</p>
 <p>很多方案试图解决，比如Cpython，Cython，LLVM字节码，但是Cpython是最流行的</p>
-<p>Cpython的主要瓶颈在于每次循环时必须做数据类型检查和函数的调度。</p>
+<p>Cpython的主要瓶颈在于每次循环时必须做<strong>数据类型检查和函数的调度</strong>。</p>
 <p><strong>Numpy为许多类型的操作提供了方便，静态，可编译程序的接口，被称为向量操作。这将被循环推送至Numpy下的编译层。</strong></p>
 <p>只要看到python脚本有循环，就可以考虑能否用向量替代。</p>
 <p>通用函数有两种形式，一元和二元。</p>
@@ -626,7 +626,7 @@ array<span class="token punctuation">(</span><span class="token punctuation">[</
 <p>可以用axis指定处理的维度，但是要注意，这个指定的是数组将会被聚合（折叠）的维度，而不是要返回的维度，比如说axis = 0 意味着第一个轴（二维数组的列）将要被折叠。</p>
 <p>numpy有很多内置的聚合函数，大多数聚合都有对NaN的安全处理策略，即计算的时候忽略所有缺失值。</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python">np<span class="token punctuation">.</span><span class="token builtin">sum</span>  np<span class="token punctuation">.</span>nansum
-np<span class="token punctuation">.</span>prod np<span class="token punctuation">.</span>nanprod 积
+np<span class="token punctuation">.</span>prod np<span class="token punctuation">.</span>nanprod 积（product）
 np<span class="token punctuation">.</span>mean  平均值
 std  标准差 Standard deviation
 var  方差  variance
@@ -810,7 +810,7 @@ dadaa     <span class="token number">1223</span>
 tda      <span class="token number">12124</span>
 dada       <span class="token number">341</span>
 dtype<span class="token punctuation">:</span> int64
-<span class="token comment">#用字典创建对象时，索引按照默认顺序排列</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token comment">#用字典创建对象时，索引按照排序好的默认顺序排列</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>Series支持索引切片！</p>
 <p>dict2[‘dadaa’:’dada’] 牛皮啊</p>
@@ -863,9 +863,8 @@ index       <span class="token number">312312</span>    <span class="token numbe
 <p>还有个columns属性，也返回Index对象，不过是每列的标签</p>
 <p>DataFrame可看成特殊的字典，每列映射一个Series数据，通过列索引c[‘column1’]可以得到该Series对象</p>
 <hr>
-<p><strong>创建</strong></p>
-<p>（1）可以用单个Series对象</p>
-<p>pd.DataFrame(population,columns = [‘population’])</p>
+<h4 id="创建-1"><a href="#创建-1" class="headerlink" title="创建"></a><strong>创建</strong></h4><p>（1）可以用单个Series对象</p>
+<p>pd.DataFrame(populations,columns = [‘population’])</p>
 <p>（2）可以用<strong>元素是字典的列表</strong>来创建,若是字典有一些键(作为列索引)不在，会用NaN补全</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python">data <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">&#123;</span><span class="token string">'a'</span><span class="token punctuation">:</span>i<span class="token punctuation">,</span><span class="token string">'b'</span><span class="token punctuation">:</span><span class="token number">2</span><span class="token operator">*</span>i<span class="token punctuation">&#125;</span><span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">]</span>
 data
@@ -932,7 +931,7 @@ In <span class="token punctuation">[</span><span class="token number">11</span><
 <span class="token number">5</span> <span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token punctuation">)</span> <span class="token number">1</span> int64
 <span class="token comment">#这几个属性竟然还保留了</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p>最大的不同在于Index对象的索引是不可变的，ind[1]=0会报错，这使得索引共享更安全</p>
+<p>最大的不同在于<strong>Index对象的索引是不可变的</strong>，ind[1]=0会报错，这使得索引共享更安全</p>
 </li>
 <li><p>有序集合</p>
 <p>Index遵循python标准库的集合（set）数据结构的许多惯用法 &amp; | ^ ~</p>
@@ -1147,7 +1146,7 @@ Jack       <span class="token number">23</span>
 Jessica    <span class="token number">98</span>
 Name<span class="token punctuation">:</span> two<span class="token punctuation">,</span> dtype<span class="token punctuation">:</span> int32
 
-<span class="token comment">#掩码操作起到筛选某些行的作用</span>
+<span class="token comment">#掩码操作起到筛选某些 行 的作用</span>
 data<span class="token punctuation">[</span>data<span class="token punctuation">.</span>three<span class="token operator">></span><span class="token number">20</span><span class="token punctuation">]</span>
 Out<span class="token punctuation">[</span><span class="token number">24</span><span class="token punctuation">]</span><span class="token punctuation">:</span> 
          one  two  three  four
@@ -1173,7 +1172,7 @@ seed
 permutation<span class="token punctuation">(</span>arr<span class="token punctuation">)</span> <span class="token comment"># 返回一个序列的随机排列</span>
 shuffle <span class="token comment"># 随机排列一个序列,直接更改原来的</span>
 rand <span class="token comment">#从均匀分布[0,1)中抽取样本</span>
-randint <span class="token comment">#根据给定的从低到高的范围抽取随机一个整数</span>
+randint <span class="token comment">#根据给定的从低到高（左闭右开，左边省略为0）的范围抽取随机一个整数，如果给一个元组，则在0-元组每一项之间取，输出一个列表</span>
 randn <span class="token comment">#从均值0方差1的正态分布</span>
 normal<span class="token punctuation">(</span>x1<span class="token punctuation">,</span>x2<span class="token punctuation">,</span><span class="token punctuation">(</span>shape<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token comment">#平均值，标准差，shape</span>
 
@@ -1190,7 +1189,7 @@ gamma <span class="token comment">#从伽马分布中抽取样本</span><span ar
 <h3 id="索引对齐"><a href="#索引对齐" class="headerlink" title="索引对齐"></a>索引对齐</h3><p><strong>当在两个Series或DataFrame对象上进行二元计算时，Pandas会在计算过程中对齐两个对象的索引，在处理不完整的数据时，这一点非常方便</strong></p>
 <p>结果数组的索引是两个输入数组索引的<strong>并集</strong>，缺失位置填充NaN，这是通过python内置集合运算规则实现的</p>
 <p>我们也可以通过a.index | b.index 来获得这个新索引</p>
-<p>两个对象的行列顺序可以是不一样的，结果的索引会自动排序</p>
+<p>两个对象的行列顺序可以是不一样的，结果的索引会<strong>自动排序</strong></p>
 <p>当然也能自行设置缺失值，A.add(B,fill_value = 0) 这样会相加A和B并用0来填充</p>
 <p>对于DataFrame其实大同小异：(下面有一些骚操作)</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python">In <span class="token punctuation">[</span><span class="token number">55</span><span class="token punctuation">]</span><span class="token punctuation">:</span> rng <span class="token operator">=</span> np<span class="token punctuation">.</span>random<span class="token punctuation">.</span>RandomState<span class="token punctuation">(</span><span class="token number">42</span><span class="token punctuation">)</span>
@@ -1239,7 +1238,7 @@ Out<span class="token punctuation">[</span><span class="token number">66</span><
 <span class="token number">1</span>  <span class="token number">4</span>  <span class="token number">1</span>  <span class="token number">7</span>  <span class="token number">5</span>
 <span class="token number">2</span>  <span class="token number">1</span>  <span class="token number">4</span>  <span class="token number">0</span>  <span class="token number">9</span>
 
-<span class="token comment">#在Pandas里默认按行运算</span>
+<span class="token comment">#在Pandas里运算符默认按行运算</span>
 In <span class="token punctuation">[</span><span class="token number">67</span><span class="token punctuation">]</span><span class="token punctuation">:</span> df <span class="token operator">-</span> df<span class="token punctuation">.</span>iloc<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
 Out<span class="token punctuation">[</span><span class="token number">67</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
    Q  R  S  T
@@ -1263,7 +1262,7 @@ Out<span class="token punctuation">[</span><span class="token number">72</span><
 <span class="token number">2</span> NaN NaN NaN NaN NaN NaN NaN
 
 <span class="token comment">#值得注意的是在二元运算中缺失的直接判定为NaN而不是不进行操作</span>
-<span class="token comment">#还是得注意“按行操作”的含义啊，name必须是index中的一个，Series的index必须是columns的子集</span>
+<span class="token comment">#还是得注意“按行操作”的含义。Series翻转成水平后的标签是否为dataframe的columns的子集</span>
 In <span class="token punctuation">[</span><span class="token number">70</span><span class="token punctuation">]</span><span class="token punctuation">:</span> halfrow
 Out<span class="token punctuation">[</span><span class="token number">70</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
 Q    <span class="token number">7</span>
@@ -1353,7 +1352,10 @@ Out<span class="token punctuation">[</span><span class="token number">79</span><
 <p>fillna返回填充了缺失值后的数组副本</p>
 <p>参数可以选择method = ‘ffill/bfill’ 用缺失值前/后的有效值来依次填充，也可以改axis来左右填充。</p>
 <p>但是如果前面一直找不到有效值填充，那就还是缺失值。。。</p>
-<h2 id="层级索引"><a href="#层级索引" class="headerlink" title="层级索引"></a>层级索引</h2>
+<h2 id="层级索引"><a href="#层级索引" class="headerlink" title="层级索引"></a>层级索引</h2><p>当我们遇到存储多维数据需求时，数据索引超过一两个键。</p>
+<p>Pandas提供了Panel和Panel4D对象解决三维数据和四维数据。</p>
+<p>但更直观的形式是hierarchical indexing，层级索引，配合多个不同等级的以及索引一起用，将高维数组转换成类似一维和二维对象的形式。</p>
+<h3 id="Series-2"><a href="#Series-2" class="headerlink" title="Series"></a>Series</h3>
                 
             </div>
             <hr/>
@@ -2177,7 +2179,7 @@ Out<span class="token punctuation">[</span><span class="token number">79</span><
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">215.4k</span>&nbsp;字
+                class="white-color">215.5k</span>&nbsp;字
             
             
             
