@@ -402,7 +402,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-07-30
+                    2021-07-31
                 </div>
                 
 
@@ -411,7 +411,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    40 分
+                    43 分
                 </div>
                 
 
@@ -1355,7 +1355,113 @@ Out<span class="token punctuation">[</span><span class="token number">79</span><
 <h2 id="层级索引"><a href="#层级索引" class="headerlink" title="层级索引"></a>层级索引</h2><p>当我们遇到存储多维数据需求时，数据索引超过一两个键。</p>
 <p>Pandas提供了Panel和Panel4D对象解决三维数据和四维数据。</p>
 <p>但更直观的形式是hierarchical indexing，层级索引，配合多个不同等级的以及索引一起用，将高维数组转换成类似一维和二维对象的形式。</p>
-<h3 id="Series-2"><a href="#Series-2" class="headerlink" title="Series"></a>Series</h3>
+<p>P114有解释层级索引便利性的例子</p>
+<h3 id="创建层级索引"><a href="#创建层级索引" class="headerlink" title="创建层级索引"></a>创建层级索引</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#最直接的方法是将index的参数设置为至少二维的索引数组</span>
+In <span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">:</span> df <span class="token operator">=</span> pd<span class="token punctuation">.</span>DataFrame<span class="token punctuation">(</span>np<span class="token punctuation">.</span>random<span class="token punctuation">.</span>rand<span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">,</span>index <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token string">'a'</span><span class="token punctuation">,</span><span class="token string">'a'</span><span class="token punctuation">,</span><span class="token string">'b'</span><span class="token punctuation">,</span><span class="token string">'b'</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token punctuation">[</span><span class="token string">'1'</span><span class="token punctuation">,</span><span class="token string">'2'</span><span class="token punctuation">,</span><span class="token string">'1'</span><span class="token punctuation">,</span><span class="token string">'2'</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">,</span>columns <span class="token operator">=</span><span class="token punctuation">[</span><span class="token string">'data1'</span><span class="token punctuation">,</span><span class="token string">'data2'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+In <span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">:</span> df
+Out<span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
+        data1     data2
+a <span class="token number">1</span>  <span class="token number">0.290846</span>  <span class="token number">0.466652</span>
+  <span class="token number">2</span>  <span class="token number">0.245400</span>  <span class="token number">0.860682</span>
+b <span class="token number">1</span>  <span class="token number">0.697193</span>  <span class="token number">0.100121</span>
+  <span class="token number">2</span>  <span class="token number">0.028793</span>  <span class="token number">0.633941</span>
+    
+In <span class="token punctuation">[</span><span class="token number">10</span><span class="token punctuation">]</span><span class="token punctuation">:</span> df<span class="token punctuation">.</span>index
+Out<span class="token punctuation">[</span><span class="token number">10</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
+MultiIndex<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">(</span><span class="token string">'a'</span><span class="token punctuation">,</span> <span class="token string">'1'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+            <span class="token punctuation">(</span><span class="token string">'a'</span><span class="token punctuation">,</span> <span class="token string">'2'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+            <span class="token punctuation">(</span><span class="token string">'b'</span><span class="token punctuation">,</span> <span class="token string">'1'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+            <span class="token punctuation">(</span><span class="token string">'b'</span><span class="token punctuation">,</span> <span class="token string">'2'</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+           <span class="token punctuation">)</span>
+<span class="token comment">#index的类型变为了MultiIndex</span>
+<span class="token comment">#第二种方法是把元组作为键的字典传递给Pandas</span>
+In <span class="token punctuation">[</span><span class="token number">11</span><span class="token punctuation">]</span><span class="token punctuation">:</span> data <span class="token operator">=</span> <span class="token punctuation">&#123;</span><span class="token punctuation">(</span><span class="token string">'a'</span><span class="token punctuation">,</span><span class="token number">2000</span><span class="token punctuation">)</span><span class="token punctuation">:</span><span class="token number">32432</span><span class="token punctuation">,</span>
+    <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token string">'a'</span><span class="token punctuation">,</span><span class="token number">2010</span><span class="token punctuation">)</span><span class="token punctuation">:</span><span class="token number">312312</span><span class="token punctuation">,</span>
+    <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token string">'b'</span><span class="token punctuation">,</span><span class="token number">2000</span><span class="token punctuation">)</span><span class="token punctuation">:</span><span class="token number">3241332</span><span class="token punctuation">,</span>
+    <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token string">'b'</span><span class="token punctuation">,</span><span class="token number">2010</span><span class="token punctuation">)</span><span class="token punctuation">:</span><span class="token number">3243252</span><span class="token punctuation">,</span>
+    <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token string">'c'</span><span class="token punctuation">,</span><span class="token number">2000</span><span class="token punctuation">)</span><span class="token punctuation">:</span><span class="token number">32434532</span><span class="token punctuation">,</span>
+    <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token string">'c'</span><span class="token punctuation">,</span><span class="token number">2010</span><span class="token punctuation">)</span><span class="token punctuation">:</span><span class="token number">3223432</span><span class="token punctuation">&#125;</span>
+
+In <span class="token punctuation">[</span><span class="token number">12</span><span class="token punctuation">]</span><span class="token punctuation">:</span> pd<span class="token punctuation">.</span>Series<span class="token punctuation">(</span>data<span class="token punctuation">)</span>
+Out<span class="token punctuation">[</span><span class="token number">12</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
+a  <span class="token number">2000</span>       <span class="token number">32432</span>
+   <span class="token number">2010</span>      <span class="token number">312312</span>
+b  <span class="token number">2000</span>     <span class="token number">3241332</span>
+   <span class="token number">2010</span>     <span class="token number">3243252</span>
+c  <span class="token number">2000</span>    <span class="token number">32434532</span>
+   <span class="token number">2010</span>     <span class="token number">3223432</span>
+dtype<span class="token punctuation">:</span> int64<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#显示创建MultiIndex也是很有用的</span>
+<span class="token comment">#可以用不同等级的数组来创建</span>
+In <span class="token punctuation">[</span><span class="token number">17</span><span class="token punctuation">]</span><span class="token punctuation">:</span> pd<span class="token punctuation">.</span>MultiIndex<span class="token punctuation">.</span>from_arrays<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token string">'a'</span><span class="token punctuation">,</span><span class="token string">'a'</span><span class="token punctuation">,</span><span class="token string">'b'</span><span class="token punctuation">,</span><span class="token string">'b'</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token comment">#可以用包含不同等级索引值的元组构成的列表来创建</span>
+In <span class="token punctuation">[</span><span class="token number">18</span><span class="token punctuation">]</span><span class="token punctuation">:</span> pd<span class="token punctuation">.</span>MultiIndex<span class="token punctuation">.</span>from_tuples<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">(</span><span class="token string">'a'</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token string">'a'</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token string">'b'</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token string">'b'</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token comment">#可以用两个索引序列的笛卡尔积来创建</span>
+In <span class="token punctuation">[</span><span class="token number">19</span><span class="token punctuation">]</span><span class="token punctuation">:</span> pd<span class="token punctuation">.</span>MultiIndex<span class="token punctuation">.</span>from_product<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token string">'a'</span><span class="token punctuation">,</span><span class="token string">'b'</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token comment">#原有的levels和labels属性好像被删掉了？</span>
+<span class="token comment">#可以加名字来方便管理</span>
+In <span class="token punctuation">[</span><span class="token number">29</span><span class="token punctuation">]</span><span class="token punctuation">:</span> b
+Out<span class="token punctuation">[</span><span class="token number">29</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
+a  <span class="token number">2000</span>       <span class="token number">32432</span>
+   <span class="token number">2010</span>      <span class="token number">312312</span>
+b  <span class="token number">2000</span>     <span class="token number">3241332</span>
+   <span class="token number">2010</span>     <span class="token number">3243252</span>
+c  <span class="token number">2000</span>    <span class="token number">32434532</span>
+   <span class="token number">2010</span>     <span class="token number">3223432</span>
+dtype<span class="token punctuation">:</span> int64
+
+In <span class="token punctuation">[</span><span class="token number">30</span><span class="token punctuation">]</span><span class="token punctuation">:</span> b<span class="token punctuation">.</span>index<span class="token punctuation">.</span>names <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'owner'</span><span class="token punctuation">,</span><span class="token string">'year'</span><span class="token punctuation">]</span>
+
+In <span class="token punctuation">[</span><span class="token number">31</span><span class="token punctuation">]</span><span class="token punctuation">:</span> b
+Out<span class="token punctuation">[</span><span class="token number">31</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
+owner  year
+a      <span class="token number">2000</span>       <span class="token number">32432</span>
+       <span class="token number">2010</span>      <span class="token number">312312</span>
+b      <span class="token number">2000</span>     <span class="token number">3241332</span>
+       <span class="token number">2010</span>     <span class="token number">3243252</span>
+c      <span class="token number">2000</span>    <span class="token number">32434532</span>
+       <span class="token number">2010</span>     <span class="token number">3223432</span>
+dtype<span class="token punctuation">:</span> int64<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#多级列索引</span>
+In <span class="token punctuation">[</span><span class="token number">32</span><span class="token punctuation">]</span><span class="token punctuation">:</span> index <span class="token operator">=</span> pd<span class="token punctuation">.</span>MultiIndex<span class="token punctuation">.</span>from_product<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">2013</span><span class="token punctuation">,</span><span class="token number">2014</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">,</span>names <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'year'</span><span class="token punctuation">,</span><span class="token string">'visit_time'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+In <span class="token punctuation">[</span><span class="token number">33</span><span class="token punctuation">]</span><span class="token punctuation">:</span> columns <span class="token operator">=</span> pd<span class="token punctuation">.</span>MultiIndex<span class="token punctuation">.</span>from_product<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token string">'Bob'</span><span class="token punctuation">,</span><span class="token string">'Darren'</span><span class="token punctuation">,</span><span class="token string">'Jack'</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token punctuation">[</span><span class="token string">'HR'</span><span class="token punctuation">,</span><span class="token string">'Temp'</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">,</span>names <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'name'</span><span class="token punctuation">,</span><span class="token string">'type'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+In <span class="token punctuation">[</span><span class="token number">34</span><span class="token punctuation">]</span><span class="token punctuation">:</span> data <span class="token operator">=</span> np<span class="token punctuation">.</span><span class="token builtin">round</span><span class="token punctuation">(</span>np<span class="token punctuation">.</span>random<span class="token punctuation">.</span>randn<span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">6</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token comment">#round是保留小数位，此处为1</span>
+
+In <span class="token punctuation">[</span><span class="token number">35</span><span class="token punctuation">]</span><span class="token punctuation">:</span> data
+Out<span class="token punctuation">[</span><span class="token number">35</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
+array<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">0.7</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">0</span><span class="token punctuation">.</span> <span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">0.8</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">0.9</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">0</span><span class="token punctuation">.</span> <span class="token punctuation">,</span>  <span class="token number">2.4</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+       <span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">2.1</span><span class="token punctuation">,</span>  <span class="token number">0.5</span><span class="token punctuation">,</span>  <span class="token number">1.6</span><span class="token punctuation">,</span>  <span class="token number">0.2</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">1.3</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">0.4</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+       <span class="token punctuation">[</span> <span class="token number">0.4</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">1.3</span><span class="token punctuation">,</span>  <span class="token number">0.6</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">0.5</span><span class="token punctuation">,</span>  <span class="token number">2.4</span><span class="token punctuation">,</span>  <span class="token number">0.9</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+       <span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">0.1</span><span class="token punctuation">,</span>  <span class="token number">2.2</span><span class="token punctuation">,</span>  <span class="token number">0.1</span><span class="token punctuation">,</span>  <span class="token number">0.9</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">0.9</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">1.4</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+In <span class="token punctuation">[</span><span class="token number">36</span><span class="token punctuation">]</span><span class="token punctuation">:</span> data<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token operator">*=</span><span class="token number">10</span>
+
+In <span class="token punctuation">[</span><span class="token number">37</span><span class="token punctuation">]</span><span class="token punctuation">:</span> data<span class="token operator">+=</span><span class="token number">37</span>
+
+In <span class="token punctuation">[</span><span class="token number">38</span><span class="token punctuation">]</span><span class="token punctuation">:</span> health_data <span class="token operator">=</span> pd<span class="token punctuation">.</span>DataFrame<span class="token punctuation">(</span>data<span class="token punctuation">,</span>index <span class="token operator">=</span> index<span class="token punctuation">,</span>columns <span class="token operator">=</span> columns<span class="token punctuation">)</span>
+
+In <span class="token punctuation">[</span><span class="token number">39</span><span class="token punctuation">]</span><span class="token punctuation">:</span> health_data
+Out<span class="token punctuation">[</span><span class="token number">39</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
+name              Bob       Darren        Jack
+<span class="token builtin">type</span>               HR  Temp     HR  Temp    HR  Temp
+year visit_time
+<span class="token number">2013</span> <span class="token number">1</span>           <span class="token number">30.0</span>  <span class="token number">37.0</span>   <span class="token number">29.0</span>  <span class="token number">36.1</span>  <span class="token number">37.0</span>  <span class="token number">39.4</span>
+     <span class="token number">2</span>           <span class="token number">16.0</span>  <span class="token number">37.5</span>   <span class="token number">53.0</span>  <span class="token number">37.2</span>  <span class="token number">24.0</span>  <span class="token number">36.6</span>
+<span class="token number">2014</span> <span class="token number">1</span>           <span class="token number">41.0</span>  <span class="token number">35.7</span>   <span class="token number">43.0</span>  <span class="token number">36.5</span>  <span class="token number">61.0</span>  <span class="token number">37.9</span>
+     <span class="token number">2</span>           <span class="token number">36.0</span>  <span class="token number">39.2</span>   <span class="token number">38.0</span>  <span class="token number">37.9</span>  <span class="token number">28.0</span>  <span class="token number">35.6</span>
+
+columns名字       多级columns
+index名字          内容
+多级index          内容<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h3 id="多级索引取值、切片"><a href="#多级索引取值、切片" class="headerlink" title="多级索引取值、切片"></a>多级索引取值、切片</h3>
                 
             </div>
             <hr/>
@@ -2179,7 +2285,7 @@ Out<span class="token punctuation">[</span><span class="token number">79</span><
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">215.5k</span>&nbsp;字
+                class="white-color">217.4k</span>&nbsp;字
             
             
             

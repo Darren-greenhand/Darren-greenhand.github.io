@@ -411,7 +411,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    123 分
+                    125 分
                 </div>
                 
 
@@ -436,20 +436,32 @@
             <div id="articleContent">
                 <p>[toc]</p>
 <p>因为我发现学这个课老是断断续续的，每次捡起来超级麻烦，所以趁这次来个大复习，把一些该有的知识点直接记下来好了</p>
-<h1 id="当今网络"><a href="#当今网络" class="headerlink" title="当今网络"></a>当今网络</h1><h2 id="网络组件"><a href="#网络组件" class="headerlink" title="网络组件"></a>网络组件</h2><p>网络有很多组件:</p>
-<p>终端设备，中间设备，网络介质巴拉巴拉</p>
+<h1 id="当今网络"><a href="#当今网络" class="headerlink" title="当今网络"></a>当今网络</h1><h2 id="网络组件"><a href="#网络组件" class="headerlink" title="网络组件"></a>网络组件</h2><p>术语“主机”特指网络上为通信目的而分配了一个数字的设备。这个数字用来标识特定网络中的主机。这个数字称为互联网协议 (IP) 地址。IP 地址标识主机和主机所连接的网络。</p>
+<p>服务器是装有特殊软件，可以为网络上其他终端设备提供信息（例如电子邮件或网页）的计算机。每项服务都需要单独的服务器软件。例如，服务器必须安装 Web 服务器软件才能为网络提供 Web 服务。安装有服务器软件的计算机可以同时向多个不同客户端提供服务。</p>
+<p>客户端和服务器软件通常运行在单独的服务器上，但一台计算机也可以同时兼任两个角色。在小企业和家庭中，许多计算机在网络中既是服务器又是客户端。这种网络称为对等网络。</p>
+<ol>
+<li>终端设备是指通过网络传输的消息的<strong>来源或目的地</strong>。</li>
+<li>中间设备可以将单个终端连接到网络中。它们可以将多个独立的网络连接起来，形成互联网络。这些中间设备提供连接并确保数据在网络中传输。</li>
+<li>现代网络主要使用三种介质来连接设备：</li>
+</ol>
+<ul>
+<li><strong>金属线电缆</strong> - 数据被编码为电脉冲</li>
+<li><strong>玻璃或塑料光纤（光缆）</strong> - 数据被编码为光脉冲</li>
+<li><strong>无线传输</strong> - 数据是通过调制特定频率的电磁波进行编码的。</li>
+</ul>
 <p>常见表示方法：</p>
 <p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210314161643916.png" alt="image-20210314161643916"></p>
 <p>除了这些表示之外，还使用专门的术语来描述这些设备和介质是如何相互连接的:</p>
 <ul>
-<li><strong>网络接口卡 (NIC)</strong> - 将设备物理连接到网络。</li>
-<li><strong>物理端口</strong> - 网络设备上的接口或插口，介质通过它连接到终端设备或其他网络设备。</li>
-<li><strong>接口</strong> - 网络设备上连接到独立网络的专用端口。由于路由器连接了不同的网络，路由器上的端口称为网络接口。</li>
+<li><strong>网络接口卡 (NIC)</strong> - 将设备从物理上连接到网络。</li>
+<li><strong>物理端口</strong>（physical port） - 网络设备上的接口或插口，介质通过它连接到终端设备或其他网络设备。</li>
+<li><strong>接口</strong>（interface） - <strong>网络设备上连接到独立网络的专用端口</strong>。由于路由器连接了不同的网络，路由器上的端口称为网络接口。</li>
 </ul>
-<p>还有物理拓扑图和逻辑拓扑图</p>
+<p>但是port和interface经常混用</p>
 <p>几个类型：</p>
 <p>内部网，外联网，Intranets and Extranets</p>
-<p>LAN WAN</p>
+<p>LAN WAN通常提供 LAN 之间的较慢链路。</p>
+<p>互联网不属于任何个人或团体。要确保通过这种多元化基础设施有效通信，需要采用统一的公认技术和标准，也需要众多网络管理机构相互协作。为了维护互联网协议和进程的结构和标准化，人们建立了许多组织。</p>
 <h2 id="常用连接技术"><a href="#常用连接技术" class="headerlink" title="常用连接技术"></a>常用连接技术</h2><p>家庭和小型办公室</p>
 <ul>
 <li><strong>有线电视</strong> （<strong>Cable</strong>）- 通常由有线电视服务提供商提供，互联网数据信号在输送有线电视信号的同一电缆上进行传输。它提供了高带宽、高可用性和始终在线的互联网连接。</li>
@@ -458,7 +470,6 @@
 <li><strong>卫星</strong>（<strong>Satellite</strong>） - 对于根本没有互联网连接的地方来说，获得卫星互联网访问非常有用。卫星天线要求有到卫星的清晰视线。</li>
 <li><strong>拨号电话</strong>（<strong>Dial-up Telephone</strong>） - 使用电话线和调制解调器，费用相对较低。拨号调制解调器连接提供的低带宽不足以用于大型数据传输，但对旅行过程中的移动访问非常有用。</li>
 </ul>
-<p><img src="" alt="background2"></p>
 <p>企业</p>
 <ul>
 <li><strong>专用租用线路</strong>（<strong>Dedicated Leased Line</strong> ） - 租用线路是服务提供商网络内连接地理位置分散的办公室的保留电路，提供个人语音和/或数据网络。电路按月或按年租用。</li>
@@ -501,7 +512,7 @@
 <p>当无线接入点无法到达家里的所有设备时，电力线网络特别有用。电力线网络不会取代数据网络中的专用布线。但是，当有线数据网络或无线通信不可行时，电力线网络可以备用。</p>
 <p>无线互联网服务提供商 (WISP) 是使用类似家庭无线局域网 (WLAN) 的无线技术</p>
 <h1 id="配置交换机-终端"><a href="#配置交换机-终端" class="headerlink" title="配置交换机/终端"></a>配置交换机/终端</h1><p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210314163007230.png" alt="image-20210314163007230"></p>
-<h2 id="访问方法"><a href="#访问方法" class="headerlink" title="访问方法"></a>访问方法</h2><p>默认情况下，交换机将转发流量，无需配置即可工作。例如，连接到同一新交换机的两个已配置了的主机能够进行通信。</p>
+<h2 id="访问方法"><a href="#访问方法" class="headerlink" title="访问方法"></a>访问方法</h2><p>默认情况下，交换机将转发流量，无需配置即可工作。连接到同一新交换机的两个已配置了的主机能够进行通信。</p>
 <p>无论新交换机的默认特性如何，都应配置并保护所有交换机。</p>
 <table>
 <thead>
@@ -512,11 +523,11 @@
 </thead>
 <tbody><tr>
 <td align="left"><strong>控制台 (Console)</strong></td>
-<td align="left">这是一种物理管理端口，可通过该端口对思科设备进行带外访问。带外访问是指通过仅用于设备维护的专用管理通道进行访问。使用控制台端口的优势在于，即使没有配置任何网络服务，也可以访问设备，例如执行初始配置时。控制台连接需要运行终端仿真软件的计算机和用于连接设备的特殊控制台电缆。</td>
+<td align="left">这是一种物理管理端口，可通过该端口对思科设备进行带外访问。带外访问是指通过仅用于设备维护的专用管理通道进行访问。使用控制台端口的优势在于，<strong>即使没有配置任何网络服务，也可以访问设备</strong>，例如执行初始配置时。控制台连接需要运行终端仿真软件的计算机和用于连接设备的特殊控制台电缆。</td>
 </tr>
 <tr>
 <td align="left"><strong>安全外壳(SSH)</strong></td>
-<td align="left">SSH 是一种带内且被推荐的方法，它使用虚拟接口通过网络远程建立安全的 CLI连接。不同于控制台连接，SSH 连接需要设备上具有有效的网络服务，包括配置了地址的有效接口。大部分思科 IOS 版本配备了 SSH 服务器和 SSH 客户端，可用于与其他设备建立 SSH 会话。</td>
+<td align="left">SSH 是一种带内且被推荐的方法，它使用虚拟接口<strong>通过网络远程建立安全的 CLI连接</strong>。不同于控制台连接，SSH 连接需要设备上具有有效的网络服务，<strong>包括配置了地址的有效接口</strong>。大部分思科 IOS 版本配备了 SSH 服务器和 SSH 客户端，可用于与其他设备建立 SSH 会话。</td>
 </tr>
 <tr>
 <td align="left"><strong>Telnet</strong></td>
@@ -527,18 +538,18 @@
 <h2 id="配置模式"><a href="#配置模式" class="headerlink" title="配置模式"></a>配置模式</h2><p>作为一项安全功能，思科 IOS 软件将管理访问分为以下两种命令模式：</p>
 <ul>
 <li><strong>用户 EXEC 模式</strong>（user） - 该模式功能有限，但可用于有效执行基本操作。它只允许有限数量的基本监控命令，不允许执行任何可能改变设备配置的命令。用户 EXEC 模式由采用 &gt; 符号结尾的 CLI 提示符标识。</li>
-<li><strong>特权 EXEC 模式</strong>（privileged） - 要执行配置命令，网络管理员必须访问特权 EXEC 模式。较高级别的配置模式，比如全局配置模式，只能通过特权 EXEC 模式访问。特权 EXEC 模式由采用# 符号结尾的提示符标识。</li>
+<li><strong>特权 EXEC 模式</strong>（privileged） - 要执行配置命令，网络管理员必须访问特权 EXEC 模式。较<strong>高级别的配置模式，比如全局配置模式，只能通过特权 EXEC 模式访问</strong>。特权 EXEC 模式由采用# 符号结尾的提示符标识。</li>
 </ul>
 <p>要配置设备，用户必须进入全局配置模式。</p>
 <p>在全局配置模式下， CLI 配置所做的更改将影响整个设备的运行。全局配置模式由在设备名称之后加(config)#结尾的提示符标识，比如Switch(config)#。</p>
 <p>访问全局配置模式之后才能访问其他具体的配置模式。在全局配置模式下，用户可以进入不同的子配置模式。其中的每种模式可以用于配置 IOS 设备的特定部分或特定功能。两个常见的子配置模式包括：</p>
 <ul>
-<li><strong>线路配置模式</strong> - 用于配置控制台、SSH、Telnet 或 AUX 访问。</li>
+<li><strong>线路配置模式</strong> - 用于配置<strong>控制台</strong>、SSH、Telnet 或 AUX 访问。</li>
 <li><strong>接口配置模式</strong> - 用于配置交换机端口或路由器网络接口。</li>
 </ul>
 <p>当使用 CLI 时，每种模式由该模式独有的命令提示符来标识。默认情况下，每个提示符都以设备名称开头。命令提示符中设备名称后的部分用于表明模式。</p>
 <p>例如，线路配置模式的默认提示符是 <strong>Switch(config-line)#</strong> </p>
-<p>默认的接口配置模式提示符是 **Switch(config-if)#**。</p>
+<p>默认的接口配置模式提示符是 **Switch(config-if)#**。interface</p>
 <ul>
 <li><strong>startup-config(启动配置文件)</strong> -存储在 NVRAM 中的配置文件。它包含在启动时或重启时用到的所有命令。当设备断电后，其中的内容不会消失。</li>
 <li><strong>running-config(运行配置文件)</strong> -存储在随机存取存储器（RAM）中。它反映了当前的配置。修改运行配置会立即影响思科设备的运行。RAM 是易失性存储器。如果设备断电或重新启动，则它会丢失所有内容。</li>
@@ -578,24 +589,26 @@
 <p>子配置模式间可以随意转换：</p>
 <p><strong>line console 0</strong></p>
 <p><strong>interface FastEthernet 0/1</strong></p>
-<p><strong>line vty 0 15</strong></p>
-<p>主机名字仅使用字母、数字和破折号</p>
-<p>password ….  特定线路设置密码，如控制台</p>
-<p>Login 启用登录，不启用就根本进不去</p>
-<p>enable secret ….  限制特权（可能是某项命令？）</p>
-<p><strong>service password-encryption</strong>（全局配置指令+加密所有）</p>
-<p>show running-config /startup-config</p>
-<p>**banner motd #<strong>当日消息</strong>#**（其实#可以换别的，向访问设备的人展示）</p>
-<p>hostname 。。。设定主机名，</p>
-<p>no hostname 取消</p>
-<p>reload 清除为保存的running-config</p>
+<p><strong>line vty 0 15</strong> 两个数字说明是0-15一起设置</p>
+<p><em><strong>用户模式只能查看配置，且只能查看部分配置，不能配置交换机；特权模式只能查看配置，且只能查看部分配置，不能配置交换机；全局模式可以修改配置，且对全局生效，但是默认不能查看；而端口模式所做的配置都是针对接口所设定的。</strong></em></p>
+<h3 id="用户特权："><a href="#用户特权：" class="headerlink" title="用户特权："></a>用户特权：</h3><p>show running-config/startup-config</p>
+<p><strong>copy running-config startup-config</strong>。</p>
+<p>reload 清除未保存的running-config  但在一段很短的时间内设备将会离线，导致网络中断。</p>
 <p>erase start 删除启动设置，之后需重新加载设备来恢复出厂</p>
-<p>copy 。。。 可以copy到闪存flash里面</p>
-<p>ip address a b 设置ipv4地址和子网掩码</p>
+<p>show ip(ipv6) interface brief 检查接口的正确数量和标识</p>
+<h3 id="全局指令"><a href="#全局指令" class="headerlink" title="全局指令"></a>全局指令</h3><p>hostname name 主机名字仅使用字母、数字和破折号</p>
+<p>no hostname 清空主机名字</p>
+<p>enable secret (password)  保护特权访问</p>
+<p><strong>service password-encryption</strong>（全局配置指令+加密所有）</p>
+<p>**banner motd #<strong>当日消息</strong>#**（其实#可以换别的，向访问设备的人展示）</p>
+<p>ip default-gateway 设置默认网关</p>
+<h3 id="子模式"><a href="#子模式" class="headerlink" title="子模式"></a>子模式</h3><p>password ….  特定线路设置密码，如控制台</p>
+<p>login 启用登录，不启用就根本进不去</p>
+<p>ip address a b 192.168.1.20 255.255.255.0设置ipv4地址和子网掩码</p>
 <p>ipv6 address … 设置ipv6配置</p>
+<p>no shutdown 启用虚拟接口</p>
 <p>ping也可在路由器特权模式下用！</p>
 <p>no shutdown 启用虚拟接口（shutdown关闭）</p>
-<p>show ip(ipv6) interface brief 检验接口的正确数量和标识</p>
 <p>no ip domain-lookup 禁用DNS解析(特权模式)</p>
 <p>show arp 交换机等设备显示MAC地址信息（特权）</p>
 <p>show mac address-table 查看mac地址表（特权）</p>
@@ -617,9 +630,9 @@
 <p>show ip interface显示路由器上所有接口的 IPv4 统计信息。</p>
 <p>show ipv6 interface显示路由器上所有接口的 IPv6 统计信息。</p>
 <h3 id="主机端"><a href="#主机端" class="headerlink" title="主机端"></a>主机端</h3><p>ipconfig （/all）</p>
-<p>arp -a </p>
+<p>arp -a 显示所有arp表</p>
 <p>arp -d 清除 ARP 表</p>
-<p>ping … 测试链接，一般要两遍，第一遍是自动配置arp</p>
+<p>ping … 测试链接，一般要两遍，第一遍是自动配置arp所以一般失败</p>
 <p><strong>route print</strong>或命<strong>netstat -r</strong>令可以显示主机路由表（windows主机）</p>
 <h2 id="好多缩写"><a href="#好多缩写" class="headerlink" title="好多缩写"></a>好多缩写</h2><p>interface  = int</p>
 <p>FastEthernet = f</p>
@@ -2816,7 +2829,7 @@ R(config-line)# modem autoconfigure discovery   发现和自动配置连接到�
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">215.5k</span>&nbsp;字
+                class="white-color">217.4k</span>&nbsp;字
             
             
             
