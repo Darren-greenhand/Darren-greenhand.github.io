@@ -402,7 +402,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-07-31
+                    2021-08-01
                 </div>
                 
 
@@ -411,7 +411,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    43 分
+                    47 分
                 </div>
                 
 
@@ -1354,6 +1354,7 @@ Out<span class="token punctuation">[</span><span class="token number">79</span><
 <p>但是如果前面一直找不到有效值填充，那就还是缺失值。。。</p>
 <h2 id="层级索引"><a href="#层级索引" class="headerlink" title="层级索引"></a>层级索引</h2><p>当我们遇到存储多维数据需求时，数据索引超过一两个键。</p>
 <p>Pandas提供了Panel和Panel4D对象解决三维数据和四维数据。</p>
+<p>这两种对象采用密集存储，在维度增加的情况下效率越来越低，作者更推荐层级索引</p>
 <p>但更直观的形式是hierarchical indexing，层级索引，配合多个不同等级的以及索引一起用，将高维数组转换成类似一维和二维对象的形式。</p>
 <p>P114有解释层级索引便利性的例子</p>
 <h3 id="创建层级索引"><a href="#创建层级索引" class="headerlink" title="创建层级索引"></a>创建层级索引</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#最直接的方法是将index的参数设置为至少二维的索引数组</span>
@@ -1440,7 +1441,6 @@ array<span class="token punctuation">(</span><span class="token punctuation">[</
        <span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">0.1</span><span class="token punctuation">,</span>  <span class="token number">2.2</span><span class="token punctuation">,</span>  <span class="token number">0.1</span><span class="token punctuation">,</span>  <span class="token number">0.9</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">0.9</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">1.4</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
 
 In <span class="token punctuation">[</span><span class="token number">36</span><span class="token punctuation">]</span><span class="token punctuation">:</span> data<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token operator">*=</span><span class="token number">10</span>
-
 In <span class="token punctuation">[</span><span class="token number">37</span><span class="token punctuation">]</span><span class="token punctuation">:</span> data<span class="token operator">+=</span><span class="token number">37</span>
 
 In <span class="token punctuation">[</span><span class="token number">38</span><span class="token punctuation">]</span><span class="token punctuation">:</span> health_data <span class="token operator">=</span> pd<span class="token punctuation">.</span>DataFrame<span class="token punctuation">(</span>data<span class="token punctuation">,</span>index <span class="token operator">=</span> index<span class="token punctuation">,</span>columns <span class="token operator">=</span> columns<span class="token punctuation">)</span>
@@ -1457,11 +1457,171 @@ year visit_time
 
 columns名字       多级columns
 index名字          内容
-多级index          内容<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+多级index          内容<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 
 
-<h3 id="多级索引取值、切片"><a href="#多级索引取值、切片" class="headerlink" title="多级索引取值、切片"></a>多级索引取值、切片</h3>
+<h3 id="多级索引取值、切片"><a href="#多级索引取值、切片" class="headerlink" title="多级索引取值、切片"></a>多级索引取值、切片</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#Series</span>
+In <span class="token punctuation">[</span><span class="token number">18</span><span class="token punctuation">]</span><span class="token punctuation">:</span> one
+Out<span class="token punctuation">[</span><span class="token number">18</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
+year  visit_time
+<span class="token number">2013</span>  <span class="token number">1</span>             <span class="token number">53.0</span>
+      <span class="token number">2</span>             <span class="token number">35.3</span>
+<span class="token number">2014</span>  <span class="token number">1</span>             <span class="token number">34.0</span>
+      <span class="token number">2</span>             <span class="token number">36.9</span>
+dtype<span class="token punctuation">:</span> float64
+
+<span class="token comment">#可以通过指定所有级别的索引值来获取单个元素</span>
+In <span class="token punctuation">[</span><span class="token number">19</span><span class="token punctuation">]</span><span class="token punctuation">:</span> one<span class="token punctuation">[</span><span class="token number">2013</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">]</span>
+Out<span class="token punctuation">[</span><span class="token number">19</span><span class="token punctuation">]</span><span class="token punctuation">:</span> <span class="token number">53.0</span>
+
+<span class="token comment">#也可以“局部取值”，取出来还是Series，不过貌似必须得从前到后</span>
+In <span class="token punctuation">[</span><span class="token number">20</span><span class="token punctuation">]</span><span class="token punctuation">:</span> one<span class="token punctuation">[</span><span class="token number">2013</span><span class="token punctuation">]</span>
+Out<span class="token punctuation">[</span><span class="token number">20</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
+visit_time
+<span class="token number">1</span>    <span class="token number">53.0</span>
+<span class="token number">2</span>    <span class="token number">35.3</span>
+dtype<span class="token punctuation">:</span> float64
+
+<span class="token comment">#切片类似</span>
+In <span class="token punctuation">[</span><span class="token number">22</span><span class="token punctuation">]</span><span class="token punctuation">:</span> one<span class="token punctuation">.</span>loc<span class="token punctuation">[</span><span class="token number">2013</span><span class="token punctuation">:</span><span class="token number">2014</span><span class="token punctuation">]</span>
+Out<span class="token punctuation">[</span><span class="token number">22</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
+year  visit_time
+<span class="token number">2013</span>  <span class="token number">1</span>             <span class="token number">53.0</span>
+      <span class="token number">2</span>             <span class="token number">35.3</span>
+<span class="token number">2014</span>  <span class="token number">1</span>             <span class="token number">34.0</span>
+      <span class="token number">2</span>             <span class="token number">36.9</span>
+dtype<span class="token punctuation">:</span> float64
+
+In <span class="token punctuation">[</span><span class="token number">24</span><span class="token punctuation">]</span><span class="token punctuation">:</span> one<span class="token punctuation">.</span>loc<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">]</span>
+Out<span class="token punctuation">[</span><span class="token number">24</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
+year
+<span class="token number">2013</span>    <span class="token number">35.3</span>
+<span class="token number">2014</span>    <span class="token number">36.9</span>
+dtype<span class="token punctuation">:</span> float64
+<span class="token comment">#布尔和花哨的使用方法类似，并无太大变化</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#DateFrame</span>
+和之前的分析一样，单独取是列索引之类的，类比一下嘛
+
+In <span class="token punctuation">[</span><span class="token number">30</span><span class="token punctuation">]</span><span class="token punctuation">:</span> health_data
+Out<span class="token punctuation">[</span><span class="token number">30</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
+name              Bob       Darren        Jack
+<span class="token builtin">type</span>               HR  Temp     HR  Temp    HR  Temp
+year visit_time
+<span class="token number">2013</span> <span class="token number">1</span>           <span class="token number">53.0</span>  <span class="token number">35.3</span>   <span class="token number">34.0</span>  <span class="token number">36.9</span>  <span class="token number">37.0</span>  <span class="token number">37.0</span>
+     <span class="token number">2</span>           <span class="token number">20.0</span>  <span class="token number">35.8</span>   <span class="token number">47.0</span>  <span class="token number">37.2</span>  <span class="token number">42.0</span>  <span class="token number">37.0</span>
+<span class="token number">2014</span> <span class="token number">1</span>           <span class="token number">36.0</span>  <span class="token number">36.3</span>   <span class="token number">44.0</span>  <span class="token number">37.7</span>  <span class="token number">35.0</span>  <span class="token number">37.4</span>
+     <span class="token number">2</span>           <span class="token number">28.0</span>  <span class="token number">37.4</span>   <span class="token number">32.0</span>  <span class="token number">33.7</span>  <span class="token number">40.0</span>  <span class="token number">38.0</span>
+
+<span class="token comment">#在loc和iloc中可以传递多个层级的索引元组，👇先取所有行，再对列进行层级索引，但在元组中使用切片会导致语法错误。。。</span>
+In <span class="token punctuation">[</span><span class="token number">29</span><span class="token punctuation">]</span><span class="token punctuation">:</span> health_data<span class="token punctuation">.</span>loc<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token string">'Darren'</span><span class="token punctuation">,</span><span class="token string">'Temp'</span><span class="token punctuation">)</span><span class="token punctuation">]</span>
+Out<span class="token punctuation">[</span><span class="token number">29</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
+year  visit_time
+<span class="token number">2013</span>  <span class="token number">1</span>             <span class="token number">36.9</span>
+      <span class="token number">2</span>             <span class="token number">37.2</span>
+<span class="token number">2014</span>  <span class="token number">1</span>             <span class="token number">37.7</span>
+      <span class="token number">2</span>             <span class="token number">33.7</span>
+Name<span class="token punctuation">:</span> <span class="token punctuation">(</span>Darren<span class="token punctuation">,</span> Temp<span class="token punctuation">)</span><span class="token punctuation">,</span> dtype<span class="token punctuation">:</span> float64 
+
+<span class="token comment">#更好的方法时使用IndexSlice对象而不是python自带的slice函数，这样可以在内部使用切片</span>
+In <span class="token punctuation">[</span><span class="token number">37</span><span class="token punctuation">]</span><span class="token punctuation">:</span> health_data<span class="token punctuation">.</span>loc<span class="token punctuation">[</span>idx<span class="token punctuation">[</span><span class="token number">2013</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">,</span>idx<span class="token punctuation">[</span><span class="token string">'Darren'</span><span class="token punctuation">,</span><span class="token punctuation">:</span><span class="token punctuation">]</span><span class="token punctuation">]</span>
+Out<span class="token punctuation">[</span><span class="token number">37</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
+name    <span class="token builtin">type</span>
+Darren  HR      <span class="token number">47.0</span>
+        Temp    <span class="token number">37.2</span>
+Name<span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token number">2013</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">,</span> dtype<span class="token punctuation">:</span> float64
+<span class="token comment">#ps：不要忘记使用loc，不然会报错而且错误贼长</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h3 id="多级索引行列转换"><a href="#多级索引行列转换" class="headerlink" title="多级索引行列转换"></a>多级索引行列转换</h3><p>局部切片和其他很多类似操作都要求MultiIndex的各级索引是有序的，否则大部分操作都会失败。</p>
+<p>可以用data = data.sort_index() 或者<a target="_blank" rel="noopener" href="https://pandas.pydata.org/pandas-docs/version/0.23.4/generated/pandas.DataFrame.sort_index.html#pandas.DataFrame.sort_index">data.sortlevel</a>()来搞定</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">In <span class="token punctuation">[</span><span class="token number">21</span><span class="token punctuation">]</span><span class="token punctuation">:</span> pop
+Out<span class="token punctuation">[</span><span class="token number">21</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
+California  <span class="token number">2000</span>    <span class="token number">3234234</span>
+            <span class="token number">2010</span>     <span class="token number">324322</span>
+NewYork     <span class="token number">2000</span>    <span class="token number">6434634</span>
+            <span class="token number">2010</span>      <span class="token number">52364</span>
+Texas       <span class="token number">2000</span>      <span class="token number">67573</span>
+            <span class="token number">2010</span>      <span class="token number">43525</span>
+dtype<span class="token punctuation">:</span> int32
+
+In <span class="token punctuation">[</span><span class="token number">22</span><span class="token punctuation">]</span><span class="token punctuation">:</span> stack <span class="token operator">=</span> pop<span class="token punctuation">.</span>unstack<span class="token punctuation">(</span>level <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">)</span>
+
+In <span class="token punctuation">[</span><span class="token number">23</span><span class="token punctuation">]</span><span class="token punctuation">:</span> stack
+Out<span class="token punctuation">[</span><span class="token number">23</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
+      California  NewYork  Texas
+<span class="token number">2000</span>     <span class="token number">3234234</span>  <span class="token number">6434634</span>  <span class="token number">67573</span>
+<span class="token number">2010</span>      <span class="token number">324322</span>    <span class="token number">52364</span>  <span class="token number">43525</span>
+
+In <span class="token punctuation">[</span><span class="token number">24</span><span class="token punctuation">]</span><span class="token punctuation">:</span> stack2 <span class="token operator">=</span> pop<span class="token punctuation">.</span>unstack<span class="token punctuation">(</span>level <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">)</span>
+In <span class="token punctuation">[</span><span class="token number">25</span><span class="token punctuation">]</span><span class="token punctuation">:</span> stack2
+Out<span class="token punctuation">[</span><span class="token number">25</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
+               <span class="token number">2000</span>    <span class="token number">2010</span>
+California  <span class="token number">3234234</span>  <span class="token number">324322</span>
+NewYork     <span class="token number">6434634</span>   <span class="token number">52364</span>
+Texas         <span class="token number">67573</span>   <span class="token number">43525</span>
+
+In <span class="token punctuation">[</span><span class="token number">26</span><span class="token punctuation">]</span><span class="token punctuation">:</span> stack2<span class="token punctuation">.</span>stack<span class="token punctuation">(</span><span class="token punctuation">)</span>
+Out<span class="token punctuation">[</span><span class="token number">26</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
+California  <span class="token number">2000</span>    <span class="token number">3234234</span>
+            <span class="token number">2010</span>     <span class="token number">324322</span>
+NewYork     <span class="token number">2000</span>    <span class="token number">6434634</span>
+            <span class="token number">2010</span>      <span class="token number">52364</span>
+Texas       <span class="token number">2000</span>      <span class="token number">67573</span>
+            <span class="token number">2010</span>      <span class="token number">43525</span>
+dtype<span class="token punctuation">:</span> int32<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<p>在实践中处理数据集非常好用的方法：</p>
+<p>行列标签转换</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#reset_index可以生成一个DataFrame，之前的行索引将变成内容，行名变列名，可以指定name来设置原来内容的列名称</span>
+In <span class="token punctuation">[</span><span class="token number">29</span><span class="token punctuation">]</span><span class="token punctuation">:</span> pop<span class="token punctuation">.</span>index<span class="token punctuation">.</span>names <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'state'</span><span class="token punctuation">,</span><span class="token string">'year'</span><span class="token punctuation">]</span>
+
+In <span class="token punctuation">[</span><span class="token number">30</span><span class="token punctuation">]</span><span class="token punctuation">:</span> pop<span class="token punctuation">.</span>reset_index<span class="token punctuation">(</span>name <span class="token operator">=</span> <span class="token string">'population'</span><span class="token punctuation">)</span>
+Out<span class="token punctuation">[</span><span class="token number">30</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
+        state  year  population
+<span class="token number">0</span>  California  <span class="token number">2000</span>     <span class="token number">3234234</span>
+<span class="token number">1</span>  California  <span class="token number">2010</span>      <span class="token number">324322</span>
+<span class="token number">2</span>     NewYork  <span class="token number">2000</span>     <span class="token number">6434634</span>
+<span class="token number">3</span>     NewYork  <span class="token number">2010</span>       <span class="token number">52364</span>
+<span class="token number">4</span>       Texas  <span class="token number">2000</span>       <span class="token number">67573</span>
+<span class="token number">5</span>       Texas  <span class="token number">2010</span>       <span class="token number">43525</span>
+
+<span class="token comment">#反过来，也可以这样</span>
+In <span class="token punctuation">[</span><span class="token number">32</span><span class="token punctuation">]</span><span class="token punctuation">:</span> a <span class="token operator">=</span> pop<span class="token punctuation">.</span>reset_index<span class="token punctuation">(</span>name <span class="token operator">=</span> <span class="token string">'population'</span><span class="token punctuation">)</span>
+
+In <span class="token punctuation">[</span><span class="token number">33</span><span class="token punctuation">]</span><span class="token punctuation">:</span> a<span class="token punctuation">.</span>set_index<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">'state'</span><span class="token punctuation">,</span><span class="token string">'year'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+Out<span class="token punctuation">[</span><span class="token number">33</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
+                 population
+state      year
+California <span class="token number">2000</span>     <span class="token number">3234234</span>
+           <span class="token number">2010</span>      <span class="token number">324322</span>
+NewYork    <span class="token number">2000</span>     <span class="token number">6434634</span>
+           <span class="token number">2010</span>       <span class="token number">52364</span>
+Texas      <span class="token number">2000</span>       <span class="token number">67573</span>
+           <span class="token number">2010</span>       <span class="token number">43525</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<p>数据累计方法，如mean()、sum()、max()之类的，其实就是结合level参数，level取的是index的名字，表明保留该列、行，其他合并，通过axis表明沿行、列</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">In <span class="token punctuation">[</span><span class="token number">42</span><span class="token punctuation">]</span><span class="token punctuation">:</span> a <span class="token operator">=</span> pop<span class="token punctuation">.</span>mean<span class="token punctuation">(</span>level <span class="token operator">=</span> <span class="token string">'state'</span><span class="token punctuation">)</span>
+
+In <span class="token punctuation">[</span><span class="token number">43</span><span class="token punctuation">]</span><span class="token punctuation">:</span> a
+Out<span class="token punctuation">[</span><span class="token number">43</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
+state
+California    <span class="token number">1779278</span>
+NewYork       <span class="token number">3243499</span>
+Texas           <span class="token number">55549</span>
+dtype<span class="token punctuation">:</span> int32<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h2 id="合并数据集"><a href="#合并数据集" class="headerlink" title="合并数据集"></a>合并数据集</h2><p>这是非常有趣的事情，既包括简单拼接，也包括处理重叠片段，pandas提供了高效的函数</p>
+<p>concat 和 append</p>
+
                 
             </div>
             <hr/>
@@ -2285,7 +2445,7 @@ index名字          内容
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">217.4k</span>&nbsp;字
+                class="white-color">219.3k</span>&nbsp;字
             
             
             

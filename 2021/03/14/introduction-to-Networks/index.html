@@ -402,7 +402,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-07-30
+                    2021-08-01
                 </div>
                 
 
@@ -411,7 +411,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    125 分
+                    129 分
                 </div>
                 
 
@@ -759,18 +759,24 @@
 </tbody></table>
 <h1 id="协议和模型"><a href="#协议和模型" class="headerlink" title="协议和模型"></a>协议和模型</h1><h2 id="基础概念"><a href="#基础概念" class="headerlink" title="基础概念"></a>基础概念</h2><p>常用的计算机协议包含以下要求：</p>
 <ul>
-<li>消息编码-将信息转换成可传输和解码的</li>
-<li>消息格式和封装（encapsulation）-取决于消息类型和传递信道</li>
-<li>消息大小</li>
-<li>消息时序（timing）<ul>
-<li><strong>流量控制（flow control）-</strong> 这是管理数据传输速率的过程。流量控制定义了可以发送多少信息以及传递信息的速率。例如，如果一个人讲话太快，对方就难以听清和理解。在网络通信中，源设备和目的设备使用网络协议来协商和管理信息流。</li>
+<li><p>消息编码-将信息转换成可传输和解码的</p>
+<p>编码是将信息转换为另一种广为接受的形式的过程</p>
+</li>
+<li><p>消息格式和封装（encapsulation）-</p>
+<p>当消息从源发送到目的地时，必须使用特定的格式或结构。取决于消息类型和传递信道</p>
+</li>
+<li><p>消息大小</p>
+</li>
+<li><p>消息时序（timing）</p>
+<ul>
+<li><strong>流量控制（flow control）-</strong> 这是管理数据传输速率的过程。流量控制定义了可以发送多少信息以及传递信息的速率。例如，如果一个人讲话太快，对方就难以听清和理解。</li>
 <li><strong>响应超时</strong>(responce timeout) -如果一个人提问之后在合理的时间内没有得到回答，就会认为没有获得回答并作出相应的反应。此人可能会重复这个问题，也可能继续谈话。网络上的主机会使用网络协议来指定等待响应的时长，以及在响应超时的情况下执行什么操作。</li>
 <li><strong>访问方法</strong> -这决定人们可以发送消息的时间。如果两个人同时讲话，就会发生信息冲突，两个人必须作出让步，重新开始的动画演示。同样，当设备想要在无线局域网上传输时，有必要使用 WLAN 网络接口卡 (NIC) 来确定无线介质是否可用。</li>
 </ul>
 </li>
-<li>消息传输选项</li>
+<li><p>消息传输方式</p>
+</li>
 </ul>
-<p>单播广播组播</p>
 <p>网络协议定义了用于设备之间交换消息的通用格式和规则集。协议由软件、硬件或两者中的终端设备和中间设备实现。每个网络协议都有自己的功能、格式和通信规则。</p>
 <p>该表列出了在一个或多个网络上通信所需的各种协议类型。</p>
 <table>
@@ -797,11 +803,14 @@
 <td align="left">这类协议用于设备或服务的自动检测。 服务发现协议的示例包括发现用于IP地址分配 服务的动态主机配置协议（DHCP）， 和用于执行域名到IP地址转换的 域名系统（DNS）。</td>
 </tr>
 </tbody></table>
+<p>协议的功能包括：<strong>编制、可靠性、流量控制、排序、差错检验、应用接口。</strong></p>
+<p>在许多情况下，协议必须能够与其他协议配合使用，以便让在线体验为您提供网络通信所需的一切。协议簇旨在相互无缝协作。</p>
 <p>执行某种通信功能所需的一组内在相关协议称为协议簇。</p>
 <p>要形象地表现协议簇中的协议如何互动，最佳方法之一就是将这种互动看成一个堆栈。协议栈展示了协议簇中的单个协议是如何实施的。<strong>协议显示为分层结构，每种上层服务都依赖于其余下层协议所定义的功能。协议栈的下层负责通过网络传输数据和向上层提供服务，而上层则负责处理发送的消息内容。</strong></p>
 <p>当年多种协议簇，只剩下TCP/IP（互联网协议簇）和一点点OSI（开放系统互连协议）</p>
-<h2 id="TCP-IP"><a href="#TCP-IP" class="headerlink" title="*TCP/IP"></a>*TCP/IP</h2><p>免费 且 标准</p>
+<h2 id="TCP-IP"><a href="#TCP-IP" class="headerlink" title="*TCP/IP"></a>*TCP/IP</h2><p>免费 且 标准，图中只是较为常用的一些协议。</p>
 <p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210314171619114.png" alt="image-20210314171619114"></p>
+<p>在一项工作中，每一层都有某个或多个协议参与。</p>
 <p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210314173907739.png" alt="image-20210314173907739"></p>
 <table>
 <thead>
@@ -881,17 +890,69 @@ ARP -地址解析协议(Address Resolution Protocol)。提供 IPv4 地址与硬�
 Ethernet -为网络接入层的布线和信令标准定义规则。
 WLAN -无线局域网(Wirelee Local Area Network)。定义 2.4 GHz 和 5 GHz 无线电频率的无线信号规则。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h2 id="数据单元"><a href="#数据单元" class="headerlink" title="数据单元"></a>数据单元</h2><p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210314174259989.png" alt="image-20210314174259989"></p>
+<table>
+<thead>
+<tr>
+<th align="left"><strong>OSI 模型层</strong></th>
+<th align="left"><strong>描述</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><strong>7 - 应用层</strong></td>
+<td align="left">应用层包含用于进程间通信 的协议。</td>
+</tr>
+<tr>
+<td align="left"><strong>6 - 表示层</strong></td>
+<td align="left">表示层用常用方式表示数据 在应用层服务之间的传输。</td>
+</tr>
+<tr>
+<td align="left"><strong>5 - 会话层</strong></td>
+<td align="left">会话层向表示层提供服务，组织对话并 管理数据交换。</td>
+</tr>
+<tr>
+<td align="left"><strong>4 - 传输层</strong></td>
+<td align="left">传输层定义服务以对数据进行分段，传输和 重组，以进行终端设备之间的单独 通信。</td>
+</tr>
+<tr>
+<td align="left"><strong>3 - 网络层</strong></td>
+<td align="left">网络层为所标识的终端设备之间通过网络 交换独立的数据的片段提供服务。</td>
+</tr>
+<tr>
+<td align="left"><strong>2 - 数据链路层</strong></td>
+<td align="left">数据链路层协议描述了设备之间通过 公共介质交换数据帧的方法。</td>
+</tr>
+<tr>
+<td align="left"><strong>1 - 物理层</strong></td>
+<td align="left">物理层协议描述了机械的、电气的、功能的 和程序化的方法，以激活，维护和解除物理连接， 实现与网络设备之间的位 设备。</td>
+</tr>
+</tbody></table>
+<h2 id="数据封装"><a href="#数据封装" class="headerlink" title="数据封装"></a>数据封装</h2><p>理论上来说，可以将一次通信的内容（如音乐视频或有很多很大的附件的电子邮件）作为一大块连续的高容量比特流，通过网络从源发送到目的地。但是，这会给其他需要使用相同通信通道或链路的设备带来问题。这种大型数据流会导致严重的延迟。而且，一旦互联网络基础架构中的任何链路在传输期间出现故障，那么整个消息都会丢失，必须全部重传。</p>
+<p>所以，更好的办法是先将数据划分为更小、更易于管理的片段，然后再通过网络发送。分段是将数据流划分成更小的单元，以便在通过网络传输的过程。</p>
+<p>好处：</p>
+<ul>
+<li><strong>提高速度</strong> - 由于将大数据流分段成为数据包，因此可以在不独占通信链路的情况下，通过网络发送大量数据。这允许许多不同的会话在称为多路复用的网络上交错。</li>
+<li><strong>提高效率</strong> - 如果单个数据段由于网络故障或网络拥塞而无法到达其目的地，则只需要重新传输该段，而不需要重新发送整个数据流。</li>
+</ul>
+<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210314174259989.png" alt="image-20210314174259989"></p>
 <p>PDU协议数据单元</p>
 <p>Data 数据 </p>
 <p>Segment 段  Datagram 报</p>
 <p>Packet 包</p>
 <p>Frame 帧</p>
 <p>Bits 位</p>
-<h1 id="物理层"><a href="#物理层" class="headerlink" title="物理层"></a>物理层</h1><p>网络接口卡 (NIC) 将设备连接到网络。以太网网卡用于有线连接（如图所示），而无线局域网（WLAN）网卡用于无线连接。最终用户设备可能包括一种或两种类型的网卡。</p>
-<p>在连接网络时，所有物理连接的性能水平并不是相等的。</p>
+<p>这个图一开始忽略掉了，各层关注的地址</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210801171105.png" alt="image-20210801171058466"></p>
+<p>IP 地址包含两部分：</p>
+<ul>
+<li>网络部分(IPv4)或前缀(IPv6) – 地址最左边的部分，表示 IP 地址是哪个网络的成员。同一网络中所有设备的地址都有相同的网络部分。</li>
+<li>主机部分(IPv4)或接口ID(IPv6) - 地址的其余部分，用于识别网络上的特定设备。这部分对于网络中的每个设备或接口都是唯一的。</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210801171401.png" alt="image-20210801171401623"></p>
+<p>具体mac和ip的方式等后面吧。</p>
+<h1 id="物理层"><a href="#物理层" class="headerlink" title="物理层"></a>物理层</h1><p>网络接口卡 (NIC) 将设备连接到网络。以太网网卡用于有线连接、，而无线局域网（WLAN）网卡用于无线连接。最终用户设备可能包括一种或两种类型的网卡。</p>
+<p>在连接网络时，所有物理连接的<strong>性能水平并不是相等</strong>的。</p>
 <p>OSI 物理层通过网络介质传输构成数据链路层帧的比特（位）。该层从数据链路层接收完整的帧，并将这些帧编码为一系列信号，传输到本地介质上。帧由经过编码的比特（位）构成，这些位可以被终端设备或中间设备接收。</p>
-<h2 id="物理层标准"><a href="#物理层标准" class="headerlink" title="物理层标准"></a>物理层标准</h2><p>由以下组织定义和管理：</p>
+<h2 id="物理层特征"><a href="#物理层特征" class="headerlink" title="物理层特征"></a>物理层特征</h2><p>由以下组织定义和管理：</p>
 <ul>
 <li>国际标准化组织 (ISO)</li>
 <li>电信工业协会/电子工业协会 (TIA/EIA)</li>
@@ -903,11 +964,12 @@ WLAN -无线局域网(Wirelee Local Area Network)。定义 2.4 GHz 和 5 GHz 无
 <p>除了这些组织之外，通常还有地方性布线标准组织，例如 CSA（加拿大标准协会）、CENELEC（欧洲电工标准化委员会）和 JSA/JIS（日本标准协会），开发本地规范。（放在这里谨表敬意，绝对不记！！）</p>
 <p>物理层标准管理三个功能区：</p>
 <ul>
-<li>物理组件 - 电子硬件设备、介质和其他连接器</li>
+<li>物理组件 - 电子硬件设备、介质和其他连接器，组件均按照物理层的相关标准进行规定路由器上的各种端口和接口也属于物理组件，根据标准使用特定连接器和引脚。</li>
 <li>编码 - 将数据位流转换为预先定义“代码”的方法，这些代码就是位的编组，用于提供一种可预测模式，以便发送者和接收者均能识别。换句话说，编码是用于表示数字信息的方法或模式。（比如曼切斯特）</li>
 <li>信令 - 表示位的方法称为信令方法，在介质上生成代表“1”和“0”的电信号、光信号或无线信号，而哪种类型的信号代表“0”。这可以简单到只是改变电信号或光脉冲的级别。长脉冲可能代表 1，而短脉冲可能代表 0。</li>
 </ul>
-<h2 id="带宽"><a href="#带宽" class="headerlink" title="带宽"></a>带宽</h2><p>用来衡量带宽质量的术语包括:</p>
+<p>信令是方式，是编码的基础，编码是抽象的逻辑，借由信令这个媒介加以实现（我猜的）</p>
+<h3 id="带宽"><a href="#带宽" class="headerlink" title="带宽"></a>带宽</h3><p>不同的物理介质所支持的位传输速率不同。数据传输的讨论通常都会提及带宽。带宽是介质承载数据的能力。数字带宽可以测量在给定时间内从一个位置流向另一个位置的数据量。</p>
 <p><strong>延迟</strong></p>
 <p>延迟是指数据从一个给定点传送到另一给定点所用的时间，包括时延。</p>
 <p>在拥有多个网段的网际网络或网络中，吞吐量不能超过从源到目的地之间路径的最低链路。纵使这些网段全部或多数具备高速带宽，它也只使用那段低速率路径的吞吐量，这就会造成整个网络的吞吐量瓶颈。</p>
@@ -920,37 +982,42 @@ WLAN -无线局域网(Wirelee Local Area Network)。定义 2.4 GHz 和 5 GHz 无
 <li>从源通往目的地的过程中遇到的网络设备数量所造成的延时。</li>
 </ul>
 <p><strong>实际吞吐量</strong></p>
-<p>用于评估可用数据传输的第三个测量标准称为实际吞吐量。实际吞吐量是在给定时间段内传输的有用数据的衡量标准。实际吞吐量就是吞吐量减去建立会话、确认、封装和重传所产生的流量开销。实际吞吐量总是低于吞吐量，而吞吐量通常低于带宽。</p>
-<h2 id="铜缆"><a href="#铜缆" class="headerlink" title="铜缆"></a>铜缆</h2><p>有三种不同类型的铜缆布线，每一种都用于特定的情况。</p>
+<p>用于评估可用数据传输的第三个测量标准称为实际吞吐量。实际吞吐量是在给定时间段内传输的有用数据的衡量标准。实际吞吐量就是吞吐量<strong>减去建立会话、确认、封装和重传所产生的流量开销</strong>。实际吞吐量总是低于吞吐量，而吞吐量通常低于带宽。</p>
+<h2 id="介质"><a href="#介质" class="headerlink" title="介质"></a>介质</h2><h3 id="铜缆"><a href="#铜缆" class="headerlink" title="铜缆"></a>铜缆</h3><p>有三种不同类型的铜缆布线，每一种都用于特定的情况。</p>
 <p>价格低廉、易于安装、对电流的电阻低。但是，铜介质受到距离和信号干扰的限制。</p>
 <p>信号传输的距离越远，信号下降就越多。这称为信号衰减。</p>
 <ul>
-<li>**电磁干扰 (EMI) 或射频干扰 (RFI) - EMI 和 RFI 干扰信号会扭曲和损坏通过铜介质承载的数据信号。EMI 和 RFI 的潜在来源包括无线电波和电磁设备（如荧光灯或电动机）。</li>
-<li>**串扰 - 串扰是一根电线中信号的电场或磁场对邻近电线中的信号造成的干扰。在电话线上，串扰会由相邻电路中另一语音会话的接听部分引起。具体而言，当电流流经电线时，会在电线周围产生一个较小的环形磁场，而相邻电线可能接收到该磁场。</li>
+<li><em><strong>电磁干扰 (EMI) 或射频干扰 (RFI)</strong></em> - EMI 和 RFI 干扰信号会扭曲和损坏通过铜介质承载的数据信号。EMI 和 RFI 的潜在来源包括无线电波和电磁设备（如荧光灯或电动机）。</li>
+<li><em><strong>串扰</strong></em> - 串扰是一根电线中信号的电场或磁场对邻近电线中的信号造成的干扰。在电话线上，串扰会由相邻电路中另一语音会话的接听部分引起。具体而言，当电流流经电线时，会在电线周围产生一个较小的环形磁场，而相邻电线可能接收到该磁场。</li>
 </ul>
 <p>为了应对 EMI 和 RFI 的负面影响，某些类型的铜缆会用金属屏蔽套包裹，并要求适当的接地连接。</p>
-<p>为了应对串扰的负面影响，某些类型的铜缆将相反电路线对绞合在一起以有效消除串扰。</p>
+<p>为了应对串扰的负面影响，某些类型的铜缆将相反电路线对绞合在一起以有效消除串扰。（物理学hh）</p>
 <p>使用以下建议也可以限制电子噪音对铜缆的影响：</p>
 <ul>
 <li>选择的电缆类型或类别要适合特定的网络环境。</li>
 <li>设计电缆基础设施时应规避建筑结构中已知和潜在的干扰源。</li>
 <li>使用包括正确处理和端接电缆的布线技术。</li>
 </ul>
-<p>UTP非屏蔽双绞线 Unshielded twisted-pair </p>
+<p><strong>UTP非屏蔽双绞线 Unshielded twisted-pair</strong> </p>
 <p>最常用的网络介质。通过 RJ-45 连接器端接的 UTP 布线用于<strong>网络主机与中间网络设备的互连</strong>，例如交换机和路由器。四对用颜色标记的电线组成</p>
-<p>STP屏蔽双绞线 Shielded twisted-pair</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210801172405.png" alt="image-20210801172405377" style="zoom:50%;" />
+
+<p><strong>STP屏蔽双绞线 Shielded twisted-pair</strong></p>
 <p>比 UTP 布线提供更好的噪声防护。但是，与 UTP 电缆相比，STP 电缆更加昂贵而且不易安装。和 UTP 相同，STP 也使用 RJ-45 连接器。为了充分利用屏蔽的优势，STP 电缆使用特殊屏蔽 STP 数据连接器进行端接。如果电缆接地不正确，屏蔽就相当于一个天线，会接听多余信号。</p>
 <p>多了金属编制和金属箔</p>
-<p>Coaxial cable</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210801172356.png" alt="image-20210801172356718" style="zoom:50%;" />
+
+<p><strong>Coaxial cable</strong></p>
 <p>同轴电缆，或简称同轴，由于它的两根导线共享同一个中轴而得名</p>
 <p>同轴电缆使用许多不同类型的连接器</p>
-<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210314182735686.png" alt="image-20210314182735686"></p>
+<img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210314182735686.png" alt="image-20210314182735686" style="zoom:67%;" />
+
 <p>虽然 UTP 电缆在现代以太网安装中最终取代了同轴电缆，但在以下情形中仍采用同轴电缆设计：</p>
 <ul>
 <li><strong>无线安装</strong> - 用同轴电缆将<strong>天线连接到无线设备</strong>。同轴电缆可传送天线和无线电设备之间的射频 (RF) 能量。</li>
-<li><strong>有线电视互联网安装</strong> - 有线电视服务提供商为其客户提供互联网连接，他们会使用光缆替换同轴电缆和支撑放大元件部分。但是，<strong>客户所在地的布线</strong>仍采用同轴电缆。</li>
+<li><strong>有线电视互联网安装</strong> - 有线电视服务提供商为其客户提供互联网连接，他们会使用光缆替换同轴电缆和支撑放大元件部分。但是，<strong>客户所在地的布线</strong> 仍采用同轴电缆。</li>
 </ul>
-<h2 id="UTP布线"><a href="#UTP布线" class="headerlink" title="UTP布线"></a>UTP布线</h2><p>标准规定了一些要素</p>
+<h3 id="UTP布线"><a href="#UTP布线" class="headerlink" title="UTP布线"></a>UTP布线</h3><p>UTP 布线遵循由 TIA/EIA 共同制定的标准。具体而言，TIA/EIA-568 规定了 LAN 安装的商业布线标准，它是 LAN 布线环境中最常用的标准。定义的一些要素如下：</p>
 <ul>
 <li>电缆类型</li>
 <li>电缆长度</li>
@@ -962,15 +1029,18 @@ WLAN -无线局域网(Wirelee Local Area Network)。定义 2.4 GHz 和 5 GHz 无
 <p>为了支持更高的数据传输速率，人们设计和构造了更高类别的电缆。随着新的千兆位以太网技术的开发和运用，如今已经很少采用 5e 类电缆，新建筑安装推荐使用 6 类电缆。</p>
 <p>-3 类电缆最初用于语音线路的语音通信，但后来用于数据传输。 -5 类和5e 类电缆用于数据传输。5类电缆支持 100Mbps，5e 类电缆支持 1000 Mbps -6类电缆在每对线之间增加了一个分隔器以支持更高的速度。 6类电缆支持高达 10 Gbps。 -7类电缆也支持 10 Gbps。 -8类电缆支持 40 Gbps。</p>
 <p>UTP 电缆的端头通常为 RJ-45 连接器。TIA/EIA-568 标准描述为以太网电缆进行引脚分配（引出线）的电线颜色标记。</p>
-<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210314200028243.png" alt="image-20210314200028243"></p>
-<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210314200013783.png" alt="image-20210314200013783"></p>
+<img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210314200028243.png" alt="image-20210314200028243" style="zoom:50%;" />
+
+<hr>
+<img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210314200013783.png" alt="image-20210314200013783" style="zoom:50%;" />
+
 <p>直通和交通</p>
 <ul>
 <li><strong>以太网直通电缆</strong> -最常见的网络电缆类型。它通常用于主机到交换机和交换机到路由器的互连。</li>
 <li><strong>以太网交叉电缆</strong> -用于互连相似设备的电缆。例如，交换机到交换机、主机到主机或路由器到路由器的连接。但是，由于网卡使用介质相关接口交叉（auto-MDIX）来自动检测电缆类型并进行内部连接，因此现在已将交叉电缆视为传统电缆。</li>
-<li>但是主机链接路由器竟然也是用交叉线！</li>
+<li>但是<strong>主机链接路由器竟然也是用交叉线！</strong></li>
 </ul>
-<p><strong>注意</strong>: 另一种类型的电缆是思科专有的全反电缆。它用于连接路由器或交换机的控制台端口。</p>
+<p><strong>注意</strong>: 另一种类型的电缆是思科专有的全反电缆。它用于连接路由器或交换机的<strong>控制台端口</strong>。</p>
 <p>在设备间错误使用交叉电缆或直通电缆不会损坏设备，但也无法连通设备并进行通信</p>
 <p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210314200350348.png" alt="image-20210314200350348"></p>
 <table>
@@ -997,13 +1067,13 @@ WLAN -无线局域网(Wirelee Local Area Network)。定义 2.4 GHz 和 5 GHz 无
 <td align="left">使用适配器连接工作站串行端口与路由器 控制台端口。</td>
 </tr>
 </tbody></table>
-<h2 id="光纤"><a href="#光纤" class="headerlink" title="光纤"></a>光纤</h2><ul>
+<h3 id="光纤"><a href="#光纤" class="headerlink" title="光纤"></a>光纤</h3><ul>
 <li>单模光纤 (SMF) Single-mode fiber</li>
 <li>多模光纤 (MMF) Mulitimode fiber</li>
 </ul>
 <p>单模光纤包含一个极小的芯，使用昂贵的激光技术来发送单束光，如图所示。单模光纤在跨越数百公里的长距离传输情况下很受欢迎，例如应用于长途电话和有线电视中的光纤。</p>
 <p>多模光纤包含一个稍大的芯，使用 LED 发射器发送光脉冲。具体而言，LED 发出的光从不同角度进入多模光纤，t有多条光路，普遍用于 LAN 中，因为它们可以由低成本的 LED 提供支持。它可以通过长达 550 米的链路提供高达 10 Gb/s 的带宽。</p>
-<p>多模和单模光纤之间的主要区别之一就是色散的数量。色散是指光脉冲在时间上的分布。色散增加意味着信号强度损失增加。多模光纤具有比单模光纤更大的色散。这就是为什么多模光纤在信号丢失之前只能传播 500 米。</p>
+<p>多模和单模光纤之间的<strong>主要区别之一就是色散的数量</strong>。色散是指光脉冲在时间上的分布。色散增加意味着信号强度损失增加。多模光纤具有比单模光纤更大的色散。这就是为什么多模光纤在信号丢失之前只能传播 500 米。</p>
 <ul>
 <li><strong>企业网络</strong> - 用于主干布线和基础设施设备互连。</li>
 <li><strong>光纤到户 (FTTH)</strong> - 用于为家庭和小型企业提供不间断宽带服务。</li>
@@ -1015,10 +1085,10 @@ WLAN -无线局域网(Wirelee Local Area Network)。定义 2.4 GHz 和 5 GHz 无
 <p>用户连接器SC Subscriber Connector</p>
 <p>朗讯连接器LC单工 Lucent Connector Simplex Connectors</p>
 <p>双工多模LC连接器 Duplex Multimode</p>
-<p>直到最近，光还只能在光纤上沿一个方向传播。因此，需要两根光纤来支持全双工操作。因此，光纤跳线是将两根光纤线缆捆绑在一起，并通过一对标准的单光纤接头端接。有些光纤连接器可以在单个连接器上同时传送和接收光纤，称为双工连接器，其实就是连接了俩线</p>
+<p>直到最近，光还只能在光纤上沿一个方向传播。因此，<strong>需要两根光纤来支持全双工操作</strong>。因此，光纤跳线是将两根光纤线缆捆绑在一起，并通过一对标准的单光纤接头端接。有些光纤连接器可以在单个连接器上同时传送和接收光纤，称为双工连接器，其实就是连接了俩线</p>
 <p>需要使用光纤接插线（即光纤跳线）互连基础设施设备。人们使用不同颜色来区分单模和多模接插线。黄色表皮的是单模光缆，橙色（或浅绿色）的是多模光缆。</p>
 <p>有SC-SC多模  LC-LC 单模 ST-LC多模 SC-ST单模 。。。</p>
-<h2 id="无线"><a href="#无线" class="headerlink" title="无线"></a>无线</h2><p>无线介质使用无线电或微波频率来承载代表数据通信二进制数字的电磁信号。</p>
+<h3 id="无线"><a href="#无线" class="headerlink" title="无线"></a>无线</h3><p>无线介质使用无线电或微波频率来承载代表数据通信二进制数字的电磁信号。</p>
 <p>以下是无线网络的一些局限性:</p>
 <ul>
 <li><strong>覆盖面积</strong> - 无线数据通信技术非常适合开放环境。但是，在楼宇和建筑物中使用的某些建筑材料以及当地地形将会限制它的有效覆盖。</li>
@@ -1048,19 +1118,19 @@ WLAN -无线局域网(Wirelee Local Area Network)。定义 2.4 GHz 和 5 GHz 无
 <li><strong>无线网卡适配器Wireless NIC adapters</strong> - 能够为每台网络主机提供无线通信</li>
 </ul>
 <p>以太网网卡用于有线连接，而 WLAN（无线局域网）网卡用于无线连接。</p>
-<h1 id="数制系统"><a href="#数制系统" class="headerlink" title="数制系统"></a>数制系统</h1><p>IPV4每一个地址包含一串 32 位字符串，并分为四个部分，称为二进制八位组。每一个二进制八位组包含 8 位（或 1 个字节），用句点分隔。IPv4 地址通常表达为点分十进制记法</p>
+<h1 id="地址plus"><a href="#地址plus" class="headerlink" title="地址plus"></a>地址plus</h1><p>IPV4每一个地址包含一串 32 位字符串，并分为四个部分，每个部分称为二进制八位组。每一个二进制八位组包含 8 位（或 1 个字节），用句点分隔。</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210801173248.png" alt="image-20210801173248464" style="zoom:50%;" />
+
+<p>IPv4 地址通常表达为点分十进制记法</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210801173306.png" alt="image-20210801173306346" style="zoom:50%;" />
+
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210801173439.png" alt="image-20210801173439349" style="zoom:80%;" />
+
 <p>十六进制数制系统在网络中用于表示以太网 MAC 地址和 IP V6 地址。</p>
-<p>IPv6地址长度为128位，每 4 位以一个十六进制数字表示，共 8组32 个十六进制值。IPv6 地址不区分大小写，可用大写或小写书写。首选格式为<code> x:x:x:x:x:x:x:x</code>，</p>
+<p>IPv6地址长度为128位，每 4 位以一个十六进制数字表示，共 8个十六进制数（或者说32 个十六进制值）。IPv6 地址不区分大小写，可用大写或小写书写。首选格式为<code> x:x:x:x:x:x:x:x</code>，</p>
 <p>每个“x”称为一个十六进制数，包括四个十六进制值</p>
 <h1 id="数据链路层"><a href="#数据链路层" class="headerlink" title="数据链路层"></a>数据链路层</h1><p>与 TCP/IP 的上层协议不同，数据链路层协议通常不是由征求意见 (RFC) 文档定义的。互联网工程任务组 (IETF) 虽然维护着 TCP/IP 协议簇上层的工作协议和服务，但它没有定义TCP/IP模型的网络接入层的功能和操作。</p>
-<p>定义适用于网络接入层（即，OSI的物理和数据链路层）的开放标准和协议的工程组织包括：</p>
-<ul>
-<li>电气电子工程师协会 (IEEE)</li>
-<li>国际电信联盟 (ITU)</li>
-<li>国际标准化组织 (ISO)</li>
-<li>美国国家标准学会 (ANSI)</li>
-</ul>
-<p>OSI模型的数据链路层(第2层)为物理网络准备网络数据。数据链路层负责网络接口卡 (NIC) 到网络接口卡的通信。数据链路层执行以下操作：</p>
+<p>OSI模型的数据链路层(第2层)为物理网络<strong>准备网络数据</strong>。数据链路层<strong>负责网络接口卡 (NIC) 到网络接口卡的通信</strong>。数据链路层执行以下操作：</p>
 <ul>
 <li>允许上层访问介质。上层协议完全不知道用于转发数据的介质类型。</li>
 <li>接受数据，通常是第 3 层数据包（即 IPv4 或 IPv6），并将它们封装到第 2 层帧中。</li>
@@ -1077,7 +1147,7 @@ WLAN -无线局域网(Wirelee Local Area Network)。定义 2.4 GHz 和 5 GHz 无
 </ul>
 <p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210314205917487.png" alt="image-20210314205917487"></p>
 <p>LLC 子层获取网络协议数据（通常是 IPv4 或 IPv6数据包）并加入第2层控制信息，帮助将数据包传送到目的节点。 </p>
-<p>MAC子层控制网卡和负责在有线或无线LAN/MAN介质上发送和接收数据的其他硬件。</p>
+<p>MAC子层控制<strong>网卡</strong>和负责在有线或无线LAN/MAN介质上发送和接收数据的<strong>其他硬件</strong>。</p>
 <p>MAC 子层提供数据封装：</p>
 <ul>
 <li><strong>帧定界</strong> - 在成帧过程中提供重要的定界符，用来标识帧中的字段。这些定界符位可以在发送节点与接收节点之间提供同步。</li>
@@ -1100,9 +1170,9 @@ WLAN -无线局域网(Wirelee Local Area Network)。定义 2.4 GHz 和 5 GHz 无
 </ul>
 <p>在控制对介质的数据访问时，数据链路层“看见”的是网络的逻辑拓扑。正是逻辑拓扑在影响网络成帧和介质访问控制的类型。</p>
 <p><strong>WAN拓扑</strong></p>
-<p>点对点：在这种布局中，两个节点无需与其他主机共享介质。此外，当使用串行通信协议，如点对点协议(PPP)时，节点无需判定收到的帧是指向它还是指向另一节点。因此，逻辑数据链路协议将非常简单，因为介质中的所有帧都只去往或来自这两个节点。节点将帧放置到一端的介质上，然后点对点线路另一端的节点从介质取走帧。<br><strong>在网络中使用物理设备并不会影响逻辑拓扑</strong></p>
-<p>中心辐射：这是星型拓扑的 WAN 版本，在该拓扑中一个中心站点使用点对点链路互连分支机构站点。如果不经过中心站点，分支站点就不能与其他分支站点交换数据。</p>
-<p>网状：该拓扑可用性高，但要求每个终端系统都与其他各个系统互连。因此管理成本和物理成本都会非常高。每条链路实质上是另一节点的点对点链路。</p>
+<p><strong>点对点</strong>：在这种布局中，两个节点无需与其他主机共享介质。此外，当使用串行通信协议，如点对点协议(PPP)时，节点无需判定收到的帧是指向它还是指向另一节点。因此，逻辑数据链路协议将非常简单，因为介质中的所有帧都只去往或来自这两个节点。节点将帧放置到一端的介质上，然后点对点线路另一端的节点从介质取走帧。<br><strong>在网络中使用物理设备并不会影响逻辑拓扑</strong></p>
+<p><strong>中心辐射</strong>：这是星型拓扑的 WAN 版本，在该拓扑中一个中心站点使用点对点链路互连分支机构站点。如果不经过中心站点，分支站点就不能与其他分支站点交换数据。</p>
+<p><strong>网状</strong>：该拓扑可用性高，但要求每个终端系统都与其他各个系统互连。因此管理成本和物理成本都会非常高。每条链路实质上是另一节点的点对点链路。</p>
 <p>混合拓扑（任意拓扑的变体和组合）</p>
 <p><strong>LAN拓扑</strong></p>
 <p>在多路访问局域网中，终端设备（即节点）使用星型或扩展星型拓扑相互连接，如图所示。在这种类型的拓扑中，终端设备连接到一个中央中间设备，在本例中是一个以太网交换机。扩展星型（<strong>扩展星型</strong>）通过连接多个以太网交换机来扩展此拓扑。星型和扩展星型拓扑安装简单、扩展性好（易于添加和删除终端设备），而且故障排除容易。早期的星型拓扑使用以太网集线器互连终端设备。</p>
@@ -1118,7 +1188,8 @@ WLAN -无线局域网(Wirelee Local Area Network)。定义 2.4 GHz 和 5 GHz 无
 <p><strong>全双工</strong></p>
 <p>两台设备都可以在共享介质上同时发送和接收，现代Ethernet</p>
 <p>双工不匹配会导致效率严重下降！重要错误</p>
-<h2 id="访问控制方法"><a href="#访问控制方法" class="headerlink" title="访问控制方法"></a>访问控制方法</h2><p>多路访问网络是指可能有两个或多个终端设备同时试图访问网络的网络。</p>
+<h3 id="访问控制方法"><a href="#访问控制方法" class="headerlink" title="访问控制方法"></a>访问控制方法</h3><p><em><strong>如今，以太网网络以全双工方式运行，不需要访问方法。</strong></em></p>
+<p>多路访问网络是指可能有两个或多个终端设备同时试图访问网络的网络。</p>
 <p>以太网 LAN 和 WLAN 都是多路访问网络的示例</p>
 <p>对于共享介质，有两种基本的访问控制方法：</p>
 <ul>
@@ -1126,7 +1197,7 @@ WLAN -无线局域网(Wirelee Local Area Network)。定义 2.4 GHz 和 5 GHz 无
 <li>受控访问</li>
 </ul>
 <p><strong>受控访问</strong></p>
-<p>在基于控制的多路访问网络中，每个节点都有自己的时间来使用介质。这种确定性的传统网络类型效率很低，因为设备必须等到轮到自己才能访问介质。使用受控访问的多路访问网络的示例包括：</p>
+<p>在基于控制的多路访问网络中，每个节点都有自己的时间来使用介质。这种确定性的传统网络类型<strong>效率很低</strong>，因为设备必须等到轮到自己才能访问介质。使用受控访问的多路访问网络的示例包括：</p>
 <ul>
 <li>传统令牌环</li>
 <li>传统ARCNET</li>
@@ -1134,18 +1205,17 @@ WLAN -无线局域网(Wirelee Local Area Network)。定义 2.4 GHz 和 5 GHz 无
 <p><strong>基于竞争的访问</strong></p>
 <p>在基于竞争的多路访问网络中，所有节点都工作在半双工方式，争夺介质的使用。然而，一次只有一台设备能够发送。因此，当多台设备同时传输时，会使用一个处理过程。基于竞争的访问方法示例如下：</p>
 <ul>
-<li>在<strong>传统总线拓扑/使用集线器的以太网局域网</strong>上使用载波侦听多路访问/冲突检测(CSMA/CD)</li>
-<li>在<strong>无线局域网</strong>上使用载波侦听多路访问/冲突避免(CSMA/CA)</li>
+<li>在<strong>传统总线拓扑/使用集线器的以太网局域网</strong>上使用载波侦听多路访问/冲突<strong>检测</strong>(CSMA/CD)</li>
+<li>在<strong>无线局域网</strong>上使用载波侦听多路访问/冲突<strong>避免</strong>(CSMA/CA)</li>
 </ul>
 <p><em>基于竞争的系统在介质使用率高的情况下都无法很好地扩展。</em></p>
 <p><strong>CSMA/CD</strong></p>
 <p>如果两台设备同时传输，则会发生冲突。对于传统以太网局域网，两台设备将会检测到网络上的冲突。这就是 CSMA/CD 的冲突检测 (CD) 部分。网卡通过比较传输的数据与接收的数据，或通过识别介质中的信号振幅是否高于正常状况来实现。两台设备发送的数据会损坏且需重新发送。</p>
 <p>集线器例子：</p>
-<p>在没有载波信号时，假定网络可用，A发送给B，帧首先到集线器，然后从所有端口发送，由于帧拥有 PC3 的目的数据链路地址，只有该设备会接受并被全帧复制。所有其他设备的网卡都将忽略该帧</p>
+<p>在某主机给集线器发了个帧后，所有主机都会接受这个帧，此时抑制这些主机发送，都接受到后只有拥有 PC3 的目的数据链路地址的设备才会复制该帧</p>
 <p>它还提供了一种回退重传算法。</p>
 <p><strong>CSMA/CA</strong></p>
 <p>在无线环境中，设备可能无法检测到冲突。CMSA/CA 不检测冲突，但会通过在传输之前等待来尝试避免冲突。每台设备发送时都会包含传输所需的持续时间。所有其他无线设备都会收到此信息，知道介质将有久不可用。</p>
-<p><em><strong>注意: 使用交换机的以太网 LAN 不使用基于竞争的系统，因为交换机和主机网卡在全双工模式下运行</strong></em></p>
 <h2 id="帧"><a href="#帧" class="headerlink" title="帧"></a>帧</h2><p>附加到帧的信息由正在使用的协议决定。</p>
 <p>数据链路协议负责同一网络中的网卡间通信。虽然有许多描述数据链路层帧的不同数据链路层协议，但每种帧均有三个基本组成部分：</p>
 <ul>
@@ -1153,11 +1223,14 @@ WLAN -无线局域网(Wirelee Local Area Network)。定义 2.4 GHz 和 5 GHz 无
 <li>数据</li>
 <li>帧尾</li>
 </ul>
-<p>没有一种帧结构能满足通过所有类型介质的全部数据传输需求。根据环境的不同，帧中所需的控制信息量也相应变化，以匹配介质和逻辑拓扑的访问控制需求。例如，WLAN帧必须包含避免冲突的过程，因此与以太网帧相比需要额外的控制信息。在脆弱的环境下，需要更多控制才能确保送达。由于所需控制信息较多，因此帧头和帧尾字段都较大。</p>
-<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210314213324158.png" alt="image-20210314213324158"></p>
+<p>没有一种帧结构能满足通过所有类型介质的全部数据传输需求。根据环境的不同，帧中所需的控制信息量也相应变化，以匹配介质和逻辑拓扑的访问控制需求。例如，WLAN帧必须包含避免冲突的过程，因此与以太网帧相比需要额外的控制信息。在脆弱的环境下，需要更多控制才能确保送达。<strong>由于所需控制信息较多，因此帧头和帧尾字段都较大。（一个特征）</strong></p>
+<img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210314213324158.png" alt="image-20210314213324158" style="zoom:67%;" />
+
 <p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210314213352540.png" alt="image-20210314213352540"></p>
 <p><em>发送节点会创建帧内容的逻辑摘要，称为循环冗余校验 cyclic redundancy check (CRC) 值。此值将放入帧校验序列 (FCS) 字段 frame check sequence中以代表帧内容。在以太网尾部，FCS 为接收节点提供一种方法，用于确定帧是否出现传输错误。</em></p>
 <p>在 TCP/IP 网络中，所有 OSI 第 2 层协议都与 OSI 第 3 层的 IP 一起使用。但是，所用的第 2 层协议取决于逻辑拓扑和物理介质。</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210801220318.png" alt="image-20210801220318016" style="zoom:67%;" />
+
 <p>每个协议执行指定第 2 层逻辑拓扑的介质访问控制。这意味着在执行这些协议时，有很多种不同的网络设备都可以充当运行在数据链路层上的节点。这些设备包括计算机上的网卡以及路由器和第 2 层交换机上的接口。</p>
 <p>用于特定网络拓扑的第 2 层协议取决于实施该拓扑的技术。所使用的技术取决于网络规模（根据主机数量和地理范围判断）以及通过网络提供的服务。</p>
 <p>带宽差异常会导致 LAN 和 WAN 使用不同的协议。</p>
@@ -1169,12 +1242,17 @@ WLAN -无线局域网(Wirelee Local Area Network)。定义 2.4 GHz 和 5 GHz 无
 <li>高级数据链路控制 (HDLC) High-Level Data Link Control</li>
 <li>帧中继 Frame Relay</li>
 </ul>
-<h1 id="以太网交换"><a href="#以太网交换" class="headerlink" title="以太网交换"></a>以太网交换</h1><p>以太网是如今广泛使用的两种局域网技术之一，另一种是无线局域网（WLAN）。它使用有线通信，包括双绞线、光纤链路和同轴电缆。</p>
+<p>分别适合不同的设备和介质之间传递</p>
+<h1 id="以太网交换"><a href="#以太网交换" class="headerlink" title="以太网交换"></a>以太网交换</h1><p>以太网和无线局域网是当前使用最广泛的两种LAN技术。以太网支持高达 100 Gbps 的带宽，这就是其受欢迎的原因。另一种是无线局域网（WLAN），它使用有线通信，包括双绞线、光纤链路和同轴电缆。</p>
 <p>以太网在数据链路层和物理层运行，是 IEEE 802.2 和 802.3 标准中定义的一系列网络技术。（无线是802.11）</p>
 <p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210314214332628.png" alt="image-20210314214332628"></p>
 <p>以太网也使用802 LAN/MAN协议的俩子层</p>
-<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210314214654631.png" alt="image-20210314214654631"></p>
+<ul>
+<li><strong>LLC 子层</strong> - 此 IEEE 802.2 子层在上层的网络软件与下层的设备硬件之间进行通信。<strong>它放入帧中的信息</strong>用于确定帧所使用的<strong>网络层协议</strong>。此信息允许多个第 3 层协议（如 IPv4 和 IPv6）使用相同的网络接口和介质。</li>
+<li><strong>MAC 子层</strong> - 此子层（例如 IEEE 802.3、802.11 或 802.15）在硬件中实现，负责数据封装和介质访问控制。它提供数据链路层寻址，并与各种物理层技术集成。</li>
+</ul>
 <h2 id="MAC子层"><a href="#MAC子层" class="headerlink" title="MAC子层"></a>MAC子层</h2><p>MAC 子层负责数据封装和访问介质。</p>
+<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210314214654631.png" alt="image-20210314214654631"></p>
 <p><strong>数据封装</strong></p>
 <p>IEEE 802.3 数据封装包括以下内容：</p>
 <ul>
@@ -1183,8 +1261,8 @@ WLAN -无线局域网(Wirelee Local Area Network)。定义 2.4 GHz 和 5 GHz 无
 <li><strong>以太网错误检测</strong> - 以太网帧中包含用于错误检测的帧校验序列 (FCS) 帧尾。</li>
 </ul>
 <p>它也负责使用CSMA/CD and CSMA/CA技术</p>
-<h2 id="以太网帧字段"><a href="#以太网帧字段" class="headerlink" title="以太网帧字段"></a>以太网帧字段</h2><p>以太网帧大小的最小值为 64 个字节，最大值为 1518 个字节。这包括从“目的 MAC 地址”字段到“帧校验序列 (FCS)”字段的所有字节。在描述帧的大小时，不包含“前导码”字段。</p>
-<p>任何长度小于 64 个字节的帧都被接收站点视为“冲突碎片”或“残帧”而自动丢弃。超过 1500 个字节的数据帧被视为“巨帧”或“小型巨型帧”。</p>
+<h3 id="以太网帧字段"><a href="#以太网帧字段" class="headerlink" title="以太网帧字段"></a>以太网帧字段</h3><p>以太网帧大小的最小值为 64 个字节，最大值为 1518 个字节。这包括从“目的 MAC 地址”字段到“帧校验序列 (FCS)”字段的所有字节。<strong>在描述帧的大小时，不包含“前导码”字段</strong>。</p>
+<p>任何长度小于 <strong>64</strong> 个字节的帧都被接收站点视为“冲突碎片”或“残帧”而自动丢弃。超过 <strong>1500</strong> 个字节的数据帧被视为“巨帧”或“小型巨型帧”。</p>
 <p>如果发送的帧小于最小值或者大于最大值，接收设备将会丢弃该帧。帧之所以被丢弃，可能是因为冲突或其他多余信号。它们被视为无效。大多数快速以太网和千兆以太网交换机和网卡通常都支持巨帧。</p>
 <p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210314214944369.png" alt="image-20210314214944369"></p>
 <table>
@@ -1219,9 +1297,10 @@ WLAN -无线局域网(Wirelee Local Area Network)。定义 2.4 GHz 和 5 GHz 无
 <td align="left">“帧校验序列 (Frame Check Sequence)(FCS)”字段（4 个字节）用于检测帧中 的错误。它使用循环冗余校验 (CRC)。发送设备 在帧的 FCS 字段中包含 CRC 的结果。接收设备 接收帧并生成 CRC 以查找 错误。如果计算匹配，就不会发生错误。计算 不匹配则表明数据已经改变。因此， 帧会被丢弃。数据的变化可能是 由于代表比特位的电信号受到干扰所致。</td>
 </tr>
 </tbody></table>
-<h2 id="MAC-地址"><a href="#MAC-地址" class="headerlink" title="MAC 地址"></a>MAC 地址</h2><p>在以太网中，每台网络设备都连接到同一个共享介质。MAC 地址用于标识本地网段上的物理源和目的设备。MAC 编址为 OSI 模型的数据链路层提供了设备识别方法。</p>
+<h3 id="MAC-地址"><a href="#MAC-地址" class="headerlink" title="MAC 地址"></a>MAC 地址</h3><p>在<strong>以太网</strong>中，每台网络设备都连接到同一个共享介质。MAC 地址用于标识本地网段上的物理源和目的设备。MAC 编址为 OSI 模型的数据链路层提供了设备识别方法。</p>
 <p>以太网 MAC 地址是使用 <strong>12个十六进制数字</strong>表示的 48 位地址，因为一个字节等于 8 位，我们也可以说 一个MAC 地址长度为 6 个字节。</p>
-<p>所有 MAC 地址对于以太网设备或以太网接口必须是唯一的。<br>为了确保这一点，所有销售以太网设备的供应商必须向 IEEE 注册才能获得唯一的 6个十六进制（即 24 位或 3 字节）代码，称为组织唯一标识符 (OUI)。（Organization unique identifier）</p>
+<p>所有 MAC 地址对于以太网设备或以太网接口必须是<strong>唯一</strong>的。<br>为了确保这一点，所有销售以太网设备的供应商必须向 IEEE 注册才能获得唯一的 6个十六进制（即 24 位或 3 字节）代码，称为组织唯一标识符 (OUI)。（Organization unique identifier）</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210801221759.png" alt="image-20210801221759645"></p>
 <p>当供应商为设备或以太网接口分配 MAC 地址时，供应商必须执行以下操作：</p>
 <ul>
 <li>使用其分配的 OUI 作为前 6 个十六进制数字。</li>
@@ -1235,9 +1314,9 @@ WLAN -无线局域网(Wirelee Local Area Network)。定义 2.4 GHz 和 5 GHz 无
 <p>收到以太网帧时，网卡会查看帧中的目的 MAC 地址是否与设备 RAM 中存储的物理 MAC 地址匹配。如果不匹配，设备就会丢弃帧。如果与帧中的目的 MAC 匹配，则网卡会将帧向上传送到 OSI 层进行解封处理。</p>
 <p><em><strong>单播，广播，组播MAC地址</strong></em></p>
 <p>在以太网中，第 2 层单播、组播和广播通信会使用不同的 MAC 地址。</p>
-<p>以太网单播 MAC 地址是帧从一台发送设备去往一台目的设备时使用的唯一地址</p>
+<p>以太网<strong>单播</strong> MAC 地址是帧从一台发送设备去往一台目的设备时使用的唯一地址</p>
 <p>源主机用来确定目的IPv4地址所对应的目的 MAC 地址的流程称为**地址解析协议 (ARP)<strong>。源主机用来确定目的IPv6地址所对应的目的 MAC 地址的流程称为</strong>邻居发现 (ND)**。（参看TCP/IP）</p>
-<p>以太网广播帧由以太网LAN上的每个设备接收和处理。以太网广播的功能如下：</p>
+<p>以太网<strong>广播</strong>帧由以太网LAN上的每个设备接收和处理。以太网广播的功能如下：</p>
 <ul>
 <li>它有一个十六进制（在二进制中是 48 个 1）FF-FF-FF-FF-FF-FF的<strong>目的 MAC</strong> 地址。</li>
 <li>它向除输入端口以外的所有以太网交换机端口泛洪。</li>
@@ -1246,15 +1325,15 @@ WLAN -无线局域网(Wirelee Local Area Network)。定义 2.4 GHz 和 5 GHz 无
 <p>IPv4 的 DHCP 是使用以太网和 IPv4 广播地址的一个协议示例。</p>
 <p>以太网组播帧由属于同一组多播组的以太网LAN上的一组设备接收和处理。以太网组播的功能如下：</p>
 <ul>
-<li>当封装数据为IPv4组播包时，目的MAC地址为01-00-5E;<br>当封装数据为IPv6组播包时，目的MAC地址为33-33。</li>
+<li>当封装数据为IPv4组播包时，目的MAC地址为<strong>01-00-5E</strong>;<br>当封装数据为IPv6组播包时，目的MAC地址为<strong>33-33</strong>。</li>
 <li>当封装的数据不是IP时，还有其他预留的组播目的MAC地址，<br>如生成树协议Spanning Tree Protocol(STP)和链路层发现协议Link Layer Discovery Protocol(LLDP)。</li>
 <li>除非交换机被配置为用于组播窥探multicast snooping，否则它将向除传入端口之外的所有以太网交换机端口泛洪flooded out。</li>
 <li>它不会由路由器转发，除非路由器配置为路由组播数据包。</li>
 </ul>
-<p>如果封装的数据是一个IP组播包，则属于组播组的设备都分配有该组播组IP地址。IPv4 组播地址的范围为 224.0.0.0 到 239.255.255.255。IPv6 组播地址的范围以 ff00::/8 开头。由于组播地址代表一组地址（有时称为主机组），因此只能用作数据包的目的地址。源地址始终应为单播地址。</p>
-<h2 id="MAC地址表"><a href="#MAC地址表" class="headerlink" title="MAC地址表"></a>MAC地址表</h2><p>现在就该讨论交换机如何使用这些地址将帧转发(或丢弃)到网络上的其他设备。如果交换机只是转发出它接收到的每一帧到所有端口，您的网络将会非常拥挤，以至于它可能会完全停止工作。</p>
-<p>第 2 层以太网交换机使用 MAC 地址做出转发决策。它完全忽视帧的数据部分的协议，交换机仅根据第 2 层以太网 MAC 地址做出转发决策。这才实现了真正的分工和可复用</p>
-<p>一个以太网交换机检查它的<strong>MAC地址表</strong>，为每个帧做出一个<strong>转发决策</strong>，不像传统的以太网集线器，向除了传入端口以外的所有端口重复发出比特位。</p>
+<p>如果封装的数据是一个IP组播包，则属于组播组的设备都分配有该组播组IP地址。IPv4 组播地址（目的IP）的范围为 224.0.0.0 到 239.255.255.255。IPv6 组播地址的范围以 ff00::/8 开头。由于组播地址代表一组地址（有时称为主机组），因此只能用作数据包的目的地址。源地址始终应为单播地址。</p>
+<h2 id="交换机"><a href="#交换机" class="headerlink" title="交换机"></a>交换机</h2><p>现在就该讨论交换机如何使用这些地址将帧转发(或丢弃)到网络上的其他设备。如果交换机只是转发出它接收到的每一帧到所有端口，您的网络将会非常拥挤，以至于它可能会完全停止工作。</p>
+<p>第 2 层以太网交换机使用 MAC 地址做出转发决策。它完全忽视帧的数据部分的协议，交换机<strong>仅根据第 2 层以太网 MAC 地址做出转发决策</strong>。这才实现了真正的分工和可复用</p>
+<p>一个以太网交换机检查它的<strong>MAC地址表</strong>，为<strong>每个帧</strong>做出一个<strong>转发决策</strong>，不像传统的以太网集线器，向除了传入端口以外的所有端口重复发出比特位。</p>
 <p><strong>注意</strong>: MAC 地址表有时也称为内容可寻址内存Content-addressable-memory (CAM) 表。虽然 CAM 表这一术语相当常见，但在本课程中，我们将称其为 MAC 地址表。</p>
 <p><strong>学习Learn</strong></p>
 <p>进入交换机的每个帧被检查，以确定其中是否有可被学习的新信息。它是通过检查帧的源 MAC 地址和帧进入交换机的端口号来完成这一步的。如果源 MAC 地址在该网络不存在（就是来自另一局域网），会将其和传入端口号一并添加到表中。如果源 MAC 地址已存在表中，则交换机会更新该条目的刷新计时器。默认情况下，大多数以太网交换机将条目在表中保留 5 分钟。</p>
@@ -2829,7 +2908,7 @@ R(config-line)# modem autoconfigure discovery   发现和自动配置连接到�
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">217.4k</span>&nbsp;字
+                class="white-color">219.3k</span>&nbsp;字
             
             
             
