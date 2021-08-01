@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Data World</title>
+  <title>乌合之众</title>
   
-  <subtitle>探索数据    思考人类</subtitle>
+  <subtitle>爱好数据科学和经济学</subtitle>
   <link href="https://darren-dong.com/atom.xml" rel="self"/>
   
   <link href="https://darren-dong.com/"/>
