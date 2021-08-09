@@ -402,21 +402,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-08-02
+                    2021-08-03
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    34.9k
+                    38.5k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    129 分
+                    142 分
                 </div>
                 
 
@@ -564,7 +564,7 @@
 <li><strong>startup-config(启动配置文件)</strong> -存储在 NVRAM 中的配置文件。它包含在启动时或重启时用到的所有命令。当设备断电后，其中的内容不会消失。</li>
 <li><strong>running-config(运行配置文件)</strong> -存储在随机存取存储器（RAM）中。它反映了当前的配置。修改运行配置会立即影响思科设备的运行。RAM 是易失性存储器。如果设备断电或重新启动，则它会丢失所有内容。</li>
 </ul>
-<h2 id="学习命令"><a href="#学习命令" class="headerlink" title="学习命令"></a>学习命令</h2><p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210314163957083.png" alt="image-20210314163957083"></p>
+<h1 id="学习命令"><a href="#学习命令" class="headerlink" title="学习命令"></a>学习命令</h1><p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210314163957083.png" alt="image-20210314163957083"></p>
 <table>
 <thead>
 <tr>
@@ -600,50 +600,79 @@
 <p><strong>line console 0</strong></p>
 <p><strong>interface FastEthernet 0/1</strong></p>
 <p><strong>line vty 0 15</strong> 两个数字说明是0-15一起设置</p>
+<p>（注意全是小写，草）</p>
 <p><em><strong>用户模式只能查看配置，且只能查看部分配置，不能配置交换机；特权模式只能查看配置，且只能查看部分配置，不能配置交换机；全局模式可以修改配置，且对全局生效，但是默认不能查看；而端口模式所做的配置都是针对接口所设定的。</strong></em></p>
-<h3 id="用户特权："><a href="#用户特权：" class="headerlink" title="用户特权："></a>用户特权：</h3><p>show running-config/startup-config</p>
+<h3 id="用户特权"><a href="#用户特权" class="headerlink" title="用户特权"></a>用户特权</h3><p>show running-config/startup-config</p>
 <p><strong>copy running-config startup-config</strong>。</p>
 <p>reload 清除未保存的running-config  但在一段很短的时间内设备将会离线，导致网络中断。</p>
 <p>erase start 删除启动设置，之后需重新加载设备来恢复出厂</p>
+<p>show + 子模式 仅查看子模式的信息</p>
+<p>show arp 交换机等设备显示MAC地址信息</p>
+<p>show mac address-table 查看mac地址表</p>
+<p>clear mac address-table dynamic 清除mac地址表</p>
+<p><strong>show ip arp</strong> 查看arp表</p>
+<p>show ipv6 neighbors 检查路由器是否发现了邻居</p>
+<p>clear ipv6 neighbors</p>
+<p>show flash 查看闪存</p>
 <p>show ip(ipv6) interface brief 检查接口的正确数量和标识</p>
+<table>
+<thead>
+<tr>
+<th align="left">命令</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">show ip                                              interface brief<br />show ipv6 interface brief</td>
+<td align="left">所有接口的输出显示,它们的IP地址和 当前的状态已配置和连接的接口的 状态和协议均会显示“up”; 显示任何其他内容都可能表示配置或 布线出现了问题。</td>
+</tr>
+<tr>
+<td align="left">show ip route<br />show ipv6 route</td>
+<td align="left">显示存储在 RAM 中的 IP 路由表的内容。</td>
+</tr>
+<tr>
+<td align="left">show interfaces</td>
+<td align="left">显示设备上所有接口的统计信息。然而,这个命令将只显示 IPv4 编址信息。</td>
+</tr>
+<tr>
+<td align="left">show ip interface(后面可以加特定的线路)</td>
+<td align="left">显示路由器上所有接口的 IPv4 统计信息。</td>
+</tr>
+<tr>
+<td align="left">show ipv6 interface</td>
+<td align="left">显示路由器上所有接口的 IPv6 统计信息。</td>
+</tr>
+</tbody></table>
 <h3 id="全局指令"><a href="#全局指令" class="headerlink" title="全局指令"></a>全局指令</h3><p>hostname name 主机名字仅使用字母、数字和破折号</p>
 <p>no hostname 清空主机名字</p>
 <p>enable secret (password)  保护特权访问</p>
 <p><strong>service password-encryption</strong>（全局配置指令+加密所有）</p>
 <p>**banner motd #<strong>当日消息</strong>#**（其实#可以换别的，向访问设备的人展示）</p>
 <p>ip default-gateway 设置默认网关</p>
+<p>ip route （远程网址+子网掩码）（下一跳路由器的IP地址）配置静态路由表</p>
+<p> no ip directed-broadcasts 关闭定向广播</p>
 <h3 id="子模式"><a href="#子模式" class="headerlink" title="子模式"></a>子模式</h3><p>password ….  特定线路设置密码，如控制台</p>
 <p>login 启用登录，不启用就根本进不去</p>
-<p>ip address a b 192.168.1.20 255.255.255.0设置ipv4地址和子网掩码</p>
-<p>ipv6 address … 设置ipv6配置</p>
-<p>no shutdown 启用虚拟接口</p>
-<p>ping也可在路由器特权模式下用！</p>
-<p>no shutdown 启用虚拟接口（shutdown关闭）</p>
-<p>no ip domain-lookup 禁用DNS解析(特权模式)</p>
-<p>show arp 交换机等设备显示MAC地址信息（特权）</p>
-<p>show mac address-table 查看mac地址表（特权）</p>
-<p>clear mac address-table dynamic 清除mac地址表(特权)</p>
-<p><strong>mdix auto</strong>接口配置命令（懂得都懂）</p>
-<p>ip route ….（远程网络地址）（网址+子网掩码）   …（下一跳路由器的IP地址）配置静态路由表</p>
-<p>show ip route 特权模式查看路由表</p>
-<p><strong>show ip arp</strong>查看arp表</p>
+<p>mdix auto 启用Auto-MDIX，可以忽视另一端的设备类型使用铜缆（接口配置指令）</p>
 <p>transport input {ssh | telnet}或者俩都加上  保护远程Telnet | SSH访问</p>
+<p>ip address a b 192.168.1.20 255.255.255.0设置ipv4地址和子网掩码</p>
+<p>ipv6 address 地址/前缀长度，e.g.  ipv6 address 2001:db8:acad:10::1/64</p>
+<p>no shutdown 启用虚拟接口</p>
+<p>description xxx 设置说明，比如第三方连接和联系信息（&lt;=240字符）</p>
+<p>no ip domain-lookup 禁用DNS解析(特权模式)</p>
 <p>description description-text 设置接口说明</p>
 <p><strong>ip default-gateway</strong> ip-address为交换机配置默认网关</p>
 <p>ipv6 unicast-routing 启用 IPv6 路由</p>
-<p>show ip（ipv6） interface brief</p>
-<p>所有接口的输出显示,它们的IP地址和 当前的状态已配置和连接的接口的 状态和协议均会显示“up”; 显示任何其他内容都可能表示配置或 布线出现了问题。</p>
-<p>show ip route/show ipv6 route</p>
-<p>显示存储在 RAM 中的 IP 路由表的内容。</p>
-<p>show interfaces （可加特定接口参数）</p>
-<p>显示设备上所有接口的统计信息。然而,这个命令将只显示 IPv4 编址信息。</p>
-<p>show ip interface显示路由器上所有接口的 IPv4 统计信息。</p>
-<p>show ipv6 interface显示路由器上所有接口的 IPv6 统计信息。</p>
 <h3 id="主机端"><a href="#主机端" class="headerlink" title="主机端"></a>主机端</h3><p>ipconfig （/all）</p>
 <p>arp -a 显示所有arp表</p>
 <p>arp -d 清除 ARP 表</p>
 <p>ping … 测试链接，一般要两遍，第一遍是自动配置arp所以一般失败</p>
-<p><strong>route print</strong>或命<strong>netstat -r</strong>令可以显示主机路由表（windows主机）</p>
+<p><strong>route print</strong>或命<strong>netstat -r</strong>令可以显示主机路由表（windows主机），会列出</p>
+<ul>
+<li><strong>接口列表</strong> - 列出主机上的介质访问控制 (MAC) 地址和每个网络接口的已分配接口编号，包括以太网、 Wi-Fi 和蓝牙适配器。</li>
+<li><strong>IPv4 路由表</strong> - 列出所有已知的 IPv4 路由，包括直接连接、本地网络和本地默认路由。</li>
+<li><strong>IPv6 路由表</strong> - 列出所有已知的 IPv6 路由，包括直接连接、本地网络和本地默认路由。</li>
+</ul>
 <h2 id="好多缩写"><a href="#好多缩写" class="headerlink" title="好多缩写"></a>好多缩写</h2><p>interface  = int</p>
 <p>FastEthernet = f</p>
 <p>running-config = run</p>
@@ -1283,7 +1312,7 @@ WLAN -无线局域网(Wirelee Local Area Network)。定义 2.4 GHz 和 5 GHz 无
 </tr>
 </thead>
 <tbody><tr>
-<td align="left">前导码和帧首定界符字段</td>
+<td align="left">前导码和帧首定界符字段                            .</td>
 <td align="left">前导码（Preamble）（7 字节）和帧首定界符(Start Frame Delimiter)（SFD），也称为 帧首（1 字节），该字段用于发送设备 与接收设备之间的同步。帧开头的八个字节 用于引起接收节点的注意。基本上，前几个字节的 作用是告诉接收方准备接收新帧。</td>
 </tr>
 <tr>
@@ -1344,15 +1373,15 @@ WLAN -无线局域网(Wirelee Local Area Network)。定义 2.4 GHz 和 5 GHz 无
 <h2 id="交换机"><a href="#交换机" class="headerlink" title="交换机"></a>交换机</h2><p>现在就该讨论交换机如何使用这些地址将帧转发(或丢弃)到网络上的其他设备。如果交换机只是转发出它接收到的每一帧到所有端口，您的网络将会非常拥挤，以至于它可能会完全停止工作。</p>
 <p>第 2 层以太网交换机使用 MAC 地址做出转发决策。它完全忽视帧的数据部分的协议，交换机<strong>仅根据第 2 层以太网 MAC 地址做出转发决策</strong>。这才实现了真正的分工和可复用</p>
 <p>一个以太网交换机检查它的<strong>MAC地址表</strong>，为<strong>每个帧</strong>做出一个<strong>转发决策</strong>，不像传统的以太网集线器，向除了传入端口以外的所有端口重复发出比特位。</p>
-<p><strong>注意</strong>: MAC 地址表有时也称为内容可寻址内存Content-addressable-memory (CAM) 表。虽然 CAM 表这一术语相当常见，但在本课程中，我们将称其为 MAC 地址表。</p>
-<p><strong>学习Learn</strong></p>
-<p>进入交换机的每个帧被检查，以确定其中是否有可被学习的新信息。它是通过检查帧的源 MAC 地址和帧进入交换机的端口号来完成这一步的。如果源 MAC 地址在该网络不存在（就是来自另一局域网），会将其和传入端口号一并添加到表中。如果源 MAC 地址已存在表中，则交换机会更新该条目的刷新计时器。默认情况下，大多数以太网交换机将条目在表中保留 5 分钟。</p>
+<p><strong>注意</strong>: MAC 地址表有时也称为内容可寻址内存Content-addressable-memory (<strong>CAM</strong>) 表。虽然 CAM 表这一术语相当常见，但在本课程中，我们将称其为 MAC 地址表。</p>
+<p><strong>交换机学习</strong></p>
+<p>进入交换机的每个帧被检查，以确定其中是否有可被学习的新信息。它是通过<u>检查帧的源 MAC 地址和帧进入交换机的端口号来完成这一步的</u>。如果源 MAC 地址在该网络不存在（就是来自另一局域网），会将其和传入端口号一并添加到表中。如果源 MAC 地址已存在表中，则交换机会更新该条目的刷新计时器。默认情况下，大多数以太网交换机将条目在表中保留 5 分钟。</p>
 <p><strong>注意</strong>: 如果源 MAC 地址已经保存在表中，但是对应的是不同的端口，那么交换机会将其视为一个新的条目。使用相同的 MAC 地址和最新的端口号来<strong>替换</strong>该条目。</p>
 <p><strong>转发Forward</strong></p>
-<p>如果目的 MAC 地址为单播地址，该交换机会看帧中的目的 MAC 地址与 MAC 地址表中的条目是否匹配。如果表中存在该目的MAC地址，交换机会从指定端口转发帧。如果表中不存在该目的MAC地址，交换机会从除传入端口外的所有端口转发帧。这称为未知单播。</p>
-<p><strong>注意</strong>: 如果目的 MAC 地址为广播或组播，该帧也将被泛洪到除传入端口外的所有端口。</p>
-<p>交换机是从不同的设备接收帧，因此它可以通过检查每个帧的源 MAC 地址来填充它的 MAC 地址表。如果MAC 地址表包含目的MAC 地址，则交换机将“滤过”该帧并将其从单个端口转发出去。</p>
-<h2 id="交换机速率-转发方法"><a href="#交换机速率-转发方法" class="headerlink" title="交换机速率/转发方法"></a>交换机速率/转发方法</h2><p>对于思科交换机，实际上有两种帧转发的方法，根据具体情况，有充分的理由使用其中一种来代替另一种。</p>
+<p>如果目的 MAC 地址为单播地址，该交换机会看帧中的目的 MAC 地址与 MAC 地址表中的条目是否匹配。如果表中存在该目的MAC地址，交换机会从指定端口转发帧。如果表中不存在该目的MAC地址，交换机会从除传入端口外的所有端口转发帧。这称为<strong>未知单播</strong>。</p>
+<p><strong>注意</strong>: 如果目的 MAC 地址为广播或组播，该帧<strong>也将被泛洪</strong>到除传入端口外的所有端口。</p>
+<p>如果一台设备的 IP 地址在远程网络上，则不能将以太网帧直接发送到目的设备。而是将以太网帧发送到默认网关（路由器）的 MAC 地址。</p>
+<h3 id="交换机速率-转发方法"><a href="#交换机速率-转发方法" class="headerlink" title="交换机速率/转发方法"></a>交换机速率/转发方法</h3><p>对于思科交换机，实际上有两种帧转发的方法，根据具体情况，有充分的理由使用其中一种来代替另一种。</p>
 <p>在过去，交换机使用下面的两种转发方法之一来进行网络端口间的数据交换：</p>
 <ul>
 <li><strong>存储转发交换</strong> - 这个帧转发的方法接收整个帧并计算CRC。CRC 根据帧中的比特位为 1 的位数量，使用数学公式来确定收到的帧是否有错。如果 CRC 有效，则交换机查找目的地址，目的地址决定了转发接口。帧然后从正确的端口转发出去。</li>
@@ -1361,53 +1390,53 @@ WLAN -无线局域网(Wirelee Local Area Network)。定义 2.4 GHz 和 5 GHz 无
 <ul>
 <li><strong>直通交换</strong> - 这种帧转发的方法在收到整个帧之前即转发帧。在可以转发帧之前，至少必须读取帧的目的地址。</li>
 </ul>
-<p><strong>存储转发交换</strong>的一大优点是，它可以在传播帧之前确定帧是否有错误。当在帧中检测到错误时，交换机丢弃该帧。丢弃有错的帧可减少损坏的数据所耗用的带宽量。存储转发交换对于融合网络中的服务质量 (QoS) 分析是必需的，在融合网络中，必须对帧进行分类以划分流量优先级。如 IP 语音数据流的优先级需要高于 Web 浏览流量。</p>
-<p><strong>直通交换</strong>中，交换机在收到数据时立即处理数据，即使传输尚未完成。交换机只缓冲帧的一部分，缓冲的量仅足以读取目的 MAC 地址，以便确定转发数据时应使用的端口。目的 MAC 地址位于帧中前导码后面的前 6 个字节。交换机在其交换表中查找目的 MAC 地址，确定转发端口，然后通过指定的交换机端口将帧转发到其目的地。交换机对该帧不执行任何错误检查。</p>
+<p><strong>存储转发交换</strong>的一大优点是，它可以在传播帧之前确定帧是否有错误。当在帧中检测到错误时，交换机丢弃该帧。丢弃有错的帧可减少损坏的数据所耗用的带宽量。存储转发交换对于融合网络中的服务质量 (QoS) 分析是必需的，在融合网络中，<strong>必须对帧进行分类以划分流量优先级</strong>。如 IP 语音数据流的优先级需要高于 Web 浏览流量。</p>
+<p><strong>直通交换</strong>中，交换机在收到数据时立即处理数据，即使传输尚未完成。交换机只缓冲帧的一部分，缓冲的量仅足以读取目的 MAC 地址，以便确定转发数据时应使用的端口。目的 MAC 地址位于帧中前导码后面的前 6 个字节。交换机在其交换表中查找目的 MAC 地址，确定转发端口，然后通过指定的交换机端口将帧转发到其目的地。交换机对该帧<strong>不执行任何错误检查。</strong></p>
 <ul>
-<li><strong>快速转发交换 -</strong> 快速转发交换提供最低程度的延时。快速转发交换在读取目的地址之后立即转发数据包。由于快速转发交换在收到整个数据包之前就开始转发，因此有时候中继数据包时会出错。这种情况并不经常发生，而且目的网络适配器在收到含错数据包时会将其丢弃。在快速转发模式下，延时是指从收到第一个位到传出第一个位之间的时间差。快速转发交换是典型的直通交换方法。<strong>Fast-forward switching</strong></li>
+<li><strong>快速转发交换 -</strong> 快速转发交换提供最低程度的延时。快速转发交换在读取目的地址之后立即转发数据包。由于快速转发交换在收到整个数据包之前就开始转发，因此有时候中继数据包时会出错。这种情况并不经常发生，而且 <strong>目的网络适配器在收到含错数据包时会将其丢弃</strong>。在快速转发模式下，延时是指从收到第一个位到传出第一个位之间的时间差。快速转发交换是典型的直通交换方法。<strong>Fast-forward switching</strong></li>
 <li><strong>免分片交换 -</strong> 在免分片交换中，交换机在转发之前存储帧的前 64 个字节，原因是，大部分网络错误和冲突都发生在前 64 个字节。免分片交换在转发帧之前对帧的前 64 个字节执行小错误检查以确保没有发生过冲突，并且尝试通过这种方法来增强快速转发交换功能。免分片交换是存储转发交换的高延时和高完整性与快速转发交换的<strong>低延时和弱完整性之间的折衷</strong>。<strong>Fragment-free switching</strong></li>
 </ul>
-<p>某些交换机可配置为按端口执行直通交换，当达到用户定义的错误阈值时，这些端口自动切换为存储转发。当错误率低于该阈值时，端口自动恢复到直通切换。（牛啊！）</p>
-<p>以太网交换机在转发帧之前，可以使用<strong>缓冲技术</strong>存储帧。当目的端口由于拥塞而繁忙时，也可以使用缓冲。交换机将帧存储起来，直到可以传输。</p>
+<p>某些交换机可配置为按端口执行直通交换，当达到用户定义的错误阈值时，这些端口自动切换为存储转发。当错误率低于该阈值时，端口自动恢复到直通切换。（智能化）</p>
+<h3 id="缓冲办法"><a href="#缓冲办法" class="headerlink" title="缓冲办法"></a>缓冲办法</h3><p>以太网交换机在转发帧之前，可以使用<strong>缓冲技术</strong>存储帧。当目的端口由于拥塞而繁忙时，也可以使用缓冲。交换机将帧存储起来，直到可以传输。</p>
 <p>有两种内存缓冲方法：</p>
 <table>
 <thead>
 <tr>
-<th align="left">方法(………)</th>
+<th align="left">方法</th>
 <th align="left">描述</th>
 </tr>
 </thead>
 <tbody><tr>
 <td align="left"><strong>基于端口的内存</strong></td>
-<td align="left">帧存储在链接到特定传入端口和传出 端口的队列中。只有当队列前面的所有帧都成功传输后， 才会将帧传输到传出端口。由于目地端口繁忙， 单个帧可能会造成内存中所有帧的传输延迟。即使其他帧可以传送到开放的目的端口， 这种延迟仍然会发生。</td>
+<td align="left">帧存储在链接到特定传入端口和传出 端口的队列中。<br />只有当队列前面的所有帧都成功传输后， 才会将帧传输到传出端口。<br />由于目地端口繁忙， 单个帧可能会造成内存中所有帧的传输延迟。<br />即使其他帧可以传送到开放的目的端口， 这种延迟仍然会发生。</td>
 </tr>
 <tr>
 <td align="left"><strong>共享内存</strong></td>
-<td align="left">将所有帧存储到由所有交换端口共享的公共内存缓冲区中， 并且动态分配一个端口所需的 缓冲区内存量。缓冲区中的帧动态地链接到目的端口， 允许在一个端口上接收数据包，然后 在另一个端口上发送，而无需移动到另一个队列。</td>
+<td align="left">将所有帧存储到由所有交换端口共享的公共内存缓冲区中， 并且动态分配一个端口所需的 缓冲区内存量。<br />缓冲区中的帧动态地链接到目的端口， 允许在一个端口上接收数据包，然后 在另一个端口上发送，而无需移动到另一个队列。</td>
 </tr>
 </tbody></table>
-<p>而且<strong>共享内存缓冲也意味着存储较大帧的能力，丢弃的帧可能较少</strong>。这对于非对称交换非常重要，因为它允许在不同端口上使用<strong>不同的数据速率</strong>，比如将服务器连接到 10 Gbps 的交换机端口，而pc连接到 1 Gbps 的端口。</p>
-<p>交换机上最基本的两个设置是带宽(有时称为“速率”)和每个交换机端口的双工设置。交换机端口和连接的设备（例如计算机或另一台交换机）的双工设置和带宽设置必须匹配。</p>
-<p>自动协商是大多数以太网交换机和网卡的一项可选功能。它使两个设备自动协商最佳速率和双工性能。如果两台设备具有最高常见带宽的功能，则会选择全双工。</p>
+<p>而且<strong>共享内存缓冲也意味着存储较大帧的能力，丢弃的帧可能较少</strong>。这对于<strong>非对称交换</strong>非常重要，因为它允许在不同端口上使用<strong>不同的数据速率</strong>，比如将服务器连接到 10 Gbps 的交换机端口，而pc连接到 1 Gbps 的端口。</p>
+<p>交换机上<u>最基本的两个设置</u>是带宽(有时称为“速率”)和每个交换机端口的双工设置。交换机端口和连接的设备（例如计算机或另一台交换机）的双工设置和带宽设置必须匹配。</p>
+<p><strong>自动协商</strong>是大多数以太网交换机和网卡的一项可选功能。它使两个设备自动协商最佳速率和双工性能。如果两台设备具有最高常见带宽的功能，则会选择全双工。</p>
 <p><strong>注意</strong>: 大多数思科交换机和以太网网卡默认采用自动协商功能，以提高速率和实现双工。千兆以太网端口仅以全双工模式运行。</p>
-<p>当链路上的一个或两个端口被重置时，会发生双工不匹配，自动协调过程并不会使链路上的两个端口的配置相同。当用户重新配置链路的一端而忘记重新配置另一端时，也会出现这样的情况。链路的两端均应都使用或都不使用自动协商。最佳实践是将两个以太网交换端口都配置为全双工。</p>
-<h2 id="Auto-MDIX"><a href="#Auto-MDIX" class="headerlink" title="Auto-MDIX"></a>Auto-MDIX</h2><p>现在，大多数交换机设备都支持自动介质相关接口交叉 (auto-MDIX) 功能。当该功能启用时，交换机可检测连接到端口的线缆类型，并相应地配置接口。因此，如果要连接到交换机上的铜缆 10/100/1000 端口，您既可以使用交叉线，也可以使用直通线，而无需考虑连接另一端的设备类型。</p>
+<p>当链路上的一个或两个端口被重置时，会发生双工不匹配，自动协调过程并不会使链路上的两个端口的配置相同。<u>当用户重新配置链路的一端而忘记重新配置另一端时，也会出现这样的情况</u>。链路的两端均应都使用或都不使用自动协商。最佳实践是将两个以太网交换端口都配置为全双工。</p>
+<h3 id="Auto-MDIX"><a href="#Auto-MDIX" class="headerlink" title="Auto-MDIX"></a>Auto-MDIX</h3><p><strong>注意</strong>: 路由器和主机之间的直连需要使用交叉线。</p>
+<p>现在，大多数交换机设备都支持自动介质相关接口交叉 (auto-MDIX) 功能。当该功能启用时，交换机可检测连接到端口的线缆类型，并相应地配置接口。因此，如果要连接到交换机上的铜缆 10/100/1000 端口，您既可以使用交叉线，也可以使用直通线，而无需考虑连接另一端的设备类型。</p>
 <p>在运行思科 IOS Release 12.2(18)SE 或更高版本的交换机上，默认启用 auto-MDIX 功能。当然，该功能可以被禁用。因此，您应始终使用正确的线缆类型，而不是依赖auto-MDIX 功能。Auto-MDIX 可以使用接口配置命令 <strong>mdix auto</strong> 重新启用。</p>
-<h1 id="网络层"><a href="#网络层" class="headerlink" title="网络层"></a>网络层</h1><p>要向不在本地网络上的任何人发送电子邮件（视频或文件等），您必须能够访问路由器。要访问路由器，您必须使用网络层协议。</p>
+<h1 id="网络层"><a href="#网络层" class="headerlink" title="网络层"></a>网络层</h1><p>要向<strong>不在本地网络</strong>上的任何人发送电子邮件（视频或文件等），您必须能够访问路由器。要访问路由器，您必须使用网络层协议。</p>
 <h2 id="网络层特征"><a href="#网络层特征" class="headerlink" title="网络层特征"></a>网络层特征</h2><p>网络层即 OSI 第 3 层，提供能够<em><strong>让终端设备跨整个网络交换数据的服务</strong></em></p>
 <p>IP 版本 4 (IPv4) 和 IP 版本 6 (IPv6) 是主要的网络层通信协议。其他网络层协议包括路由协议，如开放式最短路径优先协议(OSPF)，和消息传递协议，如Internet控制消息协议(ICMP)。</p>
 <p>为了实现跨网络边界的端到端通信，网络层协议执行四个基本操作:</p>
 <ul>
-<li>**终端设备编址 - 必须为终端设备配置唯一的 IP 地址，以便在网络上进行识别。</li>
-<li>**封装 - 网络层将来自传输层的协议数据单元 (PDU) 封装到数据包中。封装过程中会添加 IP 报头信息，例如来源（发送）和目的（接收）主机的 IP 地址。封装过程由 IP 数据包的源主机执行。</li>
-<li>**路由 - 网络层提供服务，将数据包转发至另一网络上的目的主机。要传送到其他网络，数据包必须经过路由器的处理。路由器的作用是<strong>为数据包选择最佳路径，并将其转发至目的主机，该过程称为路由</strong>。数据包可能需要经过很多路由器才能到达目的主机。数据包在到达目的主机的过程中经过的每个路由器均称作一跳。</li>
-<li>**解封 - 当数据包到达目的主机的网络层时，主机会检查数据包的 IP 报头。如果在报头中的目的 IP 地址与其自身的 IP 地址匹配，IP 报头将被会从数据包中删除。网络层解封数据包后，后继的第 4 层 PDU 会向上传递到传输层的相应服务。解封过程由 IP 数据包的目的主机执行。</li>
+<li><strong>终端设备编址</strong> - 必须为终端设备配置唯一的 IP 地址，以便在网络上进行识别。</li>
+<li><strong>封装</strong> - 网络层将来自传输层的协议数据单元 (PDU) 封装到数据包中。封装过程中会添加 IP 报头信息，例如来源（发送）和目的（接收）主机的 IP 地址。封装过程由 IP 数据包的源主机执行。</li>
+<li><strong>路由</strong> - 网络层提供服务，将数据包转发至另一网络上的目的主机。要传送到其他网络，数据包必须经过路由器的处理。路由器的作用是<strong>为数据包选择最佳路径，并将其转发至目的主机，该过程称为路由</strong>。数据包可能需要经过很多路由器才能到达目的主机。数据包在到达目的主机的过程中经过的每个路由器均称作一跳。</li>
+<li><strong>解封</strong> - 当数据包到达目的主机的网络层时，主机会检查数据包的 IP 报头。如果在报头中的目的 IP 地址与其自身的 IP 地址匹配，IP 报头将被会从数据包中删除。网络层解封数据包后，后继的第 4 层 PDU 会向上传递到传输层的相应服务。解封过程由 IP 数据包的目的主机执行。</li>
 </ul>
-<p>传输层（OSI 第 4 层）负责管理每台主机上的运行进程之间的数据传输，而网络层通信协议（即，IPv4和IPv6）则指定从一台主机向另一台主机传送数据时使用的数据包结构和处理过程。网络层工作时<strong>无需考虑每个数据包中所携带的数据</strong>，这使其能够为多台主机之间的多种类型的通信传送数据包</p>
+<p>传输层（OSI 第 4 层）负责管理 <strong>每台主机上的运行进程之间的数据传输</strong> (  原来如此！)，而网络层通信协议（即，IPv4和IPv6）则指定从一台主机向另一台主机传送数据时使用的数据包结构和处理过程。网络层工作时<strong>无需考虑每个数据包中所携带的数据</strong>，这使其能够为多台主机之间的多种类型的通信传送数据包</p>
 <p><strong>逐层封装数据的流程使我们可以开发和扩展位于不同层的服务而不影响其他层</strong>。这意味着传输层数据段可以随时通过 IPv4 或 IPv6 进行封装，或使用未来可能开发出的任何新协议进行封装。</p>
 <p>从数据包离开源主机到达目的主机之前，IP编址信息保持不变，除非是由为IPv4执行网络地址转换(NAT)的设备进行转换。</p>
-<p><em><strong>IP的基本特征</strong></em></p>
-<p>IP 被设计为一种<strong>低开销</strong>协议。它只提供通过互连的网络系统从源主机向目的主机传送数据包所必需的功能。并不负责跟踪和管理数据包的流动。这些功能（如果需要）将由其他层的其他协议（主要是第 4 层的 TCP）执行。</p>
+<h3 id="IP的基本特征"><a href="#IP的基本特征" class="headerlink" title="IP的基本特征"></a><em><strong>IP的基本特征</strong></em></h3><p>IP 被设计为一种<strong>低开销</strong>协议。它只提供通过互连的网络系统从源主机向目的主机传送数据包所必需的功能。并不负责跟踪和管理数据包的流动。这些功能（如果需要）将由其他层的其他协议（主要是第 4 层的 TCP）执行。</p>
 <p>IP的基本特征：</p>
 <ul>
 <li><strong>无连接</strong> - 发送数据包前不与目的地建立连接。IP 在转发数据包前，并不需要初步交换控制信息来创建端到端连接。</li>
@@ -1418,15 +1447,16 @@ WLAN -无线局域网(Wirelee Local Area Network)。定义 2.4 GHz 和 5 GHz 无
 <p>有时，中间设备（通常是路由器），在将IPv4数据包从一个介质转发到具有更小 MTU 的介质时，必须分割数据包。此过程称为数据包分片或分片。<strong>分片会导致延迟。IPv6 数据包不能被路由器分片。</strong></p>
 <p>OSI传输层发送被封装在IPv4或IPv6包中的数据段</p>
 <p>OSI数据链路层负责接收数据包并准备数据包以在通信介质上传输</p>
-<h2 id="IPv4数据包"><a href="#IPv4数据包" class="headerlink" title="IPv4数据包"></a>IPv4数据包</h2><p>IPv4 是主要网络层通信协议之一。IPv4 数据包报头用于确保此数据包在到达目的地终端设备的路上被传递到其下一站。</p>
+<h2 id="数据包"><a href="#数据包" class="headerlink" title="数据包"></a>数据包</h2><h3 id="IPv4数据包"><a href="#IPv4数据包" class="headerlink" title="IPv4数据包"></a>IPv4数据包</h3><p>IPv4 是主要网络层通信协议之一。IPv4 数据包报头用于确保此数据包在到达目的地终端设备的路上被传递到其下一站。</p>
 <p>IPv4 数据包报头是由包含重要数据包信息的字段组成。这些字段中包含的二进制数字由第 3 层进程进行检查。</p>
 <p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210314233828847.png" alt="image-20210314233828847"></p>
 <p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210314233849824.png" alt="image-20210314233849824"></p>
 <p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210314234312571.png" alt="image-20210314234312571"></p>
+<p>互联网报头长度 (IHL)、总长度和报头校验和字段用于识别和验证数据包。</p>
 <p>其他字段用于重新排列分段的数据包。具体而言，IPv4 数据包使用标识符、标志和片偏移量字段跟踪分段。路由器从一种介质向具有较小 MTU 的另一种介质转发IPv4数据包时必须将它分片。</p>
 <p>注意：选项和填充字段很少使用，因此不在本模块的介绍范围之内。</p>
 <p><em><strong>8.2.3的视频描述wireshark中检测IPv4报头非常好！</strong></em></p>
-<h2 id="IPv6数据包"><a href="#IPv6数据包" class="headerlink" title="*IPv6数据包"></a>*IPv6数据包</h2><p>IPv6它最终将取代 IPv4</p>
+<h3 id="IPv6数据包"><a href="#IPv6数据包" class="headerlink" title="*IPv6数据包"></a>*IPv6数据包</h3><p>IPv6它最终将取代 IPv4</p>
 <p>多年来，为应对新的挑战，已经制定了附加议定书和规程。但是，尽管经历了多次变更，IPv4 仍然有三个重要问题：</p>
 <ul>
 <li><strong>IPv4地址耗尽 -</strong> IPv4 的可用唯一公有地址数量有限。尽管有大约 40 亿的 IPv4 地址，但是支持 IP 的新设备数量的不断增加，以及始终在线的连接的增加，和欠发达地区的潜在连接的增加，不断催生更多的地址需求。</li>
@@ -1441,10 +1471,13 @@ WLAN -无线局域网(Wirelee Local Area Network)。定义 2.4 GHz 和 5 GHz 无
 </ul>
 <p>32 位的 IPv4 地址空间提供大约 4,294,967,296 个地址。IPv6 地址空间提供 340,282,366,920,938,463,463,374,607,431,768,211,456 个或 340 涧（10 的 36 次方）个地址。这大致相当于地球上的每一粒沙子。</p>
 <p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210314235834424.png" alt="image-20210314235834424"></p>
+<p>IPv6 较 IPv4 的一个重大改进是简化的 IPv6 报头。</p>
+<p>例如，IPv4 报头包含 20 个二进制八位组的可变长度报头（如果使用“选项”字段，则高达 60 字节）和 12 个基本报头字段（不包括“选项”字段和“填充”字段）。</p>
+<p>对于 IPv6，某些字段保持不变，某些字段的名称和位置发生了变化，而某些 IPv4 字段不再需要，正如图中突出显示。</p>
 <p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210315000426978.png" alt="image-20210315000426978"></p>
 <p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210315000511899.png" alt="image-20210315000511899"><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210315000554634.png" alt="image-20210315000554634"></p>
 <p>共40个八位组，8个报头字段</p>
-<h2 id="主机路由方式"><a href="#主机路由方式" class="headerlink" title="主机路由方式"></a>主机路由方式</h2><p>对于IPv4和IPv6，数据包总是在源主机上创建。源主机必须能够将数据包定向到目的主机。为此，主机终端设备将创建自己的路由表。本主题讨论终端设备如何使用路由表。</p>
+<h2 id="主机路由方式"><a href="#主机路由方式" class="headerlink" title="主机路由方式"></a>主机路由方式</h2><p>对于IPv4和IPv6，数据包总是在源主机上创建。源主机必须能够将数据包定向到目的主机。为此，<strong>主机终端设备将创建自己的路由表</strong>。本主题讨论终端设备如何使用路由表。</p>
 <p>网络层的另一个作用是在主机之间转发数据包。主机可以将数据包发送至如下：</p>
 <ul>
 <li><strong>主机自己</strong> - 主机可以通过向特定的地址发送数据包来向自己发起ping测试，这个特定的地址是：IPv4地址127.0.0.1，或者IPv6地址 ::1，它被称为<strong>环回接口</strong>。对环回接口执行 ping 操作可以测试主机上的 TCP/IP 协议堆栈。</li>
@@ -1454,11 +1487,12 @@ WLAN -无线局域网(Wirelee Local Area Network)。定义 2.4 GHz 和 5 GHz 无
 <p>数据包是要发送到本地主机还是远程主机是由源端设备决定的。源端设备确定目的 IP 地址是否与源设备本身所在的网络相同。确定方法因 IP 版本不同而异：</p>
 <ul>
 <li><strong>在 IPv4 中</strong> -源设备使用自己的子网掩码以及自己的 IPv4 地址和目的 IPv4 地址来进行此判断。</li>
-<li><strong>在 IPv6 中</strong> -本地路由器将本地网络地址（前缀）通告给网络上的所有设备</li>
+<li><strong>在 IPv6 中</strong> -本地路由器将<strong>本地网络地址</strong>（前缀）通告给网络上的所有设备</li>
 </ul>
 <p>在家庭或企业网络中，您可能有若干通过中间设备（LAN 交换机和/或无线接入点 (WAP) 等）互联的有线和无线设备。这种中间设备在本地网络上的本地主机之间提供互联服务。本地主机可以互相访问和共享信息，无需任何附加设备。如果主机要将数据包发送到与本主机在同一 IP 网络中的设备，<strong>则数据包仅是被转发出主机接口，然后经过中间设备即可直接到达目的设备（不必经手路由器）。</strong></p>
 <p>当然，在大多数情况下我们希望我们的设备不仅仅能够连接本地网段，还能连接其他家庭、企业和互联网。位于本地网段外的设备称为远程主机。如果源设备发送数据包到远程目的设备，则需要借助路由器和路由。路由是确定到达目的地之最佳路径的过程。<strong>连接到本地网段的路由器称为默认网关Defalut Gateway。</strong></p>
-<p><strong>默认网关</strong>Default Gateway是可以将流量路由到其他网络的网络设备(即，路由器或第3层交换机)。如果把一个网络比作一个房间，那么默认网关就好比是门口。如果要去另一个房间或网络，您就需要找到门口。</p>
+<p><strong>默认网关</strong></p>
+<p>Default Gateway是可以将流量路由到其他网络的网络设备(即，路由器或第3层交换机)。如果把一个网络比作一个房间，那么默认网关就好比是门口。如果要去另一个房间或网络，您就需要找到门口。</p>
 <p>在网络上，默认网关通常是具有以下功能的路由器：</p>
 <ul>
 <li>它拥有与本地网络其他主机位于相同地址范围的本地 IP 地址。</li>
@@ -1474,7 +1508,7 @@ WLAN -无线局域网(Wirelee Local Area Network)。定义 2.4 GHz 和 5 GHz 无
 <ul>
 <li><strong>直连网络-</strong> 这些网络路由条目是活动的路由器接口。当接口配置了 IP 地址并激活时，路由器会添加直连路由。每个路由器接口均连接到一个不同的网段。在图中，R1 IPv4路由表中的直连网络为192.168.10.0/24和209.165.200.224/30。</li>
 <li><strong>远程网络</strong> - 这些网络路由条目连接到其他路由器。路由器通过由管理员明确配置或使用动态路由协议交换路由信息来学习远程网络。在图中，R1 IPv4路由表中的远程网络为10.1.1 /24。</li>
-<li><strong>默认路由</strong> -像主机一样，大多数路由器还包含默认路由条目，即默认网关。当IP路由表中没有更好(更长)的匹配时，将使用默认路由。在图中，R1 IPv4路由表很可能包含一个将所有数据包转发到路由器R2的默认路由。</li>
+<li><strong>默认路由</strong> -像主机一样，大多数路由器还包含默认路由条目，即默认网关。<strong>当IP路由表中没有更好(更长)的匹配时，将使用默认路由</strong>。在图中，R1 IPv4路由表很可能包含一个将所有数据包转发到路由器R2的默认路由。</li>
 </ul>
 <p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210315124026095.png" alt="image-20210315124026095"></p>
 <p>路由器可通过两种方式获知远程网络：</p>
@@ -1486,7 +1520,6 @@ WLAN -无线局域网(Wirelee Local Area Network)。定义 2.4 GHz 和 5 GHz 无
 <p>手动配置的路由条目</p>
 <p>静态路由包括远程网络地址和下一跳路由器的IP地址。</p>
 <p>ip route 远程网络地址 下一跳路由器的IP地址</p>
-<p>如果网络拓扑改变，静态路由不会自动更新，必须手动重新配置静态路由</p>
 <p>静态路由具有以下特征：</p>
 <ul>
 <li>必须手动配置静态路由。</li>
@@ -1496,7 +1529,9 @@ WLAN -无线局域网(Wirelee Local Area Network)。定义 2.4 GHz 和 5 GHz 无
 </ul>
 <p><em><strong>动态路由</strong></em></p>
 <p>动态路由协议可让路由器从其他路由器那里自动学习远程网络，包括默认路由。如果使用动态路由协议，则路由器无需网络管理员的参与，即可自动与其它路由器共享路由信息并对拓扑结构的变化作出反应。如果网络拓扑发生变化，路由器将使用动态路由协议共享此信息，并自动更新路由表。</p>
-<p>动态路由协议包括OSPF（开放最短路径优先协议）和增强型内部网关路由协议 (EIGRP)</p>
+<p>动态路由协议包括OSPF（开放最短路径优先协议）和增强型内部网关路由协议 (EIGRP)，e.g.</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210802143704.png" alt="image-20210802143657755" style="zoom: 80%;" />
+
 <p>基本配置只需要网络管理员在动态路由协议中启用直连网络。动态路由协议将自动执行如下操作：</p>
 <ul>
 <li>发现远程网络</li>
@@ -1505,7 +1540,8 @@ WLAN -无线局域网(Wirelee Local Area Network)。定义 2.4 GHz 和 5 GHz 无
 <li>当前路径无法再使用时尝试找出新的最佳路径</li>
 </ul>
 <p>当使用静态路由手动配置路由器或使用动态路由协议动态学习远程网络时，远程网络地址和下一跳地址将被输入到IP路由表中。如图所示，如果网络拓扑发生变化，路由器将自动调整并尝试找到新的最佳路径。（R1,2,3正在使用动态路由协议OSPF）</p>
-<p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210315124816720.png" alt="image-20210315124816720"></p>
+<img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210315124816720.png" alt="image-20210315124816720" style="zoom:80%;" />
+
 <p><img src="https://gitee.com/darren-greenhand//picture/raw/master/image-20210315125544736.png" alt="image-20210315125544736"></p>
 <p><em><strong>8.5.5大致介绍挺好的</strong></em></p>
 <p>每个路由表条目的开头都有一个代码，用于标识路由的类型或路由的学习方式。常见路由源（代码）包括以下内容：</p>
@@ -1517,8 +1553,8 @@ WLAN -无线局域网(Wirelee Local Area Network)。定义 2.4 GHz 和 5 GHz 无
 <li><strong>D</strong> - EIGRP</li>
 </ul>
 <p>默认路由具有全都是零的网络地址。例如，IPv4 网络地址为 0.0.0.0。路由表中的静态路由条目以 S\ * 的代码开头</p>
-<h1 id="地址解析！"><a href="#地址解析！" class="headerlink" title="地址解析！"></a>地址解析！</h1><p>主机和路由器都创建路由表，以确保它们可以跨网络发送和接收数据。那么这些信息是如何在路由表中被创建的呢? 作为网络管理员，您可以手动输入这些 MAC 和 IP 地址。但这将花费大量时间，而且犯一些错误的可能性很大。您是否认为一定有某种方式，由主机和路由器可以自动完成? 当然，您是对的！即使它是自动的，您仍然必须要了解它是如何工作的，因为您可能会需要排除一些故障，或更糟的是，您的网络可能会受到威胁发起者的攻击。</p>
-<h2 id="MAC-and-IP"><a href="#MAC-and-IP" class="headerlink" title="MAC and IP"></a>MAC and IP</h2><p>（复习）以太网 LAN 上的设备都配有两个主要地址：</p>
+<h1 id="地址解析"><a href="#地址解析" class="headerlink" title="地址解析"></a>地址解析</h1><p>主机和路由器都创建路由表，以确保它们可以跨网络发送和接收数据。那么这些信息是如何在路由表中被创建的呢? 作为网络管理员，您可以手动输入这些 MAC 和 IP 地址。但这将花费大量时间，而且犯一些错误的可能性很大。您是否认为一定有某种方式，由主机和路由器可以自动完成? 当然，您是对的！即使它是自动的，您仍然必须要了解它是如何工作的，因为您可能会需要排除一些故障，或更糟的是，您的网络可能会受到威胁发起者的攻击。</p>
+<p>（复习）以太网 LAN 上的设备都配有两个主要地址：</p>
 <ul>
 <li><strong>物理地址（MAC 地址）</strong> – 用于同一网络上的以太网网卡之间的通信。</li>
 <li><strong>逻辑地址（IP地址）</strong> – 用于将数据包从源设备发送到目的设备。目的IP地址可能与源地址在同一个IP网络上，也可能在远程网络上。</li>
@@ -1526,13 +1562,14 @@ WLAN -无线局域网(Wirelee Local Area Network)。定义 2.4 GHz 和 5 GHz 无
 <p>第二层物理地址(即以太网MAC地址)用于将数据链路层帧从同一网络中一个网卡发送到另一个网卡， IP 数据包就封装在帧中。<br>如果目的IP地址在同一网络上，则目的MAC地址将是目的设备的MAC地址。<br>当目的 IP 地址(IPv4或IPv6)处于远程网络中时，则目的 MAC 地址为主机的默认网关的地址(即路由器接口)</p>
 <p>数据流中 IP 数据包的 IP 地址如何与通往目的地路径中每条链路上的 MAC 地址相关联？对于IPv4数据包，这可以通过地址解析协议 (ARP) 过程来完成。对于IPv6数据包，这个过程是ICMPv6邻居发现(ND)。</p>
 <h2 id="ARP"><a href="#ARP" class="headerlink" title="ARP"></a>ARP</h2><p>IPv4当将帧发送到另一个远程网络时，只知道IP地址，要获得MAC地址得使用ARP帮助</p>
+<p>设备使用地址解析协议(ARP)来确定一个已知 IPv4 地址的本地设备的目的MAC地址。</p>
 <p>ARP 提供两个基本功能：</p>
 <ul>
 <li>将 IPv4 地址<strong>解析</strong>为 MAC 地址</li>
 <li><strong>维护IPv4到MAC地址映射表</strong></li>
 </ul>
 <p>当数据包发送到要封装入以太网帧的数据链路层时，设备将参照其<strong>内存中的表来</strong>查找映射至 IPv4 地址的 MAC 地址。此表临时存储在<strong>RAM</strong>内存中，称为 ARP 表或 ARP 缓存。</p>
-<p>发送设备会在自己的 ARP 表中搜索目的 IPv4 地址和相应的 MAC 地址。</p>
+<p><strong>发送设备</strong>首先会在自己的 ARP 表中搜索目的 IPv4 地址和相应的 MAC 地址。</p>
 <ul>
 <li>如果数据包的目的 IPv4 地址与源 IPv4 地址处于同一个网络，则设备会在 ARP 表中搜索目的 IPv4 地址。</li>
 <li>如果目的 IPv4 地址与源 IPv4 地址不在同一个网络中，则设备会在 ARP 表中搜索默认网关的 IPv4 地址。</li>
@@ -1547,7 +1584,7 @@ WLAN -无线局域网(Wirelee Local Area Network)。定义 2.4 GHz 和 5 GHz 无
 <li><strong>源 MAC 地址</strong> – 这是ARP请求发送方的MAC地址。</li>
 <li><strong>类型</strong> - ARP 消息的类型字段为 0x806。该类型字段会通知接收网卡需要将帧的数据部分传递给 ARP 进程处理。</li>
 </ul>
-<p>因为 ARP 请求属于广播，交换机会将其泛洪到除接收端口外的其他所有端口。局域网上的所有以太网网卡都会处理广播，并且必须将ARP请求发送到其操作系统进行处理。每台设备必须处理 ARP 请求，以检查目的 IPv4 地址是否与其自己的地址相匹配。<strong>路由器不会将广播转发到其他接口。</strong>不会干扰别人家的局域网</p>
+<p>因为 ARP 请求属于广播，交换机会将其泛洪到除接收端口外的其他所有端口。局域网上的所有以太网网卡都会处理广播，并且必须将ARP请求发送到其操作系统进行处理。每台设备必须处理 ARP 请求，以检查目的 IPv4 地址是否与其自己的地址相匹配。<strong>路由器不会将广播转发到其他接口。</strong></p>
 <p><em><strong>ARP应答</strong></em></p>
 <p>LAN 上只有一台设备的 IPv4 地址与 ARP 请求中的目的 IPv4 地址相匹配。所有其他设备将不应答。</p>
 <p>只有具有与ARP请求相应的目的IPv4地址的设备才会以ARP应答做出响应。ARP 应答使用以下帧头信息封装在以太网帧中：</p>
@@ -1558,17 +1595,14 @@ WLAN -无线局域网(Wirelee Local Area Network)。定义 2.4 GHz 和 5 GHz 无
 </li>
 <li><p><strong>类型</strong> – ARP 消息的类型字段为 0x806。该类型字段会通知接收网卡需要将帧的数据部分传递给 ARP 进程处理。</p>
 <p> 只有原始发送 ARP 请求的设备会收到单播 ARP 应答。收到该 ARP 应答后，设备会将 IPv4 地址及相应的 MAC 地址添加到自身的 ARP 表中。该 IPv4 地址的数据包现在便可使用其相应的 MAC 地址封装在帧中。</p>
-<p> 如果没有设备响应 ARP 请求，就无法创建帧，那么这个数据包会被丢弃。</p>
+<p> 如果没有设备响应 ARP 请求，就无法创建帧，<u>那么这个数据包会被丢弃</u>。</p>
 </li>
 </ul>
-<p>ARP 表中的条目具有时间戳。如果在时间戳到期前没有从特定设备收到帧，此设备的条目将会从 ARP 表中删除。</p>
-<p><em>此外，也可以在 ARP 表中输入静态映射条目，但这种情况很少见。静态 ARP 表条目没有到期时间，必须手动删除。</em></p>
-<p>默认网关的 IPv4 地址存储在主机的 IPv4 配置中。当主机创建通往某台目的主机的数据包时，会将目的 IPv4 地址与其自己的 IPv4 地址进行比较，以确定两个 IPv4 地址是否位于相同的第 3 层网络上。如果目的主机不在同一网络上，<strong>源主机将从 ARP 表中查找默认网关的 IPv4 地址条目。如果没有该条目，源主机将使用 ARP 流程来确定默认网关的 MAC 地址。</strong>不会连默认网关都没存吧。。</p>
 <p>对于每台设备，ARP 缓存定时器将会删除在指定时间内未使用的 ARP 条目。时间根据设备的操作系统不同而不同。例如，较新的 Windows 操作系统将 ARP 表条目<strong>存储 15 秒到 45 秒</strong>之间</p>
 <p>也可以使用命令来手动删除 ARP 表中的部分或全部条目。当条目被删除之后，要想在 ARP 表中输入映射，必须重复一次发送 ARP 请求和接收 ARP 回复的过程。</p>
-<p>作为<strong>广播帧（IPv6是组播）</strong>，本地网络上的每台设备都会收到并处理 ARP 请求。在一般的商业网络中，这些广播对网络性能的影响可能微不足道。但是，如图所示，如果大量设备都已启动，并且同时开始使用网络服务，网络性能可能会有短时间的下降。在设备发出初始 ARP 广播并获取必要的 MAC 地址之后，网络受到的影响将会降至最小。</p>
+<p>作为<strong>广播帧（IPv6是组播）</strong>，本地网络上的每台设备都会收到并处理 ARP 请求。在一般的商业网络中，这些广播对网络性能的影响可能微不足道。但是，如果大量设备都已启动，并且同时开始使用网络服务，网络性能可能会有短时间的下降。在设备发出初始 ARP 广播并获取必要的 MAC 地址之后，网络受到的影响将会降至最小。</p>
 <p>有时，使用 ARP 可能会造成潜在的安全风险。威胁发起者可以使用 ARP 欺骗来执行 ARP 毒化攻击。如图所示，威胁发起者使用这种技术来应答属于另一台设备（例如默认网关）的 IPv4 地址的 ARP 请求。威胁发起者会发送一个带有自己 MAC 地址的 ARP 应答。ARP 应答的接收方会将错误的 MAC 地址添加到其 ARP 表中，并将这些数据包发送给威胁发起者。 企业级的交换机包含称为动态 ARP 检查 (DAI) 的缓解技术。DAI 不在本课程的讨论范围之内。</p>
-<h2 id="邻居发现"><a href="#邻居发现" class="headerlink" title="邻居发现"></a>邻居发现</h2><p>IPv6 邻居发现协议有时被称为 ND 或 NDP。在本课程中，我们称它为 ND。ND使用ICMPv6为IPv6提供地址解析、路由器发现和重定向服务。ICMPv6 ND 使用五种 ICMPv6 消息来执行这些服务：</p>
+<h2 id="邻居发现"><a href="#邻居发现" class="headerlink" title="邻居发现"></a>邻居发现</h2><p>IPv6 邻居发现协议有时被称为 ND 或 NDP。在本课程中，我们称它为 ND。ND使用ICMPv6为IPv6提供<strong>地址解析、路由器发现和重定向服务</strong>。ICMPv6 ND 使用五种 ICMPv6 消息来执行这些服务：</p>
 <ul>
 <li>邻居请求消息</li>
 <li>邻居通告消息</li>
@@ -1576,8 +1610,11 @@ WLAN -无线局域网(Wirelee Local Area Network)。定义 2.4 GHz 和 5 GHz 无
 <li>路由器通告消息</li>
 <li>重定向消息</li>
 </ul>
-<p>邻居请求和邻居通告消息用于<strong>设备到设备</strong>的消息传递，例如地址解析（类似于 IPv4 的 ARP）。设备包括主机计算机和路由器。，一个不同点是，IPv4仅使用MAC来匹配，不涉及IP协议，邻居发现会使用ICMPv6把消息封装在IPv6报头中，再封入以太网头尾，目标IPv6会映射到特殊的IPv6目标组播地址，再映射成目标MAC组播地址，该过程会包含目的IPv6地址的很大一部分，反正最后就是不会有太多主机收到信息，比较节省，接受的设备将优先在以太网层匹配该组播地址，再向上检测IPv6层和ICMPv6</p>
-<p>路由器请求和路由器通告消息用于设备和路由器之间的消息传递。通常，路由器发现用于<em><strong>动态地址分配和无状态地址自动配置 (SLAAC)。</strong></em></p>
+<p><strong>邻居请求和邻居通告消息</strong>用于<strong>设备到设备</strong>的消息传递，例如地址解析（类似于 IPv4 的 ARP）。设备包括主机计算机和路由器。如果在neighrbor表中没找到目标IPv6条目：</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210802152908.png" alt="image-20210802152908401" style="zoom: 33%;" />
+
+<p>它会从on hold的IPv6信息中得到目标IPv6地址，映射为特定的IPv6组播，再映射为特定的MAC组播，在这个过程中比起ARP广播缩小了范围，而且如果没有匹配的，会直接丢弃，不把他传给上层进程，这也是优于IPv4的。</p>
+<p><strong>路由器请求和路由器通告消息</strong>用于设备和路由器之间的消息传递。通常，路由器发现用于<em><strong>动态地址分配和无状态地址自动配置 (SLAAC)。</strong></em></p>
 <p><strong>注意</strong>: 第五个 ICMPv6 ND 消息是一个重定向消息，用于更好的下一跳选择。这不在本课程的讨论范围之内。</p>
 <p>IPv6 ND 是在 IETF RFC 4861 中定义的。</p>
 <p>ICMPv6 邻居请求和邻居通告消息用于MAC地址解析。这类似于ARP用于IPv4的ARP请求和ARP应答</p>
@@ -1588,25 +1625,35 @@ WLAN -无线局域网(Wirelee Local Area Network)。定义 2.4 GHz 和 5 GHz 无
 </ol>
 <pre class="line-numbers language-none"><code class="language-none">Router(config)# hostname hostname<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p>\2. 保护特权模式。</p>
+<ol start="2">
+<li>保护特权模式。</li>
+</ol>
 <pre class="line-numbers language-none"><code class="language-none">Router(config)# enable secret password<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p>\3. 保护用户模式</p>
+<ol start="3">
+<li>保护用户模式</li>
+</ol>
 <pre class="line-numbers language-none"><code class="language-none">Router(config)# line console 0
 Router(config-line)# password password
 Router(config-line)# login<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
-<p>\4. 保护远程 Telnet / SSH 访问</p>
+<ol start="4">
+<li>保护远程 Telnet / SSH 访问</li>
+</ol>
 <pre class="line-numbers language-none"><code class="language-none">Router(config-line)# line vty 0 4
 Router(config-line)# password password
 Router(config-line)# login
 Router(config-line)# transport input &#123;ssh | telnet&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p>\5. 保护配置文件中的所有密码。</p>
+<ol start="5">
+<li>保护配置文件中的所有密码。</li>
+</ol>
 <pre class="line-numbers language-none"><code class="language-none">Router(config-line)# exit
 Router(config)# service password-encryption<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
-<p>\6. 提供法律通知。</p>
+<ol start="6">
+<li>提供法律通知。</li>
+</ol>
 <p>法律通知警告用户只能由允许用户访问该设备。法律通知配置如下。</p>
 <pre class="line-numbers language-none"><code class="language-none">R1(config)# banner motd #
 Enter TEXT message. End with a new line and the #
@@ -1616,11 +1663,16 @@ WARNING: Unauthorized access is prohibited!
 #
 R1(config)#<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p>\7. 保存配置。</p>
+<ol start="7">
+<li>保存配置。</li>
+</ol>
 <pre class="line-numbers language-none"><code class="language-none">Router(config)# end
 Router# copy running-config startup-config<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
-<h2 id="接口配置"><a href="#接口配置" class="headerlink" title="接口配置"></a>接口配置</h2><p>配置路由器接口的任务与交换机上管理 SVI 非常相似。具体来说，它包括发出以下命令：</p>
+
+
+<h2 id="配置接口"><a href="#配置接口" class="headerlink" title="配置接口"></a>配置接口</h2><p>下一步将配置它们的接口。这是因为在配置接口之前，终端设备无法访问路由器。</p>
+<p>配置路由器接口的任务与交换机上管理 SVI 非常相似。具体来说，它包括发出以下命令：</p>
 <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">Router(config)# interface type-and-number
 Router(config-if)# description description-text
 Router(config-if)# ip address ipv4-address subnet-mask
@@ -1670,7 +1722,151 @@ Router(config-if)# no shutdown<span aria-hidden="true" class="line-numbers-rows"
 <p> e. 记录解决方案。</p>
 <p>在整个 CCNA 学习过程中，您会遇到不同的 故障排除方法，以及测试 并记录问题和解决方案的不同方法。这是有意设计的。故障排除没有固定的 标准或模板。每个组织都制定了独特的 流程和文档标准（有时候，一个组织的流程就是“我们没有 固定流程”）。但是，所有有效的故障排除方法通常都包括 上述步骤。</p>
 <p>注意：通常不止一个解决方案。但是，排除故障的最佳做法是每次实施和验证一个解决方案。在更复杂的 情形中，实施多个解决方案会导致其他问题。</p>
-<h1 id="遗漏知识"><a href="#遗漏知识" class="headerlink" title="*遗漏知识"></a>*遗漏知识</h1><h2 id="2-1-5终端仿真程序"><a href="#2-1-5终端仿真程序" class="headerlink" title="2.1.5终端仿真程序"></a>2.1.5终端仿真程序</h2><h2 id="2-3-8用Tera-Term连接控制台"><a href="#2-3-8用Tera-Term连接控制台" class="headerlink" title="2.3.8用Tera Term连接控制台"></a>2.3.8用Tera Term连接控制台</h2><h2 id="2-5-4捕获配置到文本中"><a href="#2-5-4捕获配置到文本中" class="headerlink" title="2.5.4捕获配置到文本中"></a>2.5.4捕获配置到文本中</h2><h1 id="真-命令集"><a href="#真-命令集" class="headerlink" title="真*命令集"></a>真*命令集</h1><p><strong>转载自：<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_42833924/article/details/89790004">https://blog.csdn.net/qq_42833924/article/details/89790004</a><br>为自己学习方便故转载，如果大家觉得有帮助，请为原文点赞。</strong></p>
+<h1 id="IPv4编制"><a href="#IPv4编制" class="headerlink" title="IPv4编制"></a>IPv4编制</h1><p>目前，仍有大量使用IPv4编址的网络，即这些组织正在向IPv6过渡。因此，对于网络管理员来说，了解有关IPv4编址的所有信息仍然非常重要。本模块详细介绍了IPv4编址的基本方面。它包括了如何将网络划分为子网，以及如何创建一个变长子网掩码 (VLSM) 作为整体IPv4编址方案的一部分。子网划分就像把一个饼切成越来越小的块。</p>
+<h2 id="地址编制"><a href="#地址编制" class="headerlink" title="地址编制"></a>地址编制</h2><p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210802160937.png" alt="image-20210802160937245"></p>
+<p>对于同一网络中的所有设备，地址的网络部分中的位必须完全相同。地址的主机部分中的位必须唯一，这方便识别网络中的特定主机。如果两台主机在 32 位数据流中的指定网络部分有相同的位模式，则这两台主机位于同一网络。但是，主机如何知道 32 位数据流中的哪一部分用于标识网络，哪一部分用于标识主机呢？这就是子网掩码的作用。</p>
+<h3 id="子网掩码"><a href="#子网掩码" class="headerlink" title="子网掩码"></a>子网掩码</h3><p>子网掩码是一个1位连续序列，后面跟有一个0位连续序列组成的序列。</p>
+<p>为了确定 IPv4 地址的网络部分和主机部分，要将子网掩码与 IPv4 地址进行从左到右逐位比较（如图所示）。</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210802161118.png" alt="image-20210802161118490" style="zoom:67%;" />
+
+<p>子网掩码实际上不包含 IPv4 地址的网络部分或主机部分，它仅通知计算机在哪里查找IPv4地址的网络部分和主机部分。</p>
+<p>用于确定网络部分和主机部分的实际流程叫做 AND 运算。</p>
+<h3 id="前缀长度"><a href="#前缀长度" class="headerlink" title="前缀长度"></a>前缀长度</h3><p>使用点分十进制子网掩码地址表示网络地址和主机地址会变得很麻烦。幸运的是，还有另一种识别子网掩码的方法，称为前缀长度。前缀长度是子网掩码中设置为 1 的位数。使用“斜线记法”写入，即“/”紧跟设置为 1 的位数。借此计算子网掩码中的位数，并在前面加斜线表示。</p>
+<p>长度的多少取决于网络的规模</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210802161306.png" alt="image-20210802161306103" style="zoom:67%;" />
+
+<p>当使用前缀长度表示 IPv4 地址时，IPv4 地址后面写入不带空格的前缀长度。例如192.168.10.10 255.255.255.0可以写成192.168.10.10/24。后面将讨论各种类型前缀长度的使用。目前重点是 /24（例如 255.255.255.0）前缀。</p>
+<p>如下：</p>
+<table>
+<thead>
+<tr>
+<th align="left"></th>
+<th align="center"><strong>网络部分</strong></th>
+<th align="center"><strong>主机部分</strong></th>
+<th align="center"><strong>主机位数</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">子网掩码为 **255.255.255.**0 或 <strong>/24</strong></td>
+<td align="center"><code>255      255      25511111111 11111111 11111111</code></td>
+<td align="center"><code>000000000</code></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="left">网络地址为 **192.168.10.**0 或 <strong>/24</strong></td>
+<td align="center"><code>192      168       1011000000 10100000 00001010</code></td>
+<td align="center"><code>000000000</code></td>
+<td align="center">全都是0</td>
+</tr>
+<tr>
+<td align="left">第一个地址 <strong>192.168.10</strong>.1 或 <strong>/24</strong></td>
+<td align="center"><code>192      168       1011000000 10100000 00001010</code></td>
+<td align="center"><code>100000001</code></td>
+<td align="center">除最后一位为1以外其他位全是0位</td>
+</tr>
+<tr>
+<td align="left">最后一个地址 <strong>192.168.10</strong>.254 或 <strong>/24</strong></td>
+<td align="center"><code>192      168       1011000000 10100000 00001010</code></td>
+<td align="center"><code>25411111110</code></td>
+<td align="center">除最后一位为0以外其他位全是1位</td>
+</tr>
+<tr>
+<td align="left">广播地址 <strong>192.168.10</strong>.255 或 <strong>/24</strong></td>
+<td align="center"><code>192      168       1011000000 10100000 00001010</code></td>
+<td align="center"><code>25511111111</code></td>
+<td align="center">全都是1</td>
+</tr>
+</tbody></table>
+<h3 id="单播、组播、广播"><a href="#单播、组播、广播" class="headerlink" title="单播、组播、广播"></a>单播、组播、广播</h3><p>IPv4 单播主机地址的地址范围是 1.1.1.1到 223.255.255.255。不过，此范围中的很多地址被留作特殊用途。这些特殊用途的地址将在本模块后续部分讨论。</p>
+<p>广播数据包以主机部分全部为 1 的地址<strong>或32个1位</strong>作为目的 IP地址。</p>
+<p><strong>注意:</strong> IPv4使用广播数据包但是，IPv6没有广播数据包。</p>
+<p>广播数据包必须由同一广播域中的所有设备处理。广播域标识同一网段上的所有主机。可以对广播进行定向或限制。定向广播是将数据包发送给特定网络中的所有主机。例如，位于 172.16.4.0/24 网络的主机向 172.16.4.255 发送数据包。受限广播将被发送至 255.255.255.255。<strong>默认情况下，路由器不转发广播。</strong></p>
+<p>广播数据包使用网络上的资源，使网络上的所有接收主机都处理该数据包。因此，广播通信应加以限制，以免对网络或设备的性能造成负面影响。因为路由器可分隔广播域，所以细分网络可以通过消除过多的广播通信来提高网络性能。</p>
+<p><strong>IP直接广播</strong></p>
+<p>除了 255.255.255.255 的广播地址外，每个网络还有一个广播 IPv4 地址。这个地址称为定向广播，它使用网络范围内的最大地址，即所有主机位全部为 1 的地址。例如，网络192.168.1.0/24的定向广播地址是192.168.1.255。此地址允许与该网络中的所有主机进行通信。要向网络中的所有主机发送数据，主机只需以该网络广播地址为目标地址发送一个数据包即可。</p>
+<p>未直接连接到目标网络的设备转发 IP 定向广播，其方式与转发去往网络上主机的单播 IP 数据包相同。<u>当定向广播数据包到达直接连接到目标网络的路由器时，该数据包在目标网络上进行广播</u>。</p>
+<p>主机通过组播传输可以向所属组播组中的选定主机组发送一个数据包，从而减少了流量。</p>
+<p>组播数据包是一个目的IP地址为组播地址的数据包。IPv4 将 224.0.0.0 到 239.255.255.255 的地址保留为组播范围。</p>
+<p>接收特定组播数据包的主机称为组播客户端。组播客户端使用客户端程序请求的服务来加入组播组。每个组播组由一个 IPv4 组播目的地址代表。当 IPv4 主机加入组播组后，<strong>该主机既要处理目的地址为此组播地址的数据包，也要处理发往其唯一单播地址的数据包。</strong></p>
+<p>路由协议（如 OSPF）使用组播传输。例如，启用 OSPF 的路由器使用保留的 OSPF 组播地址 224.0.0.5 相互通信。只有启用 OSPF 的设备才会以 224.0.0.5 作为目的 IPv4 地址处理这些数据包。所有其他设备将忽略这些数据包。</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210802163316.png" alt="image-20210802163316725" style="zoom:50%;" />
+
+<h2 id="地址分类"><a href="#地址分类" class="headerlink" title="地址分类"></a>地址分类</h2><p>一些 IPv4 地址不能用于外联到互联网，而其他地址则专门用于路由到互联网。一些用于验证连接，另一些则是自分配的。</p>
+<p>公有 IPv4 地址是能在 ISP（互联网运营商）路由器之间全局路由的地址。但是，并非所有可用的 IPv4 地址都可用于互联网。<strong>大多数组织</strong>使用称为私有地址的地址块向内部主机分配 IPv4 地址。</p>
+<p>20 世纪 90 年代中期，随着万维网(WWW)的引入，由于 IPv4 地址空间耗尽，引入了私有 IPv4 地址。私有 IPv4 地址并不是唯一的，可以在任何网络内部使用它。</p>
+<p><strong>注意</strong>: 私有地址在 RFC 1918 中定义，有时也称为 RFC 1918 地址空间。</p>
+<h3 id="私有地址"><a href="#私有地址" class="headerlink" title="私有地址"></a>私有地址</h3><p>私有地址块</p>
+<table>
+<thead>
+<tr>
+<th align="left"><strong>网络地址和前缀</strong></th>
+<th align="left"><strong>RFC 1918 私有地址范围</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">10.0.0.0/8</td>
+<td align="left">10.0.0.0 - 10.255.255.255</td>
+</tr>
+<tr>
+<td align="left">172.16.0.0/12</td>
+<td align="left">172.16.0.0 - 172.31.255.255</td>
+</tr>
+<tr>
+<td align="left">192.168.0.0/16</td>
+<td align="left">192.168.0.0 - 192.168.255.255</td>
+</tr>
+</tbody></table>
+<p><strong>注意</strong>: 私有地址在 RFC 1918 中定义，有时也称为 RFC 1918 地址空间。</p>
+<p>在 ISP 可以转发此数据包之前，它必须使用网络地址转换 (NAT) 将源 IPv4 地址（即私有地址）转换为公有 IPv4 地址。NAT用于转换私有和公有 IPv4 地址。这通常是在将内部网络连接到 ISP 网络的路由器上完成。在路由到互联网之前，组织内部网中的私有 IPv4 地址将被转换为公有 IPv4 地址。</p>
+<p><strong>注意</strong>: 虽然具有私有 IPv4 地址的设备无法通过互联网从另一个设备直接访问，但 IETF 并不认为私有 IPv4 地址或 NAT 是有效的安全措施。</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210802181758.png" alt="image-20210802181758898" style="zoom:67%;" />
+
+<p>拥有可用于互联网的资源的组织（如 Web 服务器）也将拥有具有公有 IPv4 地址的设备。如图所示，该网络的这一部分被称为DMZ（非军事区）(demilitarized zone)。图中的路由器不仅执行路由，还执行 NAT 并充当安全防火墙。</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210802181935.png" alt="image-20210802181934922" style="zoom:67%;" />
+
+
+
+<h3 id="专用地址"><a href="#专用地址" class="headerlink" title="专用地址"></a>专用地址</h3><p><strong>环回地址</strong></p>
+<p>环回地址（127.0.0.0 /8 或 127.0.0.1 到 127.255.255.254）通常仅被标识为127.0.0.1，主机使用这些特殊地址将流量指向其自身。例如，如图所示，主机可以使用这个特殊地址测试 TCP/IP 配置是否运行正常。注意 127.0.0.1 环回地址对 <strong>ping</strong> 命令的应答。</p>
+<p><strong>本地链路地址</strong></p>
+<p>本地链路地址（169.254.0.0 /16 或 169.254.0.1 至 169.254.255.254）通常称为自动私有 IP 编址 (APIPA) 地址或自分配地址。 当没有可用的DHCP服务器时，Windows DHCP客户端使用它们进行自我配置。本地链路地址可以用于点对点连接，但通常不用于此目的。</p>
+<h3 id="传统有类编制"><a href="#传统有类编制" class="headerlink" title="传统有类编制"></a>传统有类编制</h3><p>二十世纪90年代中期，随着万维网 (WWW) 的引入，<strong>有类编址被弃用</strong>，以便更有效地分配有限的 IPv4 地址空间。有类地址分配被替换为今天使用的无类编址。无类编址会忽略A、B、C类的规则。公有 IPv4 网络地址（网络地址和子网掩码）是根据合理的地址数量分配的。</p>
+<p>1981 年，使用在RFC 790 中(<a target="_blank" rel="noopener" href="https://tools.ietf.org/html/rfc790">https://tools.ietf.org/html/rfc790</a>) Assigned Numbers 部分定义的有类编址对 IPv4 地址进行了分配。根据三个类别（A 类、B 类或 C 类）之一为客户分配网络地址。RFC 将单播范围分为具体的类别：</p>
+<ul>
+<li><strong>A 类 (0.0.0.0/8 - 127.0.0.0/8)</strong> - 用于支持拥有 1600 万以上主机地址的规模非常大的网络。A类的第一个八位组使用固定的 /8 前缀表示网络地址，其他的三个八位组表示主机地址(每个网络支持1600 万以上主机地址)。</li>
+<li><strong>B 类 (128.0.0.0 /16 – 191.255.0.0 /16)</strong> - 用于支持拥有大约 65,000 个主机地址的大中型网络。B类的两个高位八位组使用固定的 /16 前缀表示网络地址，其他的两个八位组表示主机地址(每个网络支持65,000个以上主机地址)。</li>
+<li><strong>C 类 (192.0.0.0 /24 – 223.255.255.0 /24)</strong> - 用于支持最多拥有 254 台主机的小型网络。C类的前三个八位组使用固定的 /24 前缀表示网络地址，其余的八位组表示主机地址（每个网络中只有254个主机地址）。</li>
+</ul>
+<p><strong>注意</strong>: 还有包含 224.0.0.0 到 239.0.0.0 的 D 类组播块以及包含 240.0.0.0 – 255.0.0.0 的 E 类实验地址块。</p>
+<h3 id="分配"><a href="#分配" class="headerlink" title="分配"></a>分配</h3><p>公有 IPv4 地址是能通过互联网全局路由的地址。公有 IPv4 地址必须是唯一的。</p>
+<p>IPv4 和 IPv6 地址是通过互联网编号指派机构 (IANA) 管理的。IANA 管理并向地区性互联网注册机构 (RIR) 分配 IP 地址块。图中显示了五个RIR。</p>
+<p>RIR 的职责是向 ISP 分配 IP 地址，而 ISP 将向组织和更小的 ISP 提供 IPv4 地址块。根据 RIR 的政策规定，组织也可直接从 RIR 获取地址。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210802183559.png" alt="image-20210802183559072"></p>
+<h2 id="网络分段"><a href="#网络分段" class="headerlink" title="网络分段"></a>网络分段</h2><p>交换机会将广播传播到所有接口，接收它的接口除外。</p>
+<p>路由器在收到广播时，它不会将其转发到其他接口。</p>
+<p>因此，每个路由器接口都连接了一个广播域，而广播只能在特定广播域内传播。</p>
+<p>大型广播域是连接很多主机的网络。大型广播域的一个问题是这些主机会生成太多广播，这会对网络造成不良影响。在图中，局域网1 连接了 400 个用户，可能会产生过量的广播流量。这会导致网络操作速度缓慢，因为它会导致大量的流量，而设备操作变慢是因为设备必须接受和处理每个广播数据包。</p>
+<p>解决方案是使用称为“子网划分”的过程缩减网络的规模以创建更小的广播域。较小的网络空间通常称为“子网”。</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210802213121.png" alt="image-20210802213121402" style="zoom:67%;" />
+
+<p>注意，从一个单一的/16网络到两个/24网络前缀长度是如何变化的。这是基本的子网划分：使用主机位可以创建其他子网。</p>
+<h3 id="子网划分"><a href="#子网划分" class="headerlink" title="子网划分"></a>子网划分</h3><p>子网划分可以降低整体网络流量并改善网络性能。它也能让管理员实施安全策略，例如哪些子网允许或不允许进行通信。另一个原因是，它减少了由于错误配置、硬件/软件问题或恶意意图而受到异常广播流量影响的设备数量。</p>
+<p>网络管理员可以使用<strong>对网络有意义的任何其他划分来创建子网</strong>。在每个图中，子网使用较长的前缀来标识网络。</p>
+<p>理解如何对网络划分子网是所有网络管理员必须掌握的基本技能。已经创建了各种方法来帮助理解这一过程。虽然开始时会让您有点晕头转向，但是请把注意力集中于细节和实践操作，那样就会更容易理解子网划分。</p>
+<p>比如可以 按照位置、组或功能、设备类型划分</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210803094439.png" alt="image-20210803094432780" style="zoom: 67%;" />
+
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210803094550.png" alt="image-20210803094550663" style="zoom: 67%;" />
+
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210803094615.png" alt="image-20210803094615036" style="zoom:67%;" />
+
+
+
+<h2 id="子网"><a href="#子网" class="headerlink" title="子网"></a>子网</h2><h1 id="日后补充"><a href="#日后补充" class="headerlink" title="日后补充"></a>日后补充</h1><p>2.1.5终端仿真程序</p>
+<p>2.3.8用Tera Term连接控制台</p>
+<p>2.5.4捕获配置到文本中</p>
+<p>10.3.5排除默认网关故障</p>
+<h1 id="真-命令集"><a href="#真-命令集" class="headerlink" title="真*命令集"></a>真*命令集</h1><p><strong>转载自：<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_42833924/article/details/89790004">https://blog.csdn.net/qq_42833924/article/details/89790004</a><br>为自己学习方便故转载，如果大家觉得有帮助，请为原文点赞。</strong></p>
 <p>1.基本配置</p>
 <pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token class-name">R</span><span class="token operator">></span> enable   从用户模式进入特权模式
 <span class="token class-name">R</span># disable  从特权模式退到用户模式
@@ -2082,7 +2278,7 @@ rommon <span class="token number">5</span><span class="token operator">></span> 
 <span class="token number">123456789</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>23.异步连接</p>
-<pre class="line-numbers language-none"><code class="language-none">R# line number  进入线路配置模式
+<pre class="line-numbers language-cisco" data-language="cisco"><code class="language-cisco">R# line number  进入线路配置模式
 R(config-line)# login   允许一个连接
 R(config-line)# password password   提供线路上使用的口令
 R(config-line)# flowcontrol hardware|software   选择硬件流控制或软件流控制
@@ -2094,6 +2290,7 @@ R# show modemcap    显示modemcap数据库
 R(config-line)# modem edit modem_profile_name   向modemcap数据库增加条目
 R(config-line)# modemcap edit new_profile_name template existing_profile_name   创建名为new_profile_name的条目并从existing_profile_name中拷贝所有的配置
 R(config-line)# modem autoconfigure discovery   发现和自动配置连接到一个端口上的调制解调器<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 
                 
             </div>
@@ -2918,7 +3115,7 @@ R(config-line)# modem autoconfigure discovery   发现和自动配置连接到�
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">219.3k</span>&nbsp;字
+                class="white-color">223.8k</span>&nbsp;字
             
             
             
