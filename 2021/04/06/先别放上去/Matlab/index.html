@@ -402,7 +402,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-06-15
+                    2021-08-09
                 </div>
                 
 
@@ -455,7 +455,7 @@
 <li>直接转换为虚数，在运算出现时</li>
 <li>format long 切换至高精度显示  format short 默认4位</li>
 </ul>
-<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210408110030944.png" alt="image-20210408110030944"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210408110030944.png"></p>
 <p>类似jupyterbook 的模式，可以插入描述，右边可以改变输出显示模式</p>
 <p>点击命令行，会自动高亮输出行</p>
 <p>用section break功能分块，然后单独执行，会在输出中单独实时更改，不会影响其他块</p>
@@ -525,18 +525,18 @@ y <span class="token operator">=</span> x<span class="token operator">/</span><s
 <p>您可以使用 <code>legend</code> 函数为绘图添加图例。</p>
 <pre class="line-numbers language-matlab" data-language="matlab"><code class="language-matlab"><span class="token function">legend</span><span class="token punctuation">(</span>"a"<span class="token punctuation">,</span>"b"<span class="token punctuation">,</span>"c"<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p>xlim([xmin xmax])放大并查看这部分， 使用输出窗格中的数据游标查看频率位置。<br><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/tooltip.gif" alt="img"></p>
+<p>xlim([xmin xmax])放大并查看这部分， 使用输出窗格中的数据游标查看频率位置。<br><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/tooltip.gif"></p>
 <h2 id="导入"><a href="#导入" class="headerlink" title="导入"></a>导入</h2><p>import dat</p>
 <p>.mat 文件工作区保存的变量将被导入</p>
-<p>图片的话<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210408232359673.png" alt="image-20210408232359673" style="zoom:67%;" /></p>
+<p>图片的话<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210408232359673.png"  style="zoom:67%;" /></p>
 <p>文本文件或者电子表格</p>
 <p>因为有很多方式导入，这时会打开导入工具(import tools)</p>
 <p>被导入的是蓝色区域，缺失数据是橙色，将会被默认替换为NaN</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210408232547731.png" alt="image-20210408232547731"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210408232547731.png"></p>
 <p>可以选择导出模式，表将导入一个变量，变量名参考文件名，标题会被识别成变量名</p>
 <p>比如：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210408234720795.png" alt="image-20210408234720795"><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210408234728901.png" alt="image-20210408234728901"></p>
-<p>您可以通过在实时脚本的输出窗格中点击表来与表进行交互。例如，您可以使用表的一个变量对表进行排序。<br>![img](<a target="_blank" rel="noopener" href="https://matlabacademy-content.mathworks.com/4.26/R2020b/cn/content/Importing">https://matlabacademy-content.mathworks.com/4.26/R2020b/cn/content/Importing</a> Data/Importing Data as a Table/images/sorttablesmall.jpg)<br>在您对表感到满意时，您可以通过更新代码使更改永久化。<br>![img](<a target="_blank" rel="noopener" href="https://matlabacademy-content.mathworks.com/4.26/R2020b/cn/content/Importing">https://matlabacademy-content.mathworks.com/4.26/R2020b/cn/content/Importing</a> Data/Importing Data as a Table/images/updatecodesmall.jpg)</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210408234720795.png"><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210408234728901.png"></p>
+<p>您可以通过在实时脚本的输出窗格中点击表来与表进行交互。例如，您可以使用表的一个变量对表进行排序。<br>![](<a target="_blank" rel="noopener" href="https://matlabacademy-content.mathworks.com/4.26/R2020b/cn/content/Importing">https://matlabacademy-content.mathworks.com/4.26/R2020b/cn/content/Importing</a> Data/Importing Data as a Table/images/sorttablesmall.jpg)<br>在您对表感到满意时，您可以通过更新代码使更改永久化。<br>![](<a target="_blank" rel="noopener" href="https://matlabacademy-content.mathworks.com/4.26/R2020b/cn/content/Importing">https://matlabacademy-content.mathworks.com/4.26/R2020b/cn/content/Importing</a> Data/Importing Data as a Table/images/updatecodesmall.jpg)</p>
 <p>这会在脚本里自动生成相应的代码</p>
 <p>用变量和 : 提取表格，生成的变量仍是表格，<strong>即使单个，也是表格！</strong></p>
 <h2 id="逻辑索引"><a href="#逻辑索引" class="headerlink" title="逻辑索引"></a>逻辑索引</h2><p>内置了布尔值系统，但这里类型是logical      <img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210408235343375.png" alt="image-20210408235343375"></p>
@@ -683,7 +683,7 @@ data<span class="token punctuation">.</span>HeightMeters <span class="token oper
 
 
 <hr>
-<h1 id="大佬教程"><a href="#大佬教程" class="headerlink" title="大佬教程"></a>大佬教程</h1><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210409091948941.png" alt="image-20210409091948941"></p>
+<h1 id="大佬教程"><a href="#大佬教程" class="headerlink" title="大佬教程"></a>大佬教程</h1><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210409091948941.png" alt="大佬的课程大纲"></p>
 <p>先看完前五节基础必看！后面是选学</p>
 <h2 id="基本操作和矩阵输入"><a href="#基本操作和矩阵输入" class="headerlink" title="基本操作和矩阵输入"></a>基本操作和矩阵输入</h2><p>第一步，把matlab当作基本的计算机</p>
 <p>第二部，利用matlab进行矩阵运算</p>
@@ -1511,7 +1511,7 @@ data<span class="token punctuation">.</span>HeightMeters <span class="token oper
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">223.8k</span>&nbsp;字
+                class="white-color">223k</span>&nbsp;字
             
             
             

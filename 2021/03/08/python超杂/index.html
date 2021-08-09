@@ -402,7 +402,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-07-19
+                    2021-08-09
                 </div>
                 
 
@@ -1003,12 +1003,12 @@ datetime<span class="token punctuation">.</span>datetime<span class="token punct
 <p>还有Udacity的<a target="_blank" rel="noopener" href="https://anandology.com/python-practice-book/getting-started.html">文档教材</a></p>
 <h2 id="基本"><a href="#基本" class="headerlink" title="基本"></a>基本</h2><hr>
 <p>mutability 可变性</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210409100005524.png" alt="image-20210409100005524"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210409100005524.png"></p>
 <p>包含可变对象和不可变对象的变量行为不同</p>
 <p>把字符串赋给另一个变量就是复制一份，但如果是列表就类似引用</p>
 <hr>
 <p>orderd 有序性</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210409100027234.png" alt="image-20210409100027234"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210409100027234.png"></p>
 <p>有序性的容器可以使用索引，在 python 中，所有有序容器（例如列表，字符串）的起始索引都是 0。</p>
 <p>还可以使用切片</p>
 <hr>
@@ -1134,14 +1134,14 @@ hydrogen_weight <span class="token operator">=</span> elements<span class="token
 <p>　　　　　　　　<strong>return a if bool else b</strong></p>
 </blockquote>
 <h3 id="for和迭代"><a href="#for和迭代" class="headerlink" title="for和迭代"></a>for和迭代</h3><p><strong>iterable</strong> 也是一个很重要的属性！</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210409115901777.png" alt="image-20210409115901777"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210409115901777.png"></p>
 <p>字符串，列表，元组等序列结构，</p>
 <p>字典，文件等非序列类型</p>
 <p>iter()方法定义对象，使其为可迭代</p>
 <p><strong>for用于可迭代对象</strong>！！！！！习惯用单复数分别作为迭代变量名，和迭代对象名</p>
 <p>range(star,stop,step) 默认start -0 step-1  只能是整数,小心stop表示到xx停止，所以不会包含</p>
 <p>漂亮用法👇</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210409120515316.png" alt="image-20210409120515316"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210409120515316.png"></p>
 <p>只会返回一个可迭代的range对象。。得用list转化或for遍历</p>
 <hr>
 <h3 id="while"><a href="#while" class="headerlink" title="while"></a>while</h3><p><code>For</code> 循环是一种“有限迭代”，意味着循环主体将运行预定义的次数。这与“无限迭代”循环不同，无限迭代循环是指循环重复未知次数，并在满足某个条件时结束，<code>while</code> 循环正是这种情况</p>
@@ -1282,13 +1282,13 @@ nums <span class="token operator">=</span> <span class="token punctuation">[</sp
 这个是两个参数依次匹配，字典的items是用了这个原理<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>items原理（转化为一个元组列表）：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210409194823598.png" alt="image-20210409194823598"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210409194823598.png"></p>
 <p>除了可以将两个列表组合到一起之外，还可以使用星号拆分列表。</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python">some_list <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">(</span><span class="token string">'a'</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token string">'b'</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token string">'c'</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">]</span>
 letters<span class="token punctuation">,</span> nums <span class="token operator">=</span> <span class="token builtin">zip</span><span class="token punctuation">(</span><span class="token operator">*</span>some_list<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <p>这样可以创建正如之前看到的相同 <code>letters</code> 和 <code>nums</code> 列表，巧妙👇</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210409190913313.png" alt="image-20210409190913313"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210409190913313.png"></p>
 <hr>
 <p><code>enumerate</code> 是一个会返回元组迭代器的内置函数，这些元组包含列表的索引和值。当你需要在循环中获取可迭代对象的每个元素及其索引时，将经常用到该函数。</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python">letters <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'a'</span><span class="token punctuation">,</span> <span class="token string">'b'</span><span class="token punctuation">,</span> <span class="token string">'c'</span><span class="token punctuation">,</span> <span class="token string">'d'</span><span class="token punctuation">,</span> <span class="token string">'e'</span><span class="token punctuation">]</span>
@@ -1302,12 +1302,12 @@ letters<span class="token punctuation">,</span> nums <span class="token operator
 3 d
 4 e<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h4 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h4><p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210409191815484.png" alt="image-20210409191815484"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210409191831742.png" alt="image-20210409191831742"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210409192428071.png" alt="image-20210409192428071"></p>
+<h4 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h4><p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210409191815484.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210409191831742.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210409192428071.png"></p>
 <p>这个技巧很诡异，tuple可以将列表，区间，字符串，zip等（可迭代对象？）等转换为元组</p>
 <p>但在转化字典时，只会保留键。这边就是把zip迭代对象转化为元组，</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210409193651985.png" alt="image-20210409193651985"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210409193651985.png"></p>
 <p>这样就直接可以使用索引了！</p>
 <h3 id="列表解析"><a href="#列表解析" class="headerlink" title="列表解析"></a>列表解析</h3><p>终于知道SyntaxError原来是语法错误</p>
 <p>你还可以向列表推导式添加条件语句。在可迭代对象之后，你可以使用关键字 <code>if</code> 检查每次迭代中的条件。</p>
@@ -1320,16 +1320,16 @@ letters<span class="token punctuation">,</span> nums <span class="token operator
 <pre class="line-numbers language-python" data-language="python"><code class="language-python">squares <span class="token operator">=</span> <span class="token punctuation">[</span>x<span class="token operator">**</span><span class="token number">2</span> <span class="token keyword">if</span> x <span class="token operator">%</span> <span class="token number">2</span> <span class="token operator">==</span> <span class="token number">0</span> <span class="token keyword">else</span> x <span class="token operator">+</span> <span class="token number">3</span> <span class="token keyword">for</span> x <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">9</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>列表推导式并没有在其他语言中出现，但是在 python 中很常见。</p>
-<h4 id="例子-1"><a href="#例子-1" class="headerlink" title="例子"></a>例子</h4><p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210409194302935.png" alt="image-20210409194302935"></p>
+<h4 id="例子-1"><a href="#例子-1" class="headerlink" title="例子"></a>例子</h4><p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210409194302935.png"></p>
 <p>这个课程总有一些奇怪的知识藏在题解里面卧槽，split是个很重要的工具</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210409194648954.png" alt="image-20210409194648954"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210409194648954.png"></p>
 <h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><ol>
 <li>仅在函数名称中使用普通字母、数字和下划线。不能有空格，需要以字母或下划线开头。</li>
 <li><strong>不能使用在 Python 中具有重要作用的保留字或内置标识符</strong>，我们将在这门课程中学习这方面的知识。要了解 python 保留字列表，请参阅<a target="_blank" rel="noopener" href="https://pentangle.net/python/handbook/node52.html">此处</a>。</li>
 <li>尝试使用可以帮助读者了解函数作用的描述性名称</li>
 </ol>
-<h3 id="python变量"><a href="#python变量" class="headerlink" title="python变量"></a>python变量</h3><p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210409234143765.png" alt="image-20210409234143765"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210409234153818.png" alt="image-20210409234153818"></p>
+<h3 id="python变量"><a href="#python变量" class="headerlink" title="python变量"></a>python变量</h3><p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210409234143765.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210409234153818.png"></p>
 <p><em><strong>你发现在函数内，我们可以成功地输出外部变量的值。因为我们只是访问该变量的值。当我们尝试将此变量的值更改或重新赋值为另一个值时，我们将遇到错误。Python 不允许函数修改不在函数作用域内的变量。</strong></em></p>
 <p><em><strong>但是上面的原则仅适用于整数和字符串，列表、字典、集合、类中可以在子程序（子函数）中通过修改局部变量达到修改全局变量的目的。</strong></em></p>
 <h3 id="打包和解包"><a href="#打包和解包" class="headerlink" title="打包和解包"></a>打包和解包</h3><p>通用写法是*arg  **kwargs</p>
@@ -1340,7 +1340,7 @@ letters<span class="token punctuation">,</span> nums <span class="token operator
 <p>args 必须放在 kwargs 前面</p>
 <p>打包就是zip</p>
 <p>解包可以是之前介绍的写法，一个变量对应一项，对应不上就报错</p>
-<p>可以用*var 代替任意项<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210410111047193.png" alt="image-20210410111047193"></p>
+<p>可以用*var 代替任意项<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210410111047193.png"></p>
 <p><strong>函数定义时</strong>，我们用的*和**其实也是压包解包过程</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token operator">>></span><span class="token operator">></span> <span class="token keyword">def</span> <span class="token function">myfun</span><span class="token punctuation">(</span><span class="token operator">*</span>num<span class="token punctuation">)</span><span class="token punctuation">:</span>
 <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>     <span class="token keyword">print</span><span class="token punctuation">(</span>num<span class="token punctuation">)</span>
@@ -1350,7 +1350,7 @@ letters<span class="token punctuation">,</span> nums <span class="token operator
 
 <p>参数用<code>*num</code>表示，<code>num</code>变量就可以当成元组调用了。</p>
 <p>其实这个过程相当于<code>*num, = 1,2,5,6</code></p>
-<p>但是在<strong>传递参数</strong>时，是解包过程<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210410111344033.png" alt="image-20210410111344033"></p>
+<p>但是在<strong>传递参数</strong>时，是解包过程<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210410111344033.png"></p>
 <p>这个应用牛啊</p>
 <p>可以看看<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/33896402">原文</a></p>
 <h3 id="文档字符串"><a href="#文档字符串" class="headerlink" title="文档字符串"></a>文档字符串</h3><p>docstrings，文档字符串是一种注释，用于解释函数的作用以及使用方式。</p>
@@ -1366,7 +1366,7 @@ letters<span class="token punctuation">,</span> nums <span class="token operator
 <li>最后一部分是被评估并在该函数中返回的表达式，和你可能会在函数中看到的 return 语句很像。</li>
 </ol>
 <p>鉴于这种结构，lambda 表达式不太适合复杂的函数，但是非常适合简短的函数。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210409235417795.png" alt="image-20210409235417795"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210409235417795.png"></p>
 <h3 id="迭代器和生成器"><a href="#迭代器和生成器" class="headerlink" title="迭代器和生成器"></a>迭代器和生成器</h3><p>Iterator   and   generator </p>
 <p><strong>迭代器</strong>是每次可以返回一个对象元素的对象，例如返回一个列表。我们到目前为止使用的很多内置函数（例如 enumerate）都会返回一个迭代器。</p>
 <p><strong>迭代器</strong>是一种表示数据流的对象。这与列表不同，列表是可迭代对象，但不是迭代器，因为它不是数据流。</p>
@@ -1379,8 +1379,8 @@ letters<span class="token punctuation">,</span> nums <span class="token operator
         i <span class="token operator">+=</span> <span class="token number">1</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>注意，该函数使用了 yield 而不是关键字 return。这样使函数能够一次返回一个值，并且每次被调用时都从停下的位置继续。关键字 yield 是将生成器与普通函数区分开来的依据。调用该函数返回一个迭代器</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210410003534992.png" alt="image-20210410003534992"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210410003603746.png" alt="image-20210410003603746"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210410003534992.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210410003603746.png"></p>
 <p>妙啊！用size指定间距，用切片进行范围切取</p>
 <p><strong>python和c的思维方式是不一样的！</strong></p>
 <p>C要利用有限的工具进行微操，而python要巧妙利用已有的强大工具进行组合！</p>
@@ -1425,7 +1425,7 @@ to <span class="token punctuation">&#123;</span><span class="token punctuation">
 
 <h3 id="错误和异常"><a href="#错误和异常" class="headerlink" title="错误和异常"></a>错误和异常</h3><p>SyntaxError  语法异常</p>
 <p>Exception就是语法正常但是出错</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210410145517500.png" alt="image-20210410145517500"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210410145517500.png"></p>
 <p>Try 语句</p>
 <p>我们可以使用 try 语句处理异常。你可以使用 4 个子句（除了视频中显示的子句之外还有一个子句）。</p>
 <ul>
@@ -1444,7 +1444,7 @@ to <span class="token punctuation">&#123;</span><span class="token punctuation">
 <p><a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/11551996/why-do-we-need-the-finally-clause-in-python">为何在 Python 中需要 <code>finally</code> 子句？</a></p>
 <p>可用于清理代码比如关闭文件之类的👆</p>
 <p>注意一下顺序</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210410145940469.png" alt="image-20210410145940469"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210410145940469.png"></p>
 <p><strong>在这里，当执行了x = xx 时，抛出异常，直接到except里面，而不是执行break！</strong></p>
 <p><strong>访问错误信息</strong></p>
 <p>在处理异常时，依然可以如下所示地访问其错误消息：</p>
@@ -1630,7 +1630,7 @@ requests&#x3D;&#x3D;2.11.1<span aria-hidden="true" class="line-numbers-rows"><sp
 <li>复制粘贴错误消息作为搜索字词。这样会出现错误解释性信息和潜在原因。错误消息可能包括你所写的特定行号引用。只在搜索中包含这些信息之前的错误消息部分。</li>
 <li>如果找不到问题答案，自己提出问题！StackOverflow 等社区有一些行为规则，如果你要加入该社区，必须了解这些规则，但是别因为这些规则而不愿意使用这些资源。</li>
 </ul>
-<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210410161009668.png" alt="image-20210410161009668"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210410161009668.png"></p>
 <p>虽然有很多关于编程的在线资源，但是并非所有资源都是同等水平的。下面的资源列表按照大致的可靠性顺序排序。</p>
 <ol>
 <li><strong><a target="_blank" rel="noopener" href="https://docs.python.org/3/tutorial/">Python 教程</a></strong> - 这部分官方文档给出了 Python 的语法和标准库。它会举例讲解，并且采用的语言比主要文档的要浅显易懂。确保阅读该文档的 Python 3 版本！</li>
@@ -1736,9 +1736,9 @@ deactivate<span aria-hidden="true" class="line-numbers-rows"><span></span><span>
 <pre class="line-numbers language-none"><code class="language-none">conda install nb_conda<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>成功安装<code>nb_conda</code>软件包后，如果您在conda环境中运行笔记本服务器，则还可以访问下面显示的“ Conda”选项卡。在这里，您可以从Jupyter内部管理您的环境。您可以创建新环境，安装软件包，更新软件包，导出环境等等。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210410125054498.png" alt="image-20210410125054498"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210410125054498.png"></p>
 <p>此外，<code>nb_conda</code>安装后，选择内核时，您将可以访问任何conda环境。例如，下图显示了在具有几种不同conda环境的计算机上创建新笔记本的示例：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210410125313617.png" alt="image-20210410125313617"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210410125313617.png"></p>
 <p><strong>关闭前记得保存</strong></p>
 <p>您可以通过标记服务器主页上笔记本旁边的复选框并单击“关闭”来关闭各个笔记本。不过，在执行此操作之前，请确保已保存您的工作！自上次保存以来所做的任何更改都将丢失。您还需要在下次运行笔记本时重新运行代码。</p>
 <p>您可以通过在终端中按两次Control + C来关闭整个服务器。同样，这将立即关闭所有正在运行的笔记本，因此请确保您的工作已保存！</p>
@@ -1748,7 +1748,7 @@ deactivate<span aria-hidden="true" class="line-numbers-rows"><span></span><span>
 <p><strong>工具栏</strong></p>
 <p>简单明了，真不戳</p>
 <p>小键盘是命令面板。这将显示一个带有搜索栏的面板，您可以在其中搜索各种命令。这对于加速工作流程非常有帮助，因为您无需使用鼠标在菜单中四处搜索。只需打开命令面板，然后输入您要执行的操作即可。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210410130030588.png" alt="image-20210410130030588"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210410130030588.png"></p>
 <p>选项栏</p>
 <p>右边是内核类型（在我的情况下为Python 3），旁边是一个小圆圈。当内核运行单元时，它将填充。对于大多数快速运行的操作，它不会填充。这是一个小指示器，可以让您知道更长运行的代码实际上正在运行。</p>
 <p>连同工具栏中的“保存”按钮一起，笔记本会定期自动保存。标题右侧会显示最近保存的内容。您可以保存按钮，或者按与手动保存<code>escape</code>，然后按<code>s</code>。<code>escape</code>更改为命令模式，然后<code>s</code>是“保存”的快捷方式。稍后将介绍命令模式和键盘快捷键。</p>
@@ -1762,7 +1762,7 @@ deactivate<span aria-hidden="true" class="line-numbers-rows"><span></span><span>
 <p>首先，在编辑模式和命令模式之间切换。 编辑模式允许您键入单元格，而命令模式将使用按键来执行命令，例如创建新单元格和打开命令面板。 当您选择一个单元格时，您可以通过该单元格周围的框的颜色来判断当前正在使用哪种模式。 在编辑模式下，方框和左粗框显示为绿色。 在命令模式下，它们显示为蓝色。 同样在编辑模式下，您应该在单元格本身中看到一个光标。</p>
 <p>默认情况下，当您创建一个新的单元格或移动到下一个单元格时，您将处于命令模式。 要进入编辑模式，请按<strong>Enter</strong> / Return。 要从编辑模式返回到命令模式，请按<strong>Escape键</strong>。</p>
 <p>练习：单击此单元格，然后按<strong>Enter + Shift进入下一个单元格</strong>。 在编辑和命令模式之间切换几次。</p>
-<p>在命令模式按下H可以打开帮助菜单<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210410131817701.png" alt="image-20210410131817701"></p>
+<p>在命令模式按下H可以打开帮助菜单<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210410131817701.png"></p>
 <hr>
 <p><strong>常用的快捷键</strong></p>
 <p>A 创建新单元格above当前单元格</p>
@@ -1775,7 +1775,7 @@ deactivate<span aria-hidden="true" class="line-numbers-rows"><span></span><span>
 <p>S 保存！</p>
 <p>最强的是P</p>
 <p>打开万能的控制栏</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210410132647354.png" alt="image-20210410132647354"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210410132647354.png"></p>
 <h2 id="魔术关键字"><a href="#魔术关键字" class="headerlink" title="*魔术关键字"></a>*魔术关键字</h2><p>Magic Keywords</p>
 <p>魔术关键字是特殊命令，您可以在单元格中运行这些命令，以使您可以控制笔记本电脑本身或执行系统调用（例如更改目录）。例如，您可以使用设置matplotlib以在笔记本中进行交互工作<code>%matplotlib</code>。</p>
 <p>魔术命令前面分别带有针对行魔术和单元魔术的一个或两个百分号（<code>%</code>或<code>%%</code>）。线魔术仅适用于在其上写入了魔术命令的行，而单元格魔术适用于整个单元。</p>
@@ -1861,7 +1861,7 @@ jupyter nbconvert --to html mynotebook.ipynb<span aria-hidden="true" class="line
 <p>大括号或 set() 函数可以用来创建集合。注意：想要创建空集合，你必须使用 set() 而不是 {}。后者用于创建空字典</p>
 <p> basket = {‘apple’, ‘orange’, ‘apple’, ‘pear’, ‘orange’, ‘banana’}</p>
 <p>&gt;&gt;&gt; print(basket)   # 你可以看到重复的元素被去除 {‘orange’, ‘banana’, ‘pear’, ‘apple’}</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210415162713775.png" alt="image-20210415162713775"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210415162713775.png"></p>
 <p> a.add(‘c’)   输入元素   a.pop()不传参数就是随机</p>
 <p>字典</p>
 <p>del  data[‘key’] 删除键值对    in  查询键是否在字典中&gt;&gt;&gt; ‘ShiYanLou’ in data  —— False</p>
@@ -2834,7 +2834,7 @@ print(&quot;%.2f&quot;%a)<span aria-hidden="true" class="line-numbers-rows"><spa
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">223.8k</span>&nbsp;字
+                class="white-color">223k</span>&nbsp;字
             
             
             
