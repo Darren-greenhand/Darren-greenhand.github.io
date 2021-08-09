@@ -6,7 +6,7 @@
   <link href="https://darren-dong.com/atom.xml" rel="self"/>
   
   <link href="https://darren-dong.com/"/>
-  <updated>2021-08-09T06:51:58.921Z</updated>
+  <updated>2021-08-09T06:54:15.620Z</updated>
   <id>https://darren-dong.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://darren-dong.com/2021/08/09/%E8%B7%A8%E5%AD%A6%E7%A7%91%E9%80%9A%E8%AF%86%E8%AF%BE/"/>
     <id>https://darren-dong.com/2021/08/09/%E8%B7%A8%E5%AD%A6%E7%A7%91%E9%80%9A%E8%AF%86%E8%AF%BE/</id>
     <published>2021-08-09T05:47:56.000Z</published>
-    <updated>2021-08-09T06:51:58.921Z</updated>
+    <updated>2021-08-09T06:54:15.620Z</updated>
     
     <content type="html"><![CDATA[<h1 id="跨学科通识"><a href="#跨学科通识" class="headerlink" title="跨学科通识"></a>跨学科通识</h1><p><strong><a href="https://www.bilibili.com/cheese/play/ep6902">视频地址</a></strong></p><p>所长林超自阅读查理芒格观点后得出的感悟。</p><p>现实生活中的挑战并不是按照大学学科划分的，但每种学科，都为我们解决问题提供了重要的思维模型</p><p>本课程将介绍约22个学科和120个常见思维模型，以及部分应用：</p><p>热力学、函数、工程学、<strong>复杂性科学</strong>、系统论、信息论、会计学、概率论、金融学、生物学、投资学、社会学、管理学、物理学、脑科学、认知心理学、历史学、语言学、逻辑学、经济学、营销学、哲学</p><p> <strong>大多数人的一生都喜欢用一个单薄的知识结构解决所有问题，这是专业化带来的狭隘思维</strong></p><hr><p>像我这样的人才:laughing:（bushi），就应该逐步构建自己的知识体系，哈哈我就是这样做的，我在大一接触了应用数学、博弈论、经济学、投资学、心理学、信息论、运筹学，但是学习方法不对，我需要的不是变成所有领域的专家，而是专精一两门（数据科学+经济学），然后学到其他学科的思考模型，先拿林超大大的课试试水。</p><hr><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210809140718.png" alt="image-20210809140718135" style="zoom: 33%;" /><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210809140824.png" alt="image-20210809140824806" style="zoom: 33%;" /><p>20-35岁是人生的黄金时间，抓住啊！</p><h2 id="一、熵与热力学"><a href="#一、熵与热力学" class="headerlink" title="一、熵与热力学"></a>一、熵与热力学</h2><h3 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h3><p>S = k * lnW  也可以说熵正比于微状态数</p><p>可能性大 = 熵高 = 混乱程度高</p><p>这个世界上混乱才是常态，有序需要<strong>刻意营造</strong></p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210809142123.png" alt="image-20210809142122919" style="zoom: 25%;" /><p>熵增定律</p><p>封闭系统，与外界隔绝，随时间推移趋于混乱。</p><p>趋于有序的方法</p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210809142524.png" alt="image-20210809142524122" style="zoom: 25%;" /><p>只要它能正确的做好这两件事，就能使事物变得更加有序。</p><hr><p><strong>应用：思维决策层</strong></p><p>在”脑子里放一个小人“，判断该不该继续思考数量繁多而无序的念头，就能让思维变得有序，这相当于是在正常人的思维输入输出模型里面又加了一个决策层啊！果然方法论决定对外界的反馈，厉害。</p><hr><p>耗散结构</p><p>感知和选择需要信息和能量，封闭系统变成开放系统，吸收外界的能量和信息</p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210809142944.png" alt="image-20210809142944134" style="zoom:33%;" /><p>流水不腐就是一个耗散结构，人体也是，耗散结构是一个动态平衡体，变化又保持一个平衡状态。</p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210809143434.png" alt="image-20210809143426849" style="zoom:33%;" /><h3 id="运转策略"><a href="#运转策略" class="headerlink" title="运转策略"></a><strong>运转策略</strong></h3><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210809143513.png" alt="image-20210809143513225" style="zoom: 33%;" /><p>ps:虽然很多人都是这么做的，但是却没有总结成结论，没有总结成结论，运用的时候就会无效思考，心生犹豫，但若是作为一条公理、定理，一项判断决策，那就非常有价值了！</p><p><strong>人们应该把焦点全部放在蓝色部分的因，接纳红色的因，而不是因为红色的果而感到自责，反而阻止了身体继续排出熵。所以鸡汤里面的依靠决心和自责什么的假大空的，其实就是抓错了重点。</strong></p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210809143954.png" alt="image-20210809143954130" style="zoom:25%;" /><p>我们改变不了整体系统，但我们可以改变 <strong>感知+选择</strong> 这件事</p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210809144227.png" alt="image-20210809144227039" style="zoom: 33%;" /><p>有些人会困在先天的家庭环境带来的红色的果里，有些人会找到铁饭碗，陷入封闭系统里，这个世界充满辩证法，耗散里的选择才是最关键的，如果落实到具体做法，请看👇</p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210809144756.png" alt="image-20210809144756807" style="zoom:50%;" /><p>逐渐的，两种模式都会形成坚固的闭环。B模式总会伴随痛苦，反人性，充满困难。</p><p>工程学告诉我们如何拆解困难，化为一件件小事，轻松KO。</p><h2 id="二、工程学"><a href="#二、工程学" class="headerlink" title="二、工程学"></a>二、工程学</h2>]]></content>
     
@@ -35,8 +35,6 @@
     
     <category term="thought" scheme="https://darren-dong.com/categories/thought/"/>
     
-    
-    <category term="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210809135209.jpg" scheme="https://darren-dong.com/tags/https-cdn-jsdelivr-net-gh-Darren-greenhand-Darren-greenhand-image-img-20210809135209-jpg/"/>
     
   </entry>
   
