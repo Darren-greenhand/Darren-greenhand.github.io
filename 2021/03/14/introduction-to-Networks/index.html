@@ -424,21 +424,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新之期:&nbsp;&nbsp;
-                    2021-08-09
+                    2021-08-13
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    38.9k
+                    38.7k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    145 分
+                    144 分
                 </div>
                 
 
@@ -1682,11 +1682,11 @@ Router# copy running-config startup-config<span aria-hidden="true" class="line-n
 
 <h2 id="配置接口"><a href="#配置接口" class="headerlink" title="配置接口"></a>配置接口</h2><p>下一步将配置它们的接口。这是因为在配置接口之前，终端设备无法访问路由器。</p>
 <p>配置路由器接口的任务与交换机上管理 SVI 非常相似。具体来说，它包括发出以下命令：</p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">Router<span class="token punctuation">(</span>config<span class="token punctuation">)</span><span class="token comment"># interface type-and-number</span>
-Router<span class="token punctuation">(</span>config-if<span class="token punctuation">)</span><span class="token comment"># description description-text</span>
-Router<span class="token punctuation">(</span>config-if<span class="token punctuation">)</span><span class="token comment"># ip address ipv4-address subnet-mask</span>
-Router<span class="token punctuation">(</span>config-if<span class="token punctuation">)</span><span class="token comment"># ipv6 address ipv6-address/prefix-length</span>
-Router<span class="token punctuation">(</span>config-if<span class="token punctuation">)</span><span class="token comment"># no shutdown</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">Router(config)# interface type-and-number
+Router(config-if)# description description-text
+Router(config-if)# ip address ipv4-address subnet-mask
+Router(config-if)# ipv6 address ipv6-address&#x2F;prefix-length
+Router(config-if)# no shutdown<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>此表总结了用于验证接口配置的更常用 <strong>show</strong> 命令。</p>
 <table>
@@ -1736,54 +1736,24 @@ Router<span class="token punctuation">(</span>config-if<span class="token punctu
 <p>对于同一网络中的所有设备，地址的网络部分中的位必须完全相同。地址的主机部分中的位必须唯一，这方便识别网络中的特定主机。如果两台主机在 32 位数据流中的指定网络部分有相同的位模式，则这两台主机位于同一网络。但是，主机如何知道 32 位数据流中的哪一部分用于标识网络，哪一部分用于标识主机呢？这就是子网掩码的作用。</p>
 <h3 id="子网掩码"><a href="#子网掩码" class="headerlink" title="子网掩码"></a>子网掩码</h3><p>子网掩码是一个1位连续序列，后面跟有一个0位连续序列组成的序列。</p>
 <p>为了确定 IPv4 地址的网络部分和主机部分，要将子网掩码与 IPv4 地址进行从左到右逐位比较（如图所示）。</p>
-<p>&lt;img src=”<a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210802161118.png&quot;">https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210802161118.png&quot;</a> “ style=”zoom:67%;” /&gt;</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210802161118.png"  style="zoom:67%;" />
+
 <p>子网掩码实际上不包含 IPv4 地址的网络部分或主机部分，它仅通知计算机在哪里查找IPv4地址的网络部分和主机部分。</p>
 <p>用于确定网络部分和主机部分的实际流程叫做 AND 运算。</p>
 <h3 id="前缀长度"><a href="#前缀长度" class="headerlink" title="前缀长度"></a>前缀长度</h3><p>使用点分十进制子网掩码地址表示网络地址和主机地址会变得很麻烦。幸运的是，还有另一种识别子网掩码的方法，称为前缀长度。前缀长度是子网掩码中设置为 1 的位数。使用“斜线记法”写入，即“/”紧跟设置为 1 的位数。借此计算子网掩码中的位数，并在前面加斜线表示。</p>
 <p>长度的多少取决于网络的规模</p>
-<p>&lt;img src=”<a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210802161306.png&quot;">https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210802161306.png&quot;</a> “ style=”zoom:67%;” /&gt;</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210802161306.png"  style="zoom:67%;" />
+
 <p>当使用前缀长度表示 IPv4 地址时，IPv4 地址后面写入不带空格的前缀长度。例如192.168.10.10 255.255.255.0可以写成192.168.10.10/24。后面将讨论各种类型前缀长度的使用。目前重点是 /24（例如 255.255.255.0）前缀。</p>
+<p>网络地址是表示特定网络的地址。如果设备满足以下三个条件，则属于此网络：</p>
+<ul>
+<li>它具有与网络地址相同的子网掩码。</li>
+<li>它具有与网络地址相同的网络位，如子网掩码所示。</li>
+<li>它与具有相同网络地址的其他主机位于同一广播域中。</li>
+</ul>
+<p>主机通过在其 <u>IPv4 地址与其子网掩码之间执行一个AND运算来确定其网络地址。</u></p>
 <p>如下：</p>
-<table>
-<thead>
-<tr>
-<th align="left"></th>
-<th align="center"><strong>网络部分</strong></th>
-<th align="center"><strong>主机部分</strong></th>
-<th align="center"><strong>主机位数</strong></th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">子网掩码为 **255.255.255.**0 或 <strong>/24</strong></td>
-<td align="center"><code>255      255      25511111111 11111111 11111111</code></td>
-<td align="center"><code>000000000</code></td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="left">网络地址为 **192.168.10.**0 或 <strong>/24</strong></td>
-<td align="center"><code>192      168       1011000000 10100000 00001010</code></td>
-<td align="center"><code>000000000</code></td>
-<td align="center">全都是0</td>
-</tr>
-<tr>
-<td align="left">第一个地址 <strong>192.168.10</strong>.1 或 <strong>/24</strong></td>
-<td align="center"><code>192      168       1011000000 10100000 00001010</code></td>
-<td align="center"><code>100000001</code></td>
-<td align="center">除最后一位为1以外其他位全是0位</td>
-</tr>
-<tr>
-<td align="left">最后一个地址 <strong>192.168.10</strong>.254 或 <strong>/24</strong></td>
-<td align="center"><code>192      168       1011000000 10100000 00001010</code></td>
-<td align="center"><code>25411111110</code></td>
-<td align="center">除最后一位为0以外其他位全是1位</td>
-</tr>
-<tr>
-<td align="left">广播地址 <strong>192.168.10</strong>.255 或 <strong>/24</strong></td>
-<td align="center"><code>192      168       1011000000 10100000 00001010</code></td>
-<td align="center"><code>25511111111</code></td>
-<td align="center">全都是1</td>
-</tr>
-</tbody></table>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210813113919883.png" alt="image-20210813113919883"></p>
 <h3 id="单播、组播、广播"><a href="#单播、组播、广播" class="headerlink" title="单播、组播、广播"></a>单播、组播、广播</h3><p>IPv4 单播主机地址的地址范围是 1.1.1.1到 223.255.255.255。不过，此范围中的很多地址被留作特殊用途。这些特殊用途的地址将在本模块后续部分讨论。</p>
 <p>广播数据包以主机部分全部为 1 的地址<strong>或32个1位</strong>作为目的 IP地址。</p>
 <p><strong>注意:</strong> IPv4使用广播数据包但是，IPv6没有广播数据包。</p>
@@ -1796,7 +1766,8 @@ Router<span class="token punctuation">(</span>config-if<span class="token punctu
 <p>组播数据包是一个目的IP地址为组播地址的数据包。IPv4 将 224.0.0.0 到 239.255.255.255 的地址保留为组播范围。</p>
 <p>接收特定组播数据包的主机称为组播客户端。组播客户端使用客户端程序请求的服务来加入组播组。每个组播组由一个 IPv4 组播目的地址代表。当 IPv4 主机加入组播组后，<strong>该主机既要处理目的地址为此组播地址的数据包，也要处理发往其唯一单播地址的数据包。</strong></p>
 <p>路由协议（如 OSPF）使用组播传输。例如，启用 OSPF 的路由器使用保留的 OSPF 组播地址 224.0.0.5 相互通信。只有启用 OSPF 的设备才会以 224.0.0.5 作为目的 IPv4 地址处理这些数据包。所有其他设备将忽略这些数据包。</p>
-<p>&lt;img src=”<a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210802163316.png&quot;">https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210802163316.png&quot;</a> “ style=”zoom:50%;” /&gt;</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210802163316.png"  style="zoom:50%;" />
+
 <h2 id="地址分类"><a href="#地址分类" class="headerlink" title="地址分类"></a>地址分类</h2><p>一些 IPv4 地址不能用于外联到互联网，而其他地址则专门用于路由到互联网。一些用于验证连接，另一些则是自分配的。</p>
 <p>公有 IPv4 地址是能在 ISP（互联网运营商）路由器之间全局路由的地址。但是，并非所有可用的 IPv4 地址都可用于互联网。<strong>大多数组织</strong>使用称为私有地址的地址块向内部主机分配 IPv4 地址。</p>
 <p>20 世纪 90 年代中期，随着万维网(WWW)的引入，由于 IPv4 地址空间耗尽，引入了私有 IPv4 地址。私有 IPv4 地址并不是唯一的，可以在任何网络内部使用它。</p>
@@ -1823,11 +1794,15 @@ Router<span class="token punctuation">(</span>config-if<span class="token punctu
 </tr>
 </tbody></table>
 <p><strong>注意</strong>: 私有地址在 RFC 1918 中定义，有时也称为 RFC 1918 地址空间。</p>
-<p>在 ISP 可以转发此数据包之前，它必须使用网络地址转换 (NAT) 将源 IPv4 地址（即私有地址）转换为公有 IPv4 地址。NAT用于转换私有和公有 IPv4 地址。这通常是在将内部网络连接到 ISP 网络的路由器上完成。在路由到互联网之前，组织内部网中的私有 IPv4 地址将被转换为公有 IPv4 地址。</p>
-<p><strong>注意</strong>: 虽然具有私有 IPv4 地址的设备无法通过互联网从另一个设备直接访问，但 IETF 并不认为私有 IPv4 地址或 NAT 是有效的安全措施。</p>
-<p>&lt;img src=”<a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210802181758.png&quot;">https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210802181758.png&quot;</a> “ style=”zoom:67%;” /&gt;</p>
+<p>在 ISP 可以转发此数据包之前，它必须使用网络地址转换 (NAT) 将源 IPv4 地址（即私有地址）转换为公有 IPv4 地址。<strong>NAT用于转换私有和公有 IPv4 地址</strong>。这通常是在将内部网络连接到 ISP 网络的<strong>路由器上完成</strong>。在路由到互联网之前，组织内部网中的私有 IPv4 地址将被转换为公有 IPv4 地址。</p>
+<p><strong>注意</strong>: 虽然具有私有 IPv4 地址的设备无法通过互联网从另一个设备直接访问，<u>但 IETF 并不认为私有 IPv4 地址或 NAT 是有效的安全措施。</u></p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210802181758.png"  style="zoom:67%;" />
+
 <p>拥有可用于互联网的资源的组织（如 Web 服务器）也将拥有具有公有 IPv4 地址的设备。如图所示，该网络的这一部分被称为DMZ（非军事区）(demilitarized zone)。图中的路由器不仅执行路由，还执行 NAT 并充当安全防火墙。</p>
-<p>&lt;img src=”<a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210802181935.png&quot;">https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210802181935.png&quot;</a> “ style=”zoom:67%;” /&gt;</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210802181935.png"  style="zoom:67%;" />
+
+
+
 <h3 id="专用地址"><a href="#专用地址" class="headerlink" title="专用地址"></a>专用地址</h3><p><strong>环回地址</strong></p>
 <p>环回地址（127.0.0.0 /8 或 127.0.0.1 到 127.255.255.254）通常仅被标识为127.0.0.1，主机使用这些特殊地址将流量指向其自身。例如，如图所示，主机可以使用这个特殊地址测试 TCP/IP 配置是否运行正常。注意 127.0.0.1 环回地址对 <strong>ping</strong> 命令的应答。</p>
 <p><strong>本地链路地址</strong></p>
@@ -1849,15 +1824,21 @@ Router<span class="token punctuation">(</span>config-if<span class="token punctu
 <p>因此，每个路由器接口都连接了一个广播域，而广播只能在特定广播域内传播。</p>
 <p>大型广播域是连接很多主机的网络。大型广播域的一个问题是这些主机会生成太多广播，这会对网络造成不良影响。在图中，局域网1 连接了 400 个用户，可能会产生过量的广播流量。这会导致网络操作速度缓慢，因为它会导致大量的流量，而设备操作变慢是因为设备必须接受和处理每个广播数据包。</p>
 <p>解决方案是使用称为“子网划分”的过程缩减网络的规模以创建更小的广播域。较小的网络空间通常称为“子网”。</p>
-<p>&lt;img src=”<a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210802213121.png&quot;">https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210802213121.png&quot;</a> “ style=”zoom:67%;” /&gt;</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210802213121.png" style="zoom:67%;" />
+
 <p>注意，从一个单一的/16网络到两个/24网络前缀长度是如何变化的。这是基本的子网划分：使用主机位可以创建其他子网。</p>
 <h3 id="子网划分"><a href="#子网划分" class="headerlink" title="子网划分"></a>子网划分</h3><p>子网划分可以降低整体网络流量并改善网络性能。它也能让管理员实施安全策略，例如哪些子网允许或不允许进行通信。另一个原因是，它减少了由于错误配置、硬件/软件问题或恶意意图而受到异常广播流量影响的设备数量。</p>
 <p>网络管理员可以使用<strong>对网络有意义的任何其他划分来创建子网</strong>。在每个图中，子网使用较长的前缀来标识网络。</p>
 <p>理解如何对网络划分子网是所有网络管理员必须掌握的基本技能。已经创建了各种方法来帮助理解这一过程。虽然开始时会让您有点晕头转向，但是请把注意力集中于细节和实践操作，那样就会更容易理解子网划分。</p>
 <p>比如可以 按照位置、组或功能、设备类型划分</p>
-<p>&lt;img src=”<a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210803094439.png&quot;">https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210803094439.png&quot;</a> “ style=”zoom: 67%;” /&gt;</p>
-<p>&lt;img src=”<a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210803094550.png&quot;">https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210803094550.png&quot;</a> “ style=”zoom: 67%;” /&gt;</p>
-<p>&lt;img src=”<a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210803094615.png&quot;">https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210803094615.png&quot;</a> “ style=”zoom:67%;” /&gt;</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210803094439.png"  style="zoom: 67%;" />
+
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210803094550.png" style="zoom: 67%;" />
+
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210803094615.png"  style="zoom:67%;" />
+
+
+
 <h2 id="子网"><a href="#子网" class="headerlink" title="子网"></a>子网</h2><h1 id="日后补充"><a href="#日后补充" class="headerlink" title="日后补充"></a>日后补充</h1><p>2.1.5终端仿真程序</p>
 <p>2.3.8用Tera Term连接控制台</p>
 <p>2.5.4捕获配置到文本中</p>
@@ -3111,7 +3092,7 @@ R(config-line)# modem autoconfigure discovery   发现和自动配置连接到�
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">205.4k</span>&nbsp;字
+                class="white-color">208k</span>&nbsp;字
             
             
             
