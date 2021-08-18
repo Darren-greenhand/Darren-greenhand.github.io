@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>卑微仔仔</title>
+  <title>Darren观测站</title>
   
-  <subtitle>爱好数据科学和经济学</subtitle>
+  <subtitle>如今这世框架已成，只得于边际再开新光</subtitle>
   <link href="https://darren-dong.com/atom.xml" rel="self"/>
   
   <link href="https://darren-dong.com/"/>
