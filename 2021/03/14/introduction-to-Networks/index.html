@@ -431,14 +431,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    62.6k
+                    63.5k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    227 分
+                    230 分
                 </div>
                 
 
@@ -2767,7 +2767,37 @@ Router(config-if)# no shutdown<span aria-hidden="true" class="line-numbers-rows"
 <li>阻止暴力密码猜测攻击</li>
 <li>在指定时间后 禁用非活动的特权 EXEC 模式访问。</li>
 </ul>
-<p>启用SSH</p>
+<p>启用<strong>SSH</strong></p>
+<p>Telnet简化了远程设备访问，但并不安全。Telnet 数据包中包含的数据以未加密形式传输。因此，强烈建议在设备上启用安全外壳 (SSH) 以进行安全远程访问。</p>
+<p>可以通过下列六个步骤来配置思科设备以支持 SSH。</p>
+<p>步骤 1. 配置唯一的主机名。设备必须有一个唯一的主机名，而不是默认主机名。</p>
+<p>步骤 2. 配置 IP 域名. 使用全局配置命令 ip-domain name 配置网络的 IP 域名。</p>
+<p>步骤 3. 生成密钥来加密 SSH 流量. SSH 加密源和目的地之间的流量。但是，要这样做，必须使用全局配置命令 crypto key generate rsa general-keys modulus 位数 生成唯一的身份验证密钥。该模数位数确定密钥大小并且可配置为 360 位至 2048 位。位值越大，密钥越安全。然而，较大的位值也需要较长的时间来加密和解密信息。最小建议系数长度为 1024 位。</p>
+<p>步骤 4. 验证或创建一个本地数据库条目。使用 username 全局配置命令来创建本地数据库用户名条目。在示例中，使用了参数 secret，因此密码将使用MD5加密。</p>
+<p>步骤 5. 向本地数据库认证身份。使用 login local 线路配置命令对本地数据库的vty线路进行身份验证。</p>
+<p>步骤 6. 启用 vty inbound SSH 会话. 默认情况下，在vty线路上不允许输入会话。您可以使用 transport input [ssh | telnet] 命令指定多个输入协议，包括 Telnet 和 SSH。</p>
+<p>如示例所示，路由器R1配置在span.com域中。此信息与 crypto key generate rsa general-keys modulus 命令中指定的位值一起使用，用于创建加密密钥。</p>
+<p>接下来，为名为 Bob 的用户创建本地数据库条目。最后，将vty线路配置为根据本地数据库进行身份验证，并且只接受传入的SSH会话。</p>
+<pre class="line-numbers language-none"><code class="language-none">Router# configure terminal
+Router(config)# hostname R1
+R1(config)# ip domain name span.com
+R1(config)# crypto key generate rsa general-keys modulus 1024
+The name for the keys will be: Rl.span.com % The key modulus size is 1024 bits
+% Generating 1024 bit RSA keys, keys will be non-exportable...[OK]
+Dec 13 16:19:12.079: %SSH-5-ENABLED: SSH 1.99 has been enabled
+R1(config)#
+R1(config)# username Bob secret cisco
+R1(config)# line vty 0 4
+R1(config-line)# login local
+R1(config-line)# transport input ssh
+R1(config-line)# exit
+R1(config)#<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>我迷惑了。。</p>
+<p>思科路由器和交换机启动时会有一列活动服务，这些活动在您的网络中可能需要或不需要。禁用任何未使用的服务以保留系统资源，如CPU周期和RAM，并防止威胁发起者利用这些服务。默认打开的服务类型将根据IOS版本而有所不同。例如，IOS-XE 通常只打开 HTTPS 和 DHCP 端口。您可以使用 show ip ports all 命令来验证这一点。</p>
+<p>使用 no ip http server 全局配置命令禁用 HTTP。通过在行配置命令 transport input ssh 中指定仅 SSH 来禁用 Telnet 。</p>
+<h1 id="构建小型网络"><a href="#构建小型网络" class="headerlink" title="构建小型网络"></a>构建小型网络</h1><p>欢迎来学习构建小型网络！</p>
+<p>棒极了！您已经来到了网络简介 v7.0 课程的最后一个模块。您已经掌握了建立自己的网络所需的大部分基础知识。从现在开始怎么做？当然，你要构建一个网络。而且您不仅要构建它，还要验证它是否正常工作，甚至还要解决一些常见的网络问题。</p>
 <h1 id="日后补充"><a href="#日后补充" class="headerlink" title="日后补充"></a>日后补充</h1><p>2.1.5终端仿真程序</p>
 <p>2.3.8用Tera Term连接控制台</p>
 <p>2.5.4捕获配置到文本中</p>
@@ -4021,7 +4051,7 @@ R(config-line)# modem autoconfigure discovery   发现和自动配置连接到�
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">233.9k</span>&nbsp;字
+                class="white-color">236.2k</span>&nbsp;字
             
             
             
