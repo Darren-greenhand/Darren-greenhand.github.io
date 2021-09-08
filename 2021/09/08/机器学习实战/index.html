@@ -4,7 +4,7 @@
 
 <head>
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
-    <meta name="keywords" content="tensorflow-note, Darren观测站">
+    <meta name="keywords" content="机器学习实战, Darren观测站">
     <meta name="description" content="Data Science and finance">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>tensorflow-note | Darren观测站</title>
+    <title>机器学习实战 | Darren观测站</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -271,12 +271,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210426224302.png')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/robot-2301646.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">tensorflow-note</h1>
+                    <h1 class="description center-align post-title">机器学习实战</h1>
                 </div>
             </div>
         </div>
@@ -392,8 +392,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E5%85%AB%E8%82%A1/">
-                                <span class="chip bg-color">八股</span>
+                            <a href="/tags/python/">
+                                <span class="chip bg-color">python</span>
                             </a>
                         
                     </div>
@@ -417,28 +417,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布之期:&nbsp;&nbsp;
-                    2021-04-26
+                    2021-09-08
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新之期:&nbsp;&nbsp;
-                    2021-09-06
+                    2021-09-08
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.5k
+                    463
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    5 分
+                    1 分
                 </div>
                 
 
@@ -466,193 +466,38 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>本课程结构：</p>
-<ol>
-<li>神经网络计算：搭建第一个神经网络模型</li>
-<li>神经网络优化：学习率、激活函数、损失函数、正则化、自写优化器</li>
-<li>神经网络八股：搭建八股“六步法”</li>
-<li>网络八股扩展：八股拓展：自制数据集、数据增强、断点续训、参数提取、可视化、给图识物</li>
-<li>卷积神经网络：用CNN和一些工具实现图像识别</li>
-<li>循环神经网络：用RNN和一些工具实现股票预测</li>
-</ol>
-<hr>
-<p>每一章的思维框架借鉴了<a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_42186072/article/details/106669979">大佬的博客</a>，学完一章可以看这里</p>
-<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210428155209.png" alt="课程概览" style="zoom: 67%;" />
-
-<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210428155220.png" alt="引入"></p>
-<h2 id="鸢尾花"><a href="#鸢尾花" class="headerlink" title="鸢尾花"></a>鸢尾花</h2><p>专家系统是理性的。（if case。）</p>
-<p>但是有些花农直接可以看出种类，因为他们见了太多，而且经验越丰富，识别准确率越高</p>
-<p>这是一种感性的直觉，是这门课介绍的神经网络方法</p>
-<img src="https://gitee.com/darren-greenhand//picture/raw/master/20210426223114.png" style="zoom:33%;" />
-
-<hr>
-<p>具体实现</p>
-<p>MP模型，每个输入特征乘以线上的权重，再通过一个非线性函数输出，简化是去掉非线性函数</p>
-<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210426224043.png" style="zoom:33%;" />
-
-<p>每个输出节点都链接了所有的输入关系，称为全连接网络</p>
-<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210426224129.png" style="zoom:33%;" />
-
-<h2 id="TF2"><a href="#TF2" class="headerlink" title="TF2"></a>TF2</h2><p>把numpy格式转换为tensor格式</p>
-<p>创建形式和numpy非常类似！</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210428155247.png" alt="创建"></p>
-<hr>
-<p>tensorflow中一切皆为张量，包括输出的常数结果也是一个shape = ()的tensor类型张量</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210428155255.png" alt="函数"></p>
-<p>其中tf.argmax可以直接接受numpy数组类型的参数</p>
-<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210426234353.png" style="zoom:33%;" />
-
-<h2 id="鸢尾花2"><a href="#鸢尾花2" class="headerlink" title="鸢尾花2"></a>鸢尾花2</h2><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210426235530.png" style="zoom: 33%;" />
-
-
-
-<p>class1 P45 <strong>非常重要</strong>，建议全文背诵hhh</p>
-<h1 id="参数知识"><a href="#参数知识" class="headerlink" title="参数知识"></a>参数知识</h1><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210428155310.png" alt="第二章" style="zoom:50%;" />
-
-<p>先介绍一些函数：</p>
-<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210427095155.png" style="zoom:25%;" />
-
-<p>记住这个是逐个比较</p>
-<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210427095313.png" style="zoom:25%;" />
-
-
-
-<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210427095925.png" style="zoom: 25%;" />
-
-<hr>
-<p><strong>复杂度</strong></p>
-<p>输入层不算层数</p>
-<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210427132521.png" style="zoom:25%;" />
-
-<p><strong>学习率</strong></p>
-<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210427132837.png" style="zoom:25%;" />
-
-<p>只是增加了一些代码</p>
-<hr>
-<h2 id="激活函数"><a href="#激活函数" class="headerlink" title="激活函数"></a><strong>激活函数</strong></h2><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210427191332.png" style="zoom:25%;" />
-
-
-
-
-
-<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210427191556.png" style="zoom:25%;" />
-
-<p>因为反向传播从输出层向输入层逐层求导，每一层的导数都落在0-0.25，多了以后趋于0，称为<strong>梯度消失</strong>，无法更新参数。所以sigmoid函数如今用的很少了</p>
-<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210427191737.png" style="zoom:25%;" />
-
-<p>通过调整初始化来避免“神经元死亡（一直是0）”，可以设置更小的学习率，减少参数分布的巨大变化，来👆</p>
-<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210427192342.png" style="zoom:25%;" />
-
-<p>初学者的建议：</p>
-<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210427192420.png" style="zoom:25%;" />
-
-<p>对零均值化的解释：</p>
-<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/wtrnash/article/details/87893725">https://blog.csdn.net/wtrnash/article/details/87893725</a></p>
-<h2 id="损失函数"><a href="#损失函数" class="headerlink" title="损失函数"></a>损失函数</h2><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210427194702.png" style="zoom:25%;" />
-
-<p>loss_mse = tf.reduce.mean(tf.square(y_-y))</p>
-<p>P19随机数使用很秀。</p>
-<p>有时候也要根据实际情况自定义损失函数。</p>
-<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210427200949.png" style="zoom:25%;" />
-
-<p>交叉熵计算概率分布间的距离</p>
-<p>tf.losses.categorical_crossentropy(y,y_)</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210427201314.png"></p>
-<p>这个虽然可以配合softmax使用，但是还有集成的👇</p>
-<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210427201845.png" style="zoom:25%;" />
-
-<p>如图，一换二不亏</p>
-<h2 id="拟合"><a href="#拟合" class="headerlink" title="拟合"></a>拟合</h2><p>欠拟合是对现有数据集学习的不太彻底，拟合效果不好</p>
-<p>过拟合是对现有数据拟合的太好，却对新数据难以处理</p>
-<p>ps：</p>
-<p>在机器学习的<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E4%B8%8A%E4%B8%8B%E6%96%87">上下文</a>中，超参数是在开始学习过程之前设置值的参数。 相反，其他参数的值通过训练得出。</p>
-<p>超参数：</p>
-<ul>
-<li>定义关于模型的更高层次的概念，如复杂性或学习能力。</li>
-<li>不能直接从标准模型培训过程中的数据中学习，需要预先定义。</li>
-<li>可以通过设置不同的值，训练不同的模型和选择更好的测试值来决定</li>
+                <h1 id="机器学习实战"><a href="#机器学习实战" class="headerlink" title="机器学习实战"></a>机器学习实战</h1><p><a target="_blank" rel="noopener" href="https://github.com/Darren-greenhand/handson-ml2">仓库地址</a></p>
+<p>本书内容广博，不仅介绍了传统ML，还用sklearn演示了端到端训练实例。</p>
+<p>尤其对DL进行了深入探讨，涵盖强化学习、利用TF/Keras构建和训练神经网络</p>
+<h2 id="ML"><a href="#ML" class="headerlink" title="ML"></a>ML</h2><h3 id="1-前置补充"><a href="#1-前置补充" class="headerlink" title="1. 前置补充"></a>1. 前置补充</h3><ul>
+<li>在机器学习里，属性是一种数据类型，而特征取决于上下文，通常意味着属性+值</li>
+<li>一些回归算法和可用于分类任务，反之亦然。比如逻辑回归可以输出“属于某个给定类别的概率”，可用于分类</li>
+<li>无监督应用：<ul>
+<li>聚类</li>
+<li>异常检测、新颖性检测</li>
+<li>可视化、降维（可先用降维减少数据维度，再提供给别的算法）</li>
+<li>关联规则学习</li>
 </ul>
-<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210427202855.png"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210427203023.png"></p>
-<p>P29有最优化代码</p>
-<p>把区分0和1的分界线0.5标出颜色</p>
-<h2 id="优化器（跳）"><a href="#优化器（跳）" class="headerlink" title="优化器（跳）"></a>优化器（跳）</h2><p>神经网络参数优化器</p>
-<p><strong>不同的优化器，实质上只是定义了一阶动量和二阶动量的公式。</strong></p>
-<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210427212011.png" style="zoom:25%;" />
-
-<p>？？？？这个公式是什么鬼</p>
-<p>gt是梯度，梯度下降优化器👇P32</p>
-<p>我跑出来6.5s</p>
-<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210427212319.png" style="zoom:25%;" />
-
-<p>我跑出来7.7s</p>
-<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210427212651.png" style="zoom:25%;" />
-
-<p>这个公式,加了一个二阶动量，python实现如下👇P34</p>
-<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210427212820.png" style="zoom:25%;" />
-
-<hr>
-<p>P36 7.3s</p>
-<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210427212903.png" style="zoom:25%;" />
-
-<p>移动平均-&gt;指数滑动平均：</p>
-<p>指数平滑法是在<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E7%A7%BB%E5%8A%A8%E5%B9%B3%E5%9D%87%E6%B3%95/10785547">移动平均法</a>基础上发展起来的，它具有移动平均法的优点，又可以减少运算过程中的数据储存量，同时还考虑了不同时期的数据所起的不同作用。采用指数平滑法的关键是确定α值。一般情况下，α值的大小，既和反映近期数据的能力有关，也和数据波动状况有关。通常不直接利用一次指数平滑法来预测，而是利用二次指数平滑法，求出平滑系数，建立起预测模型，再进行预测</p>
-<p>P38 8.3s</p>
-<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210427213327.png" style="zoom:25%;" />
-
-<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210427213358.png" style="zoom:25%;" />
-
-<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210427213417.png" style="zoom:25%;" />
-
-<p>请注意：<strong>pycharm开的控制台越多越卡</strong>，所以之前的数据应该作废呜呜。。。还有以后跑之前记得把控制台全部关上。</p>
-<h1 id="八股"><a href="#八股" class="headerlink" title="八股"></a>八股</h1><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210428155317.png" alt="第三章" style="zoom: 67%;" />
-
-<p>使用keras搭建</p>
-<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210427213648.png" style="zoom:25%;" />
-
-<p>MNIST是著名的手写数字识别</p>
-<p>Fashion是著名的着装图片识别。</p>
-<h2 id="提纲"><a href="#提纲" class="headerlink" title="提纲"></a>提纲</h2><p>六步：</p>
-<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210428155521.png" style="zoom: 50%;" />
-
-<p><strong>导入</strong></p>
-<p><strong>设定训练、测试集</strong></p>
-<p><strong>逐层搭建神经网络、前向传播</strong></p>
-<p><strong>配置训练方法（优化器、损失函数、评测指标）</strong></p>
-<p><strong>执行训练过程</strong></p>
-<p><strong>打印网络结构和参数统计</strong></p>
-<p>Sequential可以认为是个容器，封装了神经网络的结构</p>
-<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210428155749.png" style="zoom: 33%;" />
-
-<p>卷积神经网络和循环神经网络，在第五讲和第六讲的时候再讲。</p>
-<p>compile里的参数既可以填默认的字符串，亦可以写出具体函数然后细调参数</p>
-<p>入门建议<strong>直接写名字</strong>，等掌握了再去官网查看函数的具体用法，调整超参数，细调函数参数</p>
-<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210428155802.png" style="zoom:33%;" />
-
-<p>注意from_logits判断是否经过了概率分布，如果没有进过概率分布，该参数就是true</p>
-<p>后面经常使用sparse_categorical_accuracy</p>
-<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210428160240.png" style="zoom: 33%;" />
-
-<p>按照比例，还是按照输入特征分类。</p>
-<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210428161322.png" style="zoom: 33%;" />
-
-<p>param = (输入+1)*输出    1是因为bia</p>
-<p>鸢尾花复现在class3里的p8</p>
-<p>如果需要“跳连”，大概就是可以设置比较深层的神经网络p11</p>
-<p>init函数设置各层，call函数调用各层进行前向传播</p>
-<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210428172612.png" style="zoom:25%;" />
-
-<p>其中区别如下👇，</p>
-<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210428172607.png" style="zoom:33%;" />
-
-
-
-<h2 id="数据集"><a href="#数据集" class="headerlink" title="数据集"></a>数据集</h2><h3 id="MNIST"><a href="#MNIST" class="headerlink" title="MNIST"></a>MNIST</h3><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210428170337.png" style="zoom: 33%;" />
-
-<p>在class 3 里 p13 14 15</p>
-<h3 id="FASHION"><a href="#FASHION" class="headerlink" title="FASHION"></a>FASHION</h3><p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210906154804517.png" alt="image-20210906154804517"></p>
-<h1 id="八股功能扩展"><a href="#八股功能扩展" class="headerlink" title="八股功能扩展"></a>八股功能扩展</h1><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20200610164333221.png" alt="第四章" style="zoom: 67%;" />
-
+</li>
+<li>比起在线学习，批量学习也可以适应变化，但是需要重新训练全新的系统，成本高</li>
+<li>在线学习也可以用于超大数据集，因为超出了一台计算机的主存储器的数据</li>
+<li>基于实例（相似度），和基于模型的学习</li>
+<li>特征工程 和 端到端学习</li>
+<li>正则化实质是约束模型，限制变化范围，降低复杂度。</li>
+<li>测试验证：保持验证、交叉验证</li>
+<li>没有免费的午餐：如果你对数据绝对没有假设，那么就没有理由更偏好某个模型，必须得有假设，然后只评估部分合理的模型。</li>
+</ul>
+<h3 id="2-端到端的机器学习项目"><a href="#2-端到端的机器学习项目" class="headerlink" title="2.端到端的机器学习项目"></a>2.端到端的机器学习项目</h3><p>假设你是一个房地产公司最近雇佣的数据科学家，你会经历：</p>
+<ol>
+<li>观察大局</li>
+<li>获得数据</li>
+<li>从数据探索和可视化中获得洞见</li>
+<li>机器学习算法的数据准备</li>
+<li>选择并训练模型</li>
+<li>微调模型</li>
+<li>展示解决方案</li>
+<li>启动、监控和维护模型</li>
+</ol>
 
                 
             </div>
@@ -679,7 +524,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://darren-dong.com/2021/04/26/tensorflow-note/">https://darren-dong.com/2021/04/26/tensorflow-note/</a>
+                    <a href="https://darren-dong.com/2021/09/08/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%AE%9E%E6%88%98/">https://darren-dong.com/2021/09/08/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%AE%9E%E6%88%98/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -717,8 +562,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E5%85%AB%E8%82%A1/">
-                                    <span class="chip bg-color">八股</span>
+                                <a href="/tags/python/">
+                                    <span class="chip bg-color">python</span>
                                 </a>
                             
                         </div>
@@ -1155,30 +1000,30 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2021/05/01/%E5%88%A9%E7%94%A8python%E8%BF%9B%E8%A1%8C%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/">
+                <a href="/2021/09/25/%E4%BA%92%E8%81%94%E7%BD%91%E6%80%81%E5%8A%BF%E6%99%BA%E8%83%BD%E5%88%86%E6%9E%90/">
                     <div class="card-image">
                         
-                        <img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210509170603.jpg" class="responsive-img" alt="利用python进行数据分析">
+                        <img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210730162738.jpg" class="responsive-img" alt="互联网态势智能分析">
                         
-                        <span class="card-title">利用python进行数据分析</span>
+                        <span class="card-title">互联网态势智能分析</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            顺序错了
+                            精挑细选的综合设计课程
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-05-01
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-09-25
                         </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/date/" class="post-category">
-                                    date
+                            <a href="/categories/DL/" class="post-category">
+                                    DL
                                 </a>
                             
                             
@@ -1195,43 +1040,35 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/04/05/%E5%BF%AB%E6%8D%B7%E9%94%AE%E9%9A%8F%E8%AE%B0/">
+                <a href="/2021/08/22/%E9%81%93%E7%90%86/">
                     <div class="card-image">
                         
-                        <img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/technology-785742_960_720.jpg" class="responsive-img" alt="hot key">
+                        <img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/lighthouse-2372461_1920.jpg" class="responsive-img" alt="道理">
                         
-                        <span class="card-title">hot key</span>
+                        <span class="card-title">道理</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            提高生产力——节省时间是非常必要的
+                            孰对孰错，谁又可知，在真理尚未降临之前，我们能做的就是不断思考、完善、推翻旧日。
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-04-05
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-08-22
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/basic/" class="post-category">
-                                    basic
+                            <a href="/categories/others/" class="post-category">
+                                    others
                                 </a>
                             
                             
                         </span>
                     </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/hot-key/">
-                        <span class="chip bg-color">hot key</span>
-                    </a>
-                    
                 </div>
                 
             </div>

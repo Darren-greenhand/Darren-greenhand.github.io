@@ -4,7 +4,7 @@
 
 <head>
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
-    <meta name="keywords" content="数据科学手册, Darren观测站">
+    <meta name="keywords" content="数据科学手册(暂废), Darren观测站">
     <meta name="description" content="Data Science and finance">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>数据科学手册 | Darren观测站</title>
+    <title>数据科学手册(暂废) | Darren观测站</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -276,7 +276,7 @@
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">数据科学手册</h1>
+                    <h1 class="description center-align post-title">数据科学手册(暂废)</h1>
                 </div>
             </div>
         </div>
@@ -424,21 +424,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新之期:&nbsp;&nbsp;
-                    2021-08-09
+                    2021-09-07
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    11.3k
+                    11.8k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    47 分
+                    49 分
                 </div>
                 
 
@@ -539,7 +539,7 @@ r<span class="token punctuation">(</span>eturn<span class="token punctuation">)<
 
 👇需要安装line_profiler 和 memory_profiler 拓展
 python包含一个内置的代码分析器，可以通过魔法指令👇简单的调用
-<span class="token operator">%</span>prun 使用分析器运行代码，输出一个时间报告
+<span class="token operator">%</span>prun 使用分析器运行代码，输出一个时间报告 <span class="token operator">+</span> 函数<span class="token punctuation">(</span>参数<span class="token punctuation">)</span>
 <span class="token operator">%</span>lprun 使用逐行分析器运行代码，逐行分析
 <span class="token operator">%</span>memit 测量单个语句的内存使用
 <span class="token operator">%</span>mprun 使用逐行的内存分析器运行代码<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
@@ -547,7 +547,6 @@ python包含一个内置的代码分析器，可以通过魔法指令👇简单�
 <p>%%file 来写一个简单的模块文件</p>
 <h1 id="Numpy"><a href="#Numpy" class="headerlink" title="Numpy"></a>Numpy</h1><p>将异构的各种数据都看成数组，第一步将这些数据转化成数值数组形式的可分析数据。</p>
 <p>数据科学的绝对基础：有效存储数据，操作数值数组</p>
-<p>这似乎不太符合大数据的理念。。。。。。。</p>
 <h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><p>标准的python实现是用C编写的，这意味着每一个python对象都是一个聪明的伪C结构体</p>
 <p>比如python的整形变量其实是一个指针，它的结构体里包含了大量额外信息，所以可以自由，动态编码，但也会成为负担。</p>
 <p>python<strong>列表</strong>实质：指向一个指针域，域里的每一个指针指向一个确切的对象</p>
@@ -561,9 +560,11 @@ np<span class="token punctuation">.</span>linspace<span class="token punctuation
 np<span class="token punctuation">.</span>random<span class="token punctuation">.</span>random<span class="token punctuation">(</span><span class="token punctuation">(</span>shape<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token comment"># 0~1均匀分布</span>
 np<span class="token punctuation">.</span>random<span class="token punctuation">.</span>normal<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token punctuation">(</span>shape<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token comment"># 均值 方差 shape</span>
 np<span class="token punctuation">.</span>random<span class="token punctuation">.</span><span class="token builtin">int</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">10</span><span class="token punctuation">,</span><span class="token punctuation">(</span>shape<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token comment">#左闭右开 区间[0,10)</span>
+np<span class="token punctuation">.</span>random<span class="token punctuation">.</span>uniform<span class="token punctuation">(</span><span class="token punctuation">)</span>
 np<span class="token punctuation">.</span>eye<span class="token punctuation">(</span>n<span class="token punctuation">)</span> <span class="token comment">#n单位矩阵</span>
 np<span class="token punctuation">.</span>empty<span class="token punctuation">(</span>shape<span class="token punctuation">)</span> <span class="token comment">#未初始化的数组，数组值是内存空间中的任意值</span>
-还有各种_alike<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+np<span class="token punctuation">.</span>mgrid<span class="token punctuation">(</span>dtype1<span class="token punctuation">,</span>dtype2<span class="token punctuation">)</span>  <span class="token punctuation">.</span>ravel<span class="token punctuation">(</span><span class="token punctuation">)</span>拉直  <span class="token punctuation">.</span>c_<span class="token punctuation">(</span><span class="token punctuation">)</span>组合 看另一个教程吧
+还有各种_alike<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>dtype可以用字符串参数或者相关的Numpy对象来指定。</p>
 <p>标准类型大概有bool_ int类 float类 complex类  可以查一查，还有更高级的数据类型指定P35</p>
@@ -629,7 +630,7 @@ upper<span class="token punctuation">,</span>lower <span class="token operator">
 <p>有一个out参数指定输出结果的存放位置，此时不创建临时数组而直接写入目标位置，对于较大的数据能有效节约内存，但是注意要提前创建好用来存放的nparray</p>
 <p><strong>聚合</strong></p>
 <p><strong>二元通用函数</strong>指的是对两个输入操作，它们有些非常有趣的聚合功能，可以直接在对象上计算，会对给定的元素和操作重复执行，直到得到单个结果，这是任何通用函数都有的方法</p>
-<p>比如reduce，任何通用函数都有</p>
+<p>比如reduce(压缩)，任何通用函数都有，可以重复计算直到获得单个结果</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python">x <span class="token operator">=</span> np<span class="token punctuation">.</span>arange<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">6</span><span class="token punctuation">)</span>
 np<span class="token punctuation">.</span>add<span class="token punctuation">.</span><span class="token builtin">reduce</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span>
 x <span class="token operator">==</span> <span class="token number">15</span> <span class="token operator">-</span><span class="token operator">-</span><span class="token boolean">True</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
@@ -656,7 +657,7 @@ array<span class="token punctuation">(</span><span class="token punctuation">[</
 <p>np.min  max啥的，还有一种更简洁的语法是数组对象直接调用这些方法: x.min()  x.sum()</p>
 <p><strong>多维度聚合</strong></p>
 <p>可以用axis指定处理的维度，但是要注意，这个指定的是数组将会被聚合（折叠）的维度，而不是要返回的维度，比如说axis = 0 意味着第一个轴（二维数组的列）将要被折叠。</p>
-<p>numpy有很多内置的聚合函数，大多数聚合都有对NaN的安全处理策略，即计算的时候忽略所有缺失值。</p>
+<p>numpy有很多内置的聚合函数，大多数聚合都有对NaN的安全处理策略，即计算的时候<strong>忽略所有缺失值</strong>。</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python">np<span class="token punctuation">.</span><span class="token builtin">sum</span>  np<span class="token punctuation">.</span>nansum
 np<span class="token punctuation">.</span>prod np<span class="token punctuation">.</span>nanprod 积（product）
 np<span class="token punctuation">.</span>mean  平均值
@@ -682,7 +683,7 @@ Out<span class="token punctuation">[</span><span class="token number">9</span><s
 <p>规则如下：</p>
 <ol>
 <li>如果两个数组的维度不同，小维度数组<strong>的形状在最左边补1</strong></li>
-<li>如果数组在任何一个维度上大小不相等，而且数组<strong>某维度为1</strong>，则会沿着该维度拓展到匹配另一个数组</li>
+<li>如果数组在任何一个维度上大小不相等，而且数组<strong>该维度为1</strong>，则会沿着该维度拓展到匹配另一个数组</li>
 <li>如果数组在任何一个维度上大小不相等，而且并没有某个数组维度为1，那么引发异常。</li>
 </ol>
 <p>最值得注意的就是他补充一个维度是在左边补1而不是右边，如果希望右边补全，可以使用变形数组。</p>
@@ -728,8 +729,7 @@ Out<span class="token punctuation">[</span><span class="token number">11</span><
 <p><strong>花哨索引和前面的简单索引类似，但是传递的是索引数组，可以让我们快速获得并修改复杂的数组值的子数据集</strong></p>
 <p>结果的形状与<strong>索引数组的形状</strong>一致，如果有广播，就是<strong>跟广播后的索引数组的形状</strong>一致,而不是被索引的数组</p>
 <p>如果是普通的一维一维的</p>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python">a <span class="token operator">=</span> np<span class="token punctuation">.</span>array<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">6</span><span class="token punctuation">,</span><span class="token number">7</span><span class="token punctuation">,</span><span class="token number">8</span><span class="token punctuation">,</span><span class="token number">9</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
-b <span class="token operator">=</span> np<span class="token punctuation">.</span>array<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">b <span class="token operator">=</span> np<span class="token punctuation">.</span>array<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
            <span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">6</span><span class="token punctuation">,</span><span class="token number">7</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
            <span class="token punctuation">[</span><span class="token number">8</span><span class="token punctuation">,</span><span class="token number">9</span><span class="token punctuation">,</span><span class="token number">10</span><span class="token punctuation">,</span><span class="token number">11</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
 row <span class="token operator">=</span> np<span class="token punctuation">.</span>array<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
@@ -740,7 +740,7 @@ Out<span class="token punctuation">[</span><span class="token number">13</span><
 array<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
      <span class="token punctuation">[</span><span class="token number">6</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">7</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
      <span class="token punctuation">[</span><span class="token number">10</span><span class="token punctuation">,</span><span class="token number">9</span><span class="token punctuation">,</span><span class="token number">11</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
-那就是广播，淦，当年为何困惑了我这么久，广播以后索引数组的每一个位置其实都是一个坐标。。就这么简单<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+那就是广播，淦，当年为何困惑了我这么久，广播以后 索引数组的每一个位置其实都是一个坐标。。就这么简单<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>配合切片，简单索引，布尔效果更好。</p>
 <h3 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h3><p>从一个矩阵中选择行的子集！</p>
@@ -759,14 +759,14 @@ Out<span class="token punctuation">[</span><span class="token number">23</span><
 <p>比如np.add.at(x,i,1) x为被操作的矩阵，i为索引，1为操作数（+1）</p>
 <h2 id="数组的排序"><a href="#数组的排序" class="headerlink" title="数组的排序"></a>数组的排序</h2><p>python有内置的sort和sorted但是太慢了</p>
 <p>np.sort 是快速排序【N log N】,另外可以选择归并排序和堆排序。</p>
-<p>np.sort(X) 不会修改原始数组，x.sort()这种python内置的方法会替代原始数组</p>
-<p>np.argsort(X)返回的是如果排序好的索引值。</p>
+<p>np.sort(X) 不会修改原始数组，x.sort()这种python内置的方法会<strong>替代原始数组</strong></p>
+<p>np.argsort(X)返回的是<strong>如果排序</strong> 好的索引值。</p>
 <p>利用axis可以选择行列排序噢,<strong>这是将行和列当成独立数组，任何关系都将丢失！</strong></p>
 <p><strong>部分排序：分隔</strong></p>
 <p>np.partition(x,3) 将最小的3个和其他的分隔开，两组数是任意排序的</p>
 <p>当用<strong>axis时也会破坏行和列的关系</strong>，np.argpartition返回索引</p>
-<h2 id="结构化数据"><a href="#结构化数据" class="headerlink" title="结构化数据"></a>结构化数据</h2><p>P82</p>
-<p>numpy的结构化数组和记录数组</p>
+<h2 id="结构化数据"><a href="#结构化数据" class="headerlink" title="结构化数据"></a>结构化数据</h2><p>P82 <strong>数据类型</strong></p>
+<p>Numpy的结构化数组和记录数组。</p>
 <p>他们为复合的，异构的数据提供了非常有效的存储。</p>
 <p>其实就是把dtype当作一个结构嘛</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python">name <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'a'</span><span class="token punctuation">,</span><span class="token string">'b'</span><span class="token punctuation">,</span><span class="token string">'c'</span><span class="token punctuation">,</span><span class="token string">'d'</span><span class="token punctuation">]</span>
@@ -868,7 +868,7 @@ D<span class="token punctuation">:</span>\Anaconda3\lib\site<span class="token o
     <span class="token number">352</span>                             <span class="token string-interpolation"><span class="token string">f"index implies </span><span class="token interpolation"><span class="token punctuation">&#123;</span><span class="token builtin">len</span><span class="token punctuation">(</span>index<span class="token punctuation">)</span><span class="token punctuation">&#125;</span></span><span class="token string">."</span></span>
 
 ValueError<span class="token punctuation">:</span> Length of passed values <span class="token keyword">is</span> <span class="token number">5</span><span class="token punctuation">,</span> index implies <span class="token number">3</span><span class="token punctuation">.</span>
-    <span class="token comment">#当列表的时候index和data长度需一致吗</span>
+    <span class="token comment">#当列表的时候index和data长度需一致</span>
 
 In <span class="token punctuation">[</span><span class="token number">6</span><span class="token punctuation">]</span><span class="token punctuation">:</span> a1 <span class="token operator">=</span> pd<span class="token punctuation">.</span>Series<span class="token punctuation">(</span>b<span class="token punctuation">,</span>index <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'a'</span><span class="token punctuation">,</span><span class="token string">'c'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
 
@@ -947,7 +947,7 @@ Out<span class="token punctuation">[</span><span class="token number">5</span><s
 
 
 
-<h3 id="Index"><a href="#Index" class="headerlink" title="Index"></a>Index</h3><p>可以看成一个不可变数组或有序集合，可以包含重复值。这两种观点体现了其一些功能</p>
+<h3 id="Index"><a href="#Index" class="headerlink" title="Index"></a>Index</h3><p>可以看成一个<strong>不可变数组</strong>或<strong>有序集合</strong>，可以包含重复值。这两种观点体现了其一些功能</p>
 <ol>
 <li><p>不可变数组</p>
 <p>Index很多操作都像数组，比如切片，还有许多与Numpy数组相似的属性，比如</p>
@@ -981,16 +981,21 @@ Out<span class="token punctuation">[</span><span class="token number">4</span><s
 In <span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">:</span> <span class="token string">'a'</span> <span class="token keyword">in</span> data
 Out<span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">:</span> <span class="token boolean">True</span>
 
-In <span class="token punctuation">[</span><span class="token number">6</span><span class="token punctuation">]</span><span class="token punctuation">:</span> data<span class="token punctuation">.</span>keys<span class="token punctuation">(</span><span class="token punctuation">)</span>
-Out<span class="token punctuation">[</span><span class="token number">6</span><span class="token punctuation">]</span><span class="token punctuation">:</span> Index<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">'a'</span><span class="token punctuation">,</span> <span class="token string">'b'</span><span class="token punctuation">,</span> <span class="token string">'c'</span><span class="token punctuation">,</span> <span class="token string">'d'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> dtype<span class="token operator">=</span><span class="token string">'object'</span><span class="token punctuation">)</span>
-
 In <span class="token punctuation">[</span><span class="token number">7</span><span class="token punctuation">]</span><span class="token punctuation">:</span> data<span class="token punctuation">.</span>values<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">#这个失败了</span>
-<span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span>
-TypeError                                 Traceback <span class="token punctuation">(</span>most recent call last<span class="token punctuation">)</span>
-<span class="token operator">&lt;</span>ipython<span class="token operator">-</span><span class="token builtin">input</span><span class="token operator">-</span><span class="token number">7</span><span class="token operator">-</span><span class="token number">4b7ba670122a</span><span class="token operator">></span> <span class="token keyword">in</span> <span class="token operator">&lt;</span>module<span class="token operator">></span>
-<span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">></span> <span class="token number">1</span> data<span class="token punctuation">.</span>values<span class="token punctuation">(</span><span class="token punctuation">)</span>
+In <span class="token punctuation">[</span><span class="token number">63</span><span class="token punctuation">]</span><span class="token punctuation">:</span> ata<span class="token punctuation">.</span>values
+Out<span class="token punctuation">[</span><span class="token number">63</span><span class="token punctuation">]</span><span class="token punctuation">:</span> array<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">0.25</span><span class="token punctuation">,</span> <span class="token number">0.5</span> <span class="token punctuation">,</span> <span class="token number">0.75</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">.</span>  <span class="token punctuation">]</span><span class="token punctuation">)</span>
 
-TypeError<span class="token punctuation">:</span> <span class="token string">'numpy.ndarray'</span> <span class="token builtin">object</span> <span class="token keyword">is</span> <span class="token keyword">not</span> <span class="token builtin">callable</span>
+In <span class="token punctuation">[</span><span class="token number">64</span><span class="token punctuation">]</span><span class="token punctuation">:</span> ata<span class="token punctuation">.</span>keys
+Out<span class="token punctuation">[</span><span class="token number">64</span><span class="token punctuation">]</span><span class="token punctuation">:</span> 
+<span class="token operator">&lt;</span>bound method Series<span class="token punctuation">.</span>keys of a    <span class="token number">0.25</span>
+b    <span class="token number">0.50</span>
+c    <span class="token number">0.75</span>
+d    <span class="token number">1.00</span>
+dtype<span class="token punctuation">:</span> float64<span class="token operator">></span>
+
+In <span class="token punctuation">[</span><span class="token number">65</span><span class="token punctuation">]</span><span class="token punctuation">:</span> ata<span class="token punctuation">.</span>keys<span class="token punctuation">(</span><span class="token punctuation">)</span>
+Out<span class="token punctuation">[</span><span class="token number">65</span><span class="token punctuation">]</span><span class="token punctuation">:</span> Index<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">'a'</span><span class="token punctuation">,</span> <span class="token string">'b'</span><span class="token punctuation">,</span> <span class="token string">'c'</span><span class="token punctuation">,</span> <span class="token string">'d'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> dtype<span class="token operator">=</span><span class="token string">'object'</span><span class="token punctuation">)</span>
+
 
 In <span class="token punctuation">[</span><span class="token number">8</span><span class="token punctuation">]</span><span class="token punctuation">:</span> data<span class="token punctuation">.</span>items<span class="token punctuation">(</span><span class="token punctuation">)</span>
 Out<span class="token punctuation">[</span><span class="token number">8</span><span class="token punctuation">]</span><span class="token punctuation">:</span> <span class="token operator">&lt;</span><span class="token builtin">zip</span> at <span class="token number">0x201ee3bbcc0</span><span class="token operator">></span>
@@ -1007,7 +1012,7 @@ b    <span class="token number">0.50</span>
 c    <span class="token number">0.75</span>
 d    <span class="token number">1.00</span>
 e    <span class="token number">1.25</span>
-dtype<span class="token punctuation">:</span> float64<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+dtype<span class="token punctuation">:</span> float64<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p><strong>Series对象的可变性</strong>是一个非常方便的特性，pandas在底层已经为可能发生的<strong>内存布局和数据复制</strong>自动决策，用户不用担心。</p>
 <p><strong>看作一维数组</strong></p>
@@ -1098,7 +1103,7 @@ Out<span class="token punctuation">[</span><span class="token number">38</span><
 Darren    <span class="token number">123</span>   <span class="token number">123313</span>
 Jack    <span class="token number">21212</span>  <span class="token number">2131132</span><span class="token operator">></span>
 
-In <span class="token punctuation">[</span><span class="token number">39</span><span class="token punctuation">]</span><span class="token punctuation">:</span> x<span class="token punctuation">.</span>columns
+In <span class="token punctuation">[</span><span class="token number">39</span><span class="token punctuation">]</span><span class="token punctuation">:</span> x<span class="token punctuation">.</span>columns <span class="token comment">#注意复数哈哈哈哈</span>
 Out<span class="token punctuation">[</span><span class="token number">39</span><span class="token punctuation">]</span><span class="token punctuation">:</span> Index<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">'one'</span><span class="token punctuation">,</span> <span class="token string">'two'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> dtype<span class="token operator">=</span><span class="token string">'object'</span><span class="token punctuation">)</span>
 
 In <span class="token punctuation">[</span><span class="token number">40</span><span class="token punctuation">]</span><span class="token punctuation">:</span> x<span class="token punctuation">.</span>index
@@ -1205,6 +1210,7 @@ permutation<span class="token punctuation">(</span>arr<span class="token punctua
 shuffle <span class="token comment"># 随机排列一个序列,直接更改原来的</span>
 rand <span class="token comment">#从均匀分布[0,1)中抽取样本</span>
 randint <span class="token comment">#根据给定的从低到高（左闭右开，左边省略为0）的范围抽取随机一个整数，如果给一个元组，则在0-元组每一项之间取，输出一个列表</span>
+
 randn <span class="token comment">#从均值0方差1的正态分布</span>
 normal<span class="token punctuation">(</span>x1<span class="token punctuation">,</span>x2<span class="token punctuation">,</span><span class="token punctuation">(</span>shape<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token comment">#平均值，标准差，shape</span>
 
@@ -1212,7 +1218,7 @@ binomial <span class="token comment">#从二项分布中抽取样本</span>
 beta <span class="token comment">#从beta分布中抽取样本</span>
 chisquare <span class="token comment">#从卡方分布中抽取样本</span>
 uniform<span class="token punctuation">(</span>x1<span class="token punctuation">,</span>x2<span class="token punctuation">,</span><span class="token punctuation">(</span>shape<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">#从均匀分布中抽取样本</span>
-gamma <span class="token comment">#从伽马分布中抽取样本</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+gamma <span class="token comment">#从伽马分布中抽取样本</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 
 
@@ -1270,7 +1276,7 @@ Out<span class="token punctuation">[</span><span class="token number">66</span><
 <span class="token number">1</span>  <span class="token number">4</span>  <span class="token number">1</span>  <span class="token number">7</span>  <span class="token number">5</span>
 <span class="token number">2</span>  <span class="token number">1</span>  <span class="token number">4</span>  <span class="token number">0</span>  <span class="token number">9</span>
 
-<span class="token comment">#在Pandas里运算符默认按行运算</span>
+<span class="token comment">#df.iloc[0]选取的是第一列，有点类似广播，默认是按行计算！</span>
 In <span class="token punctuation">[</span><span class="token number">67</span><span class="token punctuation">]</span><span class="token punctuation">:</span> df <span class="token operator">-</span> df<span class="token punctuation">.</span>iloc<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
 Out<span class="token punctuation">[</span><span class="token number">67</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
    Q  R  S  T
@@ -1377,9 +1383,9 @@ Out<span class="token punctuation">[</span><span class="token number">79</span><
 <p>dropna </p>
 <p>这两个操作在Series里没有什么问题</p>
 <p>但在DataFrame中就需要注意，并没有办法单独剔除一个值，只能剔除缺失值所在整行或整列</p>
-<p>dropna默认剔除整行，如果加参数df.fropna(axis = 1)或者axis = ‘columns’那就是整列</p>
+<p>dropna默认剔除整行，如果加参数df.fropna(axis = 1)或者axis = ‘columns’那就是整列，“1”有点诡异</p>
 <p>可以用how或参数设置阈值，默认是how =’any’，可以是all(必须整行、列都是缺失值才剔除)</p>
-<p>thresh参数可以设置非缺失值的最小数量，thresh = 3则非缺失值&lt;3的行、列被剔除。</p>
+<p>thresh参数可以设置非缺失值的最小数量，thresh = 3则正常数据&lt;3的行、列被剔除。</p>
 <p><strong>填充缺失值</strong></p>
 <p>fillna返回填充了缺失值后的数组副本</p>
 <p>参数可以选择method = ‘ffill/bfill’ 用缺失值前/后的有效值来依次填充，也可以改axis来左右填充。</p>
@@ -1400,6 +1406,8 @@ a <span class="token number">1</span>  <span class="token number">0.290846</span
 b <span class="token number">1</span>  <span class="token number">0.697193</span>  <span class="token number">0.100121</span>
   <span class="token number">2</span>  <span class="token number">0.028793</span>  <span class="token number">0.633941</span>
     
+<span class="token comment">#输出按照index顺序来，但是如果重复就会自动少显示，所以要手动确认哪个在前合适。</span>
+
 In <span class="token punctuation">[</span><span class="token number">10</span><span class="token punctuation">]</span><span class="token punctuation">:</span> df<span class="token punctuation">.</span>index
 Out<span class="token punctuation">[</span><span class="token number">10</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
 MultiIndex<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">(</span><span class="token string">'a'</span><span class="token punctuation">,</span> <span class="token string">'1'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
@@ -1408,6 +1416,8 @@ MultiIndex<span class="token punctuation">(</span><span class="token punctuation
             <span class="token punctuation">(</span><span class="token string">'b'</span><span class="token punctuation">,</span> <span class="token string">'2'</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
            <span class="token punctuation">)</span>
 <span class="token comment">#index的类型变为了MultiIndex</span>
+
+
 <span class="token comment">#第二种方法是把元组作为键的字典传递给Pandas</span>
 In <span class="token punctuation">[</span><span class="token number">11</span><span class="token punctuation">]</span><span class="token punctuation">:</span> data <span class="token operator">=</span> <span class="token punctuation">&#123;</span><span class="token punctuation">(</span><span class="token string">'a'</span><span class="token punctuation">,</span><span class="token number">2000</span><span class="token punctuation">)</span><span class="token punctuation">:</span><span class="token number">32432</span><span class="token punctuation">,</span>
     <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token string">'a'</span><span class="token punctuation">,</span><span class="token number">2010</span><span class="token punctuation">)</span><span class="token punctuation">:</span><span class="token number">312312</span><span class="token punctuation">,</span>
@@ -1424,14 +1434,16 @@ b  <span class="token number">2000</span>     <span class="token number">3241332
    <span class="token number">2010</span>     <span class="token number">3243252</span>
 c  <span class="token number">2000</span>    <span class="token number">32434532</span>
    <span class="token number">2010</span>     <span class="token number">3223432</span>
-dtype<span class="token punctuation">:</span> int64<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+dtype<span class="token punctuation">:</span> int64<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#显示创建MultiIndex也是很有用的</span>
+<p>unstack可以把一个多级索引的Series转化为DataFrame，而stack相反</p>
+<p>注意DataFrame是用于二维的。</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#显式创建MultiIndex也是很有用的</span>
 <span class="token comment">#可以用不同等级的数组来创建</span>
 In <span class="token punctuation">[</span><span class="token number">17</span><span class="token punctuation">]</span><span class="token punctuation">:</span> pd<span class="token punctuation">.</span>MultiIndex<span class="token punctuation">.</span>from_arrays<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token string">'a'</span><span class="token punctuation">,</span><span class="token string">'a'</span><span class="token punctuation">,</span><span class="token string">'b'</span><span class="token punctuation">,</span><span class="token string">'b'</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
 <span class="token comment">#可以用包含不同等级索引值的元组构成的列表来创建</span>
 In <span class="token punctuation">[</span><span class="token number">18</span><span class="token punctuation">]</span><span class="token punctuation">:</span> pd<span class="token punctuation">.</span>MultiIndex<span class="token punctuation">.</span>from_tuples<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">(</span><span class="token string">'a'</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token string">'a'</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token string">'b'</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token string">'b'</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
-<span class="token comment">#可以用两个索引序列的笛卡尔积来创建</span>
+<span class="token comment">#可以用两个索引序列的笛卡尔积来创建（这个逻辑上妙一点）</span>
 In <span class="token punctuation">[</span><span class="token number">19</span><span class="token punctuation">]</span><span class="token punctuation">:</span> pd<span class="token punctuation">.</span>MultiIndex<span class="token punctuation">.</span>from_product<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token string">'a'</span><span class="token punctuation">,</span><span class="token string">'b'</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
 <span class="token comment">#原有的levels和labels属性好像被删掉了？</span>
 <span class="token comment">#可以加名字来方便管理</span>
@@ -1525,16 +1537,17 @@ year  visit_time
       <span class="token number">2</span>             <span class="token number">36.9</span>
 dtype<span class="token punctuation">:</span> float64
 
+<span class="token comment">#巧妙</span>
 In <span class="token punctuation">[</span><span class="token number">24</span><span class="token punctuation">]</span><span class="token punctuation">:</span> one<span class="token punctuation">.</span>loc<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">]</span>
 Out<span class="token punctuation">[</span><span class="token number">24</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
 year
 <span class="token number">2013</span>    <span class="token number">35.3</span>
 <span class="token number">2014</span>    <span class="token number">36.9</span>
 dtype<span class="token punctuation">:</span> float64
-<span class="token comment">#布尔和花哨的使用方法类似，并无太大变化</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token comment">#布尔和花哨的使用方法类似，并无太大变化</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#DateFrame</span>
-和之前的分析一样，单独取是列索引之类的，类比一下嘛
+单独取是列索引<span class="token punctuation">,</span>类似Series
 
 In <span class="token punctuation">[</span><span class="token number">30</span><span class="token punctuation">]</span><span class="token punctuation">:</span> health_data
 Out<span class="token punctuation">[</span><span class="token number">30</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
@@ -1546,7 +1559,7 @@ year visit_time
 <span class="token number">2014</span> <span class="token number">1</span>           <span class="token number">36.0</span>  <span class="token number">36.3</span>   <span class="token number">44.0</span>  <span class="token number">37.7</span>  <span class="token number">35.0</span>  <span class="token number">37.4</span>
      <span class="token number">2</span>           <span class="token number">28.0</span>  <span class="token number">37.4</span>   <span class="token number">32.0</span>  <span class="token number">33.7</span>  <span class="token number">40.0</span>  <span class="token number">38.0</span>
 
-<span class="token comment">#在loc和iloc中可以传递多个层级的索引元组，👇先取所有行，再对列进行层级索引，但在元组中使用切片会导致语法错误。。。</span>
+<span class="token comment">#对索引器来说，他们还是按照先行后列来操作，而且在loc和iloc中可以传递多个层级的索引元组，👇先取所有行，再对列进行层级索引，但在元组中使用切片会导致语法错误（不能确定范围），不是很方便</span>
 In <span class="token punctuation">[</span><span class="token number">29</span><span class="token punctuation">]</span><span class="token punctuation">:</span> health_data<span class="token punctuation">.</span>loc<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token string">'Darren'</span><span class="token punctuation">,</span><span class="token string">'Temp'</span><span class="token punctuation">)</span><span class="token punctuation">]</span>
 Out<span class="token punctuation">[</span><span class="token number">29</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
 year  visit_time
@@ -1567,7 +1580,7 @@ Name<span class="token punctuation">:</span> <span class="token punctuation">(</
 
 
 
-<h3 id="多级索引行列转换"><a href="#多级索引行列转换" class="headerlink" title="多级索引行列转换"></a>多级索引行列转换</h3><p>局部切片和其他很多类似操作都要求MultiIndex的各级索引是有序的，否则大部分操作都会失败。</p>
+<h3 id="多级索引行列转换"><a href="#多级索引行列转换" class="headerlink" title="多级索引行列转换"></a>多级索引行列转换</h3><p>局部切片和其他很多类似操作都要求<strong>MultiIndex的各级索引是有序</strong>的，否则大部分操作都会失败。</p>
 <p>可以用data = data.sort_index() 或者<a target="_blank" rel="noopener" href="https://pandas.pydata.org/pandas-docs/version/0.23.4/generated/pandas.DataFrame.sort_index.html#pandas.DataFrame.sort_index">data.sortlevel</a>()来搞定</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python">In <span class="token punctuation">[</span><span class="token number">21</span><span class="token punctuation">]</span><span class="token punctuation">:</span> pop
 Out<span class="token punctuation">[</span><span class="token number">21</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
@@ -1579,6 +1592,7 @@ Texas       <span class="token number">2000</span>      <span class="token numbe
             <span class="token number">2010</span>      <span class="token number">43525</span>
 dtype<span class="token punctuation">:</span> int32
 
+    <span class="token comment">#level设置转换的层数</span>
 In <span class="token punctuation">[</span><span class="token number">22</span><span class="token punctuation">]</span><span class="token punctuation">:</span> stack <span class="token operator">=</span> pop<span class="token punctuation">.</span>unstack<span class="token punctuation">(</span>level <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">)</span>
 
 In <span class="token punctuation">[</span><span class="token number">23</span><span class="token punctuation">]</span><span class="token punctuation">:</span> stack
@@ -1603,12 +1617,12 @@ NewYork     <span class="token number">2000</span>    <span class="token number"
             <span class="token number">2010</span>      <span class="token number">52364</span>
 Texas       <span class="token number">2000</span>      <span class="token number">67573</span>
             <span class="token number">2010</span>      <span class="token number">43525</span>
-dtype<span class="token punctuation">:</span> int32<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+dtype<span class="token punctuation">:</span> int32<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 
 
 <p>在实践中处理数据集非常好用的方法：</p>
-<p>行列标签转换</p>
+<p><strong>行列标签转换</strong></p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#reset_index可以生成一个DataFrame，之前的行索引将变成内容，行名变列名，可以指定name来设置原来内容的列名称</span>
 In <span class="token punctuation">[</span><span class="token number">29</span><span class="token punctuation">]</span><span class="token punctuation">:</span> pop<span class="token punctuation">.</span>index<span class="token punctuation">.</span>names <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'state'</span><span class="token punctuation">,</span><span class="token string">'year'</span><span class="token punctuation">]</span>
 
@@ -1622,7 +1636,7 @@ Out<span class="token punctuation">[</span><span class="token number">30</span><
 <span class="token number">4</span>       Texas  <span class="token number">2000</span>       <span class="token number">67573</span>
 <span class="token number">5</span>       Texas  <span class="token number">2010</span>       <span class="token number">43525</span>
 
-<span class="token comment">#反过来，也可以这样</span>
+<span class="token comment">#反过来，也可以这样，将其中的几列变为行索引</span>
 In <span class="token punctuation">[</span><span class="token number">32</span><span class="token punctuation">]</span><span class="token punctuation">:</span> a <span class="token operator">=</span> pop<span class="token punctuation">.</span>reset_index<span class="token punctuation">(</span>name <span class="token operator">=</span> <span class="token string">'population'</span><span class="token punctuation">)</span>
 
 In <span class="token punctuation">[</span><span class="token number">33</span><span class="token punctuation">]</span><span class="token punctuation">:</span> a<span class="token punctuation">.</span>set_index<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">'state'</span><span class="token punctuation">,</span><span class="token string">'year'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
@@ -1652,7 +1666,41 @@ dtype<span class="token punctuation">:</span> int32<span aria-hidden="true" clas
 
 
 <h2 id="合并数据集"><a href="#合并数据集" class="headerlink" title="合并数据集"></a>合并数据集</h2><p>这是非常有趣的事情，既包括简单拼接，也包括处理重叠片段，pandas提供了高效的函数</p>
-<p>concat 和 append</p>
+<p><strong>concat 和 append</strong></p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">In <span class="token punctuation">[</span><span class="token number">75</span><span class="token punctuation">]</span><span class="token punctuation">:</span> x <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">]</span>
+
+In <span class="token punctuation">[</span><span class="token number">76</span><span class="token punctuation">]</span><span class="token punctuation">:</span> np<span class="token punctuation">.</span>concatenate<span class="token punctuation">(</span><span class="token punctuation">[</span>x<span class="token punctuation">,</span>x<span class="token punctuation">,</span>x<span class="token punctuation">]</span><span class="token punctuation">)</span>
+Out<span class="token punctuation">[</span><span class="token number">76</span><span class="token punctuation">]</span><span class="token punctuation">:</span> array<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+In <span class="token punctuation">[</span><span class="token number">77</span><span class="token punctuation">]</span><span class="token punctuation">:</span> np<span class="token punctuation">.</span>concatenate<span class="token punctuation">(</span><span class="token punctuation">[</span>x<span class="token punctuation">,</span>x<span class="token punctuation">,</span>x<span class="token punctuation">]</span><span class="token punctuation">,</span>axis <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">)</span>
+<span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span>
+AxisError                                 Traceback <span class="token punctuation">(</span>most recent call last<span class="token punctuation">)</span>
+<span class="token operator">&lt;</span>ipython<span class="token operator">-</span><span class="token builtin">input</span><span class="token operator">-</span><span class="token number">77</span><span class="token operator">-</span>cdd90a57a401<span class="token operator">></span> <span class="token keyword">in</span> <span class="token operator">&lt;</span>module<span class="token operator">></span>
+<span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">></span> <span class="token number">1</span> np<span class="token punctuation">.</span>concatenate<span class="token punctuation">(</span><span class="token punctuation">[</span>x<span class="token punctuation">,</span>x<span class="token punctuation">,</span>x<span class="token punctuation">]</span><span class="token punctuation">,</span>axis <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">)</span>
+
+<span class="token operator">&lt;</span>__array_function__ internals<span class="token operator">></span> <span class="token keyword">in</span> concatenate<span class="token punctuation">(</span><span class="token operator">*</span>args<span class="token punctuation">,</span> <span class="token operator">**</span>kwargs<span class="token punctuation">)</span>
+
+AxisError<span class="token punctuation">:</span> axis <span class="token number">1</span> <span class="token keyword">is</span> out of bounds <span class="token keyword">for</span> array of dimension <span class="token number">1</span>
+<span class="token comment">#对于一维数组的concatenate好像是个特例。</span>
+
+<span class="token comment">#pd.concat与np.concatenate语法类似，参数更多，功能更强</span>
+DataFrame默认逐行合并<span class="token punctuation">(</span>axis <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">,</span>可以设置成axis <span class="token operator">=</span> <span class="token string">'col'</span><span class="token operator">/</span><span class="token number">1</span>
+差异：
+<span class="token number">1</span><span class="token punctuation">.</span> 索引重复，合并时保留哪怕是重复的索引
+   可以设置verify_integrity <span class="token operator">=</span> <span class="token boolean">True</span> 来引发异常
+   可以设置igonre_index <span class="token operator">=</span> <span class="token boolean">True</span> 会无视原有的索引，直接新建一个<span class="token number">0</span>，<span class="token number">1</span>，<span class="token number">2</span><span class="token punctuation">.</span>。。
+   可以设置keys <span class="token operator">=</span> <span class="token punctuation">[</span>xxxx<span class="token punctuation">]</span>，keys会作为数据源的索引，就是高一层。
+<span class="token number">2</span><span class="token punctuation">.</span> 合并
+   join <span class="token operator">=</span> <span class="token string">'outer'</span> 默认，会出现NAN<span class="token punctuation">,</span>inner 取交集
+   join_axes <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">[</span>xxx<span class="token punctuation">,</span>xx<span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">,</span>直接确定结果使用的列名。
+
+append语法方便<span class="token punctuation">:</span>df1<span class="token punctuation">.</span>append<span class="token punctuation">(</span>df2<span class="token punctuation">)</span>
+但是不像原生的append可以直接更新原有对象，而是新建，所以效率不高，不如建立DF列表然后一次性concat<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h3 id="合并与连接"><a href="#合并与连接" class="headerlink" title="合并与连接"></a>合并与连接</h3><p>merge(合并) and join(连接)</p>
+<p>高性能的内存式数据连接是Pandas的卖点之一。</p>
 
                 
             </div>
@@ -2477,7 +2525,7 @@ dtype<span class="token punctuation">:</span> int32<span aria-hidden="true" clas
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">238.6k</span>&nbsp;字
+                class="white-color">239.8k</span>&nbsp;字
             
             
             
