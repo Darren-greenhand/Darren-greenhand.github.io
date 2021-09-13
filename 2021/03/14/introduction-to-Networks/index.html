@@ -404,8 +404,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/network/" class="post-category">
-                                network
+                            <a href="/categories/Network/" class="post-category">
+                                Network
                             </a>
                         
                     </div>
@@ -424,7 +424,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新之期:&nbsp;&nbsp;
-                    2021-09-08
+                    2021-09-12
                 </div>
                 
 
@@ -2673,4 +2673,1735 @@ Router(config-if)# no shutdown<span aria-hidden="true" class="line-numbers-rows"
 <h2 id="网络攻击"><a href="#网络攻击" class="headerlink" title="网络攻击"></a>网络攻击</h2><h3 id="恶意代码"><a href="#恶意代码" class="headerlink" title="恶意代码"></a>恶意代码</h3><p>恶意软件是“有恶意的软件”的简称。是专门用来损坏、破坏、窃取数据、主机或网络或对数据、主机或网络进行“坏的”或者非法操作的代码或软件。恶意软件的类型包括病毒、蠕虫和特洛伊木马</p>
 <p><strong>病毒</strong></p>
 <p>计算机病毒是一种通过将自身副本插入另一个程序并成为其一部分来传播的恶意软件类型。</p>
-<p>几乎所有的病毒都是附加到一个可执行文件中，这意味着病毒可能在系统上存在，但在用户运行或打开恶意主机文件或程序前不会处于活跃状态也不会传播。执行�
+<p>几乎所有的病毒都是附加到一个可执行文件中，这意味着病毒可能在系统上存在，但在用户运行或打开恶意主机文件或程序前不会处于活跃状态也不会传播。执行主机代码后，也就执行了病毒代码。</p>
+<p>当病毒附加的软件或文档通过网络、磁盘、文件共享或被感染的电子邮件附件从一台计算机传输到另一台计算机时，也传播了病毒。</p>
+<p><strong>蠕虫</strong></p>
+<p>计算机蠕虫与病毒相似，它们均可复制自身的功能副本，并造成相同类型的损坏。与病毒相比，病毒需要通过感染的主机文件来传播，而蠕虫属于独立软件，无需借助主机程序或人工帮助便可利用系统功能在网络中传输。</p>
+<p><strong>特洛伊木马</strong></p>
+<p>它是看起来合法的有害软件。用户通常是被骗加载特洛伊木马并在他们的系统上执行。特洛伊木马激活后，可以在主机上进行任意数量的攻击，从激怒用户（过多的弹窗或改变桌面）到破坏主机（删除文件、窃取数据或激活和传播病毒等其他恶意软件）。众所周知，<u>特洛伊木马为恶意用户访问系统创建后门</u>。</p>
+<p>特洛伊木马必须通过用户交互传播，如打开电子邮件附件或从互联网下载并运行文件。</p>
+<h3 id="网络攻击-1"><a href="#网络攻击-1" class="headerlink" title="网络攻击"></a>网络攻击</h3><ul>
+<li><strong>侦察攻击</strong> – 搜索和映射系统、服务或漏洞</li>
+<li><strong>访问攻击</strong> – 数据、系统或用户访问权限的未授权控制</li>
+<li><strong>拒绝服务</strong> – 网络、系统或服务的禁用或损坏</li>
+</ul>
+<p>对于侦察攻击，外部威胁发起者可以使用互联网工具（如 nslookup 和 whois 实用程序）轻松地确定分配给公司或实体的 IP 地址空间。确定 IP 地址空间后，威胁发起者可以 ping 这些公有 IP 地址以确定哪些地址正在使用。为帮助自动执行此步骤，威胁发起者可能会使用 ping 扫描工具，例如 fping 或 gping。它系统地向给定范围或子网中的所有网络地址执行 ping 操作。</p>
+<p><strong>侦察攻击</strong></p>
+<p>互联网查询：查找与目标相关的初始信息，可以使用多种工具，包括Google搜索、组织机构网站、whois等。</p>
+<p>ping扫描：发起 ping 扫描，以确定哪些 IP 地址处于活动状态。</p>
+<p>端口扫描：威胁发起者对发现的活动 IP 地址执行端口扫描。</p>
+<p><strong>访问攻击</strong></p>
+<p>访问攻击利用身份验证服务、FTP 服务和 Web 服务的已知漏洞，获取对 Web 帐户、机密数据库和其他敏感信息的访问。访问攻击使个人能够对他们无权查阅的信息进行未经授权访问。</p>
+<p>密码攻击：暴力攻击、特洛伊木马、数据包嗅探</p>
+<p>信任利用：威胁发起者会使用未经授权的特权来访问系统，可能还会进一步攻陷目标。</p>
+<p>端口重定向：威胁发起者会把攻陷的系统作为攻击其他目标的大本营。</p>
+<p>中间人：威胁发起者会置身于两个合法实体之间，以便读取或修改双方之间传输的数据。</p>
+<p><strong>拒绝服务攻击</strong></p>
+<p>拒绝服务 (DoS) 攻击是知名度最高的攻击，并且是最难防范的攻击。然而，由于其实施简单、破坏力强大，安全管理员需要特别关注 DoS 攻击。</p>
+<p>DoS 攻击的方式多种多样。不过其目的都是通过<strong>消耗系统资源使授权用户无法正常使用服务</strong>。为了帮助防止 DoS 攻击，必须使操作系统和应用程序与最新的安全更新保持同步。</p>
+<p>DoS 攻击属于重大风险，因为它们可以中断通信，并在时间和财务上造成大量损失。这些攻击执行起来相对简单，即使是缺乏技能的威胁发起者也可以执行。</p>
+<p>分布式 DoS 攻击 (DDoS) 与 DoS 攻击类似，但是它从多个协同攻击源发起攻击。举例来说，威胁发起者建立了一个受感染主机的网络，受感染的主机称为僵尸主机。受感染主机（僵尸）的网络称为僵尸网络。威胁发起者使用命令和控制(CnC)程序来指示僵尸网络进行DDoS攻击。</p>
+<h2 id="网络攻击缓解"><a href="#网络攻击缓解" class="headerlink" title="网络攻击缓解"></a>网络攻击缓解</h2><p>要缓解网络攻击，必须首先保护设备，包括路由器、交换机、服务器和主机。大多数组织机构使用纵深防御法（也称为分层方法）来确保安全性。这需要网络设备和服务相互配套以协同工作。</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210821151358183.png" alt="image-20210821151358183" style="zoom: 67%;" />
+
+<p><strong>保留备份</strong></p>
+<p>备份设备配置和数据是防止数据丢失的最有效方式之一。</p>
+<p>应根据安全策略中的规定定期执行备份。数据备份通常存储在非现场位置，在主要设施发生任何问题时能保护备份介质。Windows 主机提供了备份和还原实用程序。对用户来说，将数据备份到其他驱动器或基于<strong>云</strong>的存储提供商非常重要。</p>
+<table>
+<thead>
+<tr>
+<th align="left"><strong>考虑事项</strong></th>
+<th align="left"><strong>描述</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">频率</td>
+<td align="left">根据安全策略中的标识定期执行 备份。完全备份可能非常耗时，因此需要每月或 或每周执行一次备份，并经常对更改的文件进行部分备份。</td>
+</tr>
+<tr>
+<td align="left">存储容量</td>
+<td align="left">务必对备份进行验证，以确保数据的完整性并验证文件恢复程序。 验证文件恢复程序。</td>
+</tr>
+<tr>
+<td align="left">安全</td>
+<td align="left">应按照安全策略的要求，每天， 每周或每月轮流将备份转移到批准的异地 存储位置。</td>
+</tr>
+<tr>
+<td align="left">验证</td>
+<td align="left">应使用强密码保护备份。恢复数据 需要提供密码。</td>
+</tr>
+</tbody></table>
+<p>保持与最新进展同步会使对网络攻击的防御更加有效。随着新的恶意软件不断涌现，企业必须保持当前的防病毒软件为最新版本。</p>
+<p><strong>认证、授权和记账</strong></p>
+<p>所有网络设备都应该进行安全配置，只允许经过授权的个人访问。认证、授权和记账（AAA 或“三 A”）网络安全服务提供了设置网络设备访问控制的主要框架。</p>
+<p>AAA 方法用于控制可以访问网络的用户（认证）、用户访问网络时可以执行的操作（授权），以及把他们在那里时所做的事记录下来（记账）。</p>
+<p><strong>防火墙</strong></p>
+<p>防火墙是保护用户远离外部威胁的最为有效的安全工具之一。防火墙可通过防止不必要的流量进入内部网络来保护计算机和网络。防火墙驻留在两个或多个网络之间，控制其间的流量并帮助阻止未授权的访问。</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210821152853399.png" alt="image-20210821152853399" style="zoom:50%;" />
+
+<p>防火墙可以允许外部用户控制对特定服务的访问。例如，外部用户可访问的服务器通常位于称为隔离区 (DMZ) 的特殊网络中，如图所示。DMZ 使网络管理员能够为连接到该网络的主机应用特定策略。</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210821152909802.png" alt="image-20210821152909802" style="zoom:50%;" />
+
+
+
+<p><strong>防火墙类型</strong></p>
+<p>防火墙产品可以打包成各种形式。这些产品使用不同技术来区分应禁止和应允许的网络访问。其包括以下内容：</p>
+<p>数据包过滤 - 根据 IP 或 MAC 地址阻止或允许访问<br>应用程序过滤 - 根据端口号阻止或允许访问特定类型的应用程序<br>URL 过滤 - 根据特定的 URL 或关键字阻止或允许访问网站<br>状态包侦测 (SPI) - 传入数据包必须是对内部主机所发出请求的合法响应。除非得到特别允许，否则未经请求的数据包会被拦截。状态包侦测还可具有识别和过滤特定类型攻击，例如拒绝服务 (DoS) 的能力。</p>
+<h2 id="设备安全"><a href="#设备安全" class="headerlink" title="设备安全"></a>设备安全</h2><p>在网路中有很多区域需要格外提供安全防护，设备本身就是其中之一。</p>
+<p>当在设备上安装新的操作系统时，安全设置保留为默认值。在大多数情况下，这种安全级别并不够。对于思科路由器，思科AutoSecure 功能可用于协助保护系统，如示例所示。</p>
+<p>通常，制造商提供的设备已经在仓库中存放了一段时间，并没有安装最新补丁。必须在投入使用之前更新所有软件并安装所有安全补丁。</p>
+<p>为了保护网络设备，使用强密码非常重要。以下是需要遵循的标准原则：</p>
+<ul>
+<li>使用的密码长度至少为 8 个字符，最好是 10 个或更多字符。密码越长越安全。</li>
+<li>使用复杂密码。如果条件允许，密码中混合使用大写和小写字母、数字、符号和空格。</li>
+<li>密码中避免使用重复的常用字词、字母或数字顺序、用户名、亲属或宠物的名字、个人传记信息（例如出生期、身份证号码、祖先的名字）或其他易于识别的信息。</li>
+<li>故意将口令中的词拼错。例如，Smith = Smyth = 5mYth 或 Security = 5ecur1ty。</li>
+<li>定期更改密码。如果密码不知不觉地遭到破坏，那么威胁发起者使用该密码的机会就会受到限制。</li>
+<li>请勿将密码写出来并放在显眼位置上，比如桌面上或显示屏上。</li>
+</ul>
+<p>思科路由器会忽略密码中的前置空格，但第一个字符之后的空格不会忽略。因此，创建强密码的一种方法就是使用空格键和创建一个由多个词组成的短语。这就是所谓的<strong>密码短语</strong>。密码短语通常比简单密码更易记忆。而且猜到它所用时间更长，也更难猜到。</p>
+<p>强密码只有在保持其机密性才是有用的。在思科路由器和交换机上可以采取以下几个步骤来确保密码的机密性：</p>
+<ul>
+<li>加密所有的明文密码</li>
+<li>设置可接受的最小密码长度</li>
+<li>阻止暴力密码猜测攻击</li>
+<li>在指定时间后 禁用非活动的特权 EXEC 模式访问。</li>
+</ul>
+<p>启用<strong>SSH</strong></p>
+<p>Telnet简化了远程设备访问，但并不安全。Telnet 数据包中包含的数据以未加密形式传输。因此，强烈建议在设备上启用安全外壳 (SSH) 以进行安全远程访问。</p>
+<p>可以通过下列六个步骤来配置思科设备以支持 SSH。</p>
+<p>步骤 1. 配置唯一的主机名。设备必须有一个唯一的主机名，而不是默认主机名。</p>
+<p>步骤 2. 配置 IP 域名. 使用全局配置命令 ip-domain name 配置网络的 IP 域名。</p>
+<p>步骤 3. 生成密钥来加密 SSH 流量. SSH 加密源和目的地之间的流量。但是，要这样做，必须使用全局配置命令 crypto key generate rsa general-keys modulus 位数 生成唯一的身份验证密钥。该模数位数确定密钥大小并且可配置为 360 位至 2048 位。位值越大，密钥越安全。然而，较大的位值也需要较长的时间来加密和解密信息。最小建议系数长度为 1024 位。</p>
+<p>步骤 4. 验证或创建一个本地数据库条目。使用 username 全局配置命令来创建本地数据库用户名条目。在示例中，使用了参数 secret，因此密码将使用MD5加密。</p>
+<p>步骤 5. 向本地数据库认证身份。使用 login local 线路配置命令对本地数据库的vty线路进行身份验证。</p>
+<p>步骤 6. 启用 vty inbound SSH 会话. 默认情况下，在vty线路上不允许输入会话。您可以使用 transport input [ssh | telnet] 命令指定多个输入协议，包括 Telnet 和 SSH。</p>
+<p>如示例所示，路由器R1配置在span.com域中。此信息与 crypto key generate rsa general-keys modulus 命令中指定的位值一起使用，用于创建加密密钥。</p>
+<p>接下来，为名为 Bob 的用户创建本地数据库条目。最后，将vty线路配置为根据本地数据库进行身份验证，并且只接受传入的SSH会话。</p>
+<pre class="line-numbers language-none"><code class="language-none">Router# configure terminal
+Router(config)# hostname R1
+R1(config)# ip domain name span.com
+R1(config)# crypto key generate rsa general-keys modulus 1024
+The name for the keys will be: Rl.span.com % The key modulus size is 1024 bits
+% Generating 1024 bit RSA keys, keys will be non-exportable...[OK]
+Dec 13 16:19:12.079: %SSH-5-ENABLED: SSH 1.99 has been enabled
+R1(config)#
+R1(config)# username Bob secret cisco
+R1(config)# line vty 0 4
+R1(config-line)# login local
+R1(config-line)# transport input ssh
+R1(config-line)# exit
+R1(config)#<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>我迷惑了。。</p>
+<p>思科路由器和交换机启动时会有一列活动服务，这些活动在您的网络中可能需要或不需要。禁用任何未使用的服务以保留系统资源，如CPU周期和RAM，并防止威胁发起者利用这些服务。默认打开的服务类型将根据IOS版本而有所不同。例如，IOS-XE 通常只打开 HTTPS 和 DHCP 端口。您可以使用 show ip ports all 命令来验证这一点。</p>
+<p>使用 no ip http server 全局配置命令禁用 HTTP。通过在行配置命令 transport input ssh 中指定仅 SSH 来禁用 Telnet 。</p>
+<h1 id="构建小型网络"><a href="#构建小型网络" class="headerlink" title="构建小型网络"></a>构建小型网络</h1><p>欢迎来学习构建小型网络！</p>
+<p>棒极了！您已经来到了网络简介 v7.0 课程的<strong>最后一个模块</strong>。您已经掌握了建立自己的网络所需的大部分基础知识。从现在开始怎么做？当然，你要构建一个网络。而且您不仅要构建它，还要验证它是否正常工作，甚至还要解决一些常见的网络问题。</p>
+<h2 id="小型网络"><a href="#小型网络" class="headerlink" title="小型网络"></a>小型网络</h2><h3 id="设备"><a href="#设备" class="headerlink" title="设备"></a>设备</h3><p>小型网络的设计通常很简单。与较大型网络相比，小型网络中设备的数量和类型都显著减少了。</p>
+<p>在实施网络时，创建一个 IP编址方案并使用它。互联网络中的所有主机和设备都必须有一个唯一地址。</p>
+<p>将纳入IP编址方案的设备包括以下内容：</p>
+<p>终端用户设备-连接的数量和类型（即有线、无线、远程访问）<br>服务器和外部设备（如打印机和安全摄像头）<br>路由器、交换机和接入点都属于中间设备。<br>建议您根据设备类型规划、记录和维护 IP编址方案。使用计划好的IP编址方案可以更容易地识别设备类型并对排除故障，例如，在使用协议分析器排除网络流量问题时。</p>
+<p>网络设计的另一个重要部分是可靠性。即使是小型企业，也常常非常依赖其网络以进行企业运营。网络故障的代价是非常大的。</p>
+<p>为了保持高可靠度，网络设计中要求<strong>冗余</strong>。冗余有助于避免单点故障。</p>
+<p>在网络中实现冗余有许多方法。可以通过安装重复设备实现冗余，但也可以通过为关键区域提供重复的网络链路来实现，如图所示。</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210823164045084.png" alt="image-20210823164045084" style="zoom:67%;" />
+
+<p>小型网络通常通过一个或多个默认网关提供单个互联网出口点。如果路由器发生故障，则整个网络都会失去与互联网的连接。因此，建议小型企业通过另一个服务提供商购买备份产品。</p>
+<p><strong>流量管理</strong></p>
+<p>小型网络中良好网络设计的目标也是为了提高员工工作效率和最大限度地减少网络中断。网络管理员应当考虑网络设计中的各种流量类型及其处理。</p>
+<p>应当对小型网络中的路由器和交换机进行配置，以相对于其他数据流量的适当方式支持实时流量，如语音和视频。事实上，一个好的网络设计将实现服务质量（QoS），根据优先级对流量进行仔细分类，如图所示。</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210823164630041.png" alt="image-20210823164630041" style="zoom:67%;" />
+
+
+
+
+
+<h3 id="应用和协议"><a href="#应用和协议" class="headerlink" title="应用和协议"></a>应用和协议</h3><p>您的网络仍然需要某些类型的应用程序和协议才能工作。</p>
+<p>网络只有在网络上存在应用程序时才有用。有两种形式的软件程序或进程可以提供网络访问：网络应用程序和应用层服务。</p>
+<p><strong>网络应用程序</strong></p>
+<p>应用程序是指用于网络通信的软件程序。有些终端用户应用程序是网络感知程序，即这些程序实现应用层协议，并<strong>可直接与协议栈的较低层通信</strong>。电子邮件客户端和 Web 浏览器就属于这种类型的应用程序。</p>
+<p><strong>应用层服务</strong></p>
+<p>其他程序可能需要通过应用层服务使用网络资源，例如文件传输或网络假脱机打印。虽然这些服务对员工而言是透明的，但它们正是负责与网络交互和准备传输数据的程序。无论数据类型是文本、图形还是视频，只要类型不同，就需要与之对应的不同的网络服务，从而确保 OSI 模型的下层能够正确处理数据。</p>
+<p>每个应用程序或网络服务使用协议，定义要使用的标准和数据格式。如果没有协议，数据网络将不能使用通用的方式来格式化及引导数据。为了便于理解不同网络服务的功能，我们有必要先熟悉管理这些服务的底层协议。</p>
+<p><strong>常见协议</strong></p>
+<p>网络管理员通常需要访问网络设备和服务器。两种最常见的远程访问解决方案是 Telnet 和安全外壳 (SSH)。SSH 服务是 Telnet 的安全替代方案。连接后，管理员可以像在本地登录一样访问 SSH 服务器设备。</p>
+<p>SSH 用于在 SSH 客户端和其他支持 SSH 的设备之间建立安全的远程访问连接：</p>
+<ul>
+<li><strong>网络设备</strong> - 网络设备（如路由器、交换机、接入点等）必须支持 SSH，才能为客户端提供远程访问 SSH 服务器的服务。</li>
+<li><strong>服务器</strong> - 服务器（例如 Web 服务器、电子邮件服务器等）必须支持到客户端的远程访问 SSH 服务器的服务。</li>
+</ul>
+<p>网络管理员还必须支持公用网络服务器及其所需的相关网络协议：</p>
+<p><strong>Web 服务器</strong></p>
+<ul>
+<li>Web 客户端和 Web 服务器使用超文本传输协议 (HTTP) 交换 Web 流量。</li>
+<li>超文本传输协议安全 (HTTPS) 用于安全的 Web 通信。</li>
+</ul>
+<p><strong>邮件服务器</strong></p>
+<ul>
+<li>邮件服务器和客户端使用简单邮件传输协议 (SMTP)发送邮件。</li>
+<li>邮件客户端使用邮局协议 (POP3) 和互联网消息访问协议 (IMAP)检索邮件。</li>
+<li>使用 <a href="mailto:user@xyz.xxx">user@xyz.xxx</a> 格式指定收件人。</li>
+</ul>
+<p><strong>FTP 服务器</strong></p>
+<p>文件传输协议 (FTP) 服务允许在客户端和 FTP 服务器之间下载和上传文件。<br>FTP 安全（FPS）和安全 FTP（SFTP）用于保护 FTP 文件交换。</p>
+<p><strong>DHCP 服务器</strong></p>
+<p>客户端使用动态主机配置协议 (DHCP) 从 DHCP 服务器获取 IP 配置（即 IP地址、子网掩码、默认网关等）。</p>
+<p><strong>DNS 服务器</strong></p>
+<p>域名服务（DNS）将域名解析为 IP 地址（例如，cisco.com = 72.163.4.185）<br>DNS 向请求主机提供网站的 IP 地址（即域名）。</p>
+<p>这些网络协议将构成网络专家的基本工具集。每种网络协议都会定义：</p>
+<ul>
+<li>通信会话任意一端的流程</li>
+<li>消息类型</li>
+<li>消息语法</li>
+<li>信息性字段的意义</li>
+<li>消息发送方式和预期响应</li>
+<li>与下一层的交互</li>
+</ul>
+<h3 id="增长"><a href="#增长" class="headerlink" title="增长"></a>增长</h3><p>不断扩展是许多小型企业必经的过程，而其网络也必须相应地扩展。理想情况是网络管理员有足够的时间根据公司发展做出关于网络发展的明智决策。</p>
+<p>要扩展网络，要求有以下几个要素：</p>
+<ul>
+<li><strong>网络文档</strong> - 物理和逻辑拓扑</li>
+<li><strong>设备清单</strong> – 使用或组成网络的设备列表</li>
+<li><strong>预算</strong> – 逐项列出IT预算，包括财年设备采购预算</li>
+<li><strong>流量分析</strong> - 应当记录协议、应用程序和服务以及它们各自的流量要求</li>
+</ul>
+<p>要确定流量模式，应做好以下几点：</p>
+<p>通过捕获网络使用高峰期的流量准确了解各种不同的流量类型。<br>针对不同的网段和设备捕获流量，因为某些流量仅在特定的网段内传输。</p>
+<p>协议分析器收集的信息根据流量的源和目标以及发送的流量类型进行分析。这种分析有助于决定提高流量管理效率的方法，例如减少不必要的流量，或通过移动某台服务器的逻辑位置来改变流量的总体模式。</p>
+<p>除了要了解流量的变化趋势，网络管理员必须知道网络的使用是如何变化的。许多操作系统都提供内置工具来显示此类信息。Windows 主机提供任务管理器、事件查看器和数据使用情况工具等工具。</p>
+<p>这些工具可用于捕获以下信息的 “快照”：</p>
+<ul>
+<li>操作系统和操作系统版本</li>
+<li>CPU 使用率</li>
+<li>内存利用率</li>
+<li>驱动程序利用率</li>
+<li>非网络应用程序</li>
+<li>网络应用程序</li>
+</ul>
+<p>在一段时间内记录小型网络中的员工快照对于识别不断发展的协议需求和相关的流量流非常有用。这种资源利用率的转变就可能要求网络管理员相应地调整网络资源分配。</p>
+<p>Windows 10 数据使用量工具对于确定哪些应用程序正在使用主机上的网络服务特别有用。数据使用量工具可以使用 <strong>Settings &gt; Network &amp; Internet &gt; Data usage &gt; network interface</strong> （从最近 30 天开始）访问。</p>
+<h3 id="验证连接"><a href="#验证连接" class="headerlink" title="验证连接"></a>验证连接</h3><p>ping 命令是快速测试源和目的 IP 地址之间第 3 层连接的最有效方法。该命令还显示各种往返时间统计信息。</p>
+<p>具体而言，该 ping 命令使用 Internet 控制消息协议 (ICMP) 来Echo请求（ICMP 类型 8）和Echo应答（ICMP 类型 0）消息。该 ping 命令可用于大多数操作系统，包括 Windows、Linux、macOS 和思科 IOS。</p>
+<p>在 Windows 10 主机上，该 ping 命令发送四个连续的 ICMP Echo消息，并期望从目标收到四个连续的 ICMP Echo应答。</p>
+<p>思科ios系统不同，它会发送5条信息，收到的指示符如下：</p>
+<table>
+<thead>
+<tr>
+<th align="left">元素</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><strong>!</strong></td>
+<td align="left">感叹号表示成功收到Echo应答消息。它验证了源和目标之间的第 3 层连接。</td>
+</tr>
+<tr>
+<td align="left"><strong>.</strong></td>
+<td align="left">句点意味着等待Echo应答消息的时间已过期。这表示路径中某处可能存在连接问题。</td>
+</tr>
+<tr>
+<td align="left"><strong>U</strong></td>
+<td align="left">大写 <strong>U</strong> 表示沿路径的路由器 回应了 ICMP 类型 3 “目的地 不可达” 的错误消息。可能的原因包括路由器不知道目标网络的方向， 或者在目标网络上 找不到主机。</td>
+</tr>
+</tbody></table>
+<p>其他可能的 ping 回复包括 Q、M、? 或 &amp;。但是，这些含义超出了本模块的范围。</p>
+<p>不学啦！到这已经明白很多很多网络知识啦~~</p>
+<p>剩下的就交给专业的网络工程师吧！！！</p>
+<h1 id="日后补充"><a href="#日后补充" class="headerlink" title="日后补充"></a>日后补充</h1><p>2.1.5终端仿真程序</p>
+<p>2.3.8用Tera Term连接控制台</p>
+<p>2.5.4捕获配置到文本中</p>
+<p>10.3.5排除默认网关故障</p>
+<h1 id="真-命令集"><a href="#真-命令集" class="headerlink" title="真*命令集"></a>真*命令集</h1><p><strong>转载自：<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_42833924/article/details/89790004">https://blog.csdn.net/qq_42833924/article/details/89790004</a><br>为自己学习方便故转载，如果大家觉得有帮助，请为原文点赞。</strong></p>
+<p>1.基本配置</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token class-name">R</span><span class="token operator">></span> enable   从用户模式进入特权模式
+<span class="token class-name">R</span># disable  从特权模式退到用户模式
+<span class="token class-name">R</span># logout <span class="token punctuation">(</span>或exit<span class="token punctuation">)</span>   退出<span class="token class-name">Cisco</span>设备
+<span class="token class-name">R</span># show history 查看先前输入的命令（默认<span class="token number">10</span>个）
+<span class="token class-name">R</span># terminal history size #_of_commands  改变历史缓存的大小（最大<span class="token number">256</span>）
+<span class="token class-name">R</span># terminal no editing  禁用编辑特性（移去no参数为启用）
+<span class="token class-name">R</span># configure terminal   进入配置模式（退出为end或CTRL<span class="token operator">-</span><span class="token class-name">Z</span>）
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token punctuation">)</span># hostname name    改变路由器的名称
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token punctuation">)</span># banner motd delimiting_character banner_character delimiting_character   设置登录横幅
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span>line<span class="token punctuation">)</span># exec<span class="token operator">-</span>timeout minutes_# seconds_#    更改休止超时（默认<span class="token number">10</span>分钟）
+<span class="token class-name">R</span># show hosts   查看路由器解析表中的静态和动态DNS条目
+<span class="token class-name">R</span><span class="token operator">></span> show version 查看路由器综合信息
+<span class="token class-name">R</span># show line    验证线路的配置
+<span class="token class-name">R</span># show processes   查看设备的各个进程的CPU使用率
+<span class="token class-name">R</span># show users   查看登录到这台设备上的所有用户
+<span class="token class-name">R</span># show sessions    查看当前挂起的已经打开的telnet会话
+<span class="token class-name">R</span># term ip netmask<span class="token operator">-</span>format bit<span class="token operator">-</span>count<span class="token operator">|</span>decimal<span class="token operator">|</span>hexadecimal 改变子网掩码显示方式（在当前登录会话期间有效，在子线路模式下即可保存）
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token punctuation">)</span># ip host name_of_host <span class="token punctuation">[</span><span class="token class-name">TCP_port_</span>#<span class="token punctuation">]</span> <span class="token class-name">IP_address</span> <span class="token punctuation">[</span>…<span class="token punctuation">]</span> 创建主机静态解析表（可指定多达<span class="token number">8</span>个IP地址）
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token punctuation">)</span># ip name<span class="token operator">-</span>server <span class="token class-name">IP_address_of_DNS_server</span> <span class="token punctuation">[</span>…<span class="token punctuation">]</span>  配置通过访问DNS服务器动态解析主机（可指定多达<span class="token number">6</span>个DNS服务器）
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token punctuation">)</span># no ip domain<span class="token operator">-</span>lookup  禁用DNS查询
+<span class="token class-name">R</span><span class="token operator">></span> ping destination_IP_address_or_host_name 查看与目的主机的连通性
+<span class="token class-name">R</span><span class="token operator">></span> traceroute destination_IP_address_or_host_name   查看与目的主机间的路由器
+<span class="token class-name">R</span># <span class="token punctuation">[</span>telnet<span class="token operator">|</span>connect<span class="token punctuation">]</span> name_of_the_destination<span class="token operator">|</span>destination_IP_address  打开telnet会话
+<span class="token class-name">R</span># resume connection_#  恢复一个特定的会话
+<span class="token class-name">R</span># disconnect connection_#  结束一已挂起的telnet会话无须恢复它并随后从中退出
+<span class="token class-name">R</span># clear line line_#    结束某人的会话
+<span class="token class-name">R</span># no debug all <span class="token punctuation">(</span>或undebug all<span class="token punctuation">)</span>  禁用debug
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token punctuation">)</span># service timestamps debug datetime msec   在debug输出中显示时间戳
+<span class="token class-name">R</span># terminal monitor 从VTY或辅助线路端口登录执行，路由器将在屏幕上显示报告消息
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span>line<span class="token punctuation">)</span># logging synchronous在该线路上报告信息后路由器在新提示符后重新显示未打完的命令
+<span class="token number">123456789101112131415161718192021222324252627282930</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>2.文件操作</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token class-name">R</span># show running<span class="token operator">-</span>config  查看正在运行（当前）的配置文件
+<span class="token class-name">R</span># show startup<span class="token operator">-</span>config  查看NVRAM中的配置文件
+<span class="token class-name">R</span># copy running<span class="token operator">-</span>config<span class="token operator">|</span>startup<span class="token operator">-</span>config tftp  将配置备份到TFTP服务器
+<span class="token class-name">R</span># copy tftp startup<span class="token operator">-</span>config<span class="token operator">|</span>running<span class="token operator">-</span>config  从TFTP服务器将配置恢复到路由器
+<span class="token class-name">R</span># copy startup<span class="token operator">-</span>config running<span class="token operator">-</span>config   从NVRAM中将配置恢复到RAM中
+<span class="token class-name">R</span># copy running<span class="token operator">-</span>config startup<span class="token operator">-</span>config   将RAM中的配置文件保存到NVRAM
+<span class="token class-name">R</span># erase startup<span class="token operator">-</span>config 删除NVRAM中的配置文件
+<span class="token class-name">R</span># copy flash tftp  备份IOS镜像到TFTP服务器
+<span class="token class-name">R</span># show flash   查看闪存中的文件
+<span class="token number">123456789</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>3.启动配置</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token class-name">R</span># setup    运行系统配置会话
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token punctuation">)</span># boot system flash name_of_IOS_file_in_flash  启动时加载闪存中的指定IOS文件
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token punctuation">)</span># boot system tftp <span class="token class-name">IOS_image_name</span> <span class="token class-name">IP_address_of_server</span> 启动时加载TFTP服务器里的IOS文件
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token punctuation">)</span># boot system rom  启动时加载ROM中的迷你IOS文件（启动与这三个命令的顺序有关）
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token punctuation">)</span># config<span class="token operator">-</span>register <span class="token number">0</span>x hexadecimal_value 改变寄存器的值
+rommon <span class="token number">5</span><span class="token operator">></span> confreg <span class="token number">0x2142</span>    <span class="token number">2600</span>、<span class="token number">3600</span>系列启动后按CTRL<span class="token operator">-</span>BREAK进入ROMMON模式，改变寄存器的值
+<span class="token class-name">R</span><span class="token operator">></span> o<span class="token operator">/</span>r <span class="token number">0x2142</span>   其他系列路由器改变寄存器的值的方法
+<span class="token number">1234567</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>4.密码设置</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token punctuation">)</span># line console <span class="token number">0</span>   进入控制台接口配置模式
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span>line<span class="token punctuation">)</span># password console_password   配置控制台口令
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token punctuation">)</span># line vty <span class="token number">0</span> <span class="token number">4</span> 进入虚拟终端线路配置模式（根据路由器及IOS最少<span class="token number">5</span>个直到很多）
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span>line<span class="token punctuation">)</span># login   接上条命令，允许进行<span class="token class-name">Telnet</span>访问
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span>line<span class="token punctuation">)</span># password telnet_password    接上条命令，配置<span class="token class-name">Telnet</span>口令
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token punctuation">)</span># line aux <span class="token number">0</span>   进入辅助端口配置模式
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span>line<span class="token punctuation">)</span># password console_password   接上条命令，配置辅助端口口令
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token punctuation">)</span># enable password privileged_password  配置特权EXEC口令（不加密）
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token punctuation">)</span># enable secret privileged_password    配置特权EXEC口令（加密）
+<span class="token number">123456789</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>5.接口配置</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token punctuation">)</span># <span class="token keyword">interface</span> type <span class="token punctuation">[</span>slot_#<span class="token operator">/</span><span class="token punctuation">]</span> port_#  进入接口子配置模式
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span><span class="token keyword">if</span><span class="token punctuation">)</span># description interface_description 添加接口描述
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span><span class="token keyword">if</span><span class="token punctuation">)</span># no shutdown   启用该接口
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token punctuation">)</span># <span class="token keyword">interface</span> loopback port_#    创建环回接口
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span><span class="token keyword">if</span><span class="token punctuation">)</span># media<span class="token operator">-</span>type aui<span class="token operator">|</span><span class="token number">10</span>baset<span class="token operator">|</span><span class="token number">100</span>baset<span class="token operator">|</span>mii   指定该接口连接的介质类型
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span><span class="token keyword">if</span><span class="token punctuation">)</span># speed <span class="token number">10</span><span class="token operator">|</span><span class="token number">100</span><span class="token operator">|</span>auto 指定该接口速率
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span><span class="token keyword">if</span><span class="token punctuation">)</span># <span class="token punctuation">[</span>no<span class="token punctuation">]</span> half<span class="token operator">-</span>duplex  指定该接口双工模式
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span><span class="token keyword">if</span><span class="token punctuation">)</span># clock rate rate_in_bits_per_second    指定该DCE串行接口速率
+<span class="token class-name">R</span><span class="token operator">></span> show controller serial <span class="token punctuation">[</span>slot_#<span class="token operator">/</span><span class="token punctuation">]</span> port_#  验证该接口是DCE还是DTE，注意空格
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span><span class="token keyword">if</span><span class="token punctuation">)</span># bandwidth rate_in_Kbps    改变该接口的带宽值
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span><span class="token keyword">if</span><span class="token punctuation">)</span># ip address <span class="token class-name">IP_address</span> subnet_mask 配置该接口IP地址
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token punctuation">)</span># ip subnet<span class="token operator">-</span>zero   IOS12<span class="token punctuation">.</span><span class="token number">0</span>前默认禁用<span class="token number">0</span>子网，此命令为启用
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span><span class="token keyword">if</span><span class="token punctuation">)</span># ip directed<span class="token operator">-</span>broadcast IOS12<span class="token punctuation">.</span><span class="token number">0</span>后默认禁用定向广播，此命令为启用
+<span class="token class-name">R</span># show interfaces <span class="token punctuation">[</span>type <span class="token punctuation">[</span>slot_#<span class="token operator">/</span><span class="token punctuation">]</span> port_#<span class="token punctuation">]</span>  验证接口配置
+<span class="token class-name">R</span># show ip interfaces <span class="token punctuation">[</span>type <span class="token punctuation">[</span>slot_#<span class="token operator">/</span><span class="token punctuation">]</span> port_#<span class="token punctuation">]</span> <span class="token punctuation">[</span>brief<span class="token punctuation">]</span>   验证接口IP配置
+<span class="token number">123456789101112131415</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>6.CDP</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token punctuation">)</span># <span class="token punctuation">[</span>no<span class="token punctuation">]</span> cdp run 启用<span class="token operator">/</span>禁用CDP
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span><span class="token keyword">if</span><span class="token punctuation">)</span># <span class="token punctuation">[</span>no<span class="token punctuation">]</span> cdp enable   基于接口启用<span class="token operator">/</span>禁用CDP
+<span class="token class-name">R</span># show cdp 查看CDP状态
+<span class="token class-name">R</span># show cdp <span class="token keyword">interface</span>   查看基于接口的CDP配置
+<span class="token class-name">R</span># show cdp neighbors <span class="token punctuation">[</span>detail<span class="token punctuation">]</span>  查看与用户<span class="token class-name">Cisco</span>设备相连的CDP邻居的摘要<span class="token operator">/</span>详细清单
+<span class="token class-name">R</span># show cdp entry neighbor's_name   查看一个指定邻居的详细信息
+<span class="token class-name">R</span># show cdp traffic 查看CDP通信量的统计信息
+<span class="token number">1234567</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>7.路由</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token punctuation">)</span># ip route destination_network_# <span class="token punctuation">[</span>subnet_mask<span class="token punctuation">]</span> <span class="token class-name">IP_address_of_next_hop_neighbor</span><span class="token operator">|</span>interface_to_exit <span class="token punctuation">[</span>administrative_distance<span class="token punctuation">]</span> <span class="token punctuation">[</span>permanent<span class="token punctuation">]</span> 配置IP静态路由
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token punctuation">)</span># ip route <span class="token number">0.0</span><span class="token number">.0</span><span class="token number">.0</span> <span class="token number">0.0</span><span class="token number">.0</span><span class="token number">.0</span> <span class="token class-name">IP_address_of_next_hop_neighbor</span><span class="token operator">|</span>interface_to_exit <span class="token punctuation">[</span>administrative_distance<span class="token punctuation">]</span> <span class="token punctuation">[</span>permanent<span class="token punctuation">]</span> 配置默认路由
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token punctuation">)</span># ip classless 使有类协议接受非一致性子网掩码或不连续子网
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token punctuation">)</span># <span class="token keyword">interface</span> type <span class="token punctuation">[</span>slot_#<span class="token operator">/</span><span class="token punctuation">]</span> port_#<span class="token punctuation">.</span> subinterface_# <span class="token punctuation">[</span>point<span class="token operator">-</span><span class="token keyword">to</span><span class="token operator">-</span>point<span class="token operator">|</span>multipoint<span class="token punctuation">]</span>  创建子接口
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span>subif<span class="token punctuation">)</span># encapsulation isl<span class="token operator">|</span>dotlq VLAN_# 指定子接口中继类型和相关的VLAN
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token punctuation">)</span># router name_of_the_IP_routing_protocol   进入路由选择协议的配置模式
+<span class="token class-name">R</span># show ip route    查看IP路由表
+<span class="token number">1234567</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>8.RIP</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token punctuation">)</span># router rip   配置IP RIP
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span>router<span class="token punctuation">)</span># network <span class="token class-name">IP_network_</span>#  指定哪些接口参与路由选择进程
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span>router<span class="token punctuation">)</span># version <span class="token number">1</span><span class="token operator">|</span><span class="token number">2</span>   只接受和发送RIP版本<span class="token number">1</span>或<span class="token number">2</span>（默认只产生<span class="token class-name">RIPv1</span>更新，而两个版本的更新都接收）
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span>router<span class="token punctuation">)</span># ip rip send<span class="token operator">|</span>receive version <span class="token number">1</span> <span class="token operator">|</span> version <span class="token number">2</span> <span class="token operator">|</span> version <span class="token number">1</span> <span class="token number">2</span>   在特定接口上控制在发送或接收RIP更新时使用哪个版本的RIP
+<span class="token class-name">R</span># show ip protocols    查看在路由器上已配置并运行的所有IP路由选择协议
+<span class="token class-name">R</span># show ip route <span class="token punctuation">[</span>name_of_the_IP_routing_protocol<span class="token punctuation">]</span>  查看路由选择表
+<span class="token class-name">R</span># debug ip rip 帮助进行故障排除
+<span class="token number">1234567</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>9.IGRP</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token punctuation">)</span># router igrp AS_# 配置IP IGRP
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span>router<span class="token punctuation">)</span># network <span class="token class-name">IP_network_</span>#  通告网络号
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span>router<span class="token punctuation">)</span># neighbor <span class="token class-name">IP_address_of_neighbor</span>   配置单播更新
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span>router<span class="token punctuation">)</span># passive<span class="token operator">-</span><span class="token keyword">interface</span> type <span class="token punctuation">[</span>slot_#<span class="token operator">/</span><span class="token punctuation">]</span> port_#   允许该接口在IGRP中通告但它不监听或发送IGRP更新
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span>router<span class="token punctuation">)</span># traffic<span class="token operator">-</span>share min across<span class="token operator">-</span>interfaces   使路由器只使用最佳路径但又在路由选择表中放入替代路径
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span>router<span class="token punctuation">)</span># timers basic update_# invalid_# holddown_# flush_# <span class="token punctuation">[</span>sleeptime_#<span class="token punctuation">]</span>  调整定时器（默认时，update<span class="token operator">=</span><span class="token number">90</span>，invalid<span class="token operator">=</span><span class="token number">270</span>，holddown<span class="token operator">=</span><span class="token number">280</span>，flush<span class="token operator">=</span><span class="token number">630</span>）
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span>router<span class="token punctuation">)</span># no metric holddown    关闭压制定时器（默认）
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span>router<span class="token punctuation">)</span># distance administrative_distance_#    调整管理距离（取值范围是<span class="token number">1</span><span class="token operator">-</span><span class="token number">255</span>，默认为<span class="token number">100</span>）
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span>router<span class="token punctuation">)</span># <span class="token keyword">default</span><span class="token operator">-</span>metric bandwidth_# delay_# reliability_# load_# MTU_# 调整度量值
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span>router<span class="token punctuation">)</span># metric weights tos_# K1_# K2_# K3_# K4_# K5_# 调整度量权重值（默认时，<span class="token function">K1</span><span class="token punctuation">(</span>带宽<span class="token punctuation">)</span><span class="token operator">=</span><span class="token function">K3</span><span class="token punctuation">(</span>可靠性<span class="token punctuation">)</span><span class="token operator">=</span><span class="token number">1</span>，<span class="token function">K2</span><span class="token punctuation">(</span>延迟<span class="token punctuation">)</span><span class="token operator">=</span><span class="token function">K4</span><span class="token punctuation">(</span>负载<span class="token punctuation">)</span><span class="token operator">=</span><span class="token function">K5</span><span class="token punctuation">(</span>MTU<span class="token punctuation">)</span><span class="token operator">=</span><span class="token number">0</span>）
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span>router<span class="token punctuation">)</span># variance multiplier_# 启用IGRP非同等成本路径（变化因子值<span class="token number">1</span><span class="token operator">-</span><span class="token number">128</span>默认为<span class="token number">1</span>）
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span>router<span class="token punctuation">)</span># traffic<span class="token operator">-</span>share balanced    配置负载均衡
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span>router<span class="token punctuation">)</span># maximum<span class="token operator">-</span>paths paths_# 配置负载均衡的路径条数（取值范围是<span class="token number">1</span><span class="token operator">-</span><span class="token number">6</span>）
+<span class="token class-name">R</span># debug ip igrp events 提供路由器和邻居间发生的每一步操作信息
+<span class="token class-name">R</span># debug ip igrp transactions   提供有关包含在路由更新中路由的详细信息
+<span class="token number">123456789101112131415</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>10.EIGRP</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token punctuation">)</span># router eigrp AS_#    配置EIGRP
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span>router<span class="token punctuation">)</span># network <span class="token class-name">IP_network_</span>#  通告网络号
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span><span class="token keyword">if</span><span class="token punctuation">)</span># ip bandwidth<span class="token operator">-</span>percent eigrp AS_# percent_# 设置pacing（调速）占给定接口带宽的百分数（默认为<span class="token number">50</span><span class="token operator">%</span>）
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span>router<span class="token punctuation">)</span># distance administrative_distance_#    调整管理距离（取值范围是<span class="token number">1</span><span class="token operator">-</span><span class="token number">255</span>，默认对于内部路由是<span class="token number">90</span>而外部是<span class="token number">170</span>）
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span>router<span class="token punctuation">)</span># <span class="token keyword">default</span><span class="token operator">-</span>metric bandwidth_# delay_# reliability_# load_# MTU_# 调整度量值
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span>router<span class="token punctuation">)</span># metric weights tos_# K1_# K2_# K3_# K4_# K5_# 调整度量权重值（默认时，<span class="token function">K1</span><span class="token punctuation">(</span>带宽<span class="token punctuation">)</span><span class="token operator">=</span><span class="token function">K3</span><span class="token punctuation">(</span>可靠性<span class="token punctuation">)</span><span class="token operator">=</span><span class="token number">1</span>，<span class="token function">K2</span><span class="token punctuation">(</span>延迟<span class="token punctuation">)</span><span class="token operator">=</span><span class="token function">K4</span><span class="token punctuation">(</span>负载<span class="token punctuation">)</span><span class="token operator">=</span><span class="token function">K5</span><span class="token punctuation">(</span>MTU<span class="token punctuation">)</span><span class="token operator">=</span><span class="token number">0</span>）
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span><span class="token keyword">if</span><span class="token punctuation">)</span># ip hello<span class="token operator">-</span>interval eigrp AS_# seconds_#    在给定接口上设置<span class="token class-name">Hello</span>间隔（默认对于低速的NBMA网络是<span class="token number">60</span>秒，其他是<span class="token number">5</span>秒）
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span><span class="token keyword">if</span><span class="token punctuation">)</span># ip hold<span class="token operator">-</span>time eigrp AS_# seconds_# 在给定接口上设置<span class="token class-name">Hello</span>保持定时器（默认是<span class="token number">3</span>倍的<span class="token class-name">Hello</span>间隔）
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span>router<span class="token punctuation">)</span># passive<span class="token operator">-</span><span class="token keyword">interface</span> type <span class="token punctuation">[</span>slot_#<span class="token operator">/</span><span class="token punctuation">]</span> port_#   允许该接口在EIGRP中通告但它不监听或发送EIGRP更新
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span>router<span class="token punctuation">)</span># no auto<span class="token operator">-</span>summary   取消对路由的自动汇总
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span><span class="token keyword">if</span><span class="token punctuation">)</span># ip summary<span class="token operator">-</span>address eigrp AS_# network_address network_mask    创建不在有类边界上的汇总地址
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token punctuation">)</span># eigrp log<span class="token operator">-</span>neighbor<span class="token operator">-</span>changes   记录在某个邻居上发生的变化
+<span class="token class-name">R</span># show ip route eigrp  查看被EIGRP学习到的路由
+<span class="token class-name">R</span># show ip route network_address    查看指定目的地的路由信息
+<span class="token class-name">R</span># show ip eigrp topology   查看EIGRP的拓扑表
+<span class="token class-name">R</span># show ip eigrp interfaces     查看加入到EIGRP路由器所有接口的概述
+<span class="token class-name">R</span># show ip eigrp neighbor <span class="token punctuation">[</span>detail<span class="token punctuation">]</span>  显示和本路由器已形成邻居关系的所有路由器
+<span class="token class-name">R</span># show ip eigrp traffic    显示每个包类型的发出和接收的数量
+<span class="token class-name">R</span># show ip eigrp events 查看每个EIGRP事件的日志
+<span class="token class-name">R</span># debug ip eigrp   提供路由器和它的邻居之间发生的每一步操作
+<span class="token class-name">R</span># debug eigrp packets  查看在该路由器和它的邻居之间发送的数据包类型
+<span class="token class-name">R</span># debug eigrp neighbors    查看邻居的信息
+<span class="token number">12345678910111213141516171819202122</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>11.OSPF</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token punctuation">)</span># router ospf process_ID   配置OSPF
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span>router<span class="token punctuation">)</span># network <span class="token class-name">IP_address</span> wildcard_mask area area_#  指定接口进入OSPF区域
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span><span class="token keyword">if</span><span class="token punctuation">)</span># ip ospf cost cost_value   给接口指定成本（取值范围是<span class="token number">1</span><span class="token operator">-</span><span class="token number">65535</span>）
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span>router<span class="token punctuation">)</span># neighbor <span class="token class-name">IP_address_of_neighbor</span>   手动配置邻居
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span>router<span class="token punctuation">)</span># neighbor <span class="token class-name">IP_address_of_neighbor</span> priority value    指定邻居的优先级（取值范围是<span class="token number">0</span><span class="token operator">-</span><span class="token number">255</span>，<span class="token number">255</span>为DR，<span class="token number">0</span>为不可能成为DR）
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span><span class="token keyword">if</span><span class="token punctuation">)</span># ip ospf network non<span class="token operator">-</span>broadcast 手工配置非广播网络类型
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span>router<span class="token punctuation">)</span># area area_id stub 允许创建存根区域
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span>router<span class="token punctuation">)</span># area area_id stub no<span class="token operator">-</span>summary  允许创建完全存根区域
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span>router<span class="token punctuation">)</span># area area_id nssa 允许创建次存根区域
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span>router<span class="token punctuation">)</span># area area_id virtual<span class="token operator">-</span>link router_id   连接不连续区域为骨干区域<span class="token number">0</span>
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span>router<span class="token punctuation">)</span># area area_id range network_address network_mask   在区域边界路由器上汇总在给定区域中的路由器使用的IP地址空间到其他的区域
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span>router<span class="token punctuation">)</span># summary<span class="token operator">-</span>address network_address network_mask  在自治系统边界路由器上汇总外部路由
+<span class="token class-name">R</span># show ip ospf 概述所有OSPF相关的信息
+<span class="token class-name">R</span># show ip ospf process<span class="token operator">-</span>id  与上相同，而不仅仅是指定的进程
+<span class="token class-name">R</span># show ip ospf border<span class="token operator">-</span>routers  显示在此自治系统中所有ABR和ASBR的路由器ID
+<span class="token class-name">R</span># show ip ospf database    显示链路状态数据库
+<span class="token class-name">R</span># show ip ospf <span class="token keyword">interface</span>   显示接口的OSPF参数和其他的指定到此接口上的OSPF信息
+<span class="token class-name">R</span># show ip ospf neighbor <span class="token punctuation">[</span>detail<span class="token punctuation">]</span>   显示每个OSPF邻居和邻接状态
+<span class="token class-name">R</span># debug ip ospf adj    报告路由器建立到其他路由器的邻接关系进程
+<span class="token class-name">R</span># debug ip ospf events 报告路由器上的OSPF事件
+<span class="token class-name">R</span># debug ip ospf packet 报告OSPF LSA分组的内容
+<span class="token number">123456789101112131415161718192021</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>12.ACL</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token punctuation">)</span># access<span class="token operator">-</span>list <span class="token number">1</span><span class="token operator">-</span><span class="token number">99</span><span class="token operator">|</span><span class="token number">1300</span><span class="token operator">-</span><span class="token number">1999</span> permit<span class="token operator">|</span>deny source_IP_address <span class="token punctuation">[</span>wildcard_mask<span class="token punctuation">]</span> <span class="token punctuation">[</span>log<span class="token punctuation">]</span>    创建标准编号IP ACL
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span><span class="token keyword">if</span><span class="token punctuation">)</span># ip access<span class="token operator">-</span>group ACL_# in<span class="token operator">|</span>out  在指定接口上启动ACL
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span>line<span class="token punctuation">)</span># access<span class="token operator">-</span><span class="token keyword">class</span> standard_ACL_# in<span class="token operator">|</span>out  在指定若干线路上启动ACL以限制对路由器的<span class="token class-name">Telnet</span>访问
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token punctuation">)</span># access<span class="token operator">-</span>list <span class="token number">100</span><span class="token operator">-</span><span class="token number">199</span><span class="token operator">|</span><span class="token number">2000</span><span class="token operator">-</span><span class="token number">2699</span> permit<span class="token operator">|</span>deny <span class="token class-name">IP_protocol</span> source_address source_wildcard_mask <span class="token punctuation">[</span>protocol_information<span class="token punctuation">]</span> destination_address destination_wildcard_mask <span class="token punctuation">[</span>protocol_information<span class="token punctuation">]</span> <span class="token punctuation">[</span>log<span class="token punctuation">]</span>  创建扩展编号IP ACL
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token punctuation">)</span># ip access<span class="token operator">-</span>list standard <span class="token class-name">ACL_name</span> 创建标准命名ACL（从IOS11<span class="token punctuation">.</span><span class="token number">2</span>开始支持）
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span>std<span class="token operator">-</span>acl<span class="token punctuation">)</span># permit<span class="token operator">|</span>deny source_IP_address <span class="token punctuation">[</span>wildcard_mask<span class="token punctuation">]</span>    输入标准ACL命令
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token punctuation">)</span># ip access<span class="token operator">-</span>list extended <span class="token class-name">ACL_name</span> 创建扩展命名ACL（从IOS11<span class="token punctuation">.</span><span class="token number">2</span>开始支持）
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span>ext<span class="token operator">-</span>acl<span class="token punctuation">)</span># permit<span class="token operator">|</span>deny <span class="token class-name">IP_protocol</span> source_IP_address wildcard_mask <span class="token punctuation">[</span>protocol_information<span class="token punctuation">]</span> destination_IP_address wildcard_mask <span class="token punctuation">[</span>protocol_information<span class="token punctuation">]</span> <span class="token punctuation">[</span>log<span class="token punctuation">]</span> 输入扩展ACL命令
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span><span class="token keyword">if</span><span class="token punctuation">)</span># ip access_group <span class="token class-name">ACL_name</span> in<span class="token operator">|</span>out   启动命名ACL
+<span class="token class-name">R</span># show ip interfaces   验证访问列表
+<span class="token class-name">R</span># show access<span class="token operator">-</span>lists <span class="token punctuation">[</span>ACL_#_or_name<span class="token punctuation">]</span>    显示ACL中的语句
+<span class="token class-name">R</span># show ip access<span class="token operator">-</span>list <span class="token punctuation">[</span>ACL_#_or_name<span class="token punctuation">]</span>  显示IP ACL中的语句
+<span class="token class-name">R</span># clear access<span class="token operator">-</span>list counters <span class="token punctuation">[</span>ACL_#_or_name<span class="token punctuation">]</span>   对指定ACL中的匹配计数器清零
+<span class="token number">12345678910111213</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>13.NAT PAT 配置负载分发</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token punctuation">)</span># ip nat inside source <span class="token keyword">static</span> inside_local_source_IP_address inside_global_source_IP_address   定义NAT静态转换
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token punctuation">)</span># ip nat outside source <span class="token keyword">static</span> outside_global_destination_IP_address outside_local_destination_IP_address  定义NAT静态转换
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span><span class="token keyword">if</span><span class="token punctuation">)</span># ip nat inside<span class="token operator">|</span>outside 指定路由器上哪些接口在内部，哪些在外部
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token punctuation">)</span># ip nat outside source list standard_IP_ACL_# pool <span class="token class-name">NAT_pool_name</span>  为重叠地址转换配置NAT
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token punctuation">)</span># ip nat inside source list standard_IP_ACL_# pool <span class="token class-name">NAT_pool_name</span>   定义动态NAT，指定转换哪些内部设备的源地址
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token punctuation">)</span># ip nat pool <span class="token class-name">NAT_pool_name</span> beginning_inside_global_IP_address ending_inside_global_IP_address netmask subnet_mask_of_addresses<span class="token operator">|</span>prefix<span class="token operator">-</span>length length   创建源内部全局IP地址池
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token punctuation">)</span># ip nat inside source list standard_IP_ACL_# pool <span class="token class-name">NAT_pool_name</span> overload  定义PAT，指定哪台内部设备会转换其源地址
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token punctuation">)</span># ip nat pool pool_name beginning_inside_local_IP_address ending_inside_local_IP_address prefix<span class="token operator">-</span>length subnet_mask_bits type rotary    指定提供服务的设备上配置的内部IP地址
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token punctuation">)</span># ip nat inside destination list standard_ACL_# pool pool_name 指定外部设备用来访问内部资源的全局IP地址
+<span class="token class-name">R</span># show ip nat translations <span class="token punctuation">[</span>verbose<span class="token punctuation">]</span>   查看路由器上的（详细）地址转换信息
+<span class="token class-name">R</span># show ip nat statistics   查看路由器上的地址转换的统计信息
+<span class="token class-name">R</span># clear ip nat translation <span class="token operator">*</span>   清除所有NAT表项
+<span class="token class-name">R</span># clear ip nat translation inside<span class="token operator">|</span>outside global_IP_address<span class="token operator">|</span>local_IP_address   清除转换表中的指定动态条目
+<span class="token class-name">R</span># clear ip nat translation protocol inside global_IP_address global_port local_IP_address local_port   清除转换表中的指定动态条目
+<span class="token class-name">R</span># debug ip nat 提供IOS对每个已转换分组所做的转换
+<span class="token number">123456789101112131415</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>14.DHCP</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token punctuation">)</span># <span class="token punctuation">[</span>no<span class="token punctuation">]</span> service dhcp    启用<span class="token operator">/</span>禁用DHCP（默认启用）
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token punctuation">)</span># ip dhcp pool pool_name   创建地址池
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span>dhcp<span class="token punctuation">)</span># network network_number <span class="token punctuation">[</span>subnet_mask<span class="token operator">|</span><span class="token operator">/</span>prefix_length<span class="token punctuation">]</span> 指定分配给客户的IP地址范围
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span>dhcp<span class="token punctuation">)</span># domain<span class="token operator">-</span>name domain_name 向客户分配域名
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span>dhcp<span class="token punctuation">)</span># dns<span class="token operator">-</span>server <span class="token class-name">IP_address</span> <span class="token punctuation">[</span>…<span class="token punctuation">]</span>   指定最多<span class="token number">8</span>台DNS服务器分配给客户
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span>dhcp<span class="token punctuation">)</span># netbios<span class="token operator">-</span>name<span class="token operator">-</span>server <span class="token class-name">IP_address</span> <span class="token punctuation">[</span>…<span class="token punctuation">]</span>  指定最多<span class="token number">8</span>台WINS服务器分配给客户
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span>dhcp<span class="token punctuation">)</span># netbios<span class="token operator">-</span>node<span class="token operator">-</span>type node_type 向微软客户分配节点类型
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span>dhcp<span class="token punctuation">)</span># <span class="token keyword">default</span><span class="token operator">-</span>router <span class="token class-name">IP_address</span> <span class="token punctuation">[</span>…<span class="token punctuation">]</span>   指定最多<span class="token number">8</span>条默认路由给客户用于该地址范围
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span>dhcp<span class="token punctuation">)</span># lease days <span class="token punctuation">[</span>hours<span class="token punctuation">]</span> <span class="token punctuation">[</span>minutes<span class="token punctuation">]</span> <span class="token operator">|</span>infinite  指定租约的期限（默认一天）
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token punctuation">)</span># ip dhcp ping timeout milliseconds    指定测试服务器地址池中的可用地址是否正在使用时服务器应等待时间
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token punctuation">)</span># ip dhcp excluded<span class="token operator">-</span>address beginning_IP_address <span class="token punctuation">[</span>ending_IP_address<span class="token punctuation">]</span>    排除一些地址
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span><span class="token keyword">if</span><span class="token punctuation">)</span># ip address dhcp   在路由器上建立DHCP客户
+<span class="token class-name">R</span># show ip dhcp binding <span class="token punctuation">[</span>client_address<span class="token punctuation">]</span>    查看分配给客户的地址
+<span class="token class-name">R</span># clear ip dhcp binding client_address<span class="token operator">|</span><span class="token operator">*</span>   清除分配给客户的指定<span class="token operator">/</span>所有地址
+<span class="token class-name">R</span># debug ip dhcp server events<span class="token operator">|</span>packet<span class="token operator">|</span>linkage   查看DHCP服务器相关信息
+<span class="token number">123456789101112131415</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>15.HDLC</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span><span class="token keyword">if</span><span class="token punctuation">)</span># encapsulation hdlc    封装同步串行接口为HDLC（默认）
+<span class="token number">1</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>16.PPP</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span><span class="token keyword">if</span><span class="token punctuation">)</span># encapsulation ppp 在WAN接口上使用PPP
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span><span class="token keyword">if</span><span class="token punctuation">)</span># ppp pap sent<span class="token operator">-</span>username your_hostname password password 指定PAP用于认证并且提供在服务端用于执行认证的用户名和口令（此为客户端配置）
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token punctuation">)</span># hostname your_router's_hostname  为路由器指定惟一主机名（以下三个为服务端配置）
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token punctuation">)</span># username remote_hostname password matching_password  指定认证路由器时所使用的远端主机名称和口令
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span><span class="token keyword">if</span><span class="token punctuation">)</span># ppp authentication pap    指定PAP认证
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span><span class="token keyword">if</span><span class="token punctuation">)</span># ppp authentication chap<span class="token operator">|</span>pap<span class="token operator">|</span>chap pap<span class="token operator">|</span>pap chap 批定PPP认证类型
+<span class="token class-name">R</span># debug ppp negotiation    查看LCP协商时的信息
+<span class="token class-name">R</span># debug ppp authentication 查看PPP认证情况
+<span class="token number">12345678</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>17.FR</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span><span class="token keyword">if</span><span class="token punctuation">)</span># encapsulation frame<span class="token operator">-</span>relay <span class="token punctuation">[</span>cisco<span class="token operator">|</span>ietf<span class="token punctuation">]</span>    指定封装类型为帧中继<span class="token punctuation">(</span>默认cisco）
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span><span class="token keyword">if</span><span class="token punctuation">)</span># frame<span class="token operator">-</span>relay lmi<span class="token operator">-</span>type ansi<span class="token operator">|</span>cisco<span class="token operator">|</span>q933a 给该串行接口指定LMI类型
+<span class="token class-name">R</span># show frame<span class="token operator">-</span>relay lmi 查看详细的LMI统计信息
+<span class="token class-name">R</span># debug frame<span class="token operator">-</span>relay lmi    报告路由器正在发送与接收的实际LMI信息
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span><span class="token keyword">if</span><span class="token punctuation">)</span># frame<span class="token operator">-</span>relay map protocol_name destination_address local_dlci_# <span class="token punctuation">[</span>broadcast<span class="token punctuation">]</span> <span class="token punctuation">[</span>ietf<span class="token operator">|</span>cisco<span class="token punctuation">]</span>   将远端第<span class="token number">3</span>层地址手动映射到本地DLCI号
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span><span class="token keyword">if</span><span class="token punctuation">)</span># <span class="token punctuation">[</span>no<span class="token punctuation">]</span> frame<span class="token operator">-</span>relay inverse<span class="token operator">-</span>arp <span class="token punctuation">[</span>protocol_name<span class="token punctuation">]</span> <span class="token punctuation">[</span>DLCI_#<span class="token punctuation">]</span> 启用<span class="token operator">/</span>禁用逆向
+<span class="token number">123456</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>18.ARP（默认启用）</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span><span class="token keyword">if</span><span class="token punctuation">)</span> clear frame<span class="token operator">-</span>relay<span class="token operator">-</span>inarp    清除逆向ARP解析表
+<span class="token class-name">R</span># show frame<span class="token operator">-</span>relay traffic 查看逆向ARP统计
+<span class="token class-name">R</span># show frame<span class="token operator">-</span>relay pvc <span class="token punctuation">[</span>DLCI_#<span class="token punctuation">]</span>    查看终止于路由器的所有（指定）帧中继PVC及其统计信息
+<span class="token class-name">R</span># show frame<span class="token operator">-</span>relay map 查看将第<span class="token number">3</span>层地址映射成本地DLCI号的虚电路解析表
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token punctuation">)</span># <span class="token keyword">interface</span> type <span class="token punctuation">[</span>slot_#<span class="token operator">/</span><span class="token punctuation">]</span> port_#<span class="token punctuation">.</span> subinterface_# <span class="token punctuation">[</span>point<span class="token operator">-</span><span class="token keyword">to</span><span class="token operator">-</span>point<span class="token operator">|</span>multipoint<span class="token punctuation">]</span>  创建子接口
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span>subif<span class="token punctuation">)</span># frame<span class="token operator">-</span>relay <span class="token keyword">interface</span><span class="token operator">-</span>dlci local_DLCI_#    配置子接口的帧中继
+<span class="token number">123456</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>19.ISDN</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token punctuation">[</span><span class="token operator">-</span><span class="token keyword">if</span><span class="token punctuation">]</span><span class="token punctuation">)</span># isdn <span class="token keyword">switch</span><span class="token operator">-</span>type <span class="token class-name">ISDN_switch_type</span>   在全局或接口配置模式下配置交换机类型
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span><span class="token keyword">if</span><span class="token punctuation">)</span># isdn spid1 spid_#__for_1st_BRI local_dial_#   为第一个<span class="token class-name">B</span>信道配置SPID
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span><span class="token keyword">if</span><span class="token punctuation">)</span># isdn spid2 spid_#__for_2st_BRI local_dial_#   为第二个<span class="token class-name">B</span>信道配置SPID
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token punctuation">)</span># controller t1<span class="token operator">|</span>e1 <span class="token punctuation">[</span>slot_#<span class="token operator">/</span><span class="token punctuation">]</span> port_#    以下<span class="token number">6</span>个命令为控制卡配置
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span>controller<span class="token punctuation">)</span># framing esf<span class="token operator">|</span>sf<span class="token operator">|</span>crc4<span class="token operator">|</span>nocrc4    在T1或E1上使用物理成帧
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span>controller<span class="token punctuation">)</span># linecode ami<span class="token operator">|</span>b8zs<span class="token operator">|</span>hdb3    线路编码，定义<span class="token number">1</span>与<span class="token number">0</span>如何在线路上物理表示
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span>controller<span class="token punctuation">)</span># clock source line primary<span class="token operator">|</span>secondary<span class="token operator">|</span>internal  定义路由器如何获得其时钟以用于同步数字连接
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span>controller<span class="token punctuation">)</span># pri<span class="token operator">-</span>group timeslots <span class="token punctuation">[</span><span class="token number">1</span><span class="token operator">-</span><span class="token number">24</span><span class="token operator">|</span><span class="token number">1</span><span class="token operator">-</span><span class="token number">31</span><span class="token punctuation">]</span>   指定路由器哪个或哪些时隙用于ISDN连接
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span>controller<span class="token punctuation">)</span># <span class="token punctuation">[</span>no<span class="token punctuation">]</span> shutdown 启用<span class="token operator">/</span>禁用控制器
+<span class="token class-name">R</span># show controllers t1<span class="token operator">|</span>e1 <span class="token punctuation">[</span>slot_#<span class="token operator">/</span>port_#<span class="token punctuation">]</span>   验证控制器卡配置
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token punctuation">)</span># <span class="token keyword">interface</span> serial <span class="token punctuation">[</span>slot_#<span class="token operator">/</span><span class="token punctuation">]</span> port_#<span class="token operator">:</span><span class="token number">23</span> 设置逻辑串口（T1使用）
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token punctuation">)</span># <span class="token keyword">interface</span> serial <span class="token punctuation">[</span>slot_#<span class="token operator">/</span><span class="token punctuation">]</span> port_#<span class="token operator">:</span><span class="token number">15</span> 设置逻辑串口（E1使用）
+<span class="token class-name">R</span># show <span class="token keyword">interface</span> bri <span class="token punctuation">[</span>slot_#<span class="token operator">/</span><span class="token punctuation">]</span> port_#<span class="token punctuation">[</span><span class="token operator">:</span><span class="token number">1</span><span class="token operator">|</span><span class="token number">2</span><span class="token operator">|</span><span class="token number">1</span> <span class="token number">2</span><span class="token punctuation">]</span>    验证ISDN连接的状态（查看<span class="token class-name">B</span>信道）
+<span class="token class-name">R</span># show isdn status 查看ISDN详细的物理层和数据链路层信息
+<span class="token class-name">R</span># debug isdn q921  报告ISDN数据链路层详细信息
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token punctuation">)</span># ip route <span class="token class-name">IP_network_</span># subnet_mask remote_router's_IP_address<span class="token operator">|</span>router_interface <span class="token punctuation">[</span>administrative_distance<span class="token punctuation">]</span>  配置静态路由。以下<span class="token number">7</span>个命令配置传统DDR
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token punctuation">)</span># dialer<span class="token operator">-</span>list list_# protocol protocol_name permit<span class="token operator">|</span>deny <span class="token punctuation">[</span>access<span class="token operator">-</span>list ACL_#<span class="token punctuation">]</span>    定义敏感流量
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span><span class="token keyword">if</span><span class="token punctuation">)</span># dialer<span class="token operator">-</span>group dialer_list_#    激活拨号列表
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span><span class="token keyword">if</span><span class="token punctuation">)</span># dialer map protocol_name address_of_destination_router <span class="token punctuation">[</span>name remote_router_name<span class="token punctuation">]</span> <span class="token punctuation">[</span>speed <span class="token number">56</span><span class="token operator">|</span><span class="token number">64</span><span class="token punctuation">]</span> <span class="token punctuation">[</span>broadcast<span class="token punctuation">]</span> destination_phone_number   表明利用传统DDR进行电话呼叫
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span><span class="token keyword">if</span><span class="token punctuation">)</span># dialer idle<span class="token operator">-</span>timeout #_of_seconds  定义空闲超时周期
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span><span class="token keyword">if</span><span class="token punctuation">)</span># dialer fast<span class="token operator">-</span>idle #_of_seconds 定义快速空闲计时器
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span><span class="token keyword">if</span><span class="token punctuation">)</span># dialer load<span class="token operator">-</span>threshold load either<span class="token operator">|</span>inbound<span class="token operator">|</span>outbound    通过BRI的两条<span class="token class-name">B</span>信道执行负载均衡（分配带宽）
+<span class="token class-name">R</span># show dialer  查看哪个DDR接口进行了电话呼叫及其状态
+<span class="token class-name">R</span># show isdn active 查看激活的ISDN呼叫
+<span class="token class-name">R</span># show isdn history    查看路由器发出的呼叫或以前接收的呼叫
+<span class="token class-name">R</span># debug dialer 显示建立或拆除一个连接的DDR过程
+<span class="token class-name">R</span># debug isdn q931  显示ISDN电话连接建立及挂断的详细信息
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token punctuation">)</span># <span class="token keyword">interface</span> dialer port_#  创建逻辑拨号接口。以下全为配置拨号配置文件。以下<span class="token number">8</span>个为拨号接口配置
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span><span class="token keyword">if</span><span class="token punctuation">)</span># encapsulation ppp 指定封装类型
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span><span class="token keyword">if</span><span class="token punctuation">)</span># ppp authentication pap<span class="token operator">|</span>chap<span class="token operator">|</span>chap pap<span class="token operator">|</span>pap chap 指定认证类型
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span><span class="token keyword">if</span><span class="token punctuation">)</span># ip address <span class="token class-name">IP_address</span> subnet_mask 指定接口IP地址
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span><span class="token keyword">if</span><span class="token punctuation">)</span># dialer remote<span class="token operator">-</span>name name   指定远端路由器的名称
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span><span class="token keyword">if</span><span class="token punctuation">)</span># dialer string phone_# <span class="token punctuation">[</span><span class="token keyword">class</span> map_name<span class="token punctuation">]</span>    指定映射类名称
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span><span class="token keyword">if</span><span class="token punctuation">)</span># dialer pool pool_#    指定拨号接口能使用哪组物理接口
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span><span class="token keyword">if</span><span class="token punctuation">)</span># dialer<span class="token operator">-</span>group dialer_list_#    激活拨号列表
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span><span class="token keyword">if</span><span class="token punctuation">)</span># dialer pool<span class="token operator">-</span>member pool_# <span class="token punctuation">[</span>priority priority_#<span class="token punctuation">]</span> <span class="token punctuation">[</span>min<span class="token operator">-</span>link #_of_B_channels<span class="token punctuation">]</span> <span class="token punctuation">[</span>max<span class="token operator">-</span>link #_of_B_channels<span class="token punctuation">]</span> 指定哪些拨号接能使用物理接口
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token punctuation">)</span># map<span class="token operator">-</span><span class="token keyword">class</span> dialer map_name    进入映射子配置模式。以下<span class="token number">4</span>个为创建映射类
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span>map<span class="token punctuation">)</span># dialer isdn speed <span class="token number">56</span> 指定ISDN中的<span class="token class-name">B</span>信道的速度（默认<span class="token number">64</span>kbps）
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span>map<span class="token punctuation">)</span># dialer idle<span class="token operator">-</span>timeout #_of_seconds 定义空闲超时周期
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span>map<span class="token punctuation">)</span># dialer fast<span class="token operator">-</span>idle #_of_seconds    定义快速空闲计时器
+<span class="token class-name">R</span># show dialer <span class="token keyword">interface</span> bri<span class="token operator">|</span><span class="token punctuation">&#123;</span>serial<span class="token operator">:</span><span class="token number">23</span><span class="token operator">|</span><span class="token number">15</span><span class="token punctuation">&#125;</span> <span class="token punctuation">[</span>slot_#<span class="token operator">/</span><span class="token punctuation">]</span>port_# 显示与拨号接口关联的物理接口的进入和离开呼叫的DDR统计信息
+<span class="token number">1234567891011121314151617181920212223242526272829303132333435363738394041</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>20.IS-IS</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token punctuation">)</span># router isis  启动IS<span class="token operator">-</span>IS
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span>router<span class="token punctuation">)</span># net areaID<span class="token punctuation">.</span>systemID<span class="token punctuation">.</span>SEL   配置NET
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span>router<span class="token punctuation">)</span># is<span class="token operator">-</span>type level_of_router   配置路由器的层次
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span><span class="token keyword">if</span><span class="token punctuation">)</span># ip router isis    在接口上启动IS<span class="token operator">-</span>IS
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span><span class="token keyword">if</span><span class="token punctuation">)</span># isis priority value level<span class="token operator">-</span><span class="token number">1</span><span class="token operator">|</span>level<span class="token operator">-</span><span class="token number">2</span>   手动配置第一层或第二层路由器的优先级
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span><span class="token keyword">if</span><span class="token punctuation">)</span># clns router isis  为无连接网络服务启动IS<span class="token operator">-</span>IS
+<span class="token class-name">R</span># show ip route isis   查看通过IS<span class="token operator">-</span>IS学习到的路由
+<span class="token class-name">R</span># show isis database <span class="token punctuation">[</span>detail level_of_router<span class="token punctuation">]</span>  查看IS<span class="token operator">-</span>IS链路状态数据库中的所有（某层）LSP信息
+<span class="token class-name">R</span># show clns protocol   显示IS<span class="token operator">-</span>IS详细配置信息
+<span class="token class-name">R</span># show clns <span class="token keyword">interface</span>  显示配置为IS<span class="token operator">-</span>IS接口的相关信息
+<span class="token class-name">R</span># show clns is<span class="token operator">-</span>neighbors   查看路由器的邻居
+<span class="token class-name">R</span># show isis spf<span class="token operator">-</span>log    查看SPF计算情况
+<span class="token class-name">R</span># debug isis adj<span class="token operator">-</span>packets   查看路由器发送和接收<span class="token class-name">Hello</span> PDU的情况
+<span class="token class-name">R</span># debug isis update<span class="token operator">-</span>packets    提供路由器发送和接收的所有LSP详细内容及SNP信息
+<span class="token class-name">R</span># debug isis spf<span class="token operator">-</span>events    查看写入路由表的IS<span class="token operator">-</span>IS路由
+<span class="token class-name">R</span># debug isis spf<span class="token operator">-</span>triggers  查看触发SPF计算的原因
+<span class="token class-name">R</span># debug isis spf<span class="token operator">-</span>statistics    查看执行SPF计算所用的时间
+<span class="token number">1234567891011121314151617</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>21.BGP</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token punctuation">)</span># router bgp AS_#  启动BGP
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span>router<span class="token punctuation">)</span># neighbor <span class="token class-name">IP_address_remote_device</span> remote<span class="token operator">-</span>as AS_#_remote_device    指定远端路由器作为对等体
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span>router<span class="token punctuation">)</span># no synchronization    关闭BGP与IGP同步（默认启用）
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span>router<span class="token punctuation">)</span># neighbor <span class="token class-name">IP_address_remote_device</span> update<span class="token operator">-</span>source loopback #    使用环回接口作为对等体
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span>router<span class="token punctuation">)</span># neighbor <span class="token class-name">IP_address_remote_device</span> ebgp<span class="token operator">-</span>multihop <span class="token punctuation">[</span>ttl<span class="token punctuation">]</span> 配置eBGP多跳（允许BGP邻居可以不在直连网络上）
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span>router<span class="token punctuation">)</span># neighbor <span class="token class-name">IP_address_remote_device</span> route<span class="token operator">-</span>reflector<span class="token operator">-</span>client  配置邻居为路由反射器客户
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span>router<span class="token punctuation">)</span># network network_address mask subnet_mask  向对等体通告路由（手动向BGP注入路由）
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span>router<span class="token punctuation">)</span># redistribute protocol process_ID  将路由重新分配到BGP
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span>router<span class="token punctuation">)</span># redistribute connected    将直连接口地址重新分配到BGP
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span>router<span class="token punctuation">)</span># bgp cluster<span class="token operator">-</span>id cluster_ID 分配簇ID
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span>router<span class="token punctuation">)</span># bgp confederation identifier confederation_ID 配置联邦ID
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span>router<span class="token punctuation">)</span># bgp confederation peers AS_#  配置联邦的对等自治系统成员
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span>router<span class="token punctuation">)</span># neighbor <span class="token class-name">IP_address_remote_device</span> distribute<span class="token operator">-</span>list access_list_# <span class="token punctuation">[</span>in<span class="token operator">|</span>out<span class="token punctuation">]</span>  过滤到或来自邻居的更新信息
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token punctuation">)</span># ip prefix<span class="token operator">-</span>list list_name <span class="token punctuation">[</span>seq seq_value<span class="token punctuation">]</span> permit<span class="token operator">|</span>deny network_address<span class="token operator">/</span>length <span class="token punctuation">[</span>ge ge_value<span class="token punctuation">]</span> <span class="token punctuation">[</span>le le_value<span class="token punctuation">]</span>  配置前缀列表
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span>router<span class="token punctuation">)</span># neighbor <span class="token class-name">IP_address_remote_device</span> prefix<span class="token operator">-</span>list list_name <span class="token punctuation">[</span>in<span class="token operator">|</span>out<span class="token punctuation">]</span>  应用从邻居输入的前缀列表
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token punctuation">)</span># route<span class="token operator">-</span>map route_map_name permit<span class="token operator">|</span>deny <span class="token punctuation">[</span>sequence_number<span class="token punctuation">]</span>   创建路由映射序列
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span>route<span class="token operator">-</span>map<span class="token punctuation">)</span># match as<span class="token operator">-</span>path <span class="token class-name">AS_path_accesslist_</span># 匹配BGP自治系统路径访问列表
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span>route<span class="token operator">-</span>map<span class="token punctuation">)</span># match community<span class="token operator">-</span>list community_list_#  匹配BGP团体
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span>route<span class="token operator">-</span>map<span class="token punctuation">)</span># match <span class="token keyword">interface</span> type <span class="token punctuation">[</span>slot_#<span class="token operator">/</span><span class="token punctuation">]</span> port_#  发布任何下一跳是指定接口的路由
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span>route<span class="token operator">-</span>map<span class="token punctuation">)</span># match ip address access_list_#<span class="token operator">|</span>prefix_list_name    匹配任何目的网络地址被指定的标准访问列表、扩展访问列表或前缀列表允许的路由
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span>route<span class="token operator">-</span>map<span class="token punctuation">)</span># match ip next<span class="token operator">-</span>hop access_list_#<span class="token operator">|</span>prefix_list_name   匹配任何下一跳地址被指定的标准访问列表、扩展访问列表或前缀列表允许的路由
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span>route<span class="token operator">-</span>map<span class="token punctuation">)</span># match ip route<span class="token operator">-</span>source access_list_#<span class="token operator">|</span>prefix_list_name   匹配任何由被指定的标准访问列表、扩展访问列表或前缀列表允许的地址通告的路由
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span>route<span class="token operator">-</span>map<span class="token punctuation">)</span># match metric value 匹配任何具有指定的度量值的路由
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span>route<span class="token operator">-</span>map<span class="token punctuation">)</span># match route<span class="token operator">-</span>type type_of_route 匹配任何具有指定类型的路由
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span>route<span class="token operator">-</span>map<span class="token punctuation">)</span># match tag value    匹配任何具有指定标识的路由
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span>route<span class="token operator">-</span>map<span class="token punctuation">)</span># set as<span class="token operator">-</span>path prepend AS_#   向AS_PATH属性添加自治系统号
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span>route<span class="token operator">-</span>map<span class="token punctuation">)</span># set as<span class="token operator">-</span>path tag    设置作为AS_PATH属性的标记
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span>route<span class="token operator">-</span>map<span class="token punctuation">)</span># set automatic<span class="token operator">-</span>tag  自动计算标记值
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span>route<span class="token operator">-</span>map<span class="token punctuation">)</span># set community number<span class="token operator">|</span>aa<span class="token operator">:</span>nn<span class="token operator">|</span>additive<span class="token operator">|</span>local<span class="token operator">-</span>as<span class="token operator">|</span>no<span class="token operator">-</span>advertise<span class="token operator">|</span>no<span class="token operator">-</span>export<span class="token operator">|</span>none   设置BGP COMMUNITIES属性
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span>route<span class="token operator">-</span>map<span class="token punctuation">)</span># set dampening half_life start_reusing start_suppressing duration_to_suppress   设置BGP路由冷落参数
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span>route<span class="token operator">-</span>map<span class="token punctuation">)</span># set <span class="token keyword">default</span> <span class="token keyword">interface</span> type <span class="token punctuation">[</span>slot_#<span class="token operator">/</span><span class="token punctuation">]</span> port_#    设置默认的输出接口
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span>route<span class="token operator">-</span>map<span class="token punctuation">)</span># set <span class="token keyword">interface</span> type <span class="token punctuation">[</span>slot_#<span class="token operator">/</span><span class="token punctuation">]</span> port_#    设置输出接口
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span>route<span class="token operator">-</span>map<span class="token punctuation">)</span># set ip <span class="token keyword">default</span> next<span class="token operator">-</span>hop <span class="token class-name">IP_address</span> 设置路径的默认下一跳地址
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span>route<span class="token operator">-</span>map<span class="token punctuation">)</span># set ip next<span class="token operator">-</span>hop <span class="token class-name">IP_address</span> 设置下一跳地址
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span>route<span class="token operator">-</span>map<span class="token punctuation">)</span># set ip precedence <span class="token punctuation">[</span>precedence<span class="token punctuation">]</span> 设置“IP <span class="token class-name">Precedence</span>”字段
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span>route<span class="token operator">-</span>map<span class="token punctuation">)</span># set ip tos type_of_service 设置“IP服务类型”字段
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span>route<span class="token operator">-</span>map<span class="token punctuation">)</span># set level level    设置导入路由的位置
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span>route<span class="token operator">-</span>map<span class="token punctuation">)</span># set local<span class="token operator">-</span>preference value 设置BGP LOCAL_PREF路径属性
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span>route<span class="token operator">-</span>map<span class="token punctuation">)</span># set metric value   设置目标路由协议的度量值
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span>route<span class="token operator">-</span>map<span class="token punctuation">)</span># set metric<span class="token operator">-</span>type type_of_route  设置目标路由协议的度量类型
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span>route<span class="token operator">-</span>map<span class="token punctuation">)</span># set origin origin_code 设置BGP源代码
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span>route<span class="token operator">-</span>map<span class="token punctuation">)</span># set tag value  设置目标路由协议的标记值
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span>route<span class="token operator">-</span>map<span class="token punctuation">)</span># set weight value   设置路由表的BGP权重
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span>router<span class="token punctuation">)</span># neighbor <span class="token class-name">IP_address_remote_device</span> route<span class="token operator">-</span>map route_map_name <span class="token punctuation">[</span>in<span class="token operator">|</span>out<span class="token punctuation">]</span>   应用从邻居输入的路由映射
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span>router<span class="token punctuation">)</span># neighbor <span class="token class-name">IP_address_remote_device</span> send<span class="token operator">-</span>community  向该邻居发送COMMUNITY属性
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token punctuation">)</span># ip community<span class="token operator">-</span>list community_list_# <span class="token punctuation">[</span>permit<span class="token operator">|</span>deny<span class="token punctuation">]</span> community_list_#    创建团体列表
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span>router<span class="token punctuation">)</span># neighbor peer_group_name peer<span class="token operator">-</span>group   创建对等组
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span>router<span class="token punctuation">)</span># neighbor peer_group_name option_to_use_in_update_policy   给对等组分配选项
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span>router<span class="token punctuation">)</span># neighbor <span class="token class-name">IP_address_remote_device</span> peer<span class="token operator">-</span>group peer_group_name  给对等组分配对等体
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span>router<span class="token punctuation">)</span># no auto<span class="token operator">-</span>summary   取消BGP的自动路由汇总功能
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span>router<span class="token punctuation">)</span># aggregate<span class="token operator">-</span>address <span class="token class-name">IP_address</span> mask <span class="token punctuation">[</span>summary<span class="token operator">-</span>only<span class="token punctuation">]</span>  创建汇聚地址（禁止通告其他特定路由）
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span>router<span class="token punctuation">)</span># aggregate<span class="token operator">-</span>address <span class="token class-name">IP_address</span> mask as<span class="token operator">-</span>set  创建汇聚地址，在AS_PATH中添加AS_SET类型
+<span class="token class-name">R</span># clear ip bgp peer_address    重设特定BGP对等会话
+<span class="token class-name">R</span># clear ip bgp AS_#    重设指定自治系统的所有对等体的BGP会话
+<span class="token class-name">R</span># clear ip bgp <span class="token operator">*</span>   重设路由器上所有BGP会话
+<span class="token class-name">R</span># show ip bgp  查看路由器从BGP学习到的所有路由
+<span class="token class-name">R</span># show ip bgp summary  提供和路由器具有对等关系的所有路由器汇总
+<span class="token class-name">R</span># show ip bgp neighbors    查看对等体连接详细信息
+<span class="token class-name">R</span># debug ip bgp 查看在本地路由器与试图和其建立对等关系的路由器之间所发送和接收的OPEN信息
+<span class="token class-name">R</span># debug ip bgp updates 提供路由器发送和接收所有UPDATE消息的信息
+<span class="token class-name">R</span># debug ip bgp peer_address upadtes    提供关于BGP对等体之间发送的UPDATE消息
+<span class="token class-name">R</span># debug ip bgp dampening   显示关于被冷落路由的信息
+<span class="token class-name">R</span># debug ip bgp events  提供关于尝试成为BGP对等体的路由器的状态转换信息
+<span class="token class-name">R</span># debug ip bgp keepalives  提供关于路由器发送和接收KEEPALIVE消息的信息
+<span class="token number">12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>22.路由优化</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span>router<span class="token punctuation">)</span># distribute<span class="token operator">-</span>list ACL_#<span class="token operator">|</span>prefix prefix_list_name in<span class="token operator">|</span>out <span class="token punctuation">[</span>type <span class="token punctuation">[</span>slot_#<span class="token operator">/</span><span class="token punctuation">]</span> port_#<span class="token punctuation">]</span>   配置分配列表
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span><span class="token keyword">if</span><span class="token punctuation">)</span># ip policy route<span class="token operator">-</span>map map_tag   识别一个接口上基于策略的路由选择使用的路由映射
+<span class="token class-name">R</span># show ip policy   列出所有配置为基于策略的路由选择的接口及它们相关的路由映射
+<span class="token class-name">R</span># show route<span class="token operator">-</span>map   查看所有路由映射
+<span class="token class-name">R</span># debug ip policy  提供在该路由器上执行的路由策略的信息
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span>router<span class="token punctuation">)</span># <span class="token keyword">default</span><span class="token operator">-</span>information originate 重新分配默认路由到OSPF和IS<span class="token operator">-</span>IS
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span>router<span class="token punctuation">)</span># <span class="token keyword">default</span><span class="token operator">-</span>information originate always  引起一个默认路由到OSPF不管路由表中是否有一个默认路由
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span>router<span class="token punctuation">)</span># redistribute protocol <span class="token punctuation">[</span>process<span class="token operator">-</span>ID<span class="token punctuation">]</span> level<span class="token operator">-</span><span class="token number">1</span><span class="token operator">|</span>level<span class="token operator">-</span><span class="token number">1</span><span class="token operator">-</span><span class="token number">2</span><span class="token operator">|</span>level<span class="token operator">-</span><span class="token number">2</span> <span class="token punctuation">[</span>metric metric_value<span class="token punctuation">]</span> <span class="token punctuation">[</span>metric<span class="token operator">-</span>type type_value<span class="token punctuation">]</span> <span class="token punctuation">[</span>match internal<span class="token operator">|</span>external <span class="token number">1</span><span class="token operator">|</span>external <span class="token number">2</span><span class="token punctuation">]</span> <span class="token punctuation">[</span>tag tag_value<span class="token punctuation">]</span> <span class="token punctuation">[</span>route<span class="token operator">-</span>map map_tag<span class="token punctuation">]</span> <span class="token punctuation">[</span>weight weight_value<span class="token punctuation">]</span> <span class="token punctuation">[</span>subnets<span class="token punctuation">]</span>    重新分配路由选择信息从一个路由选择域到另一个路由选择域
+<span class="token class-name">R</span><span class="token punctuation">(</span>config<span class="token operator">-</span>router<span class="token punctuation">)</span># summary<span class="token operator">-</span>address network_address network_mask <span class="token punctuation">[</span>level<span class="token operator">-</span><span class="token number">1</span><span class="token operator">|</span>level<span class="token operator">-</span><span class="token number">1</span><span class="token operator">-</span><span class="token number">2</span><span class="token operator">|</span>level<span class="token operator">-</span><span class="token number">2</span><span class="token punctuation">]</span>  为起源于和重新分配到IS<span class="token operator">-</span>IS的路由创建一个汇总地址
+<span class="token number">123456789</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>23.异步连接</p>
+<pre class="line-numbers language-cisco" data-language="cisco"><code class="language-cisco">R# line number  进入线路配置模式
+R(config-line)# login   允许一个连接
+R(config-line)# password password   提供线路上使用的口令
+R(config-line)# flowcontrol hardware|software   选择硬件流控制或软件流控制
+R(config-line)# speed number    指定调制解调器和访问服务器或路由器之间使用的最大速度（单位：bps）
+R(config-line)# transport input lat|mop|nasi|pad|rlogin|telnet|v120|all 定义反向Telnet连接使用的协议
+R(config-line)# stopbits 1|1.5|2    定义每个字节的结束
+R(config-line)# modem autoconfigure type modem_type 指示路由器使用modemcap数据库中的命令按照指定的类型对连接到一个端口上的调制解调器进行自动配置
+R# show modemcap    显示modemcap数据库
+R(config-line)# modem edit modem_profile_name   向modemcap数据库增加条目
+R(config-line)# modemcap edit new_profile_name template existing_profile_name   创建名为new_profile_name的条目并从existing_profile_name中拷贝所有的配置
+R(config-line)# modem autoconfigure discovery   发现和自动配置连接到一个端口上的调制解调器<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">Darren</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://darren-dong.com/2021/03/14/introduction-to-Networks/">https://darren-dong.com/2021/03/14/introduction-to-Networks/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">Darren</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/cisco/">
+                                    <span class="chip bg-color">cisco</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">感谢支持！</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+        <style>
+    .valine-card {
+        margin: 1.5rem auto;
+    }
+
+    .valine-card .card-content {
+        padding: 20px 20px 5px 20px;
+    }
+
+    #vcomments textarea {
+        box-sizing: border-box;
+        background: url("/medias/comment_bg.png") 100% 100% no-repeat;
+    }
+
+    #vcomments p {
+        margin: 2px 2px 10px;
+        font-size: 1.05rem;
+        line-height: 1.78rem;
+    }
+
+    #vcomments blockquote p {
+        text-indent: 0.2rem;
+    }
+
+    #vcomments a {
+        padding: 0 2px;
+        color: #4cbf30;
+        font-weight: 500;
+        text-decoration: none;
+    }
+
+    #vcomments img {
+        max-width: 100%;
+        height: auto;
+        cursor: pointer;
+    }
+
+    #vcomments ol li {
+        list-style-type: decimal;
+    }
+
+    #vcomments ol,
+    ul {
+        display: block;
+        padding-left: 2em;
+        word-spacing: 0.05rem;
+    }
+
+    #vcomments ul li,
+    ol li {
+        display: list-item;
+        line-height: 1.8rem;
+        font-size: 1rem;
+    }
+
+    #vcomments ul li {
+        list-style-type: disc;
+    }
+
+    #vcomments ul ul li {
+        list-style-type: circle;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    #vcomments table, th, td {
+        border: 0;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments h1 {
+        font-size: 1.85rem;
+        font-weight: bold;
+        line-height: 2.2rem;
+    }
+
+    #vcomments h2 {
+        font-size: 1.65rem;
+        font-weight: bold;
+        line-height: 1.9rem;
+    }
+
+    #vcomments h3 {
+        font-size: 1.45rem;
+        font-weight: bold;
+        line-height: 1.7rem;
+    }
+
+    #vcomments h4 {
+        font-size: 1.25rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    #vcomments h5 {
+        font-size: 1.1rem;
+        font-weight: bold;
+        line-height: 1.4rem;
+    }
+
+    #vcomments h6 {
+        font-size: 1rem;
+        line-height: 1.3rem;
+    }
+
+    #vcomments p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    #vcomments hr {
+        margin: 12px 0;
+        border: 0;
+        border-top: 1px solid #ccc;
+    }
+
+    #vcomments blockquote {
+        margin: 15px 0;
+        border-left: 5px solid #42b983;
+        padding: 1rem 0.8rem 0.3rem 0.8rem;
+        color: #666;
+        background-color: rgba(66, 185, 131, .1);
+    }
+
+    #vcomments pre {
+        font-family: monospace, monospace;
+        padding: 1.2em;
+        margin: .5em 0;
+        background: #272822;
+        overflow: auto;
+        border-radius: 0.3em;
+        tab-size: 4;
+    }
+
+    #vcomments code {
+        font-family: monospace, monospace;
+        padding: 1px 3px;
+        font-size: 0.92rem;
+        color: #e96900;
+        background-color: #f8f8f8;
+        border-radius: 2px;
+    }
+
+    #vcomments pre code {
+        font-family: monospace, monospace;
+        padding: 0;
+        color: #e8eaf6;
+        background-color: #272822;
+    }
+
+    #vcomments pre[class*="language-"] {
+        padding: 1.2em;
+        margin: .5em 0;
+    }
+
+    #vcomments code[class*="language-"],
+    pre[class*="language-"] {
+        color: #e8eaf6;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+
+    #vcomments b,
+    strong {
+        font-weight: bold;
+    }
+
+    #vcomments dfn {
+        font-style: italic;
+    }
+
+    #vcomments small {
+        font-size: 85%;
+    }
+
+    #vcomments cite {
+        font-style: normal;
+    }
+
+    #vcomments mark {
+        background-color: #fcf8e3;
+        padding: .2em;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+</style>
+
+<div class="card valine-card" data-aos="fade-up">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>评论</span>
+    </div>
+    <div id="vcomments" class="card-content" style="display: grid">
+    </div>
+</div>
+
+<script src="/libs/valine/av-min.js"></script>
+<script src="/libs/valine/Valine.min.js"></script>
+<script>
+    new Valine({
+        el: '#vcomments',
+        appId: 'aCPxdqJEpNtbHeBUy6jVpOLs-gzGzoHsz',
+        appKey: '7zjTUmIzmdnugBDflnE3nol4',
+        notify: 'false' === 'true',
+        verify: 'false' === 'true',
+        visitor: 'true' === 'true',
+        avatar: 'mm',
+        pageSize: '10',
+        lang: 'zh-cn',
+        placeholder: 'entering something!'
+    });
+</script>
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2021/03/18/Javascript/">
+                    <div class="card-image">
+                        
+                        <img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210615200713.jpg" class="responsive-img" alt="Javascript理论">
+                        
+                        <span class="card-title">Javascript理论</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            不好评判这门语言，不过不再需要了
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-03-18
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/web-front-end/" class="post-category">
+                                    web-front-end
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/javascript/">
+                        <span class="chip bg-color">javascript</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2021/03/13/Linux/">
+                    <div class="card-image">
+                        
+                        <img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210615204426.jpg" class="responsive-img" alt="Linux(basic)">
+                        
+                        <span class="card-title">Linux(basic)</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            linux学一波，为以后转后端做做准备
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-03-13
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/basic/" class="post-category">
+                                    basic
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/cisco/">
+                        <span class="chip bg-color">cisco</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('200000')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: Darren观测站<br />'
+            + '文章作者: Darren<br />'
+            + '文章链接: <a href="' + url + '">' + url + '</a><br />'
+            + '商用请联系作者QQ:1275972958';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('1'),
+            headingSelector: 'h1, h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h1, h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="966298391"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+
+    
+    <div class="container row center-align" style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2020-2021</span>
+            
+            <span id="year">2020</span>
+            <a href="/about" target="_blank">Darren</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                class="white-color">250.8k</span>&nbsp;字
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/Darren-greenhand" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:1275972958@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+    <a href="https://www.facebook.com/darren.dong.54/" class="tooltipped" target="_blank" data-tooltip="关注我的Facebook: https://www.facebook.com/darren.dong.54/" data-position="top" data-delay="50">
+        <i class="fab fa-facebook-f"></i>
+    </a>
+
+
+
+    <a href="https://twitter.com/DarrenDong12" class="tooltipped" target="_blank" data-tooltip="关注我的Twitter: https://twitter.com/DarrenDong12" data-position="top" data-delay="50">
+        <i class="fab fa-twitter"></i>
+    </a>
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1275972958" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1275972958" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+    <a href="https://weibo.com/u/7613536808" class="tooltipped" target="_blank" data-tooltip="关注我的微博: https://weibo.com/u/7613536808" data-position="top" data-delay="50">
+        <i class="fab fa-weibo"></i>
+    </a>
+
+
+
+    <a href="https://www.zhihu.com/people/zan-shi-xiao-meng-xin" class="tooltipped" target="_blank" data-tooltip="关注我的知乎: https://www.zhihu.com/people/zan-shi-xiao-meng-xin" data-position="top" data-delay="50">
+        <i class="fab fa-zhihu1">知</i>
+    </a>
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+	
+    
+    <script type="text/javascript" color="0,0,255"
+        pointColor="0,0,255" opacity='0.7'
+        zIndex="-1" count="99"
+        src="/libs/background/canvas-nest.js"></script>
+    
+
+    
+
+    
+    <script type="text/javascript" src="/libs/background/ribbon-dynamic.js" async="async"></script>
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+    
+
+</body>
+
+</html>
