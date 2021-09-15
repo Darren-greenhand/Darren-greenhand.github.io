@@ -4,7 +4,7 @@
 
 <head>
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
-    <meta name="keywords" content="机器学习实战, Darren观测站">
+    <meta name="keywords" content="crawler, Darren观测站">
     <meta name="description" content="Data Science and finance">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>机器学习实战 | Darren观测站</title>
+    <title>crawler | Darren观测站</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -271,12 +271,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/robot-2301646.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210615201616.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">机器学习实战</h1>
+                    <h1 class="description center-align post-title">crawler</h1>
                 </div>
             </div>
         </div>
@@ -392,8 +392,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/python/">
-                                <span class="chip bg-color">python</span>
+                            <a href="/tags/crawler/">
+                                <span class="chip bg-color">crawler</span>
                             </a>
                         
                     </div>
@@ -404,8 +404,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/ML/" class="post-category">
-                                ML
+                            <a href="/categories/basic/" class="post-category">
+                                basic
                             </a>
                         
                     </div>
@@ -417,28 +417,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布之期:&nbsp;&nbsp;
-                    2021-09-08
+                    2021-04-10
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新之期:&nbsp;&nbsp;
-                    2021-09-09
+                    2021-09-15
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.7k
+                    773
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    9 分
+                    2 分
                 </div>
                 
 
@@ -466,138 +466,88 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="机器学习实战"><a href="#机器学习实战" class="headerlink" title="机器学习实战"></a>机器学习实战</h1><p><a target="_blank" rel="noopener" href="https://github.com/Darren-greenhand/handson-ml2">仓库地址</a></p>
-<p>本书内容广博，不仅介绍了传统ML，还用sklearn演示了端到端训练实例。</p>
-<p>尤其对DL进行了深入探讨，涵盖强化学习、利用TF/Keras构建和训练神经网络</p>
-<h2 id="ML"><a href="#ML" class="headerlink" title="ML"></a>ML</h2><h3 id="1-前置补充"><a href="#1-前置补充" class="headerlink" title="1. 前置补充"></a>1. 前置补充</h3><ul>
-<li>在机器学习里，属性是一种数据类型，而特征取决于上下文，通常意味着<strong>属性+值</strong>(很多人混淆)</li>
-<li>一些回归算法和可用于分类任务，反之亦然。比如逻辑回归可以输出“属于某个给定类别的概率”，可用于分类</li>
-<li>无监督应用：<ul>
-<li>聚类</li>
-<li>异常检测、新颖性检测</li>
-<li>可视化、降维（可先用降维减少数据维度，再提供给别的算法）</li>
-<li>关联规则学习</li>
-</ul>
-</li>
-<li>比起在线学习，批量学习也可以适应变化，但是需要<strong>重新训练全新的系统</strong>，成本高</li>
-<li>在线学习也可以用于超大数据集，因为超出了一台计算机的主存储器的数据</li>
-<li>基于实例（相似度），和基于模型(我看到的好像都是这个)的学习</li>
-<li>特征工程 vs 端到端学习</li>
-<li>正则化实质是约束模型，限制变化范围，降低复杂度。</li>
-<li>测试验证：保持验证、交叉验证</li>
-<li>没有免费的午餐：<strong>如果你对数据绝对没有假设，那么就没有理由更偏好某个模型</strong>，必须得有假设，然后只评估部分合理的模型。</li>
-</ul>
-<h3 id="2-端到端的机器学习项目"><a href="#2-端到端的机器学习项目" class="headerlink" title="2.端到端的机器学习项目"></a>2.端到端的机器学习项目</h3><p>假设你是一个房地产公司最近雇佣的数据科学家，你会经历：</p>
-<ol>
-<li>观察大局</li>
-<li>获得数据</li>
-<li>从数据探索和可视化中获得洞见</li>
-<li>机器学习算法的数据准备</li>
-<li>选择并训练模型</li>
-<li>微调模型</li>
-<li>展示解决方案</li>
-<li>启动、监控和维护模型</li>
-</ol>
-<p>（使用真实数据，详情见我的另一篇博文：<a href="https://darren-dong.com/2021/09/08/DS-Source/">DS资源</a>）</p>
-<h4 id="观察大局"><a href="#观察大局" class="headerlink" title="观察大局"></a>观察大局</h4><p><strong>附录B，记录了一个数据科学项目的大致流程以供参考</strong></p>
-<p>流水线：一个序列的数据处理组件称为一个数据流水线。在机器学习系统中非常普遍。</p>
-<p>组件通常异步进行，组件间很独立，连接只有数据仓库。Robustness++，但需要适当的监控。</p>
-<ol>
-<li><p>问老板业务目标，公司期望如何使用该模型，如何从中获益才是重要问题：</p>
-<p>这决定怎么设定问题，选择什么算法，通过什么方式评估模型性能，花多少精力来进行调整</p>
-</li>
-<li><p>问老板当前的解决方案（可能存在），当作建议、参考，获得洞察</p>
-</li>
-<li><p>开始设计系统，回答框架问题：有无监督/强化、分类/回归、批量/在线</p>
-</li>
-<li><p>选择性能指标：</p>
+                <h1 id="网络爬虫实战3"><a href="#网络爬虫实战3" class="headerlink" title="网络爬虫实战3"></a>网络爬虫实战3</h1><p>对大数据的获取，处理和分析，以及基于大数据的智能应用，已成为提高竞争力的关键因素</p>
+<p>我们需要的数据大多源于各个网站，但是不同网站结构不一，布局复杂，渲染方式多样</p>
+<p>有的网站还采取了一系列“反爬”，我们也需要针对的反制措施！</p>
+<p>爬虫是服务机器学习和人工智能发展非常重要的技术！为其提供优质的数据</p>
+<p>崔佬提供了多种安装python库的方式：</p>
 <ul>
-<li><p>RMSE 均方根误差          欧几里得范数  L2</p>
-</li>
-<li><p>MAE   平均绝对误差      曼哈顿范数      L1   </p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/67120415">范数的定义</a></p>
-<p><strong>指标越高越关注大值而不是小值</strong>，这就是为何RMSE比MAE对异常值更敏感</p>
-</li>
+<li>pip/conda</li>
+<li>wheel</li>
+<li>去官网/github下载源码再安装</li>
 </ul>
+<p>爬虫可以简单分为：爬取页面，分析页面，存储数据</p>
+<p><strong>请求库：</strong></p>
+<ol>
+<li><p>requests:  爬取html</p>
 </li>
-<li><p>检查假设，与数据流水线上下游团队沟通。</p>
+<li><p>Selenium  自动化测试，驱动浏览器执行某些（点击，下拉）操作，渗透JS渲染</p>
+<p>但还要配置浏览器，此处用最好的ChromeDriver，先更新chrome</p>
+<p>下载后直接放进环境的Scripts里面，或者单独设置环境变量</p>
+</li>
+<li><p>PhantomJS 无界面，可脚本编程的webkit浏览器引擎，被selenium弃用了，推荐chrome无界面模式</p>
+</li>
+<li><p>aiohttp  提供异步web服务，顺便安装cchardet aiodns</p>
 </li>
 </ol>
-<p>获取数据（数据库），可以编写shell脚本来辅助</p>
-<p>通过查看数据描述、部分数据，简单可视化来了解数据</p>
-<h4 id="创建测试集"><a href="#创建测试集" class="headerlink" title="创建测试集"></a>创建测试集</h4><p><strong>在简单了解数据后，创建测试集</strong>（有点奇怪），因为大脑容易过拟合<strong>（数据窥探偏误）</strong>：</p>
-<p>浏览数据，跌入某个看似有趣的测试数据模式，选择某个特殊的模型，估计结果过于乐观，但其实泛化能力一般。</p>
-<p>所以要在没有进一步了解的时候创建测试集，有一些方法，比如用标签确定哪些是选出来的测试集，有时候要用纯随机，有时候要分层抽样。</p>
-<p>这一步没有想象中的简单，而很多人忽视了它创建的时机。</p>
-<h4 id="从数据探索和可视化中获得洞见"><a href="#从数据探索和可视化中获得洞见" class="headerlink" title="从数据探索和可视化中获得洞见"></a>从数据探索和可视化中获得洞见</h4><p>现在把测试集放在一边不要碰，只关注训练集。如果训练集太大，可以抽样一个<strong>探索集</strong></p>
-<p>xs，通过设置透明度更好的看清密度</p>
-<p>我们的大脑擅长从图片中发现模式，但这需要你玩转可视化的参数。</p>
-<p>先试试寻找不同特征之间的相关性，既包括线性，也有非线性并可视化出来康康，有许多函数可以实现这一步</p>
-<p>中间省略众多有趣的方法</p>
-<p>最后我们应该尝试各种属性的组合，创建新属性（我感觉吴恩达教的更好），再检测一下相关性等指标。</p>
-<h4 id="数据准备"><a href="#数据准备" class="headerlink" title="数据准备"></a>数据准备</h4><p>这个过程应该编写函数而不是手动操作：</p>
-<ul>
-<li>以便在任何数据集上轻松重现</li>
-<li>可以逐渐建立起转换函数库，在以后的项目中重用</li>
-<li>可以在实时系统中用函数转换新的数据，在输入给算法</li>
-<li>可以轻松尝试多种转换方式，比较效果。</li>
-</ul>
-<p>回到干净的训练集，进行数据清理，处理文本和分类属性的时候用到了独热码</p>
-<hr>
-<p>ps：sklearn的API设计规则非常好，原则如下：</p>
-<ul>
-<li>一致性：所有对象共享一个简单的界面</li>
-<li>估算器：能够根据数据集对某些参数进行估算</li>
-<li>转换器：可以转换数据集</li>
-<li>预测器：能够基于一个给定的数据集进行预测</li>
-<li>检查：所有估算器的超参数都可以通过公共实例变量直接方位（例如imputer.strategy）</li>
-<li>防止类扩散：数据集被表示为Numpy数组或Scipy稀疏矩阵，超参数只是普通的Python字符串或数值</li>
-<li>构成：现有的构建尽最大可能重用</li>
-<li>合理的默认值</li>
-</ul>
-<hr>
-<p>而尽管sklearn提供了许多有用的转换器，你仍然需要为一些注入自定义清理操作或组合特定属性等任务编写自己的转换器。</p>
-<p><strong>而sklearn依赖鸭子类型编译，而不是继承</strong>。</p>
-<p>这些数据准备步骤的执行越自动化，你自动尝试的组合也就越多，从而有更大的可能找到一个重要的组合并节省大量时间。</p>
-<p><strong>最重要也最需要应用到数据上的转换就是特征缩放</strong>，（仅用于拟合训练集）</p>
-<p>两种常用方法：最小-最大缩放（归一化）、   标准化</p>
-<p>前者是减去最小值然后除以（最大-最小），收缩到0—1，当然也可以更改</p>
-<p>后者是减去平均值然后除以方差，<strong>标准化没有特定范围，但是受异常值的影响更小。</strong></p>
-<p><strong>转换流水线</strong>（后来补充）</p>
-<p>通过Pipeline类来支持，方法与最终的估算器方法相同。</p>
-<p>如果要用于多列，可以用Column-Transformer，他与pandas DataFrame 一起使用时效果很好。</p>
-<hr>
-<h4 id="选择和训练模型"><a href="#选择和训练模型" class="headerlink" title="选择和训练模型"></a>选择和训练模型</h4><p>完成了前面的步骤后，事情现在变得比想象中容易很多。</p>
-<p>别忘了使用<strong>交叉验证</strong>来更好地评估：</p>
-<ul>
-<li>可以将训练集分为较小的训练集和验证集，然后加以训练</li>
-<li>也可以使用sklearn的K-折交叉验证功能。（更偏向于使用效用函数而不是使用成本函数）</li>
-</ul>
-<p>在深入某些算法之前，应该<strong>尝试一遍各种机器学习算法的其他模型</strong>（不同内核的支持向量机，神经网络。。）</p>
-<p>但是别花太多时间调整超参数，我们的目的是<strong>筛选出几个（2~5）个有效的模型</strong>，每一个尝试的模型都应该妥善保管，以及对应的超参数和训练过的参数，以及交叉验证的评分和实际检测的结果。</p>
-<p>可以用Python的pickle模块或joblib库来保存模型。</p>
-<h4 id="微调"><a href="#微调" class="headerlink" title="微调"></a>微调</h4><p>有了有效模型的候选列表，现在进行微调。</p>
-<p>你可以手动调整超参数直到找到一组不错的组合。。非常枯燥乏味，耗时间</p>
-<p>你也可以用sklearn的GridSearchCV替你搜索，如果不知道超参数怎么赋值，可以先尝试10的连续次幂</p>
-<p>当然也可以把它用在数据准备的步骤，还可以用来自动寻找处理问题的最佳方法。</p>
-<p><strong>网格搜索👆</strong>是一项模型超参数（即需要预先优化设置而非通过训练得到的参数）优化技术，常用于优化三个或者更少数量的超参数，本质是一种穷举法。</p>
-<p>但是如果超参数搜索的方法较大，建议使用<strong>随机搜索</strong>。</p>
-<p>还有集成方法，组合方法往往比单一的模型更好。。。。。最后通过测试集评估系统。、</p>
-<p>还是小心吴恩达说的那个问题，不要拼命调调超参数让测试集结果好看，这可能会使其“适应测试集”。。。</p>
-<h4 id="启动！监控与维护"><a href="#启动！监控与维护" class="headerlink" title="启动！监控与维护"></a>启动！监控与维护</h4><p>预启动：展示解决方案（学了什么、什么有用、基于什么假设、系统的限制），记录所有的事情，通过可视化和故事化制作漂亮的演示文档。</p>
-<p>你可以部署到服务器，通过web来让用户调用，但更流行的策略是将模型部署到云上：用joblib保存模型上传到Google Cloud Storage（GCS），然后转到Google Cloud AI Platform并创建一个新的模型版本，指向GCS文件。</p>
-<p>你还要编写监控代码以定期检查系统的实时性能，在降低时触发警报，因为数据会过时，会腐朽。</p>
-<p>各种层面，甚至包括相机的图像清晰度、格式变化，还有人们的偏好变化。。。</p>
-<p>但是确定模型的性能并不总是可行的，你可能需要人工分析。。。反正建立一个监控系统和相关流程，包括如何定义故障以及如何做准备。</p>
-<p>这个工作量甚至比构建和训练模型多得多。。你还要定期更新数据集并定期重新训练模型（数据发展），最好自动化：</p>
-<ul>
-<li>自动定期收集数据并标记（如聘用人工标注者）</li>
-<li>编写脚本来训练模型并自动调微超参数。</li>
-<li>编写脚本在更新的测试集上评估新旧模型，性能好则自动部署，差就调查原因。</li>
-</ul>
-<p>做好版本管理（包括每个版本的数据集），以防新模型故障时需要回滚</p>
-<h3 id="3-分类"><a href="#3-分类" class="headerlink" title="3.分类"></a>3.分类</h3><p>终于了解完了大概流程，有些麻烦，但不出所料，让我们正式进入学习吧！</p>
+<p>下面装解析库，虽然提取信息方式多样，但写起来麻烦，不如强大的库，库还提供解析</p>
+<p><strong>解析库：</strong></p>
+<ol>
+<li><p>lxml 解析HTML /XML  支持XPath解析方式，且效率非常高</p>
+</li>
+<li><p>beautiful soup 解析HTML /XML，可以很方便的提取数据，有强大的API和多样的解析方式</p>
+</li>
+<li><p>pyquery  提供了和jQuery类似的语法来解析HTML文档，还支持CSS选择器</p>
+</li>
+<li><p>tesserocr  通过OCR对抗验证码，是对<a target="_blank" rel="noopener" href="https://github.com/UB-Mannheim/tesseract/wiki">tesseract</a>的再封装，先装后者</p>
+<p>ps:(Optical Character Recognition 光学字符识别)扫描字符并转换成电子文本</p>
+<p>一直失败。。。选择了替代的pytesseract</p>
+</li>
+</ol>
+<p><strong>数据库</strong></p>
+<p>关系型如SQLite  ,<strong>MySQL</strong>  ,Oracle   ,SQL Server  ,DB2     按表存储</p>
+<p>非关系型如 <strong>MongoDB   Redis</strong>    键值对，更灵活</p>
+<ol>
+<li>MySQL  官网</li>
+<li>mongodb懒得装了</li>
+<li>redis还是装一下，还有可视化管理工具redis desktop manager</li>
+</ol>
+<p><strong>存储库</strong></p>
+<p>用来和python交互，MySQL需要PyMySQL,  MongoDB需要PyMongo</p>
+<p>我只下了PyMySQL</p>
+<p><strong>web库</strong></p>
+<p>搭建一些API接口供爬虫使用，比如维护一个代理池</p>
+<ol>
+<li>flask   轻量级web服务程序</li>
+<li>tornado   支持异步的web框架</li>
+</ol>
+<p><strong>APP爬取库</strong></p>
+<p>先不装了。。。</p>
+<p>又是一堆。。。。还跟Android有关</p>
+<p><strong>爬虫框架</strong></p>
+<p>我们直接用requests , selenium等库写爬虫，当小型时很好，但写多了就有些麻烦和凌乱</p>
+<p>上框架！这样我们只用关心爬取逻辑，而不是具体功能的实现！</p>
+<ol>
+<li><strong>pyspider  失败。。。</strong></li>
+<li>Scrapy要配合splash和其python库  成功。。</li>
+<li>scrapy-redius  成功。。</li>
+</ol>
+<p><strong>部署库</strong></p>
+<ol>
+<li><p>Docker  成功</p>
+<p>容器技术，打包应用和环境，极大方便了应用服务的部署，</p>
+</li>
+<li><p>Scrapyd  部署和运行Scrapy的工具，针对linux，那没事了</p>
+</li>
+</ol>
+<p>cao</p>
+<p>没装的有：</p>
+<p>tessorocr 图形识别码,有替代</p>
+<p>mongodb 和配套的，。。希望别用这破玩意</p>
+<p>app 爬取库  。。我吐了</p>
+<p>scrapyd 部署工具。。应该用不着吧</p>
+<p>pyspider bug  。。还早</p>
+<h1 id="github项目"><a href="#github项目" class="headerlink" title="github项目"></a>github项目</h1><p><a target="_blank" rel="noopener" href="https://github.com/wistbean/learn_python3_spider">https://github.com/wistbean/learn_python3_spider</a></p>
 
                 
             </div>
@@ -624,7 +574,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://darren-dong.com/2021/09/08/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%AE%9E%E6%88%98/">https://darren-dong.com/2021/09/08/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%AE%9E%E6%88%98/</a>
+                    <a href="https://darren-dong.com/2021/04/10/crawler/">https://darren-dong.com/2021/04/10/crawler/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -662,8 +612,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/python/">
-                                    <span class="chip bg-color">python</span>
+                                <a href="/tags/crawler/">
+                                    <span class="chip bg-color">crawler</span>
                                 </a>
                             
                         </div>
@@ -1100,31 +1050,43 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2021/09/08/DS-Source/">
+                <a href="/2021/04/26/tensorflow-note/">
                     <div class="card-image">
                         
-                        <img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/blockchain-3614403_1920.jpg" class="responsive-img" alt="DS-Source">
+                        <img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210426224302.png" class="responsive-img" alt="tensorflow-note">
                         
-                        <span class="card-title">DS-Source</span>
+                        <span class="card-title">tensorflow-note</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            磨刀不误砍柴工
+                            曹建老师tensorflow快速上手，有个大概印象
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-09-08
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-04-26
                         </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            Darren
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/DL/" class="post-category">
+                                    DL
+                                </a>
+                            
                             
                         </span>
                     </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%85%AB%E8%82%A1/">
+                        <span class="chip bg-color">八股</span>
+                    </a>
+                    
                 </div>
                 
             </div>
@@ -1136,35 +1098,43 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/08/22/%E9%81%93%E7%90%86/">
+                <a href="/2021/04/05/%E5%BF%AB%E6%8D%B7%E9%94%AE%E9%9A%8F%E8%AE%B0/">
                     <div class="card-image">
                         
-                        <img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/lighthouse-2372461_1920.jpg" class="responsive-img" alt="道理">
+                        <img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/technology-785742_960_720.jpg" class="responsive-img" alt="hot key">
                         
-                        <span class="card-title">道理</span>
+                        <span class="card-title">hot key</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            孰对孰错，谁又可知，在真理尚未降临之前，我们能做的就是不断思考、完善、推翻旧日。
+                            提高生产力——节省时间是非常必要的
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-08-22
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-04-05
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/others/" class="post-category">
-                                    others
+                            <a href="/categories/basic/" class="post-category">
+                                    basic
                                 </a>
                             
                             
                         </span>
                     </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/hot-key/">
+                        <span class="chip bg-color">hot key</span>
+                    </a>
+                    
                 </div>
                 
             </div>
