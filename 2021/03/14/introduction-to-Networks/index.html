@@ -424,7 +424,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新之期:&nbsp;&nbsp;
-                    2021-09-12
+                    2021-10-12
                 </div>
                 
 
@@ -1691,11 +1691,11 @@ Router# copy running-config startup-config<span aria-hidden="true" class="line-n
 
 <h2 id="配置接口"><a href="#配置接口" class="headerlink" title="配置接口"></a>配置接口</h2><p>下一步将配置它们的接口。这是因为在配置接口之前，终端设备无法访问路由器。</p>
 <p>配置路由器接口的任务与交换机上管理 SVI 非常相似。具体来说，它包括发出以下命令：</p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">Router(config)# interface type-and-number
-Router(config-if)# description description-text
-Router(config-if)# ip address ipv4-address subnet-mask
-Router(config-if)# ipv6 address ipv6-address&#x2F;prefix-length
-Router(config-if)# no shutdown<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">Router<span class="token punctuation">(</span>config<span class="token punctuation">)</span><span class="token comment"># interface type-and-number</span>
+Router<span class="token punctuation">(</span>config-if<span class="token punctuation">)</span><span class="token comment"># description description-text</span>
+Router<span class="token punctuation">(</span>config-if<span class="token punctuation">)</span><span class="token comment"># ip address ipv4-address subnet-mask</span>
+Router<span class="token punctuation">(</span>config-if<span class="token punctuation">)</span><span class="token comment"># ipv6 address ipv6-address/prefix-length</span>
+Router<span class="token punctuation">(</span>config-if<span class="token punctuation">)</span><span class="token comment"># no shutdown</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>此表总结了用于验证接口配置的更常用 <strong>show</strong> 命令。</p>
 <table>
