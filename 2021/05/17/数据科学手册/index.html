@@ -424,7 +424,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新之期:&nbsp;&nbsp;
-                    2021-09-13
+                    2021-12-11
                 </div>
                 
 
@@ -686,6 +686,7 @@ Out<span class="token punctuation">[</span><span class="token number">9</span><s
 <li>如果两个数组的维度不同，小维度数组<strong>的形状在最左边补1</strong></li>
 <li>如果数组在任何一个维度上大小不相等，而且数组<strong>该维度为1</strong>，则会沿着该维度拓展到匹配另一个数组</li>
 <li>如果数组在任何一个维度上大小不相等，而且并没有某个数组维度为1，那么引发异常。</li>
+<li>小心numpy的一维数组，也就是shape是（n,）<strong>这不等于列向量！</strong></li>
 </ol>
 <p>最值得注意的就是他补充一个维度是在左边补1而不是右边，如果希望右边补全，可以使用变形数组。</p>
 <p>这些广播规则适用于<em><strong>任意二进制通用函数</strong></em></p>
@@ -722,8 +723,7 @@ Out<span class="token punctuation">[</span><span class="token number">11</span><
 <p>就是传说中的布尔矩阵作为索引呗，会得到一个一维数组</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">and</span> <span class="token keyword">or</span>  和  <span class="token operator">&amp;</span> <span class="token operator">|</span>  的区别<span class="token keyword">and</span> <span class="token operator">/</span> <span class="token keyword">or</span> 判断整个对象是真是假，而后两者是指每个对象中的比特位，依次化成二进制码进行操作而布尔矩阵可以被当成比特字符组成的，所以采用后者，而使用前者比较整个对象的时候会出错。<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-
-
+<p>记得布尔索引会被拉直成一个一维数组，所以还是当作索引用，不要单独用。</p>
 <h2 id="花哨的索引"><a href="#花哨的索引" class="headerlink" title="花哨的索引"></a>花哨的索引</h2><p>花哨（fancy）的索引对多个维度也适用。</p>
 <p><strong>花哨索引和前面的简单索引类似，但是传递的是索引数组，可以让我们快速获得并修改复杂的数组值的子数据集</strong></p>
 <p>结果的形状与<strong>索引数组的形状</strong>一致，如果有广播，就是<strong>跟广播后的索引数组的形状</strong>一致,而不是被索引的数组</p>
@@ -3157,7 +3157,7 @@ result2 <span class="token operator">=</span> df<span class="token punctuation">
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">250.3k</span>&nbsp;字
+                class="white-color">248.6k</span>&nbsp;字
             
             
             

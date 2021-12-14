@@ -424,21 +424,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新之期:&nbsp;&nbsp;
-                    2021-08-09
+                    2021-11-05
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    7.5k
+                    7.9k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    27 分
+                    29 分
                 </div>
                 
 
@@ -953,7 +953,7 @@ Out<span class="token punctuation">[</span><span class="token number">92</span><
 <span class="token number">3</span><span class="token punctuation">.</span> 然后就到可变参数，指的是可以接受所有值的元组，<span class="token operator">*</span>args  放在第三位接受所有的
 <span class="token number">4</span><span class="token punctuation">.</span> 第四是命名关键字，或者说可变字典<span class="token operator">**</span>kw  接受所有的 a <span class="token operator">=</span> <span class="token string">'xxx'</span> 这样的参数，并赋给字典，但是key不用加引号
 <span class="token number">5</span><span class="token punctuation">.</span> 最后是关键字参数，不能省略的键值对！
-<span class="token comment">#其实就是无限接受的俩args放中间</span>
+<span class="token comment">#其实就是无限接受的放在后面。</span>
 
 如果要限制关键字参数的名字，就可以用命名关键字参数，例如，只接收city和job作为关键字参数。这种方式定义的函数如下：
 <span class="token keyword">def</span> <span class="token function">person</span><span class="token punctuation">(</span>name<span class="token punctuation">,</span> age<span class="token punctuation">,</span> <span class="token operator">*</span><span class="token punctuation">,</span> city<span class="token punctuation">,</span> job<span class="token punctuation">)</span><span class="token punctuation">:</span>
@@ -973,7 +973,7 @@ Jack <span class="token number">24</span> Beijing Engineer
 Traceback <span class="token punctuation">(</span>most recent call last<span class="token punctuation">)</span><span class="token punctuation">:</span>
   File <span class="token string">"&lt;stdin>"</span><span class="token punctuation">,</span> line <span class="token number">1</span><span class="token punctuation">,</span> <span class="token keyword">in</span> <span class="token operator">&lt;</span>module<span class="token operator">></span>
 TypeError<span class="token punctuation">:</span> person<span class="token punctuation">(</span><span class="token punctuation">)</span> takes <span class="token number">2</span> positional arguments but <span class="token number">4</span> were given
-<span class="token comment">#但是命名关键字参数可以有缺省值，从而简化调用</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token comment">#命名关键字参数可以有缺省值，从而简化调用</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>函数参数规则：</p>
 <ol>
@@ -981,11 +981,16 @@ TypeError<span class="token punctuation">:</span> person<span class="token punct
 <li>对于任意函数，都可以通过类似<code>func(*args, **kw)</code>的形式调用它，无论它的参数是如何定义的。</li>
 <li><strong>虽然可以组合多达5种参数，但不要同时使用太多的组合，否则函数接口的可理解性很差。</strong></li>
 </ol>
+<p>注意 **dict解包作为参数时，是复制一份，也就是传值</p>
 <hr>
 <p>  当在 函数内部修改列表、字典的 元素时，形参的改变会影响实参，即双向传递，类似于“传地址”、“共享内存”、“借”，</p>
 <p>匿名函数lambda</p>
 <p> lambda [ 参数1[, 参数2,……, 参数n]]: 表达式</p>
 <p>  关键字lambda 表示匿名函数，冒号前面是函数参数，可以有多个函数参数，但只有一个返回值 ，所以只能有一个表达式，返回值就是该表达式的结果。</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20211105121650828.png" alt="image-20211105121650828" style="zoom:50%;" />
+
+
+
 <h3 id="装饰器"><a href="#装饰器" class="headerlink" title="装饰器"></a>装饰器</h3><p>这个讲的比一般的清楚一点所以放在这。</p>
 <p>  装饰器 （decorator ，[ˈdekəreɪtə(r)] ）可简单地理解为一个函数，这是一个用来包装函数的函数，经常用于为已经存在的函数添加额外的功能</p>
 <p>  当多个函数有重复代码时，可以将此部分代码单独拿出来整理成一个 装饰 器，然后对每个函数调用该装饰器，这样可以实现代码的复用，而且可以让原来的函数更轻便 。</p>
@@ -996,6 +1001,7 @@ TypeError<span class="token punctuation">:</span> person<span class="token punct
 
 <p>  <strong>把@deco 语句放在函数square_sum() 定义之前，实际上是将square_sum 传递给装饰器deco  ，并将deco 返回的新函数对象赋给原来的函数名</strong> square_sum=deco(square_sum)</p>
 <p>从本质上，装饰器起到的就是这样一个重新指向函数名的作用，让同一个对象名指向一个新返回的函数，从而达到修改可调用函数的目的 </p>
+<p>最外层定义deco的本体，把函数传进去，里面定义新函数，新函数肯定要调用到原来的函数。如果需要传参数，就在本体外面再加一层传递参数的壳。</p>
 <h4 id="有参数"><a href="#有参数" class="headerlink" title="有参数"></a>有参数</h4><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210521153708.png"  style="zoom:50%;" />
 
 <p><strong>要注意多重装饰器的执行顺序，应该是先执行后面的装饰器，再执行前面的装饰器。</strong></p>
@@ -1047,15 +1053,24 @@ TypeError<span class="token punctuation">:</span> person<span class="token punct
 <p> 只要调用了构造方法，就一定创建了实例对象</p>
 <img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210521155619.png"  style="zoom:50%;" />
 
-
-
+<p>构造方法重载：</p>
+<ol>
+<li>使用默认参数</li>
+<li>构造方法根据条件调用其他的自定方法</li>
+<li>构造方法根据条件执行不同的操作，可以用*arg来接受数量未知的参数</li>
+</ol>
 <h3 id="具体方法"><a href="#具体方法" class="headerlink" title="具体方法"></a>具体方法</h3><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210521155658.png"  style="zoom:50%;" />
 
 <img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210521155717.png"  style="zoom:50%;" />
 
+
+
+<p><strong>实例方法必须有一个参数放在最左端，self</strong></p>
 <img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210521155752.png"  style="zoom:50%;" />
 
 <p><a target="_blank" rel="noopener" href="http://c.biancheng.net/view/4552.html">一点详解</a></p>
+<p>@staticmethod 静态方法只是名义上归属类管理，但是不能使用类变量和实例变量，是类的工具包<br>放在函数前（该函数不传入self或者cls），所以不能访问类属性和实例属性</p>
+<p>静态方法没有类似 self、cls 这样的特殊参数，因此 Python 解释器不会对它包含的参数做任何类或对象的绑定。也正因为如此，类的静态方法中无法调用任何类属性和类方法。</p>
 <h3 id="继承和多态"><a href="#继承和多态" class="headerlink" title="继承和多态"></a>继承和多态</h3><p>  从已有类产生新类的过程就称为类的派生（derivation）（派生是继承的另一种说法）</p>
 <img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210521161333.png"  style="zoom:50%;" />
 
@@ -1080,6 +1095,37 @@ TypeError<span class="token punctuation">:</span> person<span class="token punct
 
 
 
+<h3 id="高级操作"><a href="#高级操作" class="headerlink" title="高级操作"></a>高级操作</h3><p>__slot__，限制示例对象能自主添加的属性。</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20211105155310776.png" alt="image-20211105155310776" style="zoom: 50%;" />
+
+
+
+<p><code>@property</code>广泛应用在类的定义中，可以让调用者写出简短的代码，同时保证对参数进行必要的检查（在setter里），这样，程序运行时就减少了出错的可能性。</p>
+<p><a target="_blank" rel="noopener" href="https://www.liaoxuefeng.com/wiki/1016959663602400/1017502538658208">https://www.liaoxuefeng.com/wiki/1016959663602400/1017502538658208</a></p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Screen</span><span class="token punctuation">(</span><span class="token builtin">object</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token decorator annotation punctuation">@property</span> <span class="token comment">#相当于getter</span>
+    <span class="token keyword">def</span> <span class="token function">width</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> self<span class="token punctuation">.</span>__width
+
+    <span class="token decorator annotation punctuation">@width<span class="token punctuation">.</span>setter</span>
+    <span class="token keyword">def</span> <span class="token function">width</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> value<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>__width <span class="token operator">=</span> value
+
+    <span class="token decorator annotation punctuation">@property</span>
+    <span class="token keyword">def</span> <span class="token function">height</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> self<span class="token punctuation">.</span>__height
+
+    <span class="token decorator annotation punctuation">@height<span class="token punctuation">.</span>setter</span>
+    <span class="token keyword">def</span> <span class="token function">height</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> value<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>__height <span class="token operator">=</span> value
+
+    <span class="token decorator annotation punctuation">@property</span>
+    <span class="token keyword">def</span> <span class="token function">resolution</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> <span class="token number">786432</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>dir 返回所有的方法和属性，包括私有的和隐藏的，私有的会变成 <code>_类名__属性</code></p>
+<p>hasattr  getattr  setattr</p>
+<p>还可以将object提供的类的诸多参数比如<code>__len__ \ __call__</code>override来自定义类</p>
 <h2 id="11-文件操作"><a href="#11-文件操作" class="headerlink" title="11.文件操作"></a>11.文件操作</h2><p>这个把我的心态搞炸了一会 </p>
 <p>首先python里的默认编码都是Unicode，所有的文件其实本质都是二进制码，二进制文件只能用bytes类型操作，读出来怎么解读自己来，一般都用Unicode规则来decode（  二进制文件 是把数据按其在内存中的存储形式原样输出到磁盘上存放。）</p>
 <p>小心那个文件指针位置，你写入了以后会放在最后，再读取啥都读不出来类似的</p>
@@ -2077,7 +2123,7 @@ AssertionError<span class="token punctuation">:</span> 除数不可为<span clas
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">250.3k</span>&nbsp;字
+                class="white-color">248.6k</span>&nbsp;字
             
             
             

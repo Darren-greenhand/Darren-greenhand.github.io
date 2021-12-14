@@ -424,7 +424,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新之期:&nbsp;&nbsp;
-                    2021-08-09
+                    2021-11-17
                 </div>
                 
 
@@ -542,7 +542,7 @@ age <span class="token operator">=</span> <span class="token number">26</span>
 
 <p>上面代码中，存在全局变量<code>tmp</code>，但是块级作用域内<code>let</code>又声明了一个局部变量<code>tmp</code>，导致后者绑定这个块级作用域，所以在<code>let</code>声明变量前，对<code>tmp</code>赋值会报错。</p>
 <p>ES6 明确规定，如果区块中存在<code>let</code>和<code>const</code>命令，这个区块对这些命令声明的变量，从一开始就形成了封闭作用域。凡是在声明之前就使用这些变量，就会报错。</p>
-<p>总之，在代码块内，使用<code>let</code>命令声明变量之前，该变量都是不可用的。这在语法上，称为“暂时性死区”（temporal dead zone，简称 TDZ）。</p>
+<p>总之，在代码块内，<strong>使用<code>let</code>命令声明变量之前，该变量都是不可用的</strong>。这在语法上，称为“暂时性死区”（temporal dead zone，简称 TDZ）。</p>
 <p>这甚至会导致typeof出错，</p>
 <p><strong>与var关键字不同，let在全局作用域中声明的变量不会成为window对象的属性？不懂。。</strong></p>
 <p>const声明时必须同时初始化，而且不能修改，限制只适用于它指向的变量的引用，跟python一样</p>
@@ -1745,7 +1745,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">250.3k</span>&nbsp;字
+                class="white-color">248.6k</span>&nbsp;字
             
             
             
