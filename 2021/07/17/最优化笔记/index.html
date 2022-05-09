@@ -1,0 +1,2359 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+    <meta name="keywords" content="《最优化导论》笔记, Observatory">
+    <meta name="description" content="试图成为见证者">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>《最优化导论》笔记 | Observatory</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="Observatory" type="application/atom+xml"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</head>
+
+
+
+
+ <script type="text/javascript" src=""></script> 
+
+	
+ <script type="text/javascript">
+        var OriginTitile = document.title, st;
+        document.addEventListener("visibilitychange", function () {
+            document.hidden ? (document.title = "离别，是为了更好的相遇", clearTimeout(st)) : (document.title = "浮华何处寻净世", st = setTimeout(function () { document.title = OriginTitile }, 3e3))
+        }) 
+    </script>
+	
+<body>
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">Observatory</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>时间轴</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>Darren</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>at作者</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友链</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">Observatory</div>
+        <div class="logo-desc">
+            
+            试图成为见证者
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			时间轴
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			Darren
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			at作者
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友链
+		</a>
+          
+        </li>
+        
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+    </nav>
+
+</header>
+
+    
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('第四范式最核心的单词？')).toString(CryptoJS.enc.Hex)) {
+                alert('后台错误，请刷新后再次访问。');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
+
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image@main/img/202205091057901.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">《最优化导论》笔记</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        padding: 35px 0 15px 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        padding-bottom: 30px;
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E7%90%86%E8%AE%BA/">
+                                <span class="chip bg-color">理论</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/Math/" class="post-category">
+                                Math
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布之期:&nbsp;&nbsp;
+                    2021-07-17
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新之期:&nbsp;&nbsp;
+                    2022-05-09
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    17.5k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    65 分
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.css">
+        
+
+        
+        <!-- 代码块折行 -->
+        <style type="text/css">
+            code[class*="language-"], pre[class*="language-"] { white-space: pre-wrap !important; }
+        </style>
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1 id="无约束优化"><a href="#无约束优化" class="headerlink" title="无约束优化"></a>无约束优化</h1><h2 id="6、基础知识"><a href="#6、基础知识" class="headerlink" title="6、基础知识"></a>6、基础知识</h2><p>导数矩阵</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image@main/img/202205091058869.png" alt="image-20211203203532220" style="zoom:60%;" />
+
+<p>$Df(x)$是一行，$D\pmb{f}(x)$是好几行。</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image@main/img/202205091059786.png" alt="image-20211203203643378" style="zoom:60%;" />
+
+<ul>
+<li><p>约束集可以表示为Ω = {x: h(x) = 0 , g(x) &lt;= 0} 其中h,g是函数向量</p>
+</li>
+<li><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210930185250441.png" alt="image-20210930185250441" style="zoom:50%;" /></li>
+<li><p>局部最小一阶必要：对某点$x^*$ 所有可行方向$d$，上式均&gt;=0</p>
+<p>推理：$\triangledown f(x^*) = 0$</p>
+</li>
+<li><p>局部最小二阶必要：f二阶可微，对x* 点处任意可行方向 d，有$d^T F(x^*)d$ &gt;=0</p>
+<p>推论：当局部最小点x*是约束集内点时，所有方向都是可行方向。</p>
+</li>
+<li><p>局部最小二阶充分：f 二阶可微</p>
+<ol>
+<li>$\triangledown f(x^*) = 0$</li>
+<li>$F(x^*)&gt; 0$</li>
+</ol>
+</li>
+<li><p>接下来的章节中，将着重关注这类问题的迭代求解方法，这些方法具有很高的使用价值。可以避免巨大的工作量。</p>
+</li>
+</ul>
+<p><code>还要这个用得很多的二次型求导</code>👇：</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20211002104901010.png" alt="image-20211002104901010" style="zoom:67%;" />
+
+<h2 id="7、一维搜索"><a href="#7、一维搜索" class="headerlink" title="7、一维搜索"></a>7、一维搜索</h2><ul>
+<li>黄金分割法  （f）</li>
+<li>斐波那契数列方法（f）</li>
+<li>二分法（f导）连续可微</li>
+<li>割线法（f导）</li>
+<li>牛顿法（f导，f二阶导）连续二阶可微，还可用于求解方程。</li>
+</ul>
+<p>一维搜索法是多变量问题求解算法的一部分。</p>
+<p>${1/2}^n$ 比斐波那契和黄金分割速度快，但是求导比较复杂。</p>
+<p>黄金分割：$(\frac{3-\sqrt{5}}{2})^n$       斐波那契： $\frac{1+2\varepsilon}{F_{N+1}}$</p>
+<p>牛顿法可以求解出方程的数值解！它能不断地迫使目标函数f的一阶导数趋向于0，<br>$$<br>x^{(k+1)} = x^{(k)}-\frac{g(x^{(k)})}{g^{‘}(x^{(k)})}\<br>其中 g(x) = f^{‘}(x)<br>$$<br>所以在某些点处若$f^{‘’}&lt;0$，可能收敛到极大点，而且初始点的比值 $g(x^{0})/g^{‘}(x^{0})$ 必须够大，否则牛顿切线法可能失效，因此初始点的选择非常重要。</p>
+<p>以上方法各有优缺，实际中可以联合使用，还有许多改进、优化的算法，比如布伦特方法。</p>
+<hr>
+<p>前面的方法都需要目标极小值所在的区间，而找到区间的方法是【划界法】</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20211107174028873.png" alt="image-20211107174028873" style="zoom: 80%;" />
+
+<p>多维优化问题的迭代求解算法通常每次迭代都要用到一维搜索过程。</p>
+<p>但有时候计算极小点需要极大的计算量，甚至不存在。经验表明，实际应用中<u>应该将更多的计算资源配置到多维优化算法而不是追求高精度的一维搜索上。</u></p>
+<p>因此需要设计<strong>合适的停止条件</strong>，使得一维搜索精度低时，目标函数f的值仍能得到足够下降。</p>
+<p>比如Armijo划界法等方法，（感觉这个也tm是炼丹。。预设步长等条件。</p>
+<h2 id="8、梯度下降"><a href="#8、梯度下降" class="headerlink" title="8、梯度下降"></a>8、梯度下降</h2><p>梯度下降方法包括很多不同的具体算法，最常用的方法为最速下降法</p>
+<p>梯度方法便于实现，且在大部分情况下能够很好地运行。</p>
+<p>最速下降法：</p>
+<ul>
+<li>相邻搜索方向正交</li>
+<li>只要$\bigtriangledown f(x^{(k)}\neq 0 $ 那么</li>
+</ul>
+<p>$f(x^{(k+1)})&lt;f(x^{(k)})$ </p>
+<p>👆 = 0说明达到局部最小点，可以作为停止规则，但是实际应用中采用数值计算很难恰好得到该结果，</p>
+<ul>
+<li>一种是用的规则是计算梯度的范数，若小于某个阈值则停止，</li>
+<li>也可以计算相邻两点函数值差的绝对值，小于阈值则停止，</li>
+<li>当然也可以用迭代点的差值，</li>
+<li>还有相对值版本。相对值更优。相对值为了避免规则的分母过小，分母可以取 $max{1,||\pmb{x^{(k)}||} }$</li>
+</ul>
+<p><strong>P94的这几个👆停止规则，适用于本书第二部部分讨论的所有迭代求解方法！</strong></p>
+<p>P97 最速下降法对二次型的公式。<br>$$<br>f(\pmb{x}) = \frac{1}{2}\pmb{x}^T\pmb{Qx} - \pmb{b}^T\pmb{x}\ 这个形式挺一般\<br>\pmb{x}^{(k+1)} = \pmb{x}^{(k)} - \frac{g^{(k)T}g^{(k)}}{g^{(k)T}Qg^{k}}g^{(k)}\<br>其中\  g^{(k)} = \bigtriangledown f(x^{(k)}) = Qx^{(k)} -b<br>$$</p>
+<p>最速下降法需要归一化，不然搜索效率低。</p>
+<hr>
+<p>性质分析：</p>
+<p>如果要求初始点足够靠近极小点，算法产生的迭代点序列才能够收敛到满足局部极小点一阶必要条件的点，那么算法就不是全局收敛而是局部收敛的。</p>
+<p>算法的收敛性决定能否收敛，而评价算法多快收敛的指标是收敛率。</p>
+<p><code>有一堆证明，暂时先不管了、、、</code>P98</p>
+<p>反正最速下降一定收敛，定长下降有个条件。</p>
+<p>收敛阶数的概念不难理解，【显然、任意收敛序列的收敛级数$\geq 1$】</p>
+<p>可以证明，在最坏情况下，最速下降法的收敛阶数为1</p>
+<h2 id="9、牛顿法"><a href="#9、牛顿法" class="headerlink" title="9、牛顿法"></a>9、牛顿法</h2><p>思路和泰勒一样，在每个迭代点处构造二次型函数，一阶导、二阶导与原函数相等。然后求出该近似函数的极小值点作为下一个迭代点。</p>
+<p>若目标函数就是二次型函数，则与近似函数极小点一致，否则只能找出大体位置。</p>
+<p>迭代公式：<br>$$<br>\pmb{x}^{(k+1)} = \pmb{x}^{(k)}-\pmb{F}(\pmb{x}^{(k)})^{-1}\pmb{g}^{(k)}\<br>g^{(k)} = \triangledown f(x^{(k)})<br>$$<br>【不是确定了表达式就确定了矩阵性质，要带入值后才能确定。】</p>
+<p>可以分两步</p>
+<ul>
+<li>求解$\pmb{F}(\pmb{x}^{(k)})\pmb{d}^{(k)} = -\pmb{g}^{(k)}$得到$\pmb{d}^{(k)}$这个d就是搜索方向</li>
+<li>$\pmb{x}^{(k+1)} = \pmb{x}^{(k)}+\pmb{d}^{(k)}$</li>
+</ul>
+<p><strong>优势</strong>：当初始点和目标函数极小点足够接近时，收敛效果非常好</p>
+<p><strong>缺点</strong>：F（x）不正定，或初始点离最小值太远，都可能无法收敛。还有n比较大时计算量太大</p>
+<p>不过后续都有修正来解决。</p>
+<hr>
+<ul>
+<li><p>当目标函数是二次型函数时，对任意初始点，一步就可收敛，收敛阶数为$\infty$</p>
+</li>
+<li><p>f 三阶连续可微，存在点$x^<em>\in R^n$且满足$\triangledown f(x^</em>) = 0$且$F(x^*)$可逆</p>
+<p>则对所有与$x^*$足够接近的$x^{(0)}$，牛顿法至少以2的阶数收敛。【可能收敛到极大值点】</p>
+</li>
+</ul>
+<p>一个修正是引入搜索方向并开展一维搜索，<code>定理给出在搜索方向上一定有一个区间是一直下降的</code></p>
+<p>LM（Levenberg-Marquardt）修正还解决了黑塞矩阵不正定的问题。<br>$$<br>\pmb{x}^{(k+1)} = \pmb{x}^{(k)}-(\pmb{F}(\pmb{x}^{(k)})+\mu_k\pmb{I})^{-1}\pmb{g}^{(k)}<br>$$<br>当$\mu_k$趋于无穷时，其实相当于是步长较小时梯度方法的特征。</p>
+<p>实际应用时‘’$\mu_k$从小向大调，直到函数表现下降特征。</p>
+<p>P116介绍了处理非线性最小二乘问题的<code>高斯牛顿法</code>，方便之处在于可忽略二阶导数项。</p>
+<p>雅可比矩阵：就是函数的一阶导矩阵 $J(x)$<br>$$<br>\pmb{x}^{(k+1)} = \pmb{x}^{(k)}-(\pmb{J}(\pmb{x})^T\pmb{J}(\pmb{x})+\mu_k\pmb{I})^{-1}\pmb{J}(\pmb{x})^T\pmb{f}(\pmb{x})<br>$$<br><code>注意一个思维，是把m个样本的处理（比如loss）看作m个函数，原来如此。</code>比如👆这个$f(x)$其实是一列，每行代表一个输入的$f(x_m)$</p>
+<h2 id="10、共轭方向法"><a href="#10、共轭方向法" class="headerlink" title="10、共轭方向法"></a>10、共轭方向法</h2><p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/338838078">大佬的直观理解，和相比GD的提升</a></p>
+<p>核心思想：相比于GD的全维度更新，共轭是解耦合，分成各个维度一次性更新一整个维度，共轭和正交差了个空间变换。</p>
+<blockquote>
+<p>GD每次更新一般都会改变迭代点的所有维度的值，因此，每次迭代一次后得到的迭代点就不一定是之前搜索方向上的最优点了。反观共轭方向法，共轭方向法每次只在影响一个维度的方向上搜索，就以上图为例，在更新完 <img src="https://www.zhihu.com/equation?tex=x_1" alt="[公式]"> 后，共轭方向法选择朝 <img src="https://www.zhihu.com/equation?tex=d_2" alt="[公式]"> 这个方向搜索，而 <img src="https://www.zhihu.com/equation?tex=d_2" alt="[公式]"> 和 <img src="https://www.zhihu.com/equation?tex=d_1" alt="[公式]"> 是正交的，因此第二次搜索不会改变迭代点的第一个维度， 也就是不会对第一次搜索得到的成果造成影响。而GD算法的每一次搜索都会对上一次搜索的成果造成影响。</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image@main/img/202205091059148.png" alt="img" style="zoom: 50%;" />
+</blockquote>
+<p>介于最速下降（低）和使用得当的牛顿法、拟牛顿法（高）中间。</p>
+<p>从之前的例子可以看出，影响迭代搜索算法的<strong>关键因素为每次搜索的方向</strong>。</p>
+<p><strong>优点</strong>：</p>
+<ul>
+<li>n维二次型问题，能在n步内得到结果</li>
+<li>共轭梯度法不需要计算黑塞矩阵。</li>
+<li>不需要存储 $n*n$ 的矩阵，也不需要对其求逆。</li>
+</ul>
+<p>共轭方向定义：</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20211016142133692.png" style="zoom: 50%;" />
+
+<p>该方法的原理是证明对于n变量的二次型函数 $f(\pmb{x}) = \frac{1}{2}\pmb{x}^T\pmb{Qx}-\pmb{x}^T\pmb{b}\ ,x\in R^n，Q = Q^T&gt;0$来说，最好的搜索方向为Q的共轭方向。（$Q&gt;0$的意思是Q正定）。</p>
+<hr>
+<p>通过解方程来求解共轭向量效率太低，参考Gram-Schmidt过程可以设计一种<strong>系统化构造关于Q共轭向量</strong>的算法流程：<br>$$<br>\pmb{g}^{(k)} = \triangledown f(\pmb{x^{(k)}}=\pmb{Qx}^{(k)}-\pmb{b} \<br>\alpha_k = -\frac{\pmb{g}^{(k)T}\pmb{d}^{(k)}}{\pmb{d}^{(k)T}\pmb{Qd}^{(k)}}\<br>\pmb{x}^{(k+1)} = \pmb{x}^{(k)}+\alpha_k\pmb{d}^{(k)}<br>$$<br>k 表示迭代次数。$g^{(k)}$代表在$x^{(k)}$处的梯度。</p>
+<p>定理：目标函数为 $n$ 维二次型函数时，共轭方向法能够在 $n$步迭代后收敛到最小点，即 $x^{(n)} = x^*$</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20211016162919706.png" alt="image-20211016162919706" style="zoom:50%;" />
+
+<p>$g^{(k+1)}正交于由d^{(0)}…d^{(k)}张成的子空间$</p>
+<p>该引理可以证明共轭方向法一个很有意思的最优性性质。</p>
+<p>$f(\pmb{x}^{(k+1)})$ 不仅满足👇<br>$$<br>f(\pmb{x}^{(k+1)}) = min_\alpha f(\pmb{x}^{(k)}+\alpha\pmb{d}^{(k)})\<br>$$<br><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20211016163458980.png" alt="image-20211016163458980" style="zoom:50%;" /></p>
+<p>一直保持最优。</p>
+<p>如同逐维度扩张的子空间般，随着k增大，子空间不断扩展指导充满整个$R^n$，将 $x^*$也包含其中，因此又称扩张子空间定理。</p>
+<hr>
+<p>共轭方向法效率很高，但是必须给定一组 Q 共轭方向。</p>
+<p>幸运的是存在一种方法能随迭代的进行，逐一产生Q共轭方向而无需提前指定——<code>共轭梯度法</code>，这种方法不需要预先给定共轭方向，而是随着迭代的进行不断产生共轭方向。</p>
+<p>仍考虑 $f(\pmb{x}) = \frac{1}{2}\pmb{x}^T\pmb{Qx}-\pmb{x}^T\pmb{b}\ ,x\in R^n，Q = Q^T&gt;0$</p>
+<p>在第$k+1$次迭代中，$d^{(k+1)}可以写为g^{(k+1)}和d^{(k)}$的线性组合，有了<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/338838078">直观理解</a>就显然了。</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20211020103111931.png" alt="image-20211020103111931" style="zoom:50%;" />
+
+<hr>
+<h3 id="非二次型问题的共轭梯度"><a href="#非二次型问题的共轭梯度" class="headerlink" title="非二次型问题的共轭梯度"></a>非二次型问题的共轭梯度</h3><p>我们之前的算法和分析都是建立在研究的函数是二次型的假设下，这未免过于理想，要知道，深度学习中大部分loss关于前馈网络参数的函数甚至都不是凸函数，那么将我们得到的共轭梯度法进行泛化就显得很有必要了。</p>
+<p>若将函数$f(\pmb{x}) = \frac{1}{2}\pmb{x}^T\pmb{Qx}-\pmb{x}^T\pmb{b}$<strong>视为某个目标函数泰勒展开式的二阶近似</strong>，就可以推广。</p>
+<p>二次型中的矩阵Q，黑塞矩阵是常数矩阵，但是一般非二次型每次迭代都要重算Q，计算量太大，需要修改，消除该环节。</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20211020110719239.png" alt="image-20211020110719239" style="zoom:50%;" />
+
+<ul>
+<li><p>Hestenes-Stiefel</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20211020110952754.png" alt="image-20211020110952754" style="zoom:50%;" /></li>
+<li><p>Polak-Ribiere</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20211020111024535.png" alt="image-20211020111024535" style="zoom:50%;" /></li>
+<li><p>Fletcher-Reeves</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20211020111044047.png" alt="image-20211020111044047" style="zoom:50%;" /></li>
+</ul>
+<p>对二次型，这仨是等价的，但是对一般非线性函数，并不一致。。。。</p>
+<p>ps：</p>
+<p>还要选择合适的停止规则，而不是$\triangledown f(\pmb{x}^{(k+1)})=0$，还有合适的一维搜索方法，如果一维搜索方法不精确，建议用Hestenes公式来计算。。。</p>
+<h2 id="11、拟牛顿法"><a href="#11、拟牛顿法" class="headerlink" title="11、拟牛顿法"></a>11、拟牛顿法</h2><p>牛顿法有较高实用性，且如果收敛，阶数至少为2.</p>
+<p>但是起始点如果没选好，那么可能牛顿法根本下降不了。</p>
+<p>牛顿法可通过每次进行一维搜索保证一定下降。但是还有计算黑塞矩阵和求解的困难。</p>
+<p>拟牛顿法通过设计 $\pmb{F}(\pmb{x}^{(\pmb{k})})^{-1}$的近似矩阵$\pmb{H}_k$来替代，以此来规避计算，只用目标函数值和梯度就能算。用来优化牛顿法的计算问题。</p>
+<p>而只需要 $H$ 满足👇的后几行，就能与$\pmb{F}(\pmb{x}^{(\pmb{k})})^{-1}$拥有类似的性质。当$\pmb{H}_k$正定时，必然下降。</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20211021104113854.png" alt="image-20211021104113854" style="zoom: 50%;" align = "left"/>
+
+<p>而从$H^{(k)}$需要满足的方程看，该矩阵不能唯一确定。这就给了一定的发挥空间</p>
+<p>作者给出了三种算法，这三种算法$H^{(k+1)}$均是在$H^{(k)}$的基础上增加修正项得出来的。</p>
+<hr>
+<ol>
+<li>秩一修正公式</li>
+</ol>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20211107202703202.png" alt="image-20211107202703202" style="zoom: 50%;" />
+
+<p>研究，给定$H_k,\Delta\pmb{g}^{(k)},\Delta\pmb{x}^{(k)}$后，如何确定$\alpha$和$\pmb{z}^{(k)}$使得近似矩阵满足性质$\pmb{H}_{k+1}\Delta\pmb{g}^{(i)}=\Delta\pmb{x}^{(i)}$</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20211107203753608.png" alt="image-20211107203753608" style="zoom: 50%;" />
+
+<p>秩一算法产生的$H_{k+1}$不一定正定，所以$d_{k+1}$不一定时下降方法。其次计算时如果分母接近0，有点难算</p>
+<ol start="2">
+<li>DFP算法</li>
+</ol>
+<p>又称秩二算法、变尺度法。</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20211107204005135.png" alt="image-20211107204005135" style="zoom:50%;" />
+
+<p>DFP算法能保持H正定，但是处理规模较大的非二次型问题时，迭代无法开展，因为$\pmb{H}_k$接近成为奇异矩阵了。</p>
+<ol start="3">
+<li>BFGS算法</li>
+</ol>
+<p>推导需要用到对偶、互补的概念。</p>
+<p>除了构造$\pmb{F}(\pmb{x}^{(\pmb{k})})^{-1}$的近似矩阵$\pmb{H}<em>k$，还构造$\pmb{F}(\pmb{x}^{(\pmb{k})}$的近似矩阵<br>$$<br>\pmb{B}</em>{k+1}\ 满足\<br>\Delta\pmb{g}^{(i)}=\pmb{B}_{k+1}\Delta\pmb{x}^{(i)}\ , 0\leq i\leq k<br>$$<br><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20211107204938015.png" alt="image-20211107204938015" style="zoom:50%;" /></p>
+<p>BFGS除了一定保持正定，<strong>即使一维搜索精度不高，依然比较稳健</strong>，有助于将计算资源解放出来、</p>
+<p>效率上，很多情况下BFGS算法远超DFP算法</p>
+<p>处理非二次型问题，拟牛顿法便不会在n步内收敛到极小点，与共轭梯度法类似，需要进行一些修正，</p>
+<p>比如每经过几次迭代，搜索方向重置为梯度负方向。</p>
+<h2 id="12、求解线性方程组"><a href="#12、求解线性方程组" class="headerlink" title="12、求解线性方程组"></a>12、求解线性方程组</h2><h3 id="最小二乘法"><a href="#最小二乘法" class="headerlink" title="最小二乘法"></a>最小二乘法</h3><p><strong>原最小二乘法</strong></p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20211107210727224.png" alt="image-20211107210727224" style="zoom:50%;" />
+
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20211107210824973.png" alt="image-20211107210824973" style="zoom:50%;" />
+
+<p>其实这就是strang讲的投影那里，感觉比这个讲的清楚。</p>
+<hr>
+<p><strong>递推最小二乘算法</strong></p>
+<p>当在已有计算基础上给出新的数据时，不需要合并数据重新计算，可以对已有的计算结果进行更新，从而免去不必要的计算。<br>$$<br>\pmb{G}<em>0 = \pmb{A}<em>0^T\pmb{A}<em>0\<br>\pmb{G}</em>{k+1} = \pmb{G}</em>{k}+\pmb{A}</em>{k+1}^T\pmb{A}<em>{k+1}\<br>\pmb{x}^{(k+1)} =\pmb{x}^{(k)} +\pmb{G}</em>{k+1}^{-1}\pmb{A}<em>{k+1}^T(\pmb{b}^{(k+1)} -\pmb{A}</em>{k+1}\pmb{x}^{(x)})<br>$$<br>其中向量 $\pmb{b}^{(k+1)} -\pmb{A}_{k+1}\pmb{x}^{(x)}$ 通常成为新息，如果为0，那么其实没有进行更新。</p>
+<p>为了简单计算$\pmb{G}_{k+1}^{-1}$，有下面这个引理。</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20211107212218536.png" alt="image-20211107212218536" style="zoom:50%;" />
+
+
+
+<hr>
+<h3 id="最小范数解"><a href="#最小范数解" class="headerlink" title="最小范数解"></a>最小范数解</h3><p><strong>线性方程组的最小范数解</strong></p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20211107212749533.png" alt="image-20211107212749533" style="zoom: 50%;" />
+
+<hr>
+<p><strong>Kaczmarz算法</strong>【卡茨马兹】</p>
+<p>针对上一节的最小范数解问题，虽然有解析解，但是很难算</p>
+<p>该<strong>迭代</strong>算法能够在不直接计算$\pmb{AA}^T$逆矩阵的情况下收敛到解析解，非常实用，尤其是矩阵太大的情况。</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20211107213508375.png" alt="image-20211107213508375" style="zoom:50%;" />
+
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20211107213438836.png" alt="image-20211107213438836" style="zoom:50%;" />
+
+<p>如果设定$\mu = 1$会有非常有趣的性质👇</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20211107213851207.png" alt="image-20211107213851207" style="zoom:50%;" />
+
+<hr>
+<p><strong>一般意义下线性方程组的求解</strong></p>
+<p>本节研究在m*n矩阵A的秩为 r 时，没有逆，那就定义<strong>伪逆、广义逆</strong>，特别的，本节将讨论矩阵A的 Moore-Penrose逆。</p>
+<p>何谓<strong>伪逆</strong>：</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20211107214616275.png" alt="image-20211107214616275" style="zoom:50%;" />
+
+<p><u>这其实也是一种通过奇异值分解计算伪逆的方式。</u></p>
+<p>左伪逆和右伪逆，伪逆的唯一性。</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20211107214853701.png" alt="image-20211107214853701" style="zoom: 50%;" />
+
+<p>还是给出strang的图，直观理解就是把对应关系限制在行和列空间上，不考虑零空间</p>
+<p>而幸运的是，可以证明，行空间和列空间（秩都为r ）里的向量是一一对应的。</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20211107222544879.png" alt="image-20211107222544879" style="zoom: 80%;" />
+
+<hr>
+<p>然后补充一些线代的知识，<strong>满秩分解</strong></p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20211107214239226.png" alt="image-20211107214239226" style="zoom:50%;" />
+
+<p>伪逆和满秩分解的关系。</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20211107215833293.png" alt="image-20211107215833293" style="zoom:50%;" />
+
+<p>或者化简为<br>$$<br>\pmb{A}^\dagger = \pmb{C}^T(\pmb{B}^T\pmb{A}\pmb{C}^T)^{-1}\pmb{B}^T<br>$$</p>
+<hr>
+<p>那么$A^\dagger$在求解线性方程组时为什么重要呢？</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20211107221048200.png" alt="image-20211107221048200" style="zoom:50%;" />
+
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20211107221407945.png" alt="image-20211107221407945" style="zoom:50%;" />
+
+<p>别的定义方式不是重点。</p>
+<h2 id="13、无约束优化问题和神经网络"><a href="#13、无约束优化问题和神经网络" class="headerlink" title="13、无约束优化问题和神经网络"></a>13、无约束优化问题和神经网络</h2><p>本章将前面讨论的方法应用于前馈神经网络的训练中。</p>
+<p>神经网络的核心是神经元之间的连接权重，也称为学习参数，常用的训练方法为反向传播算法。</p>
+<p>神经网络可视为<strong>函数逼近器</strong></p>
+<p>神经网络的学习可以归纳为一个优化问题。利用前面的方法来设计训练过程。</p>
+<p>多层反向传播其实确实也是归结为一个优化问题，只不过参数有点多，可以用前面的各种方法完成</p>
+<p>吴恩达给出的是一种普通的梯度下降法。</p>
+<h2 id="14、全局搜索算法"><a href="#14、全局搜索算法" class="headerlink" title="14、全局搜索算法"></a>14、全局搜索算法</h2><p>前面的迭代算法，往往只能收敛到局部极小点，而且还需要计算目标函数的一阶导数。</p>
+<p>本章讨论一些全局意义上的搜索方法，这些方法也不需要对目标函数求导。因此适用面更广。</p>
+<p>在某些情况下，这些方法产生的解，可以作为梯度、牛顿法<strong>“较好的”初始点。</strong></p>
+<p>在本章讨论的方法中，某些方法还可用于求解组合优化问题。</p>
+<h3 id="单纯形法"><a href="#单纯形法" class="headerlink" title="单纯形法"></a>单纯形法</h3><p>Nelder-Mead单纯形法</p>
+<p>定义👇</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20211108145806398.png" alt="image-20211108145806398" style="zoom: 67%;" />
+
+<p>初始单纯性的构造方法：</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20211108150312958.png" alt="image-20211108150312958" style="zoom:67%;" />
+
+<p>初始单纯形确定后，接下来就是一步步对其进行修改，朝着函数极小点收敛。</p>
+<p>下面给出迭代过程中单纯形的更新规则，Amazing，先上一个二维单纯性搜索的图：</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20211108151531733.png" alt="image-20211108151531733" style="zoom:50%;" />
+
+<hr>
+<ul>
+<li><p>首先选定初始的n+1个点，构成最初的单纯形。</p>
+</li>
+<li><p>计算n+1个点的目标函数值，按照从小到大进行排序，令 $\pmb{p}_s$位最小的点，$\pmb{p}<em>b$为最大的点。$\pmb{p}</em>{2b}$为第二大的点</p>
+</li>
+<li><p>计算重心$\pmb{p}_g$为除去$\pmb{p}_b$后，其他所有点的几何平均点。</p>
+</li>
+<li><p>开展反射操作，利用反射系数$\rho$对最差点$\pmb{p}_s$进行<strong>反射</strong> $\pmb{p}_r = \pmb{p}_g + \rho(\pmb{p}_g-\pmb{p}_r)$，就是相对重心反射。一般$\rho = 1$</p>
+</li>
+<li><p>判断反射是否成功</p>
+<ul>
+<li><p>如果$f_r &lt; f_s$说明反射方向正确，进行**延伸**$\pmb{p}_e = \pmb{p}_g + \chi(\pmb{p}_r-\pmb{p}_g)$，$\chi&gt;1$</p>
+<ul>
+<li>如果$f_e&lt;f_r$说明延伸成功，$\pmb{p}_e$取代$\pmb{p}_b$，取代最小点</li>
+<li>否则$\pmb{p}_r$取代$\pmb{p}_b$</li>
+</ul>
+</li>
+<li><p>如果$f_r\geq f_{2b}$说明反射个der，开展<strong>收缩</strong>操作。</p>
+<p>如果$f_{2b}\leq f_r &lt; f_b$那么采用<u>外收缩</u> $\pmb{p}_c =\pmb{p}_g + \gamma(\pmb{p}_r - \pmb{p}_g)$，其实就是让它不要伸太长了，回来点</p>
+<p>否则$f_r&gt;f_b$那就无药可救，采用<u>内收缩</u>，直接用$\pmb{p}_b$代替$\pmb{p}_r$，$\pmb{p}_c =\pmb{p}_g + \gamma(\pmb{p}_b - \pmb{p}_g)$。</p>
+<ul>
+<li>如果$f_c&lt;f_b$至少收缩成功了，用$\pmb{p}_c$替换$\pmb{p}_l$</li>
+<li>否则开展<strong>压缩</strong>操作：除了$p_s$不变，其他各点距离$\pmb{p}_l$距离减半，$\pmb{p}_i = \pmb{p}_s + \sigma(\pmb{p}_i-\pmb{p}_s)$，$\sigma = 1/2$</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>然后计算新的顶点回到第二步</p>
+</li>
+</ul>
+<p>（新点和旧点数值相等，新点排在右边。）</p>
+<h3 id="模拟退火"><a href="#模拟退火" class="headerlink" title="模拟退火"></a>模拟退火</h3><p>是一种随即搜索方法，也成为概率搜索方法，在优化问题的可行集$\Omega$中随机采样，逐步完成搜索。</p>
+<p>基本假设为<u>可以从可行集$\Omega$中随机采样</u>。</p>
+<p>随机采样：</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20211108154621465.png" alt="image-20211108154621465" style="zoom:67%;" />
+
+<p>先来看一种简单的随机搜索算法，称为朴素随即搜索算法：</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20211108154726543.png" alt="image-20211108154726543" style="zoom:67%;" />
+
+<p>牛啊，还有这样的下降算法。</p>
+<p>朴素算法可能在局部极小点附近“卡住”，xs，为了解决这一问题，需要一种方法让它跳出来那片$N(x)$。</p>
+<p>一种思路是<strong>保证邻域够大</strong>，但是邻域设置太大将导致搜索过程变慢。</p>
+<p>另一种思路（模拟退火采用）是，设计让其能够爬出$N(x)$的算法，也就意味着<strong>算法产生的新点可能比当前点差</strong>。</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20211108155706037.png" alt="image-20211108155706037" style="zoom:67%;" />
+
+<p>主要的进步在步骤3，有一定的概率【<strong>接受概率</strong>】选择备选点作为下一次迭代点，即使这个备选点比当前迭代点差，</p>
+<p>接受概率要进行合理的设定，常用的为：<br>$$<br>p(k,f(\pmb{z}^{(k)}),f(\pmb{x}^{(k)})) = min{1,exp(-f(\pmb{z}^{(k)})-f(\pmb{x}^{(k)}))/T_k)}<br>$$<br>$T_K$构成一组正数序列，成为温度进度表 或 <strong>冷却进度表</strong>，该接受概率使模拟退火算法等价于Gibbs采样器</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20211108190854122.png" alt="image-20211108190854122" style="zoom: 80%;" />
+
+<p>需要指出的是，$f(\pmb{z}^{(k)})$和$f(\pmb{x}^{(k)}))$之间的差异越大，采用$\pmb{z}^{(k)}$作为下一个迭代点的可能’性就越小。类似地，$T_k$越小，采用$Z _{( k )}$作为下一个迭代点的可能性就越小。通常的做法是令温度$T_k$单调递减到O (表示冷却过程)。</p>
+<p>也就是说，随着迭代次数k的增加，算法趋向于更差点的可能性越来越小。换句话说，最开始，算法在可行集内跳来跳去，以尽可能跳出局部极小点附近的区域，随着时间的推移，算法开始稳定在全局极小点附近的区域，将更多的时间投入到这一区域的搜索中。</p>
+<blockquote>
+<p>“退火”一词来自于冶金业，是一种能够改善金属品质的技术。</p>
+<p>基本的操作方式为先将金属加热到一定程度，然后以可控的方式对其进行冷却。首先，当金属被加热时，其中的原子始变得活跃，脱离了原来的位置，内能增加。然后，随冷却的进行，原子逐渐变得有序，内能减少。如果冷却过程足够慢，那么可以保证最终的内能将低于开始阶段的内能，这样可以改善金属的晶体结构，并减少存在的缺陷。</p>
+</blockquote>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20211108193912140.png" alt="image-20211108193912140" style="zoom:80%;" />
+
+<p>模拟退火法经常用于求解组合优化问题。</p>
+<p>这类问题的可行集是有限的(但通常会非常大)。著名的旅行商问题就是一个组合优化问题。</p>
+<h3 id="粒子群优化"><a href="#粒子群优化" class="headerlink" title="粒子群优化"></a>粒子群优化</h3><blockquote>
+<p>由一位社会心理学家和工程师提出，在社交互动原理的启发下得到的。</p>
+<p>粒子群优化算法与模拟退火算法存在一个主要区别:在一次迭代中，粒子群优化算法并不是只更新单个迭代点$\pmb{x}^k$，而是更新一群(组)迭代点，称为群。群中每个点称为一个粒子。可以将群视为一个无序的群体，其中的每个成员都在移动，意在形成聚集，但移动方向是随机的。</p>
+<p>粒子群优化算法旨在模拟动物或昆虫的社会行为，如蜂群、鸟群和羚羊群等的形成过程。</p>
+</blockquote>
+<p><strong>算法的大致描述</strong>：</p>
+<p>利用粒子群优化算法求取目标函数在$R^n$上极小点的过程。</p>
+<p>首先，在$R^n$中随机产生一组数据点为每个点赋予一个速度构成一个速度构成一个速度向量。这些点视为粒子所在的位置，以指定的速度运动。接下来，针对每个数据点计算对应的目标函数值。基于计算结果，产生一组新的数据点，赋予新的运动速度，这可以通过对原有的数据点及其运动速度进行某些操作完成。</p>
+<ul>
+<li>pbest:某个粒子到目前为止经历过的最好的位置</li>
+<li>gbest:到目前为止，每一轮的所有粒子中，出现的最小$f(x^{(k)})$</li>
+</ul>
+<p>根据粒子的个体最好位置和群的全局最好位置，调整各粒子的运动速度，以此实现粒子的”交互”。</p>
+<p>在下面给出的gbest版本的粒子群优化算法中，每次迭代中，产生两个随机数，分别作为个体最好位置pbest和全局最好位置gbest的权重，以此构成pbest和gbest的一个组合值，可称为速度的随机项；再加上加权后的原有速度，可以实现对速度的更新。</p>
+<p>因此，<u>粒子在个体最好位置和整个群的全局最好位置的共同作用下，朝着某个方向运动</u>。与前面相同，常用的停止规则为达到预先设定的迭代次数，或者目标函数达到了某个值。</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20211109173142921.png" alt="image-20211109173142921" style="zoom: 80%;" />
+
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20211109173155527.png" alt="image-20211109173155527" style="zoom:80%;" />
+
+<p>粒子群优化算法还有许多变种，👇是一种。</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20211109173353403.png" alt="image-20211109173353403" style="zoom:80%;" />
+
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20211109173406495.png" alt="image-20211109173406495" style="zoom:80%;" />
+
+
+
+
+
+<h3 id="遗传算法"><a href="#遗传算法" class="headerlink" title="遗传算法"></a><strong>遗传算法</strong></h3><p>是一种基于种群的随即搜索方法，在借鉴了遗传理论的基础上得到。</p>
+<p>概括起来，遗传算法就是针对群迭代开展交叉和变异操作，产生新种群直到满足预定的停止条件。</p>
+<p>PS：为了便于对遗传算法进行描述，将优化问题设定为最大化问题。</p>
+<p><strong>基本概念</strong></p>
+<p>首先有个约束集$\Omega$不能直接针对约束集$\Omega$中的点进行操作，而是需要将$\Omega$映射为一个字符串的集合【编码】，这些<u>字符串全部是等长</u>的，称为<u>染色体</u>。每个染色体中的元素都是从一个字符串集合中提取的，该集合称为<u>字符表</u>。{0,1}字符表得出的染色体都是二进制。</p>
+<p>L表示染色体的长度即字符串中字符的数量。用 x 表示染色体，则f (x)表示适应度。可假设f是一个非负函数。</p>
+<p><em>L，字符表，编码方式</em>(将$\Omega$映射为染色体) 统称为<em>表达模式</em>。选择合适的表达模式是利用遗传算法求解最优化问题的第一步。</p>
+<p><strong>选择和进化步骤</strong></p>
+<p>选定了表达模式，<em>初始化</em>染色体的第一代种群P(0)：通常是从染色体集合中随机抽取一定数量的染色体。</p>
+<p><em>开展交叉和变异操作</em>：在第k次迭代中，计算种群P(k)中<u>每个个体$x^{(k)}$对应的适应度$f(x^{(k)})$</u>。</p>
+<p><em>选择步骤</em>：</p>
+<p>用选择操作构造一个新的种群$M(k)$，使其个体的数量与$P(k)$相等。种群中个体的数量称为种群容量，用$N$表示。$M(k)$称为<u>配对池</u>，是在$P(k)$的基础上进行随机处理后得到的</p>
+<ul>
+<li>轮盘赌模式：</li>
+</ul>
+<p>$M(k)$中每个个体$m ^{( k )}$以概率<br>$$<br>\frac{f(x^{(k)})}{F(k)}\ 其中F(k) = \sum f(\pmb{x}_i^{(k)}),对整个P(k)进行求和<br>$$<br>等于$P(k)$中的$\pmb{x}^{(k)}$，也就是说，<u>染色体选人配对池的概率与其适应度成正比</u>【精髓】</p>
+<ul>
+<li>锦标赛模式</li>
+</ul>
+<p>从P(k)中随机选定两个染色体，比较它们的适应度，将适应度大的放人配对池M(k)。持续开展类似操作，直到配对池M(k)中的染色体达到N个。</p>
+<p><em>进化步骤</em>：</p>
+<p>开展交叉和变异操作。从配对池中随机抽取一对染色体，称为父代，通过开展交叉操作，产生一对新染色体称为子代。</p>
+<p>交叉操作指的是<u>两个父代字符串相互交换一段子字符串</u>。</p>
+<p><code>父代染色体的选择</code></p>
+<p>某个染色体被抽中用作交叉的概率为$p_c$。相互独立。</p>
+<p>如果从配对池中随机抽取两个染色体作为父代，假定配对池中有N个染色体，可令$p_c=2/N$。类似地，如果从配对池中随机抽取2k个染色体，构成k组父代染色体(k &lt;N/2)，可令$p_c=2k/N$。在这两种情况下，<u>父代的数量是固定的</u>，概率$p_c$取决于父代的数量。</p>
+<p>还有一种选择父代染色体的方式，即给定概率$p_c$，确定一个随机数作为父代的数量，以此选出需要进行交叉的父代，但需要保证<u>父代数量的均值应该为$p_cN/2$</u></p>
+<p><code>开展交叉操作</code></p>
+<p>有许多种不同类型的交叉操作。</p>
+<p>最简单的交叉操作为单点交叉，在这种交叉方式下，按照<u>均匀分布</u>的原则，首先在1到L-1之间抽取一个<u>随机整数，称为</u><u>交叉点</u>，L表示染色体的长度。然后对父代的两个染色体交叉点右侧的字符串片段进行交换，即完成了交叉操作。</p>
+<p>交叉操作还可以在多个交叉点上同时进行。</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image@main/img/202205091059844.png" alt="image-20211203140541937" style="zoom: 50%;" />
+
+<p>完成交叉操作之后，利用子代染色体替代配对池中对应的父代染色体。这样，就实现了对配对池的修改，并使其保持了原来的容量。</p>
+<p><code>变异操作</code></p>
+<p>从配对池中逐一抽取染色体，以变异概率Pm随机改变其中的字符。二进制编码时，字符的改变指的是求染色体对应位的补，即以概率$P_m$将0修改为1，或将1修改为0。如果符表中包括两个以上的字符，那么从字符表中<u>随机抽取一个其他字符</u>来替换该字符。</p>
+<p>通常情况下，变异概率$P_m$比较小(如0.01，因此，只有<u>很少的染色体</u>会经历变异操作，在这些变异了的染色体中，也是只有<u>很少的字符</u>被改变。这意味着相对于交叉操作，变异操作在遗传算法中起到的作用比较小。</p>
+<p><code>步骤概括</code></p>
+<p>1.令k =0，产生一个初始种群P (0)。</p>
+<p>2 .评估$P_(k)$即计算$P_(k)$中各个体的适应度。</p>
+<p>3 .如果满足停止规则，就停止迭代。</p>
+<p>4 .从$P(k)$中选择$M(k)$。</p>
+<p>5 .进化$M(k)$，构成新种群$P(k+1)$。</p>
+<p>6 .令k = k + 1，回到第2步。</p>
+<p>持续追踪当前为止最好的染色体，即适应度最高的染色体。在一次迭代后，当前为止最好的染色体作为最优解的备选。实际上，甚至可以将其复制到新一代种群中。这是精英主义者的做法，这种<em>精英主义的策略</em>容易导致种群被”超级染色体”主导。但是，实际应用经验表，<u>精英主义的策略很多时候可以提高算法的性能。</u></p>
+<p>遗传算法有很多种<em>不同的停止规则</em>。<br>一种比较简单的停止规则为指定最大的迭代次数;<br>另外一种停止规则为相邻两次迭代中，当前为止最好的染色体对应的造应度不再显著变化。</p>
+<p>与前面几章中讨论的方法相比，遗传算法存在以下<em>四个方面的差异</em>。<br>第一，不需要计算目标函数的导数(本章中讨论的其他方法也有这个性质)。<br>第二，在每次迭代中，采用的是随机操作(与其他随机搜索方法是一致的)。<br>第三，每次迭代是利用一组点而不是一个点开展搜索(与粒子群优化算法相似)。<br>第四，对约束集进行编码，而不是直接在约束集本身上开展搜索。</p>
+<hr>
+<p><strong>性质分析</strong></p>
+<p>模仿 “适者生存”，为了定量化深入描述遗传算法，需要先定义一些术语。</p>
+<p>模式：就是指一组染色体，同一位置上的字符是相同的，扩展字符表（原字符表+*）上的字符串来表示模式。</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image@main/img/202205091059845.png" alt="image-20211203160654460" style="zoom:50%;" />
+
+<p>如果一个模式具有$r$个$*$，那么它包括$2^r$个染色体。此外长度为L的染色体对应着$2^L$个模式。</p>
+<p>$H$表示某个给定的模式</p>
+<p>$e(H,k)$表示$P(k)$中能够匹配$H$的染色体数量</p>
+<p>$m(H,k)$表示$M(k)$中能够匹配$H$的染色体数量</p>
+<p>$f(H,k)$表示$P(k)$中能够匹配$H$的染色体的平均适应度。$f(H,k) = \frac{f(x_1)+…+f(x_{e(H,k)})}{e(H,k)}$</p>
+<p>$o(xxx)$ 阶次，等于L减去模式S中字符$*$的数量，就是确定的字符数，模式S的长度为$S(L)$</p>
+<p>N表示种群中染色体的数量，<u>$F(k)$表示$P(k)$中所有染色体的适应度值和。</u>$\overline{F}(k) = \frac{F(k)}{N} = \frac{1}{N}\sum f(\pmb{x}_i^{(k)})$</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image@main/img/202205091059846.png" alt="image-20211203163022004" style="zoom:40%;" />
+
+<p>引理14.1从定量的角度说明，如果模式$H$中染色体的平均适应度要超过种群的平均适应度，那么配对池$μ(k)$中能够匹配 H 的<em>染色体数量</em> 的期望值大于种群$P(k)$中匹配 H 的染色体数量的期望值。</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image@main/img/202205091059847.png" alt="image-20211203170540710" style="zoom:43%;" />
+
+<p>同样，对于$M(k)$中满足模式H的染色体，没有被选中进行交叉操作，或被选中交叉后产生的子代中至少一个有染色体属于H的概率下届为1-上式</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image@main/img/202205091059848.png" alt="image-20211203171959815" style="zoom:40%;" />
+
+<p>最终得到定理14.1</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image@main/img/202205091059849.png" alt="image-20211203172205148" style="zoom:40%;" />
+
+
+
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image@main/img/202205091059850.png" alt="image-20211203173927159" style="zoom: 40%;" />
+
+<p>遗传算法问题特别适合于求解组合优化问题（因为需要编码），也就是约束集$\Omega$不是$R^n$而是离散的。</p>
+<hr>
+<p><strong>实数编码</strong></p>
+<p>但是二进制字符串编码有一些问题。</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image@main/img/202205091059851.png" alt="image-20211203195926941" style="zoom: 67%;" />
+
+<p>遗传算法最好能够直接针对原始的优化问题进行求解操作。希望能够设计一种遗传算法，能够直接在$R^n$上操作。这种算法的步骤应该与二进制编码方式下的算法<u>步骤相同</u>，只是种群中的元素是约束集$\Omega$中的点，而不是二进制字符串。为此，需要定义合适的交叉和变异操作。</p>
+<p><em>交叉操作</em>存在多种不同的处理方式，比如①求平均值 ②或$z_1 = (x+y)/2+\omega_1$，$z_2 = (x+y)/2+\omega_2$，其中$\omega1$和$\omega2$是两个均值为0的随机变量，y最后$z_1$和$z_2$落在$\Omega$外，要通过投影等方式拉回来；③构造x 和 y的随机凸组合，产生一个随机数$\alpha \in (0,1)$，然后计算$z_1 = \alpha x+(1-\alpha)y$和$z_2 = \alpha y+(1-\alpha)x$作为子代染色体。④对第三种方式产生的子集稍加干扰，如同②对①一般。</p>
+<p><em>变异操作</em>，简单的方式是在染色体上增加一个随机向量，$x^{‘} =x+\omega$，也叫实数蠕变，同样得保证变异后的染色体位于约束集。也可以产生$\alpha \in (0,1)$，$x^{‘} = \alpha x+(1-\alpha)\omega$，这种方式，当约束集为凸集时，变异后的染色体一定位于约束集。</p>
+<h1 id="线性规划"><a href="#线性规划" class="headerlink" title="线性规划"></a>线性规划</h1><h2 id="15、线性规划概述"><a href="#15、线性规划概述" class="headerlink" title="15、线性规划概述"></a>15、线性规划概述</h2><p>一般基本可行解的数量相当庞大，穷举法自讨苦吃。</p>
+<p>1947年<code>单纯形法</code>——高效简洁，但最差情况有指数复杂度。</p>
+<p>1984Karmarkar提出多项式复杂度的方法。此后出现了一些非单纯形法，统称<code>内点法</code></p>
+<hr>
+<p><code>P218用凸多面体揭示了几何意义——找到正确的支撑超平面</code></p>
+<p>标准模型为：<br>$$<br>minimize\ \pmb{c}^T\pmb{x}\<br>subject\ to\ \pmb{Ax}=\pmb{b}\<br>\pmb{x}\geq\pmb{0}<br>$$<br>其他变体（比如Ax&gt;=b，maximize cTx）都可以转换为标准形式。</p>
+<p>而且线性规划问题的定理和求解方法大部分是针对标准型得到的。通过引入<strong>剩余变量\松弛变量$y$<strong>可以将任何形式的线性规划问题转变为标准型<code>P219</code><br>$$<br>\boldsymbol{Ax}\pm\boldsymbol{I_my} =[\boldsymbol{A},\boldsymbol{I}_m]\begin{bmatrix}x \y \\end{bmatrix} = \boldsymbol{b}\x\geq0\y\geq0<br>$$<br>代数意义上的等价是显然的，而几何意义可以</strong>用高维向低维的投影解释</strong>。</p>
+<hr>
+<p>此后的讨论都针对标准型：</p>
+<ul>
+<li>基本解：通过重组A解出的基本的一组基<code>P224</code> </li>
+<li>可行解：满足限定条件的，【其实就是基本解加上零空间的基的组合那个。。】</li>
+<li>最优解：能够最大、最小化目标且满足限定条件的。</li>
+</ul>
+<p>可行解和基本解不是包含关系，满足两者就叫基本可行解。基本解的某些基变量为零成为<strong>退化</strong></p>
+<p>基本解的求法很有意思。。。直接把A重组，列空间放前面，左零空间不要了。</p>
+<p>基本解的个数最多$\begin{pmatrix}n\m\end{pmatrix}$个，选择一组无关的向量，对应一个可行解。</p>
+<p>:star: 线性规划基本定理：</p>
+<ul>
+<li>如果存在可行解，那么存在基本可行解</li>
+<li>如果存在最优可行解，那么存在最优基本可行解</li>
+</ul>
+<p>这让几乎$\infin$的可行解转换为在有限数量的基本可行解上进行搜索。但是还是很大，因此需要一种更加有效的方法来求解线性规划问题——》几何含义——》单纯形法</p>
+<p>满足👉$\pmb{Ax}=\pmb{b},\pmb{x}\geq\pmb{0}$的点集可证明一定为凸集。</p>
+<p>极点不在集合中其他两点的连线上。可以证明：<code>满足👆的基本可行解就是极点！</code></p>
+<p>因此，求解线性规划问题时，只需要检查约束集的极点即可。其实这一点早就在多胞形那里体现了，最终答案要么在点上，要么在支撑超平面上，而这都可以通过检查极点找到。</p>
+<h2 id="16、单纯形法"><a href="#16、单纯形法" class="headerlink" title="16、单纯形法"></a>16、单纯形法</h2><p>从某个极点转移到另一个极点的操作方式的精细化描述和处理。</p>
+<p><code>P238</code>枢轴变换提供了对$Ax = b$的新解释。考虑到mxn矩阵，秩为m的情况<br>$$<br>[\pmb{I}<em>m,\pmb{Y}</em>{m,n-m}]\pmb{x}= \pmb{y_0}<br>$$<br>这种形式成为【典式】</p>
+<p>一般情况下，基变量不一定是前m个，这只是便于表示而已。</p>
+<p>对应的基本解为$\pmb{x}=\begin{bmatrix}\pmb{y}_0\\pmb{0}\end{bmatrix}$</p>
+<p><strong>增广矩阵标准型</strong>，如下<br>$$<br>[\pmb{I}<em>m,\pmb{Y}</em>{m,n-m},\pmb{y_0}]<br>$$<br><strong>此时该标准型的每一列元素都是关于基${a_1,a_2,…a_m}$的坐标。</strong></p>
+<p>如果用非基变量$a_q(q&gt;m)$代替$a_P(1\leq p \leq m)$，首先得有$y_{pq}\neq 0$才能保持基继续线性无关。则结果👇</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20211006161841012.png" alt="image-20211006161841012" style="zoom: 50%;" />
+
+<p>则可以推导出新的增广矩阵规范型，称为关于元素$(p,q)$的枢轴变换。</p>
+<hr>
+<p><u>单纯形法的思想就是从某基本可行解变换到另一个基本可行解，直到找到最优基本可行解为止。</u></p>
+<p>按照上文的思路，用一个非基向量代替某个基向量，求解新基下的增广矩阵规范型。</p>
+<p>增广矩阵规范型的最后一列是基本解中的基变量，$x_i = y_{i0},1\leq i\leq m$</p>
+<p>但是基本解不一定是可行解，因为可能为负，在单纯形法中希望能变换到另一个基本可行解而不是基本解。本节将讨论这个问题。</p>
+<p>三个问题：</p>
+<ul>
+<li>寻找被替换的$a_p$的方法，以及异常情况的解释</li>
+<li>如何选定最初的基向量</li>
+<li>如何判断基本可行解是否为最优解。</li>
+</ul>
+<p>判断基本可行解巧妙地通过化简比较函数值z表达式，引入$r_i=(0\ while\ [1,m],\ (c_i-z_i)\ while (m,n])$当且仅当$r_i$全都非负时为最优解。</p>
+<h3 id="求解"><a href="#求解" class="headerlink" title="求解"></a>求解</h3><p><code>P244</code>例题给出了单纯形法的求解！而且这些推论可拓展到包含退化基本可行解的情况。</p>
+<p>注意的点：选择$r_j$中最小的值对应的列向量$a_j$作为进基向量。</p>
+<p>选离基时，$p = arg\ min{y_{i0}/y_{ij}:y_{ij}&gt;0}$ <strong>要注意这里的 $i$ 是只看原来的基！！！</strong></p>
+<p>$z_i = \pmb{c}^t\pmb{x_i}$ ，$r_i=c_i-z_i$ 这里的 $ i $ 针对的是<strong>非基</strong>。</p>
+<p>:star: 步骤:</p>
+<ol>
+<li><p>根据初始基本可行解构造增广矩阵规范型。</p>
+</li>
+<li><p>计算非基变量的检验数，如果均$\geq 0$就找到最大基</p>
+</li>
+<li><p>否则选择最小的 $r_q$ 作为新入基 ，可用 $r^T_D = c^T_D-c_B^TB^{-1} D$直接算出所有的。</p>
+</li>
+<li><p>如果不存在$y_{iq}&gt;0$ 则停止运算，问题有无界解。否则令$p = arg\ min_i{y_{i0}/y_{iq}:y_{iq}&gt;0}$【只看原来的基，不看非基】，如果求解出多个满足条件的下标 $i$ 按约定选最小的。</p>
+</li>
+<li><p>以元素（p，q）进行枢轴转换，更新增广矩阵规范型<br>$$<br>y^{‘}<em>{ij} = y</em>{ij} - \frac{y_{pj}}{y_{pq}}y_{iq}\ ,i\neq p\<br>y^{‘}<em>{pj} = \frac{y</em>{pj}}{y_{pq}}<br>$$</p>
+</li>
+<li><p>转到步骤2</p>
+</li>
+</ol>
+<p>单纯形表为单纯形法提供了一种便捷的实现方式，在更新单纯形表的过程中，可以同时得到基变量和检验数，甚至右下角还有（取负的）目标函数值。</p>
+<p><code>P247</code> 给出了矩阵形式的求法，非常666，当最后一行除了最后一个元素都非负的时候就出结果了，而且最后一个元素就是结果取负，而 $x_i$ 的取值就在它上面。</p>
+<hr>
+<h3 id="二阶段单纯形法"><a href="#二阶段单纯形法" class="headerlink" title="二阶段单纯形法"></a>二阶段单纯形法</h3><p>初始基本可行解并不是显而易见的。</p>
+<p>为了利用单纯形法求解一般形式的线性规划问题，需要设计一种<strong>系统化</strong>的方法来寻找初始基本可解。</p>
+<p>简单的证明表示，若原问题存在基本可行解，等价于人工问题存在一个使目标函数值为0的最优解。</p>
+<p>而且人工问题有个显然的初始基本可行解$\begin{bmatrix}\pmb{0}\\pmb{b}\end{bmatrix}$</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20211006190811386.png" alt="image-20211006190811386"></p>
+<p>因此多出了个求解初始基本可行解的新阶段。该阶段x作为参数而非变量。</p>
+<p>从第一阶段到第二阶段只需要删除与人工变量有关的列向量，把价值系数还原就好了。</p>
+<p>补充人工变量需要刚好凑足一组可行解$\begin{bmatrix}\pmb{0}\\pmb{b}\end{bmatrix}$ ，和原有的 $e_i$ 加起来能够凑足m个，才能满足条件。</p>
+<hr>
+<p>如果m远远小于n，很多列从来没成为过基向量，那么进行更新枢轴变换其实是无用的。</p>
+<p>修正单纯形法能够避免这些无用的计算，降低了求解最优解的计算器。</p>
+<p>原理是可以无视A = B,D中的D，从里面挑出需要的，操作得出下一个单纯形表后再扔掉。</p>
+<p>:star2: 步骤：</p>
+<ol>
+<li><p>针对初始基本可行解构造修正的单纯形表$[B^{-1},y_0]$，一开始B-1应该是一个E</p>
+</li>
+<li><p>计算当前的检验数 $r^T_D = c^T_D-c_B^TB^{-1} D$ 这里建议<strong>先算</strong> $c^TB^{-1}$ 再与D计算，大大省了计算量。</p>
+<p>这里的B-1其实就是每次你看到的 $y_0$前面那个矩阵。</p>
+</li>
+<li><p>如果所有 $r_j$都大于0，则找到最优解，否则挑选最小的$r_q&lt;0$，计算<br>$$<br>y_q = B^{-1}a_q<br>$$</p>
+</li>
+<li><p>如果不存在$y_{iq}&gt;0$ 则停止运算，问题有无界解。否则令$p = arg\ min{y_{i0}/y_{ij}:y_{ij}&gt;0}$【只看原来的基，不看非基】，如果求解出多个满足条件的下标 $i$ 按约定选最小的。</p>
+<p>这里很好算，只要用倒数第二行【y_0】/新增的最后一行【y_q】就能比较出来。</p>
+</li>
+<li><p>构造增广修正单纯形表 $[B^{-1},y_0,y_q]$，以最后一列的第p个元素开展枢轴变换，得到m+1列作为新表。</p>
+</li>
+<li><p>返回步骤2</p>
+</li>
+</ol>
+<h2 id="17、对-偶"><a href="#17、对-偶" class="headerlink" title="17、对 偶"></a>17、对 偶</h2><p>对偶问题的最优解可以由原问题的最优解得到，vice versu。</p>
+<p>而在某些情况下，利用对偶理论求解线性规划问题更为简单，而且有助于深入了解待求解问题的本质。</p>
+<p>在对偶理论的启发下，单纯形法——&gt;对偶单纯形法，改善了性能。</p>
+<p>涌现出了一些非单纯形法。【第十八章】</p>
+<p><strong>对称形式和非对称形式</strong>的对偶关系：<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20211007113216063.png" alt="image-20211007113216063"  /></p>
+<p>这两种形式：对偶的对偶是原问题<code>所以这个表是可以双向看的，但是注意列向量还是行向量，最大值还是最小值。。。</code>。先用前面章节的方法转换成<u>“原方法”的标准形式</u>，再利用对偶关系将其转换为对偶问题。记住b、c互换，x、λ互换。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20211007122511694.png" alt="image-20211007122511694">————&gt;<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20211007122520805.png" alt="image-20211007122520805"></p>
+<p><code>P261底有个食谱和药店的对偶问题，有一点nb</code>，求解对偶问题的时候注意<strong>有转置</strong>。。烦死了</p>
+<hr>
+<p>对偶问题的性质：</p>
+<p><strong>弱对偶引理</strong></p>
+<p>假设 $x$ 和 $\lambda$ 分别是线性规划的原问题和对偶问题的<strong>可行解</strong>，则$c^Tx \geq \lambda^T b$,</p>
+<p>（对 对称或非对称都成立。）<code>这都是在满足标准形式👆的基础上讨论的</code></p>
+<p>这说明对偶问题的目标函数值不大于原问题的目标函数值。”极大值&lt;极小值”，当一个问题的目标函数值是无界的，里一个问题就没有可行解。比如极小化问题的极小值为$-\infin$，自然引出定理👇</p>
+<p><code>定理1：如果原问题和对偶问题的可行解使得两个问题的目标函数值都相同，那么相应的可行解一定是各自问题的最优解</code></p>
+<p><strong>对偶定理</strong></p>
+<p>如果原问题（对称或非对称）有最优解，那么其对偶问题也有最优解，且目标函数最优值相同。或者说只要出现了👇这个形式，那么就找到了最优解。</p>
+<p>并且有以下结论：<br>$$<br>\pmb{\lambda}^T\pmb{b} = \pmb{c}_B^T\pmb{B}^{-1}\pmb{b} = \pmb{c}_B^T\pmb{x}_B<br>$$<br>可以用$\pmb{\lambda}^T\pmb{b} = \pmb{c}_B^T$来计算，特别地，如果 rand D = m 有👇</p>
+<p>当我们采用单纯形法求解原问题，得到最终单纯形表后，可依此计算对偶问题的最优解。<br>$$<br>\pmb{\lambda}^T\pmb{D} = \pmb{c}^T_D - \pmb{r}_D^T<br>$$<br>当rand D &lt; m时，<br>$$<br>\pmb{\lambda}^T\pmb{A} = \pmb{c}^T - \pmb{r}^T \<br>while\ \pmb{r}^T = [\pmb{0},\pmb{r}^T_D]<br>$$<br>:star: 三种情况：</p>
+<ul>
+<li>若其中一个问题有最优解，另一个问题也有最优解，且最有可行解值相同</li>
+<li>若其中一个问题的目标函数无界，则另一个问题不存在可行解。</li>
+<li>若其中一个问题没有可行解，另一个问题不存在最优解，但可能有可行解也可能没有。</li>
+</ul>
+<p><strong>互补松弛条件</strong><code>P269</code></p>
+<p>$x$ 和 $\lambda$ 分别是原问题和对偶问题的可行解，则它们分别是各自问题的最优解的充分必要条件是：</p>
+<ul>
+<li>$(\pmb{c}^T - \pmb{\lambda}^T\pmb{A})\pmb{x} = 0$ </li>
+<li>$\pmb{\lambda}(\pmb{Ax - b})=0$</li>
+</ul>
+<p>这俩式子是等价的，看你有的是c还是b</p>
+<h1 id="约束、非线性"><a href="#约束、非线性" class="headerlink" title="约束、非线性"></a>约束、非线性</h1><p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20211007150352909.png" alt="image-20211007150352909"></p>
+<h2 id="20、仅含等式约束"><a href="#20、仅含等式约束" class="headerlink" title="20、仅含等式约束"></a>20、仅含等式约束</h2><p>线性规划是这类问题的一个特例。<br>$$<br>minimize\   f(\pmb{x}) \<br>subject\ to\ \pmb{Ax=b}\<br>\pmb{x}\geq0<br>$$<br>对于满足等式约束的$x^*$，若 $\triangledown h_1(x^*),\cdot\cdot\cdot,\triangledown h_m(x^*)$ 线性无关，则称 $x^*$为该约束的一个正则点。</p>
+<p>显然，当 $rand\ D\pmb{h(x^*)} = m$ 时，$x^*$为正则点。$D\pmb{h(x^*)} $的每行，是梯度倒数的转置$\triangledown h_i(x)^T$</p>
+<p>$S = {\pmb{x} \in R^n : \pmb{h(x) = 0}}$ S是$R^n$空间中的一个<strong>曲面</strong>，这就是高维曲面的一般方程吧。</p>
+<p>若S上的<u>所有点都是正则点</u>，则S的维数是 $n-m$。</p>
+<hr>
+<p>曲面上曲线的定义：<code>理论来自P36多面体</code></p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20211007155733411.png" alt="image-20211007155733411" style="zoom: 67%;" />
+
+<p>顺便定义一下可微和二次可微</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20211007155906762.png" alt="image-20211007155906762" style="zoom:67%;" />
+
+<p>​    $\pmb{h}\in C^m$ 意思是函数向量h，m阶可微</p>
+<p>则曲线S中$x^*$处<strong>切线空间</strong>定义为：$T(\pmb{x^*}) = {\pmb{y:Dh(x^*)y = 0}}$，其实就是矩阵$\pmb{Dh(x^*)}$的零空间，</p>
+<p>一般描述为二维切平面，便于直观理解。</p>
+<p>$TP(x^*)=x^*+T(x^*)$因为子空间是在原点处的，平移就行。</p>
+<p><code>当某个点为正则点时，该点处的切线空间就是该点所有切向量的集合。</code></p>
+<p><strong>法线空间</strong>定义为$N(\pmb{x^*})={\pmb{x}\in R^n:\pmb{Dh(x^*)^Tz},z\in R^n}$，其实就是用z把$Dh(x^*)^T$的行线性组合了。</p>
+<p>算是一种行空间的高级表示方法，实际上就是值域。</p>
+<p>$NP(x^*)=x^*+N(x^*)$描述更为方便。</p>
+<p>显然行空间和零空间互为正交补，即 $N(x)^{\bot} = T(x)$，可以用这俩对$R^n$进行直和分解。</p>
+<hr>
+<p><strong>拉格朗日条件（一阶必要条件）</strong></p>
+<p>有约束极值问题的一阶必要条件，著名的拉格朗日定理。</p>
+<p>法线空间和切线空间正交 等价于 $\triangledown h(\pmb{x})$与 $h(\pmb{x})$水平集 正交。</p>
+<p>定理：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20211007195010904.png" alt="image-20211007195010904"><br>$$<br>Df(\pmb{x^*})+\pmb{\lambda^{<em>T}}D\pmb{h}\pmb{(x^</em>)}=\pmb{0}^T<br>$$<br>如果$x^*$是极值点，那么目标函数f在该点处的梯度可以表示为关于约束函数在该点处梯度的线性组合。</p>
+<p>更紧凑的形式是$\triangledown f(x^*) \in N(x^*)$，$\pmb{\lambda^*}$为拉格朗日乘子向量。</p>
+<p>:star:拉格朗日的精髓：</p>
+<p><code>正则性</code>是拉格朗日的必需假设，为了便于描述引入拉格朗日函数 $l(\pmb{x,\lambda}  )\triangleq f(\pmb{x})+\pmb{\lambda}^T\pmb{h}(\pmb{x})$</p>
+<p>通过求解👇可找出<u>可能的极值点</u>。这是<strong>必要而非充分条件</strong>。</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20211008103355619.png" alt="image-20211008103355619" style="zoom:50%;" />
+
+<p>其中：</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20211008103933015.png" alt="image-20211008103933015" style="zoom: 50%;" />
+
+
+
+<hr>
+<p>但仅仅求出候选解不够，我们需要更强的条件。</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image@main/img/202205091059852.png" alt="image-20211203210800835" style="zoom:60%;" />
+
+<p><strong>二阶必要条件</strong><br>$$<br>\pmb{L}(\pmb{x,\lambda}) = \pmb{F}(\pmb{x})+[\pmb{\lambda H}(\pmb{x})]\<br>[\pmb{\lambda H}(\pmb{x})] = \lambda_1\pmb{H}_1(\pmb{x})+…+\lambda_m\pmb{H}_m(\pmb{x})<br>$$<br>对于满足一阶必要条件的正则点、局部极小点 $x^*$ ：</p>
+<ol>
+<li>存在$\lambda^<em>\in R^m$使得$Df(\pmb{x^</em>})+\pmb{\lambda^{<em>T}}D\pmb{h}\pmb{(x^</em>)}=\pmb{0}^T$</li>
+<li>对于所有 $y \in T(\pmb{x^*})$ (切线空间)，有 $y^TL(x^*,\lambda^*)y \geq 0 $ 【区别于无约束，不是在整个 $R^n$上成立】</li>
+</ol>
+<p><strong>二阶充分条件</strong></p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20211008110258482.png" alt="image-20211008110258482" style="zoom: 33%;" />
+
+<p>这里是正定而不是半正定，若是负定，就是严格局部极大值点。</p>
+<h2 id="21、含不等式约束的优化问题"><a href="#21、含不等式约束的优化问题" class="headerlink" title="21、含不等式约束的优化问题"></a>21、含不等式约束的优化问题</h2><p>$$<br>minimize\ f(\pmb{x})\<br>subject\ to\ h_i(\pmb{x}) = \pmb{0},\ i=1,…,m\<br>g_j(\pmb{x})\leq\pmb{0},\ j = 1,…,p\<br>$$</p>
+<p>$f:R^n \rightarrow R\ ，\pmb{h}:R^n \rightarrow R^m\ ，m\leq n\ , \pmb{g}:R^n \rightarrow R^p$</p>
+<p>对于不等式约束 $g_j(\pmb{x})\leq0$，在$x^*$处可分成起作用约束$g(x^*)=0$和不起作用约束$g(x^*)&lt;0$。等式约束视为总起作用。</p>
+<p>修改了正则点的定义，如果正好处于起作用约束的 $\pmb{g}(x)$上，还得加上所有的$\triangledown h_i(x^*),$和起作用的$\triangledown g_j(x^*)$线性无关。其中切线空间和法线空间的修改完全类似。</p>
+<p><strong>Karush-Kuhn-Tucker条件（KKT条件）（一阶必要条件）</strong>:</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20211010183126851.png" alt="image-20211010183126851" style="zoom:67%;" />
+
+<p>PS：有时候也称 库恩-塔克（KT）条件。</p>
+<p><u>由第三个条件推得，不起作用约束对应的KKT乘子 $\mu_j^* = 0$，其他的乘子则是非负的</u></p>
+<hr>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20211010200400492.png" alt="image-20211010200400492" style="zoom:67%;" />
+
+<p>还有很多其他的形式，抓住<strong>本质</strong>：</p>
+<p>类似泰勒的拟合思想，通过一些约束得到拟合函数，然后它们有部分相同的性质，便于研究。$g(x)$这是用线性组合确定范围，$h(x)$则用函数那一点的梯度和$f(x)$一样来约束$f(x)$。</p>
+<p>:star:👇</p>
+<p>个人总结：g(x)小于或大于0，并不受f(x)影响，这是不同的函数，它规定了约束自己的哪一边，然后就能判断$\triangledown g(x)$的方向是指向围成的区域内还是外，然后再用$\triangledown g(x)$把$\triangledown f(x)$表达出来，就可以判断$\triangledown f(x)$ 是朝区域内还是朝区域外。</p>
+<p>【<strong>比如条件为$g(x)\geq 0$，那么$f(x)$的方向如果表示为$\triangledown g(x)_i$的正的线性组合，那就是朝区域内，就是极小值。</strong>】</p>
+<p>规律为：<u>【符号 * $\mu$ * $g_i(x)$】的符号为正，是极小；反之为极大。</u></p>
+<p>注意这是必要条件，只能找出潜在的。</p>
+<hr>
+<p><strong>二阶必要</strong></p>
+<p>二阶的定义如下，其实和等式约束一样，知识多了个$\mu G(x)$，其中$G_k(x)$是$g_k$在$x$处的黑塞矩阵。<br>$$<br>\pmb{L}(\pmb{x,\lambda}) = \pmb{F}(\pmb{x})+[\pmb{\lambda H}(\pmb{x})]+[\pmb{\mu G}(\pmb{x})]\<br>[\pmb{\lambda H}(\pmb{x})] = \lambda_1\pmb{H}_1(\pmb{x})+…+\lambda_m\pmb{H}_m(\pmb{x})\<br>[\pmb{\mu G}(\pmb{x})] =\mu_1 \pmb{G}_1(\pmb{x})+…+\mu_p \pmb{G}_p(\pmb{x})<br>$$<br><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20211010202546145.png" alt="image-20211010202546145" style="zoom:67%;" /></p>
+<p>可以说和仅含等式约束十分接近了。</p>
+<p><strong>二阶充分</strong></p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20211010202659361.png" alt="image-20211010202659361" style="zoom:67%;" />
+
+<p>ps：👆那个子集关系是因为约束条件少了，可表示的范围就大啦！</p>
+<p>上面那一坨其实是说，每出现一个 $\mu_i(&gt;0)$，就多出一个限制条件，而原先是满条件。</p>
+<p>类似的有，如果$\mu ^* \leq 0$ 和 $L(x^*,\lambda^*)$在范围上负定，则是严格局部极大点。</p>
+<h2 id="22、凸优化问题"><a href="#22、凸优化问题" class="headerlink" title="22、凸优化问题"></a>22、凸优化问题</h2><h3 id="定义和性质"><a href="#定义和性质" class="headerlink" title="定义和性质"></a>定义和性质</h3><p>总体而言，前面两章讨论的关于非线性优化问题的求解还是存在一定困难的，或是来自于目标函数，或是来自约束条件，甚至两者兼有，这会导致求解上的困难，但是凸函数这不会带来这些问题。</p>
+<p>实值函数上图（epigraph）:</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20211010213323478.png" alt="image-20211010213323478" style="zoom:67%;" />
+
+<p><strong>定义</strong>：如果函数$f:\rightarrow R，\Omega \subset R^n $的上图是凸集，那么 $f $ 是集合 $\Omega$ 上的凸函数。</p>
+<p><strong>定理</strong>：如果函数$f:\rightarrow R，\Omega \subset R^n $是集合 $\Omega$ 上的凸函数。那么 $\Omega$ 是凸集。</p>
+ <img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20211010215337043.png" alt="image-20211010215337043" style="zoom:67%;" />
+
+<p>（因为本书一开始说了，以极小值问题为主，极大值可以转换成极小值，所以是默认都用下凸函数）</p>
+<p><strong>定理</strong>：假设函数 $f,f_1,f_2$都是凸函数，那么对 $\forall a \geq0$，函数 $af、f_1+f_2$也是凸函数。【线性组合】</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20211010220430622.png" alt="image-20211010220430622" style="zoom:67%;" />
+
+<p>当$-f$是（严格）凸函数时，$f$是（严格）凹函数</p>
+<hr>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20211010225954694.png" alt="image-20211010225954694" style="zoom:67%;" />
+
+<p>内点：如果P存在某个邻域 $\sub$ D 则称点P为内点。</p>
+<p>开集：若D中的每一个点都是D的内点则称D为开集，显然不包括边界。</p>
+<p><strong>凸函数的判定：</strong></p>
+<p><em>一阶可微</em></p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20211010230008947.png" alt="image-20211010230008947" style="zoom: 67%;" />
+
+<p>几何理解是因为线性近似总是位于上图$epi(f)$的下方。</p>
+<p>该定理关于 $\Omega$是开集的假设不是必须的，只要 $f$定义在某个<strong>包含 $\Omega$的</strong>开集上即可。</p>
+<p><em>不可微函数的次梯度</em></p>
+<p>函数 $f:\Omega\rightarrow R$定义在开凸集 $\Omega \sub R^n$上，如果对于<em><strong>所有</strong></em> $\pmb{y}\in\Omega$，都有<br>$$<br>f(\pmb{y}) \geq f(\pmb{x})+\pmb{g}^T(\pmb{y-x})<br>$$<br>则称向量 $\pmb{g} \in R^n$为函数 $f$定义在点 $\pmb{x} \in \Omega$处的次梯度。</p>
+<p><em>二阶可微</em></p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20211010231054775.png" alt="image-20211010231054775" style="zoom: 67%;" />
+
+<p>该定理可以拓展到<strong>定义域是非开集</strong>的情况，只需要把条件修改为对任意的 $\pmb{x,y}\in \Omega$，<br>有$(\pmb{y-x})^T\pmb{F}(\pmb{x})(\pmb{y-x}) \geq 0$。</p>
+<hr>
+<p><strong>凸优化问题</strong></p>
+<p>凸优化问题有许多独特之处。比较特别的一点就是对某些问题，局部极小点就是全局极小点。</p>
+<p>此外，<strong>极小点的一阶必要条件是凸优化问题的充分条件</strong>！</p>
+<p>对于凸集，其范围内包含全局极小点的集合也是凸集。</p>
+<p>若目标函数是连续可微的凸函数，那么某个点是极小点所应该满足的一阶必要条件同时也是充分条件。</p>
+<p>:star:</p>
+<p>第六章提到的 局部最小一阶必要：对某点$x^*$ 所有可行方向$d$，$d^T\triangledown f(x^*)$均&gt;=0</p>
+<p>对于一阶连续的凸函数只要在凸集$\Omega$上存在梯度为0的点，就是全局极小点。</p>
+<p>对于20章仅含等式的约束问题，只要满足拉格朗日条件，就是全局极小点。</p>
+<p>对于21章一般情况下的问题，满足KKT条件就是全局极小点。</p>
+<h3 id="半定规划"><a href="#半定规划" class="headerlink" title="半定规划"></a>半定规划</h3><p>作为<u>凸规划</u>问题的一个分支，求解的是<u>线性矩阵不等式约束</u>下的线性目标函数的极小值。线性矩阵不等式定义了一个<u>凸可行集</u></p>
+<p>可视为线性规划的拓展，只要把向量不等式约束替换为矩阵不等式约束。</p>
+<p>PS：仿射函数，即最高次数为1的多项式函数。常数项为零的仿射函数称为线性函数</p>
+<p>$F_i\ ,i=0…n$ 是n+1个实对称矩阵，表达式$F(x)$可称为线性矩阵不等式（LMI），或仿射矩阵不等式</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20211014105833873.png" alt="image-20211014105833873" style="zoom: 33%;" />
+
+<p>的点 x 的集合，也就是保证$F(x)$是半正定的【记为$F(x)\geq 0$】</p>
+<p><strong>对于形如 $\pmb{F}(\pmb{x})\geq 0 $的线性矩阵不等式而言，容易证明 ${\pmb{x}:\pmb{F}(\pmb{x})\geq 0}$ 是凸集。</strong> </p>
+<p>以此类推，对于形如$F(x)&gt;0$线性矩阵不等式而言，其要求为F(x)正定(不仅仅是半正定)</p>
+<p>优化、控制系统设计以及信号处理中的许多问题都可以转化为<u>线性矩阵不等式的形式</u>。确定是否存在一个点x使得$F(x)&gt; 0$成立的问题称为<strong>可行性问题</strong>。如果不存在这样一个x，则称线形矩阵不等式问题是不可行的。</p>
+<p>而对于这样的问题，MATLAB、Python库等已经实现了高效的求解方式。</p>
+<h2 id="23、有约束优化问题的求解方法"><a href="#23、有约束优化问题的求解方法" class="headerlink" title="23、有约束优化问题的求解方法"></a>23、有约束优化问题的求解方法</h2><p>本章将针对特殊约束条件下的优化问题，讨论一些简单的求解算法。之前无约束优化问题的求解算法是这些算法的基础。</p>
+<p>有投影法、拉格朗日法、罚函数法，旨在简单介绍有约束优化问题的部分求解算法及原理。</p>
+<h3 id="投影法"><a href="#投影法" class="headerlink" title="投影法"></a>投影法</h3><p>第二部分讨论过的优化算法，大都具有通用的迭代公式。$x^{(k+1)} = x^{(k)} + \alpha_kd^{(k)}$</p>
+<p>但是在有约束问题中，$x$的取值范围必须在预先设定的约束集内，所以不能直接套用以前的算法。</p>
+<p>一种比较简单的改进方式就是<strong>引入投影</strong>。具体方法为：</p>
+<ul>
+<li>若$x^{(k)} + \alpha_kd^{(k)}$在$\Omega$内，则$x^{(k+1)} = x^{(k)} + \alpha_kd^{(k)}$；</li>
+<li>否则，应该将$x^{(k)} + \alpha_kd^{(k)}$投影到$\Omega$中，然后将投影结果作为$x^{(k+1)}$。</li>
+</ul>
+<p>引入投影算子$\Pi$，$\Pi[x]$称为$x$到$\Omega$上的投影，则之前的算法可以改进为 $x^{(k+1)} = \Pi[x^{(k)} + \alpha_kd^{(k)}]$</p>
+<p>对于一般的情况，可定义投影为： $\Pi[x] = \mathop{argmin}\limits_{z\in \Omega}||z-x||$</p>
+<p>框式约束时，投影算子定义如下：</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image@main/img/202205091059853.png" alt="image-20211204094248769" style="zoom:67%;" />
+
+<p>许多情况下，投影$\Pi[x]$存在明确的计算公式。比如，<em>框式约束</em>👆，当$\Omega$为一个<em>线性簇</em>时，也有明确的公式。</p>
+<p>但是很多时候，投影的计算也是个较为复杂的数值优化问题。</p>
+<hr>
+<p><strong>求解含线性约束优化问题的投影梯度法</strong></p>
+<p>将投影算子引入梯度法，可得如下迭代公式$x^{(k+1)} = \Pi[x^{(k)} + \alpha \triangledown f(x^{(k)})]$，称为投影梯度法</p>
+<p>形如<br>$$<br>minimize\ f(\pmb{x})\<br>subject\ to\ \pmb{Ax}=\pmb{b}\<br>$$<br>rank A = m， $b \in R^m $ 且假定$f \in C^1$，约束集的这种特定结构决定了可以使用正交投影算子作为$\Pi$，即<br>$$<br>P = I_n - A^T(AA^T)^{-1}A<br>$$<br>引理：P的零空间，是$A$的行空间；A的零空间，是P的列空间。</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image@main/img/202205091059854.png" alt="image-20211204100640630" style="zoom:67%;" />
+
+<p>这个拉格朗日条件的新形式就是关键，而投影算子可表示为<br>$$<br>\Pi[x^{(k)} + \alpha \triangledown f(x^{(k)})] =x^{(k)} - \alpha_kP \triangledown f(x^{(k)})<br>$$<br><strong>几何来看，其实是因为向量$\triangledown f(x)$不一定是可行方向，需要将其投影到可行集，也就是矩阵A的零空间（假定$x^{(k)}$已经属于可行集，只有让后面的$A\omega = 0$这样才能继续保证$A(x+\omega)=b$），而A的零空间就是P的列空间，投影过去等价于左乘P。</strong></p>
+<p>看看性质：</p>
+<ul>
+<li>根据红字分析也能看出，只要$x^{(0)}$可行，任意$x^{(k)}$可行。</li>
+<li>向量$-P \triangledown f(x)$是函数在 x 处的<u>最速下降可行方向</u></li>
+<li>和无约束类似，如果$\alpha$选择一维正方形搜索最小的，称为投影最速下降法，该方法能保证每次迭代目标函数值都减小</li>
+<li>当且仅当$P \triangledown f(x^*) = 0$时，满足拉格朗日条件，$x^*$为全局极小点</li>
+</ul>
+<h3 id="拉格朗日法"><a href="#拉格朗日法" class="headerlink" title="拉格朗日法"></a>拉格朗日法</h3><p>基本思路是利用梯度法，在更新决策变量的同时，也更新拉格朗日乘子向量。</p>
+<p><strong>仅含等式约束的情况</strong></p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image@main/img/202205091059855.png" alt="image-20211204103711220" style="zoom: 67%;" />
+
+<p>可以看出，$x^{(k)}$的更新方程是一种使得拉格朗日函数关于自变量$x$极小化的梯度算法，$λ^{( k )}$的更新方程也是一种梯度算法，使得拉格朗日函数关于自变量$ λ $极大化。由于仅仅用到了梯度，该方法也称为<u>一阶拉格朗日法</u>。</p>
+<p>若收敛，那么<em>迭代点序列的极限</em>必须满足拉格朗日条件；特别的，<em>任意不动点</em>（更新后的新点与其相等）必满足拉格朗日条件。</p>
+<p>局部收敛性：</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image@main/img/202205091059856.png" alt="image-20211204104417327" style="zoom:70%;" />
+
+
+
+<p><strong>含不等式优化的拉格朗日法</strong></p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image@main/img/202205091059857.png" alt="image-20211204105344929" style="zoom:67%;" />
+
+<p>$x^{(k)}$的更新方程是一种使得拉格朗日函数关于自变量$x$极小化的梯度法，$\mu ^{( k )}$的更新方程是一种梯度投影法，使得拉格朗日函数关于自变量$ \mu $极大化。采用梯度投影法的原因在于，KKT乘子向量$\pmb{\mu}$必须是非负的。</p>
+<p>同样，收敛极限和不动点必须满足KKT条件。</p>
+<p>收敛性：</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image@main/img/202205091059858.png" alt="image-20211204110647649" style="zoom:67%;" />
+
+<p>第一阶段，不起作用的约束条件对应的乘子在有限时间内减小到0，此后一直为0</p>
+<p>第二阶段，起作用的约束条件的乘子以线性速度收敛到各自的解。</p>
+<p>对偶问题见《统计学习方法》P447</p>
+<h3 id="罚函数法"><a href="#罚函数法" class="headerlink" title="罚函数法"></a>罚函数法</h3><p>考虑将有约束优化问题<strong>近似处理</strong>为如下的无约束优化问题<br>$$<br>minimize\ f(z)\<br>subject\ to\ x\in \Omega\ \downarrow\<br>minimize\ f(x) + \gamma P(x)<br>$$<br>其中<u>惩罚因子</u>$\gamma$是大于0的常数；<u>罚函数</u>$P：R^n \rightarrow R$是给定函数，求解该无约束优化问题，解作为原问题极小点。</p>
+<p>为了使得无约束优化问题能够更好地<u>近似有约束问题</u>，必须选择合适的惩罚函数$P$。罚函数可以对<u>可行集外</u>的点进行 “惩罚”。</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image@main/img/202205091059859.png" alt="image-20211204124639606" style="zoom:67%;" />
+
+<p>绝对值罚函数👆在满足$g_i(x)=0$的点$x$上可能不是可微的，因此，在这些情况下，不能使用涉及求导的优化方法。</p>
+<p>但是另一种版本$P(x) = \sum_{i=1}^{p}(g_i^+(x))^2$能保证罚函数可微。</p>
+<p>无约束优化问题的解是否近似于真正的解，<u>取决于惩罚因子$\gamma$和罚函数$P$</u>，理论上当$\gamma \rightarrow \infin$时，得到真正的解，后续讨论。</p>
+<hr>
+<p>接下来，不假设罚函数的具体形式，仅假设其满足3个条件，分析<em>一般意义下的罚函数法</em>：</p>
+<p>先引入一些符号和用法，</p>
+<ul>
+<li>$x^*$表示优化问题的一个解（全局最小点）。</li>
+<li>$\gamma_k \in R，\ k = 1,2,…$是一个给定的正数。</li>
+<li><strong>伴随函数</strong> $q(\gamma_k,\pmb{x}) = f(\pmb{x}) + \gamma_kP(\pmb{x})$，对于每个k，都可构造一个伴随的无约束优化问题：$minimize \ q(\gamma_k,\pmb{x})$<br>并用$x^{(k)}$表示该问题的极小点，随后给出以下引理。</li>
+</ul>
+<p>引理23.4给出了<u>有约束问题与伴随的无约束优化问题的关联关系</u>。</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image@main/img/202205091059860.png" alt="image-20211204131635745" style="zoom:67%;" />
+
+<p>利用这一引理可以证明如下<strong>定理</strong>：</p>
+<p>目标函数$f$连续，当$k \rightarrow \infin$时，$\gamma_k \rightarrow \infin$。那么序列${\pmb{x}^{(k)}}$的<em>任意收敛子序列</em> 的极限是约束优化问题的一个解。</p>
+<p>​    如果进行无限多次极小化计算，随着惩罚因子$\gamma_k \rightarrow \infin$，那么定理能保证任何收敛子序列的极限都是有约束优化问题的极小点.<br>显然，这一定理在实际应用中是受限的。实际上，利用罚函数法求解无约束优化问题的最优解时，期望<strong>只通过一次极小化</strong>计算便可求得最优解，进而得到原问题的最优解。</p>
+<p>​    换句话说，在$γ&gt;0$为一个<strong>给定常数</strong>的情况下，通过求解伴随的无约束优化问题$[minimize\ f(x) + \gamma P(x)]$获得原问题的精确解。可以证明，<u>这的确是可以做到的</u>，这种情况下的罚函数称为<strong>精确的罚函数</strong>。但是，精确的罚函数要求是<u>不可微的</u>【必要】，但是得满足存在可行方向 $d$ 使得$\pmb{d}^T\triangledown P(x)&gt;0$。如果存在某点$\triangledown f(x^*) = 0$，虽然P可微，仍然是精确罚函数。</p>
+<p>​    接下来的求解工作就是无约束的内容啦！</p>
+<p><em>本章仅仅讨论了罚函数的基础知识</em>，关于不可微函数的优化问题的深入讨论要自己查文献。。。</p>
+<h2 id="24、多目标优化"><a href="#24、多目标优化" class="headerlink" title="24、多目标优化"></a>24、多目标优化</h2><p>The last one!</p>
+<p>如果某个优化问题只包含一个目标函数，称为单目标优化问题；但是，绝大多数工程问题需要设计者同时处理多个目标，而这些目标之间往往存在冲突，即改进一个目标会导致另一个目标恶化。这种<u>存在冲突</u>的多目标问题，也成为<u>多准则、向量优化问题</u>。</p>
+<p>这种问题需要找到一个决策变量，个元素就是目标函数。多目标优化问题可以表示为</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image@main/img/202205091059861.png" alt="image-20211204162618132" style="zoom:67%;" />
+
+<p>3种多目标优化问题【后两类可以等价转换为第一类问题，即极小化问题】</p>
+<ul>
+<li>极小化所有目标函数</li>
+<li>极大化所有目标函数</li>
+<li>极小化某些目标函数，极大化其余目标函数</li>
+</ul>
+<p><strong>帕累托解 Pareto</strong></p>
+<p>多目标函数给各个决策变量分配一个位于多目标空间中的<u>多目标函数向量函数值</u>。</p>
+<p>单目标优化问题的目标是找到一个解，主要关注<strong>决策向量空间</strong>；</p>
+<p>而在多目标问题问题中，通常对<strong>目标函数空间</strong>更感兴趣。</p>
+<p>正如某位M开头大师所说，多目标问题某种意义上无法进行明确的定义，因为目标函数空间中不存在自然排序，不像一维空间中可以清晰、直观地比较大小关系，但是最终仍然给出了正式定义。</p>
+<p>目前，最优解的正式定义，习惯于将多目标优化问题的最优解称为帕累托极小点（帕累托解）定义如下：</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image@main/img/202205091059862.png" alt="image-20211204163914597" style="zoom:67%;" />
+
+<p>成立，则$x^*$是一个帕累托极小点。也成为非支配解，它意味着<u>不存在一个可行的决策变量$x$能够使得某些目标函数减少的同时不会导致另一个其他目标函数增加。</u>【知乎大佬：<strong>从此以后，非损人不能利己</strong>。】也可以用于博弈论啊</p>
+<p>帕累托极小点（最优解）的集合称为帕累托前沿，绝大多数多目标优化算法用到了“支配”概念，但帕雷托解是非支配的。</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image@main/img/202205091059863.png" alt="image-20211204165010255" style="zoom: 67%;" />
+
+
+
+<p><strong>帕累托前沿的求解</strong></p>
+<p>在求解帕累托前沿时，需要对两个解进行比较，从候选的帕累托解集合中移除支配解。因此，帕累托前沿只包含非支配解。</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image@main/img/202205091059864.png" alt="image-20211205140953483" style="zoom:67%;" />
+
+<p>对于新的候选解$\pmb{x}^{j}$，可能有三种情况：</p>
+<ul>
+<li>$\pmb{x}^{j}$至少支配一个当前的帕累托解——用$\pmb{x}^{j}$替代被支配的解</li>
+<li>$\pmb{x}^{j}$不支配任何当前的帕累托解——直接将$\pmb{x}^{j}$加入帕累托候选集合</li>
+<li>$\pmb{x}^{j}$收到一个当前的帕累托解支配——不操作。</li>
+</ul>
+<p><strong>帕累托前沿的生成算法</strong></p>
+<p>$J$ 表示为得到最优解而必须进行分析的候选解的数目，$R$ 是当前候选的帕累托解数量。$\varrho$ (类似的那个符号)是目标函数向量的维数，$n$是决策空间的维数，即$x$的元素个数。</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image@main/img/202205091059865.png" alt="image-20211205143500435" style="zoom:60%;" />
+
+
+
+<p><strong>多目标优化到单目标优化的转换</strong></p>
+<p>在某些情况下，可以将多目标优化问题转换为单目标优化问题，这样，就可以利用前面讨论过的一些常用方法进行求解了。</p>
+<p><strong>Method1</strong>：将目标函数向量中的各元素进行线性组合（组合系数必须为正数），也就是各元素的凸组合。<br>$$<br>f(\pmb{x}) = c^Tf(x)<br>$$<br>向量c的<u>元素全部为正</u>，称为加权求和法，系数成为权值，反映的是目标向量中的<u>各元素相对重要度</u>。不得不提出的是，<em>权值的确定可能相当困难</em>。</p>
+<p><strong>Method2</strong>：以目标向量中的最大元素作为单目标函数：</p>
+<p>实际上，这就是将多目标极小化问题转换为使目标函数的最大元素极小化的问题，可称之为<u>极小极大法</u>。</p>
+<p>使用条件：各元素具有可比性或彼此相容的情况。【彼此相容：它们具有相同的单位】</p>
+<p>局限性：产生的单目标函数是不可微的，因此无法使用那些要求目标函数可微的优化求解方法（比如梯度）</p>
+<p>而目标函数向量中中各元素为线性函数、约束为线性方程的极小极大问题可简化为线性规划问题。</p>
+<p><strong>Method3</strong>：若目标向量的元素全部非负，那么以目标函数向量的$p$范数作为单目标函数，也可转换为单目标优化。</p>
+<p>极小极大方法可视为特例，也就是$p = \infin$；当$p$有限时，可以用 p范数的p次方代替范数本身！【突然好算多了】</p>
+<p><strong>Method4</strong>：</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image@main/img/202205091059866.png" alt="image-20211205191554118" style="zoom:67%;" />
+
+<hr>
+<h3 id="存在不确定性的线性规划"><a href="#存在不确定性的线性规划" class="headerlink" title="存在不确定性的线性规划"></a>存在不确定性的线性规划</h3><p>所谓不确定，指的是约束条件的上下界不能确定，约束条件表现为$(\pmb{Ax})_i \leq b_i + \theta t_i$</p>
+<p>其中，$\theta \in [0,1],t_i &gt;0, i = 1,2,…,m$</p>
+<p>未完待续。。。等真正理解再来吧</p>
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">Darren</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://darren-dong.com/2021/07/17/%E6%9C%80%E4%BC%98%E5%8C%96%E7%AC%94%E8%AE%B0/">https://darren-dong.com/2021/07/17/%E6%9C%80%E4%BC%98%E5%8C%96%E7%AC%94%E8%AE%B0/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">Darren</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/%E7%90%86%E8%AE%BA/">
+                                    <span class="chip bg-color">理论</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">感谢支持！</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+        <style>
+    .valine-card {
+        margin: 1.5rem auto;
+    }
+
+    .valine-card .card-content {
+        padding: 20px 20px 5px 20px;
+    }
+
+    #vcomments textarea {
+        box-sizing: border-box;
+        background: url("/medias/comment_bg.png") 100% 100% no-repeat;
+    }
+
+    #vcomments p {
+        margin: 2px 2px 10px;
+        font-size: 1.05rem;
+        line-height: 1.78rem;
+    }
+
+    #vcomments blockquote p {
+        text-indent: 0.2rem;
+    }
+
+    #vcomments a {
+        padding: 0 2px;
+        color: #4cbf30;
+        font-weight: 500;
+        text-decoration: none;
+    }
+
+    #vcomments img {
+        max-width: 100%;
+        height: auto;
+        cursor: pointer;
+    }
+
+    #vcomments ol li {
+        list-style-type: decimal;
+    }
+
+    #vcomments ol,
+    ul {
+        display: block;
+        padding-left: 2em;
+        word-spacing: 0.05rem;
+    }
+
+    #vcomments ul li,
+    ol li {
+        display: list-item;
+        line-height: 1.8rem;
+        font-size: 1rem;
+    }
+
+    #vcomments ul li {
+        list-style-type: disc;
+    }
+
+    #vcomments ul ul li {
+        list-style-type: circle;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    #vcomments table, th, td {
+        border: 0;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments h1 {
+        font-size: 1.85rem;
+        font-weight: bold;
+        line-height: 2.2rem;
+    }
+
+    #vcomments h2 {
+        font-size: 1.65rem;
+        font-weight: bold;
+        line-height: 1.9rem;
+    }
+
+    #vcomments h3 {
+        font-size: 1.45rem;
+        font-weight: bold;
+        line-height: 1.7rem;
+    }
+
+    #vcomments h4 {
+        font-size: 1.25rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    #vcomments h5 {
+        font-size: 1.1rem;
+        font-weight: bold;
+        line-height: 1.4rem;
+    }
+
+    #vcomments h6 {
+        font-size: 1rem;
+        line-height: 1.3rem;
+    }
+
+    #vcomments p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    #vcomments hr {
+        margin: 12px 0;
+        border: 0;
+        border-top: 1px solid #ccc;
+    }
+
+    #vcomments blockquote {
+        margin: 15px 0;
+        border-left: 5px solid #42b983;
+        padding: 1rem 0.8rem 0.3rem 0.8rem;
+        color: #666;
+        background-color: rgba(66, 185, 131, .1);
+    }
+
+    #vcomments pre {
+        font-family: monospace, monospace;
+        padding: 1.2em;
+        margin: .5em 0;
+        background: #272822;
+        overflow: auto;
+        border-radius: 0.3em;
+        tab-size: 4;
+    }
+
+    #vcomments code {
+        font-family: monospace, monospace;
+        padding: 1px 3px;
+        font-size: 0.92rem;
+        color: #e96900;
+        background-color: #f8f8f8;
+        border-radius: 2px;
+    }
+
+    #vcomments pre code {
+        font-family: monospace, monospace;
+        padding: 0;
+        color: #e8eaf6;
+        background-color: #272822;
+    }
+
+    #vcomments pre[class*="language-"] {
+        padding: 1.2em;
+        margin: .5em 0;
+    }
+
+    #vcomments code[class*="language-"],
+    pre[class*="language-"] {
+        color: #e8eaf6;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+
+    #vcomments b,
+    strong {
+        font-weight: bold;
+    }
+
+    #vcomments dfn {
+        font-style: italic;
+    }
+
+    #vcomments small {
+        font-size: 85%;
+    }
+
+    #vcomments cite {
+        font-style: normal;
+    }
+
+    #vcomments mark {
+        background-color: #fcf8e3;
+        padding: .2em;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+</style>
+
+<div class="card valine-card" data-aos="fade-up">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>评论</span>
+    </div>
+    <div id="vcomments" class="card-content" style="display: grid">
+    </div>
+</div>
+
+<script src="/libs/valine/av-min.js"></script>
+<script src="/libs/valine/Valine.min.js"></script>
+<script>
+    new Valine({
+        el: '#vcomments',
+        appId: 'aCPxdqJEpNtbHeBUy6jVpOLs-gzGzoHsz',
+        appKey: '7zjTUmIzmdnugBDflnE3nol4',
+        notify: 'false' === 'true',
+        verify: 'false' === 'true',
+        visitor: 'true' === 'true',
+        avatar: 'mm',
+        pageSize: '10',
+        lang: 'zh-cn',
+        placeholder: 'entering something!'
+    });
+</script>
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2021/08/09/%E8%B7%A8%E5%AD%A6%E7%A7%91%E9%80%9A%E8%AF%86%E8%AF%BE/">
+                    <div class="card-image">
+                        
+                        <img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210809135209.jpg" class="responsive-img" alt="跨学科通识课">
+                        
+                        <span class="card-title">跨学科通识课</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            多学科思维
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-08-09
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/others/" class="post-category">
+                                    others
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2021/06/15/%E5%8D%81%E5%B9%B4%E4%B8%80%E6%A2%A6/">
+                    <div class="card-image">
+                        
+                        <img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/20210614211239.jpg" class="responsive-img" alt="《十年一梦》">
+                        
+                        <span class="card-title">《十年一梦》</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            股市内外，生死看淡，究竟是人奴役钱，还是钱奴役人？赌上自己的一切，体会人生的跌宕。
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-06-15
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/finance/" class="post-category">
+                                    finance
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E8%82%A1%E5%B8%82%E5%BF%83%E7%90%86/">
+                        <span class="chip bg-color">股市心理</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('200000')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: Observatory<br />'
+            + '文章作者: Darren<br />'
+            + '文章链接: <a href="' + url + '">' + url + '</a><br />'
+            + '商用请联系作者QQ:1275972958';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('1'),
+            headingSelector: 'h1, h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h1, h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="966298391"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='false'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+
+    
+    <div class="container row center-align" style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2020-2022</span>
+            
+            <span id="year">2020</span>
+            <a href="/about" target="_blank">Darren</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                class="white-color">266.4k</span>&nbsp;字
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/Darren-greenhand" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:dongmengfan@33gmail.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+    <a href="https://www.facebook.com/darren.dong.54/" class="tooltipped" target="_blank" data-tooltip="关注我的Facebook: https://www.facebook.com/darren.dong.54/" data-position="top" data-delay="50">
+        <i class="fab fa-facebook-f"></i>
+    </a>
+
+
+
+    <a href="https://twitter.com/DarrenDong12" class="tooltipped" target="_blank" data-tooltip="关注我的Twitter: https://twitter.com/DarrenDong12" data-position="top" data-delay="50">
+        <i class="fab fa-twitter"></i>
+    </a>
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1275972958" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1275972958" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+    <a href="https://weibo.com/u/7613536808" class="tooltipped" target="_blank" data-tooltip="关注我的微博: https://weibo.com/u/7613536808" data-position="top" data-delay="50">
+        <i class="fab fa-weibo"></i>
+    </a>
+
+
+
+    <a href="https://www.zhihu.com/people/zan-shi-xiao-meng-xin" class="tooltipped" target="_blank" data-tooltip="关注我的知乎: https://www.zhihu.com/people/zan-shi-xiao-meng-xin" data-position="top" data-delay="50">
+        <i class="fab fa-zhihu1">知</i>
+    </a>
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+	
+    
+    <script type="text/javascript" color="0,0,255"
+        pointColor="0,0,255" opacity='0.7'
+        zIndex="-1" count="99"
+        src="/libs/background/canvas-nest.js"></script>
+    
+
+    
+
+    
+    <script type="text/javascript" src="/libs/background/ribbon-dynamic.js" async="async"></script>
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+    
+
+</body>
+
+</html>
