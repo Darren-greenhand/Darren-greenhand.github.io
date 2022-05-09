@@ -427,14 +427,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    7.2k
+                    7.1k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    26 分
+                    25 分
                 </div>
                 
 
@@ -726,19 +726,17 @@
 
 <p>然后递归的进行这个过程，可以证明这两条式子其实是一样的。</p>
 <p>证明用到了瑞利xxx，可见P376页。</p>
+<p>那么λ和σ事实上是如何计算的呢？直接暴算多项式（n = 10000+）就太离谱了。。</p>
+<ul>
+<li><p>首先要尽可能多搞点0出来，还不能改变任意的σ和λ，这通过巧妙的对角化方法实现。</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image@main/img/202205091507660.png" alt="image-20210924110736701" style="zoom:67%;" />
+
+<p>这样既不改变值，又能用不对称的Q1和Q2操纵矩阵。细节在11节。</p>
 </li>
-</ol>
-<pre><code>那么λ和σ事实上是如何计算的呢？直接暴算多项式（n = 10000+）就太离谱了。。
-
-* 首先要尽可能多搞点0出来，还不能改变任意的σ和λ，这通过巧妙的对角化方法实现。
-
-  &lt;img src=&quot;https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20210924110736701.png&quot; alt=&quot;image-20210924110736701&quot; style=&quot;zoom:67%;&quot; /&gt;
-
-  这样既不改变值，又能用不对称的Q1和Q2操纵矩阵。细节在11节。
-
-* LAPACK提供的受欢迎的方式使用简单的正交矩阵Q来拟合 QT S Q = 特征值对角阵，近似解。
-</code></pre>
-<ol start="29">
+<li><p>LAPACK提供的受欢迎的方式使用简单的正交矩阵Q来拟合 QT S Q = 特征值对角阵，近似解。</p>
+</li>
+</ul>
+</li>
 <li><p>主成分分析</p>
 <p>S = AAT/(n-1)  样本协方差矩阵，其中对角线是方差，其他是协方差，A要进行均值化处理</p>
 <p>令 T （trace）= σ1^2 +σ2^2 …………，则σ1^2 / T 就代表了重要比例。当比例足够时就可以舍弃后面的。</p>
