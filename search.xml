@@ -24356,4 +24356,1022 @@ $$
 <p>  <img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image@main/img/202205091319171.png" alt="image-20220302104957284" style="zoom: 33%;" /><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image@main/img/202205091319356.png" alt="image-20220302105027404" style="zoom:33%;" />  机器学习和深度学习提取的特征不太一样，不一定深度学习提取的就是最好的（跟数据量和模型都有关），是<strong>互补</strong>关系。<br> 代码不是都和数学原理有关，还有很多tricks。现实生活中tabula数据比图片用的yao多。</p>
 ]]></content>
   </entry>
+  <entry>
+    <title>概率（课内）笔记</title>
+    <url>/2021/08/26/%E6%A6%82%E7%8E%87%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<blockquote>
+<p><strong>What is Probability theory and Mathematical Statistics</strong></p>
+<p>生活中的现象根据是否可事前预言，分为<u>确定性现象和非确定性现象</u>。<br>在非确定性现象中有一类很重要的现象:随机现象</p>
+<p>随机现象的性质：</p>
+<ul>
+<li>各个结果出现的可能性大小不依人们的主观意志转移</li>
+<li>试验的结果不止一个，即每次试验的结果可能不同——结果的不确定性。</li>
+<li>进行大量重复观察时，可观察出出现各种结果呈现某种规律——统计规律性</li>
+</ul>
+<p>概率论与数理统计— <u>研究随机现象的统计规律性</u>的一门数学学科</p>
+</blockquote>
+<blockquote>
+<p>概率统计、随机过程以及概率图模型，三位一体、一脉相承的结合起来，一步步掌握其中的核心思想。概率统计是基础，随机过程和概率图模型作为拓展和深化。</p>
+<p>概率统计看《概率导论》</p>
+<p>概率思想、随机变量、统计推断、随机过程、采样理论、概率模型。</p>
+<p>在机器学习算法的修炼道路中，<a href="https://www.zhihu.com/search?q=%E6%A6%82%E7%8E%87%E5%9B%BE%E6%A8%A1%E5%9E%8B&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22:%22answer%22,%22sourceId%22:1790318156%7D">概率图模型</a>和随机过程对很多同学而言是一个巨大的拦路虎。</p>
+</blockquote>
+<h3 id="一些杂感"><a href="#一些杂感" class="headerlink" title="一些杂感"></a>一些杂感</h3><ol>
+<li><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/v2-37387c56c6d1740aedab256f1081fced_1440w.jpg" alt="img" style="zoom:33%;" />
+
+<p>事件关系可用文氏图，概率就不行了。。独立性</p>
+</li>
+<li><p>伯努利是一次实验，二项是重复多次进行伯努利实验后成功的次数，几何是第一次成功是第几次。</p>
+</li>
+<li><p>《概率导论》的分布列就是考试的分布律，有$P{X=x_i}=p_i$，概率导论这个形式更好看$p_{X}(x_i)$</p>
+<p>$P{X=x_i,Y =y_j}=p_{ij}$以及概率导论的$p_{X,Y}(x_i,y_j)$</p>
+</li>
+<li><p>独立同分布的随机变量的加权和的均值和方差的公式 是 <code>样本均值作为随机变量的期望的估计</code> 的统计过程的理论基础</p>
+</li>
+<li><p>一般连续变量相对于离散变量的优势：除了刻画细致和精确外，连续随机变量模型可以利用<strong>有力的分析工具</strong>解决概率的计算问题。更重要的是它可以做到离散随机变量做不到的：<code>刻画某些随机现象的本质。</code></p>
+</li>
+<li><p>指数变量的核心性质：$X$超过某个值的概率，随着这个值的增加而 <strong>指数递减</strong>$P(X\geq a) = e^{-\lambda a}$</p>
+</li>
+<li><p>线性变化下，随机变量的正态性保持不变。标准正态分布的 $F$ 写作 $\Phi$</p>
+</li>
+<li><p>泊松、二项、正态具有<strong>可加性</strong>，加的是$\lambda$和$n$，$\mu、\sigma^2$</p>
+</li>
+<li><p>注意一些分布信息，还有随机变量的函数，自带定义域信息。。。</p>
+</li>
+<li><p>所谓简答题，给出简单的例子说明他为什么能这样做,要给出定理的条件，然后说明这个例子具有相应的性质来满足条件</p>
+</li>
+<li><p>乘法公式，本就是描述在概率论里如何刻画乘法关系，刻画连续的关系，加法公式也是类似，乘法、加法的本质是不变的，<u>变的只是在概率论里的形式</u>。而这要分两种情况，相乘的变量是否独立。不独立就是条件形式。</p>
+</li>
+<li><p>$P(A_1\cup A_2\cup A_3) = P(A_1\cup \overline{A_1}A_2\cup \overline{A_1}\ \overline{A_2}A_3) = P(A_1) + P(\overline{A_1})P(A_2|\overline{A_1}) + …$ </p>
+</li>
+</ol>
+<hr>
+<h3 id="基本概率论"><a href="#基本概率论" class="headerlink" title="基本概率论"></a>基本概率论</h3><p><em>随机试验</em>：对随机现象所进行的观察和实验，可在相同条件下重复进行、事先可明确知道所有可能结果，且不可预言出现何结果。</p>
+<p>随机试验的每一个可能发生也可能不发生的事情为<em>随机事件</em>，简称事件.</p>
+<p><em>基本事件</em> 在一次试验中必发生一个且仅发生一个的最简单事件.</p>
+<p>全体基本事件的对应元素所组成的集合称为试验的样本空间样本空间的元素称为<em>样本点</em>.</p>
+<p>$A-B = A\overline{B}$</p>
+<p><strong>概率</strong>是对随机事件发生可能性大小的一个客观度量</p>
+<p>概率是通过公理化定义的。非负、规范、可列可加、单调。<br>概率公理化单调性：</p>
+<p>若$A \subset B$，则$ P(A)\leq P(B)$，且$P(B-A) = P(B) -  P(A)$<br>因此<u>$P(A - B)=P(A-AB) = P(A)  - P(AB)$</u>  并且 $P(A-B) = P(A\cup B)-P(B)$</p>
+<p><em>随机变量</em></p>
+<p>取值由随机试验的结果来确定；取各数值的可能性大小有确定的统计规律性</p>
+<p>它可以完整地描述试验结果，从而可用<u>量化分析方法</u>来研究随机现象的统计规律性。</p>
+<p>概率为0的事件不一定是不可能事件，为1不一定是必然事件（因为连续型变量）</p>
+<hr>
+<p><code>联合分布函数F</code></p>
+<p>$F(x,y) = P{X\leq x,Y\leq y}$，包括了右端点</p>
+<p>$F_X(x) = \underset{y\rightarrow \infty}{lim}F(x,y)$</p>
+<p>单调不降；右连续；非负有界$0\leq F(x,y)\leq 1$；</p>
+<p>$F(x_2,y_2)-F(x_2,y_1)-F(x_1,y_2)+F(x_1,y_1)=P{x1\leq x\leq x2,y1\leq y\leq y2}$</p>
+<p>$P{X = x} = F(x) - F(x-0)$ 其他情况为0</p>
+<p>:star: 对称分布的分布函数有：$F(-x) = 1-F(x)$<br>      上侧分位数$u_\alpha$：$F(u_\alpha) = 1-\alpha$</p>
+<p> $\displaystyle F_X(x)=\int_{-\infty}^{x}\int_{-\infty}^{y}f(u,v)dudv=\int_{-\infty}^{x}f_X(u)du$</p>
+<p><code>联合分布列p——离散</code></p>
+<p>$P{X = x_i,Y = y_j} = p_{ij}$</p>
+<p>$P{Y = y_j} = \displaystyle\sum_{i=1}^{\infty}p_{ij}$</p>
+<p>九宫格划分空间（离散型），分类求F</p>
+<p><code>联合分布密度f——连续</code></p>
+<p>联合概率密度函数包含了所有关于（$X,Y$）的取值概率的信息，包括相互依赖的信息。</p>
+<p>$f(x,y) \geq 0$ 处处成立</p>
+<p>$\displaystyle\int_{-\infty}^{+\infty}\int_{-\infty}^{+\infty}f(u,v)dudv = 1$</p>
+<p>对$G \sub R^2$</p>
+<p>$P{(x,y)\in G}=\underset{G}{\iint_{}^{}}f(x,y)d\sigma$</p>
+<p>$f_X(x)=\displaystyle\int_{-\infty}^{+\infty}f(x,y)dy$</p>
+<p>$f_X(x) = F^{‘}_X(x)$   </p>
+<p>二维正态随机变量边缘分布仍为正态。<br>可由二维联合概率密度完全确定边缘概率密度，反之不行。X,Y独立分布的充要条件是$\rho = 0$</p>
+<h4 id="独立"><a href="#独立" class="headerlink" title="独立"></a><strong>独立</strong></h4><ul>
+<li><p>定义：任意x,y有$P{X\leq x,Y\leq y} = P{X\leq x}P{Y\leq y}$</p>
+<p>​            即 $F(x,y)=F_X(x)F_Y(y)$</p>
+</li>
+<li><p>定理：$P{X= x_i,Y= y_j} = P{X= x_i}P{Y= y_j}$（离散） 是独立的<strong>充要条件</strong></p>
+<p>​            连续：$f(x,y)=f_X(x)f_Y(y)$ <u>在平面上除去“面积”为零的集合后成立，而不是平面上均成立。</u></p>
+</li>
+</ul>
+<p>大题就分别得到左右两侧，然后看相等否。</p>
+<p><code>条件分布率</code></p>
+<p>$P{Y= y_j |X= x_i}=\frac{p_{ij}}{p_{i.}}$</p>
+<p><code>条件概率密度</code></p>
+<p>$f_{Y|X}{y|x}=F^{‘}_{Y|X}{y|x}=\frac{f(x,y)}{f_X(x)}$</p>
+<p>如果是一个具体时间，那么$f_{Y|A}(x)=\frac{f_X(x)}{P(X\in A)}$</p>
+<p>$\displaystyle f_{X}(x) = \int_{-\infty}^{+\infty}f_Y(y)f_{X|Y}{x|y}dy$联合、边缘、密度相互关联</p>
+<p>在X = c 条件下，随机事件${a&lt;Y\leq b}$的条件概率：</p>
+<p>$\displaystyle P{a&lt;Y\leq b |X=c}=\int_{a}^{b}f_{Y|X}(y|c)dy$</p>
+<p>求离散随机变量的函数及其分布律P83</p>
+<p>列表得出可能的值，填上分布律。</p>
+<p>离散卷积公式，二项式和泊松的可加性。</p>
+<p>求连续随机变量的函数及其概率密度P85</p>
+<p>此时，y相当于未定的常数，要进行讨论。</p>
+<ul>
+<li><p>分布函数法，先利用原来的fx，求得Fy，再求导得fy、</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/image-20211019111029124.png" alt="image-20211019111029124" style="zoom: 33%;" align = 'left'/></li>
+<li><p>公式法，只适用于<u>全局严格单调</u>的函数y = g(x)。</p>
+</li>
+</ul>
+<hr>
+<p><em>随机变量的函数的数学期望：</em></p>
+<blockquote>
+<p>数学期望存在的条件：</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image@main/img/202205101027941.png" alt="image-20211231220305870" style="zoom: 33%;" />
+</blockquote>
+<p>定理4.1.1 设 Y 是随机变量X的函数Y=g(X)，g(x)为连续函数</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image@main/img/202205101027943.png" alt="image-20211231215343557" style="zoom: 33%;" align = 'left'/><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image@main/img/202205101027944.png" alt="image-20211231215442901" style="zoom:33%;"/></p>
+<p>:star: 二维时，$E(X) = \displaystyle \int_{-\infty}^{\infty}\int_{-\infty}^{\infty}xf(x,y)dxdy = \int_{-\infty}^{\infty}xf_X(x)dx$</p>
+<p>$E(x)$具有线性性、而相互独立时$E(XY)=E(X)E(Y)$</p>
+<p>方差定义：$D(X) = E[X-E(X)]^2$；标准差$\sigma(X) = \sqrt{D(X)}$</p>
+<p>常用计算公式：$D(X) = E(X^2) - [E(X)]^2$</p>
+<p>$D(X\pm Y)=D(X)+D(Y)\pm 2cov(X,Y)$，独立时，$cov(X,Y)=0$</p>
+<p>协方差定义：$cov(X,Y) =E{[X-E(X)][Y-E(Y)]}$</p>
+<p>对称性、齐性 $cov(aX,aY) = abcov(X,Y)$     $cov(X,c) =0$<br>可加性$cov(X_1+X_2,Y)=cov(X_1,Y)+cov(X_2,Y)$</p>
+<p>相关系数$\rho_{xy} = \frac{cov(X,Y)}{\sqrt{D(X)D(Y)}} = \frac{E(X_1X_2)-E(X_1)E(X_2)}{\sqrt{D(X)D(Y)}}$ ，是量纲为1的量，衡量 <em>线性</em> 相关关系。<br>$|\rho_{xy}| = 1 \leftrightarrow$X、Y线性相关，即Y =AX+b</p>
+<p><strong>相互独立（更本质）一定不相关$(\rho = 0)$，反之不成立（除了二维正态里的X,Y，但是两个普通的正态分布不算）。</strong></p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image@main/img/202205101027945.png" alt="image-20220102190758627" style="zoom:50%;" />
+
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image@main/img/202205101027946.png" alt="image-20220101105817621" style="zoom:50%;" align = 'left'/><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image@main/img/202205101027948.png" alt="image-20220101105951275" style="zoom:33%;" /></p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image@main/img/202205101027949.png" alt="img" style="zoom:67%;" align = 'left'/>
+
+<p>矩：更一般的数字特征。【只考统计部分要用得到的】</p>
+<p>可以证明，若随机变量的高阶矩存在，则低阶矩一定存在。</p>
+<p>多维正态随机变量【不考】</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image@main/img/202205101027950.png" alt="image-20220101103918453" style="zoom: 80%;" align = 'left'/>
+
+<p>希望不考：随机变量$(X_1,X_2,…,X_n)$的线性变换$BX$（B是个mxn矩阵），服从m维正态分布$N(Bu,BCB^T)$</p>
+<hr>
+<p>大数定律和中心极限定理是<u>独立随机变量序列</u>的部分极限定理。</p>
+<p>切比雪夫理解：$P{|X-E(X)|\geq\varepsilon} \leq\frac{D(X)}{\varepsilon^2}$ 和 $$P{|X-E(X)|\leq\varepsilon} \geq1-\frac{D(X)}{\varepsilon^2}$$</p>
+<p><u>随机变量的取值偏离均值一定范围的概率上界，正比于方差（方差越大分布越广），反比于给定的范围。</u></p>
+<p>可用来证明依概率收敛。<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image@main/img/202205101027951.png" alt="image-20220101124820047" style="zoom: 50%;" /></p>
+<p><strong>大数</strong>：取一个序列的随机变量平均，以及均值的平均。<br><u>刻画了随机变量序列，分布的中心收敛于均值之和，描述的是【聚散】</u></p>
+<ul>
+<li><p>切比雪夫：相互独立，期望、方差均存在，方差一致有界。$\displaystyle \lim_{ n\to \infin}P{|\frac{1}{n}\sum_{i=1}^nX_i -\frac{1}{n}\sum_{i=1}^nE(X_i)|&lt;\varepsilon} =1$</p>
+</li>
+<li><p>独立同分布：独立同分布，期望、方差存在。$\displaystyle \lim_{ n\to \infin}P{|\frac{1}{n}\displaystyle\sum_{i=1}^nX_i -\mu|&lt;\varepsilon} =1$</p>
+</li>
+<li><p>辛钦：独立同分布，期望存在。$\displaystyle \lim_{ n\to \infin}P{|\frac{1}{n}\displaystyle\sum_{i=1}^nX_i -\mu|&lt;\varepsilon} =1$</p>
+</li>
+<li><p>伯努利：$\displaystyle \lim_{ n\to \infin}P{|\frac{m}{n} -p|&lt;\varepsilon} =1$</p>
+</li>
+</ul>
+<p><strong>中心</strong>：找到一个（独立同分布）的序列，均落在某一范围。<br><u>实质是刻画了相互独立的某些随机变量序列，其和的分布随样本增多而收敛于正态分布。描述的是【形态】</u></p>
+<p>（不是所有序列都满足该条件的！！）</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image@main/img/202205101027952.png" alt="image-20220101130110785" style="zoom: 43%;" />
+
+<p>独立同分布中心定理（相互独立同分布，期望、方差存在，用$n\mu$和$\sqrt{n}\sigma$替换式子里的两项。）</p>
+<p>D-L中心极限定理：（二项分布时，用$np$和$\sqrt{np(1-p)}$替换式子里的两项）</p>
+<h3 id="数理统计"><a href="#数理统计" class="headerlink" title="数理统计"></a>数理统计</h3><p>研究如何以有效的方式<u>收集和整理</u>随机数据</p>
+<p>研究如何合理地<u>分析随机数据从而作出科学的推断</u> (称为统计推断).</p>
+<blockquote>
+<p><strong>弄清楚样本量和总体的统计量的符号和定义！不然老是混淆。</strong></p>
+<p><em>总体参数</em>（ML里的期望分布）</p>
+<p>数学期望：$\mu$ = $E(X)$</p>
+<p>方差：$\sigma^2 = D(X) =\mu_2 =\gamma_2 - \gamma_1^2 $</p>
+<p>$k$ 阶原点矩：$\gamma_k = E(X^k)\ (k = 1,2,…)$</p>
+<p>$k$ 阶中心矩：$\mu_k = E{[X-E(X)]^k}\ (k = 1,2,…)$</p>
+<p><em>样本统计量</em>（ML里的经验分布）</p>
+<p>样本均值：$\overline{X}=\frac{1}{n}\displaystyle\sum_{i=1}^nX_i$</p>
+<p>样本方差：$S^2=\frac{1}{n-1}\displaystyle\sum_{i=1}^n(X_i-\overline{X})^2 = \frac{n}{n-1}M_2$    其中有$M_2 =A_2 - A_1^2$</p>
+<p>样本k阶原点矩：$A_k=\frac{1}{n}\displaystyle\sum_{i=1}^nX_i^k$</p>
+<p>样本k阶中心矩：$M_k=\frac{1}{n}\displaystyle\sum_{i=1}^n(X_i-\overline{X})^k$</p>
+</blockquote>
+<p><strong>总体</strong>是具有相应概率分布的随机变量。 比如总体$X$，则随机变量X的概率分布就是总体分布。</p>
+<p><strong>样本</strong>是在保证每个个体有同等机会被抽出时，抽出的一部分个体。是<u>一组随机变量</u>，如$X_1,X_2…X_n$。</p>
+<p><em>样本值不是确定的！只确定了样本容量</em></p>
+<p><strong>简单随机样本</strong>：每个$X_i$均与$X$<u>同分布</u>，每个$X_i$均<u>相互独立</u>。这是简化的情况，便于研究和考试。</p>
+<p><strong>统计量</strong>是样本的函数【<u>因此研究的是该样本组的性质</u>】，是<u>随机变量</u>且<em>不含未知参数</em>。</p>
+<p><strong>抽样分布</strong>——统计量的分布，虽然难求，但是正态总体中常用的统计量分布已经有了较完整的结果。</p>
+<p>我们从总体抽取样本，对这组样本算我们关心的样本的统计量，然后研究这个统计量满足怎样的分布。</p>
+<p><em>卡方分布</em>$\chi^2(n)$</p>
+<p>$E = n,D = 2n$；可加性；n&gt;45时，$\chi^2_\alpha(n) \approx n+u_\alpha\sqrt{2n}$</p>
+<p>当样本量为1时，$X^2 = \chi^2(1)$</p>
+<p><em>T分布</em>$T \sim t(n)$</p>
+<p>对称性 $t_{1-\alpha}(n) = -t_\alpha(n)$ n&gt;45 近似服从$N(0,1)$分布</p>
+<p><em>F分布</em>$F\sim F(n_1,n_2)$</p>
+<p>$\frac{1}{F}\sim F(n_2,n_1)$       $F_{1-\alpha}(n_1,n_2) = \frac{1}{F_\alpha(n_2,n_1)}$</p>
+<p><strong>抽样分布定理</strong>，（虽然只有正态），告诉了我们一些结论，即<u>正态分布抽样后部分统计量的分布是怎样的</u>，我们可以在此基础上加以组合，得到符合三大分布的分布。【给了样本均值、方差的分布，给了一个“样本方差联合分布”、给了两组正态样本的分布、】</p>
+<p>这些结论，都来自<strong>正态分布</strong>的样本，右边俩还要求<em>相互独立</em>。不然一般分布的很难求出来</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image@main/img/202205101027953.png" alt="image-20220101143237485" style="zoom:40%;" /><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image@main/img/202205101027954.png" alt="image-20220101144340867" style="zoom:30%;" /></p>
+<p>推导过程在P151</p>
+<p>理解上侧分位数：$P(x&gt;,u_\alpha) = \alpha$      $F(\mu_\alpha) = 1-\alpha$<br>那些带下标的下标，比如$t_\alpha$都指的是令右边的面积为$\alpha$的点。<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image@main/img/202205101027955.png" alt="image-20220101151559917" style="zoom:33%;" /></p>
+<hr>
+<p>参数估计是统计推断的基本问题之一。有了样本分布定理，就可以进行统计推断了。</p>
+<p><strong>点估计</strong></p>
+<p>利用样本，对每一个未知参数 $\theta_i$，按一定的优化原则<strong>构造一个统计量</strong> $\hat{\theta}_i(X_1,…,X_n)$ ！作为对参数 $\theta_i$ 的估计，<strong>称为估计量</strong></p>
+<p>当样本值确定后，带入统计量，就能得到具体数值 $\hat{\theta}_i(x_1,…,x_n)$即估计值。</p>
+<p><em>矩估计</em>：</p>
+<p><strong>以样本矩直接作为相应总体矩的估计，样本矩的函数作为相应总体矩同一函数的估计</strong></p>
+<p>（由辛钦大数定理知样本矩依概率收敛于总体矩，这也是李航那本书的经验收敛于期望吧。）。</p>
+<p>基本假设：总体X分布为$f(x;\theta_1,…,\theta_m)$，<u>各阶矩均存在</u>。</p>
+<p><em>如果题目没给矩，那就先算总体的各阶矩 = xxx，然后再反过来表示。</em>【也可以用$\overline{X}$】</p>
+<p>对总体方差的矩估计$M_2$ = $\frac{n-1}{n}\cdot S^2$并不是无偏估计。$\mu = \gamma_1\ 、\sigma^2 =\gamma_2-\gamma_1^2$ 可以分别直接用$\overline{X}$和$M_2$替换。</p>
+<p>有如泊松分布的情况，一个参数$\lambda$有两个不同矩估计，原则：<u>估计量的优良性标准，一般选用低阶矩</u></p>
+<p><em>最大似然估计法——MLE</em></p>
+<p>有些分布不存在的数学期望，自然不存在高阶矩，而最大似然是重要而普适的。</p>
+<p><strong>按照最大可能性的准则进行推断，把<u>已经发生的事件，看成最可能出现的事件，认为有最大的概率</u>。</strong><br>如果是求某个分布的参数估计，就按照分布律/概率密度来求似然函数。【样本不会出现在概率为0的地方，无需讨论。】</p>
+<blockquote>
+<p>给定输出x时，关于参数θ的似然函数L(θ|x)（在数值上）等于给定参数θ后变量X的概率：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image//img/1e572150cc607eb32fd3fa77c8865919.svg" alt="img">=$\displaystyle\prod_{i=1}^n f(x_i;\theta_1,\theta_2,…,\theta_m)$</p>
+<p>他们其实都表示“<strong>可能性</strong>”的大小，但是一个是已知结果，研究参数的情况，表示对参数的估计；一个是已知参数，研究结果随机变量的情况，研究概率。就像一个二元函数一样，只不过要对输入的参数分两类。</p>
+<p>似然函数的主要用法在于<u>比较它相对取值</u>，虽然这个数值本身不具备任何含义。</p>
+<p>一般形式上是样本组的联合概率密度函数。</p>
+</blockquote>
+<p>写出似然函数<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image@main/img/202205101027956.png" alt="image-20220101155125680" style="zoom:33%;" />，取对数，然后对每个参数求偏导，求解似然方程组。</p>
+<ul>
+<li>似然方程组的解不唯一，要进一步判定哪个是最大值点</li>
+<li>似然函数关于参数导数不存在时，无法得到似然方程组，要用<strong>定义</strong>【找到使得L最大的一组参数】来求解。</li>
+</ul>
+<p>最终将参数<u>用估计值</u>$x_1,x_2…x_n$（有时需假设）来表示，然后再<u>替换成用相应的估计量</u>$X_1,…,X_n$表示。</p>
+<ul>
+<li>矩法估计参数比较简单,但有信息量损失；极大似然估计法精确度高，但运算较复杂</li>
+<li>运用两种方法得出的结果不一定相同，哪怕只用一种方法也可能得出多个结果</li>
+</ul>
+<p><strong>无偏性：$E(\hat{\theta}) = \theta$ 对θ的所有取值成立，实际意义是无系统误差。</strong>(考的概率大)</p>
+<p>有效性：$D(\hat{\theta})$对θ的所有取值尽可能小</p>
+<p>相合性：设$\hat{\theta}_n =\hat{\theta}_n(X_1,X_2,…,X_n)$，对θ的所有取值，依概率收敛于θ<br>可以证明，在较为一般的情况下，矩估计、MLE得到的估计量都是相合估计量。</p>
+<h4 id="枢轴"><a href="#枢轴" class="headerlink" title="枢轴"></a>枢轴</h4><p>首先满足置信度$1-\alpha$，然后尽量缩小区间长度，也就是提高精度。</p>
+<p>不光是记住对应的枢轴变量，更要理解推导出置信区间的过程。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image@main/img/202205101027957.png" alt="image-20220101170041958" style="zoom:50%;" /><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image@main/img/202205101027958.png" alt="image-20220101170123565" style="zoom:50%;" /></p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image@main/img/202205101027959.png" alt="image-20211202090349096" style="zoom: 33%;" />
+
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image@main/img/202205101027960.png" alt="image-20211202091529763" style="zoom:33%;" />
+
+<p>结合抽样分布定理理解。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image@main/img/202205101027961.png" alt="image-20211202091549607" style="zoom:33%;" /><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image@main/img/202205101027962.png" alt="image-20220101185539648" style="zoom:50%;" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image@main/img/202205101027963.png" alt="image-20220101185658773" style="zoom: 50%;" /><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image@main/img/202205101027964.png" alt="image-20211208202236252" style="zoom: 67%;" /></p>
+<p>格式里不要忘了写查表得，在置信度为xxx下，置信区间为，，，，<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image@main/img/202205101027965.png" alt="image-20220103202615404" style="zoom:50%;" /></p>
+<p>对于单侧，将一个端点换位无穷，另一个端点的$\frac{\alpha}{2}$换成$\alpha$</p>
+<p>而在<strong>假设检验</strong>，我们从另一个角度分类，从各类参数出发构造检验。</p>
+<p>对均值估计，已知方差，则都是标准正态。</p>
+<p>对均值估计，未知方差，则都是$t$分布【均值差估计时，假设若是$\mu_1-\mu_2=0$记得带入消掉】</p>
+<p>对方差估计，都是卡方分布</p>
+<p>对方差之比检验，是$F$分布</p>
+<p><strong>步骤</strong>：作出假设（由题意需假设检验）、构造检验统计量（要写，当$H_0$成立时）、确定拒绝域（原假设的拒绝域为）、对$H_0$判断。（已知，，，，，查表得。。判断。。因此拒绝/结束$H_0$，即认为）</p>
+<p>工艺题，<strong>保守原则</strong>，总是讲$H_0$设为想证明的结论的反面，然后否定$H_0$，比如猜测$\mu_1&gt;\mu_2$<br>就假设$H_0:\mu_1 \leq \mu_2,H_1:\mu_1 &gt; \mu_2$，再等价成$H_0:\mu_1 = \mu_2$，再否定它。<br>拒绝域是$t&gt;t_{\alpha}$，这样记：与$H_1$条件中同号      反之同理，关键是$H_1$</p>
+<p>$\mu_1 - \mu_2$未知$\sigma_1\ \sigma_2$，需要先检验$H_0:\sigma_1 = \sigma_2$如果方差不相等，不在考虑范围内。相等则两样本t检验法</p>
+<hr>
+<p>回归分析和方差分析是数理统计中应用价值很大的两类方法，共同点是研究变量之间的关系。</p>
+<p>回归分析着重寻求变量值近似的函数关系。研究相关关系（存在联系，但没达到可以相互确定的程度）</p>
+<p>$Y = \mu(x_1,x_2,…,x_k)+\xi$</p>
+<p>通常要求随机误差满足：$E(\xi) = 0,D(\xi) = \sigma^2 = E(\xi^2) = E[Y - \mu(x_1,x_2,…,x_k)]^2$<br>即均值为0，方差存在。方差实际是回归函数近似因变量Y的均方误差。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image@main/img/202205101027966.png" alt="image-20220102130707096" style="zoom:40%;" /><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image@main/img/202205101027967.png" alt="image-20220102130717305" style="zoom:35%;" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image@main/img/202205101027968.png" alt="image-20220102130951882" style="zoom:40%;" /><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image@main/img/202205101027969.png" alt="image-20220102131215823" style="zoom:40%;" /></p>
+<h3 id="例题"><a href="#例题" class="headerlink" title="例题"></a>例题</h3><p><strong>课本</strong></p>
+<p>​        记得先假设事件，如 A = {}。公式也有分，比如<u>全概率公式、贝叶斯</u>得写出来（由xxx得：列公式=代数字）</p>
+<p>P11 古典概型是全概率和贝叶斯的基础。 例1.2.3 到1.2.5</p>
+<p>P18 条件概率例题 例1.3.4</p>
+<p>P19 例1.3.5  1.3.6 连续乘法 1.3.7</p>
+<p>P21 全概率解题结构，要强调xxx构成样本空间得划分。 P23 例1.3.12/13贝叶斯公式。</p>
+<p>P46 2.2.8 9 10 泊松分布（因为n较大，p较小，可认为X近似服从参数为$\lambda = np = ?$得泊松分布，于是 <u>先列出二项分布的式子，再约等于泊松的式子</u>） </p>
+<p>P56 2.3.9 正态分布</p>
+<p>P70 例3.1.6 概念题【注意第四问，<u>设了一个u和v</u>，而不是用原来的x，y】 3.1.7 在求边缘概率密度时要分区间</p>
+<p>​        证明相互不独立时，找一个区间就好，一般找那个二维的非零区间。</p>
+<p>P78 3.3.1条件分布率 3.3.2</p>
+<p>P80 <strong>例3.3.3</strong> 注意边缘概率密度范围是一维的，条件概率是二维的。第二问：<u>求条件概率要先求出条件概率密度再积分。</u></p>
+<p>​        例3.3.4 算联合概率时范围确定。（<u>条件分布率的范围表示时把后面那个变量视为常数</u>，有积分那味道了）</p>
+<p>P83-84 离散型随机变量的函数、分布律  先列出函数的可能取值，再列式求和。【二项、泊松、正态】有可加性</p>
+<p>P86 求连续随机变量的函数及其概率密度（此时，要对y的范围进行讨论，但最终y要取满R）但最终进行求导时不变（除了合并）</p>
+<p>P88-93 例3.4.8利用公式法，注意x，y范围是一一对应的。</p>
+<p>​         三大特殊分布。和分布，如果X，Y是相互独立的，可以拆成边缘分布律乘积。<br>​            例3.4.12 转到x，z平面，确定积分限。    例3.4.13 转到y，z平面，确定积分限。（这个独立的话也可以拆）<br>​            通过这俩例子也能看到题给条件是联合概率/边缘概率时分别如何处理。</p>
+<p>P107 例 4.1.7 4.1.8   二维随机变量的联合函数的方差</p>
+<p>P131 切比雪夫例子</p>
+<p>P136-138 中心极限定理例子</p>
+<p>P151 推导$S_w$的过程，好好掌握，免得暴雷。</p>
+<p>P158 矩估计，一般是利用E和D的式子来连接。还有$E(X^2)$</p>
+<p>P160-161 对于某种分布的情况，似然函数借助分布律/概率密度进行构造。</p>
+<p>很有可能考无偏性，其实是考察对E、D性质的掌握，看学解历年真题</p>
+<p>P169-173 几种枢轴变量</p>
+<p>P175 单侧置信区间，一定要写 **若$H_0$立，检验统计量…..          故在显著性水平0.05下接受$H_ 0$ **</p>
+<hr>
+<p><strong>课件</strong></p>
+<p>1.3 例9 10 11 12(解法2) 14 15</p>
+<p>1.4  全概率、贝叶斯 例5 例6 例8 9贝叶斯要算出全部的再比较</p>
+<p>2.1 最后 例3 例4（右连续）</p>
+<p>2.3 例6 指数分布，最后一题正态</p>
+<p>3.1 例3.1.5 </p>
+<p>3.3 条件分布率 例1 <u>例3</u> <strong>例4</strong> 根据边缘概率的区间，对条件概率分段（因为条件概率也是二维的，需要二维约束）。</p>
+<p><strong>3.4</strong> 例3.4.7，一个自定义的分段随机变量的函数，<u>画图来讨论范围</u>。第二问用定义来做。3.4.8-最后，多练练。</p>
+<p>4.1 下面练习$X,Y \sim N(0,\frac{1}{2})$，则$E(|X-Y|)=\sqrt{\frac{2}{\pi}}$<br>        例4.1.7 4.1.8 利用数学期望的性质（主要是可加性）进行问题求解。【尤其是4.1.8的分解方式，保持独立、一致】</p>
+<p>​        例4.2.3 进一步求$|X-Y|$的方差。</p>
+<p>4.3 例4.3.4 求cov，转了一层  4.3.6（算一堆均值）</p>
+<p>​        例4.3.7 利用了E D Cov的性质，挺不错</p>
+<p>5.1 例5.1.2 5.1.3 将题给的数转化成$E(X)$的形式，凑出切比雪夫形式。</p>
+<p>5.2 例5.2.2-5.2.4  5.2.3的设变量方式值得学习</p>
+<p>6.2 6.2.4 6.2.5 类似的推导，用U,V来描述过程。</p>
+<p><u>7.1 例7.1.2（最后超牛） 7.1.3 7.1.4 最后那个均匀的处理。【极大似然格式，掌握好】</u></p>
+<p>8.1 最后一题，二项分布结合假设检验</p>
+<p>8-2 研究正常男、女红细胞X2，要假设随机变量，</p>
+<p>4-5习题课</p>
+<p>11 停车次数</p>
+<p>8 求类似的<u>一般不用切比雪夫，用中心极限定理</u>。还有后面的车间机床</p>
+<p>求 X  和Y 的联合分布指的是求联合分布律或密度</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image@main/img/202205101027970.png" alt="image-20220102194707428" style="zoom:33%;" />设新变量$e^{X_k}$，算出均值为2，用辛钦大数定律。</p>
+<p>6-9习题课</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image@main/img/202205101027971.png" alt="image-20220102193744173" style="zoom:33%;" />
+
+<p>最后5道选择挺有意思。</p>
+<p><strong>历年真题</strong></p>
+<p>第一套：第三题、<u>似然估计题</u>（如果似然函数的分布律/分布函数是一个常数，那就要分析取值范围，一般取x的俩极值）</p>
+<p>第二套：还是狗日的<strong>第三题</strong>，第四题这种处理，先变成大正态，同乘同除处理。最后回归，如果题目没给均值，同乘n</p>
+<p><strong>作业册</strong></p>
+<p>P11、13、15最下面 </p>
+<p>P22_11、13、15、16、19、23（离散结合连续）题</p>
+<p>P32_10、11</p>
+<p>P37_6、7、8</p>
+<p>P40_3、5、6 先确定统计量的分布，或处理后确定分布</p>
+<p>P44_4、6</p>
+<p>P59_12</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>软工概念</title>
+    <url>/2021/07/03/%E8%BD%AF%E5%B7%A5/</url>
+    <content><![CDATA[<h2 id="软件工程（2）"><a href="#软件工程（2）" class="headerlink" title="软件工程（2）"></a>软件工程（2）</h2><p><strong>软件的概念</strong></p>
+<p><u>软件= 程序+ 数据+ 文档</u><br>(1) 程序：按事先设计的功能和性能需求执行的指令序列<br>(2) 数据：是程序能正常操纵信息的数据结构<br>(3) 文档：与程序开发、维护和使用有关的图文材料</p>
+<p><u>双重作用：软件一方面是一种产品，另一方面是开发其他软件产品的工具。</u></p>
+<p> <strong>软件分类</strong><br>（1）功能分类：系统软件、支撑软件、应用软件<br>（2）服务对象：项目软件、产品软件</p>
+<p><em>软件的特征</em><br>1、软件是开发的或者是工程化的，并不是制造的<br>2、软件开发环境对产品影响较大<br>3、软件开发时间和工作量难以估计<br>4、软件会多次修改<br>5、软件的开发进度几乎没有客观衡量标准<br>6、软件测试非常困难<br>7、软件不会磨损和老化<br>8、软件维护易产生新的问题<br>9、软件生产是简单的拷贝    </p>
+<p><strong>软件危机</strong></p>
+<p>在计算机软件的开发和维护过程中所遇到的一系列严重问题。</p>
+<p>项目超出预算、项目超过计划完成时间、软件运行效率很低、软件质量差、软件通常不符合要求、项目难以管理并且代码难以维护、软件不能交付。</p>
+<p><strong>原因</strong></p>
+<p>客观：软件本身特点——（逻辑部件，规模庞大）<br>主观：不正确的开发方法——（忽视需求分析，错误认为：软件开发=程序编写，轻视软件维护）</p>
+<p><strong>软件工程定义</strong></p>
+<p>（1）应用<u>系统化的、学科化的、定量</u>的方法，来开发、运行和维护软件，即将工程化方法应用到软件。<br>（2）对（1）中各种方法的研究。</p>
+<p><strong>软工三要素</strong>【后面章节以此为纲吗】</p>
+<p><u>工具</u>：为软件工程的过程和方法提供自动化或半自动化的工具支持 。</p>
+<p><u>方法</u>：软件工程方法是完成软件工程项目的技术手段。分两类: 结构化方法和面向对象方法</p>
+<p><u>过程</u>：过程贯穿软件开发的各个环节，在各环节之间建立里程碑;管理者在软件工程过程中对软件开发的质量、进度、成本进行评估、管理和控制； 技术人员采用相应的方法和工具生成软件工程产品（模型、文档、数据、报告、表格等）</p>
+<p>根基：质量焦点</p>
+<p><em>发展过程</em></p>
+<p>传统软件工程、对象工程、过程工程、构件工程。</p>
+<h2 id="软件过程（2）"><a href="#软件过程（2）" class="headerlink" title="软件过程（2）"></a>软件过程（2）</h2><p><u>软件工程是一种层次化技术</u></p>
+<p><em>软件生命周期</em>（龙说关注各个阶段产出，不过这图确实是有用。）</p>
+<p>指软件产品或软件系统从定义、设计、投入使用到被淘汰的全过程。</p>
+<img src="../AppData/Roaming/Typora/typora-user-images/image-20211215101731360.png" alt="image-20211215101731360" style="zoom:67%;" />
+
+<p><strong>软件过程概念</strong></p>
+<p>软件过程是在工作产品构建过程中，所需完成的工作<u>活动、动作和任务的集合</u>。</p>
+<p>活动主要实现宽泛的目标</p>
+<p>动作包含了主要工作产品生产过程中的一系列任务</p>
+<p>任务关注小而明确的目标，能够产生实际产品</p>
+<p><strong>软件过程模型</strong> </p>
+<p>是软件开发全部过程、活动和任务的<u>结构框架</u>。<br>直观表达软件开发全过程，明确规定要完成的主要活动、任务和开发策略。</p>
+<p><strong>软件过程评估</strong></p>
+<blockquote>
+<p>能力成熟度模型<strong>CMM</strong>（Capability Maturity Model）是迄今为止学术界和工业界公认的有关软件工程和管理实践的最好的软件过程评估模型。</p>
+</blockquote>
+<p>分级：【感觉非常有道理！有借鉴意义】</p>
+<p>（1）初始级           有能力的人和个人英雄主义</p>
+<p>（2）可重复级        基本项目管理</p>
+<p>（3）已定义级        过程标准化</p>
+<p>（4）量化管理级     量化管理</p>
+<p>（5）优化级           持续的过程改进</p>
+<hr>
+<p><strong>瀑布模型</strong></p>
+<p><u>软件开发过程与软件生命周期是一致</u>的，也称经典的生命周期模型。</p>
+<img src="../AppData/Roaming/Typora/typora-user-images/image-20211215103712171.png" alt="image-20211215103712171" style="zoom:80%;" />
+
+<p>特点：<br>阶段间具有<u>顺序性和依赖性。</u><br><u>推迟实现</u>的观点。<br>每个阶段必须完成规定的文档; 每个阶段结束前完成文档审查,及早改正错误。<u>以文档为驱动。</u></p>
+<p>缺点<br>增加工作量<br>各个阶段的划分完全固定，阶段之间产生大量的文档，极大地增加了工作量；</p>
+<p>开发风险大<br>由于开发模型是线性的，用户只有等到整个过程的末期才能见到开发成果，从而增加了开发的风险；</p>
+<p>早期错误发现晚<br>早期的错误可能要等到开发后期的测试阶段才能发现，进而带来严重的后果。</p>
+<p>不适用于需求变化的场合<br>适用于：<u>系统需求明确、技术成熟、工程管理较严格</u>的场合，如军工、航天、医疗。</p>
+<p><strong>V模型（瀑布变种）</strong></p>
+<p>龙老师说记住对应关系。</p>
+<img src="../AppData/Roaming/Typora/typora-user-images/image-20211215103954519.png" alt="image-20211215103954519" style="zoom:80%;" />
+
+
+
+
+
+<p><strong>原型模型</strong>——思想是首先实现软件的最核心的、最重要的功能</p>
+<p>原型（prototype）：<br>一个部分开发的产品，使客户和开发人员能够对计划开发的系统的相关方面进行检查。</p>
+<p>结果：<u>抛弃原型、把原型发展</u>成最终产品。</p>
+<p>优点：减少需求不明带来的风险。</p>
+<p>缺点：</p>
+<ul>
+<li>构造原型采用的工具和技术不一定主流；</li>
+<li>设计者在质量和原型中进行折中；</li>
+<li>客户意识不到一些质量问题。</li>
+</ul>
+<p>适用场合：客户定义一个总体目标集，但是他们<u>并不清楚系统的具体输入输出；或开发者不确定算法的效率、软件与操作系统是否兼容以及客户与计算机交互的方式</u>。</p>
+<p><strong>增量模型</strong></p>
+<p>增量：满足用户需求的一个子集，能够完成一定功能、小而可用的软件。</p>
+<p>增量方式分为：增量方式（增加新功能）和迭代方式（改进）</p>
+<p>特点：<br>• 增量模型从部分需求出发，先建立一个不完整的系统，通过测试运行这个系统，取得经验和反馈，进一步使系统扩充和完善<br>• 增量模型结合了原型模型的基本要素和迭代的特征，采用了基于时间的线性序列，每个线性序列都会输出该软件的一个“增量”<br>• <u>每个增量的开发可用瀑布或快速原型模型</u>。</p>
+<p>优点：</p>
+<ul>
+<li>不需要提供完整的需求， 只要有一个增量包出现，开发就可以进行。</li>
+<li>在项目的 初始阶段不需要投入太多的人力资源。增量可以 有效地管理技术风险。 </li>
+<li>产品逐步交付，能较好的适应需求变化。 </li>
+<li>开放式体系结构 ，便于维护。 </li>
+<li>软件能够更早的投入市场。</li>
+</ul>
+<p>缺点：每个增量必须提供一些系统功能，这使得开发者很难根据客户需求给出大小适合的增量。软件必须具备开放式体系结构（困难）。易退化成边做边改的方式，使软件过程控制失去整体性</p>
+<p>适用场合：开发中<u>需求可能变化、具有较大风险、或希望尽早进入市场</u>的项目。</p>
+<p><strong>螺旋模型</strong></p>
+<p>把开发活动和风险管理结合起来控制风险，强调风险管理，因此该模型适用于<u>大型系统</u>的开发。<br>模型结合了<u>瀑布模型和原型模型</u>的特点。</p>
+<img src="../AppData/Roaming/Typora/typora-user-images/image-20211215105238453.png" alt="image-20211215105238453" style="zoom:67%;" />
+
+<p>优点：</p>
+<ul>
+<li>特别强调原型的可扩充性和可修改性，原型的进化贯穿整个软件生存周期，这将有助于目标软件的适应能力。支持<u>用户需求的动态变化</u>。</li>
+<li>易于为用户和开发人员共同理解，还可作为<u>继续开发的基础</u>，并为用户参与所有关键决策提供了方便。</li>
+<li>螺旋模型为项目管理人员及时调整管理决策提供了方便，进而可<u>降低开发风险。</u></li>
+</ul>
+<p>缺点：</p>
+<ul>
+<li>如果每次迭代的效率不高，致使迭代次数过多，将会增加成本并推迟提交时间；</li>
+<li>使用该模型需要有相当丰富的风险评估经验和专门知识，要求开发队伍水平较高。</li>
+</ul>
+<p>适用场合：</p>
+<p>适用于需求不明确或者<strong>需求可能发生变化的大型复杂</strong>的软件系统。</p>
+<p><em>喷泉模型</em></p>
+<p>是一种以用户需求为动力，以对象为驱动的模型，主要用于<u>描述面向对象</u>的软件开发过程</p>
+<p>优点：各个阶段没有明显的界限，开发人员可以同步进行开发。其提高软件项目开发效率，节省开发时间。<br>缺点：由于喷泉模型在各个开发阶段是重叠的，在 开发过程中需要大量的开发人员，不利于项目的管理。此外这种模型 要求严格管理文档 ，使得审核的难度加大，尤其是面对可能随时加入各种信息、需求与资料的情况。</p>
+<p><strong>敏捷开发</strong></p>
+<img src="../AppData/Roaming/Typora/typora-user-images/image-20211215110616835.png" alt="image-20211215110616835" style="zoom:80%;" />
+
+<p>敏捷软件过程是<u>基本原理和开发准则</u>的结合</p>
+<p>优点： 对变化和不确定性有更快更敏捷的反应。在 快速的同时<u>保持可持</u><u>续的开发速度</u>。能较好地适应商业竞争环境下对<u>小项目</u>提出的 有限资源和有限开发时间的约束<br>缺点：极限编程中的测试驱动开发可能会导致 系统<u>通过了测试但不是用</u><u>户期望的</u>。 重构而不降低体系结构的质量是困难的。用于 大型项目有很多问题</p>
+<p><strong>选择模型</strong>【在不同的条件下选择相应的思路，对我有启发】</p>
+<p>1.前期<u>需求明确</u>的情况下，尽量采用瀑布模型<br>2.<u>用户无系统使用经验，需求分析人员技能不足的情况下</u>，尽量借助原型模型<br>3.<u>不确定因素很多</u>，很多东西无法提前计划的情况下，尽量采用增量模型或螺旋模型<br>4.需求不稳定或资金和成本无法一次到位的，尽量采用增量模型</p>
+<p>6.对于完成多个独立功能开发的情况，可在需求分析阶段就进行<u>功能并行</u>，每个功能内部都尽量遵循瀑布模型<br>7.全新系统的开发必须在总体设计完成后再开始增量或并行<br>8.编码人员<u>经验较少的情况下，尽量不要采用敏捷或迭代模型</u><br>9.增量、迭代和原型可以综合使用，但每一次增量或迭代都必须有<u>明确的交付和出口原则</u></p>
+<p>瀑布模型、增量模型、原型模型和螺旋模型的<strong>联系和区别</strong></p>
+<table>
+<thead>
+<tr>
+<th>比较项</th>
+<th>瀑布模型</th>
+<th>原型模型</th>
+<th>增量模型</th>
+<th>螺旋模型</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>是否事先定义大部分需求</td>
+<td>是</td>
+<td>无</td>
+<td>无</td>
+<td>是</td>
+</tr>
+<tr>
+<td>每次迭代输出是否为产品</td>
+<td>是</td>
+<td>无</td>
+<td>无</td>
+<td>是</td>
+</tr>
+<tr>
+<td>驱动方式</td>
+<td>文档</td>
+<td>用户</td>
+<td>用户</td>
+<td>风险</td>
+</tr>
+<tr>
+<td>迭代周期内的过程模型</td>
+<td>瀑布模型</td>
+<td>瀑布模型</td>
+<td>原型模型</td>
+<td>可选</td>
+</tr>
+</tbody></table>
+<p>举例说明：若一个软件包含A、B、C、D四个功能，那么</p>
+<p>瀑布模型输出结果为ABCD</p>
+<p>原型模型输出结果为A’B’C’D’-&gt;ABCD</p>
+<p>增量模型输出结果为A-&gt;AB-&gt;ABC-&gt;ABCD</p>
+<p>螺旋模型输出结果为A1B1C1D1-&gt;A2B2C2D2-&gt;……-&gt;ABCD</p>
+<h2 id="需求分析（1）"><a href="#需求分析（1）" class="headerlink" title="需求分析（1）"></a>需求分析（1）</h2><p><strong>需求分析的定义</strong>：</p>
+<p>确定系统必须具有的<u>功能和性能，系统要求的运行环境</u>，并且<u>预测</u>系统发展的前景。<br>换句话说需求就是以一种 <u>清晰 、简洁 、一致且无二义性</u>的方式，对一个待开发系统中<u>各个有意义方面的陈述</u>的一个集合。</p>
+<blockquote>
+<p>需求获取</p>
+<p>用户目标、领域知识、投资者、运行环境、组织环境</p>
+<p>采访、设定情景、原型、会议、观察商业工程和工作流。</p>
+<p>十原则：倾听、有准备的沟通、有地位足够的人推动、最好当面沟通、记录决定、保持通力合作</p>
+</blockquote>
+<p>需求分析的过程：<u>需求确认与需求变更</u></p>
+<p><strong>需求确认</strong>：<u>需求获取-&gt;需求提炼-&gt;需求描述-&gt;需求验证</u>：</p>
+<ul>
+<li>需求获取：软件需求的 来源以及软件工程师收集这些软件需求的方法。</li>
+<li>需求提炼（需求分析）：将用户需求 精确化、完全化，最终形成下一步的 需求规格说明书。<u>核心在于建立分析模型</u>。</li>
+<li>需求描述：软件需求规格说明书（SRS）——软件系统的需求规格说明，是对待开发系统的行为的 <u>完整描述</u>。为了使用户和软件开发者双方对该软件的初始规定有一个<u>共同的理解</u>，使之成为整个开发工作的基础。</li>
+<li>需求验证：重要性：如果在后续的开发或当系统投入使用时才发现需求文档中的错误，就会导致更大代价的返工。<br>需对文档进行：<ul>
+<li>有效性检查：检查不同用户使用不同功能的有效性</li>
+<li>一致性检查：在文档中，<u>需求之间不应该冲突。</u></li>
+<li>完备性检查：需求文档应该包括<u>所有</u>用户想要的功能和约束。</li>
+<li>可行性检查：检查保证<u>能利用现有技术</u>实现需求。</li>
+</ul>
+</li>
+</ul>
+<p><strong>需求类型/需求分析的分类</strong></p>
+<p>(1) 功能性需求：描述<u>系统应该做什么</u>，即<u>为用户和其它系统完成的功能、提供的服务</u>。<br>(2) 非功能性需求：必须遵循的标准，外部界面的细节，实现的<u>约束条件</u>，质量属性等等<br>(3) 非功能需求限定了选择解决问题方案的范围，如运行平台、实现技术、编程语言和工具等</p>
+<hr>
+<p><strong>分析模型描述工具</strong></p>
+<p>一个典型的软件系统使用数据结构（数据模型），执行操作（行为模型），并且完成数据值的变化（功能模型）</p>
+<p><img src="../AppData/Roaming/Typora/typora-user-images/image-20211215115345970.png" alt="image-20211215115345970"></p>
+<p><em>面向过程分析模型</em>：基本思想 是用系统工程的思想和工程化的方法，根据用户至上的原则，自始自终按照 <u>结构化、模块化，自顶向下</u> 地对系统进行分析与设计。</p>
+<p>结构化分析（Structured Analysis，简称SA），是<u>面向数据流</u>进行需求分析的方法。 结构化分析的主要思想是采取<u>自顶向下逐层分解</u>的分析策略，即面对一个复杂的问题，分析人员不可能一开始就考虑到问题的所有方面以及全部细节，采取的策略往往是分解，把一个复杂的问题划分成若干小问题，然后再分别解决，将问题的复杂性降低到人可以掌握的程度。</p>
+<p><em>面向对象分析模型</em>：由5个层次（主题层、对象类层、结构层、属性层和服务层）和5个活动（标识对象类、标识结构、定义主题、定义属性和定义服务）组成。</p>
+<p>面向对象方法是一种运用对象、类、继承、封装、聚合、关联、消息、多态性等概念来构造系统的软件开发方法。 面向对象方法的解决问题的思路是<u>从现实世界中的客观对象（如人和事物）入手，尽量运用人类的自然思维方式来构造软件系统</u>，这与传统的结构化方法从功能入手和信息工程化方法从信息入手是不一样的。</p>
+<hr>
+<p><strong>面向过程</strong>—结构化分析方法</p>
+<p><strong>数据流图DFD</strong></p>
+<p><img src="../AppData/Roaming/Typora/typora-user-images/image-20211215120035900.png" alt="image-20211215120035900" style="zoom: 50%;" /><img src="../AppData/Roaming/Typora/typora-user-images/image-20211215120514343.png" alt="image-20211215120514343" style="zoom:50%;" /></p>
+<p>数据流图层次结构</p>
+<img src="../AppData/Roaming/Typora/typora-user-images/image-20211215120610055.png" alt="image-20211215120610055" style="zoom: 60%;" align = 'left' />
+
+<p><img src="../AppData/Roaming/Typora/typora-user-images/image-20211215141325037.png" alt="image-20211215141325037" style="zoom:67%;" align = 'left'/>与、或、异或。</p>
+<p><em>加工</em> 的命名注意事项</p>
+<p> 1）顶层的加工名就是整个系统项目的名字</p>
+<p> 2）尽量最好使用<u>动宾词组</u>，也可用<u>主谓词组</u></p>
+<p> 3）不要使用空洞的动词</p>
+<p><em>外部实体</em>（数据源点/ /终点）<br>起到更好的理解作用，但不是系统中的事物</p>
+<p><em>数据流</em></p>
+<p> 数据流可从加工流向加工，也可在加工与数据存储或外部项之间流动；两个加工之间可有多股数据流</p>
+<p>1） 不要把控制流作为数据流。 2) 不要标出激发条件</p>
+<p><u>每个加工至少有一个输入数据流和一个输出数据流。</u></p>
+<p><u>数据流必须有一端是加工，而不能两端都是 外部项/数据存储。</u></p>
+<hr>
+<p><strong>面向对象</strong></p>
+<p><strong>功能模型-用例图</strong></p>
+<p>用例建模用于描述系统需求，把系统当作黑盒，<u>从用户的角度，描述系统的场景</u>。</p>
+<p>主要图形元素有以下几个：</p>
+<p><em>参与者</em>：是指外部用户或外部实体在系统中扮演的角色。可以是 <u>人、其他系统、设备</u> 或者时间等角色。</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image@main/img/202205101034754.png" alt="image-20220102214007908" style="zoom:50%;" />
+
+<blockquote>
+<p>确定参与者：</p>
+<p>开发人员可以通过回答以下的问题来寻找系统的参与者。<br>（1）谁将使用该系统的主要功能？<br>（2）谁将需要该系统的支持以完成其工作？<br>（3）谁将需要维护、管理该系统，以及保持该系统处于工作状态？<br>（4）系统需要处理哪些硬件设备？<br>（5）与该系统交互的是什么系统？<br>（6）谁或什么系统对本系统产生的结果感兴趣？</p>
+</blockquote>
+<p><em>用例</em>：对<u>一组动作序列</u>的描述，系统通过执行这一组动作序列为参与者<u>产生一个可观察的结果</u>。用例名往往用<u>动宾结构</u>命名</p>
+<p>​            用椭圆形表述</p>
+<blockquote>
+<p>• 说明了系统具有的一种<u>行为模式</u><br>• 说明了一个参与者与系统执行的一个相关的事件序列<br>• 提供了一种获取系统需求的方法<br>• 提供了一种与最终的用户和领域专家进行沟通的方法<br>• 提供了一种测试系统的方法</p>
+</blockquote>
+<p><em>执行关联</em>： 参与者（Actor ）执行用例（Use Case）之间的关系</p>
+<ol>
+<li>关联： <u>参与者与用例之间的关系（其他都是用例之间的关系）</u>。表示 参与者与用例之间的通信，任何一方都可发送或接受消息。<br> 【箭头指向】：指向消息接收方，<u>也可以不加箭头</u></li>
+<li>泛化： 就是通常理解的继承关系，子用例和父用例相似，但表现出更特别的行为；子用例将继承父用例的所有结构、行为和关<br>系。子用例可以使用父用例的一段行为，也可以重载它。父用例通常是抽象的。<br>【箭头指向】：指向父用例</li>
+<li>包含：包含（include）关系指的是两个用例之间的关系，其中一个用例（称为基本用例）的行为包含另一个用例（称为包含用例，inclusion use case）的行为。<br> 【箭头方向】由基本用例指向分解出的用例。 <u>执行基本用例的时候，每次都应该调用被包含用例</u>， 被包含用例也<u>可单独执行</u>。</li>
+<li>扩展：扩展关系是指用例功能的延伸，相当于为基础用例提供一个 附加功能。 <u>扩展用例依赖于被扩展用例，不是完整的独立用例， 无法单独执行</u>。在扩展关系中，一个基本用例执行时，<u>可以执行、也可以不执行</u><br> 【箭头方向】由扩展用例指向基本用例。</li>
+</ol>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image@main/img/202205101034755.png" alt="image-20211215145904906" style="zoom:50%;" />
+
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image@main/img/202205101034756.png" alt="image-20220102214202201" style="zoom:50%;" />
+
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image@main/img/202205101034757.png" alt="image-20220104222122993" style="zoom:67%;" />
+
+<hr>
+<p><strong>行为模型-活动图（泳道图）</strong></p>
+<p><u>是对用例的图形化！</u></p>
+<p>• 每一步都是做某事的一个<u>状态</u><br>• 执行步骤称为<u>动作</u><br>• 描述哪些步骤被顺序执行、哪些可被并发地执行<br>• 控制流 – 控制从一个动作到下一个动作的流</p>
+<p>在用例流中发现动作。</p>
+<p>活动图别忘了开始和结束的标记，注意分叉的类型</p>
+<p>开始：实心圆  结束：牛眼</p>
+<p>转换可以分支及合并（钻石框） – （可选）计算线程【如果需要判断，也得在菱形外面加说明，如果有条件，要附上说明】</p>
+<p>转换可以分叉及汇合（短横线）– 并发（并行）计算线程</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image@main/img/202205101034758.png" alt="image-20211215150956912" style="zoom:60%;" /><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image@main/img/202205101034759.png" alt="image-20211215151013131" style="zoom:57%;" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image@main/img/202205101034760.png" alt="image-20220102215033431" style="zoom:50%;" /><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image@main/img/202205101034761.png" alt="image-20220102215052674" style="zoom:50%;" /></p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image@main/img/202205101034762.png" alt="img" style="zoom:67%;" />
+
+<p>这俩图还是建议好好看完PPT。</p>
+<h2 id="软件设计（1）"><a href="#软件设计（1）" class="headerlink" title="软件设计（1）"></a>软件设计（1）</h2><p><strong>软件设计</strong>：软件系统或组件的架构、构件、接口和其他特性的<u>定义过程及该过程的结果。</u><br>软件工程生命周期中的一个活动。进行软件编码的基础。<br>软件需求分析被转化为软件的内部结构。是连接用户需求和软件技术的桥梁。设计是<u>软件工程技术的核心</u>。</p>
+<blockquote>
+<p><strong>指导原则</strong>：<br>1 设计应该是一种<strong>架构</strong><br>2 设计应该是<strong>模块化</strong>的<br>3 设计应该包含 <u>数据、体系结构、接口和组件</u>各个方面</p>
+<p>应该设计出系统所用的数据结构<br>应该设计出展现独立功能特性的各组件<br>应该设计出各组件与外部环境连接的各接口</p>
+<p>4 设计由软件需求分析过程中获得信息驱动，采用可重复使用的方法导出<br>5 设计应该采用正确清楚的表示法</p>
+</blockquote>
+<p>概要设计：实现目标产品的总体框架，包括<strong>体系结构设计、数据设计、接口和组件</strong>设计。<br>                    其中体系结构是设计师概要设计的主要内容。<br>详细设计：对概要设计划分出来的模块分别去描述设计，以便能够编码实现</p>
+<p>系统设计从<strong>数据、体系结构、接口和组件</strong>四方面进行设计。【自底向上】</p>
+<p><strong>八大概念</strong>【知道即可，不会让详细解释】</p>
+<p>抽象、体系结构、设计模式、模块化、信息隐藏、功能独立、细化、重构。<br>其中，着重考察 <u>体系结构、模块化、信息隐藏、功能独立</u>。</p>
+<ol>
+<li><p>抽象</p>
+<p>忽略具体的信息将不同事物看成相同事物的过程， <u>参数化、规范化</u>。</p>
+</li>
+<li><p><strong>体系结构</strong></p>
+<p>含义：软件的整体结构 和 这种结构为系统提供 概念上完整性 的方式<br>表达方式：结构模型、框架模型、动态模型、过程模型、功能模型</p>
+</li>
+<li><p>设计模式</p>
+<p> 在给定上下文环境中一类共同问题的共同解决方案，如抽象工厂</p>
+</li>
+<li><p><strong>模块化</strong></p>
+<p>软件被划分为命名和功能相对独立的多个组件（通常称为模块），通过这些组件的集成来满足问题的需求</p>
+<p>软件的模块性：程序可被智能管理的单一属性</p>
+<p>理论依据：基于人类解决问题的观测数据</p>
+<p>模块化基本问题 如何分解软件系统以达最佳的模块划分</p>
+<blockquote>
+<p>设计标准：</p>
+<ol>
+<li>分解性：可分解为子问题</li>
+<li>组合性：组装可重用的组件</li>
+<li>可理解性：可作为独立单元理解</li>
+<li>连续性：需求小变化只影响单个模块</li>
+<li>保护： 模块内异常只影响自身</li>
+</ol>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image@main/img/202205101034763.png" alt="image-20211215153317948"  align = 'left'/></blockquote>
+</li>
+<li><p><strong>信息隐藏</strong></p>
+<p> 模块应该具有彼此相互隐藏的特性，模块内的信息（过程和数据）不可以被不需要这些信息的其他模块访问</p>
+</li>
+<li><p><strong>功能独立</strong></p>
+<p>每个模块只负责<u>需求中特定的子功能</u>，并且从程序结构的其他部分看，该模块具有简单的接口</p>
+<p>• 易于开发：功能被划分，接口被简化。<br>• 易于维护（和测试）：次生影响有限，错误传递减少，模块重用。</p>
+<p>定性衡量标准：</p>
+<p>• 内聚性：模块的功能相对强度<br>• 耦合性：模块之间的相互依赖程度<br>• 模块独立性强 = 高内聚低耦合</p>
+</li>
+<li><p>精化</p>
+<p> 逐步求精的过程</p>
+<p> 与抽象的关系：</p>
+<p> • 抽象使设计师确定过程和数据，但不局限于底层细节<br> • 精化有助于设计者在设计过程中揭示底层细节</p>
+</li>
+<li><p>重构</p>
+<p> 不改变组件功能和行为条件下，简化组件设计（或代码）的一种重组技术</p>
+<p> 检查现有<u>设计的冗余情况、未使用的设计元素、无效或不必要的算法、较差的构建方式或不恰当的数据结构</u>，或任何其他可被更改从而优化设计的问题</p>
+</li>
+</ol>
+<blockquote>
+<p><strong>面向过程设计技术概要</strong></p>
+<p>系统设计从体系结构、数据、接口和组件四方面进行设计。</p>
+<p><u>数据设计</u><br>（有时也被称为数据架构）构建高层抽象（客户/用户的数据视图）的数据模型、信息模型</p>
+<ol>
+<li>数据建模： 数据字典、E-R 图 、类图。</li>
+<li>数据结构：计算机存储组织数据的方式。</li>
+<li>数据库：按照数据结构来组织、存储和管理数据的仓库</li>
+</ol>
+<p><u>体系结构设计</u> </p>
+<p>风格和模式简要分类：<strong>数据中心结构、数据流体系结构、调用和返回结构、层次结构、面向对象结构</strong>【图要认得出】</p>
+<p>组织和细化两个基本问题：</p>
+<ul>
+<li>控制结构：在架构内部如何实现管理控制？是否有不同的控制架构存在</li>
+<li>数据传递：组件之间如何进行数据传递？数据流是否连续，或者传递给系统的数据对象是否零散</li>
+</ul>
+<p><u>接口设计</u>（含界面设计）</p>
+<p>• 允许用户操作控制（用户为中心）<br>• 减少用户记忆负担<br>• 保持界面一致</p>
+<p><u>组件设计</u>：面向过程（函数、模块）、面向对象（类与操作）<br>在过程设计、详细设计，位于数据设计、体系结构设计和接口设计完成之后</p>
+<p><em>面向过程的总体设计</em></p>
+<p>1 首先研究、分析和审查数据流图。 从软件的需求规格说明中弄清数据流加工的过程，对于发现的问题及时解决。<br>2 然后根据数据流图决定问题的类型。数据处理问题典型的类型有两种：<u>变换型和事务型</u>。针对两种不同的类型分别进行分析处理。<br>3 由数据流图推导出系统的初始结构图。<br>4 利用一些启发式原则来改进系统的初始结构图，直到得到符合要求的结构图为止。（系统结构图）<br>5 修改和补充数据词典。</p>
+</blockquote>
+<p>软件体系结构是系统的一个或多个结构，它包括<u>软件构件、构件的外部可见属性、以及它们之间的相互关系</u>。</p>
+<p>风格和模式简要分类：<strong>数据中心结构、数据流体系结构、调用和返回结构、面向对象结构、层次结构</strong>【图要认得出】</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image@main/img/202205101034764.png" alt="image-20220102221017990" style="zoom:50%;" /><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image@main/img/202205101034765.png" alt="image-20220102221030497" style="zoom:50%;" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image@main/img/202205101034766.png" alt="image-20220102221041211" style="zoom:50%;" /><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image@main/img/202205101034767.png" alt="image-20220102221058679" style="zoom: 67%;" /><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image@main/img/202205101034769.png" alt="image-20220102221111954" style="zoom:67%;" /></p>
+<p><strong>流程图</strong>(flow chart)</p>
+<p>利用各种方块图形、线条及箭头等符号来表达解决问题的步骤及进行的顺序；是算法的一种表示方式。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image@main/img/202205101034770.png" alt="image-20211215162409417" style="zoom: 67%;" /><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image@main/img/202205101034771.png" alt="image-20211215162425931" style="zoom:67%;" /></p>
+<p><em>基本结构</em></p>
+<p>顺序结构、选择结构（二元、多重）、循环结构（while-do\do-while）【可以看看陈安龙出的题】</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image@main/img/202205101034772.png" alt="image-20220102220751495" style="zoom:50%;" /><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image@main/img/202205101034773.png" alt="image-20211223210208725" style="zoom:50%;" /></p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image@main/img/202205101034774.png" alt="image-20220105211743862" style="zoom: 33%;" />
+
+<p>其他面向过程组件设计方法：盒图（N-S图）、PDL(程序设计语言)、判定表、判定图</p>
+<hr>
+<p><strong>面向对象的设计</strong></p>
+<p>分为系统架构设计、用例设计、类设计、数据库设计、用户界面设计。</p>
+<p><strong>架构设计</strong><br>架构设计的目的是要勾画出系统的总体结构，这项工作由经验丰富的架构设计师主持完成。</p>
+<p>输入：用例模型、分析模型。     输出：物理结构、子系统及其接口、概要的设计类。</p>
+<p><strong>用例设计</strong></p>
+<p>进一步细化用例</p>
+<p>根据分析阶段产生的高层类图和交互图，由用例设计师<u>研究已有的类，将它们分配到相应的用例中</u>。</p>
+<p>检查每个用例功能，依靠当前的类能否实现，同时检查每个用例的特殊需求是否有合适的类来实现。</p>
+<p>细化每个用例的类图，<u>描述实现用例的类及其类之间的相互关系</u>，其中的通用类和关键类可用粗线框区分，这些类将作为项目经理检查项目时的重点。</p>
+<p><strong>类设计</strong></p>
+<p>类是包含信息和影响信息行为的逻辑元素。类的符号是由三个格子的长方形组成，有时下面两个格子可以省略。</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image@main/img/202205101034775.png" alt="image-20211215163820307" style="zoom:80%;" />
+
+<p> <em>类间关系</em></p>
+<p>(1) 关联关系:关联是一种结构化的关系，指一种对象和另一种对象有联系。<br>(2) 聚合关系:指的是整体与部分的关系。<br>(3) 泛化关系：泛化也就是继承关系<br>(4) 组合关系：也表示类之间整体和部分的关系，但是组合关系中部分和整体具有统一的生存期。<br>(5) 依赖关系：是一种使用关系，特定事物的改变有可能会影响到使用该事物的事物</p>
+<p><u>组合是一种较为紧密的关系，从生命周期上看，部分和整体是共存亡的关系。 聚合则是一种较为松散的关系，部分和整体的生命周期未必一致。</u></p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image@main/img/202205101034776.png" alt="image-20211215151848878" style="zoom: 50%;" />
+
+
+
+<p><em>不同的类</em></p>
+<p>实体类用于对必须存储的<u>信息</u>和<u>相关行为</u>进行建模。源于业务模型中的业务实体</p>
+<p>边界类用于参与者与用例之间、有交互的用例间、用例与系统边界之外交互时，</p>
+<p>控制类来源于对用例场景中动词的分析和定义，主要起到协调对象的作用，例如从<u>边界类通过控制类访问实体类</u>，或者<u>实体类通过控制类访问另一个实体类</u>。</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image@main/img/202205101034777.png" alt="image-20211215164219626" style="zoom:80%;" />
+
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image@main/img/202205101034778.png" alt="image-20220101201405506"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image@main/img/202205101034779.png" alt="image-20220101201422808"></p>
+<p><em>类设计三步</em></p>
+<ol>
+<li><p>定义类的属性，类的属性反映类的特性，通常属性是被封装在类的内部，不允许外部对象访问。</p>
+<p>原则：尽量使用已有的类型，一个类不要太复杂，坚持简单的原则。</p>
+</li>
+<li><p>定义类的操作</p>
+<p>一个类可能被应用在多个用例中，由于它在不同用例中担当的角色不同，所以设计时要求详细周到。<br>检查<u>类在每个用例中实现是否合适</u>，补充必要操作；考虑特殊情况。</p>
+</li>
+<li><p>定义类之间的关系</p>
+</li>
+</ol>
+<p><strong>UML顺序图</strong></p>
+<p>用例常常被细化为一个或多个顺序图。它还能用来记录一个存在于系统的对象现在如何交互。<br>当强调按时间展开信息的传送时，一般使用顺序图建模技术。</p>
+<ol>
+<li>顺序图是强调消息<u>时间顺序</u>的交互图。</li>
+<li>顺序图描述了对象之间传送消息的时间顺序，用来表示用例中的<u>行为顺序</u>。</li>
+<li>顺序图将交互关系表示为一个二维图。即在图形上，顺序图是一张表，其中显示的对象沿横轴排列，从左到右分布在图的顶部；而消息则<u>沿纵轴按时间顺序排序</u>。创建顺序图时，以能够使图尽量简洁为依据布局。</li>
+</ol>
+<p><em>四个元素</em></p>
+<p><u>对象（符号和对象图中对象所用的符号一样）、生命线、消息、激活。</u></p>
+<p>对象置于顺序图的顶部意味着在交互开始的时候对象就已经存在了，否则表示对象是在交互的过程中被创建的。<br>一般最多两个参与者，他们分列两端。启动这个用例的参与者往往排在最左边；接收消息的参与者则排在最右端；<br>对象从左到右按照<u>重要性排列或按照消息先后顺序</u>排列</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image@main/img/202205101034780.png" alt="image-20220102224513467" style="zoom:67%;" />
+
+<p>每个对象都有自己的生命线（垂直的虚线），用来表示在该用例中一个对象在一段时间内的存在，生命期结束，则用<u>注销符号</u>表示。</p>
+<p>激活表示该对象被占用以完成某个任务，去激活指的则是对象处于空闲状态、在等待消息。</p>
+<p>面向对象方法中，消息是对象间交互信息的主要方式。<br>结构化程序设计中，模块间传递信息的方式主要是过程（或函数）调用。</p>
+<p><em>消息分类：</em></p>
+<p>同步消息：消息名称通常就是被调用的操作名称。【普通箭头】</p>
+<p>异步消息表示发送消息的对象不用等待回应的返回消息，即可开始另一个活动。【半箭头】</p>
+<p>一个对象也可以将一个消息发送给它自己，这就是反身消息。【指向自己】</p>
+<p>返回消息是顺序图的一个可选择部分，它表示控制流从过程调用的返回。【返回的虚线箭头】<br>一般可以缺省，隐含表示每一个调用都有一个配对的调用返回。</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image@main/img/202205101034781.png" alt="image-20211215170104945" style="zoom: 80%;" />
+
+<p>要注意创建和销毁<em>临时对象</em>的画法</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image@main/img/202205101034782.png" alt="image-20220102224940022" style="zoom:50%;" />
+
+<p>步骤：Ø确定交互的范围、Ø识别参与交互的对象和活动者、Ø设置对象生命线的开始和结束、Ø设置消息、Ø细化消息</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image@main/img/202205101034783.png" alt="image-20211215170552213" style="zoom: 50%;" />
+
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image@main/img/202205101034784.png" alt="image-20220105194213354"></p>
+<blockquote>
+<p>面向对象设计原则【有用】：</p>
+<p>强调定义软件对象，并且使这些软件对象相互协作来满足用户需求。</p>
+<p>注意：</p>
+<p>• 对接口进行设计<br>• 发现变化并且封装它<br>• 先考虑聚合然后考虑继承</p>
+<p>强内聚：一个类的属性和操作全部都是完成某个任务所必须的，其中不包括无用的属性和操作。</p>
+<p>弱耦合：耦合主要指不同对象之间相互关联的程度。如果一个对象过多地依赖于其它对象来完成自己的工作，则不仅使该对象的可理解性下降，而且还会增加测试、修改的难度，同时降低了类的可重用性和可移植性。<br>当两个对象必须相互联系时，应该通过<u>类的公共接口实现耦合</u>，不应该依赖于类的具体实现细节。</p>
+<p>可重用性：</p>
+<p>• 尽量使用已有的类，包括开发环境提供的类库和已有的相似的类；<br>• 如果确实需要创建新类，则在设计这些新类时考虑将来的可重用性</p>
+<p>框架：</p>
+<p>框架是一组可用于不同应用的类的集合。框架中的类通常是一些抽象类并且相互有联系，可以通过继承的方式使用这些类。</p>
+</blockquote>
+<h2 id="质量保证（1）"><a href="#质量保证（1）" class="headerlink" title="质量保证（1）"></a>质量保证（1）</h2><p><strong>质量保证（QA）概念</strong></p>
+<p>定义：系统地监测和评估一个工程的各个方面，以最大限度地提高由生产过程实现的质量的最低标准。</p>
+<p>原则：适合用途：该产品应<u>符合预期的目的</u>          一次成功：<u>错误应该被淘汰</u></p>
+<p><strong>软件质量</strong>：明确表示是否符合功能和性能要求，明确地记载开发标准和期望的隐性特点</p>
+<ul>
+<li>符合明确规定的功能和性能要求（前期约定）</li>
+<li>符合明确的开发标准（明确标准）</li>
+<li>符合所有软件开发专业的共性、隐性标准，如易用性、可维护性等（共性期望）</li>
+</ul>
+<p><strong>软件质量保证（SQA）</strong></p>
+<p>遵照一定的软件生产标准、过程和步骤对软件质量进行评估的活动</p>
+<p><strong>评估指标</strong></p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image@main/img/202205101034785.png" alt="image-20211216104448415" style="zoom:67%;" align = 'left'/>
+
+<p><strong>可靠性是</strong>一个持续性的状态，更多地强调系统自身；<br>可用性是一个短暂的状态，更多地强调外部的触发。<br>一个人如果随叫随到，但是时不时偷懒，就是高可用、低可靠；而如果他经常找不到人，但干活很负责，就是低可用、高可靠。</p>
+<p><strong>V模型！</strong></p>
+<p><u>要注意水平对应关系！</u>(这个和之前瀑布的图差了很多)</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image@main/img/202205101034786.png" alt="image-20211216104609617" style="zoom:67%;" align = 'left'/>
+
+<ol>
+<li><strong>单元测试</strong>的主要目的是验证<u>软件模块</u> 是否按详细设计的规格说明<u>正确运行</u>。</li>
+</ol>
+<p>单元测试需要从程序的内部结构出发设计测试用例。多个模块可以平行地独立进行单元测试。</p>
+<p><em>测试内容</em>：<u>模块接口 + 局部数据结构 + 边界条件 + 独立路径 + 出错处理</u></p>
+<p>主要内容：模块接口测试（数据流、内外存交换）、局部数据结构测试、路径测试、错误处理测试、边界测试（流边界、关键路径）</p>
+<p><em>测试环境</em>：模块并非独立程序，进行测试时，要考虑它和外界的联系，需用一些辅助模块去做相应模拟。</p>
+<ul>
+<li>驱动模块：用来模拟被测试模块的上一级模块，相当于被测模块的主程序。</li>
+<li>桩模块：模拟被测试的模块所调用的模块，而不是软件产品的组成的部分。</li>
+</ul>
+<ol start="2">
+<li><strong>集成测试</strong>主要目的是检查<u>多个模块间</u> 是否按概要设计说明的方式<u>协同工作</u>。</li>
+</ol>
+<p>将软件集成起来后进行测试。检查诸如两个模块单独运行正常，但集成起来运行可能出现问题的情况。</p>
+<p><em>自顶向下</em>：将模块按系统程序结构，沿控制层次自顶向下进行集成。<br>可首先实现和验证一个完整的软件功能。桩模块的开发量较大。<br>适用于：控制结构清晰稳定；高层接口变化较小；希望<u>尽早能看到产品的系统功能行为</u>，底层接口未定义或经常可能被修改。</p>
+<p><em>自底向上</em>：从软件结构最底层的模块开始，按照接口依赖关系逐层向上集成以进行测试。<br>不需要桩模块；必须编写驱动模块；缺陷的隔离和定位不如自顶向下。<br>适用于：底层接口比较稳定；高层接口变化比较频繁；底层组件较早被完成。</p>
+<p>实际工作中，常综合使用：自底向上、自顶向下</p>
+<p><em>SMOKE方法</em>：<br>将已经转换为代码的软件构件集成为构造（build）。一个构造包括所有的数据文件、库、可复用的模块以及实现一个或多个产品功能所需的工程化构件。<br>每天将该构造与其他构造，及整个软件产品集成，进行冒烟测试。</p>
+<ol start="3">
+<li><strong>系统测试</strong>的主要目的是验证<u>整个系统</u> 是否满足需求规格说明。</li>
+</ol>
+<p>从用户使用的角度进行测试，将完成了集成测试的系统放在真实的运行环境下进行。</p>
+<p>目的：功能确认和验证       测试方法：黑盒测试</p>
+<p>系统测试是软件开发过程必不可少的一环，<u>软件质量保证的最重要环节</u></p>
+<p><em>测试内容</em>：面向：外部输入层测试，如不做，则<u>外部输入层向接口层转换</u>的代码就没有得到测试。</p>
+<p>•    功能性测试：在规定的一段时间内运行软件系统的<u>所有功能</u>，以验证有无严重错误<br>•    性能测试：检查系统是否<u>满足需求规格说明书中的性能</u>，常与压力测试结合<br>•    压力测试：检查在系统<u>运行环境不正常乃至发生故障</u>的情况下，系统可以运行到何种程度的测试。敏感性测试<br>•    恢复测试：克服硬件故障后，系统能否继续正常工作。并不对系统造成任何损害。<br>•    安全测试：检测系统的安全性、保密性措施是否发挥作用，有无漏洞</p>
+<ol start="4">
+<li><strong>验收测试</strong><u>从最终用户的角度检查系统是否满足合同中定义的需求</u>，以及以确认产品是否能符合<u>业务上的需要</u>。</li>
+</ol>
+<p>时间：系统的有效性测试及软件配置审查通过之后。人员：以用户为主。软件开发人员和 QA（质量保证）人员也应参加<br>测试数据：实际生产数据。</p>
+<p><em>主要形式</em>：<br>根据合同的验收测试——系统测试子集再测试<br>用户验收测试：分为客户和最终用户<br>现场测试：α测试、β测试</p>
+<p><em>α测试</em>：是由公司内部的用户在 开发环境下进行的测试，模拟实际操作环境下进行的测试。<br>评价FLURPS特性（功能、本地化、可使用性、可靠性、性能和支持）。尤其界面和特色<br>开始时间：模块（子系统）测试完成后<u>系统测试过程中产品达到一定的稳定和可靠程度后</u>。</p>
+<p><em>β测试</em>：多个用户在实际使用环境下进行测试。这些用户返回有关错误信息给开发者。<br>用户记录所有问题（真实的、主观的），定期向开发者报告。<br>评价 产品的FLURPS。着重产品的支持性（文档、客户培训和支持产品生产能力）<br>开始时间：α测试达到一定的可靠程度时开始，<u>测试的最后阶段，所有手册文本此阶段完全定稿</u></p>
+<p><strong>回归测试</strong></p>
+<p>指有选择地重新测试系统或其组件，以验证<u>对软件的修改没有导致不希望出现的影响，以及系统或组件仍然符合其指定的需求。</u></p>
+<p>Why：<br>测试中，如有<u>缺陷修正、功能增加，变化的部分</u>必须再测试。<u>软件的修改可能会导致新的缺陷及其他问题</u>。为防止，需再测试。</p>
+<p>回归测试可以在所有的测试级别执行，并应用于功能和非功能测试中。范围：</p>
+<ul>
+<li>缺陷再测试：重新运行所有发现故障的测试，而新的软件版本已经修正了这些故障。</li>
+<li>功能改变的测试：测试所有修改或修正过的程序部分。</li>
+<li>新功能测试：测试所有新集成的程序。</li>
+<li>完全回归测试：测试整个系统。</li>
+</ul>
+<hr>
+<p><strong>软件缺陷</strong></p>
+<p>至少满足下列一个条件，称发生了一个软件缺陷</p>
+<p>(1) 软件<u>未实现</u>产品说明书要求的功能。<br>(2) 软件出现了产品说明书指明不能出现的<u>错误</u>。<br>(3) 软件<u>实现了产品说明书未提到的功能。</u><br>(4) 软件未实现产品说明书<u>虽未明确提及但应该实现的目标。</u>（xswl）<br>(5) 软件难以理解、不易使用、运行缓慢或者——从测试员的角度看——最终用户会认为不好。</p>
+<p><strong>验证</strong>（Verification）保证软件特定开发阶段的输出已经正确完整地实现了规格说明<br>（我们正确地构造了产品吗？）</p>
+<p><strong>确认</strong>（Validation）对于每个测试级别，都要检查开发活动的输出是否满足具体的需求或与这些特定级别相关的需求<br>（我们构造了正确的产品吗？）</p>
+<p><strong>测试</strong>（补救）<br><u>找出软件缺陷</u>，并确保缺陷得以修复</p>
+<p><strong>质量保证</strong>（预防）<br>创建和执行改进、软件开发过程并<u>防止软件缺陷发生</u>的标准和方法。</p>
+<p><strong>质量与可靠性</strong><br>功能性、可靠性、可维护性、可用性、效率、可移植性。</p>
+<p><strong>软件测试</strong>：目标是发现软件缺陷的存在</p>
+<p><strong>软件调试</strong>：目标是定位与修复缺陷</p>
+<p><strong>测试用例</strong>（test case）：是<u>测试输入、执行条件、以及预期结果</u>的集合<br>是为特定的目的开发的，例如执行特定的程序路径或验证与指定的需求相符合。<br>设计格式：【输入的(oldpwd, newpwd, newpwdag)，输出的(提示1,提示2)】</p>
+<hr>
+<p><strong>白盒测试</strong></p>
+<p>考虑系统或组件的内部机制的测试形式（如分支测试、路径测试、语句测试等），也称结构性测试或逻辑驱动测试。</p>
+<p><em>逻辑覆盖</em> 是以程序内部的逻辑结构为基础的设计测试用例的技术。</p>
+<p><strong>每条边设置个英文字母，每条路径设置个$L_i$</strong></p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image@main/img/202205101034787.png" alt="image-20220103094104162" style="zoom: 67%;" />
+
+<ol>
+<li><p>语句覆盖：就是设计若干个测试用例，运行被测程序，使得<u>每一可执行语句</u>至少执行一次。</p>
+</li>
+<li><p>分支覆盖/判定覆盖：使得程序中<u>每个判断的取真分支和取假分支</u>至少经历一次。</p>
+</li>
+<li><p>条件覆盖：使得程序中每个判断的<u>每个条件的可能取值</u>至少执行一次。只要每个可能都出现过就好，理论上最少2次就行。</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image@main/img/202205101034788.png" alt="image-20220105150214533" style="zoom:50%;" /></li>
+</ol>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image@main/img/202205101034789.png" alt="image-20220103094444920" style="zoom:67%;" />
+
+<ol start="4">
+<li>条件组合覆盖：使得每个判断的所有可能的条件取值组合至少执行一次<br>一个判断里，可能有多个条件$T_1,T_2…T_n$,每个条件两种可能，组合起来就是$2^n$种。(还要做标记)</li>
+</ol>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image@main/img/202205101034790.png" alt="image-20220103094510612" style="zoom:67%;" />
+
+
+
+<p><em>控制流图覆盖</em> 是将代码转变为控制流图（CFG），基于其进行测试的技术</p>
+<p>结点：符号○ ，表示一个或多个无分支的PDL语句或源程序语句。<br>边：箭头，表示控制流的方向。<br>汇聚节点：在选择或多分支结构中，<strong>分支的汇聚处应有一个汇聚结点。这个不能漏，不然算复杂度会错</strong><br>区域：<u>边和结点圈定的区域</u>。对区域计数时，图形外的区域也应记为一个区域。</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image@main/img/202205101034791.png" alt="image-20211216144744301" style="zoom:67%;" align = 'left'/>
+
+<ol>
+<li><p>节点覆盖</p>
+<p>对图中的每个节点，至少要有一条测试路径访问该节点显然，节点覆盖=语句覆盖<br>节点覆盖和<u>语句覆盖是等价的</u>。</p>
+</li>
+<li><p>边覆盖</p>
+<p>对图中每一个可到达的长度小于(无边图)等于1 的路径，中至少存在一条测试路径覆盖。显然，边覆盖包含节点覆盖，且边覆盖也可以<u>实现分支覆盖</u>。</p>
+</li>
+<li><p>路径覆盖</p>
+<p>覆盖程序中所有可能的路径，</p>
+</li>
+<li><p>基本路径覆盖</p>
+<p>独立路径：至少包含有一条在其它独立路径中从未有过的边的路径</p>
+<p>找独立路径条数：V(G)（环路复杂度） = e（边数）−n（结点数）+2</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image@main/img/202205101034792.png" alt="image-20220103095027872" style="zoom:67%;" />
+
+<p>开始的点被舍掉，连续的点，比如2，3和4，5被<u>合并到一个节点</u></p>
+<p>找基本路径：每次<u>回溯</u>上一个节点，即从最后一个节点倒推，如果能走新的路就走新的路。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image@main/img/202205101034793.png" alt="image-20220103095206100"></p>
+</li>
+</ol>
+<hr>
+<p><strong>黑盒技术</strong></p>
+<p>黑盒测试：忽略系统或组件的内部机制，仅关注于那些响应所选择的输入及相应执行条件的输出的测试形式</p>
+<p><em>等价类划分</em>：</p>
+<p>把所有可能的输入数据，即 程序的输入域划分成若干部分，然后从每一部分中 选取少数有代表性的数据做为测试用例。</p>
+<p>等价类：某个输入域的子集合。在该子集合中，各个输入数据对于<u>揭露程序中的错误都是等效</u>的。</p>
+<p>有效等价类：对于程序的规格说明来说，是合理的，有意义的输入数据构成的集合。</p>
+<p>无效等价类：对于程序的规格说明来说，是不合理的，无意义的输入数据构成的集合。</p>
+<p>原则：</p>
+<p>(1) 如果输入条件规定了取值<u>范围</u>，或值的个数（范围），则可以确立一个有效等价类和两个无效等价类。<br>(2) 如果输入条件规定了输入值的<u>集合</u>，或者是规定了“必须如何”的条件，这时可确立一个有效等价类和一个无效等价类。<br>(3) 如果输入条件是一个布尔量，则可以确定一个有效等价类和一个无效等价类。<br>(4) 如果规定了输入数据的一组值，而且程序要<u>对每个输入值分别进行处理</u>（不同于 2 ）。这时可为 每一个输入值确立一个有效等价类，此外针对这组值确立一个无效等价类，它是所有不允许的输入值的集合。<br>(5) 如果规定了输入数据必须遵守的规则，则可以确立一个有效等价类（符合规则）和若干个无效等价类（从<u>不同角度违反规则</u>）。（比如，输入条件：学生的学院字段数据类型，那有效等价类：字符串型；无效等价类：整数、浮点、布尔型）</p>
+<p>【2和5相比，5只是规定了一项规则，2直接规定了整个集合】</p>
+<p>步骤：</p>
+<p>列出表【输入条件、有效等价类、无效等价类】为每个等价类规定一个唯一编号<br>测试用例尽可能多地覆盖尚未被覆盖的有效等价类，仅覆盖一个尚未被覆盖的无效等价类</p>
+<blockquote>
+<p>例：</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image@main/img/202205101034794.png" alt="image-20211216151109884" style="zoom:67%;" />
+
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image@main/img/202205101034795.png" alt="image-20211216151123275" style="zoom:67%;" />
+
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image@main/img/202205101034796.png" alt="image-20211216151144014" style="zoom:67%;" />
+</blockquote>
+<p><em>边界值分析</em></p>
+<p>对等价类划分方法的补充，大量的错误是发生在输入或输出范围边界上</p>
+<p>闭区间：选择边界点、边界点加一个步长的点和边界点减一个步长设计测试用例</p>
+<p>开区间：选择边界点、边界点范围内方向移动一个步长的点计测试用例。</p>
+<p><u>上点</u>，即边界上的点，不管是开区间还是闭区间。<br><u>内点</u>，上点范围内的任意一点。<br><u>离点</u>，离上点最近的点称为离点。<u>开区间为上点范围内</u>加一个步长，闭区间为<u>上点范围外</u>加一个步长。</p>
+<p>比如[85,100]，离点就是 84，101      (0,60)，离点就是1，59，  [60,75) 离点 59,74</p>
+<p>所以一元函数有5个测试用例。</p>
+<p>二元函数：</p>
+<p>先列出每一个变量的上点、内点和离点（5*2）。</p>
+<p>用第一个变量的上点、离点与第二个变量的内点配对设计4个测试用例<br>用第一个变量的内点与第二个变量的上点、离点配对设计4个测试用例<br>最后两个变量的内点配对形成最后一个测试用例，共设计9个测试用例。</p>
+<p>多元函数类似，都是某个变量的上点、离点配上别的元的内点，再加上一个都是内点，共$4n+1$</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image@main/img/202205101034797.png" alt="image-20220103102412117" style="zoom: 50%;" />
+
+<p>黑盒还有一种<em>状态测试</em>。</p>
+<p>在黑盒测试阶段，通过对状态的测试间接地加以验证功能</p>
+<p>建立状态转换图-&gt;根据状态转换图设计测试用例。</p>
+<p>灰盒测试：<br>介于白盒测试与黑盒测试之间的一种测试，多用于集成测试阶段，不仅关注输出、输入的正确性，同时也关注程序内部的情况</p>
+<p><strong>静态分析</strong></p>
+<p><u>不运行程序</u>，通过检查和阅读等手段来发现错误并评估代码质量的测试技术</p>
+<p>主要内容：检查<u>需求、设计、代码</u>（缺陷产生的可能由大到小）</p>
+<p>类型：同事审查（初次）、走查（开发组内部进行）、审查（会议形式，开发组、测试组和相关人员联合进行）</p>
+<h2 id="项目管理（2）"><a href="#项目管理（2）" class="headerlink" title="项目管理（2）"></a>项目管理（2）</h2><p><em>项目管理</em>：计划、协调、度量、监控、控制及报告等管理方法<u>在软件开发和维护中的具体应用</u><br>以保证整个过程是系统的、有原则的、可量化的</p>
+<p><strong>四要素</strong>：人员(People)、产品(Product)、过程(Process)、项目(Project)。</p>
+<p>关键业务领域：招聘、选拔、绩效管理、培训、薪酬、职业发展、组织和工作设计、团队/文化的发展。</p>
+<p>在策划一个项目以前，应当建立产品的<u>目标和范围</u>，应考虑其他解决办法，以及技术和管理应当被约束。</p>
+<p>软件开发的一个全面计划</p>
+<p>理解成功项目管理的关键因素，掌握项目计划、监控和控制的一般方法</p>
+<p><strong>软件度量</strong>：</p>
+<p>一种量化衡量方法,使得人们可以理解和把握软件项目的(生产)效率(或者所需要的劳动量)</p>
+<p>目的：软件项目管理的成熟化也需要<u>度量与数字化</u>，目的是<u>持续改进软件过程，并用于项目估算、质量控制、生产率评估</u>等</p>
+<p><em>面向规模</em>【直接测量】：</p>
+<p>通过<u>对质量和（或）生产率的测量进行规范化</u>而得到的，这些测量是根据开发过的软件的规模得到的。</p>
+<ul>
+<li> 千行代码（ KLOC ）： 这些代码指的是源代码，通过源代码的行数来直观度量一个软件程序有多大规模</li>
+<li>生产率（PM）：PM = L / E, L表示<u>代码总量</u>(单位：KLOC)，E表示<u>软件工作量</u>(单位：人月)</li>
+<li> 每千行代码的平均成本（ CKL ）：CKL = S / L，S为软件项目总开销 </li>
+<li>代码出错率（EQRl）：EQRl = Ne / L，Ne表示代码出错的行数</li>
+<li>文档与代码比（Dl）：Dl = Pd / L，Pd表示文档页数</li>
+</ul>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image@main/img/202205101034798.png" alt="image-20211217100450012" style="zoom:67%;" />
+
+<p>简单易行，自然直观；但 软件开发初期很难估算出最终软件的代码行数，对短小精悍的程序不利</p>
+<p><em>面向功能</em>【间接测量】</p>
+<p>功能点（Function Point, FP）法，项目开发<u>初期就可估算出</u></p>
+<p>方法：先算未调整功能点总计数 UFC，再算功能点 FP</p>
+<p>$FP = UFC×TCF = UFC × (0.65 + 0.01×\sum F_i)$</p>
+<p>UFC相关的五类组件：内部逻辑文件ILF、外部接口文件EIF、外部输入EI、外部输出EO、外部查询EQ。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image@main/img/202205101034799.png" alt="image-20211217101343777" style="zoom:50%;" /><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image@main/img/202205101034801.png" alt="image-20211217101407856" style="zoom:50%;" /></p>
+<p>至于14个复杂性调节因素 $F_i$从0【没有影响】到5【严重影响】</p>
+<p>优点：与程序设计语言无关, 在开发前就可以估算出软件项目的规模</p>
+<p>不足：没有直接涉及算法的复杂度，不适合算法比较复杂的软件系统，功能点计算主要靠经验公式，主观因素比较多</p>
+<p>FP起到了代码行的作用，但是也可以换算，估计不考👇</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image@main/img/202205101034802.png" alt="image-20220102162809429" style="zoom:50%;" />
+
+
+
+<p><strong>项目估算</strong></p>
+<p>分两种</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image@main/img/202205101034803.png" alt="image-20220102162431806" style="zoom:50%;" />
+
+<p><em>基于问题分解的估算</em></p>
+<p>就是把问题分解成各个子系统，分别估算，最后合并。</p>
+<p>三点期望法：估计期望值=(最大值＋4×最可能值＋最小值) / 6</p>
+<p>基于LOC的估算：估算出各个子系统的代码行（直接主观猜）</p>
+<p>用LOC或FP算出LOC总代码行或FP功能点数，然后结合历史数据</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image@main/img/202205101034804.png" alt="image-20220102163248576" style="zoom:50%;" />
+
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image@main/img/202205101034805.png" alt="image-20220102163345120" style="zoom:50%;" />
+
+
+
+
+
+<p><em>基于回归分析的经验估算模型</em></p>
+<p>$E=A+B×(e_v )^ C$ 其中E是工作量（人月），$e_v$是估算变量（LOC或功能点）</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image@main/img/202205101034806.png" alt="image-20211217135256729" style="zoom: 67%;" /><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image@main/img/202205101034807.png" alt="image-20211217135311450" style="zoom:67%;" /></p>
+<p><strong>COCOMO经验估算模型</strong>（COnstructive COst MOdel，构造性成本模型）</p>
+<p>是一个综合经验模型，模型中的参数取值来自于<u>经验值，并且综合了诸多的因素、比较全面的估算模型</u></p>
+<p><u>用来根据KLOC算工作量和开发时间</u></p>
+<p>模型层级</p>
+<ul>
+<li>基本COCOMO模型：估算整个系统的工作量(包括维护)和软件开发和维护所需的时间</li>
+<li>中间COCOMO模型：估算各个子系统的工作量和开发时间</li>
+<li>详细COCOMO模型：估算独立的软构件，如各个子系统的各个模块的工作量和开发时间</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image@main/img/202205101034808.png" alt="image-20211217135834159" style="zoom:67%;" /><img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image@main/img/202205101034809.png" alt="image-20220102163524699" style="zoom:50%;" /></p>
+<p>EAF的取值(考虑15个因素) 建议取值范围[0.70-1.66] EAF的计算＝$\prod F_i  ( i=1..15)$</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image@main/img/202205101034810.png" alt="image-20220102163925277" style="zoom:50%;" />
+
+
+
+
+
+<p><strong>项目计划</strong></p>
+<p>对项目进行任务划分，定义任务之间的<u>依赖关系</u>，并进行<u>时间估算和资源分配</u>，确保以最佳的时间与成本输出满足质量要求的产品。</p>
+<p>编制项目计划本质是一个<u>优化问题</u>。</p>
+<p>项目计划可视化用甘特图</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image@main/img/202205101034811.png" alt="image-20211217140902607" style="zoom: 67%;" />
+
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image@main/img/202205101034812.png" alt="image-20211217140924890" style="zoom:67%;" />
+
+<p>关键路径——在任务网络图中，从项目开始到项目完成有许多条路径，路径上<u>所有弧权重之和最大的路径</u>（路径最长）叫关键路径。</p>
+<h2 id="软件维护（2）"><a href="#软件维护（2）" class="headerlink" title="软件维护（2）"></a>软件维护（2）</h2><p>定义：由于软件产品出现问题或需要改进，而对代码及相关文档进行修改，</p>
+<p>目的：对现有软件产品进行修改的同时保持其完整性</p>
+<p>软件维护阶段一般要消耗软件生命周期中经费开支的大部分</p>
+<p><strong>四种基本类型</strong>：</p>
+<p>完善性维护【一半以上】扩充软件功能、增强软件性能、 改进加工效率、 提高软件的可维护性<br>纠错性维护<br>适应性维护（环境变化）<br>预防性维护【最少】采用先进的软件工程方法对需要维护的软件或软件中的 某一部分（重新）进行设计、编制和测试</p>
+<p>决定软件<u>可维护性</u>的主要因素：可理解性、可测试性、可修改性、可移植性、可重用性</p>
+<p>影响软件可维护性的<u>环境因素</u>——软件维护的文档、软件的运行环境、软件的维护组织、软件维护质量。</p>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image@main/img/202205101034813.png" alt="image-20211217141553964" style="zoom:67%;" />
+
+<p><strong>软件维护技术</strong></p>
+<p>程序的理解：建立从问题/应用域到程序设计/实现域的映射集</p>
+<p>程序理解的具体任务：</p>
+<p>通过检查单个的程序设计结构，程序被表示成抽象语法树、符号表或普通源文本<br>尽量做到程序隐含信息的显性表示及程序内部关系的可视化<br>检查程序构造过程中的结构关系，明确表示程序组成部分之间的依赖关系。</p>
+<p><em>软件再工程</em>：<br>对现有软件进行仔细审查和改造，对其<u>进行重新构造</u>，使之成为一个新的形式，同时包括随之产生的对新形式的实现。</p>
+<p><em>软件逆向工程</em>：<br><u>分析目标系统，识别系统的构件及其交互关系</u>，并且通过高层抽象或其他形式来展现目标系统的过程。</p>
+<blockquote>
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image@main/img/202205101034814.png" alt="image-20211217141846309" style="zoom:67%;" />
+
+<img src="https://cdn.jsdelivr.net/gh/Darren-greenhand/Darren-greenhand-image@main/img/202205101034815.png" alt="image-20220103111000545" style="zoom:50%;" />
+</blockquote>
+]]></content>
+  </entry>
 </search>
